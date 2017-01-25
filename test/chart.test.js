@@ -8,20 +8,20 @@ let chai = require('chai'),
     assert = sinon.assert,
     expect = chai.expect;
 const path = require('path');
-let fs = require("fs");
+let test_body = require('./fbResult.test.json');
 chai.should();
 
 describe('[chart]', function () {
-    let Chart, chart, UpdateCacheSpy,clock;
+    let Chart, chart, UpdateCacheSpy, clock;
     let requestMock = sinon.stub();
-    let body = fs.readFileSync(path.resolve('./test', './data/fbResult.json'), 'utf8');
+
     before(function () {
-        clock = sinon.useFakeTimers();
-        Chart = rewire('../server/chart');
+        clock = sinon.useFakeTimers(new Date('2017-01-24T11:00:00').getTime());
+        Chart = rewire('../src/chart');
         Chart.__set__('request', requestMock);
-        let update = Chart.__get__('UpdateChart');
-        UpdateCacheSpy= sinon.spy(update);
-Chart.__set__('UpdateChart',UpdateCacheSpy);
+        let update = Chart.__get__('_updateChart');
+        UpdateCacheSpy = sinon.spy(update);
+        Chart.__set__('_updateChart', UpdateCacheSpy);
     });
     after(function () {
     });
@@ -30,12 +30,12 @@ Chart.__set__('UpdateChart',UpdateCacheSpy);
     afterEach(function () {
     });
     it('should be able to obtain list from chart', function (done) {
-        requestMock.callsArgWith(1, undefined, {statusCode: 200}, body);
+        requestMock.callsArgWith(1, undefined, {statusCode: 200}, JSON.stringify(test_body));
         chart = new Chart();
-       assert.calledOnce(UpdateCacheSpy);
-       clock.tick(21600000);
-       assert.calledTwice(UpdateCacheSpy);
-       done();
+        assert.calledOnce(UpdateCacheSpy);
+        clock.tick(21600000);
+        assert.calledTwice(UpdateCacheSpy);
+        done();
     });
 });
 
