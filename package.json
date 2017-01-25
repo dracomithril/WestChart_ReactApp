@@ -62,7 +62,8 @@
     "restify": "^4.3.0"
   },
   "scripts": {
-    "start": "node scripts/start.js",
+    "start:dev": "node scripts/start.js",
+    "start":"node server",
     "build": "node scripts/build.js",
     "test": "node scripts/test.js --env=jsdom"
   },
