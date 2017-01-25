@@ -96,6 +96,7 @@
       "react-app"
     ]
   },
+  "heroku-postbuild": "npm run build",
   "eslintConfig": {
     "env": {
       "mocha": true,
