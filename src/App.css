@@ -17,7 +17,15 @@
 .App-intro {
   font-size: large;
 }
-
+.App-body {
+  padding: 15px 10px;
+  margin: 30px 10px;
+  color: inherit;
+  background-color: #eee;
+}
+.table{
+  margin-top: 10px;
+}
 @keyframes App-logo-spin {
   from { transform: rotate(0deg); }
   to { transform: rotate(360deg); }

@@ -19,6 +19,7 @@
     "css-loader": "0.26.0",
     "detect-port": "1.0.1",
     "dotenv": "2.0.0",
+    "enzyme": "^2.7.1",
     "eslint": "3.8.1",
     "eslint-config-react-app": "^0.5.0",
     "eslint-loader": "1.6.0",
@@ -63,7 +64,7 @@
   },
   "scripts": {
     "start:dev": "node scripts/start.js",
-    "start":"node server",
+    "start": "node server",
     "build": "node scripts/build.js",
     "test": "node scripts/test.js --env=jsdom"
   },

@@ -127,7 +127,7 @@ module.exports = {
         query: {
           
           // This is a feature of `babel-loader` for webpack (not Babel itself).
-          // It enables caching results in ./node_modules/.cache/babel-loader/
+          // It enables caching results in ./node_modules/.charts/babel-loader/
           // directory for faster rebuilds.
           cacheDirectory: true
         }
