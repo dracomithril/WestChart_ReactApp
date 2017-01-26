@@ -8,7 +8,7 @@ const api_ver = 'v2.8';
 const limit = 100;
 const days = 14;
 let EventEmitter = require('events').EventEmitter;
-let fieldsArr = ['story', 'from', 'link', 'caption', 'created_time', 'source', 'name', 'type', 'full_picture', 'updated_time', 'likes.limit(1).summary(true)'];
+let fieldsArr = ['story', 'from', 'link', 'caption', 'created_time', 'source', 'name', 'type', 'message', 'full_picture', 'updated_time', 'likes.limit(1).summary(true)'];
 let fields = fieldsArr.join(',');
 // since=2017-01-15&until=2017-01-16
 /**
@@ -25,6 +25,7 @@ function updateInterval(minutes) {
  * @param callback {function}
  */
 function obtainList(since, until, callback) {
+    let all_charts = [];
     let address = 'https://graph.facebook.com';
 
     let query = {
@@ -43,17 +44,28 @@ function obtainList(since, until, callback) {
         qs: query,
         port: 443,
         path: path,
-        method: 'GET'
+        method: 'GET',
+        timeout: 2000
     };
-
-    request(options, function (err, res, body) {
-        if (res.statusCode === 200) {
-            callback(JSON.parse(body));
-        } else {
-            console.log('error: ' + res.statusCode);
+    function reactOnBody(err, res, body) {
+        if (err) {
+            console.log('error: ' + err.message);
             console.log(body);
+        } else {
+            if (res.statusCode === 200) {
+                let b = JSON.parse(body);
+                all_charts.push(...b.data);
+                if (b.paging && b.paging.next) {
+                    request(b.paging.next, reactOnBody)
+                } else {
+                    callback(all_charts);
+
+                }
+            }
         }
-    });
+    }
+
+    request(options, reactOnBody)
 }
 /**
  *
@@ -63,31 +75,40 @@ function obtainList(since, until, callback) {
  * @private
  */
 let _updateChart = function (scope, since, until) {
-    obtainList(since, until, (body) => {
-        let filter_yt = body.data.filter((elem) => {
+    let a_since, a_until;
+    if(!until|| !since){
+        let date= new Date();
+        let since_date = new Date();
+        since_date.setDate(date.getDate() - days);
+        a_until= date.toISOString();
+        a_since= since_date.toISOString();
+
+    }else{
+        a_since= since;
+        a_until=until
+    }
+
+    obtainList(a_since, a_until, (body) => {
+        let filter_yt = body.filter((elem) => {
             return elem.caption === 'youtube.com'
         });
-        let d2 = new Date(since).getTime();
-        let dateFilter = filter_yt.filter((elem) => {
-            let d1 = new Date(elem.created_time).getTime();
-            return d1 - d2 > 0;
-        });
-        let chart1 = dateFilter.map((elem) => {
+        let chart1 = filter_yt.map((elem) => {
             return {
                 created_time: elem.created_time,
                 from_user: elem.from.name,
                 full_picture: elem.full_picture,
                 likes_num: elem.likes.summary.total_count,
                 link: elem.link,
-                source: elem.source,
                 link_name: elem.name,
+                message: elem.message,
+                source: elem.source,
                 type: elem.type,
                 updated_time: elem.updated_time
             };
         });
         chart1.sort((a, b) => a.likes_num - b.likes_num);
         chart1.reverse();
-        scope.setChart(chart1);
+        scope.setChart(chart1,a_since);
     });
 };
 class Chart extends EventEmitter {
@@ -97,24 +118,18 @@ class Chart extends EventEmitter {
      */
     constructor(update_interval) {
         super();
-
-        let date = new Date();
-        let until = date.toISOString();
         const cache = {
             last_update: '',
-            chart: {}
+            chart: {},
+            since:''
         };
-        this.setChart = function (chart) {
+        this.setChart = function (chart,since) {
+            let until = new Date().toISOString();
             cache.chart = chart;
             cache.last_update = until;
-
+            cache.since=since;
             this.emit('change', cache);
-
         };
-        let since_date = new Date();
-        since_date.setDate(date.getDate() - days);
-        let since = since_date.toISOString();
-        _updateChart(this, since, until);
         const delay = updateInterval(update_interval);
         setInterval(_updateChart, delay, this);
     }
