@@ -55,14 +55,12 @@
   },
   "dependencies": {
     "express": "latest",
-    "fixed-data-table": "latest",
     "morgan": "^1.7.0",
     "react": "^15.4.2",
     "react-bootstrap": "^0.30.7",
-    "react-bootstrap-table": "^2.9.2",
     "react-dom": "^15.4.2",
-    "request": "latest",
-    "restify": "^4.3.0"
+    "react-table": "^4.2.7",
+    "request": "latest"
   },
   "scripts": {
     "start:dev": "node scripts/start.js",
