@@ -14,20 +14,30 @@ const columns = [{
     header: 'WCS Chart',
     columns: [
         {
-            header: 'User',
+            header: 'user',
+            minWidth:200,
+            maxWidth:300,
             accessor: 'from_user', // String-based value accessors !
+            render: props => <span>{props.value}</span>
+        }, {
+            header: 'fb msg',
+            accessor: 'message',
+            maxWidth: 80,
             render: props => {
-                return ( <span>{props.value}
-                    {props.row.message !== undefined && <OverlayTrigger placement="bottom" overlay={<Tooltip
-                        id="tooltip">{props.row.message}</Tooltip>}><span style={{margin:'0 10px'}}>(...msg...)</span></OverlayTrigger>}</span>)
+                if (props.value !== undefined) {
+                    return <OverlayTrigger placement="bottom" overlay={<Tooltip
+                        id="tooltip">{props.value}</Tooltip>}><Label
+                        bsStyle="success">(...msg...)</Label></OverlayTrigger>
+                }
+                return <Label bsStyle="danger">no msg</Label>
             }
         }, {
-            header: 'Likes Count',
+            header: 'likes Count',
             accessor: 'likes_num',
-            minWidth: 60 ,
+            minWidth: 60,
             maxWidth: 120
         }, {
-            header: 'Crated Time',
+            header: 'crated time',
             id: 'createTime',
             maxWidth: 200,
             accessor: d => {
@@ -35,7 +45,7 @@ const columns = [{
             },
             render: props => <span>{formatDate(props.value)}</span>
         }, {
-            header: 'Last update',
+            header: 'last update',
             id: 'lastUpdate',
             maxWidth: 200,
             accessor: d => {
@@ -43,7 +53,7 @@ const columns = [{
             },
             render: props => <span>{formatDate(props.value)}</span>
         }, {
-            header: props => <span>Link</span>, // Custom header components!
+            header: props => <span>link</span>, // Custom header components!
             accessor: d => d.link.name,
             id: 'yt_link',
             render: props => {

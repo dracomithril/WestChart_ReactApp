@@ -1,39 +1,50 @@
 .App {
-  text-align: center;
+    text-align: center;
 }
 
 .App-logo {
-  /*animation: App-logo-spin infinite 20s linear;*/
-  height: 140px;
+    /*animation: App-logo-spin infinite 20s linear;*/
+    height: 140px;
 }
 
 .App-header {
-  background-color: #222;
-  height: 150px;
-  padding: 5px;
-  color: white;
+    background-color: #222;
+    height: 150px;
+    padding: 5px;
+    color: white;
 }
 
 .App-intro {
-  font-size: large;
+    font-size: large;
 }
+
 .App-body {
-  padding: 15px 10px;
-  margin: 30px 10px;
-  color: inherit;
-  background-color: #eee;
+    padding: 15px 10px;
+    margin: 15px 10px;
+    color: inherit;
+    background-color: #eee;
 }
-.table{
-  margin-top: 10px;
-}
+
 @keyframes App-logo-spin {
-  from { transform: rotate(0deg); }
-  to { transform: rotate(360deg); }
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
 }
-.btn{
-  width: 200px;
-  margin: 5px;
+
+.btn {
+    width: 200px;
+    margin-bottom: 10px;
+    margin-top: 5px;
 }
-.num_days{
-  text-align: right;
+
+.num_days {
+    text-align: right;
+}
+
+.label {
+    margin: 0;
+    padding: .6em .9em .5em;
 }
