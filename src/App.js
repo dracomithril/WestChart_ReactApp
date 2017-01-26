@@ -1,69 +1,14 @@
 import React, {Component} from 'react';
 // import ReactDOM from 'react-dom';
-import {Button, Jumbotron, Checkbox, Label, OverlayTrigger, Tooltip} from 'react-bootstrap';
+import {Button, Jumbotron, Checkbox, Label, ButtonGroup} from 'react-bootstrap';
 import './App.css';
-import ReactTable from 'react-table';
+import ChartTable from './components/ChartTable';
 import Chart from './chart';
 import Header from './components/Header';
 import 'react-table/react-table.css';
-function formatDate(date) {
-    let date2 = new Date(date);
-    return date2.toLocaleString('pl-PL');
-}
-const columns = [{
-    header: 'WCS Chart',
-    columns: [
-        {
-            header: 'user',
-            minWidth:200,
-            maxWidth:300,
-            accessor: 'from_user', // String-based value accessors !
-            render: props => <span>{props.value}</span>
-        }, {
-            header: 'fb msg',
-            accessor: 'message',
-            maxWidth: 80,
-            render: props => {
-                if (props.value !== undefined) {
-                    return <OverlayTrigger placement="bottom" overlay={<Tooltip
-                        id="tooltip">{props.value}</Tooltip>}><Label
-                        bsStyle="success">(...msg...)</Label></OverlayTrigger>
-                }
-                return <Label bsStyle="danger">no msg</Label>
-            }
-        }, {
-            header: 'likes Count',
-            accessor: 'likes_num',
-            minWidth: 60,
-            maxWidth: 120
-        }, {
-            header: 'crated time',
-            id: 'createTime',
-            maxWidth: 200,
-            accessor: d => {
-                return d.created_time.getTime()
-            },
-            render: props => <span>{formatDate(props.value)}</span>
-        }, {
-            header: 'last update',
-            id: 'lastUpdate',
-            maxWidth: 200,
-            accessor: d => {
-                return d.updated_time.getTime()
-            },
-            render: props => <span>{formatDate(props.value)}</span>
-        }, {
-            header: props => <span>link</span>, // Custom header components!
-            accessor: d => d.link.name,
-            id: 'yt_link',
-            render: props => {
-                return (<a href={props.row.link.url}>{props.value}</a>)
-            }
-        }
-    ]
-}
-];
-
+import DatePicker from "react-datepicker";
+import moment from "moment";
+import 'react-datepicker/dist/react-datepicker.css';
 /**
  *
  * @param state
@@ -73,7 +18,7 @@ const columns = [{
 function _filterChart(state) {
     let view_chart = [];
     if (state.date_control) {
-        let d2 = new Date(state.since).getTime();
+        let d2 = state.since.getTime();
         view_chart = state.chart.filter((elem) => {
             let d1 = new Date(elem.created_time).getTime();
             let result = d1 - d2;
@@ -104,6 +49,8 @@ class App extends Component {
             since: undefined,
             update_interval: updateInterval,
             chart: [],
+            enable_until: false,
+            start_date: moment(),
             date_control: false,
             last_update: undefined
         };
@@ -111,16 +58,26 @@ class App extends Component {
 
     updateChart() {
         let until = new Date();
-        let since_date = new Date();
-        since_date.setDate(this.state.until.getDate() - this.state.show_last);
-        let since = since_date.toISOString();
+        if (this.state.enable_until) {
+            until = this.state.start_date.toDate()
+        }
         let until_str = until.toISOString();
-        this.setState({since: since});
+        let since_date = new Date(until_str);
+        since_date.setDate(until.getDate() - this.state.show_last);
+        let since = since_date.toISOString();
+        this.setState({
+            since: since_date,
+            until: until
+        });
         this.charts.UpdateChart(since, until_str);
     }
 
     date_control_change(event) {
         this.setState({date_control: event.target.checked})
+    }
+
+    enable_until_change(event) {
+        this.setState({enable_until: event.target.checked})
     }
 
     componentDidMount() {
@@ -131,6 +88,12 @@ class App extends Component {
         let obj = {};
         obj[event.target.name] = event.target.value;
         this.setState(obj);
+    }
+
+    dateChange(date) {
+        this.setState({
+            start_date: date,
+        });
     }
 
     render() {
@@ -145,7 +108,16 @@ class App extends Component {
                                                                    value={this.state.show_last} step={1}
                                                                    onChange={this.handleChange.bind(this)}/>{' days'}
                     </Checkbox>
-                    <Button onClick={this.updateChart.bind(this)} bsStyle="primary">Update</Button>
+                    <Checkbox checked={this.state.enable_until} onChange={this.enable_until_change.bind(this)}>Use date:<DatePicker
+                        selected={this.state.start_date}
+                        dateFormat="DD/MM/YYYY"
+                        onChange={this.dateChange.bind(this)} disabled={!this.state.enable_until}/></Checkbox>
+                    <ButtonGroup>
+                        <Button onClick={this.updateChart.bind(this)} bsStyle="primary">Update</Button>
+                        <Button bsStyle="danger" disabled>Create title list</Button>
+                    </ButtonGroup><span>{this.state.since!==undefined&&<Label
+                    bsStyle="success">{this.state.since.toLocaleString('pl-PL')}</Label>}
+                    <Label bsStyle="danger">{this.state.until.toLocaleString('pl-PL')}</Label></span>
                     {(this.state.last_update !== undefined) &&
                     <div>
                         <Label bsStyle="info">{'Total '}<strong
@@ -153,9 +125,8 @@ class App extends Component {
                         <label style={{
                             color: 'red',
                             marginLeft: '10px'
-                        }}>{' Last update: ' + formatDate(this.state.last_update)}</label></div>}
-                    <ReactTable data={view_chart}
-                                columns={columns} defaultPageSize={50}/>
+                        }}>{' Last update: ' + new Date(this.state.last_update).toLocaleString('pl-PL')}</label></div>}
+                    <ChartTable data={view_chart}/>
                 </Jumbotron>
             </div>
         );
