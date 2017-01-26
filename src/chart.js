@@ -8,7 +8,7 @@ const api_ver = 'v2.8';
 const limit = 100;
 let days = 7;
 let EventEmitter = require('events').EventEmitter;
-let fieldsArr = ['story', 'from', 'link', 'caption', 'created_time', 'source', 'name', 'type', 'message', 'full_picture', 'updated_time', 'likes.limit(1).summary(true)'];
+let fieldsArr = ['story', 'from', 'link', 'caption','icon', 'created_time', 'source', 'name', 'type', 'message', 'full_picture', 'updated_time', 'likes.limit(1).summary(true)'];
 let fields = fieldsArr.join(',');
 // since=2017-01-15&until=2017-01-16
 /**
@@ -109,9 +109,7 @@ let _updateChart = function (scope, since, until) {
                 updated_time: new Date(elem.updated_time)
             };
         });
-        chart1.sort((a, b) => a.likes_num - b.likes_num);
-        chart1.reverse();
-        scope.setChart(chart1, a_since);
+        scope.setChart(chart1);
     });
 };
 class Chart extends EventEmitter {
@@ -125,14 +123,12 @@ class Chart extends EventEmitter {
         days=show_days;
         const cache = {
             last_update: '',
-            chart: {},
-            since: ''
+            chart: {}
         };
-        this.setChart = function (chart, since) {
+        this.setChart = function (chart) {
             let until = new Date().toISOString();
             cache.chart = chart;
             cache.last_update = until;
-            cache.since = since;
             this.emit('change', cache);
         };
         const delay = updateInterval(update_interval);
