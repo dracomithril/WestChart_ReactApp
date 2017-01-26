@@ -6,7 +6,7 @@ const group_id = '1707149242852457';
 const access_token = '1173483302721639|M1wdI_6kHBG584FAXtK-LDVWNGo';
 const api_ver = 'v2.8';
 const limit = 100;
-const days = 14;
+let days = 7;
 let EventEmitter = require('events').EventEmitter;
 let fieldsArr = ['story', 'from', 'link', 'caption', 'created_time', 'source', 'name', 'type', 'message', 'full_picture', 'updated_time', 'likes.limit(1).summary(true)'];
 let fields = fieldsArr.join(',');
@@ -47,6 +47,7 @@ function obtainList(since, until, callback) {
         method: 'GET',
         timeout: 2000
     };
+
     function reactOnBody(err, res, body) {
         if (err) {
             console.log('error: ' + err.message);
@@ -76,16 +77,16 @@ function obtainList(since, until, callback) {
  */
 let _updateChart = function (scope, since, until) {
     let a_since, a_until;
-    if(!until|| !since){
-        let date= new Date();
+    if (!until || !since) {
+        let date = new Date();
         let since_date = new Date();
         since_date.setDate(date.getDate() - days);
-        a_until= date.toISOString();
-        a_since= since_date.toISOString();
+        a_until = date.toISOString();
+        a_since = since_date.toISOString();
 
-    }else{
-        a_since= since;
-        a_until=until
+    } else {
+        a_since = since;
+        a_until = until
     }
 
     obtainList(a_since, a_until, (body) => {
@@ -94,40 +95,44 @@ let _updateChart = function (scope, since, until) {
         });
         let chart1 = filter_yt.map((elem) => {
             return {
-                created_time: elem.created_time,
+                created_time: new Date(elem.created_time),
                 from_user: elem.from.name,
                 full_picture: elem.full_picture,
                 likes_num: elem.likes.summary.total_count,
-                link: elem.link,
-                link_name: elem.name,
+                link: {
+                    url: elem.link,
+                    name: elem.name
+                },
                 message: elem.message,
                 source: elem.source,
                 type: elem.type,
-                updated_time: elem.updated_time
+                updated_time: new Date(elem.updated_time)
             };
         });
         chart1.sort((a, b) => a.likes_num - b.likes_num);
         chart1.reverse();
-        scope.setChart(chart1,a_since);
+        scope.setChart(chart1, a_since);
     });
 };
 class Chart extends EventEmitter {
     /**
      *
      * @param update_interval {number}
+     * @param show_days {number}
      */
-    constructor(update_interval) {
+    constructor(update_interval, show_days) {
         super();
+        days=show_days;
         const cache = {
             last_update: '',
             chart: {},
-            since:''
+            since: ''
         };
-        this.setChart = function (chart,since) {
+        this.setChart = function (chart, since) {
             let until = new Date().toISOString();
             cache.chart = chart;
             cache.last_update = until;
-            cache.since=since;
+            cache.since = since;
             this.emit('change', cache);
         };
         const delay = updateInterval(update_interval);

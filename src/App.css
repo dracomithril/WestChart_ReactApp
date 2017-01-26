@@ -30,6 +30,10 @@
   from { transform: rotate(0deg); }
   to { transform: rotate(360deg); }
 }
-table{
-  border: #00b9ff solid 2px;
+.btn{
+  width: 200px;
+  margin: 5px;
+}
+.num_days{
+  text-align: right;
 }

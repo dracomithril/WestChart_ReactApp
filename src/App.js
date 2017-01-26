@@ -1,39 +1,59 @@
 import React, {Component} from 'react';
-import ReactDOM from 'react-dom';
-import {Table, Button, Jumbotron, OverlayTrigger, Tooltip, Checkbox} from 'react-bootstrap';
+// import ReactDOM from 'react-dom';
+import {Button, Jumbotron, Checkbox, Label, OverlayTrigger, Tooltip} from 'react-bootstrap';
 import './App.css';
-import {BootstrapTable, TableHeaderColumn} from 'react-bootstrap-table';
-
+import ReactTable from 'react-table';
 import Chart from './chart';
 import Header from './components/Header';
+import 'react-table/react-table.css';
 function formatDate(date) {
-    return new Date(date).toLocaleString('pl-PL');
+    let date2 = new Date(date);
+    return date2.toLocaleString('pl-PL');
 }
+const columns = [{
+    header: 'WCS Chart',
+    columns: [
+        {
+            header: 'User',
+            accessor: 'from_user', // String-based value accessors !
+            render: props => {
+                return ( <span>{props.value}
+                    {props.row.message !== undefined && <OverlayTrigger placement="bottom" overlay={<Tooltip
+                        id="tooltip">{props.row.message}</Tooltip>}><span style={{margin:'0 10px'}}>(...msg...)</span></OverlayTrigger>}</span>)
+            }
+        }, {
+            header: 'Likes Count',
+            accessor: 'likes_num',
+            minWidth: 60 ,
+            maxWidth: 120
+        }, {
+            header: 'Crated Time',
+            id: 'createTime',
+            maxWidth: 200,
+            accessor: d => {
+                return d.created_time.getTime()
+            },
+            render: props => <span>{formatDate(props.value)}</span>
+        }, {
+            header: 'Last update',
+            id: 'lastUpdate',
+            maxWidth: 200,
+            accessor: d => {
+                return d.updated_time.getTime()
+            },
+            render: props => <span>{formatDate(props.value)}</span>
+        }, {
+            header: props => <span>Link</span>, // Custom header components!
+            accessor: d => d.link.name,
+            id: 'yt_link',
+            render: props => {
+                return (<a href={props.row.link.url}>{props.value}</a>)
+            }
+        }
+    ]
+}
+];
 
-function CreateTable(props) {
-    const chart = props.chart;
-    return (  <BootstrapTable data={ chart }  keyField='id' insertRow>
-        <TableHeaderColumn dataField='id' autoValue>#</TableHeaderColumn>
-        <TableHeaderColumn dataField='from_user' >From</TableHeaderColumn>
-        <TableHeaderColumn dataField='likes_num'>Likes</TableHeaderColumn>
-        <TableHeaderColumn dataField='link'>Link</TableHeaderColumn>
-    </BootstrapTable>)
-}
-function ChartRow(props) {
-    const tooltip = (
-        <Tooltip id="tooltip">{props.elem.message}</Tooltip>
-    );
-    return (<OverlayTrigger placement="bottom" overlay={tooltip}>
-        <tr>
-            <th>{props.index}</th>
-            <th>{props.elem.from_user}</th>
-            <th>{props.elem.likes_num}</th>
-            <th>{formatDate(props.elem.created_time)}</th>
-            <th>{formatDate(props.elem.updated_time)}</th>
-            <th><a href={props.elem.link}>{props.elem.link_name}</a></th>
-        </tr>
-    </OverlayTrigger>)
-}
 /**
  *
  * @param state
@@ -55,75 +75,77 @@ function _filterChart(state) {
     }
     return view_chart;
 }
+
+
 class App extends Component {
     constructor(props) {
         super(props);
         let updateInterval = 2;
-        this.charts = new Chart(updateInterval);
+        let showDays = 14;
+
+        this.charts = new Chart(updateInterval, showDays);
         this.charts.on('change', (cache) => {
             this.setState(cache);
-
         });
 
         this.state = {
+            show_last: showDays,
             until: new Date(),
-            since: '',
+            since: undefined,
             update_interval: updateInterval,
             chart: [],
-            date_control:true,
-            last_update: ''
+            date_control: false,
+            last_update: undefined
         };
     }
 
-    createTable1() {
-        ReactDOM.render(
-            <CreateTable chart={this.state.chart}/>,
-            document.getElementById('zombi')
-        );
-    }
-
     updateChart() {
+        let until = new Date();
         let since_date = new Date();
-        since_date.setDate(this.state.until.getDate() - 14);
+        since_date.setDate(this.state.until.getDate() - this.state.show_last);
         let since = since_date.toISOString();
-        let until_str = this.state.until.toISOString();
-        this.setState({since:since});
+        let until_str = until.toISOString();
+        this.setState({since: since});
         this.charts.UpdateChart(since, until_str);
     }
-    date_control_change(event){
-        this.setState({date_control:event.target.checked})
+
+    date_control_change(event) {
+        this.setState({date_control: event.target.checked})
+    }
+
+    componentDidMount() {
+        this.updateChart();
+    }
+
+    handleChange(event) {
+        let obj = {};
+        obj[event.target.name] = event.target.value;
+        this.setState(obj);
     }
 
     render() {
         let view_chart = _filterChart(this.state);
-        let postList = view_chart.map((elem, id) => <ChartRow key={id} elem={elem} index={id}/>);
         return (
             <div className="App">
                 <Header/>
                 <Jumbotron bsClass="App-body">
                     <Checkbox checked={this.state.date_control} onChange={this.date_control_change.bind(this)}>
-                        Show only posts created in last 14 days
+                        {'Show only posts created in last '}<input className="num_days" type="number" name="show_last"
+                                                                   min={0} max={31}
+                                                                   value={this.state.show_last} step={1}
+                                                                   onChange={this.handleChange.bind(this)}/>{' days'}
                     </Checkbox>
-                    <Button onClick={this.updateChart.bind(this)}>Update</Button>
-                    <Button onClick={this.createTable1.bind(this)}>CrateTable</Button>
-                    <label style={{
-                        color: 'red',
-                        marginLeft: '10px'
-                    }}>{' Last update: ' + formatDate(this.state.last_update)}</label>
-                    <div id="zombi"/>
-                    <Table id="myBody" striped bordered condensed hover>
-                        <thead>
-                        <tr>
-                            <th>#</th>
-                            <th>User</th>
-                            <th>Likes Count</th>
-                            <th>Crated Time</th>
-                            <th>Last update</th>
-                            <th>Link</th>
-                        </tr>
-                        </thead>
-                        <tbody>{postList}</tbody>
-                    </Table>
+                    <Button onClick={this.updateChart.bind(this)} bsStyle="primary">Update</Button>
+                    {(this.state.last_update !== undefined) &&
+                    <div>
+                        <Label bsStyle="info">{'Total '}<strong
+                            style={{color: 'green'}}>{view_chart.length}</strong></Label>
+                        <label style={{
+                            color: 'red',
+                            marginLeft: '10px'
+                        }}>{' Last update: ' + formatDate(this.state.last_update)}</label></div>}
+                    <ReactTable data={view_chart}
+                                columns={columns} defaultPageSize={50}/>
                 </Jumbotron>
             </div>
         );
