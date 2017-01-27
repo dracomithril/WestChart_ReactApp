@@ -87,7 +87,9 @@ class Chart extends EventEmitter {
      */
     constructor(update_interval, show_days) {
         super();
-        days = show_days;
+        if (show_days !== undefined) {
+            days = show_days;
+        }
         const cache = {
             last_update: '',
             chart: {}
@@ -99,7 +101,7 @@ class Chart extends EventEmitter {
             this.emit('change', cache);
         };
         const delay = updateInterval(update_interval);
-        setInterval(_updateChart, delay, this);
+        setInterval(this.UpdateChart.bind(this), delay);
     }
 
     UpdateChart(since, until, access_token) {
