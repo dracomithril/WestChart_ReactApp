@@ -1,6 +1,6 @@
 import React, {Component} from 'react';
 // import ReactDOM from 'react-dom';
-import {Button, Jumbotron, Checkbox, Label, ButtonGroup} from 'react-bootstrap';
+import {Button, Jumbotron, Checkbox, Label, ButtonGroup, Alert} from 'react-bootstrap';
 import './App.css';
 import ChartTable from './components/ChartTable';
 import Chart from './chart';
@@ -44,6 +44,7 @@ class App extends Component {
         });
 
         this.state = {
+            access_token: undefined,
             show_last: showDays,
             until: new Date(),
             since: undefined,
@@ -69,7 +70,7 @@ class App extends Component {
             since: since_date,
             until: until
         });
-        this.charts.UpdateChart(since, until_str);
+        this.charts.UpdateChart(since, until_str, this.state.access_token);
     }
 
     date_control_change(event) {
@@ -81,7 +82,7 @@ class App extends Component {
     }
 
     componentDidMount() {
-        this.updateChart();
+        // this.updateChart();
     }
 
     handleChange(event) {
@@ -96,37 +97,54 @@ class App extends Component {
         });
     }
 
+    updateToken(token) {
+        this.setState({access_token: token});
+        this.updateChart();
+    }
+
     render() {
         let view_chart = _filterChart(this.state);
         return (
             <div className="App">
-                <Header/>
+                <Header user={this.state.user} updateToken={this.updateToken.bind(this)}/>
+
                 <Jumbotron bsClass="App-body">
-                    <Checkbox checked={this.state.date_control} onChange={this.date_control_change.bind(this)}>
-                        {'Show only posts created in last '}<input className="num_days" type="number" name="show_last"
-                                                                   min={0} max={31}
-                                                                   value={this.state.show_last} step={1}
-                                                                   onChange={this.handleChange.bind(this)}/>{' days'}
-                    </Checkbox>
-                    <Checkbox checked={this.state.enable_until} onChange={this.enable_until_change.bind(this)}>Use date:<DatePicker
-                        selected={this.state.start_date}
-                        dateFormat="DD/MM/YYYY"
-                        onChange={this.dateChange.bind(this)} disabled={!this.state.enable_until}/></Checkbox>
-                    <ButtonGroup>
-                        <Button onClick={this.updateChart.bind(this)} bsStyle="primary">Update</Button>
-                        <Button bsStyle="danger" disabled>Create title list</Button>
-                    </ButtonGroup><span>{this.state.since!==undefined&&<Label
-                    bsStyle="success">{this.state.since.toLocaleString('pl-PL')}</Label>}
-                    <Label bsStyle="danger">{this.state.until.toLocaleString('pl-PL')}</Label></span>
-                    {(this.state.last_update !== undefined) &&
-                    <div>
-                        <Label bsStyle="info">{'Total '}<strong
-                            style={{color: 'green'}}>{view_chart.length}</strong></Label>
-                        <label style={{
-                            color: 'red',
-                            marginLeft: '10px'
-                        }}>{' Last update: ' + new Date(this.state.last_update).toLocaleString('pl-PL')}</label></div>}
-                    <ChartTable data={view_chart}/>
+                    {this.state.access_token === undefined && <Alert bsStyle="danger">
+                        <h4>Oh snap! You got an error!</h4>
+                        <p>Login to facebook to be able to do something cool</p>
+                    </Alert>}
+                    {this.state.access_token !== undefined && <div>
+                        <Checkbox checked={this.state.date_control} onChange={this.date_control_change.bind(this)}>
+                            {'Show only posts created in last '}<input className="num_days" type="number"
+                                                                       name="show_last"
+                                                                       min={0} max={31}
+                                                                       value={this.state.show_last} step={1}
+                                                                       onChange={this.handleChange.bind(this)}/>{' days'}
+                        </Checkbox>
+                        <Checkbox checked={this.state.enable_until} onChange={this.enable_until_change.bind(this)}>Use
+                            date:<DatePicker
+                                selected={this.state.start_date}
+                                dateFormat="DD/MM/YYYY"
+                                onChange={this.dateChange.bind(this)} disabled={!this.state.enable_until}/></Checkbox>
+
+                        <ButtonGroup>
+                            <Button onClick={this.updateChart.bind(this)} bsStyle="primary"
+                                    disabled={this.state.access_token === undefined}>Update</Button>
+                            <Button bsStyle="danger" disabled>Create title list</Button>
+                        </ButtonGroup><span>{this.state.since !== undefined && <Label
+                        bsStyle="success">{this.state.since.toLocaleString('pl-PL')}</Label>}
+                        <Label bsStyle="danger">{this.state.until.toLocaleString('pl-PL')}</Label></span>
+                        {(this.state.last_update !== undefined) &&
+                        <div>
+                            <Label bsStyle="info">{'Total '}<strong
+                                style={{color: 'green'}}>{view_chart.length}</strong></Label>
+                            <label style={{
+                                color: 'red',
+                                marginLeft: '10px'
+                            }}>{' Last update: ' + new Date(this.state.last_update).toLocaleString('pl-PL')}</label>
+                        </div>}
+                        <ChartTable data={view_chart}/>
+                    </div>}
                 </Jumbotron>
             </div>
         );

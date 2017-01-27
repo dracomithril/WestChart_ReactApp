@@ -3,12 +3,12 @@
  */
 let request = require("request");
 const group_id = '1707149242852457';
-const access_token = '1173483302721639|M1wdI_6kHBG584FAXtK-LDVWNGo';
+// const access_token = '1173483302721639|M1wdI_6kHBG584FAXtK-LDVWNGo';
 const api_ver = 'v2.8';
 const limit = 100;
 let days = 7;
 let EventEmitter = require('events').EventEmitter;
-let fieldsArr = ['story', 'from', 'link', 'caption','icon', 'created_time', 'source', 'name', 'type', 'message', 'full_picture', 'updated_time', 'likes.limit(1).summary(true)'];
+let fieldsArr = ['story', 'from', 'link', 'caption', 'icon', 'created_time', 'source', 'name', 'type', 'message', 'full_picture', 'updated_time', 'likes.limit(1).summary(true)'];
 let fields = fieldsArr.join(',');
 // since=2017-01-15&until=2017-01-16
 /**
@@ -22,9 +22,10 @@ function updateInterval(minutes) {
  *
  * @param since {string}
  * @param until {string}
+ * @param access_token {string}
  * @param callback {function}
  */
-function obtainList(since, until, callback) {
+function obtainList(since, until, access_token, callback) {
     let all_charts = [];
     let address = 'https://graph.facebook.com';
 
@@ -76,24 +77,57 @@ function obtainList(since, until, callback) {
  * @private
  */
 let _updateChart = function (scope, since, until) {
-    let a_since, a_until;
-    if (!until || !since) {
-        let date = new Date();
-        let since_date = new Date();
-        since_date.setDate(date.getDate() - days);
-        a_until = date.toISOString();
-        a_since = since_date.toISOString();
 
-    } else {
-        a_since = since;
-        a_until = until
+};
+class Chart extends EventEmitter {
+    /**
+     *
+     * @param update_interval {number}
+     * @param show_days {number}
+     */
+    constructor(update_interval, show_days) {
+        super();
+        days = show_days;
+        const cache = {
+            last_update: '',
+            chart: {}
+        };
+        this.setChart = function (chart) {
+            let until = new Date().toISOString();
+            cache.chart = chart;
+            cache.last_update = until;
+            this.emit('change', cache);
+        };
+        const delay = updateInterval(update_interval);
+        setInterval(_updateChart, delay, this);
     }
 
-    obtainList(a_since, a_until, (body) => {
+    UpdateChart(since, until, access_token) {
+        let scope = this;
+        let a_since, a_until;
+        if (!until || !since) {
+            let date = new Date();
+            let since_date = new Date();
+            since_date.setDate(date.getDate() - days);
+            a_until = date.toISOString();
+            a_since = since_date.toISOString();
+
+        } else {
+            a_since = since;
+            a_until = until
+        }
+
+        obtainList(a_since, a_until, access_token, (body) => {
+            let chart1 = this.filterChart(body);
+            scope.setChart(chart1);
+        });
+    }
+
+    filterChart(body) {
         let filter_yt = body.filter((elem) => {
             return elem.caption === 'youtube.com'
         });
-        let chart1 = filter_yt.map((elem) => {
+        return filter_yt.map((elem) => {
             return {
                 created_time: new Date(elem.created_time),
                 from_user: elem.from.name,
@@ -109,34 +143,6 @@ let _updateChart = function (scope, since, until) {
                 updated_time: new Date(elem.updated_time)
             };
         });
-        scope.setChart(chart1);
-    });
-};
-class Chart extends EventEmitter {
-    /**
-     *
-     * @param update_interval {number}
-     * @param show_days {number}
-     */
-    constructor(update_interval, show_days) {
-        super();
-        days=show_days;
-        const cache = {
-            last_update: '',
-            chart: {}
-        };
-        this.setChart = function (chart) {
-            let until = new Date().toISOString();
-            cache.chart = chart;
-            cache.last_update = until;
-            this.emit('change', cache);
-        };
-        const delay = updateInterval(update_interval);
-        setInterval(_updateChart, delay, this);
-    }
-
-    UpdateChart(since, until) {
-        _updateChart(this, since, until);
     }
 
 
