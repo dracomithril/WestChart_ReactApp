@@ -177,6 +177,10 @@ class App extends Component {
                         <ChartTable data={view_chart}/>
                     </div>}
                 </Jumbotron>
+                <div className="footer">
+                    <span >{'site created be '}<a href="https://github.com/dracomithril">dracomithril</a>{' © Copyright 2017'}</span><br/>
+                    <span>For any problems <a href="mailto:dracomithril@gmail.com?subject=[WCSChartA]">contact me</a></span>
+                </div>
             </div>
         );
     }
