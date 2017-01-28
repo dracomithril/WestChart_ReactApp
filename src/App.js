@@ -178,7 +178,7 @@ class App extends Component {
                     </div>}
                 </Jumbotron>
                 <div className="footer">
-                    <span >{'site created be '}<a href="https://github.com/dracomithril">dracomithril</a>{' © Copyright 2017'}</span><br/>
+                    <span >{'site created by '}<a href="https://github.com/dracomithril">dracomithril</a>{' © Copyright 2017'}</span><br/>
                     <span>For any problems <a href="mailto:dracomithril@gmail.com?subject=[WCSChartA]">contact me</a></span>
                 </div>
             </div>
