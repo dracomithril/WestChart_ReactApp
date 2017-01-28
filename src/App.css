@@ -21,6 +21,7 @@
 }
 .formArea{
     padding-top: 10px;
+    padding-left: 10px;
     padding-bottom: 10px;
     border: 1px solid green;
     margin-bottom: 5px;
@@ -29,45 +30,4 @@
 .label {
     margin: 0;
     padding: .6em .9em .5em;
-}
-.filter-wall{
-    padding: 5px;
-    border: 1px solid black;
-    width: 220px;
-    float: left;
-    text-align: center;
-    position: relative;
-    z-index: 1000;
-    min-height: 20px;
-}
-.panel{
-    float: left;
-    padding: 0;
-    margin: 0;
-    position: relative;
-    z-index: 1000;
-}
-.panel-heading {
-    padding: 10px 5px;
-    border-bottom: 1px solid transparent;
-    border-top-left-radius: 3px;
-    border-top-right-radius: 3px;
-}
-.panel-body {
-    padding: 5px;
-    text-align: left;
-}
-.likes{
-    display: inline-block;
-    min-width: 10px;
-    padding: 3px 7px;
-    font-size: 12px;
-    font-weight: 700;
-    line-height: 1;
-    color: #fff;
-    text-align: center;
-    white-space: nowrap;
-    vertical-align: middle;
-    background-color: #337ab7;
-    border-radius: 10px;
 }
