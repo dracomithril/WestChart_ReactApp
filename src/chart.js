@@ -3,12 +3,13 @@
  */
 let request = require("request");
 const group_id = '1707149242852457';
-// const access_token = '1173483302721639|M1wdI_6kHBG584FAXtK-LDVWNGo';
+let accessToken;
 const api_ver = 'v2.8';
 const limit = 100;
 let days = 7;
 let EventEmitter = require('events').EventEmitter;
-let fieldsArr = ['story', 'from', 'link', 'caption', 'icon', 'created_time', 'source', 'name', 'type', 'message', 'full_picture', 'updated_time', 'likes.limit(1).summary(true)'];
+let fieldsArr = ['story', 'from', 'link', 'caption', 'icon', 'created_time', 'source', 'name', 'type', 'message',
+    'full_picture', 'updated_time', 'likes.limit(1).summary(true)', 'comments.limit(30){message,from}'];
 let fields = fieldsArr.join(',');
 // since=2017-01-15&until=2017-01-16
 /**
@@ -118,19 +119,24 @@ class Chart extends EventEmitter {
             a_since = since;
             a_until = until
         }
+        if(access_token){
+            accessToken= access_token;
+        }
 
-        obtainList(a_since, a_until, access_token, (body) => {
-            let chart1 = this.filterChart(body);
+
+        obtainList(a_since, a_until, accessToken, (body) => {
+            let chart1 = this.filterChartAndMap(body);
             scope.setChart(chart1);
         });
     }
 
-    filterChart(body) {
+    filterChartAndMap(body) {
         let filter_yt = body.filter((elem) => {
             return elem.caption === 'youtube.com'
         });
         return filter_yt.map((elem) => {
             return {
+                selected:false,
                 created_time: new Date(elem.created_time),
                 from_user: elem.from.name,
                 full_picture: elem.full_picture,

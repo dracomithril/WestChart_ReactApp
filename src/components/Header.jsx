@@ -6,6 +6,7 @@ import {Image, Well} from 'react-bootstrap';
 import logo from './starter.png';
 import {FacebookLogin} from 'react-facebook-login-component';
 import 'bootstrap-social';
+import './Header.css';
 export default class Header extends React.Component {
     constructor(props) {
         super(props);
@@ -29,9 +30,9 @@ export default class Header extends React.Component {
     render() {
         const user = this.state.user;
         let showIt = this.state.user.accessToken === undefined;
-        return (<div className="App-header">
+        return (<div className="header">
             <img src={logo} className="App-logo" alt="logo"/>
-            <Well bsClass={showIt ? "well" : "logged"}>
+            <Well bsClass={showIt ? "login" : "logged"}>
 
                 {!showIt && <div>
                     <Image src={user.picture.data.url} circle/>

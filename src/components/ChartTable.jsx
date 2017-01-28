@@ -9,8 +9,8 @@ const columns = [{
     columns: [
         {
             header: 'user',
-            minWidth:200,
-            maxWidth:300,
+            minWidth: 200,
+            maxWidth: 300,
             accessor: 'from_user', // String-based value accessors !
             render: props => <span>{props.value}</span>
         }, {
@@ -28,6 +28,7 @@ const columns = [{
         }, {
             header: 'likes Count',
             accessor: 'likes_num',
+            sort: 'dsc',
             minWidth: 60,
             maxWidth: 120
         }, {
@@ -62,7 +63,8 @@ function formatDate(date) {
 }
 export default class ChartTable extends React.Component {
     render() {
-        return (<ReactTable data={this.props.data} className="-striped -highlight" pageSizeOptions={[ 20, 50, 100]}
+
+        return (<ReactTable data={this.props.data} className="-striped -highlight" pageSizeOptions={[20, 50, 100]}
                             columns={columns} defaultPageSize={20} minRows={10}/>);
     }
 }
