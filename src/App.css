@@ -31,3 +31,7 @@
     margin: 0;
     padding: .6em .9em .5em;
 }
+.footer{
+    color: darkgrey;
+    font-size: smaller;
+}
