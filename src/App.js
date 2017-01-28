@@ -4,8 +4,7 @@ import {
     Jumbotron,
     Checkbox,
     Label,
-    ButtonGroup,
-    Alert
+    ButtonGroup
 } from 'react-bootstrap';
 import ChartTable from './components/ChartTable';
 import Chart from './chart';
@@ -14,53 +13,14 @@ import DatePicker from "react-datepicker";
 import moment from "moment";
 import MusicChartList from "./components/MusicChartList";
 import FilteringOptions from "./components/FilteringOptions";
+import LoginAlert from "./components/LoginAlert";
 import './App.css';
 import 'react-table/react-table.css';
 import 'react-datepicker/dist/react-datepicker.css';
 let _ = require('lodash');
-const woc_string = "Wielkie Ogarnianie Charta";
+let utils= require('./utils');
 
-/**
- *
- * @param state
- * @returns {Array}
- * @private
- */
-function _filterChart(state) {
-    let view_chart = state.chart;
-    if (state.date_create_control) {
-        let s1d = new Date(state.until.toISOString());
-        s1d.setDate(state.until.getDate() - state.show_created_in);
-        let d2 = s1d.getTime();
-        view_chart = view_chart.filter((elem) => {
-            let d1 = new Date(elem.created_time).getTime();
-            let result = d1 - d2;
-            return result > 0;
-        });
-    }
-    if (state.date_update_control) {
-        let s1d = new Date(state.until.toISOString());
-        s1d.setDate(state.until.getDate() - state.show_updated_in);
-        let d2 = s1d.getTime();
-        view_chart = view_chart.filter((elem) => {
-            let d1 = new Date(elem.updated_time).getTime();
-            let result = d1 - d2;
-            return result > 0;
-        });
-    }
-    if (!state.w_o_c) {
-        view_chart = view_chart.filter((elem) => {
-            return elem.message !== undefined ? !elem.message.includes(woc_string) : true;
-        })
-    }
-    return view_chart;
-}
-function LoginAlert() {
-    return(<Alert bsStyle="danger">
-        <h4>Oh snap! You got an error!</h4>
-        <p>Login to facebook to be able to do something cool</p>
-    </Alert>)
-}
+
 class App extends Component {
     constructor(props) {
         super(props);
@@ -75,7 +35,6 @@ class App extends Component {
         this.state = {
             access_token: undefined,
             chart: [],
-            w_o_c: true,
             date_create_control: false,
             date_update_control: false,
             enable_until: false,
@@ -85,10 +44,13 @@ class App extends Component {
             show_last: showDays,
             show_created_in: showDays,
             show_updated_in: showDays,
+            showUserInfo: false,
             since: undefined,
             start_date: moment(),
             until: new Date(),
-            update_interval: updateInterval
+            update_interval: updateInterval,
+            user: {accessToken: undefined},
+            w_o_c: true
         };
     }
 
@@ -97,19 +59,15 @@ class App extends Component {
         if (this.state.enable_until) {
             until = this.state.start_date.toDate()
         }
-        let until_str = until.toISOString();
-        let since_date = new Date(until_str);
-        since_date.setDate(until.getDate() - this.state.show_last);
-        let since = since_date.toISOString();
+        let since = utils.subtractDaysFromDate(until, this.state.show_last);
         this.setState({
-            since: since_date,
+            since: since,
             until: until
         });
-        this.charts.UpdateChart(since, until_str, this.state.access_token);
+        this.charts.UpdateChart(since.toISOString(), until.toISOString(), this.state.access_token);
     }
 
     componentDidMount() {
-        // this.updateChart();
     }
 
     handleChange(event) {
@@ -148,26 +106,31 @@ class App extends Component {
         });
     }
 
-    updateToken(token) {
-        this.setState({access_token: token});
-        this.updateChart();
+    LoginUserResponse(response) {
+        if (!response.error) {
+            this.setState({
+                access_token: response.accessToken,
+                user: response,
+                showUserInfo: true
+            });
+            this.updateChart();
+        }
     }
 
     render() {
-        let view_chart = _filterChart(this.state);
-
-
+        let view_chart = utils.filterChart(this.state);
         return (
             <div className="App">
-                <Header user={this.state.user} updateToken={this.updateToken.bind(this)}/>
+                <Header user={this.state.user} showUserInfo={this.state.showUserInfo}/>
                 <Jumbotron bsClass="App-body">
-                    {this.state.access_token === undefined && <LoginAlert/>}
+                    {this.state.access_token === undefined &&
+                    <LoginAlert loginUser={this.LoginUserResponse.bind(this)}/>}
                     {this.state.access_token !== undefined &&
                     <div>
 
-                        <form className="formArea">
+                        <div className="formArea">
                             <FilteringOptions state={this.state}
-                                              onChange={this.handleChange.bind(this)} woc_string={woc_string}/>
+                                              onChange={this.handleChange.bind(this)} woc_string={utils.woc_string}/>
                             <div>
                                 <label>
                                     {'How far in time you will travel '}<input className="num_days" type="number"
@@ -177,24 +140,28 @@ class App extends Component {
                                                                                onChange={this.handleChange.bind(this)}/>{' days'}
                                 </label>
                                 <Checkbox checked={this.state.enable_until} name="enable_until"
-                                          onChange={this.handleChange.bind(this)}>Use
-                                    date:<DatePicker
+                                          onChange={this.handleChange.bind(this)}>{'Use date: '}
+                                    <DatePicker
                                         selected={this.state.start_date}
                                         dateFormat="DD/MM/YYYY"
                                         onChange={this.dateChange.bind(this)}
                                         disabled={!this.state.enable_until}/></Checkbox>
-
+                                {(this.state.since !== undefined && this.state.until !== undefined) &&
+                                <div>
+                                    <Label
+                                        bsStyle="success">{`since: ` + this.state.since.toLocaleString('pl-PL')}</Label>
+                                    <Label
+                                        bsStyle="danger">{`until: ` + this.state.until.toLocaleString('pl-PL')}</Label>
+                                </div>}
                                 <ButtonGroup>
                                     <Button onClick={this.updateChart.bind(this)} bsStyle="primary"
                                             disabled={this.state.access_token === undefined}>Update</Button>
                                     <Button bsStyle="danger" onClick={() => this.openMusicChart.call(this, view_chart)}>Create
                                         title list</Button>
-                                </ButtonGroup><span>{this.state.since !== undefined && <Label
-                                bsStyle="success">{this.state.since.toLocaleString('pl-PL')}</Label>}
-                                <Label bsStyle="danger">{this.state.until.toLocaleString('pl-PL')}</Label></span>
-                            </div>
-                        </form>
+                                </ButtonGroup>
 
+                            </div>
+                        </div>
                         <MusicChartList constainer={this} show={this.state.show_create_list} list={this.state.list}
                                         close={() => this.setState({show_create_list: false})}
                                         onListChange={this.handleListChange.bind(this)}/>

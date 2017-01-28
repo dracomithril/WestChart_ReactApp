@@ -70,16 +70,7 @@ function obtainList(since, until, access_token, callback) {
 
     request(options, reactOnBody)
 }
-/**
- *
- * @param scope
- * @param since
- * @param until
- * @private
- */
-let _updateChart = function (scope, since, until) {
 
-};
 class Chart extends EventEmitter {
     /**
      *

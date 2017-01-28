@@ -2,7 +2,8 @@
  * Created by Gryzli on 28.01.2017.
  */
 import React from 'react';
-import {Panel, Checkbox,OverlayTrigger,Tooltip} from 'react-bootstrap';
+import {Panel, Checkbox, OverlayTrigger, Tooltip} from 'react-bootstrap';
+import './style.css';
 export default class FilteringOptions extends React.Component {
     render() {
         return (
@@ -36,4 +37,8 @@ export default class FilteringOptions extends React.Component {
         )
     }
 }
-FilteringOptions.propTypes = {};
+FilteringOptions.propTypes = {
+    state:React.PropTypes.object,
+    onChange:React.PropTypes.func,
+    woc_string: React.PropTypes.string
+};
