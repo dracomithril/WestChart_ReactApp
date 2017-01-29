@@ -23,9 +23,10 @@ function subtractDaysFromDate(until, days) {
 function _filterChart(state) {
     let view_chart = state.chart;
     const until = state.until;
+    const dateAddedControl = state.date_added_control;
     const dateCreateControl = state.date_create_control;
-    const wOC = state.w_o_c;
     const dateUpdateControl = state.date_update_control;
+    const wOC = state.w_o_c;
     if (dateCreateControl) {
         let s11d = subtractDaysFromDate(until, state.show_created_in);
         let d2 = s11d.getTime();
@@ -40,6 +41,15 @@ function _filterChart(state) {
         let d2 = s11d.getTime();
         view_chart = view_chart.filter((elem) => {
             let d1 = new Date(elem.updated_time).getTime();
+            let result = d1 - d2;
+            return result > 0;
+        });
+    }
+    if (dateAddedControl) {
+        let s11d = subtractDaysFromDate(until, state.show_added_in);
+        let d2 = s11d.getTime();
+        view_chart = view_chart.filter((elem) => {
+            let d1 = new Date(elem.added_time).getTime();
             let result = d1 - d2;
             return result > 0;
         });

@@ -1,13 +1,18 @@
 .App-logo {
-    /*animation: App-logo-spin infinite 20s linear;*/
-    height: 140px;
+    height: 150px;
     margin-right: 10px;
 }
 .header {
-    background-color: #222;
     height: 150px;
-    padding: 5px;
     color: white;
+    background: #030049 url(baner.png) no-repeat center;
+}
+.title-header {
+    margin: 10px 0 20px;
+    border-bottom: 1px solid #eee;
+    position: absolute;
+    top: 60px;
+    left: 20px;
 }
 .logged{
     float: right;

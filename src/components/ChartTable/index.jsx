@@ -30,7 +30,7 @@ const columns = [{
             accessor: 'likes_num',
             sort: 'dsc',
             minWidth: 60,
-            maxWidth: 120
+            maxWidth: 100
         }, {
             header: 'crated time',
             id: 'createTime',
@@ -39,7 +39,20 @@ const columns = [{
                 return d.created_time.getTime()
             },
             render: props => <span>{formatDate(props.value)}</span>
-        }, {
+        },
+        {header:'added time',
+            id: 'addedTime',
+            maxWidth: 150,
+            accessor: d => {
+                return d.added_time===undefined?0:d.added_time.getTime()
+            },
+            render: props => {return props.value===0?<i className="fa fa-minus-circle" style={{color:'red'}}/>:<span>{new Date(props.value).toLocaleString('pl-PL', {
+                    year: "numeric",
+                    month: "2-digit",
+                    day: "numeric"
+                })}</span>}
+
+        },{
             header: 'last update',
             id: 'lastUpdate',
             maxWidth: 200,

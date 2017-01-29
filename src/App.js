@@ -35,6 +35,7 @@ class App extends Component {
         this.state = {
             access_token: undefined,
             chart: [],
+            date_added_control: false,
             date_create_control: false,
             date_update_control: false,
             enable_until: false,
@@ -42,6 +43,7 @@ class App extends Component {
             list: [],
             show_create_list: false,
             show_last: showDays,
+            show_added_in: showDays,
             show_created_in: showDays,
             show_updated_in: showDays,
             showUserInfo: false,
@@ -179,7 +181,7 @@ class App extends Component {
                 </Jumbotron>
                 <div className="footer">
                     <span >{'site created by '}<a href="https://github.com/dracomithril">dracomithril</a>{' © Copyright 2017'}</span><br/>
-                    <span>For any problems <a href="mailto:dracomithril@gmail.com?subject=[WCSChartA]">contact me</a></span>
+                    <span>{'Any questions? '}<a href="mailto:dracomithril@gmail.com?subject=[WCSChartAdmin]">contact me</a></span>
                 </div>
             </div>
         );

@@ -15,6 +15,15 @@ export default class FilteringOptions extends React.Component {
                             <span>
                             [{this.props.woc_string}]</span></OverlayTrigger>
                 </Checkbox>
+                <Checkbox checked={this.props.state.date_added_control} name="date_added_control"
+                          onChange={this.props.onChange}>
+                    {'Show only posts added in last '}<input className="num_days" type="number"
+                                                             name="show_added_in"
+                                                             min={0} max={31}
+                                                             value={this.props.state.show_added_in}
+                                                             step={1}
+                                                             onChange={this.props.onChange}/>{' days'}
+                </Checkbox>
                 <Checkbox checked={this.props.state.date_create_control} name="date_create_control"
                           onChange={this.props.onChange}>
                     {'Show only posts created in last '}<input className="num_days" type="number"
@@ -33,6 +42,7 @@ export default class FilteringOptions extends React.Component {
                                                                step={1}
                                                                onChange={this.props.onChange}/>{' days'}
                 </Checkbox>
+
             </Panel>
         )
     }
