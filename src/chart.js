@@ -9,7 +9,7 @@ const limit = 100;
 let days = 7;
 let EventEmitter = require('events').EventEmitter;
 let fieldsArr = ['story', 'from', 'link', 'caption', 'icon', 'created_time', 'source', 'name', 'type', 'message',
-    'full_picture', 'updated_time', 'likes.limit(1).summary(true)', 'comments.limit(30){message,from}'];
+    'full_picture', 'updated_time', 'likes.limit(1).summary(true)', 'comments.limit(50).summary(true){message,from}'];
 let fields = fieldsArr.join(',');
 // since=2017-01-15&until=2017-01-16
 /**
@@ -110,8 +110,8 @@ class Chart extends EventEmitter {
             a_since = since;
             a_until = until
         }
-        if(access_token){
-            accessToken= access_token;
+        if (access_token) {
+            accessToken = access_token;
         }
 
 
@@ -126,8 +126,19 @@ class Chart extends EventEmitter {
             return elem.caption === 'youtube.com'
         });
         return filter_yt.map((elem) => {
+            let comments = elem.comments.data.filter((elem) => {
+                const search = elem.message.match(/(\[Added)\s(0[1-9]|[12][0-9]|3[01])[- \/.](0[1-9]|1[012])[- \/.](19|20)\d\d]/g);
+                return (search !== null)
+            });
+            let addedTime = undefined;
+            if (comments.length > 0) {
+                const message = comments[0].message;
+                const match = message.match(/(0[1-9]|[12][0-9]|3[01])[- \/.](0[1-9]|1[012])[- \/.](19|20)\d\d/g)[0];
+                const date = match.split(/[- \/.]/g).reverse();
+                addedTime = new Date(...date);
+            }
             return {
-                selected:false,
+                added_time: addedTime,
                 created_time: new Date(elem.created_time),
                 from_user: elem.from.name,
                 full_picture: elem.full_picture,
@@ -137,6 +148,7 @@ class Chart extends EventEmitter {
                     name: elem.name
                 },
                 message: elem.message,
+                selected: false,
                 source: elem.source,
                 type: elem.type,
                 updated_time: new Date(elem.updated_time)

@@ -17,7 +17,8 @@ describe('[chart]', function () {
     let requestMock = sinon.stub();
 
     before(function () {
-        clock = sinon.useFakeTimers(new Date('2017-01-24T11:00:00').getTime());
+        const date = new Date('2017-01-24T11:00:00');
+        clock = sinon.useFakeTimers(date.getTime());
         Chart = rewire('../src/chart');
         Chart.__set__('request', requestMock);
     });
@@ -37,8 +38,8 @@ describe('[chart]', function () {
             expect(body.chart.length).to.eql(94);
             done();
         });
-        let date = new Date();
-        let since_date = new Date();
+        let date = new Date('2017-01-24T11:00:00');
+        let since_date = new Date(date.toISOString());
         since_date.setDate(date.getDate() - 14);
         chart.UpdateChart(since_date.toISOString(), date.toISOString());
 
