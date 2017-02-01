@@ -134,8 +134,12 @@ class Chart extends EventEmitter {
             if (comments.length > 0) {
                 const message = comments[0].message;
                 const match = message.match(/(0[1-9]|[12][0-9]|3[01])[- \/.](0[1-9]|1[012])[- \/.](19|20)\d\d/g)[0];
-                const date = match.split(/[- \/.]/g).reverse();
-                addedTime = new Date(...date);
+                const date = match.split(/[- \/.]/g);
+                //todo test for added
+                const year = Number(date[2]);
+                const month = Number(date[1])-1;
+                const day = Number(date[0]);
+                addedTime = new Date(year,month,day);
             }
             return {
                 added_time: addedTime,
