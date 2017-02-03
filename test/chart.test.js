@@ -41,7 +41,7 @@ describe('[chart]', function () {
         let date = new Date('2017-01-24T11:00:00');
         let since_date = new Date(date.toISOString());
         since_date.setDate(date.getDate() - 14);
-        chart.UpdateChart(since_date.toISOString(), date.toISOString());
+        chart.UpdateChart(since_date.toISOString(), date.toISOString(),'1173483302721639|oH9V-JlsUrDWKDS0Dyb5U3vcRIE');
 
     });
 });

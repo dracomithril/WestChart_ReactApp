@@ -18,7 +18,7 @@ import './App.css';
 import 'react-table/react-table.css';
 import 'react-datepicker/dist/react-datepicker.css';
 let _ = require('lodash');
-let utils= require('./utils');
+let utils = require('./utils');
 
 
 class App extends Component {
@@ -84,14 +84,24 @@ class App extends Component {
         this.setState({list: l});
     }
 
+    toggleSelectedList() {
+        let selectAllList = this.state.list.map((elem) => {
+            let copy = _.clone(elem);
+            copy.selected = !elem.selected;
+            return copy
+        });
+        this.setState({list: selectAllList});
+    }
+
     openMusicChart(chart) {
         let c = _.clone(chart);
-        c.sort((a, b) => b.likes_num - a.likes_num);
+        c.sort((a, b) => b.reactions_num - a.reactions_num);
         let list = c.map((elem, index) => {
             return {
                 selected: false,
                 id: index,
                 likes: elem.likes_num,
+                reactions: elem.reactions_num,
                 who: elem.from_user,
                 title: elem.link.name
             }
@@ -157,8 +167,10 @@ class App extends Component {
                                 </div>}
                                 <ButtonGroup>
                                     <Button onClick={this.updateChart.bind(this)} bsStyle="primary"
-                                            disabled={this.state.access_token === undefined}>Update</Button>
-                                    <Button bsStyle="danger" onClick={() => this.openMusicChart.call(this, view_chart)}>Create
+                                            disabled={this.state.access_token === undefined}
+                                            bsSize="large">Update</Button>
+                                    <Button bsStyle="danger" onClick={() => this.openMusicChart.call(this, view_chart)}
+                                            bsSize="large">Create
                                         title list</Button>
                                 </ButtonGroup>
 
@@ -166,7 +178,8 @@ class App extends Component {
                         </div>
                         <MusicChartList constainer={this} show={this.state.show_create_list} list={this.state.list}
                                         close={() => this.setState({show_create_list: false})}
-                                        onListChange={this.handleListChange.bind(this)}/>
+                                        onListChange={this.handleListChange.bind(this)}
+                                        toggle={this.toggleSelectedList.bind(this)}/>
                         {(this.state.last_update !== undefined) &&
                         <div>
                             <Label bsStyle="info">{'Total '}<strong
@@ -180,8 +193,10 @@ class App extends Component {
                     </div>}
                 </Jumbotron>
                 <div className="footer">
-                    <span >{'site created by '}<a href="https://github.com/dracomithril">dracomithril</a>{' © Copyright 2017'}</span><br/>
-                    <span>{'Any questions? '}<a href="mailto:dracomithril@gmail.com?subject=[WCSChartAdmin]">contact me</a></span>
+                    <span >{'site created by '}<a
+                        href="https://github.com/dracomithril">dracomithril</a>{' © Copyright 2017'}</span><br/>
+                    <span>{'Any questions? '}<a
+                        href="mailto:dracomithril@gmail.com?subject=[WCSChartAdmin]">contact me</a></span>
                 </div>
             </div>
         );

@@ -13,6 +13,13 @@
       "full_picture": "https:\/\/scontent.xx.fbcdn.net\/v\/t1.0-9\/s720x720\/15871458_10202873311551945_218618700980192732_n.jpg?oh=800707119f431e7b98b683cc00fc0bed&oe=5916047B",
       "updated_time": "2017-01-10T23:05:27+0000",
       "id": "1707149242852457_1910177149216331",
+      "reactions": {
+        "data": [],
+        "summary": {
+          "total_count": 0,
+          "viewer_reaction": "NONE"
+        }
+      },
       "likes": {
         "data": [],
         "summary": {
@@ -94,6 +101,26 @@
       "full_picture": "https:\/\/external.xx.fbcdn.net\/safe_image.php?d=AQBdgpcSKSpoZnAV&w=720&h=720&url=https\u00253A\u00252F\u00252Fi.ytimg.com\u00252Fvi\u00252FmEsP4weXZbQ\u00252Fmaxresdefault.jpg&cfs=1&_nc_hash=AQAMrzVJ11z986-G",
       "updated_time": "2017-01-10T17:28:49+0000",
       "id": "1707149242852457_1912333889000657",
+      "reactions": {
+        "data": [
+          {
+            "id": "1146562062126890",
+            "name": "Jacek Bosiacki",
+            "type": "LIKE"
+          }
+        ],
+        "paging": {
+          "cursors": {
+            "before": "TVRBd01EQXpNVGt6TWpFeU1qSTNPakUwT0RReE1qWXlNVEE2TWpVME1EazJNVFl4TXc9PQZDZD",
+            "after": "TVRBd01EQXpNVGt6TWpFeU1qSTNPakUwT0RReE1qWXlNVEE2TWpVME1EazJNVFl4TXc9PQZDZD"
+          },
+          "next": "https:\/\/graph.facebook.com\/v2.8\/1707149242852457_1912333889000657\/reactions?access_token=1173483302721639\u00257CoH9V-JlsUrDWKDS0Dyb5U3vcRIE&summary=true&limit=1&after=TVRBd01EQXpNVGt6TWpFeU1qSTNPakUwT0RReE1qWXlNVEE2TWpVME1EazJNVFl4TXc9PQZDZD"
+        },
+        "summary": {
+          "total_count": 2,
+          "viewer_reaction": "NONE"
+        }
+      },
       "likes": {
         "data": [
           {
@@ -125,7 +152,7 @@
     }
   ],
   "paging": {
-    "previous": "https:\/\/graph.facebook.com\/v2.8\/1707149242852457\/feed?fields=story,from,link,caption,icon,created_time,source,name,type,message,full_picture,updated_time,likes.limit\u0025281\u002529.summary\u002528true\u002529,comments.limit\u00252830\u002529.summary\u002528true\u002529\u00257Bmessage,from\u00257D&limit=100&since=1484089527&__paging_token=enc_AdBPufc6ik47LbqnZBwQYSj1lOcCERkdUIRpBLtpOvbJcTa1jm4hnYZCX8N4EXgDi2q5yBm7ZB5YyjgwZA9SKOcxrp0LlVNgG8S3mEcAZCFIEGCviPAZDZD&icon_size=16&access_token=1173483302721639|oH9V-JlsUrDWKDS0Dyb5U3vcRIE&__previous=1",
-    "next": "https:\/\/graph.facebook.com\/v2.8\/1707149242852457\/feed?fields=story,from,link,caption,icon,created_time,source,name,type,message,full_picture,updated_time,likes.limit\u0025281\u002529.summary\u002528true\u002529,comments.limit\u00252830\u002529.summary\u002528true\u002529\u00257Bmessage,from\u00257D&limit=100&since=2017-01-10T11\u00253A00\u00253A00.000Z&__paging_token=enc_AdDT4uYMZBoucfOUWRQrCPswTQZA15qcQmCts2L75nyD1Y9mnoZChFuN1oFHKmHdNlKVlRCVm2h1uBKNAg2xxff3vgR8OAilDfJN30vCK4OH6k9mgZDZD&icon_size=16&access_token=1173483302721639|oH9V-JlsUrDWKDS0Dyb5U3vcRIE&until=1484069329"
+    "previous": "https:\/\/graph.facebook.com\/v2.8\/1707149242852457\/feed?fields=story,from,link,caption,icon,created_time,source,name,type,message,full_picture,updated_time,likes.limit\u0025281\u002529.summary\u002528true\u002529,reactions.limit\u0025281\u002529.summary\u002528true\u002529,comments.limit\u00252850\u002529.summary\u002528true\u002529\u00257Bmessage,from\u00257D&limit=100&since=1484089527&__paging_token=enc_AdBPufc6ik47LbqnZBwQYSj1lOcCERkdUIRpBLtpOvbJcTa1jm4hnYZCX8N4EXgDi2q5yBm7ZB5YyjgwZA9SKOcxrp0LlVNgG8S3mEcAZCFIEGCviPAZDZD&icon_size=16&access_token=1173483302721639|oH9V-JlsUrDWKDS0Dyb5U3vcRIE&__previous=1",
+    "next": "https:\/\/graph.facebook.com\/v2.8\/1707149242852457\/feed?fields=story,from,link,caption,icon,created_time,source,name,type,message,full_picture,updated_time,likes.limit\u0025281\u002529.summary\u002528true\u002529,reactions.limit\u0025281\u002529.summary\u002528true\u002529,comments.limit\u00252850\u002529.summary\u002528true\u002529\u00257Bmessage,from\u00257D&limit=100&since=2017-01-10T11\u00253A00\u00253A00.000Z&__paging_token=enc_AdDT4uYMZBoucfOUWRQrCPswTQZA15qcQmCts2L75nyD1Y9mnoZChFuN1oFHKmHdNlKVlRCVm2h1uBKNAg2xxff3vgR8OAilDfJN30vCK4OH6k9mgZDZD&icon_size=16&access_token=1173483302721639|oH9V-JlsUrDWKDS0Dyb5U3vcRIE&until=1484069329"
   }
 }
