@@ -9,7 +9,7 @@ const limit = 100;
 let days = 7;
 let EventEmitter = require('events').EventEmitter;
 let fieldsArr = ['story', 'from', 'link', 'caption', 'icon', 'created_time', 'source', 'name', 'type', 'message',
-    'full_picture', 'updated_time', 'likes.limit(1).summary(true)', 'comments.limit(50).summary(true){message,from}'];
+    'full_picture', 'updated_time', 'likes.limit(1).summary(true)','reactions.limit(1).summary(true)', 'comments.limit(50).summary(true){message,from}'];
 let fields = fieldsArr.join(',');
 // since=2017-01-15&until=2017-01-16
 /**
@@ -147,6 +147,7 @@ class Chart extends EventEmitter {
                 from_user: elem.from.name,
                 full_picture: elem.full_picture,
                 likes_num: elem.likes.summary.total_count,
+                reactions_num:elem.reactions.summary.total_count,
                 link: {
                     url: elem.link,
                     name: elem.name

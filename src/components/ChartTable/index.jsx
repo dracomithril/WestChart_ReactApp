@@ -26,8 +26,8 @@ const columns = [{
                 return <Label bsStyle="danger">no msg</Label>
             }
         }, {
-            header: 'likes Count',
-            accessor: 'likes_num',
+            header: 'reactions count',
+            accessor: 'reactions_num',
             sort: 'dsc',
             minWidth: 60,
             maxWidth: 100
@@ -76,7 +76,6 @@ function formatDate(date) {
 }
 export default class ChartTable extends React.Component {
     render() {
-
         return (<ReactTable data={this.props.data} className="-striped -highlight" pageSizeOptions={[20, 50, 100]}
                             columns={columns} defaultPageSize={20} minRows={10}/>);
     }

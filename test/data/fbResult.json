@@ -13,6 +13,26 @@
       "full_picture": "https:\/\/scontent.xx.fbcdn.net\/v\/t1.0-9\/16114991_10202948342267666_7068694818675118168_n.jpg?oh=cf0fbc4581f20261831369962c2b69b2&oe=590B78DF",
       "updated_time": "2017-01-24T10:17:13+0000",
       "id": "1707149242852457_1919627161604663",
+      "reactions": {
+        "data": [
+          {
+            "id": "1814861832058857",
+            "name": "Madlen Madlen",
+            "type": "LOVE"
+          }
+        ],
+        "paging": {
+          "cursors": {
+            "before": "TVRBd01EQTJNRFV4TnpNeU9UTTJPakUwT0RVeU1EazJNams2TnpnNE5qUTRNRE0zT1RFek16RXkZD",
+            "after": "TVRBd01EQTJNRFV4TnpNeU9UTTJPakUwT0RVeU1EazJNams2TnpnNE5qUTRNRE0zT1RFek16RXkZD"
+          },
+          "next": "https:\/\/graph.facebook.com\/v2.8\/1707149242852457_1919627161604663\/reactions?access_token=1173483302721639\u00257CoH9V-JlsUrDWKDS0Dyb5U3vcRIE&summary=true&limit=1&after=TVRBd01EQTJNRFV4TnpNeU9UTTJPakUwT0RVeU1EazJNams2TnpnNE5qUTRNRE0zT1RFek16RXkZD"
+        },
+        "summary": {
+          "total_count": 9,
+          "viewer_reaction": "NONE"
+        }
+      },
       "likes": {
         "data": [
           {
@@ -98,22 +118,42 @@
       "full_picture": "https:\/\/external.xx.fbcdn.net\/safe_image.php?d=AQB2gUbnZxOZf2mR&w=720&h=720&url=https\u00253A\u00252F\u00252Fi.ytimg.com\u00252Fvi\u00252FQp_RklNtFeg\u00252Fmaxresdefault.jpg&cfs=1&_nc_hash=AQAqZlYx-AZ0Xyc6",
       "updated_time": "2017-01-24T09:59:41+0000",
       "id": "1707149242852457_1918589738375072",
-      "likes": {
+      "reactions": {
         "data": [
           {
-            "id": "10154358790907677",
-            "name": "Gosia Qu"
+            "id": "704964613006110",
+            "name": "Krzysztof Milcewicz",
+            "type": "LIKE"
           }
         ],
         "paging": {
           "cursors": {
-            "before": "MTAxNTQzNTg3OTA5MDc2NzcZD",
-            "after": "MTAxNTQzNTg3OTA5MDc2NzcZD"
+            "before": "TVRBd01EQTBOemMzTXpJM016YzBPakUwT0RVM01qRXhNVE02TWpVME1EazJNVFl4TXc9PQZDZD",
+            "after": "TVRBd01EQTBOemMzTXpJM016YzBPakUwT0RVM01qRXhNVE02TWpVME1EazJNVFl4TXc9PQZDZD"
           },
-          "next": "https:\/\/graph.facebook.com\/v2.8\/1707149242852457_1918589738375072\/likes?access_token=1173483302721639\u00257CoH9V-JlsUrDWKDS0Dyb5U3vcRIE&summary=true&limit=1&after=MTAxNTQzNTg3OTA5MDc2NzcZD"
+          "next": "https:\/\/graph.facebook.com\/v2.8\/1707149242852457_1918589738375072\/reactions?access_token=1173483302721639\u00257CoH9V-JlsUrDWKDS0Dyb5U3vcRIE&summary=true&limit=1&after=TVRBd01EQTBOemMzTXpJM016YzBPakUwT0RVM01qRXhNVE02TWpVME1EazJNVFl4TXc9PQZDZD"
         },
         "summary": {
-          "total_count": 7,
+          "total_count": 8,
+          "viewer_reaction": "NONE"
+        }
+      },
+      "likes": {
+        "data": [
+          {
+            "id": "704964613006110",
+            "name": "Krzysztof Milcewicz"
+          }
+        ],
+        "paging": {
+          "cursors": {
+            "before": "NzA0OTY0NjEzMDA2MTEw",
+            "after": "NzA0OTY0NjEzMDA2MTEw"
+          },
+          "next": "https:\/\/graph.facebook.com\/v2.8\/1707149242852457_1918589738375072\/likes?access_token=1173483302721639\u00257CoH9V-JlsUrDWKDS0Dyb5U3vcRIE&summary=true&limit=1&after=NzA0OTY0NjEzMDA2MTEw"
+        },
+        "summary": {
+          "total_count": 8,
           "can_like": true,
           "has_liked": false
         }
@@ -175,6 +215,26 @@
       "full_picture": "https:\/\/external.xx.fbcdn.net\/safe_image.php?d=AQDtL-8maFXVMuWC&w=720&h=720&url=http\u00253A\u00252F\u00252Fi.ytimg.com\u00252Fvi\u00252FhT_nvWreIhg\u00252Fmaxresdefault.jpg&cfs=1&sx=310&sy=0&sw=720&sh=720&_nc_hash=AQDHJltellsfJmzl",
       "updated_time": "2017-01-23T22:06:31+0000",
       "id": "1707149242852457_1713065138927534",
+      "reactions": {
+        "data": [
+          {
+            "id": "10154358790907677",
+            "name": "Gosia Qu",
+            "type": "LOVE"
+          }
+        ],
+        "paging": {
+          "cursors": {
+            "before": "TlRNeU56VTNOamMyT2pFME9EVXpPRFV4TnpJNk56ZAzROalE0TURNM09URXpNekV5",
+            "after": "TlRNeU56VTNOamMyT2pFME9EVXpPRFV4TnpJNk56ZAzROalE0TURNM09URXpNekV5"
+          },
+          "next": "https:\/\/graph.facebook.com\/v2.8\/1707149242852457_1713065138927534\/reactions?access_token=1173483302721639\u00257CoH9V-JlsUrDWKDS0Dyb5U3vcRIE&summary=true&limit=1&after=TlRNeU56VTNOamMyT2pFME9EVXpPRFV4TnpJNk56ZAzROalE0TURNM09URXpNekV5"
+        },
+        "summary": {
+          "total_count": 18,
+          "viewer_reaction": "NONE"
+        }
+      },
       "likes": {
         "data": [
           {
@@ -252,6 +312,26 @@
       "full_picture": "https:\/\/external.xx.fbcdn.net\/safe_image.php?d=AQBcwT315ymRcNF5&w=720&h=720&url=https\u00253A\u00252F\u00252Fi.ytimg.com\u00252Fvi\u00252F65IGHBCx-2I\u00252Fmaxresdefault.jpg&cfs=1&_nc_hash=AQAxWxw6cElkHhQN",
       "updated_time": "2017-01-23T22:05:20+0000",
       "id": "1707149242852457_1918590991708280",
+      "reactions": {
+        "data": [
+          {
+            "id": "1176790605774345",
+            "name": "Jolanta Kr\u00f3l",
+            "type": "LIKE"
+          }
+        ],
+        "paging": {
+          "cursors": {
+            "before": "TVRBd01EQXpNekF5TkRrM09EUXhPakUwT0RVek5UTTRORFU2TWpVME1EazJNVFl4TXc9PQZDZD",
+            "after": "TVRBd01EQXpNekF5TkRrM09EUXhPakUwT0RVek5UTTRORFU2TWpVME1EazJNVFl4TXc9PQZDZD"
+          },
+          "next": "https:\/\/graph.facebook.com\/v2.8\/1707149242852457_1918590991708280\/reactions?access_token=1173483302721639\u00257CoH9V-JlsUrDWKDS0Dyb5U3vcRIE&summary=true&limit=1&after=TVRBd01EQXpNekF5TkRrM09EUXhPakUwT0RVek5UTTRORFU2TWpVME1EazJNVFl4TXc9PQZDZD"
+        },
+        "summary": {
+          "total_count": 15,
+          "viewer_reaction": "NONE"
+        }
+      },
       "likes": {
         "data": [
           {
@@ -313,22 +393,42 @@
       "full_picture": "https:\/\/external.xx.fbcdn.net\/safe_image.php?d=AQCuJZeToKMhqRhe&w=720&h=720&url=https\u00253A\u00252F\u00252Fi.ytimg.com\u00252Fvi\u00252FtayEofaRQIs\u00252Fhqdefault.jpg&cfs=1&_nc_hash=AQBawjqw4RCIyCyX",
       "updated_time": "2017-01-23T21:59:15+0000",
       "id": "1707149242852457_1919539938280052",
-      "likes": {
+      "reactions": {
         "data": [
           {
-            "id": "1606563702693421",
-            "name": "Arseny Nasokin"
+            "id": "1130043507117833",
+            "name": "Wojciech \u0141opata",
+            "type": "LIKE"
           }
         ],
         "paging": {
           "cursors": {
-            "before": "MTYwNjU2MzcwMjY5MzQyMQZDZD",
-            "after": "MTYwNjU2MzcwMjY5MzQyMQZDZD"
+            "before": "TVRBd01EQXpNelkxT0RNME5qVXhPakUwT0RVM09Ea3pORFE2TWpVME1EazJNVFl4TXc9PQZDZD",
+            "after": "TVRBd01EQXpNelkxT0RNME5qVXhPakUwT0RVM09Ea3pORFE2TWpVME1EazJNVFl4TXc9PQZDZD"
           },
-          "next": "https:\/\/graph.facebook.com\/v2.8\/1707149242852457_1919539938280052\/likes?access_token=1173483302721639\u00257CoH9V-JlsUrDWKDS0Dyb5U3vcRIE&summary=true&limit=1&after=MTYwNjU2MzcwMjY5MzQyMQZDZD"
+          "next": "https:\/\/graph.facebook.com\/v2.8\/1707149242852457_1919539938280052\/reactions?access_token=1173483302721639\u00257CoH9V-JlsUrDWKDS0Dyb5U3vcRIE&summary=true&limit=1&after=TVRBd01EQXpNelkxT0RNME5qVXhPakUwT0RVM09Ea3pORFE2TWpVME1EazJNVFl4TXc9PQZDZD"
         },
         "summary": {
-          "total_count": 7,
+          "total_count": 9,
+          "viewer_reaction": "NONE"
+        }
+      },
+      "likes": {
+        "data": [
+          {
+            "id": "1130043507117833",
+            "name": "Wojciech \u0141opata"
+          }
+        ],
+        "paging": {
+          "cursors": {
+            "before": "MTEzMDA0MzUwNzExNzgzMwZDZD",
+            "after": "MTEzMDA0MzUwNzExNzgzMwZDZD"
+          },
+          "next": "https:\/\/graph.facebook.com\/v2.8\/1707149242852457_1919539938280052\/likes?access_token=1173483302721639\u00257CoH9V-JlsUrDWKDS0Dyb5U3vcRIE&summary=true&limit=1&after=MTEzMDA0MzUwNzExNzgzMwZDZD"
+        },
+        "summary": {
+          "total_count": 8,
           "can_like": true,
           "has_liked": false
         }
@@ -382,6 +482,26 @@
       "full_picture": "https:\/\/external.xx.fbcdn.net\/safe_image.php?d=AQCN8alpRccQOEGU&w=720&h=720&url=https\u00253A\u00252F\u00252Fi.ytimg.com\u00252Fvi\u00252FGZSsOEqgm0c\u00252Fmaxresdefault.jpg&cfs=1&sx=946&sy=0&sw=1336&sh=1336&_nc_hash=AQCGht2hI7xOeF8L",
       "updated_time": "2017-01-23T18:30:39+0000",
       "id": "1707149242852457_1761958864038161",
+      "reactions": {
+        "data": [
+          {
+            "id": "10202921980928649",
+            "name": "Joanna Kozie\u0144ska",
+            "type": "LIKE"
+          }
+        ],
+        "paging": {
+          "cursors": {
+            "before": "TVRjM05qZA3dPREV4TURveE5EZAzFNamcyT0RZAek9qSTFOREE1TmpFMk1UTT0ZD",
+            "after": "TVRjM05qZA3dPREV4TURveE5EZAzFNamcyT0RZAek9qSTFOREE1TmpFMk1UTT0ZD"
+          },
+          "next": "https:\/\/graph.facebook.com\/v2.8\/1707149242852457_1761958864038161\/reactions?access_token=1173483302721639\u00257CoH9V-JlsUrDWKDS0Dyb5U3vcRIE&summary=true&limit=1&after=TVRjM05qZA3dPREV4TURveE5EZAzFNamcyT0RZAek9qSTFOREE1TmpFMk1UTT0ZD"
+        },
+        "summary": {
+          "total_count": 7,
+          "viewer_reaction": "NONE"
+        }
+      },
       "likes": {
         "data": [
           {
@@ -443,6 +563,26 @@
       "full_picture": "https:\/\/external.xx.fbcdn.net\/safe_image.php?d=AQC6PSHRqSHcxsn1&w=720&h=720&url=https\u00253A\u00252F\u00252Fi.ytimg.com\u00252Fvi\u00252F8Si2q_rxvWA\u00252Fmaxresdefault.jpg&cfs=1&sx=182&sy=0&sw=720&sh=720&_nc_hash=AQCnzsV8XXbUi15X",
       "updated_time": "2017-01-23T18:28:46+0000",
       "id": "1707149242852457_1783003828600331",
+      "reactions": {
+        "data": [
+          {
+            "id": "1146562062126890",
+            "name": "Jacek Bosiacki",
+            "type": "LIKE"
+          }
+        ],
+        "paging": {
+          "cursors": {
+            "before": "TVRBd01EQXpNVGt6TWpFeU1qSTNPakUwT0RVek5qRXpNalE2TWpVME1EazJNVFl4TXc9PQZDZD",
+            "after": "TVRBd01EQXpNVGt6TWpFeU1qSTNPakUwT0RVek5qRXpNalE2TWpVME1EazJNVFl4TXc9PQZDZD"
+          },
+          "next": "https:\/\/graph.facebook.com\/v2.8\/1707149242852457_1783003828600331\/reactions?access_token=1173483302721639\u00257CoH9V-JlsUrDWKDS0Dyb5U3vcRIE&summary=true&limit=1&after=TVRBd01EQXpNVGt6TWpFeU1qSTNPakUwT0RVek5qRXpNalE2TWpVME1EazJNVFl4TXc9PQZDZD"
+        },
+        "summary": {
+          "total_count": 19,
+          "viewer_reaction": "NONE"
+        }
+      },
       "likes": {
         "data": [
           {
@@ -512,6 +652,26 @@
       "full_picture": "https:\/\/external.xx.fbcdn.net\/safe_image.php?d=AQDKhaJ9lAx1Ljg-&w=720&h=720&url=https\u00253A\u00252F\u00252Fi.ytimg.com\u00252Fvi\u00252FiXi6IHFHeIA\u00252Fmaxresdefault.jpg&cfs=1&sx=381&sy=0&sw=720&sh=720&_nc_hash=AQBdMTxjoPVea4Tp",
       "updated_time": "2017-01-23T12:01:01+0000",
       "id": "1707149242852457_1721882978045750",
+      "reactions": {
+        "data": [
+          {
+            "id": "1574584592571204",
+            "name": "Dariusz Winiarski",
+            "type": "LOVE"
+          }
+        ],
+        "paging": {
+          "cursors": {
+            "before": "TVRBd01EQXdOVGt3TXpRNE56YzFPakUwT0RVeU1EZAzROREE2TnpnNE5qUTRNRE0zT1RFek16RXkZD",
+            "after": "TVRBd01EQXdOVGt3TXpRNE56YzFPakUwT0RVeU1EZAzROREE2TnpnNE5qUTRNRE0zT1RFek16RXkZD"
+          },
+          "next": "https:\/\/graph.facebook.com\/v2.8\/1707149242852457_1721882978045750\/reactions?access_token=1173483302721639\u00257CoH9V-JlsUrDWKDS0Dyb5U3vcRIE&summary=true&limit=1&after=TVRBd01EQXdOVGt3TXpRNE56YzFPakUwT0RVeU1EZAzROREE2TnpnNE5qUTRNRE0zT1RFek16RXkZD"
+        },
+        "summary": {
+          "total_count": 11,
+          "viewer_reaction": "NONE"
+        }
+      },
       "likes": {
         "data": [
           {
@@ -581,6 +741,26 @@
       "full_picture": "https:\/\/external.xx.fbcdn.net\/safe_image.php?d=AQC-eITqtOJISspq&w=720&h=720&url=https\u00253A\u00252F\u00252Fi.ytimg.com\u00252Fvi\u00252F05Qdu0jkihU\u00252Fmaxresdefault.jpg&cfs=1&_nc_hash=AQAoFyWFpSkbEpwn",
       "updated_time": "2017-01-23T06:21:48+0000",
       "id": "1707149242852457_1918766348357411",
+      "reactions": {
+        "data": [
+          {
+            "id": "747819742052528",
+            "name": "Marian Biedronka",
+            "type": "LIKE"
+          }
+        ],
+        "paging": {
+          "cursors": {
+            "before": "TVRBd01EQTBOek0xTWpZANE5UVXdPakUwT0RVeE1qY3hNVFU2TWpVME1EazJNVFl4TXc9PQZDZD",
+            "after": "TVRBd01EQTBOek0xTWpZANE5UVXdPakUwT0RVeE1qY3hNVFU2TWpVME1EazJNVFl4TXc9PQZDZD"
+          },
+          "next": "https:\/\/graph.facebook.com\/v2.8\/1707149242852457_1918766348357411\/reactions?access_token=1173483302721639\u00257CoH9V-JlsUrDWKDS0Dyb5U3vcRIE&summary=true&limit=1&after=TVRBd01EQTBOek0xTWpZANE5UVXdPakUwT0RVeE1qY3hNVFU2TWpVME1EazJNVFl4TXc9PQZDZD"
+        },
+        "summary": {
+          "total_count": 8,
+          "viewer_reaction": "NONE"
+        }
+      },
       "likes": {
         "data": [
           {
@@ -643,6 +823,26 @@
       "message": "[FOR THE NEW MEMBERS]\n\nHi! :)\n\nI've just updated the description of our group, so that you can get an overview of how things work here.\n\nIf you have any doubts or questions, let me know!\n\nCheers,\nJoanna",
       "updated_time": "2017-01-22T22:48:55+0000",
       "id": "1707149242852457_1919091558324890",
+      "reactions": {
+        "data": [
+          {
+            "id": "1606563702693421",
+            "name": "Arseny Nasokin",
+            "type": "LIKE"
+          }
+        ],
+        "paging": {
+          "cursors": {
+            "before": "TVRBd01EQXdNVGswTWpFeU56RTFPakUwT0RVeE9ERXpNREk2TWpVME1EazJNVFl4TXc9PQZDZD",
+            "after": "TVRBd01EQXdNVGswTWpFeU56RTFPakUwT0RVeE9ERXpNREk2TWpVME1EazJNVFl4TXc9PQZDZD"
+          },
+          "next": "https:\/\/graph.facebook.com\/v2.8\/1707149242852457_1919091558324890\/reactions?access_token=1173483302721639\u00257CoH9V-JlsUrDWKDS0Dyb5U3vcRIE&summary=true&limit=1&after=TVRBd01EQXdNVGswTWpFeU56RTFPakUwT0RVeE9ERXpNREk2TWpVME1EazJNVFl4TXc9PQZDZD"
+        },
+        "summary": {
+          "total_count": 5,
+          "viewer_reaction": "NONE"
+        }
+      },
       "likes": {
         "data": [
           {
@@ -683,6 +883,26 @@
       "message": "Welcome on board of our WCS Dance Chart! Share your favourite WCS music with our international (although still mostly Polish ;)) community!\n\nCouple of rules to follow, so as to make our quest here smooth and painless:\n\nWe've tried out a number of ideas with regards to posting new songs, and THE QUEUE seems to be the only one that prevents us all from being buried daily under the neverending avalanche of WCS pieces. \n\nHow does it work?\n\n- we only publish 2 songs per day, Mon.till Fri.\n\n- each Friday you get a recap of what has been published during the week, so that you can easily keep track of the new songs,\n\n- we don't publish on weekends, so that there's time to actually listen to every new song and decide if it deserves a thumbs up or not,\n\n- the number of people who want to share their songs is usually higher than the number of free slots we can provide each week (2 songs per day = 10 slots in total per week), so, please, don't get worried or frustrated if your piece doesn't get published immediately: it's sitting safe and sound in the queue and the world is definitely going to see it when the right time comes :) \n\nBEFORE YOU POST anything: please, please use the search bar on top of the page and make sure that you're the first one who thought about sharing that particular song, so that we can avoid publishing the same piece twice :)\n\nCommunication:\nthe Chart was created by a group of Polish Westies, so don't be surprised if you see comments\/posts written in our mother tongue :)\n\nWe all know English fairly well and we promise  we'll try to use it more often, so that our English-speaking members can feel more at home here :) Don't hesitate to post\/comment\/ask questions\/share your thoughts in English - everybody will understand :)\n\nNow go ahead, browse away through our archives and post the songs you would like us to triple step to! :)",
       "updated_time": "2017-01-22T22:42:19+0000",
       "id": "1707149242852457_1919088934991819",
+      "reactions": {
+        "data": [
+          {
+            "id": "1187525464658657",
+            "name": "Magdalena Wawrzy\u0144ska",
+            "type": "LIKE"
+          }
+        ],
+        "paging": {
+          "cursors": {
+            "before": "TVRBd01EQXlNRE0yTkRNMU5EZAzBPakUwT0RVeE1qazBORFk2TWpVME1EazJNVFl4TXc9PQZDZD",
+            "after": "TVRBd01EQXlNRE0yTkRNMU5EZAzBPakUwT0RVeE1qazBORFk2TWpVME1EazJNVFl4TXc9PQZDZD"
+          },
+          "next": "https:\/\/graph.facebook.com\/v2.8\/1707149242852457_1919088934991819\/reactions?access_token=1173483302721639\u00257CoH9V-JlsUrDWKDS0Dyb5U3vcRIE&summary=true&limit=1&after=TVRBd01EQXlNRE0yTkRNMU5EZAzBPakUwT0RVeE1qazBORFk2TWpVME1EazJNVFl4TXc9PQZDZD"
+        },
+        "summary": {
+          "total_count": 2,
+          "viewer_reaction": "NONE"
+        }
+      },
       "likes": {
         "data": [
           {
@@ -729,6 +949,26 @@
       "full_picture": "https:\/\/external.xx.fbcdn.net\/safe_image.php?d=AQAGVY5A6qPm2Xd3&w=720&h=720&url=https\u00253A\u00252F\u00252Fi.ytimg.com\u00252Fvi\u00252FoyEuk8j8imI\u00252Fmaxresdefault.jpg&cfs=1&sx=172&sy=0&sw=720&sh=720&_nc_hash=AQChECPBUbPkOp_U",
       "updated_time": "2017-01-22T15:36:44+0000",
       "id": "1707149242852457_1742727392627975",
+      "reactions": {
+        "data": [
+          {
+            "id": "859129380897011",
+            "name": "Przemys\u0142aw Przemys\u0142",
+            "type": "LIKE"
+          }
+        ],
+        "paging": {
+          "cursors": {
+            "before": "TVRBd01EQXpPVGs0TnpBek5ERTJPakUwT0RVeU5qa3pNelE2TWpVME1EazJNVFl4TXc9PQZDZD",
+            "after": "TVRBd01EQXpPVGs0TnpBek5ERTJPakUwT0RVeU5qa3pNelE2TWpVME1EazJNVFl4TXc9PQZDZD"
+          },
+          "next": "https:\/\/graph.facebook.com\/v2.8\/1707149242852457_1742727392627975\/reactions?access_token=1173483302721639\u00257CoH9V-JlsUrDWKDS0Dyb5U3vcRIE&summary=true&limit=1&after=TVRBd01EQXpPVGs0TnpBek5ERTJPakUwT0RVeU5qa3pNelE2TWpVME1EazJNVFl4TXc9PQZDZD"
+        },
+        "summary": {
+          "total_count": 31,
+          "viewer_reaction": "NONE"
+        }
+      },
       "likes": {
         "data": [
           {
@@ -846,6 +1086,26 @@
       "full_picture": "https:\/\/external.xx.fbcdn.net\/safe_image.php?d=AQDUiUyOghZcRz7t&w=720&h=720&url=https\u00253A\u00252F\u00252Fi.ytimg.com\u00252Fvi\u00252F0KSOMA3QBU0\u00252Fmaxresdefault.jpg&cfs=1&sx=527&sy=0&sw=1080&sh=1080&_nc_hash=AQB1In0cALvGCvHI",
       "updated_time": "2017-01-22T15:32:15+0000",
       "id": "1707149242852457_1918764568357589",
+      "reactions": {
+        "data": [
+          {
+            "id": "142580416242915",
+            "name": "Konrad Kras",
+            "type": "LIKE"
+          }
+        ],
+        "paging": {
+          "cursors": {
+            "before": "TVRBd01ERTBOekk0TnpFMU1EYzJPakUwT0RVeE1qQTFPVFU2TWpVME1EazJNVFl4TXc9PQZDZD",
+            "after": "TVRBd01ERTBOekk0TnpFMU1EYzJPakUwT0RVeE1qQTFPVFU2TWpVME1EazJNVFl4TXc9PQZDZD"
+          },
+          "next": "https:\/\/graph.facebook.com\/v2.8\/1707149242852457_1918764568357589\/reactions?access_token=1173483302721639\u00257CoH9V-JlsUrDWKDS0Dyb5U3vcRIE&summary=true&limit=1&after=TVRBd01ERTBOekk0TnpFMU1EYzJPakUwT0RVeE1qQTFPVFU2TWpVME1EazJNVFl4TXc9PQZDZD"
+        },
+        "summary": {
+          "total_count": 3,
+          "viewer_reaction": "NONE"
+        }
+      },
       "likes": {
         "data": [
           {
@@ -892,6 +1152,26 @@
       "full_picture": "https:\/\/external.xx.fbcdn.net\/safe_image.php?d=AQDcELcsiXG4pDuW&w=480&h=480&url=https\u00253A\u00252F\u00252Fi.ytimg.com\u00252Fvi\u00252FRbtPXFlZlHg\u00252Fmaxresdefault.jpg&cfs=1&sx=0&sy=0&sw=480&sh=480&_nc_hash=AQA3B6olt283G2KC",
       "updated_time": "2017-01-22T11:19:02+0000",
       "id": "1707149242852457_1918591428374903",
+      "reactions": {
+        "data": [
+          {
+            "id": "1446081058738413",
+            "name": "Carlo Testa",
+            "type": "LIKE"
+          }
+        ],
+        "paging": {
+          "cursors": {
+            "before": "TVRBd01EQXdNRGsxT1RrMk1qVXlPakUwT0RVeE9EY3hOelU2TWpVME1EazJNVFl4TXc9PQZDZD",
+            "after": "TVRBd01EQXdNRGsxT1RrMk1qVXlPakUwT0RVeE9EY3hOelU2TWpVME1EazJNVFl4TXc9PQZDZD"
+          },
+          "next": "https:\/\/graph.facebook.com\/v2.8\/1707149242852457_1918591428374903\/reactions?access_token=1173483302721639\u00257CoH9V-JlsUrDWKDS0Dyb5U3vcRIE&summary=true&limit=1&after=TVRBd01EQXdNRGsxT1RrMk1qVXlPakUwT0RVeE9EY3hOelU2TWpVME1EazJNVFl4TXc9PQZDZD"
+        },
+        "summary": {
+          "total_count": 8,
+          "viewer_reaction": "NONE"
+        }
+      },
       "likes": {
         "data": [
           {
@@ -953,6 +1233,26 @@
       "full_picture": "https:\/\/external.xx.fbcdn.net\/safe_image.php?d=AQDTjAvNkw9dxDUq&w=720&h=720&url=https\u00253A\u00252F\u00252Fi.ytimg.com\u00252Fvi\u00252FeyGm-dpJWn0\u00252Fmaxresdefault.jpg&cfs=1&sx=129&sy=0&sw=720&sh=720&_nc_hash=AQBH852wtGtGL9fj",
       "updated_time": "2017-01-22T08:58:14+0000",
       "id": "1707149242852457_1918589398375106",
+      "reactions": {
+        "data": [
+          {
+            "id": "1606563702693421",
+            "name": "Arseny Nasokin",
+            "type": "LIKE"
+          }
+        ],
+        "paging": {
+          "cursors": {
+            "before": "TVRBd01EQXdNVGswTWpFeU56RTFPakUwT0RVeE9ERXpOVFk2TWpVME1EazJNVFl4TXc9PQZDZD",
+            "after": "TVRBd01EQXdNVGswTWpFeU56RTFPakUwT0RVeE9ERXpOVFk2TWpVME1EazJNVFl4TXc9PQZDZD"
+          },
+          "next": "https:\/\/graph.facebook.com\/v2.8\/1707149242852457_1918589398375106\/reactions?access_token=1173483302721639\u00257CoH9V-JlsUrDWKDS0Dyb5U3vcRIE&summary=true&limit=1&after=TVRBd01EQXdNVGswTWpFeU56RTFPakUwT0RVeE9ERXpOVFk2TWpVME1EazJNVFl4TXc9PQZDZD"
+        },
+        "summary": {
+          "total_count": 4,
+          "viewer_reaction": "NONE"
+        }
+      },
       "likes": {
         "data": [
           {
@@ -999,6 +1299,26 @@
       "full_picture": "https:\/\/external.xx.fbcdn.net\/safe_image.php?d=AQDEcEGub76THveg&w=720&h=720&url=https\u00253A\u00252F\u00252Fi.ytimg.com\u00252Fvi\u00252F20Ov0cDPZy8\u00252Fmaxresdefault.jpg&cfs=1&sx=422&sy=0&sw=790&sh=790&_nc_hash=AQDYd1G8aEq6QYrN",
       "updated_time": "2017-01-22T01:53:48+0000",
       "id": "1707149242852457_1918386011728778",
+      "reactions": {
+        "data": [
+          {
+            "id": "859129380897011",
+            "name": "Przemys\u0142aw Przemys\u0142",
+            "type": "LIKE"
+          }
+        ],
+        "paging": {
+          "cursors": {
+            "before": "TVRBd01EQXpPVGs0TnpBek5ERTJPakUwT0RVeU5qazBOelE2TWpVME1EazJNVFl4TXc9PQZDZD",
+            "after": "TVRBd01EQXpPVGs0TnpBek5ERTJPakUwT0RVeU5qazBOelE2TWpVME1EazJNVFl4TXc9PQZDZD"
+          },
+          "next": "https:\/\/graph.facebook.com\/v2.8\/1707149242852457_1918386011728778\/reactions?access_token=1173483302721639\u00257CoH9V-JlsUrDWKDS0Dyb5U3vcRIE&summary=true&limit=1&after=TVRBd01EQXpPVGs0TnpBek5ERTJPakUwT0RVeU5qazBOelE2TWpVME1EazJNVFl4TXc9PQZDZD"
+        },
+        "summary": {
+          "total_count": 15,
+          "viewer_reaction": "NONE"
+        }
+      },
       "likes": {
         "data": [
           {
@@ -1060,6 +1380,26 @@
       "full_picture": "https:\/\/external.xx.fbcdn.net\/safe_image.php?d=AQDWwrvAilGY7TXr&w=720&h=720&url=https\u00253A\u00252F\u00252Fi.ytimg.com\u00252Fvi\u00252Fbny6NnwfyGM\u00252Fmaxresdefault.jpg&cfs=1&_nc_hash=AQBTrVhALRyuA_mp",
       "updated_time": "2017-01-22T00:19:03+0000",
       "id": "1707149242852457_1838506766383370",
+      "reactions": {
+        "data": [
+          {
+            "id": "1574584592571204",
+            "name": "Dariusz Winiarski",
+            "type": "LIKE"
+          }
+        ],
+        "paging": {
+          "cursors": {
+            "before": "TVRBd01EQXdOVGt3TXpRNE56YzFPakUwT0RVeU1Ea3lPRFE2TWpVME1EazJNVFl4TXc9PQZDZD",
+            "after": "TVRBd01EQXdOVGt3TXpRNE56YzFPakUwT0RVeU1Ea3lPRFE2TWpVME1EazJNVFl4TXc9PQZDZD"
+          },
+          "next": "https:\/\/graph.facebook.com\/v2.8\/1707149242852457_1838506766383370\/reactions?access_token=1173483302721639\u00257CoH9V-JlsUrDWKDS0Dyb5U3vcRIE&summary=true&limit=1&after=TVRBd01EQXdOVGt3TXpRNE56YzFPakUwT0RVeU1Ea3lPRFE2TWpVME1EazJNVFl4TXc9PQZDZD"
+        },
+        "summary": {
+          "total_count": 17,
+          "viewer_reaction": "NONE"
+        }
+      },
       "likes": {
         "data": [
           {
@@ -1136,6 +1476,26 @@
       "full_picture": "https:\/\/external.xx.fbcdn.net\/safe_image.php?d=AQBAqoyZ1qA6fTHw&w=720&h=720&url=https\u00253A\u00252F\u00252Fi.ytimg.com\u00252Fvi\u00252FE4povfmX144\u00252Fmaxresdefault.jpg&cfs=1&_nc_hash=AQBfbjn4XJMXsN5O",
       "updated_time": "2017-01-21T15:44:57+0000",
       "id": "1707149242852457_1915614465339266",
+      "reactions": {
+        "data": [
+          {
+            "id": "1436037566414936",
+            "name": "Katarzyna Gierasimczuk",
+            "type": "LIKE"
+          }
+        ],
+        "paging": {
+          "cursors": {
+            "before": "TVRBd01EQXdNall4TVRneU9ERTRPakUwT0RVd05ERXdOVEU2TWpVME1EazJNVFl4TXc9PQZDZD",
+            "after": "TVRBd01EQXdNall4TVRneU9ERTRPakUwT0RVd05ERXdOVEU2TWpVME1EazJNVFl4TXc9PQZDZD"
+          },
+          "next": "https:\/\/graph.facebook.com\/v2.8\/1707149242852457_1915614465339266\/reactions?access_token=1173483302721639\u00257CoH9V-JlsUrDWKDS0Dyb5U3vcRIE&summary=true&limit=1&after=TVRBd01EQXdNall4TVRneU9ERTRPakUwT0RVd05ERXdOVEU2TWpVME1EazJNVFl4TXc9PQZDZD"
+        },
+        "summary": {
+          "total_count": 8,
+          "viewer_reaction": "NONE"
+        }
+      },
       "likes": {
         "data": [
           {
@@ -1205,6 +1565,26 @@
       "full_picture": "https:\/\/external.xx.fbcdn.net\/safe_image.php?d=AQACOE90vYk2FLVa&w=720&h=720&url=https\u00253A\u00252F\u00252Fi.ytimg.com\u00252Fvi\u00252F4Ba_qTPA4Ds\u00252Fmaxresdefault.jpg&cfs=1&sx=308&sy=0&sw=950&sh=950&_nc_hash=AQDJ64V1bL7J8qSE",
       "updated_time": "2017-01-21T14:53:45+0000",
       "id": "1707149242852457_1918110918422954",
+      "reactions": {
+        "data": [
+          {
+            "id": "10208005630569578",
+            "name": "Kasia Caba\u0142a",
+            "type": "LIKE"
+          }
+        ],
+        "paging": {
+          "cursors": {
+            "before": "TVRVMk1qY3pNVFE0TXpveE5EZAzFNVEUzTmpjek9qSTFOREE1TmpFMk1UTT0ZD",
+            "after": "TVRVMk1qY3pNVFE0TXpveE5EZAzFNVEUzTmpjek9qSTFOREE1TmpFMk1UTT0ZD"
+          },
+          "next": "https:\/\/graph.facebook.com\/v2.8\/1707149242852457_1918110918422954\/reactions?access_token=1173483302721639\u00257CoH9V-JlsUrDWKDS0Dyb5U3vcRIE&summary=true&limit=1&after=TVRVMk1qY3pNVFE0TXpveE5EZAzFNVEUzTmpjek9qSTFOREE1TmpFMk1UTT0ZD"
+        },
+        "summary": {
+          "total_count": 25,
+          "viewer_reaction": "NONE"
+        }
+      },
       "likes": {
         "data": [
           {
@@ -1274,6 +1654,26 @@
       "full_picture": "https:\/\/external.xx.fbcdn.net\/safe_image.php?d=AQCdUqssUv5OXO9v&w=720&h=720&url=https\u00253A\u00252F\u00252Fi.ytimg.com\u00252Fvi\u00252FJ91ti_MpdHA\u00252Fmaxresdefault.jpg&cfs=1&sx=243&sy=0&sw=720&sh=720&_nc_hash=AQCLpi553czBWT9F",
       "updated_time": "2017-01-21T14:27:08+0000",
       "id": "1707149242852457_1917607191806660",
+      "reactions": {
+        "data": [
+          {
+            "id": "1814861832058857",
+            "name": "Madlen Madlen",
+            "type": "LIKE"
+          }
+        ],
+        "paging": {
+          "cursors": {
+            "before": "TVRBd01EQTJNRFV4TnpNeU9UTTJPakUwT0RVd09UUTVNRE02TWpVME1EazJNVFl4TXc9PQZDZD",
+            "after": "TVRBd01EQTJNRFV4TnpNeU9UTTJPakUwT0RVd09UUTVNRE02TWpVME1EazJNVFl4TXc9PQZDZD"
+          },
+          "next": "https:\/\/graph.facebook.com\/v2.8\/1707149242852457_1917607191806660\/reactions?access_token=1173483302721639\u00257CoH9V-JlsUrDWKDS0Dyb5U3vcRIE&summary=true&limit=1&after=TVRBd01EQTJNRFV4TnpNeU9UTTJPakUwT0RVd09UUTVNRE02TWpVME1EazJNVFl4TXc9PQZDZD"
+        },
+        "summary": {
+          "total_count": 18,
+          "viewer_reaction": "NONE"
+        }
+      },
       "likes": {
         "data": [
           {
@@ -1335,6 +1735,26 @@
       "full_picture": "https:\/\/external.xx.fbcdn.net\/safe_image.php?d=AQD9SZmgOt50QB8K&w=720&h=720&url=https\u00253A\u00252F\u00252Fi.ytimg.com\u00252Fvi\u00252FnEIHHydwec8\u00252Fmaxresdefault.jpg&cfs=1&sx=284&sy=0&sw=720&sh=720&_nc_hash=AQCpdrNswoTAZQEM",
       "updated_time": "2017-01-21T14:24:19+0000",
       "id": "1707149242852457_1918005618433484",
+      "reactions": {
+        "data": [
+          {
+            "id": "10154977999038140",
+            "name": "Konrad Kuligowski",
+            "type": "LOVE"
+          }
+        ],
+        "paging": {
+          "cursors": {
+            "before": "TmpJNU1UZA3pNVE01T2pFME9EVXdPREF6TWpVNk56ZAzROalE0TURNM09URXpNekV5",
+            "after": "TmpJNU1UZA3pNVE01T2pFME9EVXdPREF6TWpVNk56ZAzROalE0TURNM09URXpNekV5"
+          },
+          "next": "https:\/\/graph.facebook.com\/v2.8\/1707149242852457_1918005618433484\/reactions?access_token=1173483302721639\u00257CoH9V-JlsUrDWKDS0Dyb5U3vcRIE&summary=true&limit=1&after=TmpJNU1UZA3pNVE01T2pFME9EVXdPREF6TWpVNk56ZAzROalE0TURNM09URXpNekV5"
+        },
+        "summary": {
+          "total_count": 19,
+          "viewer_reaction": "NONE"
+        }
+      },
       "likes": {
         "data": [
           {
@@ -1396,6 +1816,26 @@
       "full_picture": "https:\/\/external.xx.fbcdn.net\/safe_image.php?d=AQCnpL3TYA-JJXAE&w=720&h=720&url=https\u00253A\u00252F\u00252Fi.ytimg.com\u00252Fvi\u00252Fv0Gu_Yh_keE\u00252Fmaxresdefault.jpg&cfs=1&_nc_hash=AQCKyNfB-9SuCc9i",
       "updated_time": "2017-01-21T12:35:49+0000",
       "id": "1707149242852457_1918003985100314",
+      "reactions": {
+        "data": [
+          {
+            "id": "1428512817190083",
+            "name": "Agnieszka Kozie\u0142ek",
+            "type": "LIKE"
+          }
+        ],
+        "paging": {
+          "cursors": {
+            "before": "TVRBd01EQXdPVFF4TXpRMU5EVTFPakUwT0RVd056YzNNamc2TWpVME1EazJNVFl4TXc9PQZDZD",
+            "after": "TVRBd01EQXdPVFF4TXpRMU5EVTFPakUwT0RVd056YzNNamc2TWpVME1EazJNVFl4TXc9PQZDZD"
+          },
+          "next": "https:\/\/graph.facebook.com\/v2.8\/1707149242852457_1918003985100314\/reactions?access_token=1173483302721639\u00257CoH9V-JlsUrDWKDS0Dyb5U3vcRIE&summary=true&limit=1&after=TVRBd01EQXdPVFF4TXpRMU5EVTFPakUwT0RVd056YzNNamc2TWpVME1EazJNVFl4TXc9PQZDZD"
+        },
+        "summary": {
+          "total_count": 9,
+          "viewer_reaction": "NONE"
+        }
+      },
       "likes": {
         "data": [
           {
@@ -1457,6 +1897,26 @@
       "full_picture": "https:\/\/external.xx.fbcdn.net\/safe_image.php?d=AQBwZWybVaEzL7pA&w=720&h=720&url=https\u00253A\u00252F\u00252Fi.ytimg.com\u00252Fvi\u00252F-s7TCuCpB5c\u00252Fmaxresdefault.jpg&cfs=1&sx=840&sy=0&sw=1080&sh=1080&_nc_hash=AQDJCoaU40XUh0Jt",
       "updated_time": "2017-01-21T12:35:08+0000",
       "id": "1707149242852457_1918003638433682",
+      "reactions": {
+        "data": [
+          {
+            "id": "1436037566414936",
+            "name": "Katarzyna Gierasimczuk",
+            "type": "LIKE"
+          }
+        ],
+        "paging": {
+          "cursors": {
+            "before": "TVRBd01EQXdNall4TVRneU9ERTRPakUwT0RVd05ERXhNak02TWpVME1EazJNVFl4TXc9PQZDZD",
+            "after": "TVRBd01EQXdNall4TVRneU9ERTRPakUwT0RVd05ERXhNak02TWpVME1EazJNVFl4TXc9PQZDZD"
+          },
+          "next": "https:\/\/graph.facebook.com\/v2.8\/1707149242852457_1918003638433682\/reactions?access_token=1173483302721639\u00257CoH9V-JlsUrDWKDS0Dyb5U3vcRIE&summary=true&limit=1&after=TVRBd01EQXdNall4TVRneU9ERTRPakUwT0RVd05ERXhNak02TWpVME1EazJNVFl4TXc9PQZDZD"
+        },
+        "summary": {
+          "total_count": 8,
+          "viewer_reaction": "NONE"
+        }
+      },
       "likes": {
         "data": [
           {
@@ -1518,6 +1978,26 @@
       "full_picture": "https:\/\/external.xx.fbcdn.net\/safe_image.php?d=AQBwN3P1W3GdpnRf&w=720&h=720&url=https\u00253A\u00252F\u00252Fi.ytimg.com\u00252Fvi\u00252F3Qcc_PHy6H8\u00252Fmaxresdefault.jpg&cfs=1&_nc_hash=AQCoxgcFYDHGhOT5",
       "updated_time": "2017-01-21T11:22:29+0000",
       "id": "1707149242852457_1807316396169074",
+      "reactions": {
+        "data": [
+          {
+            "id": "1428512817190083",
+            "name": "Agnieszka Kozie\u0142ek",
+            "type": "LIKE"
+          }
+        ],
+        "paging": {
+          "cursors": {
+            "before": "TVRBd01EQXdPVFF4TXpRMU5EVTFPakUwT0RVd056YzRNemM2TWpVME1EazJNVFl4TXc9PQZDZD",
+            "after": "TVRBd01EQXdPVFF4TXpRMU5EVTFPakUwT0RVd056YzRNemM2TWpVME1EazJNVFl4TXc9PQZDZD"
+          },
+          "next": "https:\/\/graph.facebook.com\/v2.8\/1707149242852457_1807316396169074\/reactions?access_token=1173483302721639\u00257CoH9V-JlsUrDWKDS0Dyb5U3vcRIE&summary=true&limit=1&after=TVRBd01EQXdPVFF4TXpRMU5EVTFPakUwT0RVd056YzRNemM2TWpVME1EazJNVFl4TXc9PQZDZD"
+        },
+        "summary": {
+          "total_count": 10,
+          "viewer_reaction": "NONE"
+        }
+      },
       "likes": {
         "data": [
           {
@@ -1595,6 +2075,25 @@
       "full_picture": "https:\/\/external.xx.fbcdn.net\/safe_image.php?d=AQC9bxedA593wLOF&w=720&h=720&url=https\u00253A\u00252F\u00252Fi.ytimg.com\u00252Fvi\u00252FvG_nZ8NdrP0\u00252Fmaxresdefault.jpg&cfs=1&sx=204&sy=0&sw=1080&sh=1080&_nc_hash=AQCAjGqNrZaPzuLH",
       "updated_time": "2017-01-21T10:58:22+0000",
       "id": "1707149242852457_1913370668896979",
+      "reactions": {
+        "data": [
+          {
+            "id": "10210432278776772",
+            "name": "Ilona Tutak",
+            "type": "LOVE"
+          }
+        ],
+        "paging": {
+          "cursors": {
+            "before": "TVRBek56ZAzROakE1TmpveE5EZAzBOek0yTURreU9qYzRPRFkwT0RBek56a3hNek14TWc9PQZDZD",
+            "after": "TVRBek56ZAzROakE1TmpveE5EZAzBOek0yTURreU9qYzRPRFkwT0RBek56a3hNek14TWc9PQZDZD"
+          }
+        },
+        "summary": {
+          "total_count": 1,
+          "viewer_reaction": "NONE"
+        }
+      },
       "likes": {
         "data": [],
         "summary": {
@@ -1684,6 +2183,26 @@
       "full_picture": "https:\/\/external.xx.fbcdn.net\/safe_image.php?d=AQD6tRZBuEyCls5N&w=720&h=720&url=https\u00253A\u00252F\u00252Fi.ytimg.com\u00252Fvi\u00252FMLvAzULHX-Y\u00252Fhqdefault.jpg&cfs=1&_nc_hash=AQBwE_UJsmY_3gF8",
       "updated_time": "2017-01-20T23:46:35+0000",
       "id": "1707149242852457_1817643205136393",
+      "reactions": {
+        "data": [
+          {
+            "id": "1428512817190083",
+            "name": "Agnieszka Kozie\u0142ek",
+            "type": "LIKE"
+          }
+        ],
+        "paging": {
+          "cursors": {
+            "before": "TVRBd01EQXdPVFF4TXpRMU5EVTFPakUwT0RVd056YzVOREk2TWpVME1EazJNVFl4TXc9PQZDZD",
+            "after": "TVRBd01EQXdPVFF4TXpRMU5EVTFPakUwT0RVd056YzVOREk2TWpVME1EazJNVFl4TXc9PQZDZD"
+          },
+          "next": "https:\/\/graph.facebook.com\/v2.8\/1707149242852457_1817643205136393\/reactions?access_token=1173483302721639\u00257CoH9V-JlsUrDWKDS0Dyb5U3vcRIE&summary=true&limit=1&after=TVRBd01EQXdPVFF4TXpRMU5EVTFPakUwT0RVd056YzVOREk2TWpVME1EazJNVFl4TXc9PQZDZD"
+        },
+        "summary": {
+          "total_count": 15,
+          "viewer_reaction": "NONE"
+        }
+      },
       "likes": {
         "data": [
           {
@@ -1745,6 +2264,26 @@
       "full_picture": "https:\/\/external.xx.fbcdn.net\/safe_image.php?d=AQDlq6cpSgaOSTzF&w=720&h=720&url=https\u00253A\u00252F\u00252Fi.ytimg.com\u00252Fvi\u00252FJXRN_LkCa_o\u00252Fmaxresdefault.jpg&cfs=1&sx=512&sy=0&sw=1080&sh=1080&_nc_hash=AQAtQej_zXsWVy4y",
       "updated_time": "2017-01-20T23:25:56+0000",
       "id": "1707149242852457_1917610481806331",
+      "reactions": {
+        "data": [
+          {
+            "id": "1606563702693421",
+            "name": "Arseny Nasokin",
+            "type": "LIKE"
+          }
+        ],
+        "paging": {
+          "cursors": {
+            "before": "TVRBd01EQXdNVGswTWpFeU56RTFPakUwT0RVd056TTRPVGc2TWpVME1EazJNVFl4TXc9PQZDZD",
+            "after": "TVRBd01EQXdNVGswTWpFeU56RTFPakUwT0RVd056TTRPVGc2TWpVME1EazJNVFl4TXc9PQZDZD"
+          },
+          "next": "https:\/\/graph.facebook.com\/v2.8\/1707149242852457_1917610481806331\/reactions?access_token=1173483302721639\u00257CoH9V-JlsUrDWKDS0Dyb5U3vcRIE&summary=true&limit=1&after=TVRBd01EQXdNVGswTWpFeU56RTFPakUwT0RVd056TTRPVGc2TWpVME1EazJNVFl4TXc9PQZDZD"
+        },
+        "summary": {
+          "total_count": 6,
+          "viewer_reaction": "NONE"
+        }
+      },
       "likes": {
         "data": [
           {
@@ -1806,6 +2345,26 @@
       "full_picture": "https:\/\/external.xx.fbcdn.net\/safe_image.php?d=AQDpOOLNt9HZ3hcr&w=720&h=720&url=http\u00253A\u00252F\u00252Fi.ytimg.com\u00252Fvi\u00252FfQLH_0U34V0\u00252Fhqdefault.jpg&cfs=1&_nc_hash=AQCg-7Bby1vCCif6",
       "updated_time": "2017-01-20T23:19:49+0000",
       "id": "1707149242852457_1712876975613017",
+      "reactions": {
+        "data": [
+          {
+            "id": "1606563702693421",
+            "name": "Arseny Nasokin",
+            "type": "LIKE"
+          }
+        ],
+        "paging": {
+          "cursors": {
+            "before": "TVRBd01EQXdNVGswTWpFeU56RTFPakUwT0RRNU5qRTFOakE2TWpVME1EazJNVFl4TXc9PQZDZD",
+            "after": "TVRBd01EQXdNVGswTWpFeU56RTFPakUwT0RRNU5qRTFOakE2TWpVME1EazJNVFl4TXc9PQZDZD"
+          },
+          "next": "https:\/\/graph.facebook.com\/v2.8\/1707149242852457_1712876975613017\/reactions?access_token=1173483302721639\u00257CoH9V-JlsUrDWKDS0Dyb5U3vcRIE&summary=true&limit=1&after=TVRBd01EQXdNVGswTWpFeU56RTFPakUwT0RRNU5qRTFOakE2TWpVME1EazJNVFl4TXc9PQZDZD"
+        },
+        "summary": {
+          "total_count": 4,
+          "viewer_reaction": "NONE"
+        }
+      },
       "likes": {
         "data": [
           {
@@ -1875,6 +2434,26 @@
       "full_picture": "https:\/\/external.xx.fbcdn.net\/safe_image.php?d=AQBa31ECo6o2658F&w=720&h=720&url=https\u00253A\u00252F\u00252Fi.ytimg.com\u00252Fvi\u00252FPLE57UZievU\u00252Fmaxresdefault.jpg&cfs=1&sx=551&sy=0&sw=1080&sh=1080&_nc_hash=AQAMorqQP9eSm8fR",
       "updated_time": "2017-01-20T22:19:21+0000",
       "id": "1707149242852457_1917608451806534",
+      "reactions": {
+        "data": [
+          {
+            "id": "704964613006110",
+            "name": "Krzysztof Milcewicz",
+            "type": "LIKE"
+          }
+        ],
+        "paging": {
+          "cursors": {
+            "before": "TVRBd01EQTBOemMzTXpJM016YzBPakUwT0RVeE9URTVORE02TWpVME1EazJNVFl4TXc9PQZDZD",
+            "after": "TVRBd01EQTBOemMzTXpJM016YzBPakUwT0RVeE9URTVORE02TWpVME1EazJNVFl4TXc9PQZDZD"
+          },
+          "next": "https:\/\/graph.facebook.com\/v2.8\/1707149242852457_1917608451806534\/reactions?access_token=1173483302721639\u00257CoH9V-JlsUrDWKDS0Dyb5U3vcRIE&summary=true&limit=1&after=TVRBd01EQTBOemMzTXpJM016YzBPakUwT0RVeE9URTVORE02TWpVME1EazJNVFl4TXc9PQZDZD"
+        },
+        "summary": {
+          "total_count": 14,
+          "viewer_reaction": "NONE"
+        }
+      },
       "likes": {
         "data": [
           {
@@ -1936,6 +2515,26 @@
       "full_picture": "https:\/\/external.xx.fbcdn.net\/safe_image.php?d=AQAboPhXZ3udglMV&w=720&h=720&url=https\u00253A\u00252F\u00252Fi.ytimg.com\u00252Fvi\u00252FCMW3lD_Tbk0\u00252Fmaxresdefault.jpg&cfs=1&_nc_hash=AQDXvj3rVTpUWIAZ",
       "updated_time": "2017-01-20T21:17:09+0000",
       "id": "1707149242852457_1917628691804510",
+      "reactions": {
+        "data": [
+          {
+            "id": "142580416242915",
+            "name": "Konrad Kras",
+            "type": "LIKE"
+          }
+        ],
+        "paging": {
+          "cursors": {
+            "before": "TVRBd01ERTBOekk0TnpFMU1EYzJPakUwT0RVd016TTJNVFE2TWpVME1EazJNVFl4TXc9PQZDZD",
+            "after": "TVRBd01ERTBOekk0TnpFMU1EYzJPakUwT0RVd016TTJNVFE2TWpVME1EazJNVFl4TXc9PQZDZD"
+          },
+          "next": "https:\/\/graph.facebook.com\/v2.8\/1707149242852457_1917628691804510\/reactions?access_token=1173483302721639\u00257CoH9V-JlsUrDWKDS0Dyb5U3vcRIE&summary=true&limit=1&after=TVRBd01ERTBOekk0TnpFMU1EYzJPakUwT0RVd016TTJNVFE2TWpVME1EazJNVFl4TXc9PQZDZD"
+        },
+        "summary": {
+          "total_count": 10,
+          "viewer_reaction": "NONE"
+        }
+      },
       "likes": {
         "data": [
           {
@@ -1982,6 +2581,26 @@
       "full_picture": "https:\/\/external.xx.fbcdn.net\/safe_image.php?d=AQDmU3MJjrz82zpT&w=720&h=720&url=https\u00253A\u00252F\u00252Fi.ytimg.com\u00252Fvi\u00252F9h30Bx4Klxg\u00252Fmaxresdefault.jpg&cfs=1&_nc_hash=AQBP_fwMUCN6cGeO",
       "updated_time": "2017-01-20T20:26:12+0000",
       "id": "1707149242852457_1917612278472818",
+      "reactions": {
+        "data": [
+          {
+            "id": "1428512817190083",
+            "name": "Agnieszka Kozie\u0142ek",
+            "type": "LIKE"
+          }
+        ],
+        "paging": {
+          "cursors": {
+            "before": "TVRBd01EQXdPVFF4TXpRMU5EVTFPakUwT0RVd056ZAzBNamM2TWpVME1EazJNVFl4TXc9PQZDZD",
+            "after": "TVRBd01EQXdPVFF4TXpRMU5EVTFPakUwT0RVd056ZAzBNamM2TWpVME1EazJNVFl4TXc9PQZDZD"
+          },
+          "next": "https:\/\/graph.facebook.com\/v2.8\/1707149242852457_1917612278472818\/reactions?access_token=1173483302721639\u00257CoH9V-JlsUrDWKDS0Dyb5U3vcRIE&summary=true&limit=1&after=TVRBd01EQXdPVFF4TXpRMU5EVTFPakUwT0RVd056ZAzBNamM2TWpVME1EazJNVFl4TXc9PQZDZD"
+        },
+        "summary": {
+          "total_count": 16,
+          "viewer_reaction": "NONE"
+        }
+      },
       "likes": {
         "data": [
           {
@@ -2028,6 +2647,26 @@
       "full_picture": "https:\/\/external.xx.fbcdn.net\/safe_image.php?d=AQD-iuPeMZF3GIPk&w=720&h=720&url=https\u00253A\u00252F\u00252Fi.ytimg.com\u00252Fvi\u00252FpB-5XG-DbAA\u00252Fmaxresdefault.jpg&cfs=1&sx=567&sy=0&sw=1080&sh=1080&_nc_hash=AQDOTdYM5vxZGaaA",
       "updated_time": "2017-01-20T20:24:36+0000",
       "id": "1707149242852457_1917611708472875",
+      "reactions": {
+        "data": [
+          {
+            "id": "1201035479943591",
+            "name": "Piotr Konsek",
+            "type": "LIKE"
+          }
+        ],
+        "paging": {
+          "cursors": {
+            "before": "TVRBd01EQXhNVEUwTlRFek9UTTBPakUwT0RVeE9ETTJOelk2TWpVME1EazJNVFl4TXc9PQZDZD",
+            "after": "TVRBd01EQXhNVEUwTlRFek9UTTBPakUwT0RVeE9ETTJOelk2TWpVME1EazJNVFl4TXc9PQZDZD"
+          },
+          "next": "https:\/\/graph.facebook.com\/v2.8\/1707149242852457_1917611708472875\/reactions?access_token=1173483302721639\u00257CoH9V-JlsUrDWKDS0Dyb5U3vcRIE&summary=true&limit=1&after=TVRBd01EQXhNVEUwTlRFek9UTTBPakUwT0RVeE9ETTJOelk2TWpVME1EazJNVFl4TXc9PQZDZD"
+        },
+        "summary": {
+          "total_count": 16,
+          "viewer_reaction": "NONE"
+        }
+      },
       "likes": {
         "data": [
           {
@@ -2074,6 +2713,26 @@
       "full_picture": "https:\/\/external.xx.fbcdn.net\/safe_image.php?d=AQCiQvXOkwTVHwXe&w=720&h=720&url=https\u00253A\u00252F\u00252Fi.ytimg.com\u00252Fvi\u00252FzuIciiAgOAc\u00252Fmaxresdefault.jpg&cfs=1&_nc_hash=AQDgIXPpNv7QsBZC",
       "updated_time": "2017-01-20T20:22:54+0000",
       "id": "1707149242852457_1913521445548568",
+      "reactions": {
+        "data": [
+          {
+            "id": "1241743389224181",
+            "name": "Jakub Szwiec",
+            "type": "LIKE"
+          }
+        ],
+        "paging": {
+          "cursors": {
+            "before": "TVRBd01EQXhOalUxT1RVd05USTFPakUwT0RRNU5UQTNNekE2TWpVME1EazJNVFl4TXc9PQZDZD",
+            "after": "TVRBd01EQXhOalUxT1RVd05USTFPakUwT0RRNU5UQTNNekE2TWpVME1EazJNVFl4TXc9PQZDZD"
+          },
+          "next": "https:\/\/graph.facebook.com\/v2.8\/1707149242852457_1913521445548568\/reactions?access_token=1173483302721639\u00257CoH9V-JlsUrDWKDS0Dyb5U3vcRIE&summary=true&limit=1&after=TVRBd01EQXhOalUxT1RVd05USTFPakUwT0RRNU5UQTNNekE2TWpVME1EazJNVFl4TXc9PQZDZD"
+        },
+        "summary": {
+          "total_count": 18,
+          "viewer_reaction": "NONE"
+        }
+      },
       "likes": {
         "data": [
           {
@@ -2191,6 +2850,26 @@
       "full_picture": "https:\/\/external.xx.fbcdn.net\/safe_image.php?d=AQAqkbxAKI3T6b5G&w=720&h=720&url=http\u00253A\u00252F\u00252Fi.ytimg.com\u00252Fvi\u00252FbWMw4vE3J8s\u00252Fmaxresdefault.jpg&cfs=1&sx=61&sy=0&sw=720&sh=720&_nc_hash=AQBRG0welK7YI-hl",
       "updated_time": "2017-01-20T20:10:25+0000",
       "id": "1707149242852457_1712873182280063",
+      "reactions": {
+        "data": [
+          {
+            "id": "1042982779145460",
+            "name": "Kasia Skalska",
+            "type": "LIKE"
+          }
+        ],
+        "paging": {
+          "cursors": {
+            "before": "TVRBd01EQXpNREV5TkRRMk5UTTBPakUwT0RRNU5EWTFPVE02TWpVME1EazJNVFl4TXc9PQZDZD",
+            "after": "TVRBd01EQXpNREV5TkRRMk5UTTBPakUwT0RRNU5EWTFPVE02TWpVME1EazJNVFl4TXc9PQZDZD"
+          },
+          "next": "https:\/\/graph.facebook.com\/v2.8\/1707149242852457_1712873182280063\/reactions?access_token=1173483302721639\u00257CoH9V-JlsUrDWKDS0Dyb5U3vcRIE&summary=true&limit=1&after=TVRBd01EQXpNREV5TkRRMk5UTTBPakUwT0RRNU5EWTFPVE02TWpVME1EazJNVFl4TXc9PQZDZD"
+        },
+        "summary": {
+          "total_count": 7,
+          "viewer_reaction": "NONE"
+        }
+      },
       "likes": {
         "data": [
           {
@@ -2260,6 +2939,26 @@
       "full_picture": "https:\/\/external.xx.fbcdn.net\/safe_image.php?d=AQDMrmHpgu8KQ2Ec&w=720&h=720&url=https\u00253A\u00252F\u00252Fi.ytimg.com\u00252Fvi\u00252FR7xbhKIiw4Y\u00252Fmaxresdefault.jpg&cfs=1&_nc_hash=AQAg7q8CSE03tA49",
       "updated_time": "2017-01-20T20:00:42+0000",
       "id": "1707149242852457_1838269046407142",
+      "reactions": {
+        "data": [
+          {
+            "id": "142580416242915",
+            "name": "Konrad Kras",
+            "type": "LIKE"
+          }
+        ],
+        "paging": {
+          "cursors": {
+            "before": "TVRBd01ERTBOekk0TnpFMU1EYzJPakUwT0RVd016TTNNak02TWpVME1EazJNVFl4TXc9PQZDZD",
+            "after": "TVRBd01ERTBOekk0TnpFMU1EYzJPakUwT0RVd016TTNNak02TWpVME1EazJNVFl4TXc9PQZDZD"
+          },
+          "next": "https:\/\/graph.facebook.com\/v2.8\/1707149242852457_1838269046407142\/reactions?access_token=1173483302721639\u00257CoH9V-JlsUrDWKDS0Dyb5U3vcRIE&summary=true&limit=1&after=TVRBd01ERTBOekk0TnpFMU1EYzJPakUwT0RVd016TTNNak02TWpVME1EazJNVFl4TXc9PQZDZD"
+        },
+        "summary": {
+          "total_count": 20,
+          "viewer_reaction": "NONE"
+        }
+      },
       "likes": {
         "data": [
           {
@@ -2385,6 +3084,26 @@
       "full_picture": "https:\/\/external.xx.fbcdn.net\/safe_image.php?d=AQCdbbOTggZ0eZdw&w=720&h=720&url=https\u00253A\u00252F\u00252Fi.ytimg.com\u00252Fvi\u00252F9WIU5NN1Q0g\u00252Fmaxresdefault.jpg&cfs=1&_nc_hash=AQBIVB9274pZLdQ5",
       "updated_time": "2017-01-20T19:08:57+0000",
       "id": "1707149242852457_1873917639508949",
+      "reactions": {
+        "data": [
+          {
+            "id": "10155829850464368",
+            "name": "Karina Urgacz",
+            "type": "LIKE"
+          }
+        ],
+        "paging": {
+          "cursors": {
+            "before": "TnpJNU16WTVNelkzT2pFME9EUTVPRFk1TlRVNk1qVTBNRGsyTVRZAeE13PT0ZD",
+            "after": "TnpJNU16WTVNelkzT2pFME9EUTVPRFk1TlRVNk1qVTBNRGsyTVRZAeE13PT0ZD"
+          },
+          "next": "https:\/\/graph.facebook.com\/v2.8\/1707149242852457_1873917639508949\/reactions?access_token=1173483302721639\u00257CoH9V-JlsUrDWKDS0Dyb5U3vcRIE&summary=true&limit=1&after=TnpJNU16WTVNelkzT2pFME9EUTVPRFk1TlRVNk1qVTBNRGsyTVRZAeE13PT0ZD"
+        },
+        "summary": {
+          "total_count": 12,
+          "viewer_reaction": "NONE"
+        }
+      },
       "likes": {
         "data": [
           {
@@ -2446,6 +3165,26 @@
       "full_picture": "https:\/\/external.xx.fbcdn.net\/safe_image.php?d=AQA5n98iClTuuRIt&w=720&h=720&url=https\u00253A\u00252F\u00252Fi.ytimg.com\u00252Fvi\u00252FLhB91AYnrac\u00252Fmaxresdefault.jpg&cfs=1&sx=420&sy=0&sw=1080&sh=1080&_nc_hash=AQCt8AbIxe7Xf8wf",
       "updated_time": "2017-01-20T18:05:49+0000",
       "id": "1707149242852457_1734686173432097",
+      "reactions": {
+        "data": [
+          {
+            "id": "1814861832058857",
+            "name": "Madlen Madlen",
+            "type": "LIKE"
+          }
+        ],
+        "paging": {
+          "cursors": {
+            "before": "TVRBd01EQTJNRFV4TnpNeU9UTTJPakUwT0RVeE1UY3dNRFk2TWpVME1EazJNVFl4TXc9PQZDZD",
+            "after": "TVRBd01EQTJNRFV4TnpNeU9UTTJPakUwT0RVeE1UY3dNRFk2TWpVME1EazJNVFl4TXc9PQZDZD"
+          },
+          "next": "https:\/\/graph.facebook.com\/v2.8\/1707149242852457_1734686173432097\/reactions?access_token=1173483302721639\u00257CoH9V-JlsUrDWKDS0Dyb5U3vcRIE&summary=true&limit=1&after=TVRBd01EQTJNRFV4TnpNeU9UTTJPakUwT0RVeE1UY3dNRFk2TWpVME1EazJNVFl4TXc9PQZDZD"
+        },
+        "summary": {
+          "total_count": 9,
+          "viewer_reaction": "NONE"
+        }
+      },
       "likes": {
         "data": [
           {
@@ -2512,6 +3251,26 @@
       "full_picture": "https:\/\/scontent.xx.fbcdn.net\/v\/t1.0-9\/16114697_10202931870015870_2831312645725244752_n.jpg?oh=37c6c01f6731a20ff406f7653ac8d51e&oe=590B04B8",
       "updated_time": "2017-01-20T15:53:20+0000",
       "id": "1707149242852457_1917443738489672",
+      "reactions": {
+        "data": [
+          {
+            "id": "10154064731521481",
+            "name": "Arthur Longhurst",
+            "type": "LIKE"
+          }
+        ],
+        "paging": {
+          "cursors": {
+            "before": "TlRBek9EY3hORGd3T2pFME9EUTVNak15TXpJNk1qVTBNRGsyTVRZAeE13PT0ZD",
+            "after": "TlRBek9EY3hORGd3T2pFME9EUTVNak15TXpJNk1qVTBNRGsyTVRZAeE13PT0ZD"
+          },
+          "next": "https:\/\/graph.facebook.com\/v2.8\/1707149242852457_1917443738489672\/reactions?access_token=1173483302721639\u00257CoH9V-JlsUrDWKDS0Dyb5U3vcRIE&summary=true&limit=1&after=TlRBek9EY3hORGd3T2pFME9EUTVNak15TXpJNk1qVTBNRGsyTVRZAeE13PT0ZD"
+        },
+        "summary": {
+          "total_count": 6,
+          "viewer_reaction": "NONE"
+        }
+      },
       "likes": {
         "data": [
           {
@@ -2597,6 +3356,26 @@
       "full_picture": "https:\/\/external.xx.fbcdn.net\/safe_image.php?d=AQABkOH41yDtzo_u&w=720&h=720&url=https\u00253A\u00252F\u00252Fi.ytimg.com\u00252Fvi\u00252FZx1_6F-nCaw\u00252Fmaxresdefault.jpg&cfs=1&_nc_hash=AQA2n8xhmcrOia76",
       "updated_time": "2017-01-20T14:19:05+0000",
       "id": "1707149242852457_1798633003704080",
+      "reactions": {
+        "data": [
+          {
+            "id": "1250265551686359",
+            "name": "Bartek Szcze\u015bniak",
+            "type": "LIKE"
+          }
+        ],
+        "paging": {
+          "cursors": {
+            "before": "TVRBd01EQXhNRGczTnpreE1EYzVPakUwT0RVek1EVTBOVEE2TWpVME1EazJNVFl4TXc9PQZDZD",
+            "after": "TVRBd01EQXhNRGczTnpreE1EYzVPakUwT0RVek1EVTBOVEE2TWpVME1EazJNVFl4TXc9PQZDZD"
+          },
+          "next": "https:\/\/graph.facebook.com\/v2.8\/1707149242852457_1798633003704080\/reactions?access_token=1173483302721639\u00257CoH9V-JlsUrDWKDS0Dyb5U3vcRIE&summary=true&limit=1&after=TVRBd01EQXhNRGczTnpreE1EYzVPakUwT0RVek1EVTBOVEE2TWpVME1EazJNVFl4TXc9PQZDZD"
+        },
+        "summary": {
+          "total_count": 10,
+          "viewer_reaction": "NONE"
+        }
+      },
       "likes": {
         "data": [
           {
@@ -2682,6 +3461,26 @@
       "full_picture": "https:\/\/external.xx.fbcdn.net\/safe_image.php?d=AQBTyHOM9HjXIKdf&w=720&h=720&url=https\u00253A\u00252F\u00252Fi.ytimg.com\u00252Fvi\u00252Fh6OuIpdqGhQ\u00252Fmaxresdefault.jpg&cfs=1&sx=212&sy=0&sw=720&sh=720&_nc_hash=AQCP1MIr2VSca_yY",
       "updated_time": "2017-01-20T09:38:32+0000",
       "id": "1707149242852457_1750685655165482",
+      "reactions": {
+        "data": [
+          {
+            "id": "10211236160004958",
+            "name": "Anna Ratajczak",
+            "type": "LOVE"
+          }
+        ],
+        "paging": {
+          "cursors": {
+            "before": "TVRNNE56WXpPRFF3TURveE5EZAzBPVFUwTXpRNU9qYzRPRFkwT0RBek56a3hNek14TWc9PQZDZD",
+            "after": "TVRNNE56WXpPRFF3TURveE5EZAzBPVFUwTXpRNU9qYzRPRFkwT0RBek56a3hNek14TWc9PQZDZD"
+          },
+          "next": "https:\/\/graph.facebook.com\/v2.8\/1707149242852457_1750685655165482\/reactions?access_token=1173483302721639\u00257CoH9V-JlsUrDWKDS0Dyb5U3vcRIE&summary=true&limit=1&after=TVRNNE56WXpPRFF3TURveE5EZAzBPVFUwTXpRNU9qYzRPRFkwT0RBek56a3hNek14TWc9PQZDZD"
+        },
+        "summary": {
+          "total_count": 12,
+          "viewer_reaction": "NONE"
+        }
+      },
       "likes": {
         "data": [
           {
@@ -2759,6 +3558,25 @@
       "full_picture": "https:\/\/external.xx.fbcdn.net\/safe_image.php?d=AQD-3Le_2lC81Ckd&w=720&h=720&url=https\u00253A\u00252F\u00252Fi.ytimg.com\u00252Fvi\u00252Fo4Yzj-m_SBk\u00252Fmaxresdefault.jpg&cfs=1&sx=441&sy=0&sw=1080&sh=1080&_nc_hash=AQBbW0EL_JGMQBIR",
       "updated_time": "2017-01-19T23:25:21+0000",
       "id": "1707149242852457_1915282868705759",
+      "reactions": {
+        "data": [
+          {
+            "id": "1146562062126890",
+            "name": "Jacek Bosiacki",
+            "type": "LIKE"
+          }
+        ],
+        "paging": {
+          "cursors": {
+            "before": "TVRBd01EQXpNVGt6TWpFeU1qSTNPakUwT0RRNE5qa3lOREU2TWpVME1EazJNVFl4TXc9PQZDZD",
+            "after": "TVRBd01EQXpNVGt6TWpFeU1qSTNPakUwT0RRNE5qa3lOREU2TWpVME1EazJNVFl4TXc9PQZDZD"
+          }
+        },
+        "summary": {
+          "total_count": 1,
+          "viewer_reaction": "NONE"
+        }
+      },
       "likes": {
         "data": [
           {
@@ -2819,6 +3637,26 @@
       "full_picture": "https:\/\/external.xx.fbcdn.net\/safe_image.php?d=AQAbtIgIBU05xZte&w=360&h=360&url=https\u00253A\u00252F\u00252Fi.ytimg.com\u00252Fvi\u00252FBxuY9FET9Y4\u00252Fhqdefault.jpg&cfs=1&sx=0&sy=0&sw=360&sh=360&_nc_hash=AQARw42_6fQC6d9U",
       "updated_time": "2017-01-19T19:03:13+0000",
       "id": "1707149242852457_1776981065869274",
+      "reactions": {
+        "data": [
+          {
+            "id": "1309668662389100",
+            "name": "Beata Tracz",
+            "type": "LIKE"
+          }
+        ],
+        "paging": {
+          "cursors": {
+            "before": "TVRBd01EQXdNemM1TXpVNE5UVXlPakUwT0RRNU5UYzNPREU2TWpVME1EazJNVFl4TXc9PQZDZD",
+            "after": "TVRBd01EQXdNemM1TXpVNE5UVXlPakUwT0RRNU5UYzNPREU2TWpVME1EazJNVFl4TXc9PQZDZD"
+          },
+          "next": "https:\/\/graph.facebook.com\/v2.8\/1707149242852457_1776981065869274\/reactions?access_token=1173483302721639\u00257CoH9V-JlsUrDWKDS0Dyb5U3vcRIE&summary=true&limit=1&after=TVRBd01EQXdNemM1TXpVNE5UVXlPakUwT0RRNU5UYzNPREU2TWpVME1EazJNVFl4TXc9PQZDZD"
+        },
+        "summary": {
+          "total_count": 12,
+          "viewer_reaction": "NONE"
+        }
+      },
       "likes": {
         "data": [
           {
@@ -2880,6 +3718,26 @@
       "full_picture": "https:\/\/external.xx.fbcdn.net\/safe_image.php?d=AQCUtDE9owW1jOZ0&w=720&h=720&url=http\u00253A\u00252F\u00252Fi.ytimg.com\u00252Fvi\u00252F450p7goxZqg\u00252Fmaxresdefault.jpg&cfs=1&_nc_hash=AQAPnDqPHzZOtSpf",
       "updated_time": "2017-01-19T18:13:44+0000",
       "id": "1707149242852457_1714553708778677",
+      "reactions": {
+        "data": [
+          {
+            "id": "10211236160004958",
+            "name": "Anna Ratajczak",
+            "type": "LOVE"
+          }
+        ],
+        "paging": {
+          "cursors": {
+            "before": "TVRNNE56WXpPRFF3TURveE5EZAzBPVFUwTlRFMk9qYzRPRFkwT0RBek56a3hNek14TWc9PQZDZD",
+            "after": "TVRNNE56WXpPRFF3TURveE5EZAzBPVFUwTlRFMk9qYzRPRFkwT0RBek56a3hNek14TWc9PQZDZD"
+          },
+          "next": "https:\/\/graph.facebook.com\/v2.8\/1707149242852457_1714553708778677\/reactions?access_token=1173483302721639\u00257CoH9V-JlsUrDWKDS0Dyb5U3vcRIE&summary=true&limit=1&after=TVRNNE56WXpPRFF3TURveE5EZAzBPVFUwTlRFMk9qYzRPRFkwT0RBek56a3hNek14TWc9PQZDZD"
+        },
+        "summary": {
+          "total_count": 22,
+          "viewer_reaction": "NONE"
+        }
+      },
       "likes": {
         "data": [
           {
@@ -2973,6 +3831,13 @@
       "full_picture": "https:\/\/external.xx.fbcdn.net\/safe_image.php?d=AQBWrQMbv04MGuNb&w=720&h=720&url=https\u00253A\u00252F\u00252Fi.ytimg.com\u00252Fvi\u00252F81RqEnvczV8\u00252Fmaxresdefault.jpg&cfs=1&_nc_hash=AQDbBNGYbseUV4tB",
       "updated_time": "2017-01-19T17:06:57+0000",
       "id": "1707149242852457_1914404758793570",
+      "reactions": {
+        "data": [],
+        "summary": {
+          "total_count": 0,
+          "viewer_reaction": "NONE"
+        }
+      },
       "likes": {
         "data": [],
         "summary": {
@@ -3022,6 +3887,26 @@
       "full_picture": "https:\/\/external.xx.fbcdn.net\/safe_image.php?d=AQA1bSoWk4padUl8&w=720&h=720&url=https\u00253A\u00252F\u00252Fi.ytimg.com\u00252Fvi\u00252FJznXx1Ns374\u00252Fmaxresdefault.jpg&cfs=1&_nc_hash=AQBfyiSy1EJ7qm0e",
       "updated_time": "2017-01-19T16:42:54+0000",
       "id": "1707149242852457_1916683918565654",
+      "reactions": {
+        "data": [
+          {
+            "id": "142580416242915",
+            "name": "Konrad Kras",
+            "type": "LIKE"
+          }
+        ],
+        "paging": {
+          "cursors": {
+            "before": "TVRBd01ERTBOekk0TnpFMU1EYzJPakUwT0RVd016UTJOekU2TWpVME1EazJNVFl4TXc9PQZDZD",
+            "after": "TVRBd01ERTBOekk0TnpFMU1EYzJPakUwT0RVd016UTJOekU2TWpVME1EazJNVFl4TXc9PQZDZD"
+          },
+          "next": "https:\/\/graph.facebook.com\/v2.8\/1707149242852457_1916683918565654\/reactions?access_token=1173483302721639\u00257CoH9V-JlsUrDWKDS0Dyb5U3vcRIE&summary=true&limit=1&after=TVRBd01ERTBOekk0TnpFMU1EYzJPakUwT0RVd016UTJOekU2TWpVME1EazJNVFl4TXc9PQZDZD"
+        },
+        "summary": {
+          "total_count": 20,
+          "viewer_reaction": "NONE"
+        }
+      },
       "likes": {
         "data": [
           {
@@ -3090,6 +3975,26 @@
       "full_picture": "https:\/\/external.xx.fbcdn.net\/safe_image.php?d=AQCaNQFqHDxkMgkH&w=720&h=720&url=https\u00253A\u00252F\u00252Fi.ytimg.com\u00252Fvi\u00252FDKpOp_Mxono\u00252Fmaxresdefault.jpg&cfs=1&sx=308&sy=0&sw=720&sh=720&_nc_hash=AQBbYBxQhMnMon9N",
       "updated_time": "2017-01-19T16:36:00+0000",
       "id": "1707149242852457_1916876605213052",
+      "reactions": {
+        "data": [
+          {
+            "id": "10208047442080192",
+            "name": "Agnieszka Orze\u0142",
+            "type": "LIKE"
+          }
+        ],
+        "paging": {
+          "cursors": {
+            "before": "TVRFeU16STVNVGM1TVRveE5EZAzBPVE00TkRJNE9qSTFOREE1TmpFMk1UTT0ZD",
+            "after": "TVRFeU16STVNVGM1TVRveE5EZAzBPVE00TkRJNE9qSTFOREE1TmpFMk1UTT0ZD"
+          },
+          "next": "https:\/\/graph.facebook.com\/v2.8\/1707149242852457_1916876605213052\/reactions?access_token=1173483302721639\u00257CoH9V-JlsUrDWKDS0Dyb5U3vcRIE&summary=true&limit=1&after=TVRFeU16STVNVGM1TVRveE5EZAzBPVE00TkRJNE9qSTFOREE1TmpFMk1UTT0ZD"
+        },
+        "summary": {
+          "total_count": 4,
+          "viewer_reaction": "NONE"
+        }
+      },
       "likes": {
         "data": [
           {
@@ -3159,6 +4064,26 @@
       "full_picture": "https:\/\/external.xx.fbcdn.net\/safe_image.php?d=AQCXsUzaINw1nnRb&w=720&h=720&url=https\u00253A\u00252F\u00252Fi.ytimg.com\u00252Fvi\u00252FBcdgPwjlB_0\u00252Fmaxresdefault.jpg&cfs=1&sx=287&sy=0&sw=720&sh=720&_nc_hash=AQDEqLS607Dy38QS",
       "updated_time": "2017-01-19T14:13:27+0000",
       "id": "1707149242852457_1812876108946436",
+      "reactions": {
+        "data": [
+          {
+            "id": "10155383436850639",
+            "name": "JAmes Atwill",
+            "type": "LIKE"
+          }
+        ],
+        "paging": {
+          "cursors": {
+            "before": "TnpJNE56RXdOak00T2pFME9EUTRORGMyTkRrNk1qVTBNRGsyTVRZAeE13PT0ZD",
+            "after": "TnpJNE56RXdOak00T2pFME9EUTRORGMyTkRrNk1qVTBNRGsyTVRZAeE13PT0ZD"
+          },
+          "next": "https:\/\/graph.facebook.com\/v2.8\/1707149242852457_1812876108946436\/reactions?access_token=1173483302721639\u00257CoH9V-JlsUrDWKDS0Dyb5U3vcRIE&summary=true&limit=1&after=TnpJNE56RXdOak00T2pFME9EUTRORGMyTkRrNk1qVTBNRGsyTVRZAeE13PT0ZD"
+        },
+        "summary": {
+          "total_count": 12,
+          "viewer_reaction": "NONE"
+        }
+      },
       "likes": {
         "data": [
           {
@@ -3244,6 +4169,26 @@
       "full_picture": "https:\/\/external.xx.fbcdn.net\/safe_image.php?d=AQDdauJwV2xD3Abo&w=360&h=360&url=http\u00253A\u00252F\u00252Fi.ytimg.com\u00252Fvi\u00252FJGhoLcsr8GA\u00252Fhqdefault.jpg&cfs=1&sx=28&sy=0&sw=360&sh=360&_nc_hash=AQBpmP98qHdwjx4-",
       "updated_time": "2017-01-19T14:08:15+0000",
       "id": "1707149242852457_1713365348897513",
+      "reactions": {
+        "data": [
+          {
+            "id": "142580416242915",
+            "name": "Konrad Kras",
+            "type": "LIKE"
+          }
+        ],
+        "paging": {
+          "cursors": {
+            "before": "TVRBd01ERTBOekk0TnpFMU1EYzJPakUwT0RVd016VXdNekk2TWpVME1EazJNVFl4TXc9PQZDZD",
+            "after": "TVRBd01ERTBOekk0TnpFMU1EYzJPakUwT0RVd016VXdNekk2TWpVME1EazJNVFl4TXc9PQZDZD"
+          },
+          "next": "https:\/\/graph.facebook.com\/v2.8\/1707149242852457_1713365348897513\/reactions?access_token=1173483302721639\u00257CoH9V-JlsUrDWKDS0Dyb5U3vcRIE&summary=true&limit=1&after=TVRBd01ERTBOekk0TnpFMU1EYzJPakUwT0RVd016VXdNekk2TWpVME1EazJNVFl4TXc9PQZDZD"
+        },
+        "summary": {
+          "total_count": 17,
+          "viewer_reaction": "NONE"
+        }
+      },
       "likes": {
         "data": [
           {
@@ -3328,6 +4273,26 @@
       "full_picture": "https:\/\/external.xx.fbcdn.net\/safe_image.php?d=AQANDoX3f1pVVRN7&w=720&h=720&url=https\u00253A\u00252F\u00252Fi.ytimg.com\u00252Fvi\u00252Fgd4EJWNQL4Q\u00252Fmaxresdefault.jpg&cfs=1&sx=294&sy=0&sw=720&sh=720&_nc_hash=AQArSWeOH-MWoqc6",
       "updated_time": "2017-01-19T10:10:00+0000",
       "id": "1707149242852457_1914060522161327",
+      "reactions": {
+        "data": [
+          {
+            "id": "10208326585066215",
+            "name": "Michael Spitzer",
+            "type": "LIKE"
+          }
+        ],
+        "paging": {
+          "cursors": {
+            "before": "TVRNMU1qQXdNelkzTXpveE5EZAzBPVGcxTXpjMk9qSTFOREE1TmpFMk1UTT0ZD",
+            "after": "TVRNMU1qQXdNelkzTXpveE5EZAzBPVGcxTXpjMk9qSTFOREE1TmpFMk1UTT0ZD"
+          },
+          "next": "https:\/\/graph.facebook.com\/v2.8\/1707149242852457_1914060522161327\/reactions?access_token=1173483302721639\u00257CoH9V-JlsUrDWKDS0Dyb5U3vcRIE&summary=true&limit=1&after=TVRNMU1qQXdNelkzTXpveE5EZAzBPVGcxTXpjMk9qSTFOREE1TmpFMk1UTT0ZD"
+        },
+        "summary": {
+          "total_count": 9,
+          "viewer_reaction": "NONE"
+        }
+      },
       "likes": {
         "data": [
           {
@@ -3389,6 +4354,26 @@
       "full_picture": "https:\/\/external.xx.fbcdn.net\/safe_image.php?d=AQDxRqlBnnsEb3Wf&w=720&h=720&url=https\u00253A\u00252F\u00252Fi.ytimg.com\u00252Fvi\u00252FVDvr08sCPOc\u00252Fmaxresdefault.jpg&cfs=1&sx=172&sy=0&sw=720&sh=720&_nc_hash=AQADqqsFuBiQfH2W",
       "updated_time": "2017-01-19T09:35:39+0000",
       "id": "1707149242852457_1882263185341061",
+      "reactions": {
+        "data": [
+          {
+            "id": "10211236160004958",
+            "name": "Anna Ratajczak",
+            "type": "LIKE"
+          }
+        ],
+        "paging": {
+          "cursors": {
+            "before": "TVRNNE56WXpPRFF3TURveE5EZAzBPVFUxTVRnMk9qSTFOREE1TmpFMk1UTT0ZD",
+            "after": "TVRNNE56WXpPRFF3TURveE5EZAzBPVFUxTVRnMk9qSTFOREE1TmpFMk1UTT0ZD"
+          },
+          "next": "https:\/\/graph.facebook.com\/v2.8\/1707149242852457_1882263185341061\/reactions?access_token=1173483302721639\u00257CoH9V-JlsUrDWKDS0Dyb5U3vcRIE&summary=true&limit=1&after=TVRNNE56WXpPRFF3TURveE5EZAzBPVFUxTVRnMk9qSTFOREE1TmpFMk1UTT0ZD"
+        },
+        "summary": {
+          "total_count": 18,
+          "viewer_reaction": "NONE"
+        }
+      },
       "likes": {
         "data": [
           {
@@ -3482,6 +4467,26 @@
       "full_picture": "https:\/\/external.xx.fbcdn.net\/safe_image.php?d=AQDiHG47dMq6q0Bu&w=720&h=720&url=https\u00253A\u00252F\u00252Fi.ytimg.com\u00252Fvi\u00252FcedoBlUvBlI\u00252Fmaxresdefault.jpg&cfs=1&sx=278&sy=0&sw=720&sh=720&_nc_hash=AQAA3L0KrpvPB7y8",
       "updated_time": "2017-01-19T09:21:40+0000",
       "id": "1707149242852457_1789526074614773",
+      "reactions": {
+        "data": [
+          {
+            "id": "142580416242915",
+            "name": "Konrad Kras",
+            "type": "LIKE"
+          }
+        ],
+        "paging": {
+          "cursors": {
+            "before": "TVRBd01ERTBOekk0TnpFMU1EYzJPakUwT0RVd016UTVOVGs2TWpVME1EazJNVFl4TXc9PQZDZD",
+            "after": "TVRBd01ERTBOekk0TnpFMU1EYzJPakUwT0RVd016UTVOVGs2TWpVME1EazJNVFl4TXc9PQZDZD"
+          },
+          "next": "https:\/\/graph.facebook.com\/v2.8\/1707149242852457_1789526074614773\/reactions?access_token=1173483302721639\u00257CoH9V-JlsUrDWKDS0Dyb5U3vcRIE&summary=true&limit=1&after=TVRBd01ERTBOekk0TnpFMU1EYzJPakUwT0RVd016UTVOVGs2TWpVME1EazJNVFl4TXc9PQZDZD"
+        },
+        "summary": {
+          "total_count": 24,
+          "viewer_reaction": "NONE"
+        }
+      },
       "likes": {
         "data": [
           {
@@ -3575,6 +4580,26 @@
       "full_picture": "https:\/\/external.xx.fbcdn.net\/safe_image.php?d=AQB1ZmWdtgtLMFK-&w=720&h=720&url=https\u00253A\u00252F\u00252Fi.ytimg.com\u00252Fvi\u00252FLRCdggj2qGs\u00252Fhqdefault.jpg&cfs=1&_nc_hash=AQC0ZX9bkZyOyxQF",
       "updated_time": "2017-01-19T09:19:15+0000",
       "id": "1707149242852457_1809622455938468",
+      "reactions": {
+        "data": [
+          {
+            "id": "10208326585066215",
+            "name": "Michael Spitzer",
+            "type": "LIKE"
+          }
+        ],
+        "paging": {
+          "cursors": {
+            "before": "TVRNMU1qQXdNelkzTXpveE5EZAzBPVGcxTkRnMk9qSTFOREE1TmpFMk1UTT0ZD",
+            "after": "TVRNMU1qQXdNelkzTXpveE5EZAzBPVGcxTkRnMk9qSTFOREE1TmpFMk1UTT0ZD"
+          },
+          "next": "https:\/\/graph.facebook.com\/v2.8\/1707149242852457_1809622455938468\/reactions?access_token=1173483302721639\u00257CoH9V-JlsUrDWKDS0Dyb5U3vcRIE&summary=true&limit=1&after=TVRNMU1qQXdNelkzTXpveE5EZAzBPVGcxTkRnMk9qSTFOREE1TmpFMk1UTT0ZD"
+        },
+        "summary": {
+          "total_count": 24,
+          "viewer_reaction": "NONE"
+        }
+      },
       "likes": {
         "data": [
           {
@@ -3652,6 +4677,26 @@
       "full_picture": "https:\/\/external.xx.fbcdn.net\/safe_image.php?d=AQBsMzhuGYLfDy_9&w=720&h=720&url=https\u00253A\u00252F\u00252Fi.ytimg.com\u00252Fvi\u00252FYBHQbu5rbdQ\u00252Fmaxresdefault.jpg&cfs=1&sx=212&sy=0&sw=720&sh=720&_nc_hash=AQBVv7gkEPwNit4f",
       "updated_time": "2017-01-19T08:38:03+0000",
       "id": "1707149242852457_1766568340243880",
+      "reactions": {
+        "data": [
+          {
+            "id": "10208326585066215",
+            "name": "Michael Spitzer",
+            "type": "LIKE"
+          }
+        ],
+        "paging": {
+          "cursors": {
+            "before": "TVRNMU1qQXdNelkzTXpveE5EZAzBPVGcxTlRBNE9qSTFOREE1TmpFMk1UTT0ZD",
+            "after": "TVRNMU1qQXdNelkzTXpveE5EZAzBPVGcxTlRBNE9qSTFOREE1TmpFMk1UTT0ZD"
+          },
+          "next": "https:\/\/graph.facebook.com\/v2.8\/1707149242852457_1766568340243880\/reactions?access_token=1173483302721639\u00257CoH9V-JlsUrDWKDS0Dyb5U3vcRIE&summary=true&limit=1&after=TVRNMU1qQXdNelkzTXpveE5EZAzBPVGcxTlRBNE9qSTFOREE1TmpFMk1UTT0ZD"
+        },
+        "summary": {
+          "total_count": 19,
+          "viewer_reaction": "NONE"
+        }
+      },
       "likes": {
         "data": [
           {
@@ -3737,6 +4782,26 @@
       "full_picture": "https:\/\/external.xx.fbcdn.net\/safe_image.php?d=AQC-Y_8sTahiQkSl&w=720&h=720&url=https\u00253A\u00252F\u00252Fi.ytimg.com\u00252Fvi\u00252FuOHpaPh62os\u00252Fhqdefault.jpg&cfs=1&_nc_hash=AQAu7Qx3wblyyw-j",
       "updated_time": "2017-01-19T08:30:13+0000",
       "id": "1707149242852457_1730925323808182",
+      "reactions": {
+        "data": [
+          {
+            "id": "142580416242915",
+            "name": "Konrad Kras",
+            "type": "LIKE"
+          }
+        ],
+        "paging": {
+          "cursors": {
+            "before": "TVRBd01ERTBOekk0TnpFMU1EYzJPakUwT0RVd016UTRNVGc2TWpVME1EazJNVFl4TXc9PQZDZD",
+            "after": "TVRBd01ERTBOekk0TnpFMU1EYzJPakUwT0RVd016UTRNVGc2TWpVME1EazJNVFl4TXc9PQZDZD"
+          },
+          "next": "https:\/\/graph.facebook.com\/v2.8\/1707149242852457_1730925323808182\/reactions?access_token=1173483302721639\u00257CoH9V-JlsUrDWKDS0Dyb5U3vcRIE&summary=true&limit=1&after=TVRBd01ERTBOekk0TnpFMU1EYzJPakUwT0RVd016UTRNVGc2TWpVME1EazJNVFl4TXc9PQZDZD"
+        },
+        "summary": {
+          "total_count": 20,
+          "viewer_reaction": "NONE"
+        }
+      },
       "likes": {
         "data": [
           {
@@ -3838,6 +4903,26 @@
       "full_picture": "https:\/\/external.xx.fbcdn.net\/safe_image.php?d=AQDv7nEEsaWj9aAj&w=720&h=720&url=https\u00253A\u00252F\u00252Fi.ytimg.com\u00252Fvi\u00252F0r-_nSo_ppk\u00252Fmaxresdefault.jpg&cfs=1&_nc_hash=AQCEnwcgVNjPKhor",
       "updated_time": "2017-01-19T08:14:47+0000",
       "id": "1707149242852457_1781010935466287",
+      "reactions": {
+        "data": [
+          {
+            "id": "10210935758366241",
+            "name": "Danail Dekov",
+            "type": "LOVE"
+          }
+        ],
+        "paging": {
+          "cursors": {
+            "before": "TVRFeU1UY3hNakV6T0RveE5EZAzBPVFEwTnpRM09qYzRPRFkwT0RBek56a3hNek14TWc9PQZDZD",
+            "after": "TVRFeU1UY3hNakV6T0RveE5EZAzBPVFEwTnpRM09qYzRPRFkwT0RBek56a3hNek14TWc9PQZDZD"
+          },
+          "next": "https:\/\/graph.facebook.com\/v2.8\/1707149242852457_1781010935466287\/reactions?access_token=1173483302721639\u00257CoH9V-JlsUrDWKDS0Dyb5U3vcRIE&summary=true&limit=1&after=TVRFeU1UY3hNakV6T0RveE5EZAzBPVFEwTnpRM09qYzRPRFkwT0RBek56a3hNek14TWc9PQZDZD"
+        },
+        "summary": {
+          "total_count": 21,
+          "viewer_reaction": "NONE"
+        }
+      },
       "likes": {
         "data": [
           {
@@ -3923,6 +5008,26 @@
       "full_picture": "https:\/\/external.xx.fbcdn.net\/safe_image.php?d=AQAfRKqTm_eev4nf&w=720&h=720&url=https\u00253A\u00252F\u00252Fi.ytimg.com\u00252Fvi\u00252FF1pB4rCz3dQ\u00252Fmaxresdefault.jpg&cfs=1&_nc_hash=AQCvesYw3CY6Owr6",
       "updated_time": "2017-01-18T23:17:20+0000",
       "id": "1707149242852457_1734737070093674",
+      "reactions": {
+        "data": [
+          {
+            "id": "1446081058738413",
+            "name": "Carlo Testa",
+            "type": "LIKE"
+          }
+        ],
+        "paging": {
+          "cursors": {
+            "before": "TVRBd01EQXdNRGsxT1RrMk1qVXlPakUwT0RVd01qVTVNamc2TWpVME1EazJNVFl4TXc9PQZDZD",
+            "after": "TVRBd01EQXdNRGsxT1RrMk1qVXlPakUwT0RVd01qVTVNamc2TWpVME1EazJNVFl4TXc9PQZDZD"
+          },
+          "next": "https:\/\/graph.facebook.com\/v2.8\/1707149242852457_1734737070093674\/reactions?access_token=1173483302721639\u00257CoH9V-JlsUrDWKDS0Dyb5U3vcRIE&summary=true&limit=1&after=TVRBd01EQXdNRGsxT1RrMk1qVXlPakUwT0RVd01qVTVNamc2TWpVME1EazJNVFl4TXc9PQZDZD"
+        },
+        "summary": {
+          "total_count": 21,
+          "viewer_reaction": "NONE"
+        }
+      },
       "likes": {
         "data": [
           {
@@ -4007,6 +5112,26 @@
       "full_picture": "https:\/\/external.xx.fbcdn.net\/safe_image.php?d=AQDXJHLd-9mxrDRR&url=https\u00253A\u00252F\u00252Fi.ytimg.com\u00252Fvi\u00252F53dLgxXRANc\u00252Fmaxresdefault.jpg&_nc_hash=AQColf3hJpZS3vnv",
       "updated_time": "2017-01-18T23:06:27+0000",
       "id": "1707149242852457_1778263359074378",
+      "reactions": {
+        "data": [
+          {
+            "id": "1232986743416380",
+            "name": "Marysia Niedzia\u0142ek",
+            "type": "LIKE"
+          }
+        ],
+        "paging": {
+          "cursors": {
+            "before": "TVRBd01EQXhNVFV4T1RreU5UazFPakUwT0RRNE1UVTNNVGc2TWpVME1EazJNVFl4TXc9PQZDZD",
+            "after": "TVRBd01EQXhNVFV4T1RreU5UazFPakUwT0RRNE1UVTNNVGc2TWpVME1EazJNVFl4TXc9PQZDZD"
+          },
+          "next": "https:\/\/graph.facebook.com\/v2.8\/1707149242852457_1778263359074378\/reactions?access_token=1173483302721639\u00257CoH9V-JlsUrDWKDS0Dyb5U3vcRIE&summary=true&limit=1&after=TVRBd01EQXhNVFV4T1RreU5UazFPakUwT0RRNE1UVTNNVGc2TWpVME1EazJNVFl4TXc9PQZDZD"
+        },
+        "summary": {
+          "total_count": 16,
+          "viewer_reaction": "NONE"
+        }
+      },
       "likes": {
         "data": [
           {
@@ -4099,6 +5224,26 @@
       "full_picture": "https:\/\/external.xx.fbcdn.net\/safe_image.php?d=AQBT5Uvc_oJutRTZ&w=720&h=720&url=https\u00253A\u00252F\u00252Fi.ytimg.com\u00252Fvi\u00252FJwux_c8cIQ8\u00252Fmaxresdefault.jpg&cfs=1&sx=560&sy=0&sw=720&sh=720&_nc_hash=AQB_ITB3RoSY9YlI",
       "updated_time": "2017-01-18T22:57:22+0000",
       "id": "1707149242852457_1802934986607215",
+      "reactions": {
+        "data": [
+          {
+            "id": "1388556494497508",
+            "name": "Bogumi\u0142a Niedzia\u0142ek",
+            "type": "LOVE"
+          }
+        ],
+        "paging": {
+          "cursors": {
+            "before": "TVRBd01EQXdNamsxTVRFM09EVTBPakUwT0RRNU9UYzVOekk2TnpnNE5qUTRNRE0zT1RFek16RXkZD",
+            "after": "TVRBd01EQXdNamsxTVRFM09EVTBPakUwT0RRNU9UYzVOekk2TnpnNE5qUTRNRE0zT1RFek16RXkZD"
+          },
+          "next": "https:\/\/graph.facebook.com\/v2.8\/1707149242852457_1802934986607215\/reactions?access_token=1173483302721639\u00257CoH9V-JlsUrDWKDS0Dyb5U3vcRIE&summary=true&limit=1&after=TVRBd01EQXdNamsxTVRFM09EVTBPakUwT0RRNU9UYzVOekk2TnpnNE5qUTRNRE0zT1RFek16RXkZD"
+        },
+        "summary": {
+          "total_count": 20,
+          "viewer_reaction": "NONE"
+        }
+      },
       "likes": {
         "data": [
           {
@@ -4168,6 +5313,26 @@
       "full_picture": "https:\/\/external.xx.fbcdn.net\/safe_image.php?d=AQBmY-o_rPogvndb&w=720&h=720&url=https\u00253A\u00252F\u00252Fi.ytimg.com\u00252Fvi\u00252FHNjX6o7t6NU\u00252Fmaxresdefault.jpg&cfs=1&_nc_hash=AQBi9ZYMiC43zfkn",
       "updated_time": "2017-01-18T22:38:08+0000",
       "id": "1707149242852457_1744664459100935",
+      "reactions": {
+        "data": [
+          {
+            "id": "1446081058738413",
+            "name": "Carlo Testa",
+            "type": "LIKE"
+          }
+        ],
+        "paging": {
+          "cursors": {
+            "before": "TVRBd01EQXdNRGsxT1RrMk1qVXlPakUwT0RVd01qWXlOVGc2TWpVME1EazJNVFl4TXc9PQZDZD",
+            "after": "TVRBd01EQXdNRGsxT1RrMk1qVXlPakUwT0RVd01qWXlOVGc2TWpVME1EazJNVFl4TXc9PQZDZD"
+          },
+          "next": "https:\/\/graph.facebook.com\/v2.8\/1707149242852457_1744664459100935\/reactions?access_token=1173483302721639\u00257CoH9V-JlsUrDWKDS0Dyb5U3vcRIE&summary=true&limit=1&after=TVRBd01EQXdNRGsxT1RrMk1qVXlPakUwT0RVd01qWXlOVGc2TWpVME1EazJNVFl4TXc9PQZDZD"
+        },
+        "summary": {
+          "total_count": 20,
+          "viewer_reaction": "NONE"
+        }
+      },
       "likes": {
         "data": [
           {
@@ -4244,6 +5409,26 @@
       "full_picture": "https:\/\/external.xx.fbcdn.net\/safe_image.php?d=AQAEZofah4deGaYZ&url=https\u00253A\u00252F\u00252Fi.ytimg.com\u00252Fvi\u00252FMIiVmZ-kiJc\u00252Fmaxresdefault.jpg&_nc_hash=AQAwYNNKafcGnmhQ",
       "updated_time": "2017-01-18T22:26:50+0000",
       "id": "1707149242852457_1744429375791110",
+      "reactions": {
+        "data": [
+          {
+            "id": "1202609089792955",
+            "name": "Kasia Zamaria",
+            "type": "LIKE"
+          }
+        ],
+        "paging": {
+          "cursors": {
+            "before": "TVRBd01EQXhNekUyTWpVME5qRTBPakUwT0RRNE5Ua3lNRFE2TWpVME1EazJNVFl4TXc9PQZDZD",
+            "after": "TVRBd01EQXhNekUyTWpVME5qRTBPakUwT0RRNE5Ua3lNRFE2TWpVME1EazJNVFl4TXc9PQZDZD"
+          },
+          "next": "https:\/\/graph.facebook.com\/v2.8\/1707149242852457_1744429375791110\/reactions?access_token=1173483302721639\u00257CoH9V-JlsUrDWKDS0Dyb5U3vcRIE&summary=true&limit=1&after=TVRBd01EQXhNekUyTWpVME5qRTBPakUwT0RRNE5Ua3lNRFE2TWpVME1EazJNVFl4TXc9PQZDZD"
+        },
+        "summary": {
+          "total_count": 19,
+          "viewer_reaction": "NONE"
+        }
+      },
       "likes": {
         "data": [
           {
@@ -4329,6 +5514,26 @@
       "full_picture": "https:\/\/external.xx.fbcdn.net\/safe_image.php?d=AQCiHimVFcPTS5k2&w=720&h=720&url=http\u00253A\u00252F\u00252Fi.ytimg.com\u00252Fvi\u00252FKEI4qSrkPAs\u00252Fmaxresdefault.jpg&cfs=1&_nc_hash=AQDxJ4yupswqqVA4",
       "updated_time": "2017-01-18T21:58:15+0000",
       "id": "1707149242852457_1712874272279954",
+      "reactions": {
+        "data": [
+          {
+            "id": "10212107194144291",
+            "name": "Massimo Pappalardo",
+            "type": "LIKE"
+          }
+        ],
+        "paging": {
+          "cursors": {
+            "before": "TVRVd09ETTFPRGM0T1RveE5EZAzFNREkzT0RjeU9qSTFOREE1TmpFMk1UTT0ZD",
+            "after": "TVRVd09ETTFPRGM0T1RveE5EZAzFNREkzT0RjeU9qSTFOREE1TmpFMk1UTT0ZD"
+          },
+          "next": "https:\/\/graph.facebook.com\/v2.8\/1707149242852457_1712874272279954\/reactions?access_token=1173483302721639\u00257CoH9V-JlsUrDWKDS0Dyb5U3vcRIE&summary=true&limit=1&after=TVRVd09ETTFPRGM0T1RveE5EZAzFNREkzT0RjeU9qSTFOREE1TmpFMk1UTT0ZD"
+        },
+        "summary": {
+          "total_count": 18,
+          "viewer_reaction": "NONE"
+        }
+      },
       "likes": {
         "data": [
           {
@@ -4390,6 +5595,26 @@
       "full_picture": "https:\/\/external.xx.fbcdn.net\/safe_image.php?d=AQC3WcG3nRUK5Bqs&w=360&h=360&url=https\u00253A\u00252F\u00252Fi.ytimg.com\u00252Fvi\u00252FI3MOR7pxsvI\u00252Fhqdefault.jpg&cfs=1&sx=87&sy=0&sw=360&sh=360&_nc_hash=AQBEaEAZiMpHsfor",
       "updated_time": "2017-01-18T21:55:42+0000",
       "id": "1707149242852457_1712871858946862",
+      "reactions": {
+        "data": [
+          {
+            "id": "10208047442080192",
+            "name": "Agnieszka Orze\u0142",
+            "type": "LIKE"
+          }
+        ],
+        "paging": {
+          "cursors": {
+            "before": "TVRFeU16STVNVGM1TVRveE5EZAzBOemd3TVRnMU9qSTFOREE1TmpFMk1UTT0ZD",
+            "after": "TVRFeU16STVNVGM1TVRveE5EZAzBOemd3TVRnMU9qSTFOREE1TmpFMk1UTT0ZD"
+          },
+          "next": "https:\/\/graph.facebook.com\/v2.8\/1707149242852457_1712871858946862\/reactions?access_token=1173483302721639\u00257CoH9V-JlsUrDWKDS0Dyb5U3vcRIE&summary=true&limit=1&after=TVRFeU16STVNVGM1TVRveE5EZAzBOemd3TVRnMU9qSTFOREE1TmpFMk1UTT0ZD"
+        },
+        "summary": {
+          "total_count": 15,
+          "viewer_reaction": "NONE"
+        }
+      },
       "likes": {
         "data": [
           {
@@ -4459,6 +5684,26 @@
       "full_picture": "https:\/\/external.xx.fbcdn.net\/safe_image.php?d=AQDqugQEhtqG9ORY&w=720&h=720&url=https\u00253A\u00252F\u00252Fi.ytimg.com\u00252Fvi\u00252FYqeW9_5kURI\u00252Fmaxresdefault.jpg&cfs=1&sx=543&sy=0&sw=720&sh=720&l&_nc_hash=AQDKx7TRax5yfnsc",
       "updated_time": "2017-01-18T21:07:31+0000",
       "id": "1707149242852457_1916641908569855",
+      "reactions": {
+        "data": [
+          {
+            "id": "142580416242915",
+            "name": "Konrad Kras",
+            "type": "LIKE"
+          }
+        ],
+        "paging": {
+          "cursors": {
+            "before": "TVRBd01ERTBOekk0TnpFMU1EYzJPakUwT0RVd016UTNOVGM2TWpVME1EazJNVFl4TXc9PQZDZD",
+            "after": "TVRBd01ERTBOekk0TnpFMU1EYzJPakUwT0RVd016UTNOVGM2TWpVME1EazJNVFl4TXc9PQZDZD"
+          },
+          "next": "https:\/\/graph.facebook.com\/v2.8\/1707149242852457_1916641908569855\/reactions?access_token=1173483302721639\u00257CoH9V-JlsUrDWKDS0Dyb5U3vcRIE&summary=true&limit=1&after=TVRBd01ERTBOekk0TnpFMU1EYzJPakUwT0RVd016UTNOVGM2TWpVME1EazJNVFl4TXc9PQZDZD"
+        },
+        "summary": {
+          "total_count": 15,
+          "viewer_reaction": "NONE"
+        }
+      },
       "likes": {
         "data": [
           {
@@ -4505,6 +5750,26 @@
       "full_picture": "https:\/\/external.xx.fbcdn.net\/safe_image.php?d=AQA8C6Jj5ljyrLIy&w=720&h=720&url=https\u00253A\u00252F\u00252Fi.ytimg.com\u00252Fvi\u00252FeyCxsHPN1gs\u00252Fmaxresdefault.jpg&cfs=1&sx=166&sy=0&sw=720&sh=720&_nc_hash=AQDLR4oyn__j8u7N",
       "updated_time": "2017-01-18T15:27:46+0000",
       "id": "1707149242852457_1817038495196864",
+      "reactions": {
+        "data": [
+          {
+            "id": "10210935758366241",
+            "name": "Danail Dekov",
+            "type": "LIKE"
+          }
+        ],
+        "paging": {
+          "cursors": {
+            "before": "TVRFeU1UY3hNakV6T0RveE5EZAzBPVFEwTnpnNU9qSTFOREE1TmpFMk1UTT0ZD",
+            "after": "TVRFeU1UY3hNakV6T0RveE5EZAzBPVFEwTnpnNU9qSTFOREE1TmpFMk1UTT0ZD"
+          },
+          "next": "https:\/\/graph.facebook.com\/v2.8\/1707149242852457_1817038495196864\/reactions?access_token=1173483302721639\u00257CoH9V-JlsUrDWKDS0Dyb5U3vcRIE&summary=true&limit=1&after=TVRFeU1UY3hNakV6T0RveE5EZAzBPVFEwTnpnNU9qSTFOREE1TmpFMk1UTT0ZD"
+        },
+        "summary": {
+          "total_count": 22,
+          "viewer_reaction": "NONE"
+        }
+      },
       "likes": {
         "data": [
           {
@@ -4605,6 +5870,26 @@
       "message": "od Bogusi, genialny cover \u003C3 lajkowa\u0107\n",
       "updated_time": "2017-01-18T15:05:04+0000",
       "id": "1707149242852457_1898933733674006",
+      "reactions": {
+        "data": [
+          {
+            "id": "1090707924390970",
+            "name": "Ania Niedzia\u0142ek",
+            "type": "LIKE"
+          }
+        ],
+        "paging": {
+          "cursors": {
+            "before": "TVRBd01EQXpOVFV6TVRnNE1UWXdPakUwT0RRM05URTVOREE2TWpVME1EazJNVFl4TXc9PQZDZD",
+            "after": "TVRBd01EQXpOVFV6TVRnNE1UWXdPakUwT0RRM05URTVOREE2TWpVME1EazJNVFl4TXc9PQZDZD"
+          },
+          "next": "https:\/\/graph.facebook.com\/v2.8\/1707149242852457_1898933733674006\/reactions?access_token=1173483302721639\u00257CoH9V-JlsUrDWKDS0Dyb5U3vcRIE&summary=true&limit=1&after=TVRBd01EQXpOVFV6TVRnNE1UWXdPakUwT0RRM05URTVOREE2TWpVME1EazJNVFl4TXc9PQZDZD"
+        },
+        "summary": {
+          "total_count": 13,
+          "viewer_reaction": "NONE"
+        }
+      },
       "likes": {
         "data": [
           {
@@ -4683,6 +5968,26 @@
       "message": "I czemu, u diaska, nie ma na li\u015bcie tego kawa\u0142ka? :D \nPrzecie\u017c to jest wypas!\n\nhttps:\/\/www.youtube.com\/watch?v=C3Z8tsI8RrM",
       "updated_time": "2017-01-18T14:33:02+0000",
       "id": "1707149242852457_1722834017950646",
+      "reactions": {
+        "data": [
+          {
+            "id": "142580416242915",
+            "name": "Konrad Kras",
+            "type": "LIKE"
+          }
+        ],
+        "paging": {
+          "cursors": {
+            "before": "TVRBd01ERTBOekk0TnpFMU1EYzJPakUwT0RVd016VTFOVE02TWpVME1EazJNVFl4TXc9PQZDZD",
+            "after": "TVRBd01ERTBOekk0TnpFMU1EYzJPakUwT0RVd016VTFOVE02TWpVME1EazJNVFl4TXc9PQZDZD"
+          },
+          "next": "https:\/\/graph.facebook.com\/v2.8\/1707149242852457_1722834017950646\/reactions?access_token=1173483302721639\u00257CoH9V-JlsUrDWKDS0Dyb5U3vcRIE&summary=true&limit=1&after=TVRBd01ERTBOekk0TnpFMU1EYzJPakUwT0RVd016VTFOVE02TWpVME1EazJNVFl4TXc9PQZDZD"
+        },
+        "summary": {
+          "total_count": 20,
+          "viewer_reaction": "NONE"
+        }
+      },
       "likes": {
         "data": [
           {
@@ -4784,6 +6089,26 @@
       "full_picture": "https:\/\/external.xx.fbcdn.net\/safe_image.php?d=AQCSIA_zfIiTNSeE&w=720&h=720&url=https\u00253A\u00252F\u00252Fi.ytimg.com\u00252Fvi\u00252F1IMoVyaoogk\u00252Fmaxresdefault.jpg&cfs=1&sx=560&sy=0&sw=720&sh=720&_nc_hash=AQCRicbFgwIsShzp",
       "updated_time": "2017-01-18T12:47:05+0000",
       "id": "1707149242852457_1744668555767192",
+      "reactions": {
+        "data": [
+          {
+            "id": "1232986743416380",
+            "name": "Marysia Niedzia\u0142ek",
+            "type": "LIKE"
+          }
+        ],
+        "paging": {
+          "cursors": {
+            "before": "TVRBd01EQXhNVFV4T1RreU5UazFPakUwT0RRNE1UVTNNelE2TWpVME1EazJNVFl4TXc9PQZDZD",
+            "after": "TVRBd01EQXhNVFV4T1RreU5UazFPakUwT0RRNE1UVTNNelE2TWpVME1EazJNVFl4TXc9PQZDZD"
+          },
+          "next": "https:\/\/graph.facebook.com\/v2.8\/1707149242852457_1744668555767192\/reactions?access_token=1173483302721639\u00257CoH9V-JlsUrDWKDS0Dyb5U3vcRIE&summary=true&limit=1&after=TVRBd01EQXhNVFV4T1RreU5UazFPakUwT0RRNE1UVTNNelE2TWpVME1EazJNVFl4TXc9PQZDZD"
+        },
+        "summary": {
+          "total_count": 20,
+          "viewer_reaction": "NONE"
+        }
+      },
       "likes": {
         "data": [
           {
@@ -4851,6 +6176,26 @@
       "full_picture": "https:\/\/external.xx.fbcdn.net\/safe_image.php?d=AQCa7OwlYytRqBkg&url=https\u00253A\u00252F\u00252Fi.ytimg.com\u00252Fvi\u00252FQbxFDqadFJU\u00252Fmaxresdefault.jpg&_nc_hash=AQCoMsSH3QuNo5dm",
       "updated_time": "2017-01-18T11:58:52+0000",
       "id": "1707149242852457_1887177744849605",
+      "reactions": {
+        "data": [
+          {
+            "id": "142580416242915",
+            "name": "Konrad Kras",
+            "type": "LIKE"
+          }
+        ],
+        "paging": {
+          "cursors": {
+            "before": "TVRBd01ERTBOekk0TnpFMU1EYzJPakUwT0RVd016VTJNekk2TWpVME1EazJNVFl4TXc9PQZDZD",
+            "after": "TVRBd01ERTBOekk0TnpFMU1EYzJPakUwT0RVd016VTJNekk2TWpVME1EazJNVFl4TXc9PQZDZD"
+          },
+          "next": "https:\/\/graph.facebook.com\/v2.8\/1707149242852457_1887177744849605\/reactions?access_token=1173483302721639\u00257CoH9V-JlsUrDWKDS0Dyb5U3vcRIE&summary=true&limit=1&after=TVRBd01ERTBOekk0TnpFMU1EYzJPakUwT0RVd016VTJNekk2TWpVME1EazJNVFl4TXc9PQZDZD"
+        },
+        "summary": {
+          "total_count": 17,
+          "viewer_reaction": "NONE"
+        }
+      },
       "likes": {
         "data": [
           {
@@ -4936,6 +6281,26 @@
       "full_picture": "https:\/\/external.xx.fbcdn.net\/safe_image.php?d=AQBcFcf0sob_y2lQ&w=720&h=720&url=https\u00253A\u00252F\u00252Fi.ytimg.com\u00252Fvi\u00252FAEHj_OyKY1Y\u00252Fmaxresdefault.jpg&cfs=1&_nc_hash=AQBf_ps5oSw6jnns",
       "updated_time": "2017-01-18T11:45:00+0000",
       "id": "1707149242852457_1908162579417788",
+      "reactions": {
+        "data": [
+          {
+            "id": "10206990056864597",
+            "name": "Ula Przybyszewska",
+            "type": "LIKE"
+          }
+        ],
+        "paging": {
+          "cursors": {
+            "before": "TVRZAM05EVTBOVFF4TWpveE5EZAzBOek01TnpBME9qSTFOREE1TmpFMk1UTT0ZD",
+            "after": "TVRZAM05EVTBOVFF4TWpveE5EZAzBOek01TnpBME9qSTFOREE1TmpFMk1UTT0ZD"
+          },
+          "next": "https:\/\/graph.facebook.com\/v2.8\/1707149242852457_1908162579417788\/reactions?access_token=1173483302721639\u00257CoH9V-JlsUrDWKDS0Dyb5U3vcRIE&summary=true&limit=1&after=TVRZAM05EVTBOVFF4TWpveE5EZAzBOek01TnpBME9qSTFOREE1TmpFMk1UTT0ZD"
+        },
+        "summary": {
+          "total_count": 15,
+          "viewer_reaction": "NONE"
+        }
+      },
       "likes": {
         "data": [
           {
@@ -5021,6 +6386,26 @@
       "full_picture": "https:\/\/external.xx.fbcdn.net\/safe_image.php?d=AQA-qskf3QYPLFtF&w=360&h=360&url=https\u00253A\u00252F\u00252Fi.ytimg.com\u00252Fvi\u00252F7g2jv_2HwXo\u00252Fhqdefault.jpg&cfs=1&sx=62&sy=0&sw=360&sh=360&_nc_hash=AQAPlFqFIi6UKikq",
       "updated_time": "2017-01-18T11:36:39+0000",
       "id": "1707149242852457_1868957046671675",
+      "reactions": {
+        "data": [
+          {
+            "id": "1188675624585493",
+            "name": "Julia Bystrzycka",
+            "type": "LIKE"
+          }
+        ],
+        "paging": {
+          "cursors": {
+            "before": "TVRBd01EQXpNamt5TURFd09UZAzBPakUwT0RRNE1qY3lOek02TWpVME1EazJNVFl4TXc9PQZDZD",
+            "after": "TVRBd01EQXpNamt5TURFd09UZAzBPakUwT0RRNE1qY3lOek02TWpVME1EazJNVFl4TXc9PQZDZD"
+          },
+          "next": "https:\/\/graph.facebook.com\/v2.8\/1707149242852457_1868957046671675\/reactions?access_token=1173483302721639\u00257CoH9V-JlsUrDWKDS0Dyb5U3vcRIE&summary=true&limit=1&after=TVRBd01EQXpNamt5TURFd09UZAzBPakUwT0RRNE1qY3lOek02TWpVME1EazJNVFl4TXc9PQZDZD"
+        },
+        "summary": {
+          "total_count": 14,
+          "viewer_reaction": "NONE"
+        }
+      },
       "likes": {
         "data": [
           {
@@ -5098,6 +6483,26 @@
       "full_picture": "https:\/\/external.xx.fbcdn.net\/safe_image.php?d=AQCjCk4EcxPuG0b3&w=720&h=720&url=https\u00253A\u00252F\u00252Fi.ytimg.com\u00252Fvi\u00252F3RTIXUzCr2M\u00252Fmaxresdefault.jpg&cfs=1&_nc_hash=AQCvFRRHaAW10hzE",
       "updated_time": "2017-01-18T10:26:50+0000",
       "id": "1707149242852457_1803710803196300",
+      "reactions": {
+        "data": [
+          {
+            "id": "10210935758366241",
+            "name": "Danail Dekov",
+            "type": "LOVE"
+          }
+        ],
+        "paging": {
+          "cursors": {
+            "before": "TVRFeU1UY3hNakV6T0RveE5EZAzBPVFEwT0RFME9qYzRPRFkwT0RBek56a3hNek14TWc9PQZDZD",
+            "after": "TVRFeU1UY3hNakV6T0RveE5EZAzBPVFEwT0RFME9qYzRPRFkwT0RBek56a3hNek14TWc9PQZDZD"
+          },
+          "next": "https:\/\/graph.facebook.com\/v2.8\/1707149242852457_1803710803196300\/reactions?access_token=1173483302721639\u00257CoH9V-JlsUrDWKDS0Dyb5U3vcRIE&summary=true&limit=1&after=TVRFeU1UY3hNakV6T0RveE5EZAzBPVFEwT0RFME9qYzRPRFkwT0RBek56a3hNek14TWc9PQZDZD"
+        },
+        "summary": {
+          "total_count": 24,
+          "viewer_reaction": "NONE"
+        }
+      },
       "likes": {
         "data": [
           {
@@ -5167,6 +6572,26 @@
       "full_picture": "https:\/\/external.xx.fbcdn.net\/safe_image.php?d=AQBKDnVLmpIgRE4N&w=720&h=720&url=http\u00253A\u00252F\u00252Fi.ytimg.com\u00252Fvi\u00252FxguvWhcddGg\u00252Fmaxresdefault.jpg&cfs=1&sx=289&sy=0&sw=1080&sh=1080&_nc_hash=AQBuRQZJeacB1yLM",
       "updated_time": "2017-01-17T23:49:19+0000",
       "id": "1707149242852457_1715695175331197",
+      "reactions": {
+        "data": [
+          {
+            "id": "10208047442080192",
+            "name": "Agnieszka Orze\u0142",
+            "type": "LIKE"
+          }
+        ],
+        "paging": {
+          "cursors": {
+            "before": "TVRFeU16STVNVGM1TVRveE5EZAzBOemd3TlRjNU9qSTFOREE1TmpFMk1UTT0ZD",
+            "after": "TVRFeU16STVNVGM1TVRveE5EZAzBOemd3TlRjNU9qSTFOREE1TmpFMk1UTT0ZD"
+          },
+          "next": "https:\/\/graph.facebook.com\/v2.8\/1707149242852457_1715695175331197\/reactions?access_token=1173483302721639\u00257CoH9V-JlsUrDWKDS0Dyb5U3vcRIE&summary=true&limit=1&after=TVRFeU16STVNVGM1TVRveE5EZAzBOemd3TlRjNU9qSTFOREE1TmpFMk1UTT0ZD"
+        },
+        "summary": {
+          "total_count": 8,
+          "viewer_reaction": "NONE"
+        }
+      },
       "likes": {
         "data": [
           {
@@ -5244,6 +6669,26 @@
       "full_picture": "https:\/\/external.xx.fbcdn.net\/safe_image.php?d=AQAb7xelpIiV-I30&w=720&h=720&url=https\u00253A\u00252F\u00252Fi.ytimg.com\u00252Fvi\u00252FiP6XpLQM2Cs\u00252Fmaxresdefault.jpg&cfs=1&sx=492&sy=0&sw=1080&sh=1080&_nc_hash=AQARxQygLpTwsHdK",
       "updated_time": "2017-01-17T23:47:36+0000",
       "id": "1707149242852457_1837464039820976",
+      "reactions": {
+        "data": [
+          {
+            "id": "1791360737782623",
+            "name": "Anna Kolczyk",
+            "type": "LIKE"
+          }
+        ],
+        "paging": {
+          "cursors": {
+            "before": "TVRBd01EQTNNall4TkRJMk1qUXlPakUwT0RRM01qY3lNelU2TWpVME1EazJNVFl4TXc9PQZDZD",
+            "after": "TVRBd01EQTNNall4TkRJMk1qUXlPakUwT0RRM01qY3lNelU2TWpVME1EazJNVFl4TXc9PQZDZD"
+          },
+          "next": "https:\/\/graph.facebook.com\/v2.8\/1707149242852457_1837464039820976\/reactions?access_token=1173483302721639\u00257CoH9V-JlsUrDWKDS0Dyb5U3vcRIE&summary=true&limit=1&after=TVRBd01EQTNNall4TkRJMk1qUXlPakUwT0RRM01qY3lNelU2TWpVME1EazJNVFl4TXc9PQZDZD"
+        },
+        "summary": {
+          "total_count": 10,
+          "viewer_reaction": "NONE"
+        }
+      },
       "likes": {
         "data": [
           {
@@ -5321,6 +6766,26 @@
       "full_picture": "https:\/\/external.xx.fbcdn.net\/safe_image.php?d=AQCZb8VnJE8D5AJL&w=720&h=720&url=https\u00253A\u00252F\u00252Fi.ytimg.com\u00252Fvi\u00252FPmKl8_PG3fU\u00252Fmaxresdefault.jpg&cfs=1&sx=183&sy=0&sw=720&sh=720&_nc_hash=AQBCoj8YSVLeyd4W",
       "updated_time": "2017-01-17T23:39:02+0000",
       "id": "1707149242852457_1876060485961331",
+      "reactions": {
+        "data": [
+          {
+            "id": "1042982779145460",
+            "name": "Kasia Skalska",
+            "type": "LIKE"
+          }
+        ],
+        "paging": {
+          "cursors": {
+            "before": "TVRBd01EQXpNREV5TkRRMk5UTTBPakUwT0RRM016azBOREk2TWpVME1EazJNVFl4TXc9PQZDZD",
+            "after": "TVRBd01EQXpNREV5TkRRMk5UTTBPakUwT0RRM016azBOREk2TWpVME1EazJNVFl4TXc9PQZDZD"
+          },
+          "next": "https:\/\/graph.facebook.com\/v2.8\/1707149242852457_1876060485961331\/reactions?access_token=1173483302721639\u00257CoH9V-JlsUrDWKDS0Dyb5U3vcRIE&summary=true&limit=1&after=TVRBd01EQXpNREV5TkRRMk5UTTBPakUwT0RRM016azBOREk2TWpVME1EazJNVFl4TXc9PQZDZD"
+        },
+        "summary": {
+          "total_count": 16,
+          "viewer_reaction": "NONE"
+        }
+      },
       "likes": {
         "data": [
           {
@@ -5398,6 +6863,26 @@
       "full_picture": "https:\/\/external.xx.fbcdn.net\/safe_image.php?d=AQDJ8_FnBQXGT8Nd&w=720&h=720&url=https\u00253A\u00252F\u00252Fi.ytimg.com\u00252Fvi\u00252FyivLt9cTaio\u00252Fhqdefault.jpg&cfs=1&_nc_hash=AQCR6mZjnPlCoJtJ",
       "updated_time": "2017-01-17T23:22:21+0000",
       "id": "1707149242852457_1819599074940806",
+      "reactions": {
+        "data": [
+          {
+            "id": "1242592522496562",
+            "name": "Adam Jaskiernik",
+            "type": "LIKE"
+          }
+        ],
+        "paging": {
+          "cursors": {
+            "before": "TVRBd01EQXlNemMwTnpjNU5URTBPakUwTmpnNE56ZAzVNVGM2TWpVME1EazJNVFl4TXc9PQZDZD",
+            "after": "TVRBd01EQXlNemMwTnpjNU5URTBPakUwTmpnNE56ZAzVNVGM2TWpVME1EazJNVFl4TXc9PQZDZD"
+          },
+          "next": "https:\/\/graph.facebook.com\/v2.8\/1707149242852457_1819599074940806\/reactions?access_token=1173483302721639\u00257CoH9V-JlsUrDWKDS0Dyb5U3vcRIE&summary=true&limit=1&after=TVRBd01EQXlNemMwTnpjNU5URTBPakUwTmpnNE56ZAzVNVGM2TWpVME1EazJNVFl4TXc9PQZDZD"
+        },
+        "summary": {
+          "total_count": 4,
+          "viewer_reaction": "NONE"
+        }
+      },
       "likes": {
         "data": [
           {
@@ -5499,6 +6984,26 @@
       "full_picture": "https:\/\/external.xx.fbcdn.net\/safe_image.php?d=AQDDt6lTWruguH5A&w=720&h=720&url=https\u00253A\u00252F\u00252Fi.ytimg.com\u00252Fvi\u00252Frs40yxHjTxQ\u00252Fmaxresdefault.jpg&cfs=1&_nc_hash=AQAQ2Rk6eyyq6kE9",
       "updated_time": "2017-01-17T22:49:14+0000",
       "id": "1707149242852457_1890891524478227",
+      "reactions": {
+        "data": [
+          {
+            "id": "1242592522496562",
+            "name": "Adam Jaskiernik",
+            "type": "LIKE"
+          }
+        ],
+        "paging": {
+          "cursors": {
+            "before": "TVRBd01EQXlNemMwTnpjNU5URTBPakUwT0RRMk9UTXpNRFk2TWpVME1EazJNVFl4TXc9PQZDZD",
+            "after": "TVRBd01EQXlNemMwTnpjNU5URTBPakUwT0RRMk9UTXpNRFk2TWpVME1EazJNVFl4TXc9PQZDZD"
+          },
+          "next": "https:\/\/graph.facebook.com\/v2.8\/1707149242852457_1890891524478227\/reactions?access_token=1173483302721639\u00257CoH9V-JlsUrDWKDS0Dyb5U3vcRIE&summary=true&limit=1&after=TVRBd01EQXlNemMwTnpjNU5URTBPakUwT0RRMk9UTXpNRFk2TWpVME1EazJNVFl4TXc9PQZDZD"
+        },
+        "summary": {
+          "total_count": 22,
+          "viewer_reaction": "NONE"
+        }
+      },
       "likes": {
         "data": [
           {
@@ -5576,6 +7081,26 @@
       "full_picture": "https:\/\/external.xx.fbcdn.net\/safe_image.php?d=AQDVhhPXrlj0_aDH&w=720&h=720&url=https\u00253A\u00252F\u00252Fi.ytimg.com\u00252Fvi\u00252FnSDgHBxUbVQ\u00252Fhqdefault.jpg&cfs=1&_nc_hash=AQDTrIebNtuwQ2Fi",
       "updated_time": "2017-01-17T22:37:47+0000",
       "id": "1707149242852457_1757285551172159",
+      "reactions": {
+        "data": [
+          {
+            "id": "1146562062126890",
+            "name": "Jacek Bosiacki",
+            "type": "LIKE"
+          }
+        ],
+        "paging": {
+          "cursors": {
+            "before": "TVRBd01EQXpNVGt6TWpFeU1qSTNPakUwT0RRM01qVTJOREE2TWpVME1EazJNVFl4TXc9PQZDZD",
+            "after": "TVRBd01EQXpNVGt6TWpFeU1qSTNPakUwT0RRM01qVTJOREE2TWpVME1EazJNVFl4TXc9PQZDZD"
+          },
+          "next": "https:\/\/graph.facebook.com\/v2.8\/1707149242852457_1757285551172159\/reactions?access_token=1173483302721639\u00257CoH9V-JlsUrDWKDS0Dyb5U3vcRIE&summary=true&limit=1&after=TVRBd01EQXpNVGt6TWpFeU1qSTNPakUwT0RRM01qVTJOREE2TWpVME1EazJNVFl4TXc9PQZDZD"
+        },
+        "summary": {
+          "total_count": 16,
+          "viewer_reaction": "NONE"
+        }
+      },
       "likes": {
         "data": [
           {
@@ -5652,6 +7177,26 @@
       "full_picture": "https:\/\/external.xx.fbcdn.net\/safe_image.php?d=AQB9HyLmhhsWGT-r&url=https\u00253A\u00252F\u00252Fi.ytimg.com\u00252Fvi\u00252FwFDOV1mimks\u00252Fmaxresdefault.jpg&_nc_hash=AQDeTPUVk5bWRWTH",
       "updated_time": "2017-01-17T22:25:04+0000",
       "id": "1707149242852457_1853478828219497",
+      "reactions": {
+        "data": [
+          {
+            "id": "142580416242915",
+            "name": "Konrad Kras",
+            "type": "LIKE"
+          }
+        ],
+        "paging": {
+          "cursors": {
+            "before": "TVRBd01ERTBOekk0TnpFMU1EYzJPakUwT0RVd016WTNPVEU2TWpVME1EazJNVFl4TXc9PQZDZD",
+            "after": "TVRBd01ERTBOekk0TnpFMU1EYzJPakUwT0RVd016WTNPVEU2TWpVME1EazJNVFl4TXc9PQZDZD"
+          },
+          "next": "https:\/\/graph.facebook.com\/v2.8\/1707149242852457_1853478828219497\/reactions?access_token=1173483302721639\u00257CoH9V-JlsUrDWKDS0Dyb5U3vcRIE&summary=true&limit=1&after=TVRBd01ERTBOekk0TnpFMU1EYzJPakUwT0RVd016WTNPVEU2TWpVME1EazJNVFl4TXc9PQZDZD"
+        },
+        "summary": {
+          "total_count": 12,
+          "viewer_reaction": "NONE"
+        }
+      },
       "likes": {
         "data": [
           {
@@ -5745,6 +7290,26 @@
       "full_picture": "https:\/\/external.xx.fbcdn.net\/safe_image.php?d=AQBVAzNk_6owdZRN&w=720&h=720&url=https\u00253A\u00252F\u00252Fi.ytimg.com\u00252Fvi\u00252FXSf-sxZKAEk\u00252Fmaxresdefault.jpg&cfs=1&l&_nc_hash=AQDHvh_xPrN7PGQC",
       "updated_time": "2017-01-17T22:15:59+0000",
       "id": "1707149242852457_1895356204031759",
+      "reactions": {
+        "data": [
+          {
+            "id": "1387239624643797",
+            "name": "Dominik K\u0105dzio\u0142ka",
+            "type": "LIKE"
+          }
+        ],
+        "paging": {
+          "cursors": {
+            "before": "TVRBd01EQXdOek16TVRjNU16ZA3dPakUwT0RRMk9URTROelE2TWpVME1EazJNVFl4TXc9PQZDZD",
+            "after": "TVRBd01EQXdOek16TVRjNU16ZA3dPakUwT0RRMk9URTROelE2TWpVME1EazJNVFl4TXc9PQZDZD"
+          },
+          "next": "https:\/\/graph.facebook.com\/v2.8\/1707149242852457_1895356204031759\/reactions?access_token=1173483302721639\u00257CoH9V-JlsUrDWKDS0Dyb5U3vcRIE&summary=true&limit=1&after=TVRBd01EQXdOek16TVRjNU16ZA3dPakUwT0RRMk9URTROelE2TWpVME1EazJNVFl4TXc9PQZDZD"
+        },
+        "summary": {
+          "total_count": 9,
+          "viewer_reaction": "NONE"
+        }
+      },
       "likes": {
         "data": [
           {
@@ -5830,6 +7395,26 @@
       "full_picture": "https:\/\/external.xx.fbcdn.net\/safe_image.php?d=AQA20l1J17hgtV1b&w=720&h=720&url=https\u00253A\u00252F\u00252Fi.ytimg.com\u00252Fvi\u00252FdMMUH_ZpbB0\u00252Fmaxresdefault.jpg&cfs=1&sx=273&sy=0&sw=720&sh=720&_nc_hash=AQDkDUyz4oHZyYu7",
       "updated_time": "2017-01-17T22:14:51+0000",
       "id": "1707149242852457_1899490433618336",
+      "reactions": {
+        "data": [
+          {
+            "id": "1388556494497508",
+            "name": "Bogumi\u0142a Niedzia\u0142ek",
+            "type": "LIKE"
+          }
+        ],
+        "paging": {
+          "cursors": {
+            "before": "TVRBd01EQXdNamsxTVRFM09EVTBPakUwT0RRMk9USTVOekU2TWpVME1EazJNVFl4TXc9PQZDZD",
+            "after": "TVRBd01EQXdNamsxTVRFM09EVTBPakUwT0RRMk9USTVOekU2TWpVME1EazJNVFl4TXc9PQZDZD"
+          },
+          "next": "https:\/\/graph.facebook.com\/v2.8\/1707149242852457_1899490433618336\/reactions?access_token=1173483302721639\u00257CoH9V-JlsUrDWKDS0Dyb5U3vcRIE&summary=true&limit=1&after=TVRBd01EQXdNamsxTVRFM09EVTBPakUwT0RRMk9USTVOekU2TWpVME1EazJNVFl4TXc9PQZDZD"
+        },
+        "summary": {
+          "total_count": 17,
+          "viewer_reaction": "NONE"
+        }
+      },
       "likes": {
         "data": [
           {
@@ -5895,6 +7480,26 @@
       "full_picture": "https:\/\/scontent.xx.fbcdn.net\/v\/t1.0-9\/s720x720\/15977547_1574621372567526_3411968602636282238_n.jpg?oh=f04f3586a4984b43d2422e0a47d90f84&oe=58FE55B8",
       "updated_time": "2017-01-17T22:01:17+0000",
       "id": "1707149242852457_1916150161952363",
+      "reactions": {
+        "data": [
+          {
+            "id": "1606563702693421",
+            "name": "Arseny Nasokin",
+            "type": "LOVE"
+          }
+        ],
+        "paging": {
+          "cursors": {
+            "before": "TVRBd01EQXdNVGswTWpFeU56RTFPakUwT0RRM05UVXhNRGs2TnpnNE5qUTRNRE0zT1RFek16RXkZD",
+            "after": "TVRBd01EQXdNVGswTWpFeU56RTFPakUwT0RRM05UVXhNRGs2TnpnNE5qUTRNRE0zT1RFek16RXkZD"
+          },
+          "next": "https:\/\/graph.facebook.com\/v2.8\/1707149242852457_1916150161952363\/reactions?access_token=1173483302721639\u00257CoH9V-JlsUrDWKDS0Dyb5U3vcRIE&summary=true&limit=1&after=TVRBd01EQXdNVGswTWpFeU56RTFPakUwT0RRM05UVXhNRGs2TnpnNE5qUTRNRE0zT1RFek16RXkZD"
+        },
+        "summary": {
+          "total_count": 8,
+          "viewer_reaction": "NONE"
+        }
+      },
       "likes": {
         "data": [
           {
@@ -5963,6 +7568,26 @@
       "full_picture": "https:\/\/external.xx.fbcdn.net\/safe_image.php?d=AQAObLcnvQl-a6sm&url=https\u00253A\u00252F\u00252Fi.ytimg.com\u00252Fvi\u00252FJmTdsKgzUUk\u00252Fmaxresdefault.jpg&_nc_hash=AQBjGRbCWgAvgfdu",
       "updated_time": "2017-01-17T21:42:37+0000",
       "id": "1707149242852457_1809435692623811",
+      "reactions": {
+        "data": [
+          {
+            "id": "142580416242915",
+            "name": "Konrad Kras",
+            "type": "LIKE"
+          }
+        ],
+        "paging": {
+          "cursors": {
+            "before": "TVRBd01ERTBOekk0TnpFMU1EYzJPakUwT0RVd016WXhPVGs2TWpVME1EazJNVFl4TXc9PQZDZD",
+            "after": "TVRBd01ERTBOekk0TnpFMU1EYzJPakUwT0RVd016WXhPVGs2TWpVME1EazJNVFl4TXc9PQZDZD"
+          },
+          "next": "https:\/\/graph.facebook.com\/v2.8\/1707149242852457_1809435692623811\/reactions?access_token=1173483302721639\u00257CoH9V-JlsUrDWKDS0Dyb5U3vcRIE&summary=true&limit=1&after=TVRBd01ERTBOekk0TnpFMU1EYzJPakUwT0RVd016WXhPVGs2TWpVME1EazJNVFl4TXc9PQZDZD"
+        },
+        "summary": {
+          "total_count": 18,
+          "viewer_reaction": "NONE"
+        }
+      },
       "likes": {
         "data": [
           {
@@ -6120,6 +7745,26 @@
       "full_picture": "https:\/\/external.xx.fbcdn.net\/safe_image.php?d=AQC7NFPgpjKEhAi0&w=720&h=720&url=https\u00253A\u00252F\u00252Fi.ytimg.com\u00252Fvi\u00252FcN5RsE_Zm7E\u00252Fhqdefault.jpg&cfs=1&_nc_hash=AQAZbjfJQzDD-534",
       "updated_time": "2017-01-17T21:35:53+0000",
       "id": "1707149242852457_1756912944542753",
+      "reactions": {
+        "data": [
+          {
+            "id": "1201035479943591",
+            "name": "Piotr Konsek",
+            "type": "LIKE"
+          }
+        ],
+        "paging": {
+          "cursors": {
+            "before": "TVRBd01EQXhNVEUwTlRFek9UTTBPakUwT0RRMk9Ea3lOVE02TWpVME1EazJNVFl4TXc9PQZDZD",
+            "after": "TVRBd01EQXhNVEUwTlRFek9UTTBPakUwT0RRMk9Ea3lOVE02TWpVME1EazJNVFl4TXc9PQZDZD"
+          },
+          "next": "https:\/\/graph.facebook.com\/v2.8\/1707149242852457_1756912944542753\/reactions?access_token=1173483302721639\u00257CoH9V-JlsUrDWKDS0Dyb5U3vcRIE&summary=true&limit=1&after=TVRBd01EQXhNVEUwTlRFek9UTTBPakUwT0RRMk9Ea3lOVE02TWpVME1EazJNVFl4TXc9PQZDZD"
+        },
+        "summary": {
+          "total_count": 16,
+          "viewer_reaction": "NONE"
+        }
+      },
       "likes": {
         "data": [
           {
@@ -6213,6 +7858,26 @@
       "full_picture": "https:\/\/external.xx.fbcdn.net\/safe_image.php?d=AQDJc1JCBVO8ZsZt&w=720&h=720&url=https\u00253A\u00252F\u00252Fi.ytimg.com\u00252Fvi\u00252FLbLQm5taP0o\u00252Fmaxresdefault.jpg&cfs=1&sx=692&sy=0&sw=1272&sh=1272&_nc_hash=AQBbx4iOF6WjQRqU",
       "updated_time": "2017-01-17T21:35:47+0000",
       "id": "1707149242852457_1892620297638683",
+      "reactions": {
+        "data": [
+          {
+            "id": "142580416242915",
+            "name": "Konrad Kras",
+            "type": "LIKE"
+          }
+        ],
+        "paging": {
+          "cursors": {
+            "before": "TVRBd01ERTBOekk0TnpFMU1EYzJPakUwT0RVd016WTVNamM2TWpVME1EazJNVFl4TXc9PQZDZD",
+            "after": "TVRBd01ERTBOekk0TnpFMU1EYzJPakUwT0RVd016WTVNamM2TWpVME1EazJNVFl4TXc9PQZDZD"
+          },
+          "next": "https:\/\/graph.facebook.com\/v2.8\/1707149242852457_1892620297638683\/reactions?access_token=1173483302721639\u00257CoH9V-JlsUrDWKDS0Dyb5U3vcRIE&summary=true&limit=1&after=TVRBd01ERTBOekk0TnpFMU1EYzJPakUwT0RVd016WTVNamM2TWpVME1EazJNVFl4TXc9PQZDZD"
+        },
+        "summary": {
+          "total_count": 17,
+          "viewer_reaction": "NONE"
+        }
+      },
       "likes": {
         "data": [
           {
@@ -6305,6 +7970,26 @@
       "full_picture": "https:\/\/external.xx.fbcdn.net\/safe_image.php?d=AQDR91qKb2JO8Ab4&w=720&h=720&url=https\u00253A\u00252F\u00252Fi.ytimg.com\u00252Fvi\u00252FIKZSP-mvslk\u00252Fmaxresdefault.jpg&cfs=1&sx=835&sy=0&sw=1080&sh=1080&_nc_hash=AQCMEA2ItGWHe6BV",
       "updated_time": "2017-01-17T20:49:47+0000",
       "id": "1707149242852457_1865615357005844",
+      "reactions": {
+        "data": [
+          {
+            "id": "1146562062126890",
+            "name": "Jacek Bosiacki",
+            "type": "LIKE"
+          }
+        ],
+        "paging": {
+          "cursors": {
+            "before": "TVRBd01EQXpNVGt6TWpFeU1qSTNPakUwT0RRNE1UVTVOalE2TWpVME1EazJNVFl4TXc9PQZDZD",
+            "after": "TVRBd01EQXpNVGt6TWpFeU1qSTNPakUwT0RRNE1UVTVOalE2TWpVME1EazJNVFl4TXc9PQZDZD"
+          },
+          "next": "https:\/\/graph.facebook.com\/v2.8\/1707149242852457_1865615357005844\/reactions?access_token=1173483302721639\u00257CoH9V-JlsUrDWKDS0Dyb5U3vcRIE&summary=true&limit=1&after=TVRBd01EQXpNVGt6TWpFeU1qSTNPakUwT0RRNE1UVTVOalE2TWpVME1EazJNVFl4TXc9PQZDZD"
+        },
+        "summary": {
+          "total_count": 14,
+          "viewer_reaction": "NONE"
+        }
+      },
       "likes": {
         "data": [
           {
@@ -6390,6 +8075,26 @@
       "full_picture": "https:\/\/external.xx.fbcdn.net\/safe_image.php?d=AQCEX0iHg63wN0Bm&w=720&h=720&url=https\u00253A\u00252F\u00252Fi.ytimg.com\u00252Fvi\u00252FzrfUZXWuOj4\u00252Fmaxresdefault.jpg&cfs=1&_nc_hash=AQDvyUuTB2FRsSEc",
       "updated_time": "2017-01-17T20:32:42+0000",
       "id": "1707149242852457_1877735515793828",
+      "reactions": {
+        "data": [
+          {
+            "id": "142580416242915",
+            "name": "Konrad Kras",
+            "type": "LIKE"
+          }
+        ],
+        "paging": {
+          "cursors": {
+            "before": "TVRBd01ERTBOekk0TnpFMU1EYzJPakUwT0RVd016Y3dNRGc2TWpVME1EazJNVFl4TXc9PQZDZD",
+            "after": "TVRBd01ERTBOekk0TnpFMU1EYzJPakUwT0RVd016Y3dNRGc2TWpVME1EazJNVFl4TXc9PQZDZD"
+          },
+          "next": "https:\/\/graph.facebook.com\/v2.8\/1707149242852457_1877735515793828\/reactions?access_token=1173483302721639\u00257CoH9V-JlsUrDWKDS0Dyb5U3vcRIE&summary=true&limit=1&after=TVRBd01ERTBOekk0TnpFMU1EYzJPakUwT0RVd016Y3dNRGc2TWpVME1EazJNVFl4TXc9PQZDZD"
+        },
+        "summary": {
+          "total_count": 10,
+          "viewer_reaction": "NONE"
+        }
+      },
       "likes": {
         "data": [
           {
@@ -6451,6 +8156,26 @@
       "full_picture": "https:\/\/external.xx.fbcdn.net\/safe_image.php?d=AQBH9VjG4eA7sODG&w=720&h=720&url=https\u00253A\u00252F\u00252Fi.ytimg.com\u00252Fvi\u00252F_8lsf0ck0ro\u00252Fmaxresdefault.jpg&cfs=1&sx=840&sy=0&sw=1080&sh=1080&_nc_hash=AQBC_ahyykGjSD0g",
       "updated_time": "2017-01-17T20:32:25+0000",
       "id": "1707149242852457_1867457086821671",
+      "reactions": {
+        "data": [
+          {
+            "id": "1353329498052706",
+            "name": "Monika Rozp\u0119dzik",
+            "type": "LIKE"
+          }
+        ],
+        "paging": {
+          "cursors": {
+            "before": "TVRBd01EQXhNamN3TURZAd056QTJPakUwT0RRMk9UUTROREk2TWpVME1EazJNVFl4TXc9PQZDZD",
+            "after": "TVRBd01EQXhNamN3TURZAd056QTJPakUwT0RRMk9UUTROREk2TWpVME1EazJNVFl4TXc9PQZDZD"
+          },
+          "next": "https:\/\/graph.facebook.com\/v2.8\/1707149242852457_1867457086821671\/reactions?access_token=1173483302721639\u00257CoH9V-JlsUrDWKDS0Dyb5U3vcRIE&summary=true&limit=1&after=TVRBd01EQXhNamN3TURZAd056QTJPakUwT0RRMk9UUTROREk2TWpVME1EazJNVFl4TXc9PQZDZD"
+        },
+        "summary": {
+          "total_count": 12,
+          "viewer_reaction": "NONE"
+        }
+      },
       "likes": {
         "data": [
           {
@@ -6528,6 +8253,26 @@
       "full_picture": "https:\/\/external.xx.fbcdn.net\/safe_image.php?d=AQAJG1pGuIrnQ7Si&w=720&h=720&url=https\u00253A\u00252F\u00252Fi.ytimg.com\u00252Fvi\u00252FMQl-V9xq7Lo\u00252Fmaxresdefault.jpg&cfs=1&_nc_hash=AQAfWqJF7n7g0xsh",
       "updated_time": "2017-01-17T20:24:23+0000",
       "id": "1707149242852457_1830722093828504",
+      "reactions": {
+        "data": [
+          {
+            "id": "1353329498052706",
+            "name": "Monika Rozp\u0119dzik",
+            "type": "LIKE"
+          }
+        ],
+        "paging": {
+          "cursors": {
+            "before": "TVRBd01EQXhNamN3TURZAd056QTJPakUwT0RRMk9UUTRPRFE2TWpVME1EazJNVFl4TXc9PQZDZD",
+            "after": "TVRBd01EQXhNamN3TURZAd056QTJPakUwT0RRMk9UUTRPRFE2TWpVME1EazJNVFl4TXc9PQZDZD"
+          },
+          "next": "https:\/\/graph.facebook.com\/v2.8\/1707149242852457_1830722093828504\/reactions?access_token=1173483302721639\u00257CoH9V-JlsUrDWKDS0Dyb5U3vcRIE&summary=true&limit=1&after=TVRBd01EQXhNamN3TURZAd056QTJPakUwT0RRMk9UUTRPRFE2TWpVME1EazJNVFl4TXc9PQZDZD"
+        },
+        "summary": {
+          "total_count": 21,
+          "viewer_reaction": "NONE"
+        }
+      },
       "likes": {
         "data": [
           {
@@ -6597,6 +8342,26 @@
       "full_picture": "https:\/\/external.xx.fbcdn.net\/safe_image.php?d=AQA8YbUjmooSl3Pc&w=720&h=720&url=https\u00253A\u00252F\u00252Fi.ytimg.com\u00252Fvi\u00252FystCFgZBCgw\u00252Fhqdefault.jpg&cfs=1&_nc_hash=AQCKyOgQJcCO_3YI",
       "updated_time": "2017-01-17T20:20:01+0000",
       "id": "1707149242852457_1882204578680255",
+      "reactions": {
+        "data": [
+          {
+            "id": "142580416242915",
+            "name": "Konrad Kras",
+            "type": "LIKE"
+          }
+        ],
+        "paging": {
+          "cursors": {
+            "before": "TVRBd01ERTBOekk0TnpFMU1EYzJPakUwT0RVd016WTRNems2TWpVME1EazJNVFl4TXc9PQZDZD",
+            "after": "TVRBd01ERTBOekk0TnpFMU1EYzJPakUwT0RVd016WTRNems2TWpVME1EazJNVFl4TXc9PQZDZD"
+          },
+          "next": "https:\/\/graph.facebook.com\/v2.8\/1707149242852457_1882204578680255\/reactions?access_token=1173483302721639\u00257CoH9V-JlsUrDWKDS0Dyb5U3vcRIE&summary=true&limit=1&after=TVRBd01ERTBOekk0TnpFMU1EYzJPakUwT0RVd016WTRNems2TWpVME1EazJNVFl4TXc9PQZDZD"
+        },
+        "summary": {
+          "total_count": 15,
+          "viewer_reaction": "NONE"
+        }
+      },
       "likes": {
         "data": [
           {
@@ -6666,6 +8431,26 @@
       "full_picture": "https:\/\/external.xx.fbcdn.net\/safe_image.php?d=AQDKHdX40pYXtvYE&w=720&h=720&url=https\u00253A\u00252F\u00252Fi.ytimg.com\u00252Fvi\u00252FS0z1Mo7O6dE\u00252Fhqdefault.jpg&cfs=1&_nc_hash=AQC9NG10llu4WNIb",
       "updated_time": "2017-01-17T20:17:24+0000",
       "id": "1707149242852457_1893109490923097",
+      "reactions": {
+        "data": [
+          {
+            "id": "10211953265977773",
+            "name": "Mateusz Lech",
+            "type": "LIKE"
+          }
+        ],
+        "paging": {
+          "cursors": {
+            "before": "TVRVMU5qQTBPRE15TmpveE5EZAzBOekUyT0Rnd09qSTFOREE1TmpFMk1UTT0ZD",
+            "after": "TVRVMU5qQTBPRE15TmpveE5EZAzBOekUyT0Rnd09qSTFOREE1TmpFMk1UTT0ZD"
+          },
+          "next": "https:\/\/graph.facebook.com\/v2.8\/1707149242852457_1893109490923097\/reactions?access_token=1173483302721639\u00257CoH9V-JlsUrDWKDS0Dyb5U3vcRIE&summary=true&limit=1&after=TVRVMU5qQTBPRE15TmpveE5EZAzBOekUyT0Rnd09qSTFOREE1TmpFMk1UTT0ZD"
+        },
+        "summary": {
+          "total_count": 10,
+          "viewer_reaction": "NONE"
+        }
+      },
       "likes": {
         "data": [
           {
@@ -6692,14 +8477,6 @@
             "message": "Przecie\u017c to Jamie \u003C3 Jakim cudem przegapi\u0142am? Nadrabiam zatem :)",
             "from": {
               "name": "Katarzyna Gierasimczuk",
-              "id": "1436037566414936"
-            },
-            "id": "1916094641957915"
-          },
-          {
-            "message": "[Added 22.01.2017]",
-            "from": {
-              "name": "someone",
               "id": "1436037566414936"
             },
             "id": "1916094641957915"
@@ -6734,6 +8511,26 @@
       "full_picture": "https:\/\/external.xx.fbcdn.net\/safe_image.php?d=AQDuzQkm1loTlCz-&w=360&h=360&url=https\u00253A\u00252F\u00252Fi.ytimg.com\u00252Fvi\u00252FuIJDD1Cldgc\u00252Fhqdefault.jpg&cfs=1&sx=53&sy=0&sw=360&sh=360&_nc_hash=AQAp6VfXMa18orih",
       "updated_time": "2017-01-17T20:16:21+0000",
       "id": "1707149242852457_1916094498624596",
+      "reactions": {
+        "data": [
+          {
+            "id": "859129380897011",
+            "name": "Przemys\u0142aw Przemys\u0142",
+            "type": "LIKE"
+          }
+        ],
+        "paging": {
+          "cursors": {
+            "before": "TVRBd01EQXpPVGs0TnpBek5ERTJPakUwT0RVeU5qa3lPRGc2TWpVME1EazJNVFl4TXc9PQZDZD",
+            "after": "TVRBd01EQXpPVGs0TnpBek5ERTJPakUwT0RVeU5qa3lPRGc2TWpVME1EazJNVFl4TXc9PQZDZD"
+          },
+          "next": "https:\/\/graph.facebook.com\/v2.8\/1707149242852457_1916094498624596\/reactions?access_token=1173483302721639\u00257CoH9V-JlsUrDWKDS0Dyb5U3vcRIE&summary=true&limit=1&after=TVRBd01EQXpPVGs0TnpBek5ERTJPakUwT0RVeU5qa3lPRGc2TWpVME1EazJNVFl4TXc9PQZDZD"
+        },
+        "summary": {
+          "total_count": 7,
+          "viewer_reaction": "NONE"
+        }
+      },
       "likes": {
         "data": [
           {
@@ -6780,6 +8577,26 @@
       "full_picture": "https:\/\/external.xx.fbcdn.net\/safe_image.php?d=AQA9zn12dUiJv1r4&w=720&h=720&url=https\u00253A\u00252F\u00252Fi.ytimg.com\u00252Fvi\u00252FBz-WQRqW2f8\u00252Fhqdefault.jpg&cfs=1&_nc_hash=AQD2uuQ1BLQTgWJz",
       "updated_time": "2017-01-17T19:52:09+0000",
       "id": "1707149242852457_1916086201958759",
+      "reactions": {
+        "data": [
+          {
+            "id": "1376649599032203",
+            "name": "Dominika Gardzielewska",
+            "type": "LIKE"
+          }
+        ],
+        "paging": {
+          "cursors": {
+            "before": "TVRBd01EQXdOakUxTWpjek1qTXpPakUwT0RRM05EQXlPVEE2TWpVME1EazJNVFl4TXc9PQZDZD",
+            "after": "TVRBd01EQXdOakUxTWpjek1qTXpPakUwT0RRM05EQXlPVEE2TWpVME1EazJNVFl4TXc9PQZDZD"
+          },
+          "next": "https:\/\/graph.facebook.com\/v2.8\/1707149242852457_1916086201958759\/reactions?access_token=1173483302721639\u00257CoH9V-JlsUrDWKDS0Dyb5U3vcRIE&summary=true&limit=1&after=TVRBd01EQXdOakUxTWpjek1qTXpPakUwT0RRM05EQXlPVEE2TWpVME1EazJNVFl4TXc9PQZDZD"
+        },
+        "summary": {
+          "total_count": 17,
+          "viewer_reaction": "NONE"
+        }
+      },
       "likes": {
         "data": [
           {
@@ -6826,6 +8643,26 @@
       "full_picture": "https:\/\/external.xx.fbcdn.net\/safe_image.php?d=AQC4cl9rA6FJWSAb&w=720&h=720&url=https\u00253A\u00252F\u00252Fi.ytimg.com\u00252Fvi\u00252FYFEt96ChhgE\u00252Fhqdefault.jpg&cfs=1&_nc_hash=AQBQM3zuixYjI1nK",
       "updated_time": "2017-01-17T19:49:36+0000",
       "id": "1707149242852457_1916085545292158",
+      "reactions": {
+        "data": [
+          {
+            "id": "1353329498052706",
+            "name": "Monika Rozp\u0119dzik",
+            "type": "LIKE"
+          }
+        ],
+        "paging": {
+          "cursors": {
+            "before": "TVRBd01EQXhNamN3TURZAd056QTJPakUwT0RRM056TTNNamM2TWpVME1EazJNVFl4TXc9PQZDZD",
+            "after": "TVRBd01EQXhNamN3TURZAd056QTJPakUwT0RRM056TTNNamM2TWpVME1EazJNVFl4TXc9PQZDZD"
+          },
+          "next": "https:\/\/graph.facebook.com\/v2.8\/1707149242852457_1916085545292158\/reactions?access_token=1173483302721639\u00257CoH9V-JlsUrDWKDS0Dyb5U3vcRIE&summary=true&limit=1&after=TVRBd01EQXhNamN3TURZAd056QTJPakUwT0RRM056TTNNamM2TWpVME1EazJNVFl4TXc9PQZDZD"
+        },
+        "summary": {
+          "total_count": 18,
+          "viewer_reaction": "NONE"
+        }
+      },
       "likes": {
         "data": [
           {
@@ -6847,14 +8684,7 @@
         }
       },
       "comments": {
-        "data": [ {
-          "message": "[Added 21.01.2017]",
-          "from": {
-            "name": "someone",
-            "id": "1436037566414936"
-          },
-          "id": "1916094641957915"
-        }],
+        "data": [],
         "summary": {
           "order": "chronological",
           "total_count": 0,
@@ -6879,6 +8709,26 @@
       "full_picture": "https:\/\/external.xx.fbcdn.net\/safe_image.php?d=AQASeDOVVSFD0rpE&w=720&h=720&url=https\u00253A\u00252F\u00252Fi.ytimg.com\u00252Fvi\u00252FKDXOzr0GoA4\u00252Fmaxresdefault.jpg&cfs=1&sx=184&sy=0&sw=720&sh=720&_nc_hash=AQBHUVihOty3OrkB",
       "updated_time": "2017-01-17T19:38:18+0000",
       "id": "1707149242852457_1720789121488469",
+      "reactions": {
+        "data": [
+          {
+            "id": "142580416242915",
+            "name": "Konrad Kras",
+            "type": "LIKE"
+          }
+        ],
+        "paging": {
+          "cursors": {
+            "before": "TVRBd01ERTBOekk0TnpFMU1EYzJPakUwT0RVeE1qQTNOVFk2TWpVME1EazJNVFl4TXc9PQZDZD",
+            "after": "TVRBd01ERTBOekk0TnpFMU1EYzJPakUwT0RVeE1qQTNOVFk2TWpVME1EazJNVFl4TXc9PQZDZD"
+          },
+          "next": "https:\/\/graph.facebook.com\/v2.8\/1707149242852457_1720789121488469\/reactions?access_token=1173483302721639\u00257CoH9V-JlsUrDWKDS0Dyb5U3vcRIE&summary=true&limit=1&after=TVRBd01ERTBOekk0TnpFMU1EYzJPakUwT0RVeE1qQTNOVFk2TWpVME1EazJNVFl4TXc9PQZDZD"
+        },
+        "summary": {
+          "total_count": 12,
+          "viewer_reaction": "NONE"
+        }
+      },
       "likes": {
         "data": [
           {
@@ -6916,13 +8766,6 @@
               "id": "10208485302554525"
             },
             "id": "1720791391488242"
-          }, {
-            "message": "[Added 17.01.2017]",
-            "from": {
-              "name": "someone",
-              "id": "1436037566414936"
-            },
-            "id": "1916094641957915"
           },
           {
             "message": "Uszy sobie przezi\u0119bi\u0119, a nie puszcz\u0119! Wczoraj mi umkn\u0119\u0142o! :D",
@@ -6987,6 +8830,26 @@
       "full_picture": "https:\/\/external.xx.fbcdn.net\/safe_image.php?d=AQCSrcSjDI7HC7W1&w=720&h=720&url=https\u00253A\u00252F\u00252Fi.ytimg.com\u00252Fvi\u00252FvbtzVhLk8_4\u00252Fmaxresdefault.jpg&cfs=1&_nc_hash=AQA2dwagwfCeJpzt",
       "updated_time": "2017-01-17T19:30:22+0000",
       "id": "1707149242852457_1897860377114675",
+      "reactions": {
+        "data": [
+          {
+            "id": "1242592522496562",
+            "name": "Adam Jaskiernik",
+            "type": "LIKE"
+          }
+        ],
+        "paging": {
+          "cursors": {
+            "before": "TVRBd01EQXlNemMwTnpjNU5URTBPakUwT0RRMk9USTFNVGM2TWpVME1EazJNVFl4TXc9PQZDZD",
+            "after": "TVRBd01EQXlNemMwTnpjNU5URTBPakUwT0RRMk9USTFNVGM2TWpVME1EazJNVFl4TXc9PQZDZD"
+          },
+          "next": "https:\/\/graph.facebook.com\/v2.8\/1707149242852457_1897860377114675\/reactions?access_token=1173483302721639\u00257CoH9V-JlsUrDWKDS0Dyb5U3vcRIE&summary=true&limit=1&after=TVRBd01EQXlNemMwTnpjNU5URTBPakUwT0RRMk9USTFNVGM2TWpVME1EazJNVFl4TXc9PQZDZD"
+        },
+        "summary": {
+          "total_count": 16,
+          "viewer_reaction": "NONE"
+        }
+      },
       "likes": {
         "data": [
           {
@@ -7056,6 +8919,26 @@
       "full_picture": "https:\/\/external.xx.fbcdn.net\/safe_image.php?d=AQAvlf_z875vBKnx&w=720&h=720&url=https\u00253A\u00252F\u00252Fi.ytimg.com\u00252Fvi\u00252FAXnqkVTFUqY\u00252Fmaxresdefault.jpg&cfs=1&sx=560&sy=0&sw=720&sh=720&_nc_hash=AQBTL2yi8IU1QVgt",
       "updated_time": "2017-01-17T19:28:00+0000",
       "id": "1707149242852457_1904372003130179",
+      "reactions": {
+        "data": [
+          {
+            "id": "10208047442080192",
+            "name": "Agnieszka Orze\u0142",
+            "type": "LIKE"
+          }
+        ],
+        "paging": {
+          "cursors": {
+            "before": "TVRFeU16STVNVGM1TVRveE5EZAzBOemMzT1RNeE9qSTFOREE1TmpFMk1UTT0ZD",
+            "after": "TVRFeU16STVNVGM1TVRveE5EZAzBOemMzT1RNeE9qSTFOREE1TmpFMk1UTT0ZD"
+          },
+          "next": "https:\/\/graph.facebook.com\/v2.8\/1707149242852457_1904372003130179\/reactions?access_token=1173483302721639\u00257CoH9V-JlsUrDWKDS0Dyb5U3vcRIE&summary=true&limit=1&after=TVRFeU16STVNVGM1TVRveE5EZAzBOemMzT1RNeE9qSTFOREE1TmpFMk1UTT0ZD"
+        },
+        "summary": {
+          "total_count": 15,
+          "viewer_reaction": "NONE"
+        }
+      },
       "likes": {
         "data": [
           {
@@ -7149,6 +9032,26 @@
       "full_picture": "https:\/\/external.xx.fbcdn.net\/safe_image.php?d=AQA_coWeUNa10c3U&w=720&h=720&url=https\u00253A\u00252F\u00252Fi.ytimg.com\u00252Fvi\u00252FzJL88BTdS0Q\u00252Fmaxresdefault.jpg&cfs=1&sx=356&sy=0&sw=1080&sh=1080&_nc_hash=AQAZSgCN4xokRBiz",
       "updated_time": "2017-01-17T19:25:11+0000",
       "id": "1707149242852457_1893621534205226",
+      "reactions": {
+        "data": [
+          {
+            "id": "10212613717444233",
+            "name": "Olka Mr\u00f3z",
+            "type": "LIKE"
+          }
+        ],
+        "paging": {
+          "cursors": {
+            "before": "TVRReU16WXlNekV6TVRveE5EZAzBOamczTXpFMU9qSTFOREE1TmpFMk1UTT0ZD",
+            "after": "TVRReU16WXlNekV6TVRveE5EZAzBOamczTXpFMU9qSTFOREE1TmpFMk1UTT0ZD"
+          },
+          "next": "https:\/\/graph.facebook.com\/v2.8\/1707149242852457_1893621534205226\/reactions?access_token=1173483302721639\u00257CoH9V-JlsUrDWKDS0Dyb5U3vcRIE&summary=true&limit=1&after=TVRReU16WXlNekV6TVRveE5EZAzBOamczTXpFMU9qSTFOREE1TmpFMk1UTT0ZD"
+        },
+        "summary": {
+          "total_count": 15,
+          "viewer_reaction": "NONE"
+        }
+      },
       "likes": {
         "data": [
           {
@@ -7226,6 +9129,26 @@
       "full_picture": "https:\/\/external.xx.fbcdn.net\/safe_image.php?d=AQC_sZfaUysguyCJ&w=720&h=720&url=https\u00253A\u00252F\u00252Fi.ytimg.com\u00252Fvi\u00252FrdWj5GLOXyc\u00252Fmaxresdefault.jpg&cfs=1&_nc_hash=AQAP1bIahEdBPRGu",
       "updated_time": "2017-01-17T18:44:19+0000",
       "id": "1707149242852457_1752677948299586",
+      "reactions": {
+        "data": [
+          {
+            "id": "10208047442080192",
+            "name": "Agnieszka Orze\u0142",
+            "type": "LIKE"
+          }
+        ],
+        "paging": {
+          "cursors": {
+            "before": "TVRFeU16STVNVGM1TVRveE5EZAzBOemMzT1Rnek9qSTFOREE1TmpFMk1UTT0ZD",
+            "after": "TVRFeU16STVNVGM1TVRveE5EZAzBOemMzT1Rnek9qSTFOREE1TmpFMk1UTT0ZD"
+          },
+          "next": "https:\/\/graph.facebook.com\/v2.8\/1707149242852457_1752677948299586\/reactions?access_token=1173483302721639\u00257CoH9V-JlsUrDWKDS0Dyb5U3vcRIE&summary=true&limit=1&after=TVRFeU16STVNVGM1TVRveE5EZAzBOemMzT1Rnek9qSTFOREE1TmpFMk1UTT0ZD"
+        },
+        "summary": {
+          "total_count": 13,
+          "viewer_reaction": "NONE"
+        }
+      },
       "likes": {
         "data": [
           {
@@ -7287,6 +9210,26 @@
       "full_picture": "https:\/\/external.xx.fbcdn.net\/safe_image.php?d=AQCpIrbd_YoJPox2&w=720&h=720&url=https\u00253A\u00252F\u00252Fi.ytimg.com\u00252Fvi\u00252FkIDWgqDBNXA\u00252Fmaxresdefault.jpg&cfs=1&sx=488&sy=0&sw=720&sh=720&_nc_hash=AQAO_o8Fko-14IlC",
       "updated_time": "2017-01-17T18:32:50+0000",
       "id": "1707149242852457_1724310357803012",
+      "reactions": {
+        "data": [
+          {
+            "id": "10208047442080192",
+            "name": "Agnieszka Orze\u0142",
+            "type": "LIKE"
+          }
+        ],
+        "paging": {
+          "cursors": {
+            "before": "TVRFeU16STVNVGM1TVRveE5EZAzBOemM0TURFeE9qSTFOREE1TmpFMk1UTT0ZD",
+            "after": "TVRFeU16STVNVGM1TVRveE5EZAzBOemM0TURFeE9qSTFOREE1TmpFMk1UTT0ZD"
+          },
+          "next": "https:\/\/graph.facebook.com\/v2.8\/1707149242852457_1724310357803012\/reactions?access_token=1173483302721639\u00257CoH9V-JlsUrDWKDS0Dyb5U3vcRIE&summary=true&limit=1&after=TVRFeU16STVNVGM1TVRveE5EZAzBOemM0TURFeE9qSTFOREE1TmpFMk1UTT0ZD"
+        },
+        "summary": {
+          "total_count": 8,
+          "viewer_reaction": "NONE"
+        }
+      },
       "likes": {
         "data": [
           {
@@ -7347,6 +9290,26 @@
       "full_picture": "https:\/\/external.xx.fbcdn.net\/safe_image.php?d=AQDZjvv94EKgWYs7&w=720&h=720&url=https\u00253A\u00252F\u00252Fi.ytimg.com\u00252Fvi\u00252F-rF-_4vwiMs\u00252Fmaxresdefault.jpg&cfs=1&sx=153&sy=0&sw=1080&sh=1080&_nc_hash=AQDnB3gTXd1YUJit",
       "updated_time": "2017-01-11T17:50:36+0000",
       "id": "1707149242852457_1912845322282847",
+      "reactions": {
+        "data": [
+          {
+            "id": "1300772976632890",
+            "name": "Marcin P\u0119czkowski",
+            "type": "LIKE"
+          }
+        ],
+        "paging": {
+          "cursors": {
+            "before": "TVRBd01EQXhNREExT1Rrek9EY3pPakUwT0RRMk9UUTFNemM2TWpVME1EazJNVFl4TXc9PQZDZD",
+            "after": "TVRBd01EQXhNREExT1Rrek9EY3pPakUwT0RRMk9UUTFNemM2TWpVME1EazJNVFl4TXc9PQZDZD"
+          },
+          "next": "https:\/\/graph.facebook.com\/v2.8\/1707149242852457_1912845322282847\/reactions?access_token=1173483302721639\u00257CoH9V-JlsUrDWKDS0Dyb5U3vcRIE&summary=true&limit=1&after=TVRBd01EQXhNREExT1Rrek9EY3pPakUwT0RRMk9UUTFNemM2TWpVME1EazJNVFl4TXc9PQZDZD"
+        },
+        "summary": {
+          "total_count": 16,
+          "viewer_reaction": "NONE"
+        }
+      },
       "likes": {
         "data": [
           {
@@ -7401,7 +9364,7 @@
     }
   ],
   "paging": {
-    "previous": "https:\/\/graph.facebook.com\/v2.8\/1707149242852457\/feed?fields=story,from,link,caption,icon,created_time,source,name,type,message,full_picture,updated_time,likes.limit\u0025281\u002529.summary\u002528true\u002529,comments.limit\u00252830\u002529.summary\u002528true\u002529\u00257Bmessage,from\u00257D&limit=100&since=1485253033&icon_size=16&access_token=1173483302721639|oH9V-JlsUrDWKDS0Dyb5U3vcRIE&__paging_token=enc_AdDpv1GxZBMvQeASZBhuJZCcmJuIaEnX2HRss4C6WJ7QRCBQ8fVAwphBN08U2QNqgbzhbdquQteNqCH78wkN45mCADcPLGaI6ZBe4TZBv0eWZBEplabgZDZD&__previous=1",
-    "next": "https:\/\/graph.facebook.com\/v2.8\/1707149242852457\/feed?fields=story,from,link,caption,icon,created_time,source,name,type,message,full_picture,updated_time,likes.limit\u0025281\u002529.summary\u002528true\u002529,comments.limit\u00252830\u002529.summary\u002528true\u002529\u00257Bmessage,from\u00257D&limit=100&since=2017-01-10T11\u00253A00\u00253A00.000Z&icon_size=16&access_token=1173483302721639|oH9V-JlsUrDWKDS0Dyb5U3vcRIE&until=1484157036&__paging_token=enc_AdCmraWsD2WMCFIwJxZBZBK9LFtIM8OmqS0C4UchzC99KgEYfpoUZBu0JF1sDSKHlnXGt4lK1C2ZBOpGBbqTnE6JA3u8ol4dZAKnhhWIeDg0uZBmQzZBAZDZD"
+    "previous": "https:\/\/graph.facebook.com\/v2.8\/1707149242852457\/feed?fields=story,from,link,caption,icon,created_time,source,name,type,message,full_picture,updated_time,likes.limit\u0025281\u002529.summary\u002528true\u002529,reactions.limit\u0025281\u002529.summary\u002528true\u002529,comments.limit\u00252850\u002529.summary\u002528true\u002529\u00257Bmessage,from\u00257D&limit=100&since=1485253033&icon_size=16&access_token=1173483302721639|oH9V-JlsUrDWKDS0Dyb5U3vcRIE&__paging_token=enc_AdDpv1GxZBMvQeASZBhuJZCcmJuIaEnX2HRss4C6WJ7QRCBQ8fVAwphBN08U2QNqgbzhbdquQteNqCH78wkN45mCADcPLGaI6ZBe4TZBv0eWZBEplabgZDZD&__previous=1",
+    "next": "https:\/\/graph.facebook.com\/v2.8\/1707149242852457\/feed?fields=story,from,link,caption,icon,created_time,source,name,type,message,full_picture,updated_time,likes.limit\u0025281\u002529.summary\u002528true\u002529,reactions.limit\u0025281\u002529.summary\u002528true\u002529,comments.limit\u00252850\u002529.summary\u002528true\u002529\u00257Bmessage,from\u00257D&limit=100&since=2017-01-10T11\u00253A00\u00253A00.000Z&icon_size=16&access_token=1173483302721639|oH9V-JlsUrDWKDS0Dyb5U3vcRIE&until=1484157036&__paging_token=enc_AdCmraWsD2WMCFIwJxZBZBK9LFtIM8OmqS0C4UchzC99KgEYfpoUZBu0JF1sDSKHlnXGt4lK1C2ZBOpGBbqTnE6JA3u8ol4dZAKnhhWIeDg0uZBmQzZBAZDZD"
   }
 }

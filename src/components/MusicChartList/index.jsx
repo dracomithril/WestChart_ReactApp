@@ -38,7 +38,7 @@ export default class MusicChartList extends React.Component {
         const things = this.props.list.map((elem, id) => {
             return <tr key={id}>
                 <td><input type="checkbox" name={elem.id} checked={elem.selected} onChange={handleListChange}/></td>
-                <td><Badge bsClass="likes">{elem.likes}</Badge></td>
+                <td><Badge bsClass="likes">{elem.reactions}</Badge></td>
                 <td><span>{elem.who}</span></td>
                 <td><span>{elem.title}</span></td>
             </tr>
@@ -47,7 +47,7 @@ export default class MusicChartList extends React.Component {
             return (<div key={index}>
                 <span>{index + 1}</span>
                 {`. ${elem.title} `}
-                <Badge bsClass="likes">{elem.likes + ' likes'}</Badge>
+                <Badge bsClass="likes">{elem.reactions + ' likes'}</Badge>
             </div>)
         });
         return (
@@ -65,7 +65,7 @@ export default class MusicChartList extends React.Component {
                         <thead>
                         <tr>
                             <th>#</th>
-                            <th>likes</th>
+                            <th>reactions</th>
                             <th>who</th>
                             <th>what?</th>
                         </tr>
@@ -87,6 +87,7 @@ export default class MusicChartList extends React.Component {
                         </Popover>
                     </Overlay>
                     <ButtonGroup>
+                        <Button bsStyle="warning" onClick={this.props.toggle}>Toggle</Button>
                         <Button onClick={this.generateList.bind(this)} bsStyle="success">Generate</Button>
                         <Button onClick={this.props.close}>Close</Button>
                     </ButtonGroup>
