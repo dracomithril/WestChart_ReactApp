@@ -92,8 +92,8 @@ class Chart extends EventEmitter {
             cache.last_update = until;
             this.emit('change', cache);
         };
-        const delay = updateInterval(update_interval);
-        setInterval(this.UpdateChart.bind(this), delay);
+        // const delay = updateInterval(update_interval);
+        // setInterval(this.UpdateChart.bind(this), delay);
     }
 
     UpdateChart(since, until, access_token) {

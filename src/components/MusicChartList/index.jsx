@@ -2,7 +2,7 @@
  * Created by Gryzli on 28.01.2017.
  */
 import React from 'react';
-import {Modal, Badge, Table, Button, Overlay, Popover, ButtonGroup} from 'react-bootstrap';
+import {Modal, Badge, Table, Button, Overlay, Popover, ButtonGroup, FormControl} from 'react-bootstrap';
 import './style.css';
 const _ = require('lodash');
 export default class MusicChartList extends React.Component {
@@ -34,12 +34,19 @@ export default class MusicChartList extends React.Component {
     }
 
     render() {
+        const sorting_options = this.props.sorting_options.map((elem, index) => <option key={index}
+                                                                                        value={elem}>{elem.toLowerCase()}</option>);
         const handleListChange = this.props.onListChange;
         const things = this.props.list.map((elem, id) => {
             return <tr key={id}>
                 <td><input type="checkbox" name={elem.id} checked={elem.selected} onChange={handleListChange}/></td>
                 <td><Badge bsClass="likes">{elem.reactions}</Badge></td>
                 <td><span>{elem.who}</span></td>
+                <td><span>{elem.when.toLocaleString('pl-PL', {
+                    year: "numeric",
+                    month: "2-digit",
+                    day: "numeric"
+                })}</span></td>
                 <td><span>{elem.title}</span></td>
             </tr>
         });
@@ -59,14 +66,20 @@ export default class MusicChartList extends React.Component {
                     <Modal.Title
                         id="contained-modal-title">{"Create your perfect music list "}<Badge
                         bsClass="elements_count">{this.props.list.length}</Badge></Modal.Title>
+                    <FormControl componentClass="select" placeholder="select" name="list_sort"
+                                 value={this.props.sort_by} onChange={this.props.sort}>
+                        {sorting_options}
+                    </FormControl>
                 </Modal.Header>
                 <Modal.Body>
+
                     <Table striped bordered condensed hover responsive>
                         <thead>
                         <tr>
                             <th>#</th>
                             <th>reactions</th>
-                            <th>who</th>
+                            <th>who?</th>
+                            <th>when?</th>
                             <th>what?</th>
                         </tr>
                         </thead>

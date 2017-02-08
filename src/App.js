@@ -19,6 +19,33 @@ import 'react-table/react-table.css';
 import 'react-datepicker/dist/react-datepicker.css';
 let _ = require('lodash');
 let utils = require('./utils');
+let sorting = {
+    reaction: (array) => {
+        array.sort((a, b) => b.reactions - a.reactions)
+    },
+    who: (array) => {
+        array.sort((a,b)=>{
+            if (a.who < b.who)
+                return -1;
+            if (a.who > b.who)
+                return 1;
+            return 0;
+        });
+
+    },
+    when:(array) => {
+        array.sort((a,b)=>b.when.getTime()-a.when.getTime());
+    },
+    what: (array) => {
+        array.sort((a,b)=>{
+            if (a.title < b.title)
+                return -1;
+            if (a.title > b.title)
+                return 1;
+            return 0;
+        });
+    }
+};
 
 
 class App extends Component {
@@ -40,12 +67,16 @@ class App extends Component {
             date_update_control: false,
             enable_until: false,
             last_update: undefined,
+            less_then: 15,
+            reaction_count_control: false,
             list: [],
+            list_sort: 'reaction',
             show_create_list: false,
             show_last: showDays,
             show_added_in: showDays,
             show_created_in: showDays,
             show_updated_in: showDays,
+            more_then: 0,
             showUserInfo: false,
             since: undefined,
             start_date: moment(),
@@ -95,20 +126,32 @@ class App extends Component {
 
     openMusicChart(chart) {
         let c = _.clone(chart);
-        c.sort((a, b) => b.reactions_num - a.reactions_num);
         let list = c.map((elem, index) => {
             return {
                 selected: false,
                 id: index,
+                when:elem.added_time,
                 likes: elem.likes_num,
                 reactions: elem.reactions_num,
                 who: elem.from_user,
                 title: elem.link.name
             }
         });
+        sorting[this.state.list_sort](list);
+        //list.sort((a, b) => b.reactions - a.reactions);
         this.setState({
             list: list,
             show_create_list: true
+        })
+    }
+
+    sortList(event) {
+        let sort_by = event.target.value;
+        let list = _.clone(this.state.list);
+        sorting[sort_by](list);
+        this.setState({
+            list:list,
+            list_sort:sort_by
         })
     }
 
@@ -141,8 +184,7 @@ class App extends Component {
                     <div>
 
                         <div className="formArea">
-                            <FilteringOptions state={this.state}
-                                              onChange={this.handleChange.bind(this)} woc_string={utils.woc_string}/>
+                            <FilteringOptions  {...this.state} onChange={this.handleChange.bind(this)}/>
                             <div>
                                 <label>
                                     {'How far in time you will travel '}<input className="num_days" type="number"
@@ -177,7 +219,8 @@ class App extends Component {
                             </div>
                         </div>
                         <MusicChartList constainer={this} show={this.state.show_create_list} list={this.state.list}
-                                        close={() => this.setState({show_create_list: false})}
+                                        sorting_options={Object.keys(sorting)} sort={this.sortList.bind(this)}
+                                        close={() => this.setState({show_create_list: false})} sort_by={this.state.list_sort}
                                         onListChange={this.handleListChange.bind(this)}
                                         toggle={this.toggleSelectedList.bind(this)}/>
                         {(this.state.last_update !== undefined) &&
