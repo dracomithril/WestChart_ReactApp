@@ -12,13 +12,7 @@ let fieldsArr = ['story', 'from', 'link', 'caption', 'icon', 'created_time', 'so
     'full_picture', 'updated_time', 'likes.limit(1).summary(true)','reactions.limit(1).summary(true)', 'comments.limit(50).summary(true){message,from}'];
 let fields = fieldsArr.join(',');
 // since=2017-01-15&until=2017-01-16
-/**
- *
- * @param minutes {number}
- */
-function updateInterval(minutes) {
-    return minutes * 60 * 1000;
-}
+
 /**
  *
  * @param since {string}
