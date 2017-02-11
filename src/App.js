@@ -3,8 +3,7 @@ import {
     Button,
     Jumbotron,
     Checkbox,
-    Label,
-    ButtonGroup,
+    Label, Navbar, NavItem, Nav,
     PageHeader, Badge, FormControl
 } from 'react-bootstrap';
 import ChartTable from './components/ChartTable';
@@ -12,7 +11,6 @@ import Chart from './chart';
 import Header from './components/Header';
 import DatePicker from "react-datepicker";
 import moment from "moment";
-import MusicChartList from "./components/MusicChartList";
 import FilteringOptions from "./components/FilteringOptions";
 import LoginAlert from "./components/LoginAlert";
 import './App.css';
@@ -126,27 +124,6 @@ class App extends Component {
         this.setState({chart: selectAllList});
     }
 
-    openMusicChart(chart) {
-        let c = _.clone(chart);
-        let list = c.map((elem, index) => {
-            return {
-                selected: false,
-                id: index,
-                when: elem.added_time,
-                likes: elem.likes_num,
-                reactions: elem.reactions_num,
-                who: elem.from_user,
-                title: elem.link.name
-            }
-        });
-        //sorting[this.state.list_sort](list);
-        //list.sort((a, b) => b.reactions - a.reactions);
-        this.setState({
-            list: list,
-            show_create_list: true
-        })
-    }
-
     sortList(event) {
         let sort_by = event.target.value;
         // let list = _.clone(this.state.list);
@@ -176,7 +153,7 @@ class App extends Component {
 
     render() {
         const sorting_options = Object.keys(sorting).map((elem, index) => <option key={index}
-                                                                                        value={elem}>{elem.toLowerCase()}</option>);
+                                                                                  value={elem}>{elem.toLowerCase()}</option>);
         let view_chart = utils.filterChart(this.state);
         let selected = view_chart.filter((elem) => elem.selected);
         sorting[this.state.list_sort](selected);
@@ -190,6 +167,17 @@ class App extends Component {
         return (
             <div className="App">
                 <Header user={this.state.user} showUserInfo={this.state.showUserInfo}/>
+                <Navbar>
+                    <Navbar.Header>
+                        <Navbar.Brand>
+                            <a href="#">Chart</a>
+                        </Navbar.Brand>
+                    </Navbar.Header>
+                    <Nav>
+                        <NavItem eventKey={1} href="#chart_table">Chart table</NavItem>
+                        <NavItem eventKey={2} href="#list">List</NavItem>
+                    </Nav>
+                </Navbar>
                 {this.state.access_token !== undefined &&
                 <FilteringOptions  {...this.state} onChange={this.handleChange.bind(this)}/>}
                 <div>
@@ -221,37 +209,30 @@ class App extends Component {
                                         <Label
                                             bsStyle="danger">{`until: ` + this.state.until.toLocaleString('pl-PL')}</Label>
                                     </div>}
-                                    <ButtonGroup>
-                                        <Button onClick={this.updateChart.bind(this)} bsStyle="primary"
-                                                disabled={this.state.access_token === undefined}
-                                                bsSize="large">Update</Button>
-                                        <Button bsStyle="danger"
-                                                onClick={() => this.openMusicChart.call(this, view_chart)}
-                                                bsSize="large">Create
-                                            title list</Button>
-                                    </ButtonGroup>
+                                    <Button onClick={this.updateChart.bind(this)} bsStyle="primary"
+                                            disabled={this.state.access_token === undefined}
+                                            bsSize="large">Update</Button>
                                 </div>
-
                             </div>
 
 
                             {(this.state.last_update !== undefined) &&
                             <div>
-                                <PageHeader id="charttable">Chart Table</PageHeader>
+                                <PageHeader id="chart_table">Chart Table</PageHeader>
                                 <Label bsStyle="info">{'Total '}<strong
                                     style={{color: 'green'}}>{view_chart.length}</strong></Label>
                                 <label style={{
                                     color: 'red',
                                     marginLeft: '10px'
                                 }}>{' Last update: ' + new Date(this.state.last_update).toLocaleString('pl-PL')}</label>
-                                <ChartTable data={view_chart} onSelectChange={this.handleListChange.bind(this)}/>
+                                <ChartTable data={view_chart} onSelectChange={this.handleListChange.bind(this)}
+                                            toggle={this.toggleSelectedList.bind(this)}/>
 
                                 <PageHeader id="list">List</PageHeader>
                                 <FormControl componentClass="select" placeholder="select" name="list_sort"
                                              value={this.state.list_sort} onChange={this.sortList.bind(this)}>
                                     {sorting_options}
                                 </FormControl>
-                                <Button bsStyle="warning" onClick={this.toggleSelectedList.bind(this)}>Toggle</Button>
                                 <div id="popover-contained" title="Print list">
                                     {print_list}
                                 </div>

@@ -11,11 +11,13 @@ function formatDate(date) {
 export default class ChartTable extends React.Component {
     render() {
         const handleChange = this.props.onSelectChange;
+        let toggle = this.props.toggle;
         const columns = [{
             header: 'WCS Chart',
             columns: [
                 {
-                    header: '#',
+                    sortable:false,
+                    header: props=><Checkbox onClick={toggle}/>,
                     minWidth: 50,
                     maxWidth: 60,
                     accessor: 'selected',
