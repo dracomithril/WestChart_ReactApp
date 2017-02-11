@@ -5,7 +5,7 @@ import {
     Checkbox,
     Label,
     ButtonGroup,
-    PageHeader
+    PageHeader, Badge, FormControl
 } from 'react-bootstrap';
 import ChartTable from './components/ChartTable';
 import Chart from './chart';
@@ -22,26 +22,26 @@ let _ = require('lodash');
 let utils = require('./utils');
 let sorting = {
     reaction: (array) => {
-        array.sort((a, b) => b.reactions - a.reactions)
+        array.sort((a, b) => b.reactions_num - a.reactions_num)
     },
     who: (array) => {
         array.sort((a, b) => {
-            if (a.who < b.who)
+            if (a.from_user < b.from_user)
                 return -1;
-            if (a.who > b.who)
+            if (a.from_user > b.from_user)
                 return 1;
             return 0;
         });
 
     },
     when: (array) => {
-        array.sort((a, b) => b.when.getTime() - a.when.getTime());
+        array.sort((a, b) => b.added_time.getTime() - a.added_time.getTime());
     },
     what: (array) => {
         array.sort((a, b) => {
-            if (a.title < b.title)
+            if (a.link.name < b.link.name)
                 return -1;
-            if (a.title > b.title)
+            if (a.link.name > b.link.name)
                 return 1;
             return 0;
         });
@@ -111,18 +111,19 @@ class App extends Component {
     }
 
     handleListChange(event) {
-        let l = _.clone(this.state.list);
-        l[event.target.name].selected = event.target.checked;
-        this.setState({list: l});
+        let l = _.clone(this.state.chart);
+        let element = l[event.target.id];
+        element.selected = event.target.checked;
+        this.setState({chart: l});
     }
 
     toggleSelectedList() {
-        let selectAllList = this.state.list.map((elem) => {
+        let selectAllList = this.state.chart.map((elem) => {
             let copy = _.clone(elem);
             copy.selected = !elem.selected;
             return copy
         });
-        this.setState({list: selectAllList});
+        this.setState({chart: selectAllList});
     }
 
     openMusicChart(chart) {
@@ -138,7 +139,7 @@ class App extends Component {
                 title: elem.link.name
             }
         });
-        sorting[this.state.list_sort](list);
+        //sorting[this.state.list_sort](list);
         //list.sort((a, b) => b.reactions - a.reactions);
         this.setState({
             list: list,
@@ -148,10 +149,10 @@ class App extends Component {
 
     sortList(event) {
         let sort_by = event.target.value;
-        let list = _.clone(this.state.list);
-        sorting[sort_by](list);
+        // let list = _.clone(this.state.list);
+        // sorting[sort_by](list);
         this.setState({
-            list: list,
+            // list: list,
             list_sort: sort_by
         })
     }
@@ -174,24 +175,18 @@ class App extends Component {
     }
 
     render() {
+        const sorting_options = Object.keys(sorting).map((elem, index) => <option key={index}
+                                                                                        value={elem}>{elem.toLowerCase()}</option>);
         let view_chart = utils.filterChart(this.state);
-        let list = view_chart.map((elem, index) => {
-            return {
-                selected: false,
-                id: index,
-                when: elem.added_time,
-                likes: elem.likes_num,
-                reactions: elem.reactions_num,
-                who: elem.from_user,
-                title: elem.link.name
-            }
+        let selected = view_chart.filter((elem) => elem.selected);
+        sorting[this.state.list_sort](selected);
+        let print_list = selected.map((elem, index) => {
+            return <div key={elem.id}>
+                <span>{index + 1}</span>
+                {`. ${elem.link.name} `}
+                <Badge bsClass="likes">{elem.reactions_num + ' likes'}</Badge>
+            </div>
         });
-        // sorting[this.state.list_sort](list);
-        // //list.sort((a, b) => b.reactions - a.reactions);
-        // this.setState({
-        //     list: list,
-        //     show_create_list: true
-        // });
         return (
             <div className="App">
                 <Header user={this.state.user} showUserInfo={this.state.showUserInfo}/>
@@ -249,15 +244,17 @@ class App extends Component {
                                     color: 'red',
                                     marginLeft: '10px'
                                 }}>{' Last update: ' + new Date(this.state.last_update).toLocaleString('pl-PL')}</label>
-                                <ChartTable data={view_chart}/>
+                                <ChartTable data={view_chart} onSelectChange={this.handleListChange.bind(this)}/>
 
-                                <MusicChartList constainer={this} show={this.state.show_create_list}
-                                                list={list}
-                                                sorting_options={Object.keys(sorting)} sort={this.sortList.bind(this)}
-                                                close={() => this.setState({show_create_list: false})}
-                                                sort_by={this.state.list_sort}
-                                                onListChange={this.handleListChange.bind(this)}
-                                                toggle={this.toggleSelectedList.bind(this)}/>
+                                <PageHeader id="list">List</PageHeader>
+                                <FormControl componentClass="select" placeholder="select" name="list_sort"
+                                             value={this.state.list_sort} onChange={this.sortList.bind(this)}>
+                                    {sorting_options}
+                                </FormControl>
+                                <Button bsStyle="warning" onClick={this.toggleSelectedList.bind(this)}>Toggle</Button>
+                                <div id="popover-contained" title="Print list">
+                                    {print_list}
+                                </div>
 
                             </div>}
                         </div>

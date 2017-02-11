@@ -37,24 +37,25 @@ export default class MusicChartList extends React.Component {
         const sorting_options = this.props.sorting_options.map((elem, index) => <option key={index}
                                                                                         value={elem}>{elem.toLowerCase()}</option>);
         const handleListChange = this.props.onListChange;
+
         const things = this.props.list.map((elem, id) => {
             return <tr key={id}>
-                <td><input type="checkbox" name={elem.id} checked={elem.selected} onChange={handleListChange}/></td>
-                <td><Badge bsClass="likes">{elem.reactions}</Badge></td>
-                <td><span>{elem.who}</span></td>
-                <td><span>{elem.when !== undefined && elem.when.toLocaleString('pl-PL', {
+                <td><input type="checkbox" name={id} checked={elem.selected} onChange={handleListChange}/></td>
+                <td><Badge bsClass="likes">{elem.reactions_num}</Badge></td>
+                <td><span>{elem.from_user}</span></td>
+                <td><span>{elem.added_time !== undefined && elem.added_time.toLocaleString('pl-PL', {
                     year: "numeric",
                     month: "2-digit",
                     day: "numeric"
                 })}</span></td>
-                <td><span>{elem.title}</span></td>
+                <td><span>{elem.link.name}</span></td>
             </tr>
         });
         let print_list = this.props.list.map((elem, index) => {
             return (<div key={index}>
                 <span>{index + 1}</span>
-                {`. ${elem.title} `}
-                <Badge bsClass="likes">{elem.reactions + ' likes'}</Badge>
+                {`. ${elem.link.name} `}
+                <Badge bsClass="likes">{elem.reactions_num + ' likes'}</Badge>
             </div>)
         });
         return (
@@ -89,10 +90,6 @@ export default class MusicChartList extends React.Component {
                         <Button onClick={this.generateList.bind(this)} bsStyle="success">Generate</Button>
                         <Button onClick={this.props.close}>Close</Button>
                     </ButtonGroup>
-                    <PageHeader id="list">List</PageHeader>
-                    <div id="popover-contained" title="Print list">
-                        {print_list}
-                    </div>
                 </div>
 
             </div>)
