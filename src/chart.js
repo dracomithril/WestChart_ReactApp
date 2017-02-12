@@ -12,13 +12,7 @@ let fieldsArr = ['story', 'from', 'link', 'caption', 'icon', 'created_time', 'so
     'full_picture', 'updated_time', 'likes.limit(1).summary(true)','reactions.limit(1).summary(true)', 'comments.limit(50).summary(true){message,from}'];
 let fields = fieldsArr.join(',');
 // since=2017-01-15&until=2017-01-16
-/**
- *
- * @param minutes {number}
- */
-function updateInterval(minutes) {
-    return minutes * 60 * 1000;
-}
+
 /**
  *
  * @param since {string}
@@ -92,8 +86,8 @@ class Chart extends EventEmitter {
             cache.last_update = until;
             this.emit('change', cache);
         };
-        const delay = updateInterval(update_interval);
-        setInterval(this.UpdateChart.bind(this), delay);
+        // const delay = updateInterval(update_interval);
+        // setInterval(this.UpdateChart.bind(this), delay);
     }
 
     UpdateChart(since, until, access_token) {
@@ -125,7 +119,7 @@ class Chart extends EventEmitter {
         let filter_yt = body.filter((elem) => {
             return elem.caption === 'youtube.com'
         });
-        return filter_yt.map((elem) => {
+        return filter_yt.map((elem,id) => {
             let comments = elem.comments.data.filter((elem) => {
                 const search = elem.message.match(/(\[Added)\s(0[1-9]|[12][0-9]|3[01])[- \/.](0[1-9]|1[012])[- \/.](19|20)\d\d]/g);
                 return (search !== null)
@@ -141,18 +135,20 @@ class Chart extends EventEmitter {
                 const day = Number(date[0]);
                 addedTime = new Date(year,month,day);
             }
+
             return {
                 added_time: addedTime,
                 created_time: new Date(elem.created_time),
                 from_user: elem.from.name,
                 full_picture: elem.full_picture,
+                id:id,
                 likes_num: elem.likes.summary.total_count,
-                reactions_num:elem.reactions.summary.total_count,
                 link: {
                     url: elem.link,
                     name: elem.name
                 },
                 message: elem.message,
+                reactions_num:elem.reactions.summary.total_count,
                 selected: false,
                 source: elem.source,
                 type: elem.type,

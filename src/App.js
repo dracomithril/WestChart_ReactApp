@@ -1,25 +1,48 @@
 import React, {Component} from 'react';
 import {
-    Button,
-    Jumbotron,
-    Checkbox,
-    Label,
-    ButtonGroup
+    Jumbotron, PageHeader, Badge
 } from 'react-bootstrap';
 import ChartTable from './components/ChartTable';
 import Chart from './chart';
 import Header from './components/Header';
-import DatePicker from "react-datepicker";
 import moment from "moment";
-import MusicChartList from "./components/MusicChartList";
 import FilteringOptions from "./components/FilteringOptions";
 import LoginAlert from "./components/LoginAlert";
+import Footer from "./components/Footer";
+import PickYourDate from './components/PickYourDate';
+import Menu from './components/Menu';
 import './App.css';
 import 'react-table/react-table.css';
 import 'react-datepicker/dist/react-datepicker.css';
 let _ = require('lodash');
 let utils = require('./utils');
+let sorting = {
+    reaction: (array) => {
+        array.sort((a, b) => b.reactions_num - a.reactions_num)
+    },
+    who: (array) => {
+        array.sort((a, b) => {
+            if (a.from_user < b.from_user)
+                return -1;
+            if (a.from_user > b.from_user)
+                return 1;
+            return 0;
+        });
 
+    },
+    when: (array) => {
+        array.sort((a, b) => b.added_time ? b.added_time.getTime() : 0 - a.added_time ? a.added_time.getTime() : 0);
+    },
+    what: (array) => {
+        array.sort((a, b) => {
+            if (a.link.name < b.link.name)
+                return -1;
+            if (a.link.name > b.link.name)
+                return 1;
+            return 0;
+        });
+    }
+};
 
 class App extends Component {
     constructor(props) {
@@ -40,12 +63,16 @@ class App extends Component {
             date_update_control: false,
             enable_until: false,
             last_update: undefined,
+            less_then: 15,
+            reaction_count_control: false,
             list: [],
+            list_sort: 'reaction',
             show_create_list: false,
             show_last: showDays,
             show_added_in: showDays,
             show_created_in: showDays,
             show_updated_in: showDays,
+            more_then: 0,
             showUserInfo: false,
             since: undefined,
             start_date: moment(),
@@ -79,36 +106,28 @@ class App extends Component {
     }
 
     handleListChange(event) {
-        let l = _.clone(this.state.list);
-        l[event.target.name].selected = event.target.checked;
-        this.setState({list: l});
+        let l = _.clone(this.state.chart);
+        let element = l[event.target.id];
+        element.selected = event.target.checked;
+        this.setState({chart: l});
     }
 
     toggleSelectedList() {
-        let selectAllList = this.state.list.map((elem) => {
+        let selectAllList = this.state.chart.map((elem) => {
             let copy = _.clone(elem);
             copy.selected = !elem.selected;
             return copy
         });
-        this.setState({list: selectAllList});
+        this.setState({chart: selectAllList});
     }
 
-    openMusicChart(chart) {
-        let c = _.clone(chart);
-        c.sort((a, b) => b.reactions_num - a.reactions_num);
-        let list = c.map((elem, index) => {
-            return {
-                selected: false,
-                id: index,
-                likes: elem.likes_num,
-                reactions: elem.reactions_num,
-                who: elem.from_user,
-                title: elem.link.name
-            }
-        });
+    sortList(event) {
+        let sort_by = event.target.value;
+        // let list = _.clone(this.state.list);
+        // sorting[sort_by](list);
         this.setState({
-            list: list,
-            show_create_list: true
+            // list: list,
+            list_sort: sort_by
         })
     }
 
@@ -130,74 +149,56 @@ class App extends Component {
     }
 
     render() {
+        const sorting_options = Object.keys(sorting).map((elem, index) => <option key={index}
+                                                                                  value={elem}>{elem.toLowerCase()}</option>);
         let view_chart = utils.filterChart(this.state);
+        let selected = view_chart.filter((elem) => elem.selected);
+        sorting[this.state.list_sort](selected);
+        let print_list = selected.map((elem, index) => {
+            return <div key={elem.id}>
+                <span>{index + 1}</span>
+                {`. ${elem.link.name} `}
+                <Badge bsClass="likes">{elem.reactions_num + ' likes'}</Badge>
+            </div>
+        });
         return (
             <div className="App">
                 <Header user={this.state.user} showUserInfo={this.state.showUserInfo}/>
-                <Jumbotron bsClass="App-body">
+                {process.env.NODE_ENV!=='production'&&<Menu/>}
+                <div>
                     {this.state.access_token === undefined &&
                     <LoginAlert loginUser={this.LoginUserResponse.bind(this)}/>}
                     {this.state.access_token !== undefined &&
-                    <div>
-
-                        <div className="formArea">
-                            <FilteringOptions state={this.state}
-                                              onChange={this.handleChange.bind(this)} woc_string={utils.woc_string}/>
-                            <div>
-                                <label>
-                                    {'How far in time you will travel '}<input className="num_days" type="number"
-                                                                               name="show_last"
-                                                                               min={0} max={31}
-                                                                               value={this.state.show_last} step={1}
-                                                                               onChange={this.handleChange.bind(this)}/>{' days'}
-                                </label>
-                                <Checkbox checked={this.state.enable_until} name="enable_until"
-                                          onChange={this.handleChange.bind(this)}>{'Use date: '}
-                                    <DatePicker
-                                        selected={this.state.start_date}
-                                        dateFormat="DD/MM/YYYY"
-                                        onChange={this.dateChange.bind(this)}
-                                        disabled={!this.state.enable_until}/></Checkbox>
-                                {(this.state.since !== undefined && this.state.until !== undefined) &&
-                                <div>
-                                    <Label
-                                        bsStyle="success">{`since: ` + this.state.since.toLocaleString('pl-PL')}</Label>
-                                    <Label
-                                        bsStyle="danger">{`until: ` + this.state.until.toLocaleString('pl-PL')}</Label>
-                                </div>}
-                                <ButtonGroup>
-                                    <Button onClick={this.updateChart.bind(this)} bsStyle="primary"
-                                            disabled={this.state.access_token === undefined}
-                                            bsSize="large">Update</Button>
-                                    <Button bsStyle="danger" onClick={() => this.openMusicChart.call(this, view_chart)}
-                                            bsSize="large">Create
-                                        title list</Button>
-                                </ButtonGroup>
-
-                            </div>
-                        </div>
-                        <MusicChartList constainer={this} show={this.state.show_create_list} list={this.state.list}
-                                        close={() => this.setState({show_create_list: false})}
-                                        onListChange={this.handleListChange.bind(this)}
-                                        toggle={this.toggleSelectedList.bind(this)}/>
-                        {(this.state.last_update !== undefined) &&
+                    <Jumbotron bsClass="App-body">
                         <div>
-                            <Label bsStyle="info">{'Total '}<strong
-                                style={{color: 'green'}}>{view_chart.length}</strong></Label>
-                            <label style={{
-                                color: 'red',
-                                marginLeft: '10px'
-                            }}>{' Last update: ' + new Date(this.state.last_update).toLocaleString('pl-PL')}</label>
-                        </div>}
-                        <ChartTable data={view_chart}/>
-                    </div>}
-                </Jumbotron>
-                <div className="footer">
-                    <span >{'site created by '}<a
-                        href="https://github.com/dracomithril">dracomithril</a>{' © Copyright 2017'}</span><br/>
-                    <span>{'Any questions? '}<a
-                        href="mailto:dracomithril@gmail.com?subject=[WCSChartAdmin]">contact me</a></span>
+                            <div className="formArea">
+                                {this.state.access_token !== undefined &&
+                                <FilteringOptions  {...this.state} onChange={this.handleChange.bind(this)}/>}
+                                <PickYourDate {...this.state} onChange={this.handleChange.bind(this)}
+                                              dateChange={this.dateChange.bind(this)}
+                                              updateChart={this.updateChart.bind(this)}/>
+                            </div>
+
+
+                            {(this.state.last_update !== undefined) &&
+                            <div>
+                                <ChartTable data={view_chart} onSelectChange={this.handleListChange.bind(this)}
+                                            toggle={this.toggleSelectedList.bind(this)}/>
+
+                                <PageHeader id="list">{'List by: '}
+                                    <select name="list_sort" value={this.state.list_sort}
+                                            onChange={this.sortList.bind(this)}>
+                                        {sorting_options}
+                                    </select>
+                                </PageHeader>
+                                <div id="popover-contained" title="Print list">
+                                    {print_list}
+                                </div>
+                            </div>}
+                        </div>
+                    </Jumbotron>}
                 </div>
+                <Footer/>
             </div>
         );
     }

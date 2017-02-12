@@ -27,6 +27,7 @@ function _filterChart(state) {
     const dateCreateControl = state.date_create_control;
     const dateUpdateControl = state.date_update_control;
     const wOC = state.w_o_c;
+
     if (dateCreateControl) {
         let s11d = subtractDaysFromDate(until, state.show_created_in);
         let d2 = s11d.getTime();
@@ -55,9 +56,10 @@ function _filterChart(state) {
         });
     }
     if (!wOC) {
-        view_chart = view_chart.filter((elem) => {
-            return elem.message !== undefined ? !elem.message.includes(woc_string) : true;
-        })
+        view_chart = view_chart.filter((elem) =>  elem.message !== undefined ? !elem.message.includes(woc_string) : true)
+    }
+    if(state.reaction_count_control){
+        view_chart= view_chart.filter((elem)=>(elem.reactions_num>state.more_then &&elem.reactions_num<state.less_then));
     }
     return view_chart;
 }
