@@ -13,7 +13,7 @@ let num_props = {
 export default class FilteringOptions extends React.Component {
     render() {
         return (
-            <Panel header="Filters" bsStyle="info">
+            <Panel header="Filters" bsStyle="info" >
                 <Checkbox checked={this.props.w_o_c} onChange={this.props.onChange} name="w_o_c">
                     <OverlayTrigger placement="top"
                                     overlay={<Tooltip

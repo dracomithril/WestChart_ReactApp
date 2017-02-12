@@ -1,6 +1,6 @@
 {
   "name": "WestChart_ReactApp",
-  "version": "0.1.11",
+  "version": "0.2.0",
   "private": true,
   "devDependencies": {
     "autoprefixer": "6.5.1",
@@ -56,6 +56,7 @@
   "dependencies": {
     "bootstrap-social": "^5.1.1",
     "express": "^4.14.0",
+    "lodash": "^4.17.4",
     "moment": "^2.17.1",
     "morgan": "^1.7.0",
     "react": "^15.4.2",
@@ -63,9 +64,9 @@
     "react-datepicker": "^0.40.0",
     "react-dom": "^15.4.2",
     "react-facebook-login-component": "^0.6.0",
+    "react-sticky": "^5.0.5",
     "react-table": "^4.2.7",
-    "request": "^2.79.0",
-    "lodash": "^4.17.4"
+    "request": "^2.79.0"
   },
   "scripts": {
     "start:dev": "node scripts/start.js",

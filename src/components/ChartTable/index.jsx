@@ -3,7 +3,7 @@
  */
 import React from 'react';
 import ReactTable from 'react-table';
-import {Label, OverlayTrigger, Tooltip, Checkbox} from 'react-bootstrap';
+import {Label, OverlayTrigger, Tooltip, Checkbox, PageHeader} from 'react-bootstrap';
 
 function formatDate(date) {
     return new Date(date).toLocaleString('pl-PL');
@@ -12,17 +12,18 @@ export default class ChartTable extends React.Component {
     render() {
         const handleChange = this.props.onSelectChange;
         let toggle = this.props.toggle;
+        const count= this.props.data.length;
         const columns = [{
-            header: 'WCS Chart',
+            header: props=><PageHeader id="chart_table">{'WCS Chart '}<small>{'total '+count}</small></PageHeader>,
             columns: [
                 {
                     sortable:false,
-                    header: props=><Checkbox onClick={toggle}/>,
+                    header: props=><Checkbox bsClass="checkbox1" onClick={toggle}/>,
                     minWidth: 50,
                     maxWidth: 60,
                     accessor: 'selected',
                     render: props =>{
-                        return <Checkbox checked={props.value} id={props.row.id} name="selected"
+                        return <Checkbox bsClass="checkbox1" checked={props.value} id={props.row.id} name="selected"
                                          onChange={handleChange}/>}
                 },
                 {
