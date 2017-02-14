@@ -69,11 +69,12 @@ export default class ChartTable extends React.Component {
                     },
                     render: props => {
                         return props.value === 0 ? <i className="fa fa-minus-circle" style={{color: 'red'}}/> :
-                            <span>{new Date(props.value).toLocaleString('pl-PL', {
+                            <OverlayTrigger placement="top" overlay={<Tooltip
+                                id="tooltip">{props.row.added_by}</Tooltip>}><span>{new Date(props.value).toLocaleString('pl-PL', {
                                 year: "numeric",
                                 month: "2-digit",
                                 day: "numeric"
-                            })}</span>
+                            })}</span></OverlayTrigger>
                     }
 
                 }, {
