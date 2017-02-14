@@ -21,32 +21,35 @@ export default class FilteringOptions extends React.Component {
                             <span>
                             [{utils.woc_string}]</span></OverlayTrigger>
                 </Checkbox>
+                <span>Show only posts:</span><br/>
+                <div style={{paddingLeft:10}}>
                 <Checkbox checked={this.props.date_added_control} name="date_added_control"
                           onChange={this.props.onChange}>
-                    {'Show only posts added in last '}<input {...num_props} max={31} name="show_added_in"
+                    {'added in last '}<input {...num_props} max={31} name="show_added_in"
                                                              value={this.props.show_added_in}
                                                              onChange={this.props.onChange}/>{' days'}
                 </Checkbox>
                 <Checkbox checked={this.props.date_create_control} name="date_create_control"
                           onChange={this.props.onChange}>
-                    {'Show only posts created in last '}<input {...num_props} max={31} name="show_created_in"
+                    {'created in last '}<input {...num_props} max={31} name="show_created_in"
                                                                value={this.props.show_created_in}
                                                                onChange={this.props.onChange}/>{' days'}
                 </Checkbox>
                 <Checkbox checked={this.props.date_update_control} name="date_update_control"
                           onChange={this.props.onChange}>
-                    {'Show only posts updated in last '}<input {...num_props} max={31} name="show_updated_in"
+                    {'updated in last '}<input {...num_props} max={31} name="show_updated_in"
                                                                value={this.props.show_updated_in}
                                                                onChange={this.props.onChange}/>{' days'}
                 </Checkbox>
                 <Checkbox checked={this.props.reaction_count_control} name="reaction_count_control"
                           onChange={this.props.onChange}>
-                    {'Show only posts between '}<input {...num_props} name="more_then"
+                    {'between '}<input {...num_props} name="more_then"
                                                                    value={this.props.more_then}
                                                                    onChange={this.props.onChange}/>{' < reactions <'}<input {...num_props} name="less_then"
                                                                                                           value={this.props.less_then}
                                                                                                           onChange={this.props.onChange}/>
                 </Checkbox>
+                </div>
             </Panel>
         )
     }

@@ -164,40 +164,39 @@ class App extends Component {
         return (
             <div className="App">
                 <Header user={this.state.user} showUserInfo={this.state.showUserInfo}/>
-                {process.env.NODE_ENV!=='production'&&<Menu/>}
+                {process.env.NODE_ENV !== 'production' && <Menu/>}
+                {this.state.access_token === undefined &&
+                <LoginAlert loginUser={this.LoginUserResponse.bind(this)}/>}
+
+                {this.state.access_token !== undefined &&
                 <div>
-                    {this.state.access_token === undefined &&
-                    <LoginAlert loginUser={this.LoginUserResponse.bind(this)}/>}
-                    {this.state.access_token !== undefined &&
+                    <div className="formArea">
+                        <PickYourDate {...this.state} onChange={this.handleChange.bind(this)}
+                                      dateChange={this.dateChange.bind(this)}
+                                      updateChart={this.updateChart.bind(this)}/><br/>
+                        <FilteringOptions  {...this.state} onChange={this.handleChange.bind(this)}/>
+                    </div>
+
                     <Jumbotron bsClass="App-body">
+
+
+                        {(this.state.last_update !== undefined) &&
                         <div>
-                            <div className="formArea">
-                                {this.state.access_token !== undefined &&
-                                <FilteringOptions  {...this.state} onChange={this.handleChange.bind(this)}/>}
-                                <PickYourDate {...this.state} onChange={this.handleChange.bind(this)}
-                                              dateChange={this.dateChange.bind(this)}
-                                              updateChart={this.updateChart.bind(this)}/>
+                            <ChartTable data={view_chart} onSelectChange={this.handleListChange.bind(this)}
+                                        toggle={this.toggleSelectedList.bind(this)}/>
+
+                            <PageHeader id="list">{'List by: '}
+                                <select name="list_sort" value={this.state.list_sort}
+                                        onChange={this.sortList.bind(this)}>
+                                    {sorting_options}
+                                </select>
+                            </PageHeader>
+                            <div id="popover-contained" title="Print list">
+                                {print_list}
                             </div>
-
-
-                            {(this.state.last_update !== undefined) &&
-                            <div>
-                                <ChartTable data={view_chart} onSelectChange={this.handleListChange.bind(this)}
-                                            toggle={this.toggleSelectedList.bind(this)}/>
-
-                                <PageHeader id="list">{'List by: '}
-                                    <select name="list_sort" value={this.state.list_sort}
-                                            onChange={this.sortList.bind(this)}>
-                                        {sorting_options}
-                                    </select>
-                                </PageHeader>
-                                <div id="popover-contained" title="Print list">
-                                    {print_list}
-                                </div>
-                            </div>}
-                        </div>
-                    </Jumbotron>}
-                </div>
+                        </div>}
+                    </Jumbotron>
+                </div>}
                 <Footer/>
             </div>
         );

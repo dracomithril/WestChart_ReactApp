@@ -7,7 +7,7 @@ import {FacebookLogin} from 'react-facebook-login-component';
 import './LoginAlert.css';
 export default class LoginAlert extends React.Component {
     render() {
-        return (<Alert bsStyle="danger">
+        return (<Alert bsClass="login-alert">
             <h4>Oh snap! You got an error!</h4>
             <p>Login to facebook to be able to do something cool</p>
             <FacebookLogin
