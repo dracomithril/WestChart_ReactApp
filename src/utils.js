@@ -28,44 +28,47 @@ function _filterChart(state) {
     const dateUpdateControl = state.date_update_control;
     const wOC = state.w_o_c;
 
-    if (dateCreateControl) {
-        let s11d = subtractDaysFromDate(until, state.show_created_in);
-        let d2 = s11d.getTime();
-        view_chart = view_chart.filter((elem) => {
-            let d1 = new Date(elem.created_time).getTime();
-            let result = d1 - d2;
-            return result > 0;
-        });
-    }
-    if (dateUpdateControl) {
-        let s11d = subtractDaysFromDate(until, state.show_updated_in);
-        let d2 = s11d.getTime();
-        view_chart = view_chart.filter((elem) => {
-            let d1 = new Date(elem.updated_time).getTime();
-            let result = d1 - d2;
-            return result > 0;
-        });
-    }
-    if (dateAddedControl) {
-        let s11d = subtractDaysFromDate(until, state.show_added_in);
-        let d2 = s11d.getTime();
-        view_chart = view_chart.filter((elem) => {
-            let d1 = new Date(elem.added_time).getTime();
-            let result = d1 - d2;
-            return result > 0;
-        });
-    }
-    if (!wOC) {
-        view_chart = view_chart.filter((elem) =>  elem.message !== undefined ? !elem.message.includes(woc_string) : true)
-    }
-    if(state.reaction_count_control){
-        view_chart= view_chart.filter((elem)=>(elem.reactions_num>state.more_then &&elem.reactions_num<state.less_then));
-    }
+    view_chart = view_chart.filter((elem) => {
+        let result = true;
+        if (dateCreateControl) {
+            let cIn = subtractDaysFromDate(until, state.show_created_in);
+            let cIn1 = new Date(elem.created_time).getTime();
+            result &= (cIn1 - cIn.getTime()) > 0;
+
+        }
+        if (dateUpdateControl) {
+            let uIn = subtractDaysFromDate(until, state.show_updated_in);
+            let uIn1 = new Date(elem.updated_time).getTime();
+            result &= (uIn1 - uIn.getTime()) > 0;
+        }
+        if (dateAddedControl) {
+            let aIn = subtractDaysFromDate(until, state.show_added_in);
+            let aIn1 = new Date(elem.added_time).getTime();
+            result &= (aIn1 - aIn.getTime()) > 0;
+        }
+
+        if (!wOC) {
+            result &= elem.message !== undefined ? !elem.message.includes(woc_string) : true;
+        }
+        if (state.less_then_control) {
+            result &= elem.reactions_num < state.less_then
+        }
+        if (state.more_then_control) {
+            result &= elem.reactions_num > state.more_then;
+        }
+
+        return result
+    });
+
+    // if (state.more_then_control) {
+    //     view_chart = view_chart.filter((elem) => elem.reactions_num > state.more_then);
+    // }
+
     return view_chart;
 }
 
-module.exports={
-    filterChart:_filterChart,
-    subtractDaysFromDate:subtractDaysFromDate,
-    woc_string:woc_string
+module.exports = {
+    filterChart: _filterChart,
+    subtractDaysFromDate: subtractDaysFromDate,
+    woc_string: woc_string
 };

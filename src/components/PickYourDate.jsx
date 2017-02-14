@@ -17,7 +17,7 @@ export default class PickYourDate extends React.Component {
                     <input className="num_days"
                            type="number"
                            name="show_last"
-                           min={0} max={31}
+                           min={0} max={62}
                            value={this.props.show_last}
                            step={1}
                            onChange={this.props.onChange}/>{' days'}

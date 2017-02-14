@@ -133,6 +133,7 @@ class Chart extends EventEmitter {
                 return (search !== null)
             });
             let addedTime = undefined;
+            let addedBy = undefined;
             if (comments.length > 0) {
                 const message = comments[0].message;
                 const match = message.match(/(0[1-9]|[12][0-9]|3[01])[- \/.](0[1-9]|1[012])[- \/.](19|20)\d\d/g)[0];
@@ -142,10 +143,12 @@ class Chart extends EventEmitter {
                 const month = Number(date[1])-1;
                 const day = Number(date[0]);
                 addedTime = new Date(year,month,day);
+addedBy= comments[0].from.name;
             }
 
             return {
                 added_time: addedTime,
+                added_by:addedBy,
                 created_time: new Date(elem.created_time),
                 from_user: elem.from.name,
                 full_picture: elem.full_picture,
