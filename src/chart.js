@@ -2,7 +2,6 @@
  * Created by Gryzli on 24.01.2017.
  */
 let request = require("request");
-const group_id = '1707149242852457';
 let accessToken;
 const api_ver = 'v2.8';
 const limit = 100;
@@ -17,10 +16,11 @@ let fields = fieldsArr.join(',');
  *
  * @param since {string}
  * @param until {string}
+ * @param groupId {string}
  * @param access_token {string}
  * @param callback {function}
  */
-function obtainList(since, until, access_token, callback) {
+function obtainList(since, until, groupId, access_token, callback) {
     let all_charts = [];
     let address = 'https://graph.facebook.com';
 
@@ -32,7 +32,7 @@ function obtainList(since, until, access_token, callback) {
         until: until
 
     };
-    let path = `/${api_ver}/${group_id}/feed`;
+    let path = `/${api_ver}/${groupId}/feed`;
 
     let options = {
         uri: path,
@@ -90,7 +90,15 @@ class Chart extends EventEmitter {
         // setInterval(this.UpdateChart.bind(this), delay);
     }
 
-    UpdateChart(since, until, access_token) {
+    /**
+     *
+     * @param since {string}
+     * @param until {string}
+     * @param access_token {string}
+     * @param groupId {string}
+     * @constructor
+     */
+    UpdateChart(since, until, access_token, groupId) {
         let scope = this;
         let a_since, a_until;
         if (!until || !since) {
@@ -109,7 +117,7 @@ class Chart extends EventEmitter {
         }
 
 
-        obtainList(a_since, a_until, accessToken, (body) => {
+        obtainList(a_since, a_until, groupId, accessToken, (body) => {
             let chart1 = this.filterChartAndMap(body);
             scope.setChart(chart1);
         });

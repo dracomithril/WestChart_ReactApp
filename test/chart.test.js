@@ -23,12 +23,14 @@ describe('[chart]', function () {
         Chart.__set__('request', requestMock);
     });
     after(function () {
+        clock.restore();
     });
     beforeEach(function () {
     });
     afterEach(function () {
     });
     it('should be able to obtain list from chart', function (done) {
+        let groupId='1707149242852457';
         requestMock.withArgs(sinon.match.object).callsArgWith(1, undefined, {statusCode: 200}, JSON.stringify(test_body));
         requestMock.withArgs(test_body.paging.next).callsArgWith(1, undefined, {statusCode: 200}, JSON.stringify(test_body2));
         requestMock.withArgs(test_body2.paging.next).callsArgWith(1, undefined, {statusCode: 200}, JSON.stringify(test_body3));
@@ -41,8 +43,7 @@ describe('[chart]', function () {
         let date = new Date('2017-01-24T11:00:00');
         let since_date = new Date(date.toISOString());
         since_date.setDate(date.getDate() - 14);
-        chart.UpdateChart(since_date.toISOString(), date.toISOString(),'1173483302721639|oH9V-JlsUrDWKDS0Dyb5U3vcRIE');
-
+        chart.UpdateChart(since_date.toISOString(), date.toISOString(), '', groupId);
     });
 });
 

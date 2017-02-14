@@ -36,10 +36,11 @@ export default class PickYourDate extends React.Component {
                     <Label
                         bsStyle="danger">{`until: ` + this.props.until.toLocaleString('pl-PL')}</Label>
                 </div>}
-
+<div style={{textAlign:"center"}}>
                 <Button onClick={this.props.updateChart} bsStyle="primary"
                         disabled={this.props.access_token === undefined}
                         bsSize="large">Update</Button>
+</div>
             </Panel>);
     }
 }

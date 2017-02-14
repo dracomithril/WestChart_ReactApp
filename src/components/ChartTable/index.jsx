@@ -3,7 +3,7 @@
  */
 import React from 'react';
 import ReactTable from 'react-table';
-import {Label, OverlayTrigger, Tooltip, Checkbox, PageHeader} from 'react-bootstrap';
+import {Label, OverlayTrigger, Tooltip, Checkbox} from 'react-bootstrap';
 
 function formatDate(date) {
     return new Date(date).toLocaleString('pl-PL');
@@ -14,7 +14,7 @@ export default class ChartTable extends React.Component {
         let toggle = this.props.toggle;
         const count= this.props.data.length;
         const columns = [{
-            header: props=><PageHeader id="chart_table">{'WCS Chart '}<small>{'total '+count}</small></PageHeader>,
+            header: props=><h3 id="chart_table">{'WCS Chart '}<small>{'total '+count}</small></h3>,
             columns: [
                 {
                     sortable:false,
@@ -53,6 +53,7 @@ export default class ChartTable extends React.Component {
                 }, {
                     header: 'crated time',
                     id: 'createTime',
+                    minWidth: 150,
                     maxWidth: 200,
                     accessor: d => {
                         return d.created_time.getTime()
@@ -78,14 +79,19 @@ export default class ChartTable extends React.Component {
                 }, {
                     header: 'last update',
                     id: 'lastUpdate',
+                    minWidth: 150,
                     maxWidth: 200,
                     accessor: d => {
                         return d.updated_time.getTime()
                     },
                     render: props => <span>{formatDate(props.value)}</span>
-                }, {
+                },
+                {
                     header: props => <span>link</span>, // Custom header components!
                     accessor: d => d.link.name,
+                    minWidth: 200,
+                    width:300,
+                    maxWidth: 600,
                     id: 'yt_link',
                     render: props => {
                         return (<a href={props.row.link.url}>{props.value}</a>)

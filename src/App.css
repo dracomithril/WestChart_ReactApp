@@ -4,9 +4,11 @@
 
 .App-body {
     padding: 15px 10px;
-    margin: 15px 10px;
+    margin: 0 10px 50px;
     color: inherit;
     background-color: #eee;
+    float: left;
+    /*width: 80%;*/
 }
 
 .btn {
@@ -30,20 +32,28 @@ input[type=checkbox]:checked {
 }
 
 .formArea{
-    padding-top: 10px;
-    padding-left: 10px;
-    padding-bottom: 10px;
-    border: 1px solid green;
+    width: 320px;
+    /*padding-top: 10px;*/
+    /*padding-left: 10px;*/
+    /*padding-bottom: 10px;*/
+    /*border: 1px solid green;*/
     margin-bottom: 5px;
-    overflow: hidden;
+    margin-left: 5px;
+    float: left;
+    /*overflow: hidden;*/
 }
 .label {
     margin: 0;
     padding: .6em .9em .5em;
 }
 .footer{
-    color: darkgrey;
+    color: #a9a9a9;
     font-size: smaller;
+    clear: both;
+    position: relative;
+    z-index: 10;
+    height: 3em;
+    margin-top: -3em;
 }
 
 .likes{

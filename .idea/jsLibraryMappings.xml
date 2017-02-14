@@ -1,8 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="JavaScriptLibraryMappings">
+    <file url="file://$PROJECT_DIR$" libraries="{WestChart_ReactApp/node_modules}" />
     <file url="file://$PROJECT_DIR$/test/chart.test.js" libraries="{chai-DefinitelyTyped, node-DefinitelyTyped, rewire-DefinitelyTyped, sinon-DefinitelyTyped}" />
-    <file url="PROJECT" libraries="{chai-DefinitelyTyped, json-editor-DefinitelyTyped, node-DefinitelyTyped, react-DefinitelyTyped, rewire-DefinitelyTyped, sinon-DefinitelyTyped}" />
+    <file url="PROJECT" libraries="{WestChart_ReactApp/node_modules, chai-DefinitelyTyped, json-editor-DefinitelyTyped, mocha-DefinitelyTyped, node-DefinitelyTyped, react-DefinitelyTyped, rewire-DefinitelyTyped, sinon-DefinitelyTyped}" />
     <includedPredefinedLibrary name="ECMAScript 6" />
     <includedPredefinedLibrary name="Node.js Core" />
   </component>
