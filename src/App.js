@@ -174,7 +174,7 @@ class App extends Component {
         return (
             <div className="App">
                 <Header user={this.state.user} showUserInfo={this.state.showUserInfo}/>
-                {process.env.NODE_ENV !== 'production' && <Menu/>}
+                {this.state.access_token !== undefined && <Menu/>}
                 {this.state.access_token === undefined &&
                 <LoginAlert loginUser={this.LoginUserResponse.bind(this)} alertMessage={this.state.AlertMessage}/>}
 
@@ -186,11 +186,7 @@ class App extends Component {
                                       updateChart={this.updateChart.bind(this)}/><br/>
                         <FilteringOptions  {...this.state} onChange={this.handleChange.bind(this)}/>
                     </div>
-
                     <Jumbotron bsClass="App-body">
-
-
-                        {(this.state.last_update !== undefined) &&
                         <div>
                             <ChartTable data={view_chart} onSelectChange={this.handleListChange.bind(this)}
                                         toggle={this.toggleSelectedList.bind(this)}/>
@@ -204,7 +200,7 @@ class App extends Component {
                             <div id="popover-contained" title="Print list">
                                 {print_list}
                             </div>
-                        </div>}
+                        </div>
                     </Jumbotron>
                 </div>}
                 <Footer/>
