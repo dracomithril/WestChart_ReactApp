@@ -16,6 +16,7 @@ import 'react-table/react-table.css';
 import 'react-datepicker/dist/react-datepicker.css';
 let _ = require('lodash');
 let utils = require('./utils');
+let groupId = '1707149242852457';
 let sorting = {
     reaction: (array) => {
         array.sort((a, b) => b.reactions_num - a.reactions_num)
@@ -57,6 +58,7 @@ class App extends Component {
 
         this.state = {
             access_token: undefined,
+            AlertMessage:"Login to facebook to be able to do something cool",
             chart: [],
             date_added_control: false,
             date_create_control: false,
@@ -93,7 +95,7 @@ class App extends Component {
             since: since,
             until: until
         });
-        this.charts.UpdateChart(since.toISOString(), until.toISOString(), this.state.access_token);
+        this.charts.UpdateChart(since.toISOString(), until.toISOString(), this.state.access_token, groupId);
     }
 
     componentDidMount() {
@@ -139,12 +141,20 @@ class App extends Component {
 
     LoginUserResponse(response) {
         if (!response.error) {
-            this.setState({
-                access_token: response.accessToken,
-                user: response,
-                showUserInfo: true
-            });
-            this.updateChart();
+            let isGroupAdmin = response.groups.data.filter((elem) => elem.id === '1707149242852457' && elem.administrator === true);
+            if (isGroupAdmin) {
+                this.setState({
+                    access_token: response.accessToken,
+                    user: response,
+                    showUserInfo: true
+                });
+                this.updateChart();
+            }
+            else{
+                this.setState({
+                    AlertMessage:"Sorry you are not admin of this group."
+                })
+            }
         }
     }
 
@@ -166,7 +176,7 @@ class App extends Component {
                 <Header user={this.state.user} showUserInfo={this.state.showUserInfo}/>
                 {process.env.NODE_ENV !== 'production' && <Menu/>}
                 {this.state.access_token === undefined &&
-                <LoginAlert loginUser={this.LoginUserResponse.bind(this)}/>}
+                <LoginAlert loginUser={this.LoginUserResponse.bind(this)} alertMessage={this.state.AlertMessage}/>}
 
                 {this.state.access_token !== undefined &&
                 <div>
