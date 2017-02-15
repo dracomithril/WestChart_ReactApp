@@ -8,7 +8,7 @@ const limit = 100;
 let days = 7;
 let EventEmitter = require('events').EventEmitter;
 let fieldsArr = ['story', 'from', 'link', 'caption', 'icon', 'created_time', 'source', 'name', 'type', 'message',
-    'full_picture', 'updated_time', 'likes.limit(1).summary(true)','reactions.limit(1).summary(true)', 'comments.limit(50).summary(true){message,from}'];
+    'full_picture', 'updated_time', 'likes.limit(1).summary(true)', 'reactions.limit(1).summary(true)', 'comments.limit(50).summary(true){message,from}'];
 let fields = fieldsArr.join(',');
 // since=2017-01-15&until=2017-01-16
 
@@ -127,39 +127,39 @@ class Chart extends EventEmitter {
         let filter_yt = body.filter((elem) => {
             return elem.caption === 'youtube.com'
         });
-        return filter_yt.map((elem,id) => {
+        return filter_yt.map((elem, id) => {
             let comments = elem.comments.data.filter((elem) => {
-                const search = elem.message.match(/(\[Added)\s(0[1-9]|[12][0-9]|3[01])[- \/.](0[1-9]|1[012])[- \/.](19|20)\d\d]/g);
+                const search = elem.message.match(/(\[Added)\s(0[1-9]|[12][0-9]|3[01])[- /.](0[1-9]|1[012])[- /.](19|20)\d\d]/g);
                 return (search !== null)
             });
             let addedTime = undefined;
             let addedBy = undefined;
             if (comments.length > 0) {
                 const message = comments[0].message;
-                const match = message.match(/(0[1-9]|[12][0-9]|3[01])[- \/.](0[1-9]|1[012])[- \/.](19|20)\d\d/g)[0];
-                const date = match.split(/[- \/.]/g);
+                const match = message.match(/(0[1-9]|[12][0-9]|3[01])[- /.](0[1-9]|1[012])[- /.](19|20)\d\d/g)[0];
+                const date = match.split(/[- /.]/g);
                 //todo test for added
                 const year = Number(date[2]);
-                const month = Number(date[1])-1;
+                const month = Number(date[1]) - 1;
                 const day = Number(date[0]);
-                addedTime = new Date(year,month,day);
-addedBy= comments[0].from.name;
+                addedTime = new Date(year, month, day);
+                addedBy = comments[0].from.name;
             }
 
             return {
                 added_time: addedTime,
-                added_by:addedBy,
+                added_by: addedBy,
                 created_time: new Date(elem.created_time),
                 from_user: elem.from.name,
                 full_picture: elem.full_picture,
-                id:id,
+                id: id,
                 likes_num: elem.likes.summary.total_count,
                 link: {
                     url: elem.link,
                     name: elem.name
                 },
                 message: elem.message,
-                reactions_num:elem.reactions.summary.total_count,
+                reactions_num: elem.reactions.summary.total_count,
                 selected: false,
                 source: elem.source,
                 type: elem.type,
