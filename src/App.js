@@ -60,7 +60,7 @@ class App extends Component {
             access_token: undefined,
             AlertMessage:"Login to facebook to be able to do something cool",
             chart: [],
-            date_added_control: false,
+            date_added_control: true,
             date_create_control: false,
             date_update_control: false,
             enable_until: false,
@@ -169,7 +169,7 @@ class App extends Component {
         let print_list = selected.map((elem, index) => {
             return <div key={elem.id}>
                 <span>{index + 1}</span>
-                {`. ${elem.link.name} `}
+                {`. ${elem.link.title} `}
                 <Badge bsClass="likes">{elem.reactions_num + ' likes'}</Badge>
             </div>
         });
