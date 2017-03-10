@@ -124,10 +124,10 @@ class Chart extends EventEmitter {
     }
 
     filterChartAndMap(body) {
-        let filter_yt = body.filter((elem) => {
-            return (elem.type === 'link')||(elem.type === 'video')
-        });
-        const map = filter_yt.map((elem, id) => {
+        // let filter_yt = body.filter((elem) => {
+        //     return //(elem.type === 'link')||(elem.type === 'video')
+        // });
+        const map = body.map((elem, id) => {
             let comments = elem.comments.data.filter((elem) => {
                 const search = elem.message.match(/(\[Added)\s(0[1-9]|[12][0-9]|3[01])[- /.](0[1-9]|1[012])[- /.](19|20)\d\d]/g);
                 return (search !== null)
@@ -145,8 +145,18 @@ class Chart extends EventEmitter {
                 addedTime = new Date(year, month, day);
                 addedBy = comments[0].from.name;
             }
+            let attachment = {};
+            if (elem.attachments.data.length > 0) {
+                attachment = elem.attachments.data[0];
+            }
 
 
+            const link = {
+                url: elem.link,
+                name: elem.name,
+                title: attachment.type === 'music_aggregation' ? attachment.description : attachment.title,
+                type: attachment.type
+            };
             return {
                 added_time: addedTime,
                 added_by: addedBy,
@@ -155,10 +165,7 @@ class Chart extends EventEmitter {
                 full_picture: elem.full_picture,
                 id: id,
                 likes_num: elem.likes.summary.total_count,
-                link: {
-                    url: elem.link,
-                    name: elem.name
-                },
+                link: link,
                 message: elem.message,
                 reactions_num: elem.reactions.summary.total_count,
                 selected: false,

@@ -89,13 +89,14 @@ export default class ChartTable extends React.Component {
                 },
                 {
                     header: props => <span>link</span>, // Custom header components!
-                    accessor: d => d.link.name,
+                    accessor: d => d.link.title,
                     minWidth: 200,
                     width:300,
                     maxWidth: 600,
                     id: 'yt_link',
                     render: props => {
-                        return (<a href={props.row.link.url}>{props.value}</a>)
+                        return props.row.link.url === undefined ? (<span>{props.value}</span>) : (
+                                <a href={props.row.link.url}>{props.value}</a>)
                     }
                 }
             ]

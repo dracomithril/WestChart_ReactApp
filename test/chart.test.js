@@ -36,15 +36,15 @@ describe('[chart]', function () {
         //requestMock.withArgs(test_body2.paging.next).callsArgWith(1, undefined, {statusCode: 200}, JSON.stringify(test_body3));
         chart = new Chart(10, 31);
         chart.on('change', function (body) {
-            assert.calledThrice(requestMock);
-            expect(body.chart.length).to.eql(94);
+            assert.calledTwice(requestMock);
+            expect(body.chart.length).to.eql(97);
             done();
         });
         let date = new Date();
         let since_date = new Date(date.toISOString());
         since_date.setDate(date.getDate() - 31);
 
-        chart.UpdateChart(since_date.toISOString(), date.toISOString(), '1173483302721639|oH9V-JlsUrDWKDS0Dyb5U3vcRIE', groupId);
+        chart.UpdateChart(since_date.toISOString(), date.toISOString(), '', groupId);
     });
 });
 
