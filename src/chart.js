@@ -7,7 +7,7 @@ const api_ver = 'v2.8';
 const limit = 100;
 let days = 7;
 let EventEmitter = require('events').EventEmitter;
-let fieldsArr = ['story', 'from', 'link', 'caption', 'icon', 'created_time', 'source', 'name', 'type', 'message',
+let fieldsArr = ['story', 'from', 'link', 'caption', 'icon', 'created_time', 'source', 'name', 'type', 'message', 'attachments',
     'full_picture', 'updated_time', 'likes.limit(1).summary(true)', 'reactions.limit(1).summary(true)', 'comments.limit(50).summary(true){message,from}'];
 let fields = fieldsArr.join(',');
 // since=2017-01-15&until=2017-01-16
@@ -41,7 +41,7 @@ function obtainList(since, until, groupId, access_token, callback) {
         port: 443,
         path: path,
         method: 'GET',
-        timeout: 2000
+        timeout: 3000
     };
 
     function reactOnBody(err, res, body) {
@@ -125,9 +125,9 @@ class Chart extends EventEmitter {
 
     filterChartAndMap(body) {
         let filter_yt = body.filter((elem) => {
-            return elem.caption === 'youtube.com'
+            return (elem.type === 'link')||(elem.type === 'video')
         });
-        return filter_yt.map((elem, id) => {
+        const map = filter_yt.map((elem, id) => {
             let comments = elem.comments.data.filter((elem) => {
                 const search = elem.message.match(/(\[Added)\s(0[1-9]|[12][0-9]|3[01])[- /.](0[1-9]|1[012])[- /.](19|20)\d\d]/g);
                 return (search !== null)
@@ -145,6 +145,7 @@ class Chart extends EventEmitter {
                 addedTime = new Date(year, month, day);
                 addedBy = comments[0].from.name;
             }
+
 
             return {
                 added_time: addedTime,
@@ -166,6 +167,7 @@ class Chart extends EventEmitter {
                 updated_time: new Date(elem.updated_time)
             };
         });
+        return map;
     }
 
 
