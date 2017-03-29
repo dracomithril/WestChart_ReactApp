@@ -14,6 +14,9 @@ export default class FilteringOptions extends React.Component {
     render() {
         return (
             <Panel header="Filters" bsStyle="info">
+                <strong>{'songs per day  '}</strong><input type="number" value={this.props.songs_per_day} className="num_days"
+                                                     name="songs_per_day" step={1} max={10} min={2}
+                                                     onChange={this.props.onChange}/><br/>
                 <Checkbox checked={this.props.w_o_c} onChange={this.props.onChange} name="w_o_c">
                     <OverlayTrigger placement="top"
                                     overlay={<Tooltip
