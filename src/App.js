@@ -170,11 +170,11 @@ class App extends Component {
                 <div>
                     <div className="formArea">
 
-                        {error_days.length!==0&&<ErrorList error_days={error_days}/>}
+                        {error_days.length!==0&&<ErrorList error_days={error_days}/>}<br/>
                         <PickYourDate {...this.state} onChange={this.handleChange.bind(this)}
                                       dateChange={this.dateChange.bind(this)}
                                       updateChart={this.updateChart.bind(this)}/><br/>
-                        <FilteringOptions  {...this.state} onChange={this.handleChange.bind(this)}/><br/>
+                        <FilteringOptions  {...this.state} onChange={this.handleChange.bind(this)}/>
                     </div>
                     <Jumbotron bsClass="App-body">
                         <div>
