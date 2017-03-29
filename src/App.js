@@ -7,43 +7,18 @@ import Chart from './chart';
 import Header from './components/Header';
 import moment from "moment";
 import FilteringOptions from "./components/FilteringOptions";
+import ErrorList  from "./components/ErrorList";
 import LoginAlert from "./components/LoginAlert";
 import Footer from "./components/Footer";
 import PickYourDate from './components/PickYourDate';
-import Menu from './components/Menu';
+import MainMenu from './components/Menu';
 import './App.css';
 import 'react-table/react-table.css';
 import 'react-datepicker/dist/react-datepicker.css';
 let _ = require('lodash');
 let utils = require('./utils');
+let sorting = utils.sorting;
 let groupId = '1707149242852457';
-let sorting = {
-    reaction: (array) => {
-        array.sort((a, b) => b.reactions_num - a.reactions_num)
-    },
-    who: (array) => {
-        array.sort((a, b) => {
-            if (a.from_user < b.from_user)
-                return -1;
-            if (a.from_user > b.from_user)
-                return 1;
-            return 0;
-        });
-
-    },
-    when: (array) => {
-        array.sort((a, b) => b.added_time ? b.added_time.getTime() : 0 - a.added_time ? a.added_time.getTime() : 0);
-    },
-    what: (array) => {
-        array.sort((a, b) => {
-            if (a.link.name < b.link.name)
-                return -1;
-            if (a.link.name > b.link.name)
-                return 1;
-            return 0;
-        });
-    }
-};
 
 class App extends Component {
     constructor(props) {
@@ -58,7 +33,7 @@ class App extends Component {
 
         this.state = {
             access_token: undefined,
-            AlertMessage:"Login to facebook to be able to do something cool",
+            AlertMessage: "Login to facebook to be able to do something cool",
             chart: [],
             date_added_control: true,
             date_create_control: false,
@@ -66,7 +41,7 @@ class App extends Component {
             enable_until: false,
             last_update: undefined,
             less_then: 15,
-            less_then_control:false,
+            less_then_control: false,
             list: [],
             list_sort: 'reaction',
             more_then: 0,
@@ -79,6 +54,7 @@ class App extends Component {
             show_updated_in: showDays,
             showUserInfo: false,
             since: undefined,
+            songs_per_day: 2,
             start_date: moment(),
             until: new Date(),
             update_interval: updateInterval,
@@ -105,7 +81,16 @@ class App extends Component {
 
     handleChange(event) {
         let obj = {};
-        obj[event.target.name] = event.target.type === 'checkbox' ? event.target.checked : event.target.value;
+        switch (event.target.type) {
+            case "checkbox":
+                obj[event.target.name] = event.target.checked;
+                break;
+            case "number":
+                obj[event.target.name] = Number(event.target.value);
+                break;
+            default:
+                obj[event.target.name] = event.target.value;
+        }
         this.setState(obj);
     }
 
@@ -152,9 +137,9 @@ class App extends Component {
                 });
                 this.updateChart();
             }
-            else{
+            else {
                 this.setState({
-                    AlertMessage:"Sorry you are not admin of this group."
+                    AlertMessage: "Sorry you are not admin of this group."
                 })
             }
         }
@@ -163,30 +148,33 @@ class App extends Component {
     render() {
         const sorting_options = Object.keys(sorting).map((elem, index) => <option key={index}
                                                                                   value={elem}>{elem.toLowerCase()}</option>);
-        let view_chart = utils.filterChart(this.state);
+        let {view_chart, error_days} = utils.filterChart(this.state);
         let selected = view_chart.filter((elem) => elem.selected);
         sorting[this.state.list_sort](selected);
-        let print_list = selected.map((elem, index) => {
+        const create_print_list = (elem, index) => {
             return <div key={elem.id}>
                 <span>{index + 1}</span>
                 {`. ${elem.link.title} `}
                 <Badge bsClass="likes">{elem.reactions_num + ' likes'}</Badge>
             </div>
-        });
+        };
+        let print_list = selected.map(create_print_list);
         return (
             <div className="App">
                 <Header user={this.state.user} showUserInfo={this.state.showUserInfo}/>
-                {this.state.access_token !== undefined && <Menu/>}
+                {this.state.access_token !== undefined && <MainMenu/>}
                 {this.state.access_token === undefined &&
                 <LoginAlert loginUser={this.LoginUserResponse.bind(this)} alertMessage={this.state.AlertMessage}/>}
 
                 {this.state.access_token !== undefined &&
                 <div>
                     <div className="formArea">
+
+                        {error_days.length!==0&&<ErrorList error_days={error_days}/>}
                         <PickYourDate {...this.state} onChange={this.handleChange.bind(this)}
                                       dateChange={this.dateChange.bind(this)}
                                       updateChart={this.updateChart.bind(this)}/><br/>
-                        <FilteringOptions  {...this.state} onChange={this.handleChange.bind(this)}/>
+                        <FilteringOptions  {...this.state} onChange={this.handleChange.bind(this)}/><br/>
                     </div>
                     <Jumbotron bsClass="App-body">
                         <div>
