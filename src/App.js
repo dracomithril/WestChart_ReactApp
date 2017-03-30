@@ -7,7 +7,7 @@ import Chart from './chart';
 import Header from './components/Header';
 import moment from "moment";
 import FilteringOptions from "./components/FilteringOptions";
-import ErrorList  from "./components/ErrorList";
+import SongsPerDay  from "./components/SongsPerDay";
 import LoginAlert from "./components/LoginAlert";
 import Footer from "./components/Footer";
 import PickYourDate from './components/PickYourDate';
@@ -170,11 +170,13 @@ class App extends Component {
                 <div>
                     <div className="formArea">
 
-                        {error_days.length!==0&&<ErrorList error_days={error_days}/>}<br/>
-                        <PickYourDate {...this.state} onChange={this.handleChange.bind(this)}
-                                      dateChange={this.dateChange.bind(this)}
-                                      updateChart={this.updateChart.bind(this)}/><br/>
-                        <FilteringOptions  {...this.state} onChange={this.handleChange.bind(this)}/>
+                            <SongsPerDay error_days={error_days} songs_per_day={this.state.songs_per_day}
+                                         onChange={this.handleChange.bind(this)}/><br/>
+                            <PickYourDate {...this.state} onChange={this.handleChange.bind(this)}
+                                          dateChange={this.dateChange.bind(this)}
+                                          updateChart={this.updateChart.bind(this)}/><br/>
+                            <FilteringOptions  {...this.state} onChange={this.handleChange.bind(this)}/>
+
                     </div>
                     <Jumbotron bsClass="App-body">
                         <div>
