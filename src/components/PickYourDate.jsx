@@ -5,13 +5,13 @@ import React from 'react';
 import {
     Button,
     Checkbox,
-    Label, Panel
+    Label, Panel,Accordion
 } from 'react-bootstrap';
 import DatePicker from "react-datepicker";
 export default class PickYourDate extends React.Component {
     render() {
         const footer = (<small id="updateDate">{' Last update: ' + new Date(this.props.last_update).toLocaleString('pl-PL')}</small>);
-        return (
+        return (<Accordion>
             <Panel header="Pick your date" footer={footer}>
                 <label>{'How far in time you will travel '}
                     <input className="num_days"
@@ -41,7 +41,7 @@ export default class PickYourDate extends React.Component {
                         disabled={this.props.access_token === undefined}
                         bsSize="large">Update</Button>
 </div>
-            </Panel>);
+            </Panel></Accordion>);
     }
 }
 PickYourDate.propTypes = {};
