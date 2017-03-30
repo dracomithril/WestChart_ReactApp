@@ -3,7 +3,7 @@
 }
 
 .App-body {
-    padding: 15px 10px;
+    padding: 5px 5px;
     margin: 0 10px 50px;
     color: inherit;
     background-color: #eee;
@@ -32,15 +32,10 @@ input[type=checkbox]:checked {
 }
 
 .formArea{
-    width: 320px;
-    /*padding-top: 10px;*/
-    /*padding-left: 10px;*/
-    /*padding-bottom: 10px;*/
-    /*border: 1px solid green;*/
+    width: 240px;
     margin-bottom: 5px;
     margin-left: 5px;
     float: left;
-    /*overflow: hidden;*/
 }
 .label {
     margin: 0;
@@ -86,4 +81,10 @@ input[type=checkbox]:checked {
 }
 .popover{
     max-width: 600px;
+}
+.react-datepicker__input-container input {
+    width: 80px;
+}
+#d_until{
+    margin-left: 50px;
 }
