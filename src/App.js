@@ -139,7 +139,7 @@ class App extends Component {
             }
             else {
                 this.setState({
-                    AlertMessage: "Sorry you are not admin of this group."
+                    alertMessage: "Sorry you are not admin of this group."
                 })
             }
         }
@@ -171,12 +171,11 @@ class App extends Component {
                     <div className="formArea">
 
                             <SongsPerDay error_days={error_days} songs_per_day={this.state.songs_per_day}
-                                         onChange={this.handleChange.bind(this)}/><br/>
+                                         onChange={this.handleChange.bind(this)}/>
                             <PickYourDate {...this.state} onChange={this.handleChange.bind(this)}
                                           dateChange={this.dateChange.bind(this)}
-                                          updateChart={this.updateChart.bind(this)}/><br/>
+                                          updateChart={this.updateChart.bind(this)}/>
                             <FilteringOptions  {...this.state} onChange={this.handleChange.bind(this)}/>
-
                     </div>
                     <Jumbotron bsClass="App-body">
                         <div>
