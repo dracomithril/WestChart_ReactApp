@@ -19,7 +19,7 @@ export default class ChartTable extends React.Component {
                 {
                     sortable:false,
                     header: props=><Checkbox bsClass="checkbox1" onClick={toggle}/>,
-                    minWidth: 50,
+                    minWidth: 30,
                     maxWidth: 60,
                     accessor: 'selected',
                     render: props =>{
