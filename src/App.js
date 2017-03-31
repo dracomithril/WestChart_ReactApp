@@ -139,7 +139,7 @@ class App extends Component {
             }
             else {
                 this.setState({
-                    alertMessage: "Sorry you are not admin of this group."
+                    AlertMessage: "Sorry you are not admin of this group."
                 })
             }
         }
