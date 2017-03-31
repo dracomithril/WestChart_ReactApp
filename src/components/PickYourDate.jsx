@@ -5,12 +5,13 @@ import React from 'react';
 import {
     Button,
     Checkbox,
-    Label, Panel,Accordion
+    Label, Panel, Accordion
 } from 'react-bootstrap';
 import DatePicker from "react-datepicker";
 export default class PickYourDate extends React.Component {
     render() {
-        const footer = (<small id="updateDate">{' Last update: ' + new Date(this.props.last_update).toLocaleString('pl-PL')}</small>);
+        const footer = (<small
+            id="updateDate">{' Last update: ' + new Date(this.props.last_update).toLocaleString('pl-PL')}</small>);
         return (<Accordion>
             <Panel header="Pick your date" footer={footer}>
                 <label>{'How far in time you will travel '}
@@ -28,19 +29,20 @@ export default class PickYourDate extends React.Component {
                         selected={this.props.start_date}
                         dateFormat="DD/MM/YYYY"
                         onChange={this.props.dateChange}
-                        disabled={!this.props.enable_until}/></Checkbox>
+                        disabled={!this.props.enable_until}/>
+                </Checkbox>
                 {(this.props.since !== undefined && this.props.until !== undefined) &&
                 <div>
                     <Label
-                        bsStyle="success">{`since: ` + this.props.since.toLocaleString('pl-PL')}</Label>
-                    <Label
+                        bsStyle="success">{`since: ` + this.props.since.toLocaleString('pl-PL')}</Label><br/>
+                    <Label id="d_until"
                         bsStyle="danger">{`until: ` + this.props.until.toLocaleString('pl-PL')}</Label>
                 </div>}
-<div style={{textAlign:"center"}}>
-                <Button onClick={this.props.updateChart} bsStyle="primary"
-                        disabled={this.props.access_token === undefined}
-                        bsSize="large">Update</Button>
-</div>
+                <div style={{textAlign: "center"}}>
+                    <Button onClick={this.props.updateChart} bsStyle="primary"
+                            disabled={this.props.access_token === undefined}
+                    >Update</Button>
+                </div>
             </Panel></Accordion>);
     }
 }

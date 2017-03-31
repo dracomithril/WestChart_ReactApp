@@ -50,7 +50,7 @@ function _filterChart(state) {
         }
 
         if (!wOC) {
-            result &= elem.message !== undefined ? !elem.message.includes(woc_string) : true;
+            result &= elem.message !== undefined ? !elem.message.toLowerCase().includes(woc_string.toLowerCase()) : true;
         }
         if (state.less_then_control) {
             result &= elem.reactions_num < state.less_then
@@ -58,7 +58,7 @@ function _filterChart(state) {
         if (state.more_then_control) {
             result &= elem.reactions_num > state.more_then;
         }
-        if (result) {
+        if (result&&elem.added_time!==undefined) {
             if (songs_per_day[elem.added_time]) {
                 songs_per_day[elem.added_time].count++
             } else {
@@ -67,20 +67,8 @@ function _filterChart(state) {
             }
         }
 
-        return result
+        return result;
     });
-    //let songs_per_day_condition= songs_per_day.map((elem)=>elem)
-    // if (state.more_then_control) {
-    //     view_chart = view_chart.filter((elem) => elem.reactions_num > state.more_then);
-    // }
-    //green -ok
-    //blue -not enough
-    //red - to many
-    // songs_per_day.forEach((elem)=>{
-    //     if(elem.count===state.songs_per_day){
-    //         delete songs_per_day[elem.org]
-    //     }
-    // });
     let error_days = Object.keys(songs_per_day).filter(key =>{
         return songs_per_day[key].count!==state.songs_per_day}).map(elem=>{
         const songsPerDay = songs_per_day[elem];
