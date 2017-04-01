@@ -1,11 +1,12 @@
 import React, {Component} from 'react';
 import {
-    Jumbotron, PageHeader, Badge
+    Jumbotron, PageHeader, Badge, Modal
 } from 'react-bootstrap';
 import ChartTable from './components/ChartTable';
-import Chart from './chart';
+//import Chart from './chart';
 import Header from './components/Header';
 import moment from "moment";
+import qs from "querystring";
 import FilteringOptions from "./components/FilteringOptions";
 import SongsPerDay  from "./components/SongsPerDay";
 import LoginAlert from "./components/LoginAlert";
@@ -18,7 +19,6 @@ import 'react-datepicker/dist/react-datepicker.css';
 let _ = require('lodash');
 let utils = require('./utils');
 let sorting = utils.sorting;
-let groupId = '1707149242852457';
 
 class App extends Component {
     constructor(props) {
@@ -26,10 +26,10 @@ class App extends Component {
         let updateInterval = 2;
         let showDays = 7;
 
-        this.charts = new Chart(updateInterval, showDays);
-        this.charts.on('change', (cache) => {
-            this.setState(cache);
-        });
+        // this.charts = new Chart(updateInterval, showDays);
+        // this.charts.on('change', (cache) => {
+        //     this.setState(cache);
+        // });
 
         this.state = {
             access_token: undefined,
@@ -47,10 +47,11 @@ class App extends Component {
             more_then: 0,
             more_then_control: false,
             reaction_count_control: false,
-            show_create_list: false,
-            show_last: 31,
             show_added_in: showDays,
+            show_create_list: false,
             show_created_in: showDays,
+            show_hello:false,
+            show_last: 31,
             show_updated_in: showDays,
             showUserInfo: false,
             since: undefined,
@@ -64,6 +65,7 @@ class App extends Component {
     }
 
     updateChart() {
+        let that = this;
         let until = new Date();
         if (this.state.enable_until) {
             until = this.state.start_date.toDate()
@@ -73,7 +75,17 @@ class App extends Component {
             since: since,
             until: until
         });
-        this.charts.UpdateChart(since.toISOString(), until.toISOString(), this.state.access_token, groupId);
+        let url = 'api/get_chart?' + qs.stringify({
+                days: undefined,
+                since: since.toISOString(),
+                utils: until.toISOString(),
+                access_token: this.state.access_token
+            });
+        fetch(url).then((body) => body.json()
+        ).then((b) => {
+            b.show_hello=false;
+            that.setState(b);
+        });
     }
 
     componentDidMount() {
@@ -125,7 +137,6 @@ class App extends Component {
             start_date: date,
         });
     }
-
     LoginUserResponse(response) {
         if (!response.error) {
             let isGroupAdmin = response.groups.data.filter((elem) => elem.id === '1707149242852457' && elem.administrator === true);
@@ -133,7 +144,8 @@ class App extends Component {
                 this.setState({
                     access_token: response.accessToken,
                     user: response,
-                    showUserInfo: true
+                    showUserInfo: true,
+                    show_hello:true
                 });
                 this.updateChart();
             }
@@ -170,13 +182,17 @@ class App extends Component {
                 <div>
                     <div className="formArea">
 
-                            <SongsPerDay error_days={error_days} songs_per_day={this.state.songs_per_day}
-                                         onChange={this.handleChange.bind(this)}/>
-                            <PickYourDate {...this.state} onChange={this.handleChange.bind(this)}
-                                          dateChange={this.dateChange.bind(this)}
-                                          updateChart={this.updateChart.bind(this)}/>
-                            <FilteringOptions  {...this.state} onChange={this.handleChange.bind(this)}/>
+                        <SongsPerDay error_days={error_days} songs_per_day={this.state.songs_per_day}
+                                     onChange={this.handleChange.bind(this)}/>
+                        <PickYourDate {...this.state} onChange={this.handleChange.bind(this)}
+                                      dateChange={this.dateChange.bind(this)}
+                                      updateChart={this.updateChart.bind(this)}/>
+                        <FilteringOptions  {...this.state} onChange={this.handleChange.bind(this)}/>
                     </div>
+                    <Modal show={this.state.show_hello} >
+                        <Modal.Header>{"Hello"}</Modal.Header>
+                        <Modal.Body>{`Hi, ${this.state.user.first_name} we are fetching data please wait.`}</Modal.Body>
+                    </Modal>
                     <Jumbotron bsClass="App-body">
                         <div>
                             <ChartTable data={view_chart} onSelectChange={this.handleListChange.bind(this)}
