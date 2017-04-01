@@ -36,7 +36,6 @@ function _filterChart(state) {
             let cIn = subtractDaysFromDate(until, state.show_created_in);
             let cIn1 = new Date(elem.created_time).getTime();
             result &= (cIn1 - cIn.getTime()) > 0;
-
         }
         if (dateUpdateControl) {
             let uIn = subtractDaysFromDate(until, state.show_updated_in);
@@ -48,7 +47,6 @@ function _filterChart(state) {
             let aIn1 = new Date(elem.added_time).getTime();
             result &= (aIn1 - aIn.getTime()) > 0;
         }
-
         if (!wOC) {
             result &= elem.message !== undefined ? !elem.message.toLowerCase().includes(woc_string.toLowerCase()) : true;
         }
@@ -58,24 +56,28 @@ function _filterChart(state) {
         if (state.more_then_control) {
             result &= elem.reactions_num > state.more_then;
         }
-        if (result&&elem.added_time!==undefined) {
+        if (result && elem.added_time !== undefined) {
             if (songs_per_day[elem.added_time]) {
                 songs_per_day[elem.added_time].count++
             } else {
-                songs_per_day[elem.added_time] = {count:1,
-                org:elem.added_time};
+                songs_per_day[elem.added_time] = {
+                    count: 1,
+                    org: elem.added_time
+                };
             }
         }
 
         return result;
     });
-    let error_days = Object.keys(songs_per_day).filter(key =>{
-        return songs_per_day[key].count!==state.songs_per_day}).map(elem=>{
+    let error_days = Object.keys(songs_per_day).filter(key => {
+        return songs_per_day[key].count !== state.songs_per_day
+    }).map(elem => {
         const songsPerDay = songs_per_day[elem];
-        songsPerDay.color = songs_per_day[elem].count>state.songs_per_day?'red':'blue';
-        return songsPerDay});
+        songsPerDay.color = songs_per_day[elem].count > state.songs_per_day ? 'red' : 'blue';
+        return songsPerDay
+    });
 
-    return {view_chart,error_days};
+    return {view_chart, error_days};
 }
 let sorting = {
     reaction: (array) => {
@@ -107,7 +109,7 @@ let sorting = {
 
 module.exports = {
     filterChart: _filterChart,
-    sorting : sorting,
+    sorting: sorting,
     subtractDaysFromDate: subtractDaysFromDate,
     woc_string: woc_string
 };

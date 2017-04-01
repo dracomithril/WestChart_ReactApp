@@ -15,5 +15,7 @@
     <orderEntry type="library" name="node-DefinitelyTyped" level="application" />
     <orderEntry type="library" name="rewire-DefinitelyTyped" level="application" />
     <orderEntry type="library" name="mocha-DefinitelyTyped" level="application" />
+    <orderEntry type="library" name="json-editor-DefinitelyTyped" level="application" />
+    <orderEntry type="library" name="express-DT" level="application" />
   </component>
 </module>

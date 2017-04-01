@@ -8,6 +8,9 @@ import {Label, OverlayTrigger, Tooltip, Checkbox} from 'react-bootstrap';
 function formatDate(date) {
     return new Date(date).toLocaleString('pl-PL');
 }
+let getTime = function (date) {
+    return new Date(date).getTime();
+};
 export default class ChartTable extends React.Component {
     render() {
         const handleChange = this.props.onSelectChange;
@@ -56,7 +59,7 @@ export default class ChartTable extends React.Component {
                     minWidth: 150,
                     maxWidth: 200,
                     accessor: d => {
-                        return d.created_time.getTime()
+                        return getTime(d.created_time)
                     },
                     render: props => <span>{formatDate(props.value)}</span>
                 },
@@ -65,7 +68,7 @@ export default class ChartTable extends React.Component {
                     id: 'addedTime',
                     maxWidth: 150,
                     accessor: d => {
-                        return d.added_time === undefined ? 0 : d.added_time.getTime()
+                        return d.added_time === undefined ? 0 : getTime(d.added_time)
                     },
                     render: props => {
                         return props.value === 0 ? <i className="fa fa-minus-circle" style={{color: 'red'}}/> :
@@ -83,7 +86,7 @@ export default class ChartTable extends React.Component {
                     minWidth: 150,
                     maxWidth: 200,
                     accessor: d => {
-                        return d.updated_time.getTime()
+                        return getTime(d.updated_time)
                     },
                     render: props => <span>{formatDate(props.value)}</span>
                 },

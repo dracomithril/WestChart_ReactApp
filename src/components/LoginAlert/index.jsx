@@ -7,11 +7,13 @@ import {FacebookLogin} from 'react-facebook-login-component';
 import './LoginAlert.css';
 export default class LoginAlert extends React.Component {
     render() {
+        const prod_app_id = "1173483302721639";
+        const test_app_id = "1173486879387948";
         return (<Alert bsClass="login-alert">
             <h4>Oh snap! You got an error!</h4>
             <p>{this.props.alertMessage}</p>
             <FacebookLogin
-                socialId={process.env.NODE_ENV === 'production' ? "1173483302721639" : "1173486879387948"}
+                socialId={process.env.NODE_ENV === 'production' ? prod_app_id : test_app_id}
                 language="pl_PL"
                 scope="public_profile,email,user_managed_groups"
                 responseHandler={this.props.loginUser}

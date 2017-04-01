@@ -14,6 +14,7 @@ export default class PickYourDate extends React.Component {
             id="updateDate">{' Last update: ' + new Date(this.props.last_update).toLocaleString('pl-PL')}</small>);
         return (<Accordion>
             <Panel header="Pick your date" footer={footer}>
+
                 <label>{'How far in time you will travel '}
                     <input className="num_days"
                            type="number"
