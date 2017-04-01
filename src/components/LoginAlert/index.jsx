@@ -13,7 +13,7 @@ export default class LoginAlert extends React.Component {
             <h4>Oh snap! You got an error!</h4>
             <p>{this.props.alertMessage}</p>
             <FacebookLogin
-                socialId={process.env.NODE_ENV !== 'production' ? prod_app_id : test_app_id}
+                socialId={process.env.NODE_ENV === 'production' ? prod_app_id : test_app_id}
                 language="pl_PL"
                 scope="public_profile,email,user_managed_groups"
                 responseHandler={this.props.loginUser}
