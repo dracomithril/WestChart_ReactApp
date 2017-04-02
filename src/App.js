@@ -19,17 +19,13 @@ import 'react-datepicker/dist/react-datepicker.css';
 let _ = require('lodash');
 let utils = require('./utils');
 let sorting = utils.sorting;
+const groupId = '1707149242852457';
 
 class App extends Component {
     constructor(props) {
         super(props);
         let updateInterval = 2;
         let showDays = 7;
-
-        // this.charts = new Chart(updateInterval, showDays);
-        // this.charts.on('change', (cache) => {
-        //     this.setState(cache);
-        // });
 
         this.state = {
             access_token: undefined,
@@ -50,7 +46,7 @@ class App extends Component {
             show_added_in: showDays,
             show_create_list: false,
             show_created_in: showDays,
-            show_hello:false,
+            show_hello: false,
             show_last: 31,
             show_updated_in: showDays,
             showUserInfo: false,
@@ -81,10 +77,22 @@ class App extends Component {
                 utils: until.toISOString(),
                 access_token: this.state.access_token
             });
-        fetch(url).then((body) => body.json()
+        console.time('client-obtain-chart');
+        fetch(url).then((resp) => {
+                console.log('obtained chart list');
+                console.timeEnd('client-obtain-chart');
+                if (resp.status === 200) {
+                    return resp.json()
+                }
+                return Promise.reject(resp);
+            }
         ).then((b) => {
-            b.show_hello=false;
+            b.show_hello = false;
             that.setState(b);
+        }).catch(err => {
+            console.error('Error in fetch chart.');
+            console.error(err);
+            that.setState({show_hello: false});
         });
     }
 
@@ -137,15 +145,16 @@ class App extends Component {
             start_date: date,
         });
     }
+
     LoginUserResponse(response) {
         if (!response.error) {
-            let isGroupAdmin = response.groups.data.filter((elem) => elem.id === '1707149242852457' && elem.administrator === true);
+            let isGroupAdmin = response.groups.data.filter((elem) => elem.id === groupId && elem.administrator === true);
             if (isGroupAdmin) {
                 this.setState({
                     access_token: response.accessToken,
                     user: response,
                     showUserInfo: true,
-                    show_hello:true
+                    show_hello: true
                 });
                 this.updateChart();
             }
@@ -154,6 +163,10 @@ class App extends Component {
                     AlertMessage: "Sorry you are not admin of this group."
                 })
             }
+        }
+        else {
+            console.error('login error.');
+            console.error(response.error)
         }
     }
 
@@ -189,7 +202,7 @@ class App extends Component {
                                       updateChart={this.updateChart.bind(this)}/>
                         <FilteringOptions  {...this.state} onChange={this.handleChange.bind(this)}/>
                     </div>
-                    <Modal show={this.state.show_hello} >
+                    <Modal show={this.state.show_hello}>
                         <Modal.Header>{"Hello"}</Modal.Header>
                         <Modal.Body>{`Hi, ${this.state.user.first_name} we are fetching data please wait.`}</Modal.Body>
                     </Modal>
