@@ -1,0 +1,6 @@
+/**
+ * Created by Gryzli on 01.04.2017.
+ */
+
+process.env.NODE_ENV='development';
+require('../server');
