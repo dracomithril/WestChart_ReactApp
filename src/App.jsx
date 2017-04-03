@@ -3,7 +3,6 @@ import {
     Jumbotron, PageHeader, Badge, Modal
 } from 'react-bootstrap';
 import ChartTable from './components/ChartTable';
-//import Chart from './chart';
 import Header from './components/Header';
 import moment from "moment";
 import qs from "querystring";
@@ -13,6 +12,7 @@ import LoginAlert from "./components/LoginAlert";
 import Footer from "./components/Footer";
 import PickYourDate from './components/PickYourDate';
 import MainMenu from './components/Menu';
+import CookieBanner from 'react-cookie-banner';
 import './App.css';
 import 'react-table/react-table.css';
 import 'react-datepicker/dist/react-datepicker.css';
@@ -186,6 +186,13 @@ class App extends Component {
         let print_list = selected.map(create_print_list);
         return (
             <div className="App">
+                <div>
+                    <CookieBanner
+                        message={'Yes, we use cookies. If you don\'t like it change website, we won\'t miss you! ;)'}
+                        onAccept={() => {
+                        }}
+                        cookie='user-has-accepted-cookies'/>
+                </div>
                 <Header user={this.state.user} showUserInfo={this.state.showUserInfo}/>
                 {this.state.access_token !== undefined && <MainMenu/>}
                 {this.state.access_token === undefined &&
