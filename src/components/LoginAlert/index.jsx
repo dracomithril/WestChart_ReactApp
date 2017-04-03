@@ -3,8 +3,9 @@
  */
 import React from 'react';
 import {Alert} from 'react-bootstrap';
-import {FacebookLogin} from 'react-facebook-login-component';
+import FacebookLogin from 'react-facebook-login';
 import './LoginAlert.css';
+
 export default class LoginAlert extends React.Component {
     render() {
         const prod_app_id = "1173483302721639";
@@ -13,17 +14,16 @@ export default class LoginAlert extends React.Component {
             <h4>Oh snap! You got an error!</h4>
             <p>{this.props.alertMessage}</p>
             <FacebookLogin
-                socialId={process.env.NODE_ENV === 'production' ? prod_app_id : test_app_id}
+                appId={process.env.NODE_ENV === 'production' ? prod_app_id : test_app_id}
                 language="pl_PL"
+                autoLoad={true}
                 scope="public_profile,email,user_managed_groups"
-                responseHandler={this.props.loginUser}
-                xfbml={true}
+                callback={this.props.loginUser}
                 fields="id,email,name,first_name,picture,groups{administrator}"
+                cssClass="btn btn-social btn-facebook"
+                icon={"fa fa-facebook"}
                 version="v2.8"
-                class="btn-login"
-                buttonText={<a className="btn btn-block btn-social btn-facebook">
-                    <span className="fa fa-facebook"/> Sign in with Facebook
-                </a>}/>
+            />
         </Alert>)
     }
 }

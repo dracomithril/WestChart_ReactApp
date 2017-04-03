@@ -1,6 +1,6 @@
 {
   "name": "WestChart_ReactApp",
-  "version": "0.3.2",
+  "version": "0.3.3",
   "private": true,
   "engines": {
     "node": "6.10.1"
@@ -68,9 +68,10 @@
     "morgan": "^1.8.1",
     "react": "^15.4.2",
     "react-bootstrap": "^0.30.7",
+    "react-cookie-banner": "0.0.17",
     "react-datepicker": "^0.44.0",
     "react-dom": "^15.4.2",
-    "react-facebook-login-component": "^0.6.0",
+    "react-facebook-login": "^3.5.0",
     "react-sticky": "^5.0.5",
     "react-table": "^5.1.1",
     "request": "^2.79.0",
@@ -83,6 +84,7 @@
     "start": "node server",
     "start:srv": "node scripts/start_srv.js",
     "build": "node scripts/build.js",
+    "build:dev": "node scripts/build-dev.js",
     "test": "node scripts/test.js --env=jsdom"
   },
   "jest": {
