@@ -1,101 +1,97 @@
-import React, {Component} from 'react';
-import {
-    Jumbotron, PageHeader, Badge, Modal
-} from 'react-bootstrap';
-import ChartTable from './components/ChartTable';
-import Header from './components/Header';
+import React, {Component, PropTypes} from "react";
+import {Badge, Jumbotron, Modal, PageHeader} from "react-bootstrap";
+import ChartTable from "./components/ChartTable";
+import Header from "./components/Header";
 import moment from "moment";
 import qs from "querystring";
 import FilteringOptions from "./components/FilteringOptions";
-import SongsPerDay  from "./components/SongsPerDay";
+import SongsPerDay from "./components/SongsPerDay";
 import LoginAlert from "./components/LoginAlert";
 import Footer from "./components/Footer";
-import PickYourDate from './components/PickYourDate';
-import MainMenu from './components/Menu';
-import CookieBanner from 'react-cookie-banner';
-import './App.css';
-import 'react-table/react-table.css';
-import 'react-datepicker/dist/react-datepicker.css';
+import PickYourDate from "./components/PickYourDate";
+import MainMenu from "./components/Menu";
+import CookieBanner from "react-cookie-banner";
+import "./App.css";
+import "react-table/react-table.css";
+import "react-datepicker/dist/react-datepicker.css";
 let _ = require('lodash');
 let utils = require('./utils');
 let sorting = utils.sorting;
 const groupId = '1707149242852457';
 
+let get_chart_from_server = function (query_params, updateStoreChart) {
+    let url = 'api/get_chart?' + qs.stringify(query_params);
+    console.time('client-obtain-chart');
+    fetch(url).then((resp) => {
+            console.log('obtained chart list');
+            console.timeEnd('client-obtain-chart');
+            if (resp.status === 200) {
+                return resp.json()
+            }
+            return Promise.reject(resp);
+        }
+    ).then(updateStoreChart
+    ).catch(err => {
+        console.error('Error in fetch chart.');
+        console.error(err);
+    });
+};
 class App extends Component {
     constructor(props) {
         super(props);
-        let updateInterval = 2;
         let showDays = 7;
-
         this.state = {
-            access_token: undefined,
-            AlertMessage: "Login to facebook to be able to do something cool",
             chart: [],
-            date_added_control: true,
-            date_create_control: false,
-            date_update_control: false,
             enable_until: false,
             last_update: undefined,
-            less_then: 15,
-            less_then_control: false,
             list_sort: 'reaction',
-            more_then: 0,
-            more_then_control: false,
-            reaction_count_control: false,
-            show_added_in: showDays,
-            show_create_list: false,
-            show_created_in: showDays,
-            show_hello: false,
             show_last: 31,
-            show_updated_in: showDays,
-            showUserInfo: false,
             since: undefined,
             songs_per_day: 2,
             start_date: moment(),
-            until: new Date(),
-            update_interval: updateInterval,
-            user: {accessToken: undefined},
-            w_o_c: true
+            until: new Date()
         };
     }
 
+
+    componentWillUnmount() {
+        this.unsubscribe();
+    }
+
     updateChart() {
+        const {store}= this.context;
+        const state= store.getState();
         let that = this;
         let until = new Date();
-        if (this.state.enable_until) {
-            until = this.state.start_date.toDate()
+        const state2 = this.state;
+        if (state2.enable_until) {
+            until = state2.start_date.toDate()
         }
-        let since = utils.subtractDaysFromDate(until, this.state.show_last);
+        let since = utils.subtractDaysFromDate(until, state2.show_last);
+        const since2 = since.toISOString();
         this.setState({
-            since: since,
-            until: until
+            since: since2,
+            until: until.toISOString()
         });
-        let url = 'api/get_chart?' + qs.stringify({
-                days: undefined,
-                since: since.toISOString(),
-                utils: until.toISOString(),
-                access_token: this.state.access_token
-            });
-        console.time('client-obtain-chart');
-        fetch(url).then((resp) => {
-                console.log('obtained chart list');
-                console.timeEnd('client-obtain-chart');
-                if (resp.status === 200) {
-                    return resp.json()
-                }
-                return Promise.reject(resp);
-            }
-        ).then((b) => {
-            b.show_hello = false;
-            that.setState(b);
-        }).catch(err => {
-            console.error('Error in fetch chart.');
-            console.error(err);
-            that.setState({show_hello: false});
-        });
+        const updateStoreChart = (b) =>{
+            that.setState(b)
+// store.dispatch({})
+        };
+
+
+        const utils2 = until.toISOString();
+        const query_params = {
+            days: undefined,
+            since: since2,
+            utils: utils2,
+            access_token: state.user.accessToken
+        };
+        get_chart_from_server(query_params, updateStoreChart);
     }
 
     componentDidMount() {
+        const {store} = this.context;
+        this.unsubscribe = store.subscribe(() => this.forceUpdate());
     }
 
     handleChange(event) {
@@ -131,10 +127,7 @@ class App extends Component {
 
     sortList(event) {
         let sort_by = event.target.value;
-        // let list = _.clone(this.state.list);
-        // sorting[sort_by](list);
         this.setState({
-            // list: list,
             list_sort: sort_by
         })
     }
@@ -149,18 +142,7 @@ class App extends Component {
         if (!response.error) {
             let isGroupAdmin = response.groups.data.filter((elem) => elem.id === groupId && elem.administrator === true);
             if (isGroupAdmin) {
-                this.setState({
-                    access_token: response.accessToken,
-                    user: response,
-                    showUserInfo: true,
-                    show_hello: true
-                });
                 this.updateChart();
-            }
-            else {
-                this.setState({
-                    AlertMessage: "Sorry you are not admin of this group."
-                })
             }
         }
         else {
@@ -170,11 +152,19 @@ class App extends Component {
     }
 
     render() {
-        const sorting_options = Object.keys(sorting).map((elem, index) => <option key={index}
-                                                                                  value={elem}>{elem.toLowerCase()}</option>);
-        let {view_chart, error_days} = utils.filterChart(this.state);
-        let selected = view_chart.filter((elem) => elem.selected);
-        sorting[this.state.list_sort](selected);
+        const {store} = this.context;
+        const state = this.state;
+        const userInfo = store.getState().user;
+        const sorting_options = Object.keys(sorting)
+            .map((elem, index) => <option key={index} value={elem}>{elem.toLowerCase()}</option>);
+        let view_chart1=[], error_days1=[];
+        if(state.chart.length>0){
+        let {view_chart, error_days} = utils.filterChart(state,store);
+            view_chart1=view_chart;
+            error_days1=error_days;
+        }
+        let selected = view_chart1.filter((elem) => elem.selected);
+        sorting[state.list_sort](selected);
         const create_print_list = (elem, index) => {
             return <div key={elem.id}>
                 <span>{index + 1}</span>
@@ -192,33 +182,31 @@ class App extends Component {
                         }}
                         cookie='user-has-accepted-cookies'/>
                 </div>
-                <Header user={this.state.user} showUserInfo={this.state.showUserInfo}/>
-                {this.state.access_token !== undefined && <MainMenu/>}
-                {this.state.access_token === undefined &&
-                <LoginAlert loginUser={this.LoginUserResponse.bind(this)} alertMessage={this.state.AlertMessage}/>}
-
-                {this.state.access_token !== undefined &&
+                <Header/>
+                {userInfo.isGroupAdmin && <MainMenu/>}
+                {!userInfo.isGroupAdmin &&
+                <LoginAlert />}
+                {userInfo.isGroupAdmin &&
                 <div>
                     <div className="formArea">
-
-                        <SongsPerDay error_days={error_days} songs_per_day={this.state.songs_per_day}
+                        <SongsPerDay error_days={error_days1} songs_per_day={state.songs_per_day}
                                      onChange={this.handleChange.bind(this)}/>
-                        <PickYourDate {...this.state} onChange={this.handleChange.bind(this)}
+                        <PickYourDate {...state} onChange={this.handleChange.bind(this)}
                                       dateChange={this.dateChange.bind(this)}
                                       updateChart={this.updateChart.bind(this)}/>
-                        <FilteringOptions  {...this.state} onChange={this.handleChange.bind(this)}/>
+                        <FilteringOptions />
                     </div>
-                    <Modal show={this.state.show_hello}>
+                    <Modal show={false/*state.chart.length === 0*/}>
                         <Modal.Header>{"Hello"}</Modal.Header>
-                        <Modal.Body>{`Hi, ${this.state.user.first_name} we are fetching data please wait.`}</Modal.Body>
+                        <Modal.Body>{`Hi, ${userInfo.first_name} we are fetching data please wait.`}</Modal.Body>
                     </Modal>
                     <Jumbotron bsClass="App-body">
                         <div>
-                            <ChartTable data={view_chart} onSelectChange={this.handleListChange.bind(this)}
+                            <ChartTable data={view_chart1} onSelectChange={this.handleListChange.bind(this)}
                                         toggle={this.toggleSelectedList.bind(this)}/>
 
                             <PageHeader id="list">{'List by: '}
-                                <select name="list_sort" value={this.state.list_sort}
+                                <select name="list_sort" value={state.list_sort}
                                         onChange={this.sortList.bind(this)}>
                                     {sorting_options}
                                 </select>
@@ -234,5 +222,7 @@ class App extends Component {
         );
     }
 }
-
+App.contextTypes = {
+    store: PropTypes.object
+};
 export default App;

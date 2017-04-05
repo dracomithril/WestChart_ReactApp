@@ -1,7 +1,7 @@
 /**
  * Created by Gryzli on 12.02.2017.
  */
-import React from 'react';
+import React,{PropTypes} from 'react';
 import {
     Button,
     Checkbox,
@@ -10,8 +10,11 @@ import {
 import DatePicker from "react-datepicker";
 export default class PickYourDate extends React.Component {
     render() {
+        const {store}= this.context;
+        const state= store.getState();
+        const props = this.props;
         const footer = (<small
-            id="updateDate">{' Last update: ' + new Date(this.props.last_update).toLocaleString('pl-PL')}</small>);
+            id="updateDate">{' Last update: ' + new Date(props.last_update).toLocaleString('pl-PL')}</small>);
         return (<Accordion>
             <Panel header="Pick your date" footer={footer}>
 
@@ -20,31 +23,34 @@ export default class PickYourDate extends React.Component {
                            type="number"
                            name="show_last"
                            min={0} max={62}
-                           value={this.props.show_last}
+                           value={props.show_last}
                            step={1}
-                           onChange={this.props.onChange}/>{' days'}
+                           onChange={props.onChange}/>{' days'}
                 </label>
-                <Checkbox checked={this.props.enable_until} name="enable_until"
-                          onChange={this.props.onChange}>{'Use date: '}
+                <Checkbox checked={props.enable_until} name="enable_until"
+                          onChange={props.onChange}>{'Use date: '}
                     <DatePicker
-                        selected={this.props.start_date}
+                        selected={props.start_date}
                         dateFormat="DD/MM/YYYY"
-                        onChange={this.props.dateChange}
-                        disabled={!this.props.enable_until}/>
+                        onChange={props.dateChange}
+                        disabled={!props.enable_until}/>
                 </Checkbox>
-                {(this.props.since !== undefined && this.props.until !== undefined) &&
+                {(props.since !== undefined && props.until !== undefined) &&
                 <div>
                     <Label
-                        bsStyle="success">{`since: ` + this.props.since.toLocaleString('pl-PL')}</Label><br/>
+                        bsStyle="success">{`since: ` + props.since.toLocaleString('pl-PL')}</Label><br/>
                     <Label id="d_until"
-                        bsStyle="danger">{`until: ` + this.props.until.toLocaleString('pl-PL')}</Label>
+                        bsStyle="danger">{`until: ` + props.until.toLocaleString('pl-PL')}</Label>
                 </div>}
                 <div style={{textAlign: "center"}}>
-                    <Button onClick={this.props.updateChart} bsStyle="primary"
-                            disabled={this.props.access_token === undefined}
+                    <Button onClick={props.updateChart} bsStyle="primary"
+                            disabled={state.user.accessToken === undefined}
                     >Update</Button>
                 </div>
             </Panel></Accordion>);
     }
 }
+PickYourDate.contextTypes={
+    store:PropTypes.object.isRequired
+};
 PickYourDate.propTypes = {};

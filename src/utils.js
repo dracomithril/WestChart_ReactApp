@@ -2,61 +2,45 @@
  * Created by Gryzli on 28.01.2017.
  */
 
+import filters from './filters';
 const woc_string = "Wielkie Ogarnianie Charta";
-/**
- *
- * @param until {Date}
- * @param days {number}
- * @returns {Date}
- */
-function subtractDaysFromDate(until, days) {
-    let since_date = new Date(until.toISOString());
-    since_date.setDate(until.getDate() - days);
-    return since_date;
-}
+
+
+
+
 /**
  *
  * @param state
+ * @param store
  * @returns {{view_chart: (*), error_days: Array.<*>}}
  * @private
  */
-function _filterChart(state) {
+function _filterChart(state,store) {
+
     let songs_per_day = {};
     let view_chart = state.chart;
+let state2 = store.getState();
     const until = state.until;
-    const dateAddedControl = state.date_added_control;
-    const dateCreateControl = state.date_create_control;
-    const dateUpdateControl = state.date_update_control;
-    const wOC = state.w_o_c;
+    const wOC = state2.filters.woc_control.checked;
+
 
     view_chart = view_chart.filter((elem) => {
+        let doTest = (filter) => {
+            if (filter.check.name === 'countDays') {
+                return filter.check(elem[filter.valueName], until, state2.filters[filter.input.name].days) > 0;
+            }
+            else {
+                return filter.check(elem, filter.input.name, state)
+            }
+        };
+        let results = filters.control.filter(e => state2.filters[e.input.name].checked);
+        const map = results.map(doTest);
+        let res1 = map.reduce((pr, cr)=>pr&&cr);
 
-        let result = true;
-        if (dateCreateControl) {
-            let cIn = subtractDaysFromDate(until, state.show_created_in);
-            let cIn1 = new Date(elem.created_time).getTime();
-            result &= (cIn1 - cIn.getTime()) > 0;
-        }
-        if (dateUpdateControl) {
-            let uIn = subtractDaysFromDate(until, state.show_updated_in);
-            let uIn1 = new Date(elem.updated_time).getTime();
-            result &= (uIn1 - uIn.getTime()) > 0;
-        }
-        if (dateAddedControl) {
-            let aIn = subtractDaysFromDate(until, state.show_added_in);
-            let aIn1 = new Date(elem.added_time).getTime();
-            result &= (aIn1 - aIn.getTime()) > 0;
-        }
         if (!wOC) {
-            result &= elem.message !== undefined ? !elem.message.toLowerCase().includes(woc_string.toLowerCase()) : true;
+            res1 &= elem.message !== undefined ? !elem.message.toLowerCase().includes(woc_string.toLowerCase()) : true;
         }
-        if (state.less_then_control) {
-            result &= elem.reactions_num < state.less_then
-        }
-        if (state.more_then_control) {
-            result &= elem.reactions_num > state.more_then;
-        }
-        if (result && elem.added_time !== undefined) {
+        if (res1 && elem.added_time !== undefined) {
             if (songs_per_day[elem.added_time]) {
                 songs_per_day[elem.added_time].count++
             } else {
@@ -66,8 +50,7 @@ function _filterChart(state) {
                 };
             }
         }
-
-        return result;
+        return res1;
     });
     let error_days = Object.keys(songs_per_day).filter(key => {
         return songs_per_day[key].count !== state.songs_per_day
@@ -110,6 +93,6 @@ let sorting = {
 module.exports = {
     filterChart: _filterChart,
     sorting: sorting,
-    subtractDaysFromDate: subtractDaysFromDate,
+    subtractDaysFromDate: filters.subtractDaysFromDate,
     woc_string: woc_string
 };
