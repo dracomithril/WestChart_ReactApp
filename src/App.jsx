@@ -38,7 +38,6 @@ class App extends Component {
             last_update: undefined,
             less_then: 15,
             less_then_control: false,
-            list: [],
             list_sort: 'reaction',
             more_then: 0,
             more_then_control: false,
