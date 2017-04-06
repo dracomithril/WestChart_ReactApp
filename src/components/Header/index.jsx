@@ -3,6 +3,7 @@
  */
 import React, {PropTypes} from "react";
 import {Image, PageHeader, Well} from "react-bootstrap";
+import CookieBanner from "react-cookie-banner";
 import "bootstrap-social";
 import "./Header.css";
 export default class Header extends React.Component {
@@ -11,6 +12,12 @@ export default class Header extends React.Component {
         let state = store.getState();
         const user = state.user;
         return (<div className="header">
+                            <CookieBanner
+                    message={'Yes, we use cookies. If you don\'t like it change website, we won\'t miss you! ;)'}
+                    onAccept={() => {
+                    }}
+                    cookie='user-has-accepted-cookies'/>
+
             <PageHeader bsClass="title-header">West Coast Swing Dance Chart
                 <small>Admin helper</small>
             </PageHeader>

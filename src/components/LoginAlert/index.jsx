@@ -36,7 +36,12 @@ export default class LoginAlert extends React.Component {
                 autoLoad={true}
                 scope="public_profile,email,user_managed_groups"
                 callback={(response) => {
-                    store.dispatch({type: 'UPDATE_USER', user: map_user(response)})
+                    if (!response.error) {
+                        store.dispatch({type: 'UPDATE_USER', user: map_user(response)});
+                    } else {
+                        console.error('login error.');
+                        console.error(response.error);
+                    }
                 }}
                 fields="id,email,name,first_name,picture,groups{administrator}"
                 cssClass="btn btn-social btn-facebook"

@@ -1,9 +1,9 @@
 /**
  * Created by Gryzli on 26.01.2017.
  */
-import React from 'react';
-import ReactTable from 'react-table';
-import {Label, OverlayTrigger, Tooltip, Checkbox} from 'react-bootstrap';
+import React from "react";
+import ReactTable from "react-table";
+import {Checkbox, Label, OverlayTrigger, Tooltip} from "react-bootstrap";
 
 function formatDate(date) {
     return new Date(date).toLocaleString('pl-PL');
@@ -13,21 +13,28 @@ let getTime = function (date) {
 };
 export default class ChartTable extends React.Component {
     render() {
-        const handleChange = this.props.onSelectChange;
-        let toggle = this.props.toggle;
-        const count= this.props.data.length;
+        const {store} = this.context;
+        const data = this.props.data;
+        const count= data.length;
         const columns = [{
             header: props=><h3 id="chart_table">{'WCS Chart '}<small>{'total '+count}</small></h3>,
             columns: [
                 {
                     sortable:false,
-                    header: props=><Checkbox bsClass="checkbox1" onClick={toggle}/>,
+                    header: props=><Checkbox bsClass="checkbox1" onClick={() => {
+                        store.dispatch({type: 'TOGGLE_ALL'})
+                    }}/>,
                     minWidth: 30,
                     maxWidth: 60,
                     accessor: 'selected',
                     render: props =>{
                         return <Checkbox bsClass="checkbox1" checked={props.value} id={props.row.id} name="selected"
-                                         onChange={handleChange}/>}
+                                         onChange={(e) => {
+                                             store.dispatch({
+                                                 type: 'TOGGLE_SELECTED', id: e.target.id,
+                                                 checked: e.target.checked
+                                             })
+                                         }}/>}
                 },
                 {
                     header: 'user',
@@ -105,8 +112,11 @@ export default class ChartTable extends React.Component {
             ]
         }
         ];
-        return (<ReactTable data={this.props.data} className="-striped -highlight" pageSizeOptions={[20, 50, 100]}
+        return (<ReactTable data={data} className="-striped -highlight" pageSizeOptions={[20, 50, 100]}
                             columns={columns} defaultPageSize={20} minRows={10}/>);
     }
 }
+ChartTable.contextTypes={
+    store: React.PropTypes.object
+};
 ChartTable.propTypes = {};

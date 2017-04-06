@@ -15,14 +15,15 @@ function countDays(date, until, days) {
 }
 let more_or_less = function (reactions_num, condition, state) {
     switch (condition) {
-        case 'less_then':
-            return reactions_num < state[condition];
-        case 'more_then':
-            return reactions_num > state[condition];
+        case 'less_control':
+            return reactions_num < state[condition].days;
+        case 'more_control':
+            return reactions_num > state[condition].days;
         default:
             return true;
     }
 };
+
 /**
  *
  * @param until {Date}
