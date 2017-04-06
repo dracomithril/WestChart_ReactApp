@@ -14,7 +14,7 @@ import "react-table/react-table.css";
 import "react-datepicker/dist/react-datepicker.css";
 let utils = require('./utils');
 
-var WaitMessage = (props) => {
+const WaitMessage = (props) => {
     return (<Modal show={props.show}>
         <Modal.Header>{"Hello"}</Modal.Header>
         <Modal.Body>{`Hi, ${props.user_name} we are fetching data please wait.`}</Modal.Body>
