@@ -2,12 +2,13 @@
  * Created by Gryzli on 28.01.2017.
  */
 import React, {PropTypes} from "react";
-import {Alert} from "react-bootstrap";
+import { Jumbotron} from "react-bootstrap";
 import FacebookLogin from "react-facebook-login";
 import "./LoginAlert.css";
-const loginMsg = "Login to facebook to be able to do something cool";
 const notGroupAdmin = "Sorry you are not admin of this group.";
 const groupId = '1707149242852457';
+
+
 let map_user = (response) => {
     let isGroupAdmin = response.groups.data.filter((elem) => elem.id === groupId && elem.administrator === true);
     return {
@@ -24,13 +25,24 @@ let map_user = (response) => {
     };
 };
 export default class LoginAlert extends React.Component {
+
+    componentDidMount() {
+        const {store} = this.context;
+        this.unsubscribe = store.subscribe(() => this.forceUpdate());
+        console.log('component LoginAlert did mount');
+    }
+    componentWillUnmount() {
+        this.unsubscribe();
+        console.log('component LoginAlert unmounted');
+    }
     render() {
         const {store} = this.context;
-        const state = store.getState();
-        return (<Alert bsClass="login-alert">
-            <h4>Oh snap! You got an error!</h4>
-            <p>{state.user === undefined ? loginMsg : (!state.user.isGroupAdmin ? notGroupAdmin : '')}</p>
-            <FacebookLogin
+        const {user, sp_user} = store.getState();
+
+        return (<Jumbotron bsClass="login-info">
+            <h4>{'To start working witch us you need to login to facebook and spotify.'}<i className="fa fa-heart"/></h4>
+            <p>{!user.isGroupAdmin ? notGroupAdmin : ''}</p>
+            {user.id===undefined&&<FacebookLogin
                 appId={process.env.NODE_ENV === 'production' ? "1173483302721639" : "1173486879387948"}
                 language="pl_PL"
                 autoLoad={true}
@@ -47,8 +59,12 @@ export default class LoginAlert extends React.Component {
                 cssClass="btn btn-social btn-facebook"
                 icon={"fa fa-facebook"}
                 version="v2.8"
-            />
-        </Alert>)
+            />}
+            {sp_user.id === undefined &&
+            <a href={process.env.NODE_ENV === 'development' ? "http://localhost:3001/api/login" : "/api/login"}
+               className="btn btn-social btn-spotify"><i className="fa fa-spotify"/>Login to
+                spotify</a>}
+        </Jumbotron>)
     }
 }
 LoginAlert.contextTypes = {

@@ -28,3 +28,21 @@
 .logged img {
     margin-right: 10px;
 }
+.btn-spotify {
+    color: #fff;
+    background-color: forestgreen;
+    border-color: rgba(0,0,0,0.2);
+}
+.spotify{
+    background: forestgreen;
+    padding: 5px;
+    margin-top: 5px;
+    border: 1px solid white;
+    border-radius: 10px;
+}
+.spotify i{
+    padding-right: 10px;
+    padding-left: 5px;
+    padding-top: 2px;
+    font-size: 24px;
+}

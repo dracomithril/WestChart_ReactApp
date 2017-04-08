@@ -27,6 +27,19 @@ const user = (state = {}, action) => {
             return state;
     }
 };
+const sp_user = (state = {}, action) => {
+    switch (action.type) {
+        case 'UPDATE_SP_USER':
+           let obj= Object.assign({},state,action.user,{
+                access_token: action.access_token,
+                refresh_token: action.refresh_token
+            });
+            return obj;
+        default:
+            return state;
+    }
+};
+
 const chart = (state = [], action) => {
     switch (action.type) {
         case 'UPDATE_CHART':
@@ -48,7 +61,19 @@ const chart = (state = [], action) => {
 const list_sort = (state = 'reaction', action) => {
     return action.type === 'UPDATE_LIST_SORT' ? action.sort : state;
 };
-
+const search_list=(state = [], action) => {
+    switch (action.type) {
+        case 'UPDATE_SEARCH':
+            return action.search;
+        case 'UPDATE_SINGLE_SEARCH':
+            let entry = _.clone(state);
+            const entry2 = entry[action.id];
+            entry2[action.field] = action.value;
+            return entry;
+        default:
+            return state;
+    }
+};
 /**
  *
  * @param state {boolean}
@@ -95,6 +120,7 @@ const filters = (state = {}, action) => {
     }
 };
 let reducers = {
-    filters, user, chart, enable_until, last_update, start_date, show_last, since, until, list_sort, songs_per_day
+    filters, user, chart, enable_until, last_update, start_date, show_last, since, until, list_sort, songs_per_day,
+    sp_user, search_list
 };
 export default reducers;
