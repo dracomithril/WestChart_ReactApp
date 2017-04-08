@@ -88,3 +88,12 @@ input[type=checkbox]:checked {
 #d_until{
     margin-left: 50px;
 }
+.spotify_sumary{
+    border: 2px solid blue;
+    padding: 4px;
+    margin: 4px;
+}
+.spotify_sumary span{
+    color: darkgreen;
+    font-size: medium;
+}
