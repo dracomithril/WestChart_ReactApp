@@ -18,7 +18,7 @@ function filterChart(store) {
     let {chart, filters,until, songs_per_day} = store.getState();
     const view_chart = chart.filter((elem) => {
         let doTest = (filter) => {
-            if (filter.check.name === 'countDays') {
+            if (filter.type === 'countDays') {
                 return filter.check(elem[filter.valueName], until, filters[filter.input.name].days) > 0;
             }
             else {
