@@ -1,6 +1,6 @@
 {
   "name": "WestChart_ReactApp",
-  "version": "0.3.4",
+  "version": "0.3.5",
   "private": true,
   "engines": {
     "node": "6.10.1"
@@ -72,8 +72,10 @@
     "react-datepicker": "^0.44.0",
     "react-dom": "^15.4.2",
     "react-facebook-login": "^3.5.0",
+    "react-redux": "^5.0.3",
     "react-sticky": "^5.0.5",
     "react-table": "^5.1.1",
+    "redux": "^3.6.0",
     "request": "^2.79.0",
     "yarn": "^0.21.3"
   },

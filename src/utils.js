@@ -2,78 +2,54 @@
  * Created by Gryzli on 28.01.2017.
  */
 
+import filters_def from "./filters";
 const woc_string = "Wielkie Ogarnianie Charta";
+import qs from "querystring";
+
 /**
  *
- * @param until {Date}
- * @param days {number}
- * @returns {Date}
- */
-function subtractDaysFromDate(until, days) {
-    let since_date = new Date(until.toISOString());
-    since_date.setDate(until.getDate() - days);
-    return since_date;
-}
-/**
- *
- * @param state
+ * @param store
  * @returns {{view_chart: (*), error_days: Array.<*>}}
  * @private
  */
-function _filterChart(state) {
-    let songs_per_day = {};
-    let view_chart = state.chart;
-    const until = state.until;
-    const dateAddedControl = state.date_added_control;
-    const dateCreateControl = state.date_create_control;
-    const dateUpdateControl = state.date_update_control;
-    const wOC = state.w_o_c;
+function filterChart(store) {
 
-    view_chart = view_chart.filter((elem) => {
+    let songs_per_day_arr = {};
+    let {chart, filters,until, songs_per_day} = store.getState();
+    const view_chart = chart.filter((elem) => {
+        let doTest = (filter) => {
+            if (filter.check.name === 'countDays') {
+                return filter.check(elem[filter.valueName], until, filters[filter.input.name].days) > 0;
+            }
+            else {
+                return filter.check(elem.reactions_num, filter.input.name, filters)
+            }
+        };
+        let results = filters_def.control.filter(e => {
+            return filters[e.input.name].checked});
+        const map = results.map(doTest);
+        let res1 = map.reduce((pr, cr) => pr && cr);
 
-        let result = true;
-        if (dateCreateControl) {
-            let cIn = subtractDaysFromDate(until, state.show_created_in);
-            let cIn1 = new Date(elem.created_time).getTime();
-            result &= (cIn1 - cIn.getTime()) > 0;
+        if (!filters.woc_control.checked) {
+            res1 &= elem.message !== undefined ? !elem.message.toLowerCase().includes(woc_string.toLowerCase()) : true;
         }
-        if (dateUpdateControl) {
-            let uIn = subtractDaysFromDate(until, state.show_updated_in);
-            let uIn1 = new Date(elem.updated_time).getTime();
-            result &= (uIn1 - uIn.getTime()) > 0;
-        }
-        if (dateAddedControl) {
-            let aIn = subtractDaysFromDate(until, state.show_added_in);
-            let aIn1 = new Date(elem.added_time).getTime();
-            result &= (aIn1 - aIn.getTime()) > 0;
-        }
-        if (!wOC) {
-            result &= elem.message !== undefined ? !elem.message.toLowerCase().includes(woc_string.toLowerCase()) : true;
-        }
-        if (state.less_then_control) {
-            result &= elem.reactions_num < state.less_then
-        }
-        if (state.more_then_control) {
-            result &= elem.reactions_num > state.more_then;
-        }
-        if (result && elem.added_time !== undefined) {
-            if (songs_per_day[elem.added_time]) {
-                songs_per_day[elem.added_time].count++
+        if (res1 && elem.added_time !== undefined) {
+            if (songs_per_day_arr[elem.added_time]) {
+                songs_per_day_arr[elem.added_time].count++
             } else {
-                songs_per_day[elem.added_time] = {
+                songs_per_day_arr[elem.added_time] = {
                     count: 1,
                     org: elem.added_time
                 };
             }
         }
-
-        return result;
+        return res1;
     });
-    let error_days = Object.keys(songs_per_day).filter(key => {
-        return songs_per_day[key].count !== state.songs_per_day
+    let error_days = Object.keys(songs_per_day_arr).filter(key => {
+        return songs_per_day_arr[key].count !== songs_per_day
     }).map(elem => {
-        const songsPerDay = songs_per_day[elem];
-        songsPerDay.color = songs_per_day[elem].count > state.songs_per_day ? 'red' : 'blue';
+        const songsPerDay = songs_per_day_arr[elem];
+        songsPerDay.color = songs_per_day_arr[elem].count > songs_per_day ? 'red' : 'blue';
         return songsPerDay
     });
 
@@ -106,10 +82,32 @@ let sorting = {
         });
     }
 };
+let get_chart_from_server = function (query_params, store) {
+    let url = 'api/get_chart?' + qs.stringify(query_params);
+    console.time('client-obtain-chart');
+    fetch(url).then((resp) => {
+            console.log('obtained chart list');
+            console.timeEnd('client-obtain-chart');
+            if (resp.status === 200) {
+                return resp.json()
+            }
+            return Promise.reject(resp);
+        }
+    ).then((b) => {
+            // that.setState(b);
+            store.dispatch({type: 'UPDATE_CHART', chart: b.chart});
+            store.dispatch({type: 'UPDATE_LAST_UPDATE', date: b.last_update});
+        }
+    ).catch(err => {
+        console.error('Error in fetch chart.');
+        console.error(err);
+    });
+};
 
 module.exports = {
-    filterChart: _filterChart,
-    sorting: sorting,
-    subtractDaysFromDate: subtractDaysFromDate,
-    woc_string: woc_string
+    filterChart,
+    sorting,
+    subtractDaysFromDate: filters_def.subtractDaysFromDate,
+    woc_string,
+    get_chart_from_server
 };
