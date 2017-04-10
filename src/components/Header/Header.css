@@ -6,6 +6,7 @@
     height: 150px;
     color: white;
     background: #030049 url(baner.png) no-repeat center;
+    margin-bottom: 10px;
 }
 .title-header {
     margin: 10px 0 20px;
