@@ -1,8 +1,8 @@
 /**
  * Created by Gryzli on 09.04.2017.
  */
-import React from 'react';
-import {Badge, PageHeader} from "react-bootstrap";
+import React from "react";
+import {Badge} from "react-bootstrap";
 let {sorting} = require('./../utils');
 const create_print_list = (elem, index) => {
     return <div key={elem.id}>
@@ -27,12 +27,15 @@ export default class Summary extends React.Component {
             .map((elem, index) => <option key={index} value={elem}>{elem.toLowerCase()}</option>);
         let print_list = this.props.selected.map(create_print_list);
         return (<div>
-            <PageHeader id="list">{'List by: '}
+            <h3 id="list">{'List by: '}
                 <select name="list_sort" value={list_sort}
-                        onChange={(e) => store.dispatch({type: 'UPDATE_LIST_SORT', sort: e.target.value})}>
+                        onChange={(e) => store.dispatch({
+                            type: 'UPDATE_LIST_SORT',
+                            sort: e.target.value
+                        })}>
                     {sorting_options}
                 </select>
-            </PageHeader>
+            </h3>
             <div id="popover-contained" title="Print list">
                 {print_list}
             </div>

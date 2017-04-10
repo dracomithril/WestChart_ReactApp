@@ -2,7 +2,7 @@
  * Created by Gryzli on 09.04.2017.
  */
 import React from "react";
-import {Button, DropdownButton, MenuItem, PageHeader} from "react-bootstrap";
+import {Button, DropdownButton, MenuItem} from "react-bootstrap";
 import PlaylistForm from "./PlaylistForm";
 import Spotify from "spotify-web-api-node";
 const spotifyApi = new Spotify();
@@ -110,10 +110,11 @@ export default class SpotifySearch extends React.Component {
         const {search_list} = store.getState();
         let search_list_view = search_list.map(this.create_search_list_view.bind(this));
         return (<div>
-            <PageHeader id="list">{'Search music by: '}
-            </PageHeader>
+            <h3 id="list">{'Search music by: '}
+
             <div id="spotify_info"/>
             <PlaylistForm {...this.props}/>
+            </h3>
             {search_list_view.length > 0 && <table>
                 <thead>
                 <tr>

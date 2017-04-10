@@ -114,7 +114,7 @@ export default class ChartTable extends React.Component {
         }
         ];
         return (<ReactTable data={data} className="-striped -highlight" pageSizeOptions={[20, 50, 100]}
-                            columns={columns} defaultPageSize={20} minRows={10} noDataText={`Hi, ${user.first_name} please click update to start.`}/>);
+                            columns={columns} defaultPageSize={20} minRows={10} noDataText={<span>{`Hi, ${user.first_name} please click `}<strong style={{color:"blue"}}>Update</strong>{` to start.`}</span>}/>);
     }
 }
 ChartTable.contextTypes={

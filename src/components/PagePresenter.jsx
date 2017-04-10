@@ -3,7 +3,6 @@
  */
 import React from 'react';
 import PickYourDate from "./PickYourDate";
-import MainMenu from "./Menu";
 import ChartPresenter from "./ChartPresenter";
 import {Modal} from "react-bootstrap";
 import FilteringOptions from "./FilteringOptions";
@@ -29,7 +28,6 @@ export default class PagePresenter extends React.Component {
             error_days1 = error_days;
         }
         return (<div>
-            {user.isGroupAdmin && <MainMenu/>}
             {user.isGroupAdmin &&
             <div>
                 <div className="formArea">
@@ -43,7 +41,6 @@ export default class PagePresenter extends React.Component {
                 </div>
                 <ChartPresenter view_chart={view_chart1}/>
             </div>}
-
         </div>);
     }
 }

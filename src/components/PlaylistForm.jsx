@@ -56,7 +56,7 @@ export default class PlaylistForm extends React.Component {
                 let entry =
                     (<div className="spotify_sumary">
                         <span>{'Created playlist! name: ' + body.name}</span><br/>
-                        <a href={spotify_url}>{spotify_url}</a>
+                        <a href={spotify_url} target="_newtab">{spotify_url}</a>
                     </div>);
                 ReactDOM.render(
                     entry,
