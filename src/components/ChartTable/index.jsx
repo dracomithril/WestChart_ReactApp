@@ -14,6 +14,7 @@ let getTime = function (date) {
 export default class ChartTable extends React.Component {
     render() {
         const {store} = this.context;
+        const {user}= store.getState();
         const data = this.props.data;
         const count= data.length;
         const columns = [{
@@ -113,7 +114,7 @@ export default class ChartTable extends React.Component {
         }
         ];
         return (<ReactTable data={data} className="-striped -highlight" pageSizeOptions={[20, 50, 100]}
-                            columns={columns} defaultPageSize={20} minRows={10}/>);
+                            columns={columns} defaultPageSize={20} minRows={10} noDataText={`Hi, ${user.first_name} please click update to start.`}/>);
     }
 }
 ChartTable.contextTypes={

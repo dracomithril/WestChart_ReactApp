@@ -5,12 +5,14 @@
 import moment from "moment";
 let showDays = 7;
 let _ = require('lodash');
+const action_types = require('./action_types');
+
 const create_control = (control, action) => {
     if (control.id === action.id) {
         switch (action.type) {
-            case 'TOGGLE_FILTER':
+            case action_types.TOGGLE_FILTER:
                 return Object.assign({}, control, {checked: action.checked});
-            case 'UPDATE_DAYS':
+            case action_types.UPDATE_DAYS:
                 return Object.assign({}, control, {days: action.value});
             default:
                 return control;
@@ -19,9 +21,10 @@ const create_control = (control, action) => {
         return control;
     }
 };
+
 const user = (state = {}, action) => {
     switch (action.type) {
-        case 'UPDATE_USER':
+        case action_types.UPDATE_USER:
             return action.user;
         default:
             return state;
@@ -29,8 +32,8 @@ const user = (state = {}, action) => {
 };
 const sp_user = (state = {}, action) => {
     switch (action.type) {
-        case 'UPDATE_SP_USER':
-           let obj= Object.assign({},state,action.user,{
+        case action_types.UPDATE_SP_USER:
+            let obj = Object.assign({}, state, action.user, {
                 access_token: action.access_token,
                 refresh_token: action.refresh_token
             });
@@ -40,15 +43,16 @@ const sp_user = (state = {}, action) => {
     }
 };
 
+
 const chart = (state = [], action) => {
     switch (action.type) {
-        case 'UPDATE_CHART':
+        case action_types.UPDATE_CHART:
             return action.chart;
-        case 'TOGGLE_SELECTED':
+        case action_types.TOGGLE_SELECTED:
             let l = _.clone(state);
             l[action.id].selected = action.checked;
             return l;
-        case 'TOGGLE_ALL':
+        case action_types.TOGGLE_ALL:
             return state.map((elem) => {
                 let copy = _.clone(elem);
                 copy.selected = !elem.selected;
@@ -59,13 +63,13 @@ const chart = (state = [], action) => {
     }
 };
 const list_sort = (state = 'reaction', action) => {
-    return action.type === 'UPDATE_LIST_SORT' ? action.sort : state;
+    return action.type === action_types.UPDATE_LIST_SORT ? action.sort : state;
 };
-const search_list=(state = [], action) => {
+const search_list = (state = [], action) => {
     switch (action.type) {
-        case 'UPDATE_SEARCH':
+        case action_types.UPDATE_SEARCH:
             return action.search;
-        case 'UPDATE_SINGLE_SEARCH':
+        case action_types.UPDATE_SINGLE_SEARCH:
             let entry = _.clone(state);
             const entry2 = entry[action.id];
             entry2[action.field] = action.value;
@@ -81,7 +85,12 @@ const search_list=(state = [], action) => {
  * @returns {boolean}
  */
 const enable_until = (state = false, action) => {
-    return action.type === 'TOGGLE_ENABLE_UNTIL' ? action.checked : state;
+    return action.type === action_types.TOGGLE_ENABLE_UNTIL? action.checked : state;
+};
+
+
+const sp_playlist_name = (state = '', action) => {
+    return action.type === action_types.UPDATE_PLAYLIST_NAME ? action.value : state;
 };
 /**
  *
@@ -90,23 +99,26 @@ const enable_until = (state = false, action) => {
  * @returns {string}
  */
 const last_update = (state = '', action) => {
-    return action.type === 'UPDATE_LAST_UPDATE' ? action.date : state;
+    return action.type === action_types.UPDATE_LAST_UPDATE ? action.date : state;
+};
+const show_wait = (state = false, action) => {
+    return action.type === action_types.CHANGE_SHOW_WAIT ? action.show : state;
 };
 
 const start_date = (state = moment(), action) => {
-    return action.type === 'UPDATE_START_TIME' ? action.date : state;
+    return action.type === action_types.UPDATE_START_TIME ? action.date : state;
 };
 const since = (state = '', action) => {
-    return action.type === 'UPDATE_SINCE' ? action.date : state;
+    return action.type === action_types.UPDATE_SINCE ? action.date : state;
 };
 const until = (state = '', action) => {
-    return action.type === 'UPDATE_UNTIL' ? action.date : state;
+    return action.type === action_types.UPDATE_UNTIL ? action.date : state;
 };
 const songs_per_day = (state = 2, action) => {
-    return action.type === 'UPDATE_SONGS_PER_DAY' ? action.days : state;
+    return action.type === action_types.UPDATE_SONGS_PER_DAY ? action.days : state;
 };
 const show_last = (state = 31, action) => {
-    return action.type === 'UPDATE_SHOW_LAST' ? action.days : state;
+    return action.type === action_types.UPDATE_SHOW_LAST ? action.days : state;
 };
 
 const filters = (state = {}, action) => {
@@ -121,6 +133,6 @@ const filters = (state = {}, action) => {
 };
 let reducers = {
     filters, user, chart, enable_until, last_update, start_date, show_last, since, until, list_sort, songs_per_day,
-    sp_user, search_list
+    sp_user, search_list,sp_playlist_name, show_wait
 };
 export default reducers;

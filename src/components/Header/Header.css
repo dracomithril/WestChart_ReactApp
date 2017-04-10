@@ -33,6 +33,11 @@
     background-color: forestgreen;
     border-color: rgba(0,0,0,0.2);
 }
+.btn-spotify:hover {
+    color: #333;
+    background-color: green;
+    border-color: darkgreen;
+}
 .spotify{
     background: forestgreen;
     padding: 5px;

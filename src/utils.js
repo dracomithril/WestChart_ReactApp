@@ -5,7 +5,7 @@
 import filters_def from "./filters";
 const woc_string = "Wielkie Ogarnianie Charta";
 import qs from "querystring";
-
+const action_types= require('./reducers/action_types');
 /**
  *
  * @param store
@@ -95,10 +95,13 @@ let get_chart_from_server = function (query_params, store) {
         }
     ).then((b) => {
             // that.setState(b);
-            store.dispatch({type: 'UPDATE_CHART', chart: b.chart});
-            store.dispatch({type: 'UPDATE_LAST_UPDATE', date: b.last_update});
+            store.dispatch({type: action_types.UPDATE_CHART, chart: b.chart});
+            store.dispatch({type: action_types.UPDATE_LAST_UPDATE, date: b.last_update});
+            store.dispatch({type: action_types.CHANGE_SHOW_WAIT, show: false});
+
         }
     ).catch(err => {
+        store.dispatch({type: action_types.CHANGE_SHOW_WAIT, show: false});
         console.error('Error in fetch chart.');
         console.error(err);
     });

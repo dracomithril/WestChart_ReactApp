@@ -8,7 +8,7 @@ import Header from "./components/Header";
 import {combineReducers, createStore} from "redux";
 import {Provider} from "react-redux";
 import "./index.css";
-import reducers from "./reducers";
+import reducers from "./reducers/reducers";
 const {Route, Router} = require('react-router');
 
 

@@ -5,6 +5,7 @@ import React, {PropTypes} from "react";
 import {Accordion, Button, Checkbox, Label, Panel} from "react-bootstrap";
 import DatePicker from "react-datepicker";
 let utils = require('./../utils');
+const action_types = require('../reducers/action_types');
 export default class PickYourDate extends React.Component {
     componentWillUnmount() {
         console.log('component ChartPresenter unmounted');
@@ -15,13 +16,15 @@ export default class PickYourDate extends React.Component {
         const {store} = this.context;
         const {user} = store.getState();
         if (user.isGroupAdmin) {
-            this.updateChart()
+            //this.updateChart()
         }
     }
 
     updateChart() {
         const {store} = this.context;
+        store.dispatch({type:action_types.CHANGE_SHOW_WAIT,show:true});
         const {user, enable_until, start_date, show_last} = store.getState();
+
         let until = enable_until ? start_date.toDate() : new Date();
 
         let since = utils.subtractDaysFromDate(until, show_last);
