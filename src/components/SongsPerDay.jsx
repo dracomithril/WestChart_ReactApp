@@ -2,6 +2,7 @@
  * Created by Gryzli on 29.03.2017.
  */
 import React from "react";
+import PropTypes from 'prop-types';
 import {Panel} from "react-bootstrap";
 export default class SongsPerDay extends React.Component {
     render() {
@@ -33,6 +34,6 @@ export default class SongsPerDay extends React.Component {
     }
 }
 SongsPerDay.contextTypes = {
-    store: React.PropTypes.object
+    store: PropTypes.object
 };
 SongsPerDay.propTypes = {};

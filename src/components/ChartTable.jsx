@@ -2,6 +2,7 @@
  * Created by Gryzli on 26.01.2017.
  */
 import React from "react";
+import PropTypes from 'prop-types';
 import ReactTable from "react-table";
 import {Checkbox, Label, OverlayTrigger, Tooltip} from "react-bootstrap";
 
@@ -118,6 +119,6 @@ export default class ChartTable extends React.Component {
     }
 }
 ChartTable.contextTypes={
-    store: React.PropTypes.object
+    store: PropTypes.object
 };
 ChartTable.propTypes = {};

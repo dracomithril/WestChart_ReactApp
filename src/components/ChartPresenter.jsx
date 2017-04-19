@@ -2,6 +2,7 @@
  * Created by Gryzli on 06.04.2017.
  */
 import React from "react";
+import PropTypes from 'prop-types';
 import {Jumbotron} from "react-bootstrap";
 import Summary from "./Summary";
 import ChartTable from "./ChartTable";
@@ -35,6 +36,6 @@ export default class ChartPresenter extends React.Component {
     }
 }
 ChartPresenter.contextTypes = {
-    store: React.PropTypes.object
+    store: PropTypes.object
 };
 ChartPresenter.propTypes = {};

@@ -2,6 +2,7 @@
  * Created by Gryzli on 09.04.2017.
  */
 import React from "react";
+import PropTypes from 'prop-types';
 import {Button, DropdownButton, MenuItem} from "react-bootstrap";
 import PlaylistForm from "./PlaylistForm";
 import Spotify from "spotify-web-api-node";
@@ -132,8 +133,8 @@ export default class SpotifySearch extends React.Component {
     }
 }
 SpotifySearch.contextTypes = {
-    store: React.PropTypes.object
+    store: PropTypes.object
 };
 SpotifySearch.propTypes = {
-    selected: React.PropTypes.array
+    selected: PropTypes.array
 };

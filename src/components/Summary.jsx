@@ -2,6 +2,7 @@
  * Created by Gryzli on 09.04.2017.
  */
 import React from "react";
+import PropTypes from 'prop-types';
 import {Badge} from "react-bootstrap";
 let {sorting} = require('./../utils');
 const create_print_list = (elem, index) => {
@@ -43,6 +44,6 @@ export default class Summary extends React.Component {
     }
 }
 Summary.contextTypes = {
-    store: React.PropTypes.object
+    store: PropTypes.object
 };
 Summary.propTypes = {};

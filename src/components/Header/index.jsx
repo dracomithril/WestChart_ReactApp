@@ -1,7 +1,8 @@
 /**
  * Created by Gryzli on 25.01.2017.
  */
-import React, {PropTypes} from "react";
+import React from "react";
+import PropTypes from 'prop-types';
 import { PageHeader} from "react-bootstrap";
 import CookieBanner from "react-cookie-banner";
 import UserInfo from "./../UserInfo";

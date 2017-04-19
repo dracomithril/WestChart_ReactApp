@@ -1,0 +1,16 @@
+{
+  "filters": {
+    "woc_control": {"checked": true},
+    "add_control": {"checked": true},
+    "create_control": {"checked": true},
+    "update_control": {"checked": true},
+    "more_control": {"checked": true},
+    "less_control": {"checked": true}
+  },
+  "user":{},
+  "sp_user":{},
+  "list_sort":"reaction",
+  "chart":[],
+  "sp_playlist_name":"",
+  "search_list":[]
+}

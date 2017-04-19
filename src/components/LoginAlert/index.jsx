@@ -1,7 +1,8 @@
 /**
  * Created by Gryzli on 28.01.2017.
  */
-import React, {PropTypes} from "react";
+import React from "react";
+import PropTypes from 'prop-types';
 import {Button, Jumbotron} from "react-bootstrap";
 import FacebookLogin from "react-facebook-login";
 import "./LoginAlert.css";

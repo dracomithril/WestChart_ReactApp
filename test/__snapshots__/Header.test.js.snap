@@ -1,0 +1,30 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<Header/> renders without crashing ChartPresenter 1`] = `
+<div
+  className="header"
+>
+  <CookieBanner
+    buttonMessage="Got it"
+    cookie="user-has-accepted-cookies"
+    cookieExpiration={
+      Object {
+        "years": 1,
+      }
+    }
+    dismissOnScroll={true}
+    dismissOnScrollThreshold={0}
+    message="Yes, we use cookies. If you don't like it change website, we won't miss you! ;)"
+    onAccept={[Function]}
+    styles={Object {}}
+  />
+  <PageHeader
+    bsClass="title-header"
+  >
+    West Coast Swing Dance Chart
+    <small>
+      Admin helper
+    </small>
+  </PageHeader>
+</div>
+`;

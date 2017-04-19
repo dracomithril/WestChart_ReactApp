@@ -1,7 +1,8 @@
 /**
  * Created by Gryzli on 12.02.2017.
  */
-import React, {PropTypes} from "react";
+import React from "react";
+import PropTypes from 'prop-types';
 import {Accordion, Button, Checkbox, Label, Panel} from "react-bootstrap";
 import DatePicker from "react-datepicker";
 let utils = require('./../utils');

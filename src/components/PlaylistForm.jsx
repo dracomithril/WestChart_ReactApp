@@ -2,6 +2,7 @@
  * Created by Gryzli on 10.04.2017.
  */
 import React from "react";
+import PropTypes from 'prop-types';
 import {Button, Checkbox, Form, FormControl, FormGroup, Glyphicon, InputGroup} from "react-bootstrap";
 import ReactDOM from "react-dom";
 import Spotify from "spotify-web-api-node";
@@ -105,6 +106,8 @@ export default class PlaylistForm extends React.Component {
     }
 }
 PlaylistForm.contextTypes = {
-    store: React.PropTypes.object
+    store: PropTypes.object
 };
-PlaylistForm.propTypes = {};
+PlaylistForm.propTypes = {
+    selected: PropTypes.array
+};

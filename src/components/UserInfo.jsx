@@ -2,6 +2,7 @@
  * Created by Gryzli on 07.04.2017.
  */
 import React from "react";
+import PropTypes from 'prop-types';
 // import Spotify from 'spotify-web-api-js';
 import {Image, Well} from "react-bootstrap";
 export default class UserInfo extends React.Component {
@@ -33,7 +34,7 @@ export default class UserInfo extends React.Component {
     }
 }
 UserInfo.contextTypes = {
-    store: React.PropTypes.object
+    store: PropTypes.object
 };
 
 UserInfo.propTypes = {};

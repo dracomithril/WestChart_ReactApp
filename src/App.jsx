@@ -1,4 +1,5 @@
-import React, {Component, PropTypes} from "react";
+import React, {Component} from "react";
+import PropTypes from 'prop-types';
 import LoginAlert from "./components/LoginAlert";
 import Footer from "./components/Footer";
 import PagePresenter from "./components/PagePresenter";

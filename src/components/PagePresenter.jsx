@@ -2,6 +2,7 @@
  * Created by Gryzli on 08.04.2017.
  */
 import React from 'react';
+import PropTypes from 'prop-types';
 import PickYourDate from "./PickYourDate";
 import ChartPresenter from "./ChartPresenter";
 import {Modal} from "react-bootstrap";
@@ -45,6 +46,6 @@ export default class PagePresenter extends React.Component {
     }
 }
 PagePresenter.contextTypes={
-    store:React.PropTypes.object
+    store: PropTypes.object
 };
 PagePresenter.propTypes = {};
