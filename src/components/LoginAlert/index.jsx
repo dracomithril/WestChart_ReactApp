@@ -27,24 +27,34 @@ let map_user = (response) => {
     };
 };
 
+const loginToSpotify = () => {
+    fetch('/api/login').then((response) => {
+        return response.text()
+    }).then((path) => {
+        const urlObj = url.parse(path);
+        const query = querystring.parse(urlObj.query);
+        Cookies.set('spotify_auth_state', query.state);
+        console.log(path);
+        window.location = path
+    }).catch((resp) => {
+        console.log(resp);
+    })
+};
 
 export default class LoginAlert extends React.Component {
 
     componentDidMount() {
-        const {store} = this.context;
-        this.unsubscribe = store.subscribe(() => this.forceUpdate());
-
         console.log('component LoginAlert did mount');
     }
 
     componentWillUnmount() {
-        this.unsubscribe();
         console.log('component LoginAlert unmounted');
     }
 
     render() {
         const {store} = this.context;
         const {user, sp_user} = store.getState();
+
 
         return (<Jumbotron bsClass="login-info">
             <h4>{'To start working witch us you need to login to facebook and spotify.'}<i className="fa fa-heart"/>
@@ -70,19 +80,7 @@ export default class LoginAlert extends React.Component {
                 version="v2.8"
             />}
             {sp_user.id === undefined &&
-            <Button className="btn btn-social btn-spotify" onClick={() => {
-                fetch('/api/login').then((response) => {
-                    return response.text()
-                }).then((path) => {
-                    const urlObj = url.parse(path);
-                    const query = querystring.parse(urlObj.query);
-                    Cookies.set('spotify_auth_state', query.state);
-                    console.log(path);
-                    window.location = path
-                }).catch((resp) => {
-                    console.log(resp);
-                })
-            }}><i className="fa fa-spotify"/>Login to
+            <Button className="btn btn-social btn-spotify" onClick={loginToSpotify}><i className="fa fa-spotify"/>Login to
                 spotify</Button>}
         </Jumbotron>)
     }

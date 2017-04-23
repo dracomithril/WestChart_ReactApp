@@ -3,23 +3,23 @@
  */
 import React from 'react';
 import PropTypes from 'prop-types';
-import PlaylistForm from '../src/components/PlaylistForm';
+import Header from '../../src/components/Header/index';
 import {shallow} from 'enzyme';
 import {shallowToJson} from 'enzyme-to-json';
 import configureMockStore from 'redux-mock-store';
-const initial_state =require('./data/initial_state.json');
-
+const initial_state =require('../data/initial_state.json');
 const mockStore = configureMockStore([]);
-
-describe('<PlaylistForm/>', () => {
-    it('renders without crashing', () => {
+describe('<Header/>', () => {
+    it('renders without crashing ChartPresenter', () => {
         const store = mockStore(initial_state);
         const wrapper = shallow(
-            <PlaylistForm />, {
+            <Header />, {
                 context: {store},
                 childContextTypes: {store: PropTypes.object}
             }
         );
         expect(shallowToJson(wrapper)).toMatchSnapshot();
+
     });
+
 });

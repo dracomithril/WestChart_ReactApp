@@ -3,19 +3,18 @@
  */
 import React from 'react';
 import PropTypes from 'prop-types';
-import PagePresenter from '../src/components/PagePresenter';
+import SpotifySearch from '../../src/components/SpotifySearch';
 import {shallow} from 'enzyme';
 import {shallowToJson} from 'enzyme-to-json';
 import configureMockStore from 'redux-mock-store';
-const initial_state =require('./data/initial_state.json');
+const initial_state =require('../data/initial_state.json');
 
 const mockStore = configureMockStore([]);
-
-describe('<PagePresenter/>', () => {
+describe('<SpotifySearch/>', () => {
     it('renders without crashing', () => {
         const store = mockStore(initial_state);
         const wrapper = shallow(
-            <PagePresenter />, {
+            <SpotifySearch selected={[]}/>, {
                 context: {store},
                 childContextTypes: {store: PropTypes.object}
             }
@@ -23,5 +22,4 @@ describe('<PagePresenter/>', () => {
         expect(shallowToJson(wrapper)).toMatchSnapshot();
 
     });
-
 });

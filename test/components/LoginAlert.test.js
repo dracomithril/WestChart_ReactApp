@@ -3,17 +3,17 @@
  */
 import React from 'react';
 import PropTypes from 'prop-types';
-import ChartPresenter from '../src/components/ChartPresenter';
+import LoginAlert from '../../src/components/LoginAlert/index';
 import {shallow} from 'enzyme';
 import {shallowToJson} from 'enzyme-to-json';
 import configureMockStore from 'redux-mock-store';
-const initial_state =require('./data/initial_state.json');
+const initial_state =require('../data/initial_state.json');
 const mockStore = configureMockStore([]);
-describe('<ChartPresenter/>', () => {
+describe('<LoginAlert/>', () => {
     it('renders without crashing ChartPresenter', () => {
         const store = mockStore(initial_state);
         const wrapper = shallow(
-            <ChartPresenter view_chart={[]}/>, {
+            <LoginAlert />, {
                 context: {store},
                 childContextTypes: {store: PropTypes.object}
             }

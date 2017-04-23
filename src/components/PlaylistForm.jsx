@@ -23,7 +23,7 @@ export default class PlaylistForm extends React.Component {
         const date = new Date();
         const day1 = date.getDate();
         const str1 = date.toLocaleString('en-US', {month: 'short', day: 'numeric'});
-        date.setDate(day1 - 5);
+        date.setDate(day1 - 4);
         const str2 = date.toLocaleString('en-US', {month: 'short', day: 'numeric'});
         let playlist_name = 'Chart ' + str2 + '-' + str1;
         let list = playlist_name.split(' ').join('_');

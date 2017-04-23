@@ -17,13 +17,13 @@ describe('[chart]', function () {
     let requestMock = {
         getAsync: sinon.stub()
     };
-    beforeAll(function () {
+    beforeAll(() =>{
         const date = new Date('2017-03-03T23:00:00');
         clock = sinon.useFakeTimers(date.getTime());
         Chart = rewire('./server/chart');
         Chart.__set__('request', requestMock);
     });
-    afterAll(function () {
+    afterAll(() =>{
         clock.restore();
     });
     beforeEach(function () {
@@ -69,7 +69,8 @@ describe('[chart]', function () {
             expect(res.chart.length).toEqual(97);
             done();
         }).catch((err) => {
-            assert.calledTwice(requestMock.getAsync);
+            console.log()
+            assert.calledOnce(requestMock.getAsync);
             done();
         });
     });

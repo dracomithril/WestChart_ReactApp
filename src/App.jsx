@@ -49,8 +49,7 @@ class App extends Component {
 
     render() {
         const {store} = this.context;
-        const state = store.getState();
-        const {user, sp_user} = state;
+        const {user, sp_user} = store.getState();
         const isLogged = user.id !== undefined && sp_user.id !== undefined;
         return (
             <div className="App">

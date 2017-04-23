@@ -3,17 +3,19 @@
  */
 import React from 'react';
 import PropTypes from 'prop-types';
-import FilteringOptions from '../src/components/FilteringOptions';
+import PagePresenter from '../../src/components/PagePresenter';
 import {shallow} from 'enzyme';
 import {shallowToJson} from 'enzyme-to-json';
 import configureMockStore from 'redux-mock-store';
-const initial_state =require('./data/initial_state.json');
+const initial_state =require('../data/initial_state.json');
+
 const mockStore = configureMockStore([]);
-describe('<FilteringOptions/>', () => {
-    it('renders without crashing ChartPresenter', () => {
+
+describe('<PagePresenter/>', () => {
+    it('renders without crashing', () => {
         const store = mockStore(initial_state);
         const wrapper = shallow(
-            <FilteringOptions />, {
+            <PagePresenter />, {
                 context: {store},
                 childContextTypes: {store: PropTypes.object}
             }
