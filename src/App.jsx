@@ -11,10 +11,6 @@ const spotifyApi = new Spotify();
 const Cookies = require('cookies-js');
 
 class App extends Component {
-    componentWillUnmount() {
-        this.unsubscribe();
-    }
-
     componentDidMount() {
         const {store} = this.context;
         this.unsubscribe = store.subscribe(() => this.forceUpdate());
@@ -45,6 +41,9 @@ class App extends Component {
                 console.log(JSON.stringify(e));
             });
         }
+    }
+    componentWillUnmount() {
+        this.unsubscribe();
     }
 
     render() {

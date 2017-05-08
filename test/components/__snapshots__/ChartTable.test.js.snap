@@ -1,0 +1,185 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<ChartTable/> renders without crashing 1`] = `
+<src
+  ExpanderComponent={[Function]}
+  LoadingComponent={[Function]}
+  NoDataComponent={[Function]}
+  PaginationComponent={[Function]}
+  ResizerComponent={[Function]}
+  TableComponent={[Function]}
+  TbodyComponent={[Function]}
+  TdComponent={[Function]}
+  TfootComponent={[Function]}
+  ThComponent={[Function]}
+  TheadComponent={[Function]}
+  TrComponent={[Function]}
+  TrGroupComponent={[Function]}
+  className="-striped -highlight"
+  collapseOnDataChange={true}
+  collapseOnPageChange={true}
+  collapseOnSortingChange={true}
+  column={
+    Object {
+      "className": "",
+      "filterMethod": undefined,
+      "filterRender": [Function],
+      "footer": undefined,
+      "footerClassName": "",
+      "footerStyle": Object {},
+      "getFooterProps": [Function],
+      "getHeaderProps": [Function],
+      "getProps": [Function],
+      "header": undefined,
+      "headerClassName": "",
+      "headerStyle": Object {},
+      "hideFilter": false,
+      "minWidth": 100,
+      "render": undefined,
+      "show": true,
+      "sortable": true,
+      "style": Object {},
+    }
+  }
+  columns={
+    Array [
+      Object {
+        "columns": Array [
+          Object {
+            "accessor": "selected",
+            "header": [Function],
+            "maxWidth": 60,
+            "minWidth": 30,
+            "render": [Function],
+            "sortable": false,
+          },
+          Object {
+            "accessor": "from_user",
+            "header": "user",
+            "maxWidth": 300,
+            "minWidth": 200,
+            "render": [Function],
+          },
+          Object {
+            "accessor": "message",
+            "header": "fb msg",
+            "maxWidth": 80,
+            "render": [Function],
+          },
+          Object {
+            "accessor": "reactions_num",
+            "header": "reactions count",
+            "maxWidth": 100,
+            "minWidth": 60,
+            "sort": "dsc",
+          },
+          Object {
+            "accessor": [Function],
+            "header": "crated time",
+            "id": "createTime",
+            "maxWidth": 200,
+            "minWidth": 150,
+            "render": [Function],
+          },
+          Object {
+            "accessor": [Function],
+            "header": "added time",
+            "id": "addedTime",
+            "maxWidth": 150,
+            "render": [Function],
+          },
+          Object {
+            "accessor": [Function],
+            "header": "last update",
+            "id": "lastUpdate",
+            "maxWidth": 200,
+            "minWidth": 150,
+            "render": [Function],
+          },
+          Object {
+            "accessor": [Function],
+            "header": [Function],
+            "id": "yt_link",
+            "maxWidth": 600,
+            "minWidth": 200,
+            "render": [Function],
+            "width": 300,
+          },
+        ],
+        "header": [Function],
+      },
+    ]
+  }
+  data={Array []}
+  defaultFilterMethod={[Function]}
+  defaultFiltering={Array []}
+  defaultPageSize={20}
+  defaultResizing={Array []}
+  defaultSorting={Array []}
+  expanderColumnWidth={35}
+  freezeWhenExpanded={false}
+  getLoadingProps={[Function]}
+  getNoDataProps={[Function]}
+  getPaginationProps={[Function]}
+  getProps={[Function]}
+  getResizerProps={[Function]}
+  getTableProps={[Function]}
+  getTbodyProps={[Function]}
+  getTdProps={[Function]}
+  getTfootProps={[Function]}
+  getTfootTdProps={[Function]}
+  getTfootTrProps={[Function]}
+  getTheadFilterProps={[Function]}
+  getTheadFilterThProps={[Function]}
+  getTheadFilterTrProps={[Function]}
+  getTheadGroupProps={[Function]}
+  getTheadGroupThProps={[Function]}
+  getTheadGroupTrProps={[Function]}
+  getTheadProps={[Function]}
+  getTheadThProps={[Function]}
+  getTheadTrProps={[Function]}
+  getTrGroupProps={[Function]}
+  getTrProps={[Function]}
+  loading={false}
+  loadingText="Loading..."
+  minRows={10}
+  nextText="Next"
+  noDataText={
+    <span>
+      Hi, undefined please click 
+      <strong
+        style={
+          Object {
+            "color": "blue",
+          }
+        }
+      >
+        Update
+      </strong>
+       to start.
+    </span>
+  }
+  ofText="of"
+  onChange={[Function]}
+  pageSizeOptions={
+    Array [
+      20,
+      50,
+      100,
+    ]
+  }
+  pageText="Page"
+  pivotColumnWidth={200}
+  pivotIDKey="_pivotID"
+  pivotValKey="_pivotVal"
+  previousText="Previous"
+  resizable={true}
+  rowsText="rows"
+  showFilters={false}
+  showPageJump={true}
+  showPageSizeOptions={true}
+  showPagination={true}
+  style={Object {}}
+  subRowsKey="_subRows"
+/>
+`;

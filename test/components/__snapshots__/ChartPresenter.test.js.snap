@@ -1,0 +1,20 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<ChartPresenter/> renders without crashing ChartPresenter 1`] = `
+<Jumbotron
+  bsClass="App-body"
+  componentClass="div"
+>
+  <div>
+    <ChartTable
+      data={Array []}
+    />
+    <Summary
+      selected={Array []}
+    />
+    <SpotifySearch
+      selected={Array []}
+    />
+  </div>
+</Jumbotron>
+`;
