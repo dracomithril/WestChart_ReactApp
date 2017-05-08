@@ -3,9 +3,12 @@
  */
 
 import filters_def from "./filters";
-const woc_string = "Wielkie Ogarnianie Charta";
 import qs from "querystring";
-const action_types= require('./reducers/action_types');
+const woc_string = "Wielkie Ogarnianie Charta";
+const url = require('url');
+const querystring = require('querystring');
+const Cookies = require('cookies-js');
+const action_types = require('./reducers/action_types');
 /**
  *
  * @param store
@@ -15,7 +18,7 @@ const action_types= require('./reducers/action_types');
 function filterChart(store) {
 
     let songs_per_day_arr = {};
-    let {chart, filters,until, songs_per_day} = store.getState();
+    let {chart, filters, until, songs_per_day} = store.getState();
     const view_chart = chart.filter((elem) => {
         let doTest = (filter) => {
             if (filter.type === 'countDays') {
@@ -26,7 +29,8 @@ function filterChart(store) {
             }
         };
         let results = filters_def.control.filter(e => {
-            return filters[e.input.name].checked});
+            return filters[e.input.name].checked
+        });
         const map = results.map(doTest);
         let res1 = map.reduce((pr, cr) => pr && cr);
 
@@ -55,7 +59,7 @@ function filterChart(store) {
 
     return {view_chart, error_days};
 }
-let sorting = {
+const sorting = {
     reaction: (array) => {
         array.sort((a, b) => b.reactions_num - a.reactions_num)
     },
@@ -82,7 +86,7 @@ let sorting = {
         });
     }
 };
-let get_chart_from_server = function (query_params, store) {
+const get_chart_from_server = function (query_params, store) {
     let url = 'api/get_chart?' + qs.stringify(query_params);
     console.time('client-obtain-chart');
     fetch(url).then((resp) => {
@@ -106,9 +110,23 @@ let get_chart_from_server = function (query_params, store) {
         console.error(err);
     });
 };
+const loginToSpotify = function () {
+    fetch('/api/login').then((response) => {
+        return response.text()
+    }).then((path) => {
+        const urlObj = url.parse(path);
+        const query = querystring.parse(urlObj.query);
+        Cookies.set('spotify_auth_state', query.state);
+        console.log(path);
+        window.location = path
+    }).catch((resp) => {
+        console.log(resp);
+    })
+};
 
 module.exports = {
     filterChart,
+    loginToSpotify,
     sorting,
     subtractDaysFromDate: filters_def.subtractDaysFromDate,
     woc_string,

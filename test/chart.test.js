@@ -65,11 +65,11 @@ describe('[chart]', function () {
         since_date.setDate(date.getDate() - 31);
 
         Chart(31, since_date.toISOString(), date.toISOString(), '', groupId).then((res) => {
-            assert.calledTwice(requestMock.getAsync);
+            assert.calledOnce(requestMock.getAsync);
             expect(res.chart.length).toEqual(97);
             done();
         }).catch((err) => {
-            console.log()
+            console.log(err);
             assert.calledOnce(requestMock.getAsync);
             done();
         });

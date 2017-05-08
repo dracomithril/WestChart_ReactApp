@@ -11,10 +11,11 @@ const {sorting} = require('./../utils');
 
 
 export default class ChartPresenter extends React.Component {
+    /*istanbul ignore next*/
     componentWillUnmount() {
         console.log('component ChartPresenter unmounted');
     }
-
+    /*istanbul ignore next*/
     componentDidMount() {
         console.log('component ChartPresenter did mount');
     }

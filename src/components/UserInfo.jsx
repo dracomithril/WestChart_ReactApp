@@ -6,12 +6,12 @@ import PropTypes from 'prop-types';
 // import Spotify from 'spotify-web-api-js';
 import {Image, Well} from "react-bootstrap";
 export default class UserInfo extends React.Component {
+    /*istanbul ignore next*/
     componentWillUnmount() {
         console.log('component UserInfo unmounted');
     }
-
+    /*istanbul ignore next*/
     componentDidMount() {
-         // const {store} = this.context;
         console.log('component UserInfo did mount');
     }
 

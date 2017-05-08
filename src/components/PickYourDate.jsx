@@ -8,10 +8,11 @@ import DatePicker from "react-datepicker";
 let utils = require('./../utils');
 const action_types = require('../reducers/action_types');
 export default class PickYourDate extends React.Component {
+    /*istanbul ignore next*/
     componentWillUnmount() {
         console.log('component ChartPresenter unmounted');
     }
-
+    /*istanbul ignore next*/
     componentDidMount() {
         console.log('component ChartPresenter did mount');
         const {store} = this.context;

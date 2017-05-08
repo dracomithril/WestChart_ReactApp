@@ -6,7 +6,21 @@ import moment from "moment";
 let showDays = 7;
 let _ = require('lodash');
 const action_types = require('./action_types');
-
+let map_user = (response) => {
+    let isGroupAdmin = response.groups.data.filter((elem) => elem.id === '1707149242852457' && elem.administrator === true);
+    return {
+        accessToken: response.accessToken,
+        email: response.email,
+        first_name: response.first_name,
+        expiresIn: response.expiresIn,
+        id: response.id,
+        name: response.name,
+        signedRequest: response.signedRequest,
+        userID: response.userID,
+        picture_url: response.picture.data.url,
+        isGroupAdmin: isGroupAdmin
+    };
+};
 const create_control = (control, action) => {
     if (control.id === action.id) {
         switch (action.type) {
@@ -25,7 +39,14 @@ const create_control = (control, action) => {
 const user = (state = {}, action) => {
     switch (action.type) {
         case action_types.UPDATE_USER:
-            return action.user;
+            const response = action.response;
+            if (!response.error) {
+                return map_user(response);
+            } else {
+                console.error('login error.');
+                console.error(response.error);
+                break;
+            }
         default:
             return state;
     }
@@ -33,11 +54,10 @@ const user = (state = {}, action) => {
 const sp_user = (state = {}, action) => {
     switch (action.type) {
         case action_types.UPDATE_SP_USER:
-            let obj = Object.assign({}, state, action.user, {
+            return Object.assign({}, state, action.user, {
                 access_token: action.access_token,
                 refresh_token: action.refresh_token
             });
-            return obj;
         default:
             return state;
     }
@@ -85,7 +105,7 @@ const search_list = (state = [], action) => {
  * @returns {boolean}
  */
 const enable_until = (state = false, action) => {
-    return action.type === action_types.TOGGLE_ENABLE_UNTIL? action.checked : state;
+    return action.type === action_types.TOGGLE_ENABLE_UNTIL ? action.checked : state;
 };
 
 
@@ -133,6 +153,6 @@ const filters = (state = {}, action) => {
 };
 let reducers = {
     filters, user, chart, enable_until, last_update, start_date, show_last, since, until, list_sort, songs_per_day,
-    sp_user, search_list,sp_playlist_name, show_wait
+    sp_user, search_list, sp_playlist_name, show_wait
 };
 export default reducers;

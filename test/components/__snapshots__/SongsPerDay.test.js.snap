@@ -1,0 +1,32 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<SongsPerDay/> renders without crashing 1`] = `
+<Panel
+  bsClass="panel"
+  bsStyle="success"
+  defaultExpanded={false}
+  footer={false}
+  header={
+    <div>
+      <strong
+        style={
+          Object {
+            "paddingRight": 20,
+          }
+        }
+      >
+        songs per day
+      </strong>
+      <input
+        className="num_days"
+        max={10}
+        min={1}
+        name="songs_per_day"
+        onChange={[Function]}
+        step={1}
+        type="number"
+      />
+    </div>
+  }
+/>
+`;

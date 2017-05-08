@@ -9,10 +9,11 @@ import Spotify from "spotify-web-api-node";
 const spotifyApi = new Spotify();
 const action_types = require('./../reducers/action_types');
 export default class PlaylistForm extends React.Component {
+    /*istanbul ignore next*/
     componentWillUnmount() {
         console.log('component PlaylistForm unmounted');
     }
-
+    /*istanbul ignore next*/
     componentDidMount() {
         console.log('component PlaylistForm did mount');
     }
@@ -65,7 +66,7 @@ export default class PlaylistForm extends React.Component {
                 );
                 return spotifyApi.addTracksToPlaylist(sp_user.id, body.id, selected)
             })
-            .then(function (data) {
+            .then(function () {
                 console.log('Added tracks to playlist!');
             })
             .catch(function (err) {

@@ -1,0 +1,1950 @@
+{
+  "chart": [
+    {
+      "added_time": "2017-03-07T23:00:00.000Z",
+      "added_by": "Joanna Kozieńska",
+      "created_time": "2017-03-01T19:36:39+0000",
+      "from_user": "Anna Stanuchowska",
+      "full_picture": "https://external.xx.fbcdn.net/safe_image.php?d=AQCOBB0IaMR9ATLU&w=720&h=720&url=https%3A%2F%2Fi.ytimg.com%2Fvi%2FeBlFp2__XtM%2Fmaxresdefault.jpg&cfs=1&_nc_hash=AQDB3IuabP5vzAnZ",
+      "id": 0,
+      "likes_num": 0,
+      "link": {
+        "url": "https://www.youtube.com/watch?v=eBlFp2__XtM",
+        "name": "X Ambassadors - Unsteady (Erich Lee Gravity Remix)",
+        "title": "X Ambassadors - Unsteady (Erich Lee Gravity Remix)",
+        "type": "video_share_youtube"
+      },
+      "message": "Nie wiem, czy to by się nadawało, ale uwielbiam tą nutę <3 ",
+      "reactions_num": 0,
+      "selected": false,
+      "source": "https://www.youtube.com/embed/eBlFp2__XtM?autoplay=1",
+      "type": "video",
+      "updated_time": "2017-03-09T21:46:45+0000"
+    },
+    {
+      "added_time": "2017-03-08T23:00:00.000Z",
+      "added_by": "Joanna Kozieńska",
+      "created_time": "2017-03-03T06:28:55+0000",
+      "from_user": "Damian Gruszczyński",
+      "id": 1,
+      "likes_num": 5,
+      "link": {
+        "title": "Barcelona, a song by Ed Sheeran on Spotify",
+        "type": "music_aggregation"
+      },
+      "message": "#całapłytawymiata",
+      "reactions_num": 5,
+      "selected": false,
+      "type": "status",
+      "updated_time": "2017-03-09T08:01:48+0000"
+    },
+    {
+      "added_time": "2017-03-08T23:00:00.000Z",
+      "added_by": "Joanna Kozieńska",
+      "created_time": "2017-03-03T06:24:25+0000",
+      "from_user": "Damian Gruszczyński",
+      "id": 2,
+      "likes_num": 6,
+      "link": {
+        "title": "Galway Girl, a song by Ed Sheeran on Spotify",
+        "type": "music_aggregation"
+      },
+      "message": "Ed! :-D",
+      "reactions_num": 6,
+      "selected": false,
+      "type": "status",
+      "updated_time": "2017-03-08T23:17:00+0000"
+    },
+    {
+      "added_time": "2017-03-08T23:00:00.000Z",
+      "added_by": "Joanna Kozieńska",
+      "created_time": "2017-03-03T06:26:21+0000",
+      "from_user": "Damian Gruszczyński",
+      "id": 3,
+      "likes_num": 8,
+      "link": {
+        "title": "New Man, a song by Ed Sheeran on Spotify",
+        "type": "music_aggregation"
+      },
+      "message": "#nigdydosyceda ;-)",
+      "reactions_num": 8,
+      "selected": false,
+      "type": "status",
+      "updated_time": "2017-03-08T23:05:45+0000"
+    },
+    {
+      "added_time": "2017-03-08T23:00:00.000Z",
+      "added_by": "Joanna Kozieńska",
+      "created_time": "2017-03-03T20:10:48+0000",
+      "from_user": "Mateusz Lech",
+      "full_picture": "https://external.xx.fbcdn.net/safe_image.php?d=AQDQMhV3vs5i7Ipg&w=720&h=720&url=https%3A%2F%2Fi.ytimg.com%2Fvi%2F5Y6e_T0ySmE%2Fmaxresdefault.jpg&cfs=1&sx=503&sy=0&sw=720&sh=720&_nc_hash=AQAa5L3S7_nVVkZR",
+      "id": 4,
+      "likes_num": 5,
+      "link": {
+        "url": "https://www.youtube.com/watch?v=5Y6e_T0ySmE",
+        "name": "Vali - Ain't No Friend Of Mine (Official Video)",
+        "title": "Vali - Ain't No Friend Of Mine (Official Video)",
+        "type": "video_share_youtube"
+      },
+      "message": "Wydaje się całkiem skoczne ;)\n\n#95bpm",
+      "reactions_num": 5,
+      "selected": false,
+      "source": "https://www.youtube.com/embed/5Y6e_T0ySmE?autoplay=1",
+      "type": "video",
+      "updated_time": "2017-03-08T23:05:38+0000"
+    },
+    {
+      "added_time": "2017-03-07T23:00:00.000Z",
+      "added_by": "Joanna Kozieńska",
+      "created_time": "2017-03-07T23:07:03+0000",
+      "from_user": "Joanna Kozieńska",
+      "full_picture": "https://external.xx.fbcdn.net/safe_image.php?d=AQCimze9kDlMKVl1&w=720&h=720&url=https%3A%2F%2Fi.ytimg.com%2Fvi%2FLuxpfnnsdX4%2Fmaxresdefault.jpg&cfs=1&_nc_hash=AQC7M9AEfyBbtF3g",
+      "id": 5,
+      "likes_num": 8,
+      "link": {
+        "url": "https://youtu.be/LuxpfnnsdX4",
+        "name": "Chet Faker - 1998 ft Banks",
+        "title": "Chet Faker - 1998 ft Banks",
+        "type": "video_share_youtube"
+      },
+      "message": "Jedna ode mnie, bo już wieki nie miałam okazji ;) \n\n",
+      "reactions_num": 9,
+      "selected": false,
+      "source": "https://www.youtube.com/embed/LuxpfnnsdX4?autoplay=1",
+      "type": "video",
+      "updated_time": "2017-03-08T21:36:01+0000"
+    },
+    {
+      "added_time": "2017-03-07T23:00:00.000Z",
+      "added_by": "Joanna Kozieńska",
+      "created_time": "2017-02-28T22:42:54+0000",
+      "from_user": "Dariusz Winiarski",
+      "full_picture": "https://external.xx.fbcdn.net/safe_image.php?d=AQAgXGamQZK1VRGF&w=720&h=720&url=https%3A%2F%2Fi.ytimg.com%2Fvi%2FxFrGuyw1V8s%2Fmaxresdefault.jpg&cfs=1&sx=749&sy=0&sw=1080&sh=1080&_nc_hash=AQCW5ljuYJrcS7OE",
+      "id": 6,
+      "likes_num": 8,
+      "link": {
+        "url": "https://youtu.be/xFrGuyw1V8s",
+        "name": "Abba - Dancing Queen",
+        "title": "Abba - Dancing Queen",
+        "type": "video_share_youtube"
+      },
+      "message": "Wykopalisko z czasów dinozaurów, odkopane na świetnej westodiscowej imprezie ostatkowej w Prominencie. Nie spodziewałem się po tym takiego westoflowu :)",
+      "reactions_num": 8,
+      "selected": false,
+      "source": "https://www.youtube.com/embed/xFrGuyw1V8s?autoplay=1",
+      "type": "video",
+      "updated_time": "2017-03-07T23:02:24+0000"
+    },
+    {
+      "added_time": "2017-03-07T23:00:00.000Z",
+      "added_by": "Joanna Kozieńska",
+      "created_time": "2017-03-01T08:49:44+0000",
+      "from_user": "Przemysław Przemysł",
+      "full_picture": "https://external.xx.fbcdn.net/safe_image.php?d=AQAutl84AdEiWBfP&w=720&h=720&url=https%3A%2F%2Fi.ytimg.com%2Fvi%2FjhZ5BciaUD4%2Fmaxresdefault.jpg&cfs=1&_nc_hash=AQAq1WBxnmJJV_Jr",
+      "id": 7,
+      "likes_num": 5,
+      "link": {
+        "url": "https://www.youtube.com/watch?v=jhZ5BciaUD4",
+        "name": "Pitbull - This Is Not A Drill (Audio) ft. Bebe Rexha",
+        "title": "Pitbull - This Is Not A Drill (Audio) ft. Bebe Rexha",
+        "type": "video_share_youtube"
+      },
+      "message": "MZ ma potencjał :D ",
+      "reactions_num": 5,
+      "selected": false,
+      "source": "https://www.youtube.com/embed/jhZ5BciaUD4?autoplay=1",
+      "type": "video",
+      "updated_time": "2017-03-07T23:02:20+0000"
+    },
+    {
+      "created_time": "2016-06-08T12:31:11+0000",
+      "from_user": "Paulina Górka",
+      "full_picture": "https://external.xx.fbcdn.net/safe_image.php?d=AQAAAFhEmk-q2276&w=720&h=720&url=https%3A%2F%2Fi.ytimg.com%2Fvi%2FqDRORgoZxZU%2Fmaxresdefault.jpg&cfs=1&sx=0&sy=0&sw=720&sh=720&_nc_hash=AQDiOJcpiKtE4sas",
+      "id": 8,
+      "likes_num": 17,
+      "link": {
+        "url": "https://www.youtube.com/watch?v=qDRORgoZxZU",
+        "name": "Meghan Trainor - Me Too",
+        "title": "Meghan Trainor - Me Too",
+        "type": "video_share_youtube"
+      },
+      "message": "Omg juz czuje na tej piosence efekt sprężynki, tyle możliwości! :o\n",
+      "reactions_num": 17,
+      "selected": false,
+      "source": "https://www.youtube.com/embed/qDRORgoZxZU?autoplay=1",
+      "type": "video",
+      "updated_time": "2017-03-07T22:55:31+0000"
+    },
+    {
+      "created_time": "2016-06-26T23:57:17+0000",
+      "from_user": "Madlen Madlen",
+      "full_picture": "https://external.xx.fbcdn.net/safe_image.php?d=AQDCMOiKKpbvEFsf&w=720&h=720&url=https%3A%2F%2Fi.ytimg.com%2Fvi%2FJAd--mEjcco%2Fmaxresdefault.jpg&cfs=1&_nc_hash=AQDr6gc4rXEFGywK",
+      "id": 9,
+      "likes_num": 10,
+      "link": {
+        "url": "https://www.youtube.com/watch?v=JAd--mEjcco",
+        "name": "Chet Faker, Marcus Marr - The Trouble With Us",
+        "title": "Chet Faker, Marcus Marr - The Trouble With Us",
+        "type": "video_share_youtube"
+      },
+      "message": "Fajowe, można się pobawić gitarką, breakami, tekstem. Prosi się o footwork. (Oczywiście mam na myśli poniższy kadr z teledysku.)",
+      "reactions_num": 11,
+      "selected": false,
+      "source": "https://www.youtube.com/embed/JAd--mEjcco?autoplay=1",
+      "type": "video",
+      "updated_time": "2017-03-07T21:57:08+0000"
+    },
+    {
+      "added_time": "2017-03-06T23:00:00.000Z",
+      "added_by": "Joanna Kozieńska",
+      "created_time": "2017-02-28T11:45:53+0000",
+      "from_user": "Agnieszka Orzeł",
+      "full_picture": "https://external.xx.fbcdn.net/safe_image.php?d=AQCCGSBP9li2qAmP&url=https%3A%2F%2Fi.ytimg.com%2Fvi%2FxoWEQLpBoE0%2Fmaxresdefault.jpg&_nc_hash=AQC7gjweP8HmDb5v",
+      "id": 10,
+      "likes_num": 4,
+      "link": {
+        "url": "https://www.youtube.com/shared?ci=k1R5u_KaHrU",
+        "name": "Jason Derulo - 'Swalla' feat Nicki Minaj & Ty Dolla $ign (Official Lyric Video) - YouTube",
+        "title": "Jason Derulo - 'Swalla' feat Nicki Minaj & Ty Dolla $ign (Official Lyric Video) - YouTube",
+        "type": "share"
+      },
+      "reactions_num": 4,
+      "selected": false,
+      "type": "link",
+      "updated_time": "2017-03-06T23:05:34+0000"
+    },
+    {
+      "added_time": "2017-03-06T23:00:00.000Z",
+      "added_by": "Joanna Kozieńska",
+      "created_time": "2017-02-28T19:38:35+0000",
+      "from_user": "Jakub Szwiec",
+      "full_picture": "https://external.xx.fbcdn.net/safe_image.php?d=AQBmEYM5Y18RuWL8&w=720&h=720&url=https%3A%2F%2Fi.ytimg.com%2Fvi%2FWpgPOuBB6xE%2Fmaxresdefault.jpg&cfs=1&_nc_hash=AQBdo6eY6RnR6Qts",
+      "id": 11,
+      "likes_num": 4,
+      "link": {
+        "url": "https://www.youtube.com/watch?v=WpgPOuBB6xE",
+        "name": "Slackwax - Close to My Fire (feat. Anna Leyne)",
+        "title": "Slackwax - Close to My Fire (feat. Anna Leyne)",
+        "type": "video_share_youtube"
+      },
+      "message": "https://www.youtube.com/watch?v=WpgPOuBB6xE",
+      "reactions_num": 4,
+      "selected": false,
+      "source": "https://www.youtube.com/embed/WpgPOuBB6xE?autoplay=1",
+      "type": "video",
+      "updated_time": "2017-03-06T23:05:29+0000"
+    },
+    {
+      "added_time": "2017-03-06T23:00:00.000Z",
+      "added_by": "Paulina Górka",
+      "created_time": "2017-02-27T22:50:28+0000",
+      "from_user": "Konrad Kras",
+      "full_picture": "https://external.xx.fbcdn.net/safe_image.php?d=AQCFnljiGHvnu3-3&w=720&h=720&url=https%3A%2F%2Fi.ytimg.com%2Fvi%2FncDij0Ku5-4%2Fhqdefault.jpg&cfs=1&_nc_hash=AQC1Ii8QAQcVAAth",
+      "id": 12,
+      "likes_num": 0,
+      "link": {
+        "url": "https://www.youtube.com/watch?v=ncDij0Ku5-4",
+        "name": "Railroad Tycoon music - Skippin' along",
+        "title": "Railroad Tycoon music - Skippin' along",
+        "type": "video_share_youtube"
+      },
+      "message": "Who doesn't like playing with trains?\nBlues.\nI picked one piece from this soundtrack but there is more where it comes from. If you would like to check other tracks here is example playlist to look for your favorite train blues: https://www.youtube.com/watch?v=NKnYPYJ0WVw&list=PLC8E945B00FE6ED21",
+      "reactions_num": 0,
+      "selected": false,
+      "source": "https://www.youtube.com/embed/ncDij0Ku5-4?autoplay=1",
+      "type": "video",
+      "updated_time": "2017-03-06T23:05:06+0000"
+    },
+    {
+      "added_time": "2017-03-05T23:00:00.000Z",
+      "added_by": "Paulina Górka",
+      "created_time": "2017-03-05T23:10:45+0000",
+      "from_user": "Paulina Górka",
+      "id": 13,
+      "likes_num": 6,
+      "link": {
+        "title": "Stay (with Alessia Cara), a song by Zedd, Alessia Cara on Spotify",
+        "type": "music_aggregation"
+      },
+      "message": "że Agata mnie wyprzedziła z utworem, wrzucę coś innego :P\nhttps://open.spotify.com/track/0dA2Mk56wEzDgegdC6R17g",
+      "reactions_num": 8,
+      "selected": false,
+      "type": "status",
+      "updated_time": "2017-03-05T23:47:57+0000"
+    },
+    {
+      "added_time": "2017-03-05T23:00:00.000Z",
+      "added_by": "Paulina Górka",
+      "created_time": "2017-02-26T17:02:19+0000",
+      "from_user": "Magdalena Wawrzyńska",
+      "full_picture": "https://external.xx.fbcdn.net/safe_image.php?d=AQC6jn6bIwQe7PO1&w=720&h=720&url=https%3A%2F%2Fi.ytimg.com%2Fvi%2Fm9DO3zpdWqw%2Fmaxresdefault.jpg&cfs=1&sx=276&sy=0&sw=1080&sh=1080&_nc_hash=AQCwMIkEuZJO4hZx",
+      "id": 14,
+      "likes_num": 5,
+      "link": {
+        "url": "https://www.youtube.com/watch?v=m9DO3zpdWqw",
+        "name": "James Arthur - Recovery",
+        "title": "James Arthur - Recovery",
+        "type": "video_share_youtube"
+      },
+      "message": "https://www.youtube.com/watch?v=m9DO3zpdWqw",
+      "reactions_num": 5,
+      "selected": false,
+      "source": "https://www.youtube.com/embed/m9DO3zpdWqw?autoplay=1",
+      "type": "video",
+      "updated_time": "2017-03-05T23:14:45+0000"
+    },
+    {
+      "added_time": "2017-03-05T23:00:00.000Z",
+      "added_by": "Paulina Górka",
+      "created_time": "2017-02-26T20:17:10+0000",
+      "from_user": "Artur Sójka",
+      "full_picture": "https://external.xx.fbcdn.net/safe_image.php?d=AQC19XYmDjG7TBUt&w=720&h=720&url=https%3A%2F%2Fi.ytimg.com%2Fvi%2FvQserY64Gx8%2Fmaxresdefault.jpg&cfs=1&_nc_hash=AQA6vaoEL_e6EuNT",
+      "id": 15,
+      "likes_num": 4,
+      "link": {
+        "url": "https://www.youtube.com/watch?v=vQserY64Gx8",
+        "name": "Lenny Kravitz - Fly Away (PINEO & LOEB Remix)",
+        "title": "Lenny Kravitz - Fly Away (PINEO & LOEB Remix)",
+        "type": "video_share_youtube"
+      },
+      "message": "Maybe ",
+      "reactions_num": 4,
+      "selected": false,
+      "source": "https://www.youtube.com/embed/vQserY64Gx8?autoplay=1",
+      "type": "video",
+      "updated_time": "2017-03-05T23:14:41+0000"
+    },
+    {
+      "added_time": "2017-03-05T23:00:00.000Z",
+      "added_by": "Paulina Górka",
+      "created_time": "2017-02-27T08:13:48+0000",
+      "from_user": "Dariusz Winiarski",
+      "full_picture": "https://external.xx.fbcdn.net/safe_image.php?w=720&h=720&url=https%3A%2F%2Fi.ytimg.com%2Fvi%2FkZuYff81-Fc%2Fmaxresdefault.jpg&cfs=1&sx=441&sy=0&sw=1080&sh=1080&_nc_hash=AQCUcy-YhWhi-Fv3",
+      "id": 16,
+      "likes_num": 1,
+      "link": {
+        "url": "https://youtu.be/kZuYff81-Fc",
+        "name": "Perfect - Wszystko ma swój czas (official video)",
+        "title": "Perfect - Wszystko ma swój czas (official video)",
+        "type": "video_share_youtube"
+      },
+      "reactions_num": 1,
+      "selected": false,
+      "source": "https://www.youtube.com/embed/kZuYff81-Fc?autoplay=1",
+      "type": "video",
+      "updated_time": "2017-03-05T23:14:36+0000"
+    },
+    {
+      "created_time": "2016-01-29T02:16:43+0000",
+      "from_user": "Paulina Górka",
+      "full_picture": "https://external.xx.fbcdn.net/safe_image.php?d=AQCGTyJGUIsnkXtu&w=720&h=720&url=https%3A%2F%2Fi.ytimg.com%2Fvi%2FcxjvTXo9WWM%2Fmaxresdefault.jpg&cfs=1&sx=241&sy=0&sw=720&sh=720&_nc_hash=AQDgnYGqD53UXptB",
+      "id": 17,
+      "likes_num": 11,
+      "link": {
+        "url": "https://www.youtube.com/watch?v=cxjvTXo9WWM",
+        "name": "Sia - Unstoppable (Audio)",
+        "title": "Sia - Unstoppable (Audio)",
+        "type": "video_share_youtube"
+      },
+      "message": "https://www.youtube.com/watch?v=cxjvTXo9WWM",
+      "reactions_num": 11,
+      "selected": false,
+      "source": "https://www.youtube.com/embed/cxjvTXo9WWM?autoplay=1",
+      "type": "video",
+      "updated_time": "2017-03-05T21:33:27+0000"
+    },
+    {
+      "added_time": "2017-03-02T23:00:00.000Z",
+      "added_by": "Paulina Górka",
+      "created_time": "2017-03-03T22:28:45+0000",
+      "from_user": "Paulina Górka",
+      "full_picture": "https://external.xx.fbcdn.net/safe_image.php?d=AQBuUWM9TGhU3Roz&w=720&h=720&url=https%3A%2F%2Fi.ytimg.com%2Fvi%2FFM7MFYoylVs%2Fmaxresdefault.jpg&cfs=1&sx=273&sy=0&sw=720&sh=720&_nc_hash=AQBfy2WkqytQYcb6",
+      "id": 18,
+      "likes_num": 9,
+      "link": {
+        "url": "https://www.youtube.com/watch?v=FM7MFYoylVs",
+        "name": "The Chainsmokers & Coldplay - Something Just Like This (Lyric)",
+        "title": "The Chainsmokers & Coldplay - Something Just Like This (Lyric)",
+        "type": "video_share_youtube"
+      },
+      "message": "new Coldplay with Chainsmokers, hot team! \nhere are Badman  and Superman (Jakub) :D\n",
+      "reactions_num": 11,
+      "selected": false,
+      "source": "https://www.youtube.com/embed/FM7MFYoylVs?autoplay=1",
+      "type": "video",
+      "updated_time": "2017-03-04T02:00:48+0000"
+    },
+    {
+      "created_time": "2017-03-03T11:23:04+0000",
+      "from_user": "Joanna Kozieńska",
+      "full_picture": "https://scontent.xx.fbcdn.net/v/t1.0-9/17022295_10203108927922207_1006771455463995321_n.jpg?oh=03e07f893abcd6b19475b974b05d4463&oe=59370A6C",
+      "id": 19,
+      "likes_num": 2,
+      "link": {
+        "url": "https://www.facebook.com/photo.php?fbid=10203108927922207&set=gm.1941491366084909&type=3",
+        "name": "Photos from Joanna Kozieńska's post",
+        "title": "Photos from Joanna Kozieńska's post",
+        "type": "album"
+      },
+      "message": "[WCS Weekly Westletter]\n\nHello, Sweeties :)\n\nHere's your Friday recap:\n1. Ed Sheeran - Shape of You (Acoustic - Official Audio) - YouTube 9 likes\n2. Isaiah - It's Gotta Be You (Official Audio) 8 likes\n3. Hedegaard - That's Me 8 likes\n4. Paula Abdul - Straight Up 7 likes\n5. Krzysztof Zalewski - Luka (Official Audio) 6 likes\n6. Sonny Alven - Your Touch ft. Olivera 5 likes\n7. Campsite Dream - Crush 5 likes\n8. Sia - Helium (Lyrics) 5 likes\n9. Justice Crew - Boom Boom Lyrics. 5 likes\n10. I'm Gonna Show You Crazy - Bebe Rexha (Lyric Video) *Explicit 4 likes\n11. Patricia Kaas - Where Do I Begin (Love Story) 3 likes\n12. Tame Impala - Elephant 2 likes\n13. Tove Lo - True Disaster (Part of Fairy Dust) 1 likes\n14. Justine Skye ft Tyga - Collide (Official Music Video) 0 likes\n15. Bebe Rexha - F.F.F. (feat. G-Eazy) [Audio] 2 likes\n16. A spot for one extra song that one of our Admins, Paulina, is going to publish later today ;) ;) \n\nSpotify playlist:\nhttps://open.spotify.com/user/jesiennik/playlist/0gbLmEN1EuRmg1cx709U3E\n\nNEWS: \nAs the songs keep pouring in our queue at a breakneck speed, we're raising the daily song limit for next week to 4 per day. It's a lot, I know, but otherwise some of you would have to wait until the 13th (!) to get their songs published :) \n\nKonrad destroyed us completely with his video puzzle last week, so this week we're going back to the good-old-and-too-easy riddles devised by moi ;)\n\nAs a bonus, you're getting a pic of an otter showing the followers what it means to be wonderfully lazy in their movements, not to rush and wait patiently for the leader's move ;) \n#nie_chce_mi_się\n\nEnjoy!\n\nCheers from sunny Kraków!\nJoanna \n\nP.S.: Don't forget to check out Ed Sheeran's new album! <3",
+      "reactions_num": 2,
+      "selected": false,
+      "type": "photo",
+      "updated_time": "2017-03-03T21:43:52+0000"
+    },
+    {
+      "added_time": "2017-03-02T23:00:00.000Z",
+      "added_by": "Joanna Kozieńska",
+      "created_time": "2017-02-25T13:31:52+0000",
+      "from_user": "Beata Tracz",
+      "full_picture": "https://external.xx.fbcdn.net/safe_image.php?d=AQCcmlw0NhEtipgE&w=720&h=720&url=https%3A%2F%2Fi.ytimg.com%2Fvi%2FaLWTsgxmQZY%2Fmaxresdefault.jpg&cfs=1&_nc_hash=AQAJVFErMrsQnEv5",
+      "id": 20,
+      "likes_num": 8,
+      "link": {
+        "url": "https://www.youtube.com/watch?v=aLWTsgxmQZY",
+        "name": "Campsite Dream - Crush",
+        "title": "Campsite Dream - Crush",
+        "type": "video_share_youtube"
+      },
+      "reactions_num": 11,
+      "selected": false,
+      "source": "https://www.youtube.com/embed/aLWTsgxmQZY?autoplay=1",
+      "type": "video",
+      "updated_time": "2017-03-03T00:36:51+0000"
+    },
+    {
+      "added_time": "2017-03-02T23:00:00.000Z",
+      "added_by": "Joanna Kozieńska",
+      "created_time": "2017-02-24T07:39:22+0000",
+      "from_user": "Michael Spitzer",
+      "full_picture": "https://external.xx.fbcdn.net/safe_image.php?d=AQCKgXea6LBxhn3Z&w=720&h=720&url=https%3A%2F%2Fi.ytimg.com%2Fvi%2FCIbH2M-JdlI%2Fmaxresdefault.jpg&cfs=1&sx=524&sy=0&sw=720&sh=720&_nc_hash=AQCByRoocDBrr9J1",
+      "id": 21,
+      "likes_num": 5,
+      "link": {
+        "url": "https://www.youtube.com/watch?v=CIbH2M-JdlI&feature=youtu.be",
+        "name": "Spot Jam - West Coast Swing",
+        "title": "Bebe Rexha - F.F.F. (feat. G-Eazy) [Audio]",
+        "type": "video_share_youtube"
+      },
+      "reactions_num": 5,
+      "selected": false,
+      "source": "https://www.youtube.com/embed/CIbH2M-JdlI?autoplay=1",
+      "type": "video",
+      "updated_time": "2017-03-03T00:36:11+0000"
+    },
+    {
+      "added_time": "2017-03-02T23:00:00.000Z",
+      "added_by": "Joanna Kozieńska",
+      "created_time": "2017-02-26T16:05:24+0000",
+      "from_user": "Tytanowy Janusz",
+      "full_picture": "https://external.xx.fbcdn.net/safe_image.php?d=AQAMdZd5od1p1SCI&w=720&h=720&url=https%3A%2F%2Fi.ytimg.com%2Fvi%2Fb0jqPvpn3sY%2Fmaxresdefault.jpg&cfs=1&_nc_hash=AQAZZPZw7ppLC1vL",
+      "id": 22,
+      "likes_num": 4,
+      "link": {
+        "url": "https://www.youtube.com/watch?v=b0jqPvpn3sY",
+        "name": "Tame Impala - Elephant",
+        "title": "Tame Impala - Elephant",
+        "type": "video_share_youtube"
+      },
+      "message": "Czujecie bluesa? \n\nNo to OPA!",
+      "reactions_num": 4,
+      "selected": false,
+      "source": "https://www.youtube.com/embed/b0jqPvpn3sY?autoplay=1",
+      "type": "video",
+      "updated_time": "2017-03-03T00:36:01+0000"
+    },
+    {
+      "added_time": "2017-03-01T23:00:00.000Z",
+      "added_by": "Joanna Kozieńska",
+      "created_time": "2017-02-23T20:36:36+0000",
+      "from_user": "Dariusz Winiarski",
+      "full_picture": "https://external.xx.fbcdn.net/safe_image.php?d=AQDSNFT-RijGh1wC&w=720&h=720&url=https%3A%2F%2Fi.ytimg.com%2Fvi%2FLPh-8sMy1Bc%2Fmaxresdefault.jpg&cfs=1&sx=294&sy=0&sw=720&sh=720&_nc_hash=AQBe81xbFz0wu6zp",
+      "id": 23,
+      "likes_num": 9,
+      "link": {
+        "url": "https://youtu.be/LPh-8sMy1Bc",
+        "name": "Isaiah - It's Gotta Be You (Official Audio)",
+        "title": "Isaiah - It's Gotta Be You (Official Audio)",
+        "type": "video_share_youtube"
+      },
+      "reactions_num": 12,
+      "selected": false,
+      "source": "https://www.youtube.com/embed/LPh-8sMy1Bc?autoplay=1",
+      "type": "video",
+      "updated_time": "2017-03-02T07:49:26+0000"
+    },
+    {
+      "added_time": "2017-03-01T23:00:00.000Z",
+      "added_by": "Joanna Kozieńska",
+      "created_time": "2017-02-23T21:54:07+0000",
+      "from_user": "Aleksandra Radziejewska",
+      "full_picture": "https://external.xx.fbcdn.net/safe_image.php?d=AQC83qxVW-9zxe4l&w=720&h=720&url=https%3A%2F%2Fi.ytimg.com%2Fvi%2FFv_lnUTUQYY%2Fmaxresdefault.jpg&cfs=1&_nc_hash=AQCdc9zhr42u5RQC",
+      "id": 24,
+      "likes_num": 11,
+      "link": {
+        "url": "https://www.youtube.com/watch?v=Fv_lnUTUQYY",
+        "name": "Hedegaard - That's Me",
+        "title": "Hedegaard - That's Me",
+        "type": "video_share_youtube"
+      },
+      "message": "to kiedy próbujemy :D",
+      "reactions_num": 12,
+      "selected": false,
+      "source": "https://www.youtube.com/embed/Fv_lnUTUQYY?autoplay=1",
+      "type": "video",
+      "updated_time": "2017-03-02T07:49:14+0000"
+    },
+    {
+      "added_time": "2017-03-01T23:00:00.000Z",
+      "added_by": "Joanna Kozieńska",
+      "created_time": "2017-02-23T22:04:04+0000",
+      "from_user": "Tytanowy Janusz",
+      "full_picture": "https://external.xx.fbcdn.net/safe_image.php?d=AQC5XVwjAla2j5Bz&w=720&h=720&url=https%3A%2F%2Fi.ytimg.com%2Fvi%2FGMsok5m5yD4%2Fmaxresdefault.jpg&cfs=1&sx=296&sy=0&sw=720&sh=720&_nc_hash=AQB2e4b0J3jJ2CN9",
+      "id": 25,
+      "likes_num": 2,
+      "link": {
+        "url": "https://www.youtube.com/watch?v=GMsok5m5yD4",
+        "name": "Tove Lo - True Disaster (Part of Fairy Dust)",
+        "title": "Tove Lo - True Disaster (Part of Fairy Dust)",
+        "type": "video_share_youtube"
+      },
+      "message": "(teledysk zawiera egzorcyzmy :D ale piosenka spoko)",
+      "reactions_num": 3,
+      "selected": false,
+      "source": "https://www.youtube.com/embed/GMsok5m5yD4?autoplay=1",
+      "type": "video",
+      "updated_time": "2017-03-02T07:49:03+0000"
+    },
+    {
+      "added_time": "2017-02-27T23:00:00.000Z",
+      "added_by": "Joanna Kozieńska",
+      "created_time": "2017-02-21T12:11:13+0000",
+      "from_user": "Anca Lasc",
+      "full_picture": "https://external.xx.fbcdn.net/safe_image.php?d=AQBwJx1JFI-GMrtJ&w=720&h=720&url=https%3A%2F%2Fi.ytimg.com%2Fvi%2F2BLgplHwRsU%2Fmaxresdefault.jpg&cfs=1&_nc_hash=AQC3Muomu-LELCR8",
+      "id": 26,
+      "likes_num": 5,
+      "link": {
+        "url": "https://www.youtube.com/watch?v=2BLgplHwRsU",
+        "name": "Sonny Alven - Your Touch ft. Olivera",
+        "title": "Sonny Alven - Your Touch ft. Olivera",
+        "type": "video_share_youtube"
+      },
+      "reactions_num": 6,
+      "selected": false,
+      "source": "https://www.youtube.com/embed/2BLgplHwRsU?autoplay=1",
+      "type": "video",
+      "updated_time": "2017-03-01T09:07:36+0000"
+    },
+    {
+      "added_time": "2017-02-26T23:00:00.000Z",
+      "added_by": "Joanna Kozieńska",
+      "created_time": "2017-02-21T09:13:37+0000",
+      "from_user": "Agnieszka Orzeł",
+      "full_picture": "https://external.xx.fbcdn.net/safe_image.php?d=AQCej8_MAkVoeJPD&url=https%3A%2F%2Fi.ytimg.com%2Fvi%2FbdT_8nb0_eA%2Fmaxresdefault.jpg&_nc_hash=AQB6BlwiSsgy-p4H",
+      "id": 27,
+      "likes_num": 9,
+      "link": {
+        "url": "https://www.youtube.com/shared?ci=AVePIt9qMp4",
+        "name": "Ed Sheeran - Shape of You (Acoustic - Official Audio) - YouTube",
+        "title": "Ed Sheeran - Shape of You (Acoustic - Official Audio) - YouTube",
+        "type": "share"
+      },
+      "message": "Jeszcze jedna wersja szejpa :)",
+      "reactions_num": 9,
+      "selected": false,
+      "type": "link",
+      "updated_time": "2017-03-01T05:26:27+0000"
+    },
+    {
+      "added_time": "2017-02-28T23:00:00.000Z",
+      "added_by": "Joanna Kozieńska",
+      "created_time": "2017-02-22T17:15:32+0000",
+      "from_user": "Anca Lasc",
+      "full_picture": "https://external.xx.fbcdn.net/safe_image.php?d=AQBs1fOfP_DaXobi&url=https%3A%2F%2Fi.ytimg.com%2Fvi%2F5JFICVPO7R0%2Fmaxresdefault.jpg&_nc_hash=AQBoKZHeTPIMeB-y",
+      "id": 28,
+      "likes_num": 8,
+      "link": {
+        "url": "https://www.youtube.com/watch?v=5JFICVPO7R0",
+        "name": "Justice Crew - Boom Boom Lyrics.",
+        "title": "Justice Crew - Boom Boom Lyrics.",
+        "type": "share"
+      },
+      "message": "'Cause the body goes Boom Boom Boom ;-D",
+      "reactions_num": 8,
+      "selected": false,
+      "type": "link",
+      "updated_time": "2017-02-28T23:05:45+0000"
+    },
+    {
+      "added_time": "2017-02-28T23:00:00.000Z",
+      "added_by": "Joanna Kozieńska",
+      "created_time": "2017-02-23T11:28:01+0000",
+      "from_user": "Beata Tracz",
+      "full_picture": "https://external.xx.fbcdn.net/safe_image.php?d=AQAQunjSQAp96Ug-&w=720&h=720&url=https%3A%2F%2Fi.ytimg.com%2Fvi%2F-AgYGrXxEIg%2Fmaxresdefault.jpg&cfs=1&sx=569&sy=0&sw=1402&sh=1402&_nc_hash=AQBAZw60ppXqFbx5",
+      "id": 29,
+      "likes_num": 0,
+      "link": {
+        "url": "https://www.youtube.com/watch?v=-AgYGrXxEIg",
+        "name": "Justine Skye ft Tyga - Collide (Official Music Video)",
+        "title": "Justine Skye ft Tyga - Collide (Official Music Video)",
+        "type": "video_share_youtube"
+      },
+      "reactions_num": 0,
+      "selected": false,
+      "source": "https://www.youtube.com/embed/-AgYGrXxEIg?autoplay=1",
+      "type": "video",
+      "updated_time": "2017-02-28T23:05:42+0000"
+    },
+    {
+      "added_time": "2017-02-28T23:00:00.000Z",
+      "added_by": "Joanna Kozieńska",
+      "created_time": "2017-02-22T23:37:17+0000",
+      "from_user": "Anna Stanuchowska",
+      "full_picture": "https://external.xx.fbcdn.net/safe_image.php?d=AQAFeIgu_KZghIwC&w=720&h=720&url=https%3A%2F%2Fi.ytimg.com%2Fvi%2FnLnpvbBSjUY%2Fmaxresdefault.jpg&cfs=1&_nc_hash=AQBivvM-0l2azRRU",
+      "id": 30,
+      "likes_num": 6,
+      "link": {
+        "url": "https://www.youtube.com/watch?v=nLnpvbBSjUY",
+        "name": "Sia - Helium (Lyrics)",
+        "title": "Sia - Helium (Lyrics)",
+        "type": "video_share_youtube"
+      },
+      "message": "https://www.youtube.com/watch?v=nLnpvbBSjUY",
+      "reactions_num": 6,
+      "selected": false,
+      "source": "https://www.youtube.com/embed/nLnpvbBSjUY?autoplay=1",
+      "type": "video",
+      "updated_time": "2017-02-28T23:05:29+0000"
+    },
+    {
+      "created_time": "2016-07-04T09:29:10+0000",
+      "from_user": "Luminita Munteanu",
+      "full_picture": "https://external.xx.fbcdn.net/safe_image.php?d=AQBHqGrrYPryXKff&w=720&h=720&url=https%3A%2F%2Fi.ytimg.com%2Fvi%2FTjrExneLiEU%2Fmaxresdefault.jpg&cfs=1&sx=481&sy=0&sw=1080&sh=1080&_nc_hash=AQAMZ1ZFvNnNNc78",
+      "id": 31,
+      "likes_num": 8,
+      "link": {
+        "url": "https://www.youtube.com/watch?v=TjrExneLiEU",
+        "name": "Alina Eremia - De ce ne indragostim (Official Video 4K)",
+        "title": "Alina Eremia - De ce ne indragostim (Official Video 4K)",
+        "type": "video_share_youtube"
+      },
+      "message": "^_^ Have a great week everyone!",
+      "reactions_num": 8,
+      "selected": false,
+      "source": "https://www.youtube.com/embed/TjrExneLiEU?autoplay=1",
+      "type": "video",
+      "updated_time": "2017-02-28T16:12:13+0000"
+    },
+    {
+      "added_time": "2017-02-27T23:00:00.000Z",
+      "added_by": "Joanna Kozieńska",
+      "created_time": "2017-02-22T21:01:11+0000",
+      "from_user": "Magdalena Wawrzyńska",
+      "full_picture": "https://external.xx.fbcdn.net/safe_image.php?d=AQBMHLY5F8deVnmT&w=720&h=720&url=https%3A%2F%2Fi.ytimg.com%2Fvi%2FMAyNDUPQS04%2Fmaxresdefault.jpg&cfs=1&sx=393&sy=0&sw=1080&sh=1080&_nc_hash=AQBKxdvFtmE1BgKv",
+      "id": 32,
+      "likes_num": 4,
+      "link": {
+        "url": "https://www.youtube.com/watch?v=MAyNDUPQS04",
+        "name": "I'm Gonna Show You Crazy - Bebe Rexha (Lyric Video) *Explicit",
+        "title": "I'm Gonna Show You Crazy - Bebe Rexha (Lyric Video) *Explicit",
+        "type": "video_share_youtube"
+      },
+      "reactions_num": 4,
+      "selected": false,
+      "source": "https://www.youtube.com/embed/MAyNDUPQS04?autoplay=1",
+      "type": "video",
+      "updated_time": "2017-02-28T04:45:23+0000"
+    },
+    {
+      "added_time": "2017-02-27T23:00:00.000Z",
+      "added_by": "Joanna Kozieńska",
+      "created_time": "2017-02-21T14:09:19+0000",
+      "from_user": "Dariusz Winiarski",
+      "full_picture": "https://external.xx.fbcdn.net/safe_image.php?d=AQBtjVm-kphFE1if&w=720&h=720&url=https%3A%2F%2Fi.ytimg.com%2Fvi%2F1vNfkSzv284%2Fmaxresdefault.jpg&cfs=1&sx=360&sy=0&sw=1075&sh=1075&_nc_hash=AQALfidQWqOxPWhM",
+      "id": 33,
+      "likes_num": 4,
+      "link": {
+        "url": "https://youtu.be/1vNfkSzv284",
+        "name": "Patricia Kaas - Where Do I Begin (Love Story)",
+        "title": "Patricia Kaas - Where Do I Begin (Love Story)",
+        "type": "video_share_youtube"
+      },
+      "reactions_num": 4,
+      "selected": false,
+      "source": "https://www.youtube.com/embed/1vNfkSzv284?autoplay=1",
+      "type": "video",
+      "updated_time": "2017-02-28T04:45:12+0000"
+    },
+    {
+      "added_time": "2017-02-05T23:00:00.000Z",
+      "added_by": "Joanna Kozieńska",
+      "created_time": "2017-02-05T23:10:42+0000",
+      "from_user": "Paulina Górka",
+      "full_picture": "https://external.xx.fbcdn.net/safe_image.php?d=AQCXh8M1u9E5cU_H&w=720&h=720&url=https%3A%2F%2Fi.ytimg.com%2Fvi%2Fr3X_i627ELQ%2Fmaxresdefault.jpg&cfs=1&sx=275&sy=0&sw=720&sh=720&_nc_hash=AQBRUV0J39nPl2Og",
+      "id": 34,
+      "likes_num": 12,
+      "link": {
+        "url": "https://www.youtube.com/watch?v=r3X_i627ELQ",
+        "name": "Here Comes The Hotstepper - Evian remix by Yuksek (FULL VERSION)",
+        "title": "Here Comes The Hotstepper - Evian remix by Yuksek (FULL VERSION)",
+        "type": "video_share_youtube"
+      },
+      "message": "czasem i do szybkich piosenek trzeba ćwiczyć ;) Dobrego początku tygodnia ;*\n",
+      "reactions_num": 13,
+      "selected": false,
+      "source": "https://www.youtube.com/embed/r3X_i627ELQ?autoplay=1",
+      "type": "video",
+      "updated_time": "2017-02-27T19:29:01+0000"
+    },
+    {
+      "added_time": "2017-02-19T23:00:00.000Z",
+      "added_by": "Joanna Kozieńska",
+      "created_time": "2017-02-13T13:22:33+0000",
+      "from_user": "Jakub Szwiec",
+      "full_picture": "https://external.xx.fbcdn.net/safe_image.php?d=AQAu65TMiTgdb22U&w=720&h=720&url=https%3A%2F%2Fi.ytimg.com%2Fvi%2Fp9MYgT4Ldig%2Fmaxresdefault.jpg&cfs=1&_nc_hash=AQCNfjyDIE5qfFb3",
+      "id": 35,
+      "likes_num": 7,
+      "link": {
+        "url": "https://www.youtube.com/watch?v=p9MYgT4Ldig",
+        "name": "Cancion nanananana lego batman 2017 new song",
+        "title": "Cancion nanananana lego batman 2017 new song",
+        "type": "video_share_youtube"
+      },
+      "message": "Z dedykacją dla Piotr Badman Lenart. 😎\n",
+      "reactions_num": 7,
+      "selected": false,
+      "source": "https://www.youtube.com/embed/p9MYgT4Ldig?autoplay=1",
+      "type": "video",
+      "updated_time": "2017-02-27T12:27:43+0000"
+    },
+    {
+      "created_time": "2017-02-24T15:33:28+0000",
+      "from_user": "Joanna Kozieńska",
+      "full_picture": "https://external.xx.fbcdn.net/safe_image.php?d=AQA4vhd4mqW12H4V&w=720&h=720&url=https%3A%2F%2Fi.ytimg.com%2Fvi%2FKL1XR6kT_40%2Fhqdefault.jpg&cfs=1&_nc_hash=AQCzRB4ci2NToCWh",
+      "id": 36,
+      "likes_num": 3,
+      "link": {
+        "url": "https://youtu.be/KL1XR6kT_40?t=2m15s",
+        "name": "Best of Madagascar 2 - King Julian Mash Up Part 2",
+        "title": "Best of Madagascar 2 - King Julian Mash Up Part 2",
+        "type": "video_share_youtube"
+      },
+      "message": "[WCS Weekly Westletter]\n\nHello, Sweeties :)\n\nCatch our Friday recap!\n\n1. Jax Jones - You Don't Know Me ft. RAYE 13 likes\n2. Jabberwocky ☀ Fog (feat. Ana Zimmer) 12 likes\n3. TYSM - Honeymoon Phase 10 likes\n4. Maroon 5 - Cold (Audio) ft. Future 9 likes\n5. SJUR ft. Chris Crone - Let Me Love You 8 likes\n6. Cancion nanananana lego batman 2017 new song 7 likes\n(COULDN'T FIND ON SPOTIFY)\n7. Heavy (Official Lyric Video) - Linkin Park (feat. Kiiara) 7 likes\n8. Khalid - Saved (Audio) 6 likes\n9. Jason Derulo - Pull Up (Official Audio) 6 likes\n10. Justin Timberlake, Anna Kendrick - True Colors (Lyric) 4 likes\n11. Nouvelle Vague - This Is Not A Love Song (Full Track) 4 likes\n12. Konoba - On Our Knees (feat. R.O) 4 likes\n13. Lenka - Blue Skies (REVOKE Remix) 1 likes\n14. Dżem - \"Poznałem Go po czarnym kapeluszu\"-\"Dżem Sessions1\" 1 likes\n15. Christiana (John Lennon cover) - Imagine (Consoul Trainin Remix) 0 likes\n(COULDN'T FIND ON SPOTIFY)\n\nSpotify playlist: https://open.spotify.com/user/jesiennik/playlist/4PH7OjBCj6Jsk284wgrDTz\n\nThis week's puzzle's been prepared by Konrad and it's much more tricky than any of those I've ever come up with, so brace yourselves :))\nThe WCS term's hidden somewhere between 2:15 and 2:27, enjoy :) If you need a hint, let me know :)\n\nHave a lovely weekend! \nJoanna\n\nhttps://youtu.be/KL1XR6kT_40?t=2m15s",
+      "reactions_num": 3,
+      "selected": false,
+      "source": "https://www.youtube.com/embed/KL1XR6kT_40?autoplay=1",
+      "type": "video",
+      "updated_time": "2017-02-27T11:38:23+0000"
+    },
+    {
+      "added_time": "2017-02-26T23:00:00.000Z",
+      "added_by": "Joanna Kozieńska",
+      "created_time": "2017-02-20T12:35:10+0000",
+      "from_user": "Adam Jaskiernik",
+      "full_picture": "https://external.xx.fbcdn.net/safe_image.php?d=AQBfgDKLB3Y3Aww6&w=720&h=720&url=https%3A%2F%2Fi.ytimg.com%2Fvi%2FEl1kgCqD7Xk%2Fmaxresdefault.jpg&cfs=1&_nc_hash=AQDJWirHacCiD3XK",
+      "id": 37,
+      "likes_num": 8,
+      "link": {
+        "url": "https://www.youtube.com/watch?v=El1kgCqD7Xk",
+        "name": "Paula Abdul - Straight Up",
+        "title": "Paula Abdul - Straight Up",
+        "type": "video_share_youtube"
+      },
+      "message": "Stary hicior poznany na nowo? :)\n",
+      "reactions_num": 8,
+      "selected": false,
+      "source": "https://www.youtube.com/embed/El1kgCqD7Xk?autoplay=1",
+      "type": "video",
+      "updated_time": "2017-02-27T10:10:11+0000"
+    },
+    {
+      "added_time": "2017-02-26T23:00:00.000Z",
+      "added_by": "Joanna Kozieńska",
+      "created_time": "2017-02-20T11:36:37+0000",
+      "from_user": "Przemysław Przemysł",
+      "full_picture": "https://external.xx.fbcdn.net/safe_image.php?d=AQBQG44KvNrifzNI&w=720&h=720&url=https%3A%2F%2Fi.ytimg.com%2Fvi%2Fmd9ZTbVjv9g%2Fmaxresdefault.jpg&cfs=1&_nc_hash=AQA6pjMtIezqjvrk",
+      "id": 38,
+      "likes_num": 6,
+      "link": {
+        "url": "https://www.youtube.com/watch?v=md9ZTbVjv9g",
+        "name": "Krzysztof Zalewski - Luka (Official Audio)",
+        "title": "Krzysztof Zalewski - Luka (Official Audio)",
+        "type": "video_share_youtube"
+      },
+      "message": "tego nie było, wydaje się wdzięcznym materiałem do tańca :D ",
+      "reactions_num": 6,
+      "selected": false,
+      "source": "https://www.youtube.com/embed/md9ZTbVjv9g?autoplay=1",
+      "type": "video",
+      "updated_time": "2017-02-27T10:09:57+0000"
+    },
+    {
+      "created_time": "2015-10-23T18:15:18+0000",
+      "from_user": "Aleksandra Łukomska",
+      "full_picture": "https://external.xx.fbcdn.net/safe_image.php?d=AQDKlbe97ovIORDc&w=720&h=720&url=http%3A%2F%2Fi.ytimg.com%2Fvi%2FuQ15dMt4GBM%2Fhqdefault.jpg&cfs=1&_nc_hash=AQB4T_tYFreBZ2gt",
+      "id": 39,
+      "likes_num": 15,
+      "link": {
+        "url": "https://youtu.be/uQ15dMt4GBM",
+        "name": "Etta James -- \"I Sing The Blues\" -- Down and Dirty Blues",
+        "title": "Etta James -- \"I Sing The Blues\" -- Down and Dirty Blues",
+        "type": "video_share_youtube"
+      },
+      "message": "Moje bluesowe NR 1! :D",
+      "reactions_num": 15,
+      "selected": false,
+      "source": "https://www.youtube.com/embed/uQ15dMt4GBM?autoplay=1",
+      "type": "video",
+      "updated_time": "2017-02-26T23:38:27+0000"
+    },
+    {
+      "added_time": "2017-02-23T23:00:00.000Z",
+      "added_by": "Joanna Kozieńska",
+      "created_time": "2017-02-17T16:15:22+0000",
+      "from_user": "Bogumiła Niedziałek",
+      "full_picture": "https://external.xx.fbcdn.net/safe_image.php?d=AQBtGNqkikSveZoG&w=720&h=720&url=https%3A%2F%2Fi.ytimg.com%2Fvi%2FdWnG3t_R8Gg%2Fhqdefault.jpg&cfs=1&_nc_hash=AQCMufqSW2VLQIlh",
+      "id": 40,
+      "likes_num": 5,
+      "link": {
+        "url": "https://www.youtube.com/watch?v=dWnG3t_R8Gg",
+        "name": "Konoba - On Our Knees (feat. R.O)",
+        "title": "Konoba - On Our Knees (feat. R.O)",
+        "type": "video_share_youtube"
+      },
+      "message": "https://www.youtube.com/watch?v=dWnG3t_R8Gg",
+      "reactions_num": 6,
+      "selected": false,
+      "source": "https://www.youtube.com/embed/dWnG3t_R8Gg?autoplay=1",
+      "type": "video",
+      "updated_time": "2017-02-24T09:23:58+0000"
+    },
+    {
+      "added_time": "2017-02-23T23:00:00.000Z",
+      "added_by": "Joanna Kozieńska",
+      "created_time": "2017-02-18T12:52:07+0000",
+      "from_user": "Magdalena Dziadek",
+      "full_picture": "https://external.xx.fbcdn.net/safe_image.php?d=AQDYOYscjIRDkw8F&w=720&h=720&url=https%3A%2F%2Fi.ytimg.com%2Fvi%2Fla0-5QFLr14%2Fmaxresdefault.jpg&cfs=1&_nc_hash=AQDg2GVg0r9Lbvyc",
+      "id": 41,
+      "likes_num": 5,
+      "link": {
+        "url": "https://www.youtube.com/attribution_link?a=D0KhBNRa94A&u=%2Fwatch%3Fv%3Dla0-5QFLr14%26feature%3Dshare",
+        "name": "Justin Timberlake, Anna Kendrick - True Colors (Lyric)",
+        "title": "Justin Timberlake, Anna Kendrick - True Colors (Lyric)",
+        "type": "video_share_youtube"
+      },
+      "message": "Taka inna wersja mądrej pieśniczki :)",
+      "reactions_num": 6,
+      "selected": false,
+      "source": "https://www.youtube.com/embed/la0-5QFLr14?autoplay=1",
+      "type": "video",
+      "updated_time": "2017-02-24T09:11:34+0000"
+    },
+    {
+      "added_time": "2017-02-23T23:00:00.000Z",
+      "added_by": "Joanna Kozieńska",
+      "created_time": "2017-02-19T21:05:38+0000",
+      "from_user": "Magdalena Wawrzyńska",
+      "full_picture": "https://external.xx.fbcdn.net/safe_image.php?d=AQAeNazhs5eGY0l8&w=720&h=720&url=https%3A%2F%2Fi.ytimg.com%2Fvi%2F-mSRraXCY9w%2Fmaxresdefault.jpg&cfs=1&_nc_hash=AQDnUFp68KUeDT4M",
+      "id": 42,
+      "likes_num": 3,
+      "link": {
+        "url": "https://www.youtube.com/watch?v=-mSRraXCY9w",
+        "name": "Lenka - Blue Skies (REVOKE Remix)",
+        "title": "Lenka - Blue Skies (REVOKE Remix)",
+        "type": "video_share_youtube"
+      },
+      "message": "https://www.youtube.com/watch?v=-mSRraXCY9w",
+      "reactions_num": 3,
+      "selected": false,
+      "source": "https://www.youtube.com/embed/-mSRraXCY9w?autoplay=1",
+      "type": "video",
+      "updated_time": "2017-02-24T09:11:25+0000"
+    },
+    {
+      "created_time": "2015-12-17T09:15:04+0000",
+      "from_user": "Paulina Górka",
+      "full_picture": "https://external.xx.fbcdn.net/safe_image.php?d=AQBNJhmn75MivXjK&w=720&h=720&url=https%3A%2F%2Fi.ytimg.com%2Fvi%2FTw8mpgccugc%2Fhqdefault.jpg&cfs=1&_nc_hash=AQDg3aV_BeCkTevX",
+      "id": 43,
+      "likes_num": 9,
+      "link": {
+        "url": "https://www.youtube.com/watch?v=Tw8mpgccugc",
+        "name": "Flo Rida ft. Robin Thicke & Verdine White - I Don’t Like It, I Love It [Official Video]",
+        "title": "Flo Rida ft. Robin Thicke & Verdine White - I Don’t Like It, I Love It [Official Video]",
+        "type": "video_share_youtube"
+      },
+      "message": "!!! \n",
+      "reactions_num": 9,
+      "selected": false,
+      "source": "https://www.youtube.com/embed/Tw8mpgccugc?autoplay=1",
+      "type": "video",
+      "updated_time": "2017-02-24T08:45:23+0000"
+    },
+    {
+      "added_time": "2017-02-21T23:00:00.000Z",
+      "added_by": "Joanna Kozieńska",
+      "created_time": "2017-02-16T10:31:19+0000",
+      "from_user": "Bartek Szcześniak",
+      "full_picture": "https://external.xx.fbcdn.net/safe_image.php?d=AQB6HgzLC-FMQoLA&w=720&h=720&url=https%3A%2F%2Fi.ytimg.com%2Fvi%2FSp9VaU6zNt4%2Fhqdefault.jpg&cfs=1&_nc_hash=AQBeFgwWkhAObaSs",
+      "id": 44,
+      "likes_num": 1,
+      "link": {
+        "url": "https://www.youtube.com/watch?v=Sp9VaU6zNt4",
+        "name": "Dżem - \"Poznałem Go po czarnym kapeluszu\"-\"Dżem Sessions1\"",
+        "title": "Dżem - \"Poznałem Go po czarnym kapeluszu\"-\"Dżem Sessions1\"",
+        "type": "video_share_youtube"
+      },
+      "message": "Wracamy z Bluesem. Tym razem nasza klasyka :\n",
+      "reactions_num": 1,
+      "selected": false,
+      "source": "https://www.youtube.com/embed/Sp9VaU6zNt4?autoplay=1",
+      "type": "video",
+      "updated_time": "2017-02-23T14:05:14+0000"
+    },
+    {
+      "added_time": "2017-02-22T23:00:00.000Z",
+      "added_by": "Joanna Kozieńska",
+      "created_time": "2017-02-16T09:53:54+0000",
+      "from_user": "Damian Gruszczyński",
+      "full_picture": "https://external.xx.fbcdn.net/safe_image.php?w=720&h=720&url=https%3A%2F%2Fi.ytimg.com%2Fvi%2FQbv1WJQlDjI%2Fhqdefault.jpg&cfs=1&_nc_hash=AQCUd_5uF0vQSm6n",
+      "id": 45,
+      "likes_num": 8,
+      "link": {
+        "url": "https://www.youtube.com/watch?v=Qbv1WJQlDjI",
+        "name": "SJUR ft. Chris Crone - Let Me Love You",
+        "title": "SJUR ft. Chris Crone - Let Me Love You",
+        "type": "video_share_youtube"
+      },
+      "message": "Piosenka znana pewnie, ale to jej fajny cover:)",
+      "reactions_num": 8,
+      "selected": false,
+      "source": "https://www.youtube.com/embed/Qbv1WJQlDjI?autoplay=1",
+      "type": "video",
+      "updated_time": "2017-02-23T07:07:52+0000"
+    },
+    {
+      "added_time": "2017-02-22T23:00:00.000Z",
+      "added_by": "Joanna Kozieńska",
+      "created_time": "2017-02-17T06:22:47+0000",
+      "from_user": "Artur Sójka",
+      "full_picture": "https://external.xx.fbcdn.net/safe_image.php?d=AQC2irDPiG50jIrE&w=720&h=720&url=https%3A%2F%2Fi.ytimg.com%2Fvi%2Flp00DMy3aVw%2Fmaxresdefault.jpg&cfs=1&_nc_hash=AQBS58cd5INdoQ5y",
+      "id": 46,
+      "likes_num": 7,
+      "link": {
+        "url": "https://www.youtube.com/watch?v=lp00DMy3aVw",
+        "name": "Heavy (Official Lyric Video) - Linkin Park (feat. Kiiara)",
+        "title": "Heavy (Official Lyric Video) - Linkin Park (feat. Kiiara)",
+        "type": "video_share_youtube"
+      },
+      "message": "Świeżynka z wczoraj: ",
+      "reactions_num": 8,
+      "selected": false,
+      "source": "https://www.youtube.com/embed/lp00DMy3aVw?autoplay=1",
+      "type": "video",
+      "updated_time": "2017-02-23T07:07:39+0000"
+    },
+    {
+      "added_time": "2017-02-22T23:00:00.000Z",
+      "added_by": "Joanna Kozieńska",
+      "created_time": "2017-02-17T08:53:17+0000",
+      "from_user": "Bogumiła Niedziałek",
+      "full_picture": "https://external.xx.fbcdn.net/safe_image.php?d=AQBfFFBK3uDQ6763&w=720&h=720&url=https%3A%2F%2Fi.ytimg.com%2Fvi%2FDyg32hMf7Fk%2Fmaxresdefault.jpg&cfs=1&sx=362&sy=0&sw=720&sh=720&_nc_hash=AQDj1AndPEPSbaXZ",
+      "id": 47,
+      "likes_num": 6,
+      "link": {
+        "url": "https://www.youtube.com/watch?v=Dyg32hMf7Fk",
+        "name": "Khalid - Saved (Audio)",
+        "title": "Khalid - Saved (Audio)",
+        "type": "video_share_youtube"
+      },
+      "message": "https://www.youtube.com/watch?v=Dyg32hMf7Fk",
+      "reactions_num": 6,
+      "selected": false,
+      "source": "https://www.youtube.com/embed/Dyg32hMf7Fk?autoplay=1",
+      "type": "video",
+      "updated_time": "2017-02-23T07:07:29+0000"
+    },
+    {
+      "added_time": "2017-02-21T23:00:00.000Z",
+      "added_by": "Joanna Kozieńska",
+      "created_time": "2017-02-16T08:32:39+0000",
+      "from_user": "Damian Gruszczyński",
+      "full_picture": "https://external.xx.fbcdn.net/safe_image.php?d=AQCXrBdA_m5e-ihI&w=720&h=720&url=https%3A%2F%2Fi.ytimg.com%2Fvi%2FDCBmhs4dYzc%2Fmaxresdefault.jpg&cfs=1&_nc_hash=AQBkzqwwqDmQlQ7J",
+      "id": 48,
+      "likes_num": 9,
+      "link": {
+        "url": "https://www.youtube.com/watch?v=DCBmhs4dYzc",
+        "name": "Maroon 5 - Cold (Audio) ft. Future",
+        "title": "Maroon 5 - Cold (Audio) ft. Future",
+        "type": "video_share_youtube"
+      },
+      "message": "Nowy Maroon 5! :)",
+      "reactions_num": 9,
+      "selected": false,
+      "source": "https://www.youtube.com/embed/DCBmhs4dYzc?autoplay=1",
+      "type": "video",
+      "updated_time": "2017-02-22T07:17:09+0000"
+    },
+    {
+      "added_time": "2017-02-21T23:00:00.000Z",
+      "added_by": "Joanna Kozieńska",
+      "created_time": "2017-02-16T17:00:14+0000",
+      "from_user": "Artur Sójka",
+      "full_picture": "https://external.xx.fbcdn.net/safe_image.php?d=AQCXDU3BwnbrhZom&w=720&h=720&url=https%3A%2F%2Fi.ytimg.com%2Fvi%2FQrHet2LGCQ4%2Fmaxresdefault.jpg&cfs=1&sx=324&sy=0&sw=720&sh=720&_nc_hash=AQDfHvuNMRyDr8UC",
+      "id": 49,
+      "likes_num": 0,
+      "link": {
+        "url": "https://www.youtube.com/watch?v=QrHet2LGCQ4",
+        "name": "Christiana (John Lennon cover) - Imagine (Consoul Trainin Remix)",
+        "title": "Christiana (John Lennon cover) - Imagine (Consoul Trainin Remix)",
+        "type": "video_share_youtube"
+      },
+      "message": "Co powiecie na klasykę w nowszej odsłonie? ",
+      "reactions_num": 0,
+      "selected": false,
+      "source": "https://www.youtube.com/embed/QrHet2LGCQ4?autoplay=1",
+      "type": "video",
+      "updated_time": "2017-02-22T06:22:46+0000"
+    },
+    {
+      "added_time": "2017-02-20T23:00:00.000Z",
+      "added_by": "Joanna Kozieńska",
+      "created_time": "2017-02-15T21:00:22+0000",
+      "from_user": "Magdalena Wawrzyńska",
+      "full_picture": "https://external.xx.fbcdn.net/safe_image.php?d=AQABxpSEjnYBzaYF&w=720&h=720&url=https%3A%2F%2Fi.ytimg.com%2Fvi%2F3mGdfFSfyoU%2Fmaxresdefault.jpg&cfs=1&_nc_hash=AQAuGdQAsDZ4qNLP",
+      "id": 50,
+      "likes_num": 12,
+      "link": {
+        "url": "https://www.youtube.com/watch?v=3mGdfFSfyoU",
+        "name": "Jabberwocky ☀ Fog (feat. Ana Zimmer)",
+        "title": "Jabberwocky ☀ Fog (feat. Ana Zimmer)",
+        "type": "video_share_youtube"
+      },
+      "reactions_num": 12,
+      "selected": false,
+      "source": "https://www.youtube.com/embed/3mGdfFSfyoU?autoplay=1",
+      "type": "video",
+      "updated_time": "2017-02-21T09:44:13+0000"
+    },
+    {
+      "added_time": "2017-02-20T23:00:00.000Z",
+      "added_by": "Joanna Kozieńska",
+      "created_time": "2017-02-15T07:40:11+0000",
+      "from_user": "Ewelina Maciasz",
+      "full_picture": "https://external.xx.fbcdn.net/safe_image.php?d=AQB_nwV76lrWpWSD&w=720&h=720&url=https%3A%2F%2Fi.ytimg.com%2Fvi%2FLr3TagaBMBg%2Fmaxresdefault.jpg&cfs=1&_nc_hash=AQDxtbM6IgGQPJUM",
+      "id": 51,
+      "likes_num": 3,
+      "link": {
+        "url": "https://www.youtube.com/watch?v=Lr3TagaBMBg",
+        "name": "Nouvelle Vague - This Is Not A Love Song (Full Track)",
+        "title": "Nouvelle Vague - This Is Not A Love Song (Full Track)",
+        "type": "video_share_youtube"
+      },
+      "message": "https://www.youtube.com/watch?v=Lr3TagaBMBg",
+      "reactions_num": 4,
+      "selected": false,
+      "source": "https://www.youtube.com/embed/Lr3TagaBMBg?autoplay=1",
+      "type": "video",
+      "updated_time": "2017-02-21T05:19:55+0000"
+    },
+    {
+      "added_time": "2017-02-20T23:00:00.000Z",
+      "added_by": "Joanna Kozieńska",
+      "created_time": "2017-02-15T21:19:10+0000",
+      "from_user": "Dariusz Winiarski",
+      "full_picture": "https://external.xx.fbcdn.net/safe_image.php?d=AQD8gYKgMh1ZaxMO&w=360&h=360&url=https%3A%2F%2Fi.ytimg.com%2Fvi%2FOYjuuzPFmMc%2Fhqdefault.jpg&cfs=1&sx=84&sy=0&sw=360&sh=360&_nc_hash=AQDByqooanW-NF0B",
+      "id": 52,
+      "likes_num": 6,
+      "link": {
+        "url": "https://youtu.be/OYjuuzPFmMc",
+        "name": "Jason Derulo - Pull Up (Official Audio)",
+        "title": "Jason Derulo - Pull Up (Official Audio)",
+        "type": "video_share_youtube"
+      },
+      "reactions_num": 6,
+      "selected": false,
+      "source": "https://www.youtube.com/embed/OYjuuzPFmMc?autoplay=1",
+      "type": "video",
+      "updated_time": "2017-02-21T05:19:47+0000"
+    },
+    {
+      "created_time": "2017-01-09T10:17:39+0000",
+      "from_user": "Marian Biedronka",
+      "id": 53,
+      "likes_num": 17,
+      "link": {
+        "title": "No Roots, a song by Alice Merton on Spotify",
+        "type": "music_aggregation"
+      },
+      "message": "No elo, co tam?\nhttps://open.spotify.com/track/7GSuJlP3XN550RQD8t88mj\nhttps://www.youtube.com/watch?v=gZD-rvxcl78",
+      "reactions_num": 17,
+      "selected": false,
+      "type": "status",
+      "updated_time": "2017-02-20T11:49:20+0000"
+    },
+    {
+      "added_time": "2017-02-19T23:00:00.000Z",
+      "added_by": "Joanna Kozieńska",
+      "created_time": "2017-02-14T14:50:46+0000",
+      "from_user": "Bogumiła Niedziałek",
+      "full_picture": "https://external.xx.fbcdn.net/safe_image.php?d=AQCi6r2AW95ruxjg&w=720&h=720&url=https%3A%2F%2Fi.ytimg.com%2Fvi%2FPKB4cioGs98%2Fmaxresdefault.jpg&cfs=1&_nc_hash=AQDjIC0PXJKJ51BT",
+      "id": 54,
+      "likes_num": 11,
+      "link": {
+        "url": "https://www.youtube.com/watch?v=PKB4cioGs98",
+        "name": "Jax Jones - You Don't Know Me ft. RAYE",
+        "title": "Jax Jones - You Don't Know Me ft. RAYE",
+        "type": "video_share_youtube"
+      },
+      "message": "Walentynkowe zauroczenie Karin Kankun (boska!)  :)\n",
+      "reactions_num": 13,
+      "selected": false,
+      "source": "https://www.youtube.com/embed/PKB4cioGs98?autoplay=1",
+      "type": "video",
+      "updated_time": "2017-02-20T08:22:23+0000"
+    },
+    {
+      "added_time": "2017-02-19T23:00:00.000Z",
+      "added_by": "Joanna Kozieńska",
+      "created_time": "2017-02-11T20:00:44+0000",
+      "from_user": "Anca Lasc",
+      "full_picture": "https://external.xx.fbcdn.net/safe_image.php?d=AQDS1cfRiKVmsaVk&w=720&h=720&url=https%3A%2F%2Fi.ytimg.com%2Fvi%2F1hlqMwqRTJk%2Fmaxresdefault.jpg&cfs=1&_nc_hash=AQBgKZNsq_Aiav7h",
+      "id": 55,
+      "likes_num": 8,
+      "link": {
+        "url": "https://www.youtube.com/watch?v=1hlqMwqRTJk",
+        "name": "TYSM - Honeymoon Phase",
+        "title": "TYSM - Honeymoon Phase",
+        "type": "video_share_youtube"
+      },
+      "message": "New addiction :-) : \nBut I don't wanna be okay\nI wanna be ... CRAZY\n",
+      "reactions_num": 10,
+      "selected": false,
+      "source": "https://www.youtube.com/embed/1hlqMwqRTJk?autoplay=1",
+      "type": "video",
+      "updated_time": "2017-02-20T08:22:01+0000"
+    },
+    {
+      "created_time": "2017-02-17T15:06:13+0000",
+      "from_user": "Joanna Kozieńska",
+      "full_picture": "https://scontent.xx.fbcdn.net/v/t1.0-0/p180x540/16807098_10203053340932567_6439404584300445867_n.jpg?oh=3231b9301375354dcfba4e3fe835c524&oe=5964C8C7",
+      "id": 56,
+      "likes_num": 2,
+      "link": {
+        "url": "https://www.facebook.com/photo.php?fbid=10203053340932567&set=gm.1934481986785847&type=3",
+        "name": "Photos from Joanna Kozieńska's post",
+        "title": "Photos from Joanna Kozieńska's post",
+        "type": "album"
+      },
+      "message": "Hello, Sweeties!\n\nHere's our Friday recap:\n\n1. Howie Day - Collide 17 likes\n2. The Clash - Should I Stay or Should I Go (Audio) 11 likes\n3. John Legend - P.D.A. (We Just Don't Care) 11 likes\n4. Kris Kross Amsterdam & Conor Maynard ft. Ty Dolla $ign – Are You Sure? - YouTube 11 likes\n5. Daft Punk - Lose Yourself to Dance (Official Version) 9 likes\n6. Ed Sheeran - Shape Of You (SING OFF vs. The Vamps) 9 likes\nNOT available on Spotify\n7. Justin Bieber - Beauty And A Beat (Audio) ft. Nicki Minaj 8 likes\n8. James Blunt - Love Me Better [Official Video] 8 likes\n9. Jonn Hart - \"Whatchu Finna Do\" Feat. LoveRance 7 likes\n10. Celine Dion - Le Ballet 7 likes\n11. Ibeyi - River 7 likes\n12. Zakk Wylde - Lost Prayer 3 likes\n13. MAX - Lights Down Low feat. gnash (Official Video) 3 likes\n14. Phoebe Ryan - Dark Side (Audio) 2 likes\n15. TroyBoi - On My Own (feat. Nefera) 2 likes\nNOT available on Spotify\n16. Toby Lightman - So Natural  1 like\n17. Colbie Caillat - Live it Up 1 like\n18. Katy Perry - Chained To The Rhythm (Lyric Video) ft. Skip Marley 4 likes\n\nSpotify playlist: \nhttps://open.spotify.com/user/jesiennik/playlist/7yJLBUqDuuuMia2iIr4BkC\n\n...and here's our Friday puzzle :) The first two pictures (the ones without any quote) relate to the same WCS concept, enjoy :)\n\nHave a wonderful weekend!\nJoanna\n\nP.S. Happy Random Acts of Kindness Day! <3",
+      "reactions_num": 3,
+      "selected": false,
+      "type": "photo",
+      "updated_time": "2017-02-19T01:02:08+0000"
+    },
+    {
+      "added_time": "2017-02-16T23:00:00.000Z",
+      "added_by": "Joanna Kozieńska",
+      "created_time": "2017-02-11T18:17:28+0000",
+      "from_user": "Anca Lasc",
+      "full_picture": "https://external.xx.fbcdn.net/safe_image.php?d=AQBK-1QfF0xAJWYO&w=720&h=720&url=https%3A%2F%2Fi.ytimg.com%2Fvi%2F5-xVwxqjNyI%2Fmaxresdefault.jpg&cfs=1&sx=280&sy=0&sw=720&sh=720&_nc_hash=AQAvJBdVm1AzW3fA",
+      "id": 57,
+      "likes_num": 2,
+      "link": {
+        "url": "https://www.youtube.com/watch?v=5-xVwxqjNyI",
+        "name": "MAX - Lights Down Low feat. gnash (Official Video)",
+        "title": "MAX - Lights Down Low feat. gnash (Official Video)",
+        "type": "video_share_youtube"
+      },
+      "message": "Awesome piece! Somehow it's missing from this group but i think all of us enjoy it! ;-) \n\n",
+      "reactions_num": 6,
+      "selected": false,
+      "source": "https://www.youtube.com/embed/5-xVwxqjNyI?autoplay=1",
+      "type": "video",
+      "updated_time": "2017-02-17T06:34:17+0000"
+    },
+    {
+      "added_time": "2017-02-16T23:00:00.000Z",
+      "added_by": "Joanna Kozieńska",
+      "created_time": "2017-02-11T20:28:31+0000",
+      "from_user": "Adam Jaskiernik",
+      "full_picture": "https://external.xx.fbcdn.net/safe_image.php?d=AQAmSfNTdXg4wzkd&w=720&h=720&url=https%3A%2F%2Fi.ytimg.com%2Fvi%2Fu4BrJ4Jtuss%2Fhqdefault.jpg&cfs=1&_nc_hash=AQBC5c8vbwz8A-cf",
+      "id": 58,
+      "likes_num": 1,
+      "link": {
+        "url": "https://www.youtube.com/watch?v=u4BrJ4Jtuss",
+        "name": "toby lightman - So Natural - Let Go",
+        "title": "toby lightman - So Natural - Let Go",
+        "type": "video_share_youtube"
+      },
+      "message": "Trójmiastowa inspiracja :)\n",
+      "reactions_num": 1,
+      "selected": false,
+      "source": "https://www.youtube.com/embed/u4BrJ4Jtuss?autoplay=1",
+      "type": "video",
+      "updated_time": "2017-02-17T06:34:07+0000"
+    },
+    {
+      "added_time": "2017-02-15T23:00:00.000Z",
+      "added_by": "Joanna Kozieńska",
+      "created_time": "2017-02-11T15:57:42+0000",
+      "from_user": "Bartek Szcześniak",
+      "full_picture": "https://external.xx.fbcdn.net/safe_image.php?d=AQAZfNDQAOOyfhAP&w=720&h=720&url=https%3A%2F%2Fi.ytimg.com%2Fvi%2FBN1WwnEDWAM%2Fmaxresdefault.jpg&cfs=1&sx=275&sy=0&sw=720&sh=720&_nc_hash=AQAgalbf3iPJ8itr",
+      "id": 59,
+      "likes_num": 10,
+      "link": {
+        "url": "https://youtu.be/BN1WwnEDWAM",
+        "name": "The Clash - Should I Stay or Should I Go (Audio)",
+        "title": "The Clash - Should I Stay or Should I Go (Audio)",
+        "type": "video_share_youtube"
+      },
+      "message": "I kolejny staroć którego mi tu brakuje. Choć podejrzewam, że przyspieszenie w tym utworze nie wszystkim musi się spodobać ;)\n ",
+      "reactions_num": 12,
+      "selected": false,
+      "source": "https://www.youtube.com/embed/BN1WwnEDWAM?autoplay=1",
+      "type": "video",
+      "updated_time": "2017-02-16T20:20:53+0000"
+    },
+    {
+      "added_time": "2017-02-15T23:00:00.000Z",
+      "added_by": "Joanna Kozieńska",
+      "created_time": "2017-02-11T17:17:44+0000",
+      "from_user": "Agnieszka Orzeł",
+      "full_picture": "https://external.xx.fbcdn.net/safe_image.php?d=AQBMTmN-Py0YOjqC&w=720&h=720&url=https%3A%2F%2Fi.ytimg.com%2Fvi%2FLf9OgcXV5cE%2Fmaxresdefault.jpg&cfs=1&sx=409&sy=0&sw=1080&sh=1080&_nc_hash=AQCDe3qzhrwhN2tt",
+      "id": 60,
+      "likes_num": 9,
+      "link": {
+        "url": "https://www.youtube.com/watch?v=Lf9OgcXV5cE",
+        "name": "Justin Bieber - Beauty And A Beat (Audio) ft. Nicki Minaj",
+        "title": "Justin Bieber - Beauty And A Beat (Audio) ft. Nicki Minaj",
+        "type": "video_share_youtube"
+      },
+      "reactions_num": 9,
+      "selected": false,
+      "source": "https://www.youtube.com/embed/Lf9OgcXV5cE?autoplay=1",
+      "type": "video",
+      "updated_time": "2017-02-16T17:53:28+0000"
+    },
+    {
+      "created_time": "2016-06-07T09:07:06+0000",
+      "from_user": "Joanna Kozieńska",
+      "full_picture": "https://external.xx.fbcdn.net/safe_image.php?d=AQCjCk4EcxPuG0b3&w=720&h=720&url=https%3A%2F%2Fi.ytimg.com%2Fvi%2F3RTIXUzCr2M%2Fmaxresdefault.jpg&cfs=1&_nc_hash=AQCvFRRHaAW10hzE",
+      "id": 61,
+      "likes_num": 26,
+      "link": {
+        "url": "https://www.youtube.com/watch?v=3RTIXUzCr2M",
+        "name": "Lazyboy Empire - Vampire (Official Video)",
+        "title": "Lazyboy Empire - Vampire (Official Video)",
+        "type": "video_share_youtube"
+      },
+      "message": "#post_baltic_again :)\n\nPoprawna nazwa zespołu: Nitemayor.\nMoże teraz będzie wyszukiwać :P \n\n",
+      "reactions_num": 29,
+      "selected": false,
+      "source": "https://www.youtube.com/embed/3RTIXUzCr2M?autoplay=1",
+      "type": "video",
+      "updated_time": "2017-02-16T09:15:48+0000"
+    },
+    {
+      "added_time": "2017-02-15T23:00:00.000Z",
+      "added_by": "Joanna Kozieńska",
+      "created_time": "2017-02-11T10:45:42+0000",
+      "from_user": "Bogumiła Niedziałek",
+      "full_picture": "https://external.xx.fbcdn.net/safe_image.php?d=AQB6D97gQdkBA11H&w=720&h=720&url=https%3A%2F%2Fi.ytimg.com%2Fvi%2FNHffhGkpgFA%2Fmaxresdefault.jpg&cfs=1&_nc_hash=AQAPYDD9upnYnLxv",
+      "id": 62,
+      "likes_num": 4,
+      "link": {
+        "url": "https://www.youtube.com/watch?v=NHffhGkpgFA",
+        "name": "TroyBoi - On My Own (feat. Nefera)",
+        "title": "TroyBoi - On My Own (feat. Nefera)",
+        "type": "video_share_youtube"
+      },
+      "message": "Nowość dla odważnych ",
+      "reactions_num": 5,
+      "selected": false,
+      "source": "https://www.youtube.com/embed/NHffhGkpgFA?autoplay=1",
+      "type": "video",
+      "updated_time": "2017-02-16T08:31:22+0000"
+    },
+    {
+      "created_time": "2015-11-06T18:45:42+0000",
+      "from_user": "Aleksandra Łukomska",
+      "full_picture": "https://external.xx.fbcdn.net/safe_image.php?d=AQB_zn-q6aojXYly&w=720&h=720&url=https%3A%2F%2Fi.ytimg.com%2Fvi%2F3ke-sS8dPKk%2Fmaxresdefault.jpg&cfs=1&sx=343&sy=0&sw=833&sh=833&_nc_hash=AQCsyg74zCEjeYlP",
+      "id": 63,
+      "likes_num": 17,
+      "link": {
+        "url": "https://www.youtube.com/watch?v=3ke-sS8dPKk",
+        "name": "Thrift Shop - Lindsey Stirling & Tyler Ward (Macklemore & Ryan Lewis Cover)",
+        "title": "Thrift Shop - Lindsey Stirling & Tyler Ward (Macklemore & Ryan Lewis Cover)",
+        "type": "video_share_youtube"
+      },
+      "reactions_num": 18,
+      "selected": false,
+      "source": "https://www.youtube.com/embed/3ke-sS8dPKk?autoplay=1",
+      "type": "video",
+      "updated_time": "2017-02-15T16:04:30+0000"
+    },
+    {
+      "added_time": "2017-02-01T23:00:00.000Z",
+      "added_by": "Joanna Kozieńska",
+      "created_time": "2017-01-30T08:59:54+0000",
+      "from_user": "Dariusz Winiarski",
+      "full_picture": "https://external.xx.fbcdn.net/safe_image.php?d=AQCN5uzefRhgtLoC&w=720&h=720&url=https%3A%2F%2Fi.ytimg.com%2Fvi%2Fzx3cJHj7c34%2Fmaxresdefault.jpg&cfs=1&_nc_hash=AQCnYwm3hq2pXexr",
+      "id": 64,
+      "likes_num": 6,
+      "link": {
+        "url": "https://youtu.be/zx3cJHj7c34",
+        "name": "Fetty Wap - Like A Star Feat. Nicki Minaj",
+        "title": "Fetty Wap - Like A Star Feat. Nicki Minaj",
+        "type": "video_share_youtube"
+      },
+      "reactions_num": 6,
+      "selected": false,
+      "source": "https://www.youtube.com/embed/zx3cJHj7c34?autoplay=1",
+      "type": "video",
+      "updated_time": "2017-02-15T13:02:55+0000"
+    },
+    {
+      "added_time": "2017-02-14T23:00:00.000Z",
+      "added_by": "Paulina Górka",
+      "created_time": "2017-02-10T22:45:23+0000",
+      "from_user": "Dariusz Winiarski",
+      "full_picture": "https://external.xx.fbcdn.net/safe_image.php?w=720&h=720&url=https%3A%2F%2Fi.ytimg.com%2Fvi%2FN5lCYLqtZkw%2Fmaxresdefault.jpg&cfs=1&_nc_hash=AQCDO9RWhdtapwmx",
+      "id": 65,
+      "likes_num": 9,
+      "link": {
+        "url": "https://youtu.be/N5lCYLqtZkw",
+        "name": "Jonn Hart - \"Whatchu Finna Do\" Feat. LoveRance",
+        "title": "Jonn Hart - \"Whatchu Finna Do\" Feat. LoveRance",
+        "type": "video_share_youtube"
+      },
+      "message": "Niszowy shit. Idealny do westa. Ale o co chodzi?",
+      "reactions_num": 9,
+      "selected": false,
+      "source": "https://www.youtube.com/embed/N5lCYLqtZkw?autoplay=1",
+      "type": "video",
+      "updated_time": "2017-02-15T08:06:49+0000"
+    },
+    {
+      "added_time": "2017-02-14T23:00:00.000Z",
+      "added_by": "Paulina Górka",
+      "created_time": "2017-02-10T10:12:39+0000",
+      "from_user": "Kolarz Pawel",
+      "full_picture": "https://external.xx.fbcdn.net/safe_image.php?d=AQDjs1zjjl6s6kzW&w=720&h=720&url=https%3A%2F%2Fi.ytimg.com%2Fvi%2Fb8dG5fSsALI%2Fhqdefault.jpg&cfs=1&_nc_hash=AQA9XeMPI6PC1YGT",
+      "id": 66,
+      "likes_num": 4,
+      "link": {
+        "url": "https://youtu.be/b8dG5fSsALI",
+        "name": "Zakk Wylde - Lost Prayer",
+        "title": "Zakk Wylde - Lost Prayer",
+        "type": "video_share_youtube"
+      },
+      "message": "Ode mnie cos na 'rockowo' ale nóżki same tańczą ;)\n",
+      "reactions_num": 4,
+      "selected": false,
+      "source": "https://www.youtube.com/embed/b8dG5fSsALI?autoplay=1",
+      "type": "video",
+      "updated_time": "2017-02-14T23:11:36+0000"
+    },
+    {
+      "added_time": "2017-02-13T23:00:00.000Z",
+      "added_by": "Michał Grezel",
+      "created_time": "2017-02-11T10:40:33+0000",
+      "from_user": "Anca Lasc",
+      "full_picture": "https://external.xx.fbcdn.net/safe_image.php?d=AQDeOdylaVEYP5Fe&w=720&h=720&url=https%3A%2F%2Fi.ytimg.com%2Fvi%2FVRylt3taauE%2Fmaxresdefault.jpg&cfs=1&_nc_hash=AQA1-7DbVo-v3Ywf",
+      "id": 67,
+      "likes_num": 3,
+      "link": {
+        "url": "https://www.youtube.com/watch?v=VRylt3taauE",
+        "name": "Phoebe Ryan - Dark Side (Audio)",
+        "title": "Phoebe Ryan - Dark Side (Audio)",
+        "type": "video_share_youtube"
+      },
+      "reactions_num": 3,
+      "selected": false,
+      "source": "https://www.youtube.com/embed/VRylt3taauE?autoplay=1",
+      "type": "video",
+      "updated_time": "2017-02-14T08:55:47+0000"
+    },
+    {
+      "created_time": "2017-02-14T08:36:45+0000",
+      "from_user": "Michał Grezel",
+      "full_picture": "https://scontent.xx.fbcdn.net/v/t1.0-9/s720x720/16708431_1319569158066203_343673674721450137_n.jpg?oh=cc6471273abadc68b8ac27768345bdc7&oe=5970859E",
+      "id": 68,
+      "likes_num": 2,
+      "link": {
+        "url": "https://www.facebook.com/photo.php?fbid=1319569158066203&set=gm.1932223520345027&type=3",
+        "type": "photo"
+      },
+      "message": "Cześć. Z okazji walentynek dzisiaj 6 piosenek, a nie 3 miłego dnia ;)\n\nBonus +1 sponsorowany przez 12 urodziny YOUTUBA (info Damian ) 3:)",
+      "reactions_num": 2,
+      "selected": false,
+      "type": "photo",
+      "updated_time": "2017-02-14T08:49:50+0000"
+    },
+    {
+      "added_time": "2017-02-13T23:00:00.000Z",
+      "added_by": "Michał Grezel",
+      "created_time": "2017-02-08T21:06:23+0000",
+      "from_user": "Bartek Szcześniak",
+      "full_picture": "https://external.xx.fbcdn.net/safe_image.php?d=AQAlPe6LNc0co6Mt&w=360&h=360&url=https%3A%2F%2Fi.ytimg.com%2Fvi%2FaN8oOLZ4YOA%2Fhqdefault.jpg&cfs=1&sx=0&sy=0&sw=360&sh=360&_nc_hash=AQCq2FIVzWz3nvQM",
+      "id": 69,
+      "likes_num": 8,
+      "link": {
+        "url": "https://www.youtube.com/watch?v=aN8oOLZ4YOA",
+        "name": "Celine Dion - Le Ballet",
+        "title": "Celine Dion - Le Ballet",
+        "type": "video_share_youtube"
+      },
+      "message": "Kolejny utwór z mojej kolekcji, zobaczymy jak to się wam spodoba...\n",
+      "reactions_num": 8,
+      "selected": false,
+      "source": "https://www.youtube.com/embed/aN8oOLZ4YOA?autoplay=1",
+      "type": "video",
+      "updated_time": "2017-02-14T08:39:26+0000"
+    },
+    {
+      "added_time": "2017-02-13T23:00:00.000Z",
+      "added_by": "Michał Grezel",
+      "created_time": "2017-02-08T13:35:03+0000",
+      "from_user": "Jakub Szwiec",
+      "full_picture": "https://external.xx.fbcdn.net/safe_image.php?d=AQC9iyypcaSXye8S&w=720&h=720&url=https%3A%2F%2Fi.ytimg.com%2Fvi%2FZwbNesQeods%2Fmaxresdefault.jpg&cfs=1&sx=225&sy=0&sw=1080&sh=1080&_nc_hash=AQBTBJ1s810B4gIv",
+      "id": 70,
+      "likes_num": 11,
+      "link": {
+        "url": "https://www.youtube.com/watch?v=ZwbNesQeods",
+        "name": "John Legend - P.D.A. (We Just Don't Care)",
+        "title": "John Legend - P.D.A. (We Just Don't Care)",
+        "type": "video_share_youtube"
+      },
+      "message": "Stare ale spoko :P \n",
+      "reactions_num": 11,
+      "selected": false,
+      "source": "https://www.youtube.com/embed/ZwbNesQeods?autoplay=1",
+      "type": "video",
+      "updated_time": "2017-02-14T08:37:48+0000"
+    },
+    {
+      "added_time": "2017-02-13T23:00:00.000Z",
+      "added_by": "Paulina Górka",
+      "created_time": "2017-02-07T07:51:33+0000",
+      "from_user": "Damian Gruszczyński",
+      "full_picture": "https://external.xx.fbcdn.net/safe_image.php?d=AQAmgXPqUG-SSkDM&w=720&h=720&url=https%3A%2F%2Fi.ytimg.com%2Fvi%2FAWTREwT-GQI%2Fmaxresdefault.jpg&cfs=1&sx=131&sy=0&sw=720&sh=720&_nc_hash=AQBYcabP6_KFBdu1",
+      "id": 71,
+      "likes_num": 12,
+      "link": {
+        "url": "https://www.youtube.com/watch?v=AWTREwT-GQI",
+        "name": "Kris Kross Amsterdam & Conor Maynard ft. Ty Dolla $ign – Are You Sure? - YouTube",
+        "title": "Kris Kross Amsterdam & Conor Maynard ft. Ty Dolla $ign – Are You Sure? - YouTube",
+        "type": "video_share_youtube"
+      },
+      "message": "Nieco szybsze, ale z mega pozytywnymi wibracjami! :)",
+      "reactions_num": 12,
+      "selected": false,
+      "source": "https://www.youtube.com/embed/AWTREwT-GQI?autoplay=1",
+      "type": "video",
+      "updated_time": "2017-02-14T08:36:11+0000"
+    },
+    {
+      "added_time": "2017-02-13T23:00:00.000Z",
+      "added_by": "Paulina Górka",
+      "created_time": "2017-02-08T13:31:03+0000",
+      "from_user": "Jakub Szwiec",
+      "full_picture": "https://external.xx.fbcdn.net/safe_image.php?d=AQC3295vX9GM8gj6&w=720&h=720&url=https%3A%2F%2Fi.ytimg.com%2Fvi%2FRFHHEac83B8%2Fmaxresdefault.jpg&cfs=1&sx=544&sy=0&sw=720&sh=720&_nc_hash=AQB3BXApmMb0-iJ9",
+      "id": 72,
+      "likes_num": 7,
+      "link": {
+        "url": "https://www.youtube.com/watch?v=RFHHEac83B8",
+        "name": "James Blunt - Love Me Better [Official Video]",
+        "title": "James Blunt - Love Me Better [Official Video]",
+        "type": "video_share_youtube"
+      },
+      "message": "Proste jak budowa T-55, ale na pewno będzie na imprezach. \n",
+      "reactions_num": 8,
+      "selected": false,
+      "source": "https://www.youtube.com/embed/RFHHEac83B8?autoplay=1",
+      "type": "video",
+      "updated_time": "2017-02-14T00:57:04+0000"
+    },
+    {
+      "added_time": "2017-02-13T23:00:00.000Z",
+      "added_by": "Paulina Górka",
+      "created_time": "2017-02-07T07:48:22+0000",
+      "from_user": "Damian Gruszczyński",
+      "full_picture": "https://external.xx.fbcdn.net/safe_image.php?d=AQAU641RgEMH4UA9&w=720&h=720&url=https%3A%2F%2Fi.ytimg.com%2Fvi%2FP4oSRlQqjf8%2Fmaxresdefault.jpg&cfs=1&sx=0&sy=0&sw=720&sh=720&_nc_hash=AQC34m4TxJvbcg7T",
+      "id": 73,
+      "likes_num": 9,
+      "link": {
+        "url": "https://www.youtube.com/watch?v=P4oSRlQqjf8",
+        "name": "Ed Sheeran - Shape Of You (SING OFF vs. The Vamps)",
+        "title": "Ed Sheeran - Shape Of You (SING OFF vs. The Vamps)",
+        "type": "video_share_youtube"
+      },
+      "message": "Mega! :D",
+      "reactions_num": 9,
+      "selected": false,
+      "source": "https://www.youtube.com/embed/P4oSRlQqjf8?autoplay=1",
+      "type": "video",
+      "updated_time": "2017-02-14T00:56:43+0000"
+    },
+    {
+      "added_time": "2017-02-12T23:00:00.000Z",
+      "added_by": "Michał Grezel",
+      "created_time": "2017-02-07T19:33:17+0000",
+      "from_user": "Katarzyna Gierasimczuk",
+      "full_picture": "https://external.xx.fbcdn.net/safe_image.php?d=AQBqoBjrXFfcikxJ&w=720&h=720&url=https%3A%2F%2Fi.ytimg.com%2Fvi%2Fca9ub9rpNK4%2Fmaxresdefault.jpg&cfs=1&sx=324&sy=0&sw=1080&sh=1080&_nc_hash=AQA_rr1VhG533jxr",
+      "id": 74,
+      "likes_num": 14,
+      "link": {
+        "url": "https://youtu.be/ca9ub9rpNK4",
+        "name": "Howie Day - Collide",
+        "title": "Howie Day - Collide",
+        "type": "video_share_youtube"
+      },
+      "message": "Wyszukiwarka nie znalazła. A zdecydowanie powinna.",
+      "reactions_num": 17,
+      "selected": false,
+      "source": "https://www.youtube.com/embed/ca9ub9rpNK4?autoplay=1",
+      "type": "video",
+      "updated_time": "2017-02-13T09:36:23+0000"
+    },
+    {
+      "added_time": "2017-02-12T23:00:00.000Z",
+      "added_by": "Michał Grezel",
+      "created_time": "2017-02-06T20:57:43+0000",
+      "from_user": "Przemysław Przemysł",
+      "full_picture": "https://external.xx.fbcdn.net/safe_image.php?d=AQCgkLvzedw6HZzz&w=720&h=720&url=https%3A%2F%2Fi.ytimg.com%2Fvi%2FlHRAPIwsS5I%2Fmaxresdefault.jpg&cfs=1&sx=379&sy=0&sw=944&sh=944&_nc_hash=AQD2H42lGxxlHbhJ",
+      "id": 75,
+      "likes_num": 7,
+      "link": {
+        "url": "https://www.youtube.com/watch?v=lHRAPIwsS5I",
+        "name": "Ibeyi - River",
+        "title": "Ibeyi - River",
+        "type": "video_share_youtube"
+      },
+      "message": "do tego ktoś stricte westowy tańczył, tylko kto i gdzie ja to widziauem? https://www.youtube.com/watch?v=lHRAPIwsS5I  edyta: Desert City Swing JJ Finals 2016 1st Place Jordan Frisbee Kellese Key",
+      "reactions_num": 7,
+      "selected": false,
+      "source": "https://www.youtube.com/embed/lHRAPIwsS5I?autoplay=1",
+      "type": "video",
+      "updated_time": "2017-02-13T09:35:40+0000"
+    },
+    {
+      "added_time": "2017-02-12T23:00:00.000Z",
+      "added_by": "Michał Grezel",
+      "created_time": "2017-02-12T23:31:10+0000",
+      "from_user": "Paulina Górka",
+      "full_picture": "https://external.xx.fbcdn.net/safe_image.php?d=AQC89op24s4l7v03&w=720&h=720&url=https%3A%2F%2Fi.ytimg.com%2Fvi%2FNF-kLy44Hls%2Fhqdefault.jpg&cfs=1&_nc_hash=AQAgNIprPhlpkqW5",
+      "id": 76,
+      "likes_num": 8,
+      "link": {
+        "url": "https://www.youtube.com/watch?v=NF-kLy44Hls",
+        "name": "Daft Punk - Lose Yourself to Dance (Official Version)",
+        "title": "Daft Punk - Lose Yourself to Dance (Official Version)",
+        "type": "video_share_youtube"
+      },
+      "message": "sooooo gooood! <3\n",
+      "reactions_num": 9,
+      "selected": false,
+      "source": "https://www.youtube.com/embed/NF-kLy44Hls?autoplay=1",
+      "type": "video",
+      "updated_time": "2017-02-12T23:37:39+0000"
+    },
+    {
+      "added_time": "2017-02-09T23:00:00.000Z",
+      "added_by": "Joanna Kozieńska",
+      "created_time": "2017-02-04T11:24:40+0000",
+      "from_user": "Anna Ratajczak",
+      "full_picture": "https://external.xx.fbcdn.net/safe_image.php?d=AQDktk8wMcxkhi8q&w=720&h=720&url=https%3A%2F%2Fi.ytimg.com%2Fvi%2F37iuauzMWxo%2Fmaxresdefault.jpg&cfs=1&sx=161&sy=0&sw=720&sh=720&_nc_hash=AQAYVVZ0ytBcBUHP",
+      "id": 77,
+      "likes_num": 5,
+      "link": {
+        "url": "https://www.youtube.com/watch?v=37iuauzMWxo",
+        "name": "Bei Maejor - Trouble ft. J. Cole",
+        "title": "Bei Maejor - Trouble ft. J. Cole",
+        "type": "video_share_youtube"
+      },
+      "message": "Tekst tekstem, teledysk teledyskiem, ale bit ciekawy :)",
+      "reactions_num": 5,
+      "selected": false,
+      "source": "https://www.youtube.com/embed/37iuauzMWxo?autoplay=1",
+      "type": "video",
+      "updated_time": "2017-02-12T17:24:26+0000"
+    },
+    {
+      "created_time": "2017-02-10T16:08:41+0000",
+      "from_user": "Joanna Kozieńska",
+      "full_picture": "https://external.xx.fbcdn.net/safe_image.php?d=AQBQFAnYpil_SNC3&url=https%3A%2F%2Fmosaic.scdn.co%2F640%2F419bbc9ac23141ce2e16f6abad05997e3c524c07c8d12805f26c8cc12a83384fc50b5690f5143e52b40b5bdc38678402148b6ebef3497637f7db569f48fa8b0c3d1ee9852378968d5feb5262ed59ffd4&_nc_hash=AQDRbmCvi8Hdjxq2",
+      "id": 78,
+      "likes_num": 1,
+      "link": {
+        "url": "https://open.spotify.com/user/jesiennik/playlist/3kePexOLoC7nix5Yh9BbA0",
+        "name": "Chart_6_Feb_10_Feb, a playlist by jesiennik on Spotify",
+        "title": "A playlist featuring Marian Hill, The Blues Brothers, Baby & Me, and others",
+        "type": "music_aggregation"
+      },
+      "message": "Hello Sweeties :)\n\nIt's time for our Friday recap!\n\nFirst of all, thanks for each and every song that you have shared so far! :) We're keeping the 3-song daily limit for the next week as well!\n\nList of songs that have been posted this week:\n\n1. Marian Hill - I Want You 14 likes\n2. Blues Brothers - Sweet Home Chicago 13 likes\n3. Here Comes The Hotstepper - Evian remix by Yuksek (FULL VERSION) 10 likes\n4. Zak Abel - Unstable [Official Audio] 9 likes\n5. Ed Sheeran - Shape Of You (Madilyn Bailey's cover) 8 likes\n6. The 1975 - Somebody Else 7 likes\n7. Milt Buckner - The Beast 6 likes\n8. Vice - Steady 1234 Ft. Jasmine Thompson & Skizzy Mars [Official Lyric Video] 6 likes\n9. Bei Maejor - Trouble ft. J. Cole 4 likes\n10. Faith Evans & Notorious B.I.G ft. Snoop Dogg - When We Party (Dirty) 4 likes\n11. Electric Guest - Dear To Me 3 likes\n12. Passenger | If You Go 2 likes\n13. CADE - Make You Feel Loved (Official Music Video) 1 like\n14. Rae Sremmurd - Black Beatles ft. Gucci Mane 1 like\n15. The Black Eyed Peas - Like That ft. Q-Tip, Talib Kweli, Cee-Lo, John Legend 0 likes\n16. Ellie Goulding - Explosions (Cover By Jasmine Thompson) 0 likes\n\nSpotify playlist:\nhttps://open.spotify.com/user/jesiennik/playlist/3kePexOLoC7nix5Yh9BbA0\n\nThe puzzle this week is a bit different than usual (what's life without changes, huh? ;) - the name of a WCS pattern is hidden somewhere in the video below:\nhttps://youtu.be/UoUEQYjYgf4\n\nGood luck and have the best weekend!\n\nBisous,\nJoanna",
+      "reactions_num": 1,
+      "selected": false,
+      "type": "link",
+      "updated_time": "2017-02-10T23:41:44+0000"
+    },
+    {
+      "added_time": "2017-02-05T23:00:00.000Z",
+      "added_by": "Joanna Kozieńska",
+      "created_time": "2017-02-01T09:25:42+0000",
+      "from_user": "Agata Nowak",
+      "full_picture": "https://external.xx.fbcdn.net/safe_image.php?d=AQD2L0wU848uKm-o&w=720&h=720&url=https%3A%2F%2Fi.ytimg.com%2Fvi%2FcC7rEd5dfwk%2Fmaxresdefault.jpg&cfs=1&sx=278&sy=0&sw=720&sh=720&_nc_hash=AQB9pi4tBlp7OMSj",
+      "id": 79,
+      "likes_num": 13,
+      "link": {
+        "url": "https://www.youtube.com/watch?v=cC7rEd5dfwk",
+        "name": "Zak Abel - Unstable [Official Audio]",
+        "title": "Zak Abel - Unstable [Official Audio]",
+        "type": "video_share_youtube"
+      },
+      "reactions_num": 13,
+      "selected": false,
+      "source": "https://www.youtube.com/embed/cC7rEd5dfwk?autoplay=1",
+      "type": "video",
+      "updated_time": "2017-02-10T22:07:13+0000"
+    },
+    {
+      "added_time": "2017-02-08T23:00:00.000Z",
+      "added_by": "Joanna Kozieńska",
+      "created_time": "2017-02-04T00:43:43+0000",
+      "from_user": "Bartek Szcześniak",
+      "full_picture": "https://external.xx.fbcdn.net/safe_image.php?d=AQDKWbTZzIx1bQ5Y&w=360&h=360&url=https%3A%2F%2Fi.ytimg.com%2Fvi%2F79vCiXg3njY%2Fhqdefault.jpg&cfs=1&sx=0&sy=0&sw=360&sh=360&_nc_hash=AQAhz31cbLciHai0",
+      "id": 80,
+      "likes_num": 16,
+      "link": {
+        "url": "https://www.youtube.com/watch?v=79vCiXg3njY",
+        "name": "Blues Brothers - Sweet Home Chicago",
+        "title": "Blues Brothers - Sweet Home Chicago",
+        "type": "video_share_youtube"
+      },
+      "message": "Poprzednia opcja się spodobała, tak więc wracam z kolejną - tym razem bluesową : ",
+      "reactions_num": 16,
+      "selected": false,
+      "source": "https://www.youtube.com/embed/79vCiXg3njY?autoplay=1",
+      "type": "video",
+      "updated_time": "2017-02-10T21:20:06+0000"
+    },
+    {
+      "added_time": "2017-02-06T23:00:00.000Z",
+      "added_by": "Michał Grezel",
+      "created_time": "2017-02-01T14:25:18+0000",
+      "from_user": "Agata Nowak",
+      "full_picture": "https://external.xx.fbcdn.net/safe_image.php?d=AQDntRVfPm0xWwoJ&w=720&h=720&url=https%3A%2F%2Fi.ytimg.com%2Fvi%2FQ0DBHo_ne8I%2Fmaxresdefault.jpg&cfs=1&sx=296&sy=0&sw=720&sh=720&_nc_hash=AQDJJ3bhkZAxXSrV",
+      "id": 81,
+      "likes_num": 14,
+      "link": {
+        "url": "https://www.youtube.com/watch?v=Q0DBHo_ne8I",
+        "name": "Marian Hill - I Want You",
+        "title": "Marian Hill - I Want You",
+        "type": "video_share_youtube"
+      },
+      "reactions_num": 17,
+      "selected": false,
+      "source": "https://www.youtube.com/embed/Q0DBHo_ne8I?autoplay=1",
+      "type": "video",
+      "updated_time": "2017-02-10T10:27:59+0000"
+    },
+    {
+      "added_time": "2017-02-09T23:00:00.000Z",
+      "added_by": "Joanna Kozieńska",
+      "created_time": "2017-02-05T21:00:14+0000",
+      "from_user": "Izabela Szewczyk",
+      "full_picture": "https://external.xx.fbcdn.net/safe_image.php?d=AQCf6w3MfwAugfv-&w=720&h=720&url=https%3A%2F%2Fi.ytimg.com%2Fvi%2FeVKO5NOW3xU%2Fhqdefault.jpg&cfs=1&_nc_hash=AQCKdS-N3RztMMZe",
+      "id": 82,
+      "likes_num": 3,
+      "link": {
+        "url": "https://www.youtube.com/watch?v=eVKO5NOW3xU",
+        "name": "CADE - Make You Feel Loved (Official Music Video)",
+        "title": "CADE - Make You Feel Loved (Official Music Video)",
+        "type": "video_share_youtube"
+      },
+      "message": "https://www.youtube.com/watch?v=eVKO5NOW3xU",
+      "reactions_num": 3,
+      "selected": false,
+      "source": "https://www.youtube.com/embed/eVKO5NOW3xU?autoplay=1",
+      "type": "video",
+      "updated_time": "2017-02-10T07:45:53+0000"
+    },
+    {
+      "created_time": "2015-11-30T17:26:43+0000",
+      "from_user": "Paulina Górka",
+      "full_picture": "https://external.xx.fbcdn.net/safe_image.php?d=AQAJ2EVg5w1zjYVa&w=360&h=360&url=https%3A%2F%2Fi.ytimg.com%2Fvi%2FMZjZI6eGtcM%2Fhqdefault.jpg&cfs=1&sx=120&sy=0&sw=360&sh=360&_nc_hash=AQBQIIKMaWG6oTMD",
+      "id": 83,
+      "likes_num": 10,
+      "link": {
+        "url": "https://www.youtube.com/watch?v=MZjZI6eGtcM",
+        "name": "John Mayer - Belief (HQ)",
+        "title": "John Mayer - Belief (HQ)",
+        "type": "video_share_youtube"
+      },
+      "message": "kolejny hicior westowy od Mateusza :)\n",
+      "reactions_num": 10,
+      "selected": false,
+      "source": "https://www.youtube.com/embed/MZjZI6eGtcM?autoplay=1",
+      "type": "video",
+      "updated_time": "2017-02-09T21:26:26+0000"
+    },
+    {
+      "created_time": "2017-01-29T16:44:07+0000",
+      "from_user": "Joanna Kozieńska",
+      "full_picture": "https://external.xx.fbcdn.net/safe_image.php?d=AQCUqBaS6UL5ZpCP&w=720&h=720&url=https%3A%2F%2Fi.ytimg.com%2Fvi%2F5AOtEnH87Mg%2Fmaxresdefault.jpg&cfs=1&_nc_hash=AQADKKquJ8QOupha",
+      "id": 84,
+      "likes_num": 5,
+      "link": {
+        "url": "https://youtu.be/5AOtEnH87Mg",
+        "name": "Dillon Francis, Kygo - Coming Over ft. James Hersey",
+        "title": "Dillon Francis, Kygo - Coming Over ft. James Hersey",
+        "type": "video_share_youtube"
+      },
+      "message": "[Wielkie Ogarnianie Charta: piosenki zaginione w akcji]\n\n",
+      "reactions_num": 5,
+      "selected": false,
+      "source": "https://www.youtube.com/embed/5AOtEnH87Mg?autoplay=1",
+      "type": "video",
+      "updated_time": "2017-02-09T21:08:37+0000"
+    },
+    {
+      "added_time": "2017-02-06T23:00:00.000Z",
+      "added_by": "Paulina Górka",
+      "created_time": "2017-02-01T23:11:07+0000",
+      "from_user": "Agnieszka Orzeł",
+      "full_picture": "https://external.xx.fbcdn.net/safe_image.php?d=AQDoF2aid9hShJf2&w=720&h=720&url=https%3A%2F%2Fi.ytimg.com%2Fvi%2FXFYYwxECkfg%2Fmaxresdefault.jpg&cfs=1&sx=0&sy=0&sw=2400&sh=2400&_nc_hash=AQBJ6tYxEHaBIYW0",
+      "id": 85,
+      "likes_num": 6,
+      "link": {
+        "url": "https://www.youtube.com/watch?v=XFYYwxECkfg",
+        "name": "Milt Buckner - The Beast",
+        "title": "Milt Buckner - The Beast",
+        "type": "video_share_youtube"
+      },
+      "reactions_num": 8,
+      "selected": false,
+      "source": "https://www.youtube.com/embed/XFYYwxECkfg?autoplay=1",
+      "type": "video",
+      "updated_time": "2017-02-09T21:07:36+0000"
+    },
+    {
+      "created_time": "2017-01-18T18:34:45+0000",
+      "from_user": "Agnieszka Orzeł",
+      "full_picture": "https://external.xx.fbcdn.net/safe_image.php?d=AQAV0Wbr7zmRfGdk&w=720&h=720&url=https%3A%2F%2Fi.ytimg.com%2Fvi%2F9XpDG7pWt0g%2Fmaxresdefault.jpg&cfs=1&_nc_hash=AQChQ3boJsboRg9Y",
+      "id": 86,
+      "likes_num": 8,
+      "link": {
+        "url": "https://www.youtube.com/watch?v=9XpDG7pWt0g",
+        "name": "Pitbull - Can't Have (Audio) ft. Steven A. Clark, Ape Drums",
+        "title": "Pitbull - Can't Have (Audio) ft. Steven A. Clark, Ape Drums",
+        "type": "video_share_youtube"
+      },
+      "reactions_num": 8,
+      "selected": false,
+      "source": "https://www.youtube.com/embed/9XpDG7pWt0g?autoplay=1",
+      "type": "video",
+      "updated_time": "2017-02-09T15:56:14+0000"
+    },
+    {
+      "added_time": "2017-02-06T23:00:00.000Z",
+      "added_by": "Paulina Górka",
+      "created_time": "2017-02-02T08:40:31+0000",
+      "from_user": "Damian Gruszczyński",
+      "full_picture": "https://external.xx.fbcdn.net/safe_image.php?d=AQBj5kOalMB4H1og&w=720&h=720&url=https%3A%2F%2Fi.ytimg.com%2Fvi%2FAnBQXaC1ulQ%2Fmaxresdefault.jpg&cfs=1&sx=285&sy=0&sw=720&sh=720&_nc_hash=AQDDcTm22Tr3AlPl",
+      "id": 87,
+      "likes_num": 8,
+      "link": {
+        "url": "https://www.youtube.com/watch?v=AnBQXaC1ulQ",
+        "name": "Ed Sheeran - Shape Of You",
+        "title": "Ed Sheeran - Shape Of You",
+        "type": "video_share_youtube"
+      },
+      "message": "Taki oto nieco trudniejszy cover Shape Of You w super wykonaniu :)",
+      "reactions_num": 9,
+      "selected": false,
+      "source": "https://www.youtube.com/embed/AnBQXaC1ulQ?autoplay=1",
+      "type": "video",
+      "updated_time": "2017-02-09T09:11:11+0000"
+    },
+    {
+      "added_time": "2017-02-07T23:00:00.000Z",
+      "added_by": "Joanna Kozieńska",
+      "created_time": "2017-02-02T09:58:32+0000",
+      "from_user": "Bogumiła Niedziałek",
+      "full_picture": "https://external.xx.fbcdn.net/safe_image.php?d=AQBntojBOXXK9M03&w=720&h=720&url=https%3A%2F%2Fi.ytimg.com%2Fvi%2F8akLr1dFyCA%2Fhqdefault.jpg&cfs=1&_nc_hash=AQAFeSD7uQ2Iy2Ot",
+      "id": 88,
+      "likes_num": 8,
+      "link": {
+        "url": "https://www.youtube.com/watch?v=8akLr1dFyCA",
+        "name": "The 1975 Somebody Else audio",
+        "title": "The 1975 Somebody Else audio",
+        "type": "video_share_youtube"
+      },
+      "message": "Wrzucam nieoryginalny klip, ponieważ oryginał ma przydługie wideo-intro. Kawałek jest fajny.\n",
+      "reactions_num": 8,
+      "selected": false,
+      "source": "https://www.youtube.com/embed/8akLr1dFyCA?autoplay=1",
+      "type": "video",
+      "updated_time": "2017-02-09T08:08:49+0000"
+    },
+    {
+      "added_time": "2017-02-08T23:00:00.000Z",
+      "added_by": "Joanna Kozieńska",
+      "created_time": "2017-02-02T22:41:17+0000",
+      "from_user": "Agnieszka Orzeł",
+      "full_picture": "https://external.xx.fbcdn.net/safe_image.php?d=AQAFlgZk3vtlnxT8&w=360&h=360&url=https%3A%2F%2Fi.ytimg.com%2Fvi%2FLJLo6NUXQiE%2Fhqdefault.jpg&cfs=1&sx=116&sy=0&sw=360&sh=360&_nc_hash=AQBVNMCxV0nBneZa",
+      "id": 89,
+      "likes_num": 0,
+      "link": {
+        "url": "https://www.youtube.com/watch?v=LJLo6NUXQiE",
+        "name": "Ellie Goulding - Explosions (Cover By Jasmine Thompson)",
+        "title": "Ellie Goulding - Explosions (Cover By Jasmine Thompson)",
+        "type": "video_share_youtube"
+      },
+      "reactions_num": 0,
+      "selected": false,
+      "source": "https://www.youtube.com/embed/LJLo6NUXQiE?autoplay=1",
+      "type": "video",
+      "updated_time": "2017-02-09T07:55:53+0000"
+    },
+    {
+      "added_time": "2017-02-08T23:00:00.000Z",
+      "added_by": "Joanna Kozieńska",
+      "created_time": "2017-02-02T11:17:06+0000",
+      "from_user": "Bogumiła Niedziałek",
+      "full_picture": "https://external.xx.fbcdn.net/safe_image.php?w=720&h=720&url=https%3A%2F%2Fi.ytimg.com%2Fvi%2FI1AmkMuB0pA%2Fmaxresdefault.jpg&cfs=1&sx=560&sy=0&sw=720&sh=720&_nc_hash=AQCaBEH95oFnkIzX",
+      "id": 90,
+      "likes_num": 3,
+      "link": {
+        "url": "https://www.youtube.com/watch?v=I1AmkMuB0pA",
+        "name": "Electric Guest - Dear To Me",
+        "title": "Electric Guest - Dear To Me",
+        "type": "video_share_youtube"
+      },
+      "message": "Zaskoczy? Shall we dance to Dear to Me?\n",
+      "reactions_num": 3,
+      "selected": false,
+      "source": "https://www.youtube.com/embed/I1AmkMuB0pA?autoplay=1",
+      "type": "video",
+      "updated_time": "2017-02-08T23:09:55+0000"
+    },
+    {
+      "added_time": "2017-02-07T23:00:00.000Z",
+      "added_by": "Joanna Kozieńska",
+      "created_time": "2017-02-03T15:52:28+0000",
+      "from_user": "Lars Trebing",
+      "full_picture": "https://external.xx.fbcdn.net/safe_image.php?d=AQDP6rpTjpDFTBfu&w=720&h=720&url=https%3A%2F%2Fi.ytimg.com%2Fvi%2FgGc7tKWkzlE%2Fmaxresdefault.jpg&cfs=1&sx=308&sy=0&sw=720&sh=720&_nc_hash=AQCcODdxEbK-yW64",
+      "id": 91,
+      "likes_num": 4,
+      "link": {
+        "url": "https://www.youtube.com/watch?v=gGc7tKWkzlE",
+        "name": "Faith Evans & Notorious B.I.G ft. Snoop Dogg - When We Party (Dirty)",
+        "title": "Faith Evans & Notorious B.I.G ft. Snoop Dogg - When We Party (Dirty)",
+        "type": "video_share_youtube"
+      },
+      "message": "Faith Evans & the Notorious B.I.G. – When We Party (feat. Snoop Dogg)",
+      "reactions_num": 4,
+      "selected": false,
+      "source": "https://www.youtube.com/embed/gGc7tKWkzlE?autoplay=1",
+      "type": "video",
+      "updated_time": "2017-02-08T10:15:33+0000"
+    },
+    {
+      "added_time": "2017-02-07T23:00:00.000Z",
+      "added_by": "Joanna Kozieńska",
+      "created_time": "2017-02-02T14:08:28+0000",
+      "from_user": "Agnieszka Orzeł",
+      "full_picture": "https://external.xx.fbcdn.net/safe_image.php?d=AQDUYbcQ44co-vqD&w=720&h=720&url=https%3A%2F%2Fi.ytimg.com%2Fvi%2FKNnozIkedGQ%2Fmaxresdefault.jpg&cfs=1&sx=305&sy=0&sw=1080&sh=1080&_nc_hash=AQCMO18IgvGE2b-V",
+      "id": 92,
+      "likes_num": 1,
+      "link": {
+        "url": "https://www.youtube.com/watch?v=KNnozIkedGQ",
+        "name": "The Black Eyed Peas - Like That ft. Q-Tip, Talib Kweli, Cee-Lo, John Legend",
+        "title": "The Black Eyed Peas - Like That ft. Q-Tip, Talib Kweli, Cee-Lo, John Legend",
+        "type": "video_share_youtube"
+      },
+      "reactions_num": 1,
+      "selected": false,
+      "source": "https://www.youtube.com/embed/KNnozIkedGQ?autoplay=1",
+      "type": "video",
+      "updated_time": "2017-02-08T09:04:45+0000"
+    },
+    {
+      "added_time": "2017-02-06T23:00:00.000Z",
+      "added_by": "Paulina Górka",
+      "created_time": "2017-02-01T20:55:32+0000",
+      "from_user": "Dariusz Winiarski",
+      "full_picture": "https://external.xx.fbcdn.net/safe_image.php?d=AQDBFcqO67Uy6v__&w=720&h=720&url=https%3A%2F%2Fi.ytimg.com%2Fvi%2F4KlYNjix068%2Fmaxresdefault.jpg&cfs=1&_nc_hash=AQA3nAjF5q-UWf4E",
+      "id": 93,
+      "likes_num": 6,
+      "link": {
+        "url": "https://youtu.be/4KlYNjix068",
+        "name": "Vice - Steady 1234 Ft. Jasmine Thompson & Skizzy Mars [Official Lyric Video]",
+        "title": "Vice - Steady 1234 Ft. Jasmine Thompson & Skizzy Mars [Official Lyric Video]",
+        "type": "video_share_youtube"
+      },
+      "reactions_num": 7,
+      "selected": false,
+      "source": "https://www.youtube.com/embed/4KlYNjix068?autoplay=1",
+      "type": "video",
+      "updated_time": "2017-02-07T20:06:24+0000"
+    },
+    {
+      "created_time": "2017-01-17T20:16:21+0000",
+      "from_user": "Beata Tracz",
+      "full_picture": "https://external.xx.fbcdn.net/safe_image.php?d=AQDuzQkm1loTlCz-&w=360&h=360&url=https%3A%2F%2Fi.ytimg.com%2Fvi%2FuIJDD1Cldgc%2Fhqdefault.jpg&cfs=1&sx=53&sy=0&sw=360&sh=360&_nc_hash=AQAp6VfXMa18orih",
+      "id": 94,
+      "likes_num": 11,
+      "link": {
+        "url": "https://www.youtube.com/watch?v=uIJDD1Cldgc",
+        "name": "Aston Merrygold - Get Stupid (Official Video)",
+        "title": "Aston Merrygold - Get Stupid (Official Video)",
+        "type": "video_share_youtube"
+      },
+      "reactions_num": 11,
+      "selected": false,
+      "source": "https://www.youtube.com/embed/uIJDD1Cldgc?autoplay=1",
+      "type": "video",
+      "updated_time": "2017-02-07T19:30:16+0000"
+    },
+    {
+      "created_time": "2017-01-21T10:51:08+0000",
+      "from_user": "Agnieszka Orzeł",
+      "full_picture": "https://external.xx.fbcdn.net/safe_image.php?d=AQBUOQpRi3azcHzK&w=720&h=720&url=https%3A%2F%2Fi.ytimg.com%2Fvi%2FlnTHOtdwvnE%2Fhqdefault.jpg&cfs=1&_nc_hash=AQB0YwL9wKLo4E5i",
+      "id": 95,
+      "likes_num": 10,
+      "link": {
+        "url": "https://youtu.be/lnTHOtdwvnE",
+        "name": "Yellow Claw & DJ Mustard - In My Room Ft. Ty Dolla $ign & Tyga",
+        "title": "Yellow Claw & DJ Mustard - In My Room Ft. Ty Dolla $ign & Tyga",
+        "type": "video_share_youtube"
+      },
+      "message": "Kawałek, który wywołał burzę :D",
+      "reactions_num": 10,
+      "selected": false,
+      "source": "https://www.youtube.com/embed/lnTHOtdwvnE?autoplay=1",
+      "type": "video",
+      "updated_time": "2017-02-07T15:01:47+0000"
+    },
+    {
+      "created_time": "2016-08-30T14:20:21+0000",
+      "from_user": "Paulina Górka",
+      "full_picture": "https://external.xx.fbcdn.net/safe_image.php?d=AQBiF2VBQG2WfPvh&w=720&h=720&url=https%3A%2F%2Fi.ytimg.com%2Fvi%2FEkeZKFa65zs%2Fmaxresdefault.jpg&cfs=1&_nc_hash=AQBYNj773CB4DtVR",
+      "id": 96,
+      "likes_num": 19,
+      "link": {
+        "url": "https://www.youtube.com/watch?v=EkeZKFa65zs",
+        "name": "James Hersey - Miss You (Official Audio)",
+        "title": "James Hersey - Miss You (Official Audio)",
+        "type": "video_share_youtube"
+      },
+      "message": "warte lajków, jak nie to zwątpię :P\n",
+      "reactions_num": 19,
+      "selected": false,
+      "source": "https://www.youtube.com/embed/EkeZKFa65zs?autoplay=1",
+      "type": "video",
+      "updated_time": "2017-02-07T10:56:40+0000"
+    }
+  ],
+  "last_update": "2017-05-08T22:42:49.276Z"
+}

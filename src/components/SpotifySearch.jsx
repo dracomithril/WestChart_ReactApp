@@ -11,10 +11,11 @@ const action_types = require('./../reducers/action_types');
 
 
 export default class SpotifySearch extends React.Component {
+    /*istanbul ignore next*/
     componentWillUnmount() {
         console.log('component SpotifySearch unmounted');
     }
-
+    /*istanbul ignore next*/
     componentDidMount() {
         console.log('component SpotifySearch did mount');
     }
