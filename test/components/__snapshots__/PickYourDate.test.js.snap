@@ -25,6 +25,7 @@ exports[`<PickYourDate/> renders without crashing 1`] = `
         onChange={[Function]}
         step={1}
         type="number"
+        value={31}
       />
        days
     </label>
@@ -93,6 +94,7 @@ exports[`<PickYourDate/> renders without crashing 1`] = `
         bsClass="btn"
         bsStyle="primary"
         disabled={true}
+        id="updateChartB"
         onClick={[Function]}
       >
         Update

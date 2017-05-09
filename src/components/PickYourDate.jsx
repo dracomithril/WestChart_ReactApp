@@ -81,7 +81,7 @@ export default class PickYourDate extends React.Component {
                            bsStyle="danger">{`until: ` + new Date(until).toLocaleString('pl-PL')}</Label>
                 </div>}
                 <div style={{textAlign: "center"}}>
-                    <Button onClick={this.updateChart.bind(this)} bsStyle="primary"
+                    <Button id="updateChartB" onClick={this.updateChart.bind(this)} bsStyle="primary"
                             disabled={!!user.isGroupAdmin === false}
                     >Update</Button>
                 </div>
