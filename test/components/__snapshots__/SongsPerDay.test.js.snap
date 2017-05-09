@@ -30,3 +30,77 @@ exports[`<SongsPerDay/> renders without crashing 1`] = `
   }
 />
 `;
+
+exports[`<SongsPerDay/> renders without crashing 2`] = `
+<Panel
+  bsClass="panel"
+  bsStyle="danger"
+  defaultExpanded={false}
+  footer="miss mach count: 1"
+  header={
+    <div>
+      <strong
+        style={
+          Object {
+            "paddingRight": 20,
+          }
+        }
+      >
+        songs per day
+      </strong>
+      <input
+        className="num_days"
+        max={10}
+        min={1}
+        name="songs_per_day"
+        onChange={[Function]}
+        step={1}
+        type="number"
+      />
+    </div>
+  }
+>
+  <div>
+    <strong>
+      Date:
+    </strong>
+    (
+    <span
+      style={
+        Object {
+          "color": "blue",
+          "marginRight": 5,
+        }
+      }
+    >
+      not enough
+    </span>
+    <span
+      style={
+        Object {
+          "color": "red",
+        }
+      }
+    >
+      to many
+    </span>
+    )
+    <br />
+    <div
+      id="error_list"
+    >
+      <div>
+        <span
+          style={
+            Object {
+              "color": undefined,
+            }
+          }
+        >
+          Tue May 02 2017
+        </span>
+      </div>
+    </div>
+  </div>
+</Panel>
+`;

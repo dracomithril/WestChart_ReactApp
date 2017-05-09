@@ -59,63 +59,6 @@ exports[`<PagePresenter/> renders with isGroupAdmin=true 1`] = `
 
 exports[`<PagePresenter/> renders without crashing 1`] = `<div />`;
 
-exports[`<PagePresenter/> renders without crashing 2`] = `
-<div>
-  <div
-    id="groupAdmin"
-  >
-    <div
-      className="formArea"
-    >
-      <Modal
-        animation={true}
-        autoFocus={true}
-        backdrop={true}
-        bsClass="modal"
-        dialogComponentClass={[Function]}
-        enforceFocus={true}
-        keyboard={true}
-        manager={
-          ModalManager {
-            "containers": Array [],
-            "data": Array [],
-            "handleContainerOverflow": true,
-            "hideSiblingNodes": true,
-            "modals": Array [],
-          }
-        }
-        onHide={[Function]}
-        renderBackdrop={[Function]}
-        restoreFocus={true}
-        show={false}
-      >
-        <ModalHeader
-          aria-label="Close"
-          bsClass="modal-header"
-          closeButton={false}
-        >
-          Information
-        </ModalHeader>
-        <ModalBody
-          bsClass="modal-body"
-          componentClass="div"
-        >
-          undefined we are fetching data please wait.
-        </ModalBody>
-      </Modal>
-      <SongsPerDay
-        error_days={Array []}
-      />
-      <PickYourDate />
-      <FilteringOptions />
-    </div>
-    <ChartPresenter
-      view_chart={Array []}
-    />
-  </div>
-</div>
-`;
-
 exports[`<PagePresenter/> should obtain chart objects 1`] = `
 <div>
   <div

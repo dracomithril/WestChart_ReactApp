@@ -19,6 +19,6 @@ describe('[filters]',  () =>{
     it("subtractDaysFromDate", () =>{
         let date = new Date('3/29/2017');
         let since =filters.default.subtractDaysFromDate(date,4);
-        expect(since.toLocaleDateString()).to.eql("2017-3-25");
+        expect(since.toLocaleDateString("en-EN")).to.eql("3/25/2017");
     });
 });
