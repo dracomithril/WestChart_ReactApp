@@ -2,7 +2,7 @@
  * Created by Gryzli on 09.04.2017.
  */
 import React from "react";
-import PropTypes from 'prop-types';
+import PropTypes from "prop-types";
 import {Button, DropdownButton, MenuItem} from "react-bootstrap";
 import PlaylistForm from "./PlaylistForm";
 import Spotify from "spotify-web-api-node";
@@ -15,11 +15,11 @@ export default class SpotifySearch extends React.Component {
     componentWillUnmount() {
         console.log('component SpotifySearch unmounted');
     }
+
     /*istanbul ignore next*/
     componentDidMount() {
         console.log('component SpotifySearch did mount');
     }
-
     create_search_list_view(search_elem, search_index) {
         const {store} = this.context;
         const items = search_elem.items.map((track, ind) => {
@@ -114,8 +114,8 @@ export default class SpotifySearch extends React.Component {
         return (<div>
             <h3 id="list">{'Search music by: '}
 
-            <div id="spotify_info"/>
-            <PlaylistForm {...this.props}/>
+                <div id="spotify_info"/>
+                <PlaylistForm {...this.props}/>
             </h3>
             {search_list_view.length > 0 && <table>
                 <thead>

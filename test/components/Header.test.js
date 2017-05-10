@@ -34,6 +34,5 @@ describe('<Header/>', () => {
         );
         expect(shallowToJson(wrapper)).toMatchSnapshot();
         expect(wrapper.find('UserInfo').node.type.name).toBe("UserInfo");
-
     });
 });

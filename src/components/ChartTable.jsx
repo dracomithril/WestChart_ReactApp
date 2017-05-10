@@ -2,7 +2,7 @@
  * Created by Gryzli on 26.01.2017.
  */
 import React from "react";
-import PropTypes from 'prop-types';
+import PropTypes from "prop-types";
 import ReactTable from "react-table";
 import {Checkbox, Label, OverlayTrigger, Tooltip} from "react-bootstrap";
 
@@ -15,28 +15,30 @@ let getTime = function (date) {
 export default class ChartTable extends React.Component {
     render() {
         const {store} = this.context;
-        const {user}= store.getState();
+        const {user} = store.getState();
         const data = this.props.data;
-        const count= data.length;
+        const count = data.length;
         const columns = [{
-            header: props=><h3 id="chart_table">{'WCS Chart '}<small>{'total '+count}</small></h3>,
+            header: props => <h3 id="chart_table">{'WCS Chart '}
+                <small>{'total ' + count}</small>
+            </h3>,
             columns: [
                 {
-                    sortable:false,
-                    header: props=><Checkbox bsClass="checkbox1" onClick={() => {
+                    sortable: false,
+                    header: props => <Checkbox bsClass="checkbox1" onClick={() => {
                         store.dispatch({type: 'TOGGLE_ALL'})
                     }}/>,
                     minWidth: 30,
                     maxWidth: 60,
                     accessor: 'selected',
-                    render: props =>{
-                        return <Checkbox bsClass="checkbox1" checked={props.value} id={props.row.id} name="selected"
-                                         onChange={(e) => {
-                                             store.dispatch({
-                                                 type: 'TOGGLE_SELECTED', id: e.target.id,
-                                                 checked: e.target.checked
-                                             })
-                                         }}/>}
+                    render: props => <Checkbox bsClass="checkbox1" checked={props.value} id={props.row.id}
+                                               name="selected"
+                                               onChange={(e) => {
+                                                   store.dispatch({
+                                                       type: 'TOGGLE_SELECTED', id: e.target.id,
+                                                       checked: e.target.checked
+                                                   })
+                                               }}/>
                 },
                 {
                     header: 'user',
@@ -67,18 +69,14 @@ export default class ChartTable extends React.Component {
                     id: 'createTime',
                     minWidth: 150,
                     maxWidth: 200,
-                    accessor: d => {
-                        return getTime(d.created_time)
-                    },
+                    accessor: d => getTime(d.created_time),
                     render: props => <span>{formatDate(props.value)}</span>
                 },
                 {
                     header: 'added time',
                     id: 'addedTime',
                     maxWidth: 150,
-                    accessor: d => {
-                        return d.added_time === undefined ? 0 : getTime(d.added_time)
-                    },
+                    accessor: d => d.added_time === undefined ? 0 : getTime(d.added_time),
                     render: props => {
                         return props.value === 0 ? <i className="fa fa-minus-circle" style={{color: 'red'}}/> :
                             <OverlayTrigger placement="top" overlay={<Tooltip
@@ -94,31 +92,28 @@ export default class ChartTable extends React.Component {
                     id: 'lastUpdate',
                     minWidth: 150,
                     maxWidth: 200,
-                    accessor: d => {
-                        return getTime(d.updated_time)
-                    },
+                    accessor: d => getTime(d.updated_time),
                     render: props => <span>{formatDate(props.value)}</span>
                 },
                 {
                     header: props => <span>link</span>, // Custom header components!
                     accessor: d => d.link.title,
                     minWidth: 200,
-                    width:300,
+                    width: 300,
                     maxWidth: 600,
                     id: 'yt_link',
-                    render: props => {
-                        return props.row.link.url === undefined ? (<span>{props.value}</span>) : (
-                                <a href={props.row.link.url}>{props.value}</a>)
-                    }
+                    render: props => props.row.link.url === undefined ? (<span>{props.value}</span>) : (
+                        <a href={props.row.link.url}>{props.value}</a>)
                 }
             ]
         }
         ];
         return (<ReactTable data={data} className="-striped -highlight" pageSizeOptions={[20, 50, 100]}
-                            columns={columns} defaultPageSize={20} minRows={10} noDataText={<span>{`Hi, ${user.first_name} please click `}<strong style={{color:"blue"}}>Update</strong>{` to start.`}</span>}/>);
+                            columns={columns} defaultPageSize={20} minRows={10}
+                            noDataText={<span>{`Hi, ${user.first_name} please click `}<strong style={{color: "blue"}}>Update</strong>{` to start.`}</span>}/>);
     }
 }
-ChartTable.contextTypes={
+ChartTable.contextTypes = {
     store: PropTypes.object
 };
 ChartTable.propTypes = {};
