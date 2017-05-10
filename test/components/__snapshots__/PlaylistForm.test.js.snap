@@ -1,5 +1,90 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
+exports[`<PlaylistForm/> createPlaylist 1`] = `
+<Form
+  bsClass="form"
+  componentClass="form"
+  horizontal={false}
+  inline={true}
+>
+  <Button
+    active={false}
+    block={false}
+    bsClass="btn"
+    bsStyle="default"
+    disabled={false}
+    id="start_sp_button"
+    onClick={[Function]}
+  >
+    Start
+  </Button>
+  <FormGroup
+    bsClass="form-group"
+    controlId="play_list_name"
+    style={
+      Object {
+        "width": 300,
+      }
+    }
+    validationState="success"
+  >
+    <InputGroup
+      bsClass="input-group"
+    >
+      <InputGroupAddon
+        bsClass="input-group-addon"
+      >
+        <Glyphicon
+          bsClass="glyphicon"
+          glyph="music"
+        />
+      </InputGroupAddon>
+      <FormControl
+        bsClass="form-control"
+        componentClass="input"
+        onChange={[Function]}
+        placeholder="playlist name"
+        type="text"
+        value="test_list_zzzz"
+      />
+      <FormControlFeedback
+        bsClass="form-control-feedback"
+        bsRole="feedback"
+      />
+    </InputGroup>
+  </FormGroup>
+  <FormGroup
+    bsClass="form-group"
+  >
+    <Button
+      active={false}
+      block={false}
+      bsClass="btn"
+      bsStyle="default"
+      disabled={false}
+      id="crt_pl_button"
+      onClick={[Function]}
+    >
+      Create Playlist
+    </Button>
+    <Checkbox
+      bsClass="checkbox"
+      disabled={false}
+      id="play_list_is_private"
+      inline={false}
+      style={
+        Object {
+          "paddingLeft": 5,
+        }
+      }
+      value="private"
+    >
+      private ?
+    </Checkbox>
+  </FormGroup>
+</Form>
+`;
+
 exports[`<PlaylistForm/> renders without crashing 1`] = `
 <Form
   bsClass="form"
@@ -13,6 +98,7 @@ exports[`<PlaylistForm/> renders without crashing 1`] = `
     bsClass="btn"
     bsStyle="default"
     disabled={false}
+    id="start_sp_button"
     onClick={[Function]}
   >
     Start
@@ -61,6 +147,92 @@ exports[`<PlaylistForm/> renders without crashing 1`] = `
       bsClass="btn"
       bsStyle="default"
       disabled={true}
+      id="crt_pl_button"
+      onClick={[Function]}
+    >
+      Create Playlist
+    </Button>
+    <Checkbox
+      bsClass="checkbox"
+      disabled={false}
+      id="play_list_is_private"
+      inline={false}
+      style={
+        Object {
+          "paddingLeft": 5,
+        }
+      }
+      value="private"
+    >
+      private ?
+    </Checkbox>
+  </FormGroup>
+</Form>
+`;
+
+exports[`<PlaylistForm/> start_click 1`] = `
+<Form
+  bsClass="form"
+  componentClass="form"
+  horizontal={false}
+  inline={true}
+>
+  <Button
+    active={false}
+    block={false}
+    bsClass="btn"
+    bsStyle="default"
+    disabled={false}
+    id="start_sp_button"
+    onClick={[Function]}
+  >
+    Start
+  </Button>
+  <FormGroup
+    bsClass="form-group"
+    controlId="play_list_name"
+    style={
+      Object {
+        "width": 300,
+      }
+    }
+    validationState="success"
+  >
+    <InputGroup
+      bsClass="input-group"
+    >
+      <InputGroupAddon
+        bsClass="input-group-addon"
+      >
+        <Glyphicon
+          bsClass="glyphicon"
+          glyph="music"
+        />
+      </InputGroupAddon>
+      <FormControl
+        bsClass="form-control"
+        componentClass="input"
+        onChange={[Function]}
+        placeholder="playlist name"
+        type="text"
+        value="test_list_zzzz"
+      />
+      <FormControlFeedback
+        bsClass="form-control-feedback"
+        bsRole="feedback"
+      />
+    </InputGroup>
+  </FormGroup>
+  <FormGroup
+    bsClass="form-group"
+  >
+    <Button
+      active={false}
+      block={false}
+      bsClass="btn"
+      bsStyle="default"
+      disabled={false}
+      id="crt_pl_button"
       onClick={[Function]}
     >
       Create Playlist

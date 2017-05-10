@@ -78,14 +78,11 @@ export default class PlaylistForm extends React.Component {
         const {store} = this.context;
         const {sp_playlist_name} = store.getState();
         return ( <Form inline>
-            <Button onClick={this.onStartClick.bind(this)}>Start
+            <Button onClick={this.onStartClick.bind(this)} id="start_sp_button">Start
             </Button>
-            <FormGroup style={{width: 300}} controlId="play_list_name" validationState={(() => {
-                const length = sp_playlist_name.length;
-                if (length > 8) return 'success';
-                else if (length > 5) return 'warning';
-                else if (length >= 0) return 'error';
-            })()}>
+            <FormGroup style={{width: 300}} controlId="play_list_name" validationState={((sp_name_length) => {
+                return sp_name_length>8? 'success':sp_name_length > 5?'warning':'error';
+            })(sp_playlist_name.length)}>
                 <InputGroup>
                     <InputGroup.Addon><Glyphicon glyph="music"/></InputGroup.Addon>
                     <FormControl type="text" placeholder="playlist name" value={sp_playlist_name} onChange={(e) => {
@@ -98,7 +95,7 @@ export default class PlaylistForm extends React.Component {
                 </InputGroup>
             </FormGroup>
             <FormGroup>
-                <Button onClick={this.onCreatePlaylist.bind(this)} disabled={sp_playlist_name.length < 6}>Create
+                <Button id="crt_pl_button" onClick={this.onCreatePlaylist.bind(this)} disabled={sp_playlist_name.length < 6}>Create
                     Playlist
                 </Button>
                 <Checkbox style={{paddingLeft: 5}} id="play_list_is_private" value="private">{'private ?'}</Checkbox>
