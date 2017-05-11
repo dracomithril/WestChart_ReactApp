@@ -78,7 +78,7 @@ exports[`<PickYourDate/> renders without crashing 1`] = `
         bsStyle="danger"
         id="d_until"
       >
-        until: 3/11/2017, 2:46:00 PM
+        until: 2017-3-11 14:46:00
       </Label>
     </div>
     <div

@@ -10,7 +10,6 @@ const action_types = require('./../reducers/action_types');
 
 
 export default class RowSpotifySearch extends React.Component {
-
     render() {
         const {store} = this.context;
         const search_index = this.props.search_index;

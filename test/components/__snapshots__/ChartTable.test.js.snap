@@ -1090,7 +1090,7 @@ exports[`<ChartTable/> render with objects 1`] = `
                           }
                         >
                           <span>
-                            3/1/2017, 8:36:39 PM
+                            2017-3-1 20:36:39
                           </span>
                         </div>
                       </Component>
@@ -1140,7 +1140,7 @@ exports[`<ChartTable/> render with objects 1`] = `
                               onMouseOut={[Function]}
                               onMouseOver={[Function]}
                             >
-                              03/8/2017
+                              2017-03-8
                             </span>
                           </OverlayTrigger>
                         </div>
@@ -1166,7 +1166,7 @@ exports[`<ChartTable/> render with objects 1`] = `
                           }
                         >
                           <span>
-                            3/9/2017, 10:46:45 PM
+                            2017-3-9 22:46:45
                           </span>
                         </div>
                       </Component>
@@ -1388,7 +1388,7 @@ exports[`<ChartTable/> render with objects 1`] = `
                           }
                         >
                           <span>
-                            3/3/2017, 7:28:55 AM
+                            2017-3-3 07:28:55
                           </span>
                         </div>
                       </Component>
@@ -1438,7 +1438,7 @@ exports[`<ChartTable/> render with objects 1`] = `
                               onMouseOut={[Function]}
                               onMouseOver={[Function]}
                             >
-                              03/9/2017
+                              2017-03-9
                             </span>
                           </OverlayTrigger>
                         </div>
@@ -1464,7 +1464,7 @@ exports[`<ChartTable/> render with objects 1`] = `
                           }
                         >
                           <span>
-                            3/9/2017, 9:01:48 AM
+                            2017-3-9 09:01:48
                           </span>
                         </div>
                       </Component>
@@ -1684,7 +1684,7 @@ exports[`<ChartTable/> render with objects 1`] = `
                           }
                         >
                           <span>
-                            3/3/2017, 7:24:25 AM
+                            2017-3-3 07:24:25
                           </span>
                         </div>
                       </Component>
@@ -1734,7 +1734,7 @@ exports[`<ChartTable/> render with objects 1`] = `
                               onMouseOut={[Function]}
                               onMouseOver={[Function]}
                             >
-                              03/9/2017
+                              2017-03-9
                             </span>
                           </OverlayTrigger>
                         </div>
@@ -1760,7 +1760,7 @@ exports[`<ChartTable/> render with objects 1`] = `
                           }
                         >
                           <span>
-                            3/9/2017, 12:17:00 AM
+                            2017-3-9 00:17:00
                           </span>
                         </div>
                       </Component>
@@ -1980,7 +1980,7 @@ exports[`<ChartTable/> render with objects 1`] = `
                           }
                         >
                           <span>
-                            3/3/2017, 7:26:21 AM
+                            2017-3-3 07:26:21
                           </span>
                         </div>
                       </Component>
@@ -2030,7 +2030,7 @@ exports[`<ChartTable/> render with objects 1`] = `
                               onMouseOut={[Function]}
                               onMouseOver={[Function]}
                             >
-                              03/9/2017
+                              2017-03-9
                             </span>
                           </OverlayTrigger>
                         </div>
@@ -2056,7 +2056,7 @@ exports[`<ChartTable/> render with objects 1`] = `
                           }
                         >
                           <span>
-                            3/9/2017, 12:05:45 AM
+                            2017-3-9 00:05:45
                           </span>
                         </div>
                       </Component>
@@ -2278,7 +2278,7 @@ exports[`<ChartTable/> render with objects 1`] = `
                           }
                         >
                           <span>
-                            3/3/2017, 9:10:48 PM
+                            2017-3-3 21:10:48
                           </span>
                         </div>
                       </Component>
@@ -2328,7 +2328,7 @@ exports[`<ChartTable/> render with objects 1`] = `
                               onMouseOut={[Function]}
                               onMouseOver={[Function]}
                             >
-                              03/9/2017
+                              2017-03-9
                             </span>
                           </OverlayTrigger>
                         </div>
@@ -2354,7 +2354,7 @@ exports[`<ChartTable/> render with objects 1`] = `
                           }
                         >
                           <span>
-                            3/9/2017, 12:05:38 AM
+                            2017-3-9 00:05:38
                           </span>
                         </div>
                       </Component>
@@ -2578,7 +2578,7 @@ exports[`<ChartTable/> render with objects 1`] = `
                           }
                         >
                           <span>
-                            3/8/2017, 12:07:03 AM
+                            2017-3-8 00:07:03
                           </span>
                         </div>
                       </Component>
@@ -2628,7 +2628,7 @@ exports[`<ChartTable/> render with objects 1`] = `
                               onMouseOut={[Function]}
                               onMouseOver={[Function]}
                             >
-                              03/8/2017
+                              2017-03-8
                             </span>
                           </OverlayTrigger>
                         </div>
@@ -2654,7 +2654,7 @@ exports[`<ChartTable/> render with objects 1`] = `
                           }
                         >
                           <span>
-                            3/8/2017, 10:36:01 PM
+                            2017-3-8 22:36:01
                           </span>
                         </div>
                       </Component>
@@ -2877,7 +2877,7 @@ exports[`<ChartTable/> render with objects 1`] = `
                           }
                         >
                           <span>
-                            8/30/2016, 4:20:21 PM
+                            2016-8-30 16:20:21
                           </span>
                         </div>
                       </Component>
@@ -2932,7 +2932,7 @@ exports[`<ChartTable/> render with objects 1`] = `
                           }
                         >
                           <span>
-                            2/7/2017, 11:56:40 AM
+                            2017-2-7 11:56:40
                           </span>
                         </div>
                       </Component>

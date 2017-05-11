@@ -2,7 +2,8 @@
  * Created by XKTR67 on 4/19/2017.
  */
 const sinon = require('sinon');
-
+import configureMockStore from 'redux-mock-store';
+const mockStore = configureMockStore([]);
 describe('[utils]', () => {
     let utils;
     beforeAll(() => {
@@ -92,20 +93,20 @@ describe('[utils]', () => {
         });
 
     });
-    describe('loginToSpotify', function () {
-
+    describe('[loginToSpotify]', function () {
         it('should be able to react for server response', function () {
             let fetch = sinon.stub(window, 'fetch');
             let assign = sinon.spy(window.location, 'assign');
             let CookiesMock = require('cookies-js');
             CookiesMock.set = sinon.spy();
             const resp = {
-                text: sinon.stub()
+                text: sinon.stub(),
+                json:sinon.stub()
             };
             const state = "azasaswwaadda";
             let path = `http://someurl.com/text?state=${state}`;
             resp.text.returns(Promise.resolve(path));
-            fetch.returns(Promise.resolve(resp));
+            fetch.withArgs('/api/login').returns(Promise.resolve(resp));
             return utils.loginToSpotify().then(() => {
                 sinon.assert.calledOnce(assign);
                 sinon.assert.calledWith(assign, path);
@@ -113,6 +114,25 @@ describe('[utils]', () => {
                 sinon.assert.calledWith(CookiesMock.set, sinon.match.string, sinon.match(state));
                 window.fetch.restore();
                 window.location.assign.restore();
+            })
+        });
+    });
+    describe('[get_chart_from_server]', function () {
+        it('get list', function () {
+            const store = mockStore();
+            let fetch = sinon.stub(window, 'fetch');
+            let CookiesMock = require('cookies-js');
+            CookiesMock.set = sinon.spy();
+            const resp = {
+                text: sinon.stub(),
+                json:sinon.stub(),
+                status:200
+            };
+            resp.json.returns(Promise.resolve({chart:[], last_update:''}));
+            fetch.withArgs('api/get_chart?').returns(Promise.resolve(resp));
+            return utils.get_chart_from_server({},store).then(() => {
+                expect(store.getActions().length).toBe(3);
+                window.fetch.restore();
             })
         });
     });
