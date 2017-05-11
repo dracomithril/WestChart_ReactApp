@@ -36,6 +36,7 @@ exports[`<ChartTable/> render with objects 1`] = `
           "title": "Barcelona, a song by Ed Sheeran on Spotify",
           "type": "music_aggregation",
         },
+        "message": "#całapłytawymiata",
         "reactions_num": 5,
         "selected": false,
         "type": "status",
@@ -287,6 +288,7 @@ exports[`<ChartTable/> render with objects 1`] = `
             "title": "Barcelona, a song by Ed Sheeran on Spotify",
             "type": "music_aggregation",
           },
+          "message": "#całapłytawymiata",
           "reactions_num": 5,
           "selected": false,
           "type": "status",
@@ -1300,16 +1302,46 @@ exports[`<ChartTable/> render with objects 1`] = `
                             }
                           }
                         >
-                          <Label
-                            bsClass="label"
-                            bsStyle="danger"
+                          <OverlayTrigger
+                            defaultOverlayShown={false}
+                            overlay={
+                              <Tooltip
+                                bsClass="tooltip"
+                                id="tooltip"
+                                placement="right"
+                              >
+                                #całapłytawymiata
+                              </Tooltip>
+                            }
+                            placement="bottom"
+                            trigger={
+                              Array [
+                                "hover",
+                                "focus",
+                              ]
+                            }
                           >
-                            <span
-                              className="label label-danger"
+                            <Label
+                              bsClass="label"
+                              bsStyle="success"
+                              onBlur={[Function]}
+                              onClick={null}
+                              onFocus={[Function]}
+                              onMouseOut={[Function]}
+                              onMouseOver={[Function]}
                             >
-                              no msg
-                            </span>
-                          </Label>
+                              <span
+                                className="label label-success"
+                                onBlur={[Function]}
+                                onClick={null}
+                                onFocus={[Function]}
+                                onMouseOut={[Function]}
+                                onMouseOver={[Function]}
+                              >
+                                (...msg...)
+                              </span>
+                            </Label>
+                          </OverlayTrigger>
                         </div>
                       </Component>
                       <Component
@@ -4063,6 +4095,7 @@ exports[`<ChartTable/> render with objects 1`] = `
                 "title": "Barcelona, a song by Ed Sheeran on Spotify",
                 "type": "music_aggregation",
               },
+              "message": "#całapłytawymiata",
               "reactions_num": 5,
               "selected": false,
               "type": "status",
@@ -4502,6 +4535,7 @@ exports[`<ChartTable/> render with objects 1`] = `
                   "title": "Barcelona, a song by Ed Sheeran on Spotify",
                   "type": "music_aggregation",
                 },
+                "message": "#całapłytawymiata",
                 "reactions_num": 5,
                 "selected": false,
                 "type": "status",
@@ -4511,7 +4545,7 @@ exports[`<ChartTable/> render with objects 1`] = `
               "createTime": 1488522535000,
               "from_user": "Damian Gruszczyński",
               "lastUpdate": 1489046508000,
-              "message": undefined,
+              "message": "#całapłytawymiata",
               "reactions_num": 5,
               "selected": false,
               "yt_link": "Barcelona, a song by Ed Sheeran on Spotify",
@@ -4731,6 +4765,7 @@ exports[`<ChartTable/> render with objects 1`] = `
                   "title": "Barcelona, a song by Ed Sheeran on Spotify",
                   "type": "music_aggregation",
                 },
+                "message": "#całapłytawymiata",
                 "reactions_num": 5,
                 "selected": false,
                 "type": "status",
@@ -4740,7 +4775,7 @@ exports[`<ChartTable/> render with objects 1`] = `
               "createTime": 1488522535000,
               "from_user": "Damian Gruszczyński",
               "lastUpdate": 1489046508000,
-              "message": undefined,
+              "message": "#całapłytawymiata",
               "reactions_num": 5,
               "selected": false,
               "yt_link": "Barcelona, a song by Ed Sheeran on Spotify",
