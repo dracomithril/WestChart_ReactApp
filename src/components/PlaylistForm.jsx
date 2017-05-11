@@ -23,9 +23,9 @@ export default class PlaylistForm extends Component {
         const {selected} = this.props;
         const date = new Date();
         const day1 = date.getDate();
-        const str1 = date.toLocaleString('en-US', {month: 'short', day: 'numeric'});
+        const str1 = date.toLocaleString('pl-PL', {month: 'short', day: 'numeric'});
         date.setDate(day1 - 4);
-        const str2 = date.toLocaleString('en-US', {month: 'short', day: 'numeric'});
+        const str2 = date.toLocaleString('pl-PL', {month: 'short', day: 'numeric'});
         let playlist_name = 'Chart ' + str2 + '-' + str1;
         let list = playlist_name.split(' ').join('_');
         store.dispatch({type: action_types.UPDATE_PLAYLIST_NAME, value: list});

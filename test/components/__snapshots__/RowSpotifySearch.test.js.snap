@@ -1,0 +1,47 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<RowSpotifySearch/> renders without crashing 1`] = `
+<tr>
+  <td>
+    <input
+      id={0}
+      onChange={[Function]}
+      style={
+        Object {
+          "paddingRight": 5,
+        }
+      }
+      type="text"
+      value=""
+    />
+  </td>
+  <td>
+    <input
+      id={0}
+      onChange={[Function]}
+      style={
+        Object {
+          "paddingRight": 5,
+        }
+      }
+      type="text"
+      value=""
+    />
+  </td>
+  <td>
+    <Button
+      active={false}
+      block={false}
+      bsClass="btn"
+      bsStyle="default"
+      disabled={false}
+      id="button-0"
+      onClick={[Function]}
+    >
+      search
+    </Button>
+  </td>
+  <td />
+  <td />
+</tr>
+`;
