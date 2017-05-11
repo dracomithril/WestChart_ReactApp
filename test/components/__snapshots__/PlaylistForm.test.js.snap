@@ -69,9 +69,11 @@ exports[`<PlaylistForm/> createPlaylist 1`] = `
     </Button>
     <Checkbox
       bsClass="checkbox"
+      checked={false}
       disabled={false}
       id="play_list_is_private"
       inline={false}
+      onChange={[Function]}
       style={
         Object {
           "paddingLeft": 5,
@@ -154,9 +156,11 @@ exports[`<PlaylistForm/> renders without crashing 1`] = `
     </Button>
     <Checkbox
       bsClass="checkbox"
+      checked={false}
       disabled={false}
       id="play_list_is_private"
       inline={false}
+      onChange={[Function]}
       style={
         Object {
           "paddingLeft": 5,
@@ -239,9 +243,11 @@ exports[`<PlaylistForm/> start_click 1`] = `
     </Button>
     <Checkbox
       bsClass="checkbox"
+      checked={false}
       disabled={false}
       id="play_list_is_private"
       inline={false}
+      onChange={[Function]}
       style={
         Object {
           "paddingLeft": 5,

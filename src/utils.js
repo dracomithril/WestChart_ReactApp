@@ -15,7 +15,7 @@ const action_types = require('./reducers/action_types');
  * @returns {{view_chart: (*), error_days: Array.<*>}}
  * @private
  */
-function filterChart(store) {
+export function filterChart(store) {
 
     let songs_per_day_arr = {};
     let {chart, filters, until, songs_per_day} = store.getState();
@@ -59,10 +59,18 @@ function filterChart(store) {
 
     return {view_chart, error_days};
 }
-const sorting = {
+export const sorting = {
+    /**
+     * descending
+     * @param array
+     */
     reaction: (array) => {
         array.sort((a, b) => b.reactions_num - a.reactions_num)
     },
+    /**
+     * ascending
+     * @param array
+     */
     who: (array) => {
         array.sort((a, b) => {
             if (a.from_user < b.from_user)
@@ -73,9 +81,17 @@ const sorting = {
         });
 
     },
+    /**
+     * ascending
+     * @param array
+     */
     when: (array) => {
-        array.sort((a, b) => b.added_time ? b.added_time.getTime() : 0 - a.added_time ? a.added_time.getTime() : 0);
+        array.sort((a, b) => (a.added_time ? a.added_time.getTime() : 0) - (b.added_time ? b.added_time.getTime() : 0));
     },
+    /**
+     * ascending
+     * @param array
+     */
     what: (array) => {
         array.sort((a, b) => {
             if (a.link.name < b.link.name)
@@ -86,45 +102,48 @@ const sorting = {
         });
     }
 };
-const get_chart_from_server = function (query_params, store) {
+export const get_chart_from_server = function (query_params, store) {
     let url = 'api/get_chart?' + qs.stringify(query_params);
     console.time('client-obtain-chart');
-    fetch(url).then((resp) => {
+    return fetch(url)
+        .then((resp) => {
             console.log('obtained chart list');
             console.timeEnd('client-obtain-chart');
             if (resp.status === 200) {
                 return resp.json()
             }
             return Promise.reject(resp);
-        }
-    ).then((b) => {
+        })
+        .then((b) => {
             // that.setState(b);
             store.dispatch({type: action_types.UPDATE_CHART, chart: b.chart});
             store.dispatch({type: action_types.UPDATE_LAST_UPDATE, date: b.last_update});
             store.dispatch({type: action_types.CHANGE_SHOW_WAIT, show: false});
 
-        }
-    ).catch(err => {
-        store.dispatch({type: action_types.CHANGE_SHOW_WAIT, show: false});
-        console.error('Error in fetch chart.');
-        console.error(err);
-    });
+        })
+        .catch(err => {
+            store.dispatch({type: action_types.CHANGE_SHOW_WAIT, show: false});
+            console.error('Error in fetch chart.');
+            console.error(err);
+        });
 };
-const loginToSpotify = function () {
-    fetch('/api/login').then((response) => {
+export const loginToSpotify = function () {
+     return fetch('/api/login')
+        .then((response) => {
         return response.text()
     }).then((path) => {
         const urlObj = url.parse(path);
         const query = querystring.parse(urlObj.query);
         Cookies.set('spotify_auth_state', query.state);
         console.log(path);
-        window.location = path
-    }).catch((resp) => {
-        console.log(resp);
+        window.location.assign(path);
+        return Promise.resolve();
+    }).catch((err) => {
+        console.log(err);
     })
 };
 
-module.exports = {
+let exp = {
     filterChart,
     loginToSpotify,
     sorting,
@@ -132,3 +151,12 @@ module.exports = {
     woc_string,
     get_chart_from_server
 };
+module.exports = exp;
+export default {
+    filterChart,
+    loginToSpotify,
+    sorting,
+    subtractDaysFromDate: filters_def.subtractDaysFromDate,
+    woc_string,
+    get_chart_from_server
+}

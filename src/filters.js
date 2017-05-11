@@ -11,7 +11,7 @@
  */
 function countDays(date, until, days) {
     let cIn1 = new Date(date).getTime();
-    return cIn1 - subtractDaysFromDate(until, days);
+    return cIn1 - subtractDaysFromDate(until, days).getTime();
 }
 let more_or_less = function (reactions_num, condition, state) {
     switch (condition) {
@@ -69,7 +69,9 @@ const filters = [{
     type: 'more_or_less',
     check: more_or_less
 }];
-export default {
+
+let exp = {
     control: filters,
     subtractDaysFromDate: subtractDaysFromDate
 };
+module.exports = exp;

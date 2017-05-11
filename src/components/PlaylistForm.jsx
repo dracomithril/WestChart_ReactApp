@@ -1,14 +1,14 @@
 /**
  * Created by Gryzli on 10.04.2017.
  */
-import React from "react";
+import React ,{Component}from "react";
 import PropTypes from 'prop-types';
 import {Button, Checkbox, Form, FormControl, FormGroup, Glyphicon, InputGroup} from "react-bootstrap";
-import ReactDOM from "react-dom";
-import Spotify from "spotify-web-api-node";
-const spotifyApi = new Spotify();
+import spotify_utils from "./../spotify_utils"
 const action_types = require('./../reducers/action_types');
-export default class PlaylistForm extends React.Component {
+
+
+export default class PlaylistForm extends Component {
     /*istanbul ignore next*/
     componentWillUnmount() {
         console.log('component PlaylistForm unmounted');
@@ -44,39 +44,18 @@ export default class PlaylistForm extends React.Component {
 
     onCreatePlaylist() {
         const {store} = this.context;
-        const {search_list, sp_user, sp_playlist_name} = store.getState();
-        const isPrivate = document.getElementById("play_list_is_private").checked;
+        const {search_list, sp_user, sp_playlist_name, isPlaylistPrivate} = store.getState();
         // Create a private playlist
+        let update_sp_info = function (spotify_url, sp_name) {
+            store.dispatch({type:action_types.UPDATE_PLAYLIST_INFO, value:{url:spotify_url,pl_name:sp_name}});
+        };
         const selected = search_list.map((elem) => elem.selected !== undefined ? elem.selected.uri : undefined).filter(elem => elem !== undefined);
-        console.log(selected.length);
-        spotifyApi.setAccessToken(sp_user.access_token);
-        spotifyApi.createPlaylist(sp_user.id, sp_playlist_name, {'public': !isPrivate})
-            .then(function ({body}) {
-                const spotify_url = body.external_urls.spotify;
-                console.log(spotify_url);
-                console.log('Created playlist! name: ', body.name);
-                let entry =
-                    (<div className="spotify_sumary">
-                        <span>{'Created playlist! name: ' + body.name}</span><br/>
-                        <a href={spotify_url} target="_newtab">{spotify_url}</a>
-                    </div>);
-                ReactDOM.render(
-                    entry,
-                    document.getElementById("spotify_info")
-                );
-                return spotifyApi.addTracksToPlaylist(sp_user.id, body.id, selected)
-            })
-            .then(function () {
-                console.log('Added tracks to playlist!');
-            })
-            .catch(function (err) {
-                console.log('Something went wrong!', err);
-            });
+        spotify_utils.create_sp_playlist(sp_user, sp_playlist_name, isPlaylistPrivate, selected, update_sp_info);
     }
 
     render() {
         const {store} = this.context;
-        const {sp_playlist_name} = store.getState();
+        const {sp_playlist_name, isPlaylistPrivate} = store.getState();
         return ( <Form inline>
             <Button onClick={this.onStartClick.bind(this)} id="start_sp_button">Start
             </Button>
@@ -98,7 +77,12 @@ export default class PlaylistForm extends React.Component {
                 <Button id="crt_pl_button" onClick={this.onCreatePlaylist.bind(this)} disabled={sp_playlist_name.length < 6}>Create
                     Playlist
                 </Button>
-                <Checkbox style={{paddingLeft: 5}} id="play_list_is_private" value="private">{'private ?'}</Checkbox>
+                <Checkbox style={{paddingLeft: 5}} id="play_list_is_private" onChange={(e)=>{
+                    store.dispatch({
+                        type: action_types.TOGGLE_IS_PRIVATE,
+                        value: e.target.checked
+                    })
+                }} value="private" checked={isPlaylistPrivate}>{'private ?'}</Checkbox>
             </FormGroup>
         </Form>);
     }

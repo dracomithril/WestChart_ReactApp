@@ -2,15 +2,12 @@
  * Created by Gryzli on 24.01.2017.
  */
 /* eslint-env node, mocha, es6 */
-let chai = require('chai'),
-    sinon = require('sinon'),
+let sinon = require('sinon'),
     rewire = require('rewire'),
-    assert = sinon.assert,
-    expect = chai.expect;
+    assert = sinon.assert;
 let Promise = require("bluebird");
 let test_body = require('./data/fbResult.json');
 let test_body2 = require('./data/fbResult2.json');
-chai.should();
 
 describe('[chart]', function () {
     let Chart, clock;
@@ -30,7 +27,7 @@ describe('[chart]', function () {
     });
     afterEach(function () {
     });
-    it('should be able to obtain list from chart', function (done) {
+    it('should be able to obtain list from chart', function () {
         let groupId = '1707149242852457';
         const body1 = {
             statusCode: 200,
@@ -64,15 +61,10 @@ describe('[chart]', function () {
         let since_date = new Date(date.toISOString());
         since_date.setDate(date.getDate() - 31);
 
-        Chart(31, since_date.toISOString(), date.toISOString(), '', groupId).then((res) => {
+        return Chart(31, since_date.toISOString(), date.toISOString(), '', groupId).then((res) => {
             assert.calledOnce(requestMock.getAsync);
             expect(res.chart.length).toEqual(97);
-            done();
-        }).catch((err) => {
-            console.log(err);
-            assert.calledOnce(requestMock.getAsync);
-            done();
-        });
+        })
     });
 });
 

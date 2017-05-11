@@ -6,9 +6,6 @@ exports[`<SpotifySearch/> renders without crashing 1`] = `
     id="list"
   >
     Search music by: 
-    <div
-      id="spotify_info"
-    />
     <PlaylistForm
       selected={Array []}
     />
