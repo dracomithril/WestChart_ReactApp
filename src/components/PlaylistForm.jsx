@@ -1,10 +1,10 @@
 /**
  * Created by Gryzli on 10.04.2017.
  */
-import React ,{Component}from "react";
-import PropTypes from 'prop-types';
+import React, {Component} from "react";
+import PropTypes from "prop-types";
 import {Button, Checkbox, Form, FormControl, FormGroup, Glyphicon, InputGroup} from "react-bootstrap";
-import spotify_utils from "./../spotify_utils"
+import spotify_utils from "./../spotify_utils";
 const action_types = require('./../reducers/action_types');
 
 
@@ -13,6 +13,7 @@ export default class PlaylistForm extends Component {
     componentWillUnmount() {
         console.log('component PlaylistForm unmounted');
     }
+
     /*istanbul ignore next*/
     componentDidMount() {
         console.log('component PlaylistForm did mount');
@@ -30,6 +31,18 @@ export default class PlaylistForm extends Component {
         let list = playlist_name.split(' ').join('_');
         store.dispatch({type: action_types.UPDATE_PLAYLIST_NAME, value: list});
         const search = selected.map((elem) => {
+            //todo cline up artist title
+            /** regex for artist title
+             *[group 1-2] youtube
+             *[group 1] artist
+             * [group 2] title
+             *[group 3-4] spotify
+             * [group 3] title
+             * [group 4] artist
+             * const regex = /^(.*?)\s-\s(.*?)(?:\s\([Oo]ff.*l\s(?:[Vv]ideo|[Aa]udio)\))?$|^(.*?)(?:,\s.*s.*by)\s(.*?)(?:\son.*[Ss]potify)$/g;
+             *
+             */
+
             let entry = elem.link.title.split('-');
             return ({
                 artist: entry[0],
@@ -47,7 +60,7 @@ export default class PlaylistForm extends Component {
         const {search_list, sp_user, sp_playlist_name, isPlaylistPrivate} = store.getState();
         // Create a private playlist
         let update_sp_info = function (spotify_url, sp_name) {
-            store.dispatch({type:action_types.UPDATE_PLAYLIST_INFO, value:{url:spotify_url,pl_name:sp_name}});
+            store.dispatch({type: action_types.UPDATE_PLAYLIST_INFO, value: {url: spotify_url, pl_name: sp_name}});
         };
         const selected = search_list.map((elem) => elem.selected !== undefined ? elem.selected.uri : undefined).filter(elem => elem !== undefined);
         spotify_utils.create_sp_playlist(sp_user, sp_playlist_name, isPlaylistPrivate, selected, update_sp_info);
@@ -60,7 +73,7 @@ export default class PlaylistForm extends Component {
             <Button onClick={this.onStartClick.bind(this)} id="start_sp_button">Start
             </Button>
             <FormGroup style={{width: 300}} controlId="play_list_name" validationState={((sp_name_length) => {
-                return sp_name_length>8? 'success':sp_name_length > 5?'warning':'error';
+                return sp_name_length > 8 ? 'success' : sp_name_length > 5 ? 'warning' : 'error';
             })(sp_playlist_name.length)}>
                 <InputGroup>
                     <InputGroup.Addon><Glyphicon glyph="music"/></InputGroup.Addon>
@@ -74,10 +87,11 @@ export default class PlaylistForm extends Component {
                 </InputGroup>
             </FormGroup>
             <FormGroup>
-                <Button id="crt_pl_button" onClick={this.onCreatePlaylist.bind(this)} disabled={sp_playlist_name.length < 6}>Create
+                <Button id="crt_pl_button" onClick={this.onCreatePlaylist.bind(this)}
+                        disabled={sp_playlist_name.length < 6}>Create
                     Playlist
                 </Button>
-                <Checkbox style={{paddingLeft: 5}} id="play_list_is_private" onChange={(e)=>{
+                <Checkbox style={{paddingLeft: 5}} id="play_list_is_private" onChange={(e) => {
                     store.dispatch({
                         type: action_types.TOGGLE_IS_PRIVATE,
                         value: e.target.checked
