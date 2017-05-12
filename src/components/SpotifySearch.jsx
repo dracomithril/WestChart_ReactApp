@@ -35,6 +35,7 @@ export default class SpotifySearch extends React.Component {
                 <thead>
                 <tr>
                     <td>Artist:</td>
+                    <td id="flip"/>
                     <td>Title:</td>
                     <td>options:</td>
                     <td>Selected:</td>

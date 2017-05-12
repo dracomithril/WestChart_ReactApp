@@ -94,6 +94,13 @@ const search_list = (state = [], action) => {
             const entry2 = entry[action.id];
             entry2[action.field] = action.value;
             return entry;
+        case action_types.SWAP_FIELDS:
+            let entry1 = _.clone(state);
+            const artist = entry1[action.id].artist;
+            const title = entry1[action.id].title;
+            entry1[action.id].artist = title;
+            entry1[action.id].title = artist;
+            return entry1;
         default:
             return state;
     }

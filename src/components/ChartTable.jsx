@@ -103,7 +103,7 @@ export default class ChartTable extends React.Component {
                     maxWidth: 600,
                     id: 'yt_link',
                     render: props => props.row.link.url === undefined ? (<span>{props.value}</span>) : (
-                        <a href={props.row.link.url}>{props.value}</a>)
+                        <a href={props.row.link.url} target="_newtab">{props.value}</a>)
                 }
             ]
         }

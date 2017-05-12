@@ -5,6 +5,7 @@ import React, {Component} from "react";
 import PropTypes from "prop-types";
 import {Button, Checkbox, Form, FormControl, FormGroup, Glyphicon, InputGroup} from "react-bootstrap";
 import spotify_utils from "./../spotify_utils";
+import utils from "../utils";
 const action_types = require('./../reducers/action_types');
 
 
@@ -31,22 +32,10 @@ export default class PlaylistForm extends Component {
         let list = playlist_name.split(' ').join('_');
         store.dispatch({type: action_types.UPDATE_PLAYLIST_NAME, value: list});
         const search = selected.map((elem) => {
-            //todo cline up artist title
-            /** regex for artist title
-             *[group 1-2] youtube
-             *[group 1] artist
-             * [group 2] title
-             *[group 3-4] spotify
-             * [group 3] title
-             * [group 4] artist
-             * const regex = /^(.*?)\s-\s(.*?)(?:\s\([Oo]ff.*l\s(?:[Vv]ideo|[Aa]udio)\))?$|^(.*?)(?:,\s.*s.*by)\s(.*?)(?:\son.*[Ss]potify)$/g;
-             *
-             */
-
-            let entry = elem.link.title.split('-');
+            const entry=utils.getArtist_Title(elem.link.title);
             return ({
-                artist: entry[0],
-                title: entry[1],
+                artist: entry.artist,
+                title: entry.title,
                 id: elem.id,
                 items: [],
                 selected: {}

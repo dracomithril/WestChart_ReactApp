@@ -16,6 +16,16 @@ exports[`<RowSpotifySearch/> renders without crashing 1`] = `
     />
   </td>
   <td>
+    <button
+      onClick={[Function]}
+    >
+      <i
+        aria-hidden="true"
+        className="fa fa-refresh"
+      />
+    </button>
+  </td>
+  <td>
     <input
       id={0}
       onChange={[Function]}

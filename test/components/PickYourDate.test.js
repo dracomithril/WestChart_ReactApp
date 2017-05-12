@@ -38,6 +38,6 @@ describe('<PickYourDate/>', () => {
         button.simulate('click');
         let actions = store.getActions();
         expect(actions.length).toBe(3);
-        expect(utils.get_chart_from_server.mock.calls.length).toBe(1);
+        expect(utils.getChartFromServer.mock.calls.length).toBe(1);
     });
 });

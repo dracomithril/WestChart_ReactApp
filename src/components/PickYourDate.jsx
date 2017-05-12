@@ -41,7 +41,7 @@ export default class PickYourDate extends React.Component {
             utils: until2,
             access_token: user.accessToken
         };
-        utils.get_chart_from_server(query_params, store);
+        utils.getChartFromServer(query_params, store);
     }
 
     render() {

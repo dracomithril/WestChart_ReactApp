@@ -74,9 +74,17 @@ export default class RowSpotifySearch extends React.Component {
             <td><input style={input_style} type="text" id={search_index} value={search_elem.artist || ''}
                        onChange={update_artist}/>
             </td>
+            <td>
+                <button onClick={()=>{
+                    store.dispatch({
+                        type: action_types.SWAP_FIELDS,
+                        id: search_index
+                    });
+                }}><i className="fa fa-refresh" aria-hidden="true"/></button>
+            </td>
             <td><input style={input_style} type="text" id={search_index} value={search_elem.title || ''}
-                       onChange={update_title}/></td>
-
+                       onChange={update_title}/>
+            </td>
             <td>
                 <Button id={'button-' + search_elem.id} onClick={searchSpotifyTracks}>search
                 </Button>

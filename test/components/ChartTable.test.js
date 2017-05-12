@@ -32,6 +32,5 @@ describe('<ChartTable/>', () => {
             }
         );
         expect(mountToJson(wrapper)).toMatchSnapshot();
-
     });
 });

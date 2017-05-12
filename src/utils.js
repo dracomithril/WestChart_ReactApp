@@ -102,7 +102,7 @@ export const sorting = {
         });
     }
 };
-export const get_chart_from_server = function (query_params, store) {
+export const getChartFromServer = function (query_params, store) {
     let url = 'api/get_chart?' + qs.stringify(query_params);
     console.time('client-obtain-chart');
     return fetch(url)
@@ -127,28 +127,51 @@ export const get_chart_from_server = function (query_params, store) {
         });
 };
 export const loginToSpotify = function () {
-     return fetch('/api/login')
+    return fetch('/api/login')
         .then((response) => {
-        return response.text()
-    }).then((path) => {
-        const urlObj = url.parse(path);
-        const query = querystring.parse(urlObj.query);
-        Cookies.set('spotify_auth_state', query.state);
-        console.log(path);
-        window.location.assign(path);
-        return Promise.resolve();
-    }).catch((err) => {
-        console.log(err);
-    })
+            return response.text()
+        }).then((path) => {
+            const urlObj = url.parse(path);
+            const query = querystring.parse(urlObj.query);
+            Cookies.set('spotify_auth_state', query.state);
+            console.log(path);
+            window.location.assign(path);
+            return Promise.resolve();
+        }).catch((err) => {
+            console.log(err);
+        })
 };
 
-let exp = {
+export const getArtist_Title = function (name) {
+    /** regex for artist title
+     *[group 1-2] youtube
+     *[group 1] artist
+     * [group 2] title
+     *[group 3-4] spotify
+     * [group 3] title
+     * [group 4] artist
+     */
+    const regex = /^(.*?)\s-\s(.*?)(?:\s[([](?:[Oo]ff.*l\s(?:[Vv]ideo|[Aa]udio)?|(?:Audio)?)[)\]])?(?:\sft.(.*)?)?$|^(.*?)(?:,\s.*s.*by)\s(.*?)(?:\son.*[Ss]potify)$/g;
+    let title, artist;
+    const m = regex.exec(name);
+    if (m[1] && m[2]) {
+        artist = m[1];
+        title = m[2];
+    } else {
+        artist = m[5];
+        title = m[4];
+    }
+
+    return {title, artist}
+};
+
+const exp = {
     filterChart,
     loginToSpotify,
     sorting,
     subtractDaysFromDate: filters_def.subtractDaysFromDate,
     woc_string,
-    get_chart_from_server
+    getChartFromServer, getArtist_Title
 };
 module.exports = exp;
 export default {
@@ -157,5 +180,6 @@ export default {
     sorting,
     subtractDaysFromDate: filters_def.subtractDaysFromDate,
     woc_string,
-    get_chart_from_server
+    getChartFromServer,
+    getArtist_Title
 }
