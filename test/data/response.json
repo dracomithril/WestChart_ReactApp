@@ -1,0 +1,138 @@
+{
+  "chart": [
+    {
+      "added_time": "2017-03-07T23:00:00.000Z",
+      "added_by": "Joanna Kozieńska",
+      "created_time": "2017-03-01T19:36:39+0000",
+      "from_user": "Anna Stanuchowska",
+      "full_picture": "https://external.xx.fbcdn.net/safe_image.php?d=AQCOBB0IaMR9ATLU&w=720&h=720&url=https%3A%2F%2Fi.ytimg.com%2Fvi%2FeBlFp2__XtM%2Fmaxresdefault.jpg&cfs=1&_nc_hash=AQDB3IuabP5vzAnZ",
+      "id": 0,
+      "likes_num": 0,
+      "link": {
+        "url": "https://www.youtube.com/watch?v=eBlFp2__XtM",
+        "name": "X Ambassadors - Unsteady (Erich Lee Gravity Remix)",
+        "title": "X Ambassadors - Unsteady (Erich Lee Gravity Remix)",
+        "type": "video_share_youtube"
+      },
+      "message": "Nie wiem, czy to by się nadawało, ale uwielbiam tą nutę <3 ",
+      "reactions_num": 0,
+      "selected": false,
+      "source": "https://www.youtube.com/embed/eBlFp2__XtM?autoplay=1",
+      "type": "video",
+      "updated_time": "2017-03-09T21:46:45+0000"
+    },
+    {
+      "added_time": "2017-03-08T23:00:00.000Z",
+      "added_by": "Joanna Kozieńska",
+      "created_time": "2017-03-03T06:28:55+0000",
+      "from_user": "Damian Gruszczyński",
+      "id": 1,
+      "likes_num": 5,
+      "link": {
+        "title": "Barcelona, a song by Ed Sheeran on Spotify",
+        "type": "music_aggregation"
+      },
+      "message": "#całapłytawymiata",
+      "reactions_num": 5,
+      "selected": false,
+      "type": "status",
+      "updated_time": "2017-03-09T08:01:48+0000"
+    },
+    {
+      "added_time": "2017-03-08T23:00:00.000Z",
+      "added_by": "Joanna Kozieńska",
+      "created_time": "2017-03-03T06:24:25+0000",
+      "from_user": "Damian Gruszczyński",
+      "id": 2,
+      "likes_num": 6,
+      "link": {
+        "title": "Galway Girl, a song by Ed Sheeran on Spotify",
+        "type": "music_aggregation"
+      },
+      "message": "Ed! :-D",
+      "reactions_num": 6,
+      "selected": false,
+      "type": "status",
+      "updated_time": "2017-03-08T23:17:00+0000"
+    },
+    {
+      "added_time": "2017-03-08T23:00:00.000Z",
+      "added_by": "Joanna Kozieńska",
+      "created_time": "2017-03-03T06:26:21+0000",
+      "from_user": "Damian Gruszczyński",
+      "id": 3,
+      "likes_num": 8,
+      "link": {
+        "title": "New Man, a song by Ed Sheeran on Spotify",
+        "type": "music_aggregation"
+      },
+      "message": "#nigdydosyceda ;-)",
+      "reactions_num": 8,
+      "selected": false,
+      "type": "status",
+      "updated_time": "2017-03-08T23:05:45+0000"
+    },
+    {
+      "added_time": "2017-03-08T23:00:00.000Z",
+      "added_by": "Joanna Kozieńska",
+      "created_time": "2017-03-03T20:10:48+0000",
+      "from_user": "Mateusz Lech",
+      "full_picture": "https://external.xx.fbcdn.net/safe_image.php?d=AQDQMhV3vs5i7Ipg&w=720&h=720&url=https%3A%2F%2Fi.ytimg.com%2Fvi%2F5Y6e_T0ySmE%2Fmaxresdefault.jpg&cfs=1&sx=503&sy=0&sw=720&sh=720&_nc_hash=AQAa5L3S7_nVVkZR",
+      "id": 4,
+      "likes_num": 5,
+      "link": {
+        "url": "https://www.youtube.com/watch?v=5Y6e_T0ySmE",
+        "name": "Vali - Ain't No Friend Of Mine (Official Video)",
+        "title": "Vali - Ain't No Friend Of Mine (Official Video)",
+        "type": "video_share_youtube"
+      },
+      "message": "Wydaje się całkiem skoczne ;)\n\n#95bpm",
+      "reactions_num": 5,
+      "selected": false,
+      "source": "https://www.youtube.com/embed/5Y6e_T0ySmE?autoplay=1",
+      "type": "video",
+      "updated_time": "2017-03-08T23:05:38+0000"
+    },
+    {
+      "added_time": "2017-03-07T23:00:00.000Z",
+      "added_by": "Joanna Kozieńska",
+      "created_time": "2017-03-07T23:07:03+0000",
+      "from_user": "Joanna Kozieńska",
+      "full_picture": "https://external.xx.fbcdn.net/safe_image.php?d=AQCimze9kDlMKVl1&w=720&h=720&url=https%3A%2F%2Fi.ytimg.com%2Fvi%2FLuxpfnnsdX4%2Fmaxresdefault.jpg&cfs=1&_nc_hash=AQC7M9AEfyBbtF3g",
+      "id": 5,
+      "likes_num": 8,
+      "link": {
+        "url": "https://youtu.be/LuxpfnnsdX4",
+        "name": "Chet Faker - 1998 ft Banks",
+        "title": "Chet Faker - 1998 ft Banks",
+        "type": "video_share_youtube"
+      },
+      "message": "Jedna ode mnie, bo już wieki nie miałam okazji ;) \n\n",
+      "reactions_num": 9,
+      "selected": false,
+      "source": "https://www.youtube.com/embed/LuxpfnnsdX4?autoplay=1",
+      "type": "video",
+      "updated_time": "2017-03-08T21:36:01+0000"
+    },
+    {
+      "created_time": "2016-08-30T14:20:21+0000",
+      "from_user": "Paulina Górka",
+      "full_picture": "https://external.xx.fbcdn.net/safe_image.php?d=AQBiF2VBQG2WfPvh&w=720&h=720&url=https%3A%2F%2Fi.ytimg.com%2Fvi%2FEkeZKFa65zs%2Fmaxresdefault.jpg&cfs=1&_nc_hash=AQBYNj773CB4DtVR",
+      "id": 96,
+      "likes_num": 19,
+      "link": {
+        "url": "https://www.youtube.com/watch?v=EkeZKFa65zs",
+        "name": "James Hersey - Miss You (Official Audio)",
+        "title": "James Hersey - Miss You (Official Audio)",
+        "type": "video_share_youtube"
+      },
+      "message": "warte lajków, jak nie to zwątpię :P\n",
+      "reactions_num": 19,
+      "selected": false,
+      "source": "https://www.youtube.com/embed/EkeZKFa65zs?autoplay=1",
+      "type": "video",
+      "updated_time": "2017-02-07T10:56:40+0000"
+    }
+  ],
+  "last_update": "2017-05-08T22:42:49.276Z"
+}

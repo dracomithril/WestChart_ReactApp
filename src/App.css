@@ -16,16 +16,16 @@
     margin-top: 5px;
 }
 
-input[type=checkbox]:checked {
-    background-color: green;
-}
+
 .checkbox1 {
     position: relative;
     display: block;
     /*margin-top: 10px;*/
     /*margin-bottom: 10px;*/
 }
-
+.checkbox1 input[type=checkbox]:checked {
+    background-color: green;
+}
 #updateDate{
     color: red;
     margin-left: 10px;

@@ -1,0 +1,25 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<UserInfo/> renders without crashing 1`] = `
+<Well
+  bsClass="logged"
+>
+  <div>
+    <Image
+      bsClass="img"
+      circle={true}
+      responsive={false}
+      rounded={false}
+      thumbnail={false}
+    />
+    <span>
+      Hi, undefined
+    </span>
+    <br />
+    <span>
+      it's nice to see you again.
+    </span>
+    <br />
+  </div>
+</Well>
+`;

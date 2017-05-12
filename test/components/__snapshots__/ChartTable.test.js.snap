@@ -1,0 +1,5251 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<ChartTable/> render with objects 1`] = `
+<ChartTable
+  data={
+    Array [
+      Object {
+        "added_by": "Joanna Kozieńska",
+        "added_time": "2017-03-07T23:00:00.000Z",
+        "created_time": "2017-03-01T19:36:39+0000",
+        "from_user": "Anna Stanuchowska",
+        "full_picture": "https://external.xx.fbcdn.net/safe_image.php?d=AQCOBB0IaMR9ATLU&w=720&h=720&url=https%3A%2F%2Fi.ytimg.com%2Fvi%2FeBlFp2__XtM%2Fmaxresdefault.jpg&cfs=1&_nc_hash=AQDB3IuabP5vzAnZ",
+        "id": 0,
+        "likes_num": 0,
+        "link": Object {
+          "name": "X Ambassadors - Unsteady (Erich Lee Gravity Remix)",
+          "title": "X Ambassadors - Unsteady (Erich Lee Gravity Remix)",
+          "type": "video_share_youtube",
+          "url": "https://www.youtube.com/watch?v=eBlFp2__XtM",
+        },
+        "message": "Nie wiem, czy to by się nadawało, ale uwielbiam tą nutę <3 ",
+        "reactions_num": 0,
+        "selected": false,
+        "source": "https://www.youtube.com/embed/eBlFp2__XtM?autoplay=1",
+        "type": "video",
+        "updated_time": "2017-03-09T21:46:45+0000",
+      },
+      Object {
+        "added_by": "Joanna Kozieńska",
+        "added_time": "2017-03-08T23:00:00.000Z",
+        "created_time": "2017-03-03T06:28:55+0000",
+        "from_user": "Damian Gruszczyński",
+        "id": 1,
+        "likes_num": 5,
+        "link": Object {
+          "title": "Barcelona, a song by Ed Sheeran on Spotify",
+          "type": "music_aggregation",
+        },
+        "message": "#całapłytawymiata",
+        "reactions_num": 5,
+        "selected": false,
+        "type": "status",
+        "updated_time": "2017-03-09T08:01:48+0000",
+      },
+      Object {
+        "added_by": "Joanna Kozieńska",
+        "added_time": "2017-03-08T23:00:00.000Z",
+        "created_time": "2017-03-03T06:24:25+0000",
+        "from_user": "Damian Gruszczyński",
+        "id": 2,
+        "likes_num": 6,
+        "link": Object {
+          "title": "Galway Girl, a song by Ed Sheeran on Spotify",
+          "type": "music_aggregation",
+        },
+        "message": "Ed! :-D",
+        "reactions_num": 6,
+        "selected": false,
+        "type": "status",
+        "updated_time": "2017-03-08T23:17:00+0000",
+      },
+      Object {
+        "added_by": "Joanna Kozieńska",
+        "added_time": "2017-03-08T23:00:00.000Z",
+        "created_time": "2017-03-03T06:26:21+0000",
+        "from_user": "Damian Gruszczyński",
+        "id": 3,
+        "likes_num": 8,
+        "link": Object {
+          "title": "New Man, a song by Ed Sheeran on Spotify",
+          "type": "music_aggregation",
+        },
+        "message": "#nigdydosyceda ;-)",
+        "reactions_num": 8,
+        "selected": false,
+        "type": "status",
+        "updated_time": "2017-03-08T23:05:45+0000",
+      },
+      Object {
+        "added_by": "Joanna Kozieńska",
+        "added_time": "2017-03-08T23:00:00.000Z",
+        "created_time": "2017-03-03T20:10:48+0000",
+        "from_user": "Mateusz Lech",
+        "full_picture": "https://external.xx.fbcdn.net/safe_image.php?d=AQDQMhV3vs5i7Ipg&w=720&h=720&url=https%3A%2F%2Fi.ytimg.com%2Fvi%2F5Y6e_T0ySmE%2Fmaxresdefault.jpg&cfs=1&sx=503&sy=0&sw=720&sh=720&_nc_hash=AQAa5L3S7_nVVkZR",
+        "id": 4,
+        "likes_num": 5,
+        "link": Object {
+          "name": "Vali - Ain't No Friend Of Mine (Official Video)",
+          "title": "Vali - Ain't No Friend Of Mine (Official Video)",
+          "type": "video_share_youtube",
+          "url": "https://www.youtube.com/watch?v=5Y6e_T0ySmE",
+        },
+        "message": "Wydaje się całkiem skoczne ;)
+    
+    #95bpm",
+        "reactions_num": 5,
+        "selected": false,
+        "source": "https://www.youtube.com/embed/5Y6e_T0ySmE?autoplay=1",
+        "type": "video",
+        "updated_time": "2017-03-08T23:05:38+0000",
+      },
+      Object {
+        "added_by": "Joanna Kozieńska",
+        "added_time": "2017-03-07T23:00:00.000Z",
+        "created_time": "2017-03-07T23:07:03+0000",
+        "from_user": "Joanna Kozieńska",
+        "full_picture": "https://external.xx.fbcdn.net/safe_image.php?d=AQCimze9kDlMKVl1&w=720&h=720&url=https%3A%2F%2Fi.ytimg.com%2Fvi%2FLuxpfnnsdX4%2Fmaxresdefault.jpg&cfs=1&_nc_hash=AQC7M9AEfyBbtF3g",
+        "id": 5,
+        "likes_num": 8,
+        "link": Object {
+          "name": "Chet Faker - 1998 ft Banks",
+          "title": "Chet Faker - 1998 ft Banks",
+          "type": "video_share_youtube",
+          "url": "https://youtu.be/LuxpfnnsdX4",
+        },
+        "message": "Jedna ode mnie, bo już wieki nie miałam okazji ;) 
+    
+    ",
+        "reactions_num": 9,
+        "selected": false,
+        "source": "https://www.youtube.com/embed/LuxpfnnsdX4?autoplay=1",
+        "type": "video",
+        "updated_time": "2017-03-08T21:36:01+0000",
+      },
+      Object {
+        "created_time": "2016-08-30T14:20:21+0000",
+        "from_user": "Paulina Górka",
+        "full_picture": "https://external.xx.fbcdn.net/safe_image.php?d=AQBiF2VBQG2WfPvh&w=720&h=720&url=https%3A%2F%2Fi.ytimg.com%2Fvi%2FEkeZKFa65zs%2Fmaxresdefault.jpg&cfs=1&_nc_hash=AQBYNj773CB4DtVR",
+        "id": 96,
+        "likes_num": 19,
+        "link": Object {
+          "name": "James Hersey - Miss You (Official Audio)",
+          "title": "James Hersey - Miss You (Official Audio)",
+          "type": "video_share_youtube",
+          "url": "https://www.youtube.com/watch?v=EkeZKFa65zs",
+        },
+        "message": "warte lajków, jak nie to zwątpię :P
+    ",
+        "reactions_num": 19,
+        "selected": false,
+        "source": "https://www.youtube.com/embed/EkeZKFa65zs?autoplay=1",
+        "type": "video",
+        "updated_time": "2017-02-07T10:56:40+0000",
+      },
+    ]
+  }
+>
+  <src
+    ExpanderComponent={[Function]}
+    LoadingComponent={[Function]}
+    NoDataComponent={[Function]}
+    PaginationComponent={[Function]}
+    ResizerComponent={[Function]}
+    TableComponent={[Function]}
+    TbodyComponent={[Function]}
+    TdComponent={[Function]}
+    TfootComponent={[Function]}
+    ThComponent={[Function]}
+    TheadComponent={[Function]}
+    TrComponent={[Function]}
+    TrGroupComponent={[Function]}
+    className="-striped -highlight"
+    collapseOnDataChange={true}
+    collapseOnPageChange={true}
+    collapseOnSortingChange={true}
+    column={
+      Object {
+        "className": "",
+        "filterMethod": undefined,
+        "filterRender": [Function],
+        "footer": undefined,
+        "footerClassName": "",
+        "footerStyle": Object {},
+        "getFooterProps": [Function],
+        "getHeaderProps": [Function],
+        "getProps": [Function],
+        "header": undefined,
+        "headerClassName": "",
+        "headerStyle": Object {},
+        "hideFilter": false,
+        "minWidth": 100,
+        "render": undefined,
+        "show": true,
+        "sortable": true,
+        "style": Object {},
+      }
+    }
+    columns={
+      Array [
+        Object {
+          "columns": Array [
+            Object {
+              "accessor": "selected",
+              "header": [Function],
+              "maxWidth": 60,
+              "minWidth": 30,
+              "render": [Function],
+              "sortable": false,
+            },
+            Object {
+              "accessor": "from_user",
+              "header": "user",
+              "maxWidth": 300,
+              "minWidth": 200,
+              "render": [Function],
+            },
+            Object {
+              "accessor": "message",
+              "header": "fb msg",
+              "maxWidth": 80,
+              "render": [Function],
+            },
+            Object {
+              "accessor": "reactions_num",
+              "header": "reactions count",
+              "maxWidth": 100,
+              "minWidth": 60,
+              "sort": "dsc",
+            },
+            Object {
+              "accessor": [Function],
+              "header": "crated time",
+              "id": "createTime",
+              "maxWidth": 200,
+              "minWidth": 150,
+              "render": [Function],
+            },
+            Object {
+              "accessor": [Function],
+              "header": "added time",
+              "id": "addedTime",
+              "maxWidth": 150,
+              "render": [Function],
+            },
+            Object {
+              "accessor": [Function],
+              "header": "last update",
+              "id": "lastUpdate",
+              "maxWidth": 200,
+              "minWidth": 150,
+              "render": [Function],
+            },
+            Object {
+              "accessor": [Function],
+              "header": [Function],
+              "id": "yt_link",
+              "maxWidth": 600,
+              "minWidth": 200,
+              "render": [Function],
+              "width": 300,
+            },
+          ],
+          "header": [Function],
+        },
+      ]
+    }
+    data={
+      Array [
+        Object {
+          "added_by": "Joanna Kozieńska",
+          "added_time": "2017-03-07T23:00:00.000Z",
+          "created_time": "2017-03-01T19:36:39+0000",
+          "from_user": "Anna Stanuchowska",
+          "full_picture": "https://external.xx.fbcdn.net/safe_image.php?d=AQCOBB0IaMR9ATLU&w=720&h=720&url=https%3A%2F%2Fi.ytimg.com%2Fvi%2FeBlFp2__XtM%2Fmaxresdefault.jpg&cfs=1&_nc_hash=AQDB3IuabP5vzAnZ",
+          "id": 0,
+          "likes_num": 0,
+          "link": Object {
+            "name": "X Ambassadors - Unsteady (Erich Lee Gravity Remix)",
+            "title": "X Ambassadors - Unsteady (Erich Lee Gravity Remix)",
+            "type": "video_share_youtube",
+            "url": "https://www.youtube.com/watch?v=eBlFp2__XtM",
+          },
+          "message": "Nie wiem, czy to by się nadawało, ale uwielbiam tą nutę <3 ",
+          "reactions_num": 0,
+          "selected": false,
+          "source": "https://www.youtube.com/embed/eBlFp2__XtM?autoplay=1",
+          "type": "video",
+          "updated_time": "2017-03-09T21:46:45+0000",
+        },
+        Object {
+          "added_by": "Joanna Kozieńska",
+          "added_time": "2017-03-08T23:00:00.000Z",
+          "created_time": "2017-03-03T06:28:55+0000",
+          "from_user": "Damian Gruszczyński",
+          "id": 1,
+          "likes_num": 5,
+          "link": Object {
+            "title": "Barcelona, a song by Ed Sheeran on Spotify",
+            "type": "music_aggregation",
+          },
+          "message": "#całapłytawymiata",
+          "reactions_num": 5,
+          "selected": false,
+          "type": "status",
+          "updated_time": "2017-03-09T08:01:48+0000",
+        },
+        Object {
+          "added_by": "Joanna Kozieńska",
+          "added_time": "2017-03-08T23:00:00.000Z",
+          "created_time": "2017-03-03T06:24:25+0000",
+          "from_user": "Damian Gruszczyński",
+          "id": 2,
+          "likes_num": 6,
+          "link": Object {
+            "title": "Galway Girl, a song by Ed Sheeran on Spotify",
+            "type": "music_aggregation",
+          },
+          "message": "Ed! :-D",
+          "reactions_num": 6,
+          "selected": false,
+          "type": "status",
+          "updated_time": "2017-03-08T23:17:00+0000",
+        },
+        Object {
+          "added_by": "Joanna Kozieńska",
+          "added_time": "2017-03-08T23:00:00.000Z",
+          "created_time": "2017-03-03T06:26:21+0000",
+          "from_user": "Damian Gruszczyński",
+          "id": 3,
+          "likes_num": 8,
+          "link": Object {
+            "title": "New Man, a song by Ed Sheeran on Spotify",
+            "type": "music_aggregation",
+          },
+          "message": "#nigdydosyceda ;-)",
+          "reactions_num": 8,
+          "selected": false,
+          "type": "status",
+          "updated_time": "2017-03-08T23:05:45+0000",
+        },
+        Object {
+          "added_by": "Joanna Kozieńska",
+          "added_time": "2017-03-08T23:00:00.000Z",
+          "created_time": "2017-03-03T20:10:48+0000",
+          "from_user": "Mateusz Lech",
+          "full_picture": "https://external.xx.fbcdn.net/safe_image.php?d=AQDQMhV3vs5i7Ipg&w=720&h=720&url=https%3A%2F%2Fi.ytimg.com%2Fvi%2F5Y6e_T0ySmE%2Fmaxresdefault.jpg&cfs=1&sx=503&sy=0&sw=720&sh=720&_nc_hash=AQAa5L3S7_nVVkZR",
+          "id": 4,
+          "likes_num": 5,
+          "link": Object {
+            "name": "Vali - Ain't No Friend Of Mine (Official Video)",
+            "title": "Vali - Ain't No Friend Of Mine (Official Video)",
+            "type": "video_share_youtube",
+            "url": "https://www.youtube.com/watch?v=5Y6e_T0ySmE",
+          },
+          "message": "Wydaje się całkiem skoczne ;)
+      
+      #95bpm",
+          "reactions_num": 5,
+          "selected": false,
+          "source": "https://www.youtube.com/embed/5Y6e_T0ySmE?autoplay=1",
+          "type": "video",
+          "updated_time": "2017-03-08T23:05:38+0000",
+        },
+        Object {
+          "added_by": "Joanna Kozieńska",
+          "added_time": "2017-03-07T23:00:00.000Z",
+          "created_time": "2017-03-07T23:07:03+0000",
+          "from_user": "Joanna Kozieńska",
+          "full_picture": "https://external.xx.fbcdn.net/safe_image.php?d=AQCimze9kDlMKVl1&w=720&h=720&url=https%3A%2F%2Fi.ytimg.com%2Fvi%2FLuxpfnnsdX4%2Fmaxresdefault.jpg&cfs=1&_nc_hash=AQC7M9AEfyBbtF3g",
+          "id": 5,
+          "likes_num": 8,
+          "link": Object {
+            "name": "Chet Faker - 1998 ft Banks",
+            "title": "Chet Faker - 1998 ft Banks",
+            "type": "video_share_youtube",
+            "url": "https://youtu.be/LuxpfnnsdX4",
+          },
+          "message": "Jedna ode mnie, bo już wieki nie miałam okazji ;) 
+      
+      ",
+          "reactions_num": 9,
+          "selected": false,
+          "source": "https://www.youtube.com/embed/LuxpfnnsdX4?autoplay=1",
+          "type": "video",
+          "updated_time": "2017-03-08T21:36:01+0000",
+        },
+        Object {
+          "created_time": "2016-08-30T14:20:21+0000",
+          "from_user": "Paulina Górka",
+          "full_picture": "https://external.xx.fbcdn.net/safe_image.php?d=AQBiF2VBQG2WfPvh&w=720&h=720&url=https%3A%2F%2Fi.ytimg.com%2Fvi%2FEkeZKFa65zs%2Fmaxresdefault.jpg&cfs=1&_nc_hash=AQBYNj773CB4DtVR",
+          "id": 96,
+          "likes_num": 19,
+          "link": Object {
+            "name": "James Hersey - Miss You (Official Audio)",
+            "title": "James Hersey - Miss You (Official Audio)",
+            "type": "video_share_youtube",
+            "url": "https://www.youtube.com/watch?v=EkeZKFa65zs",
+          },
+          "message": "warte lajków, jak nie to zwątpię :P
+      ",
+          "reactions_num": 19,
+          "selected": false,
+          "source": "https://www.youtube.com/embed/EkeZKFa65zs?autoplay=1",
+          "type": "video",
+          "updated_time": "2017-02-07T10:56:40+0000",
+        },
+      ]
+    }
+    defaultFilterMethod={[Function]}
+    defaultFiltering={Array []}
+    defaultPageSize={20}
+    defaultResizing={Array []}
+    defaultSorting={Array []}
+    expanderColumnWidth={35}
+    freezeWhenExpanded={false}
+    getLoadingProps={[Function]}
+    getNoDataProps={[Function]}
+    getPaginationProps={[Function]}
+    getProps={[Function]}
+    getResizerProps={[Function]}
+    getTableProps={[Function]}
+    getTbodyProps={[Function]}
+    getTdProps={[Function]}
+    getTfootProps={[Function]}
+    getTfootTdProps={[Function]}
+    getTfootTrProps={[Function]}
+    getTheadFilterProps={[Function]}
+    getTheadFilterThProps={[Function]}
+    getTheadFilterTrProps={[Function]}
+    getTheadGroupProps={[Function]}
+    getTheadGroupThProps={[Function]}
+    getTheadGroupTrProps={[Function]}
+    getTheadProps={[Function]}
+    getTheadThProps={[Function]}
+    getTheadTrProps={[Function]}
+    getTrGroupProps={[Function]}
+    getTrProps={[Function]}
+    loading={false}
+    loadingText="Loading..."
+    minRows={10}
+    nextText="Next"
+    noDataText={
+      <span>
+        Hi, undefined please click 
+        <strong
+          style={
+            Object {
+              "color": "blue",
+            }
+          }
+        >
+          Update
+        </strong>
+         to start.
+      </span>
+    }
+    ofText="of"
+    onChange={[Function]}
+    pageSizeOptions={
+      Array [
+        20,
+        50,
+        100,
+      ]
+    }
+    pageText="Page"
+    pivotColumnWidth={200}
+    pivotIDKey="_pivotID"
+    pivotValKey="_pivotVal"
+    previousText="Previous"
+    resizable={true}
+    rowsText="rows"
+    showFilters={false}
+    showPageJump={true}
+    showPageSizeOptions={true}
+    showPagination={true}
+    style={Object {}}
+    subRowsKey="_subRows"
+  >
+    <div
+      className="ReactTable -striped -highlight"
+      style={Object {}}
+    >
+      <Component
+        className=""
+      >
+        <div
+          className="rt-table"
+        >
+          <Component
+            className="-headerGroups"
+            style={
+              Object {
+                "minWidth": "1090px",
+              }
+            }
+          >
+            <div
+              className="rt-thead -headerGroups"
+              style={
+                Object {
+                  "minWidth": "1090px",
+                }
+              }
+            >
+              <Component>
+                <div
+                  className="rt-tr"
+                >
+                  <ThComponent
+                    className=""
+                    style={
+                      Object {
+                        "flex": "790 0 auto",
+                        "maxWidth": "1390px",
+                        "width": "1090px",
+                      }
+                    }
+                  >
+                    <div
+                      className="rt-th"
+                      onClick={[Function]}
+                      style={
+                        Object {
+                          "flex": "790 0 auto",
+                          "maxWidth": "1390px",
+                          "width": "1090px",
+                        }
+                      }
+                    >
+                      <h3
+                        id="chart_table"
+                      >
+                        WCS Chart 
+                        <small>
+                          total 7
+                        </small>
+                      </h3>
+                    </div>
+                  </ThComponent>
+                </div>
+              </Component>
+            </div>
+          </Component>
+          <Component
+            className="-header"
+            style={
+              Object {
+                "minWidth": "1090px",
+              }
+            }
+          >
+            <div
+              className="rt-thead -header"
+              style={
+                Object {
+                  "minWidth": "1090px",
+                }
+              }
+            >
+              <Component>
+                <div
+                  className="rt-tr"
+                >
+                  <ThComponent
+                    className=" rt-resizable-header"
+                    style={
+                      Object {
+                        "flex": "30 0 auto",
+                        "maxWidth": "60px",
+                        "width": "30px",
+                      }
+                    }
+                    toggleSort={[Function]}
+                  >
+                    <div
+                      className=" rt-resizable-header rt-th"
+                      onClick={[Function]}
+                      style={
+                        Object {
+                          "flex": "30 0 auto",
+                          "maxWidth": "60px",
+                          "width": "30px",
+                        }
+                      }
+                    >
+                      <div
+                        className="rt-resizable-header-content"
+                      >
+                        <Checkbox
+                          bsClass="checkbox1"
+                          disabled={false}
+                          inline={false}
+                          onClick={[Function]}
+                        >
+                          <div
+                            className="checkbox1"
+                          >
+                            <label>
+                              <input
+                                disabled={false}
+                                onClick={[Function]}
+                                type="checkbox"
+                              />
+                            </label>
+                          </div>
+                        </Checkbox>
+                      </div>
+                      <Component
+                        onMouseDown={[Function]}
+                        onTouchStart={[Function]}
+                      >
+                        <div
+                          className="rt-resizer"
+                          onMouseDown={[Function]}
+                          onTouchStart={[Function]}
+                        />
+                      </Component>
+                    </div>
+                  </ThComponent>
+                  <ThComponent
+                    className=" rt-resizable-header -cursor-pointer"
+                    style={
+                      Object {
+                        "flex": "200 0 auto",
+                        "maxWidth": "300px",
+                        "width": "200px",
+                      }
+                    }
+                    toggleSort={[Function]}
+                  >
+                    <div
+                      className=" rt-resizable-header -cursor-pointer rt-th"
+                      onClick={[Function]}
+                      style={
+                        Object {
+                          "flex": "200 0 auto",
+                          "maxWidth": "300px",
+                          "width": "200px",
+                        }
+                      }
+                    >
+                      <div
+                        className="rt-resizable-header-content"
+                      >
+                        user
+                      </div>
+                      <Component
+                        onMouseDown={[Function]}
+                        onTouchStart={[Function]}
+                      >
+                        <div
+                          className="rt-resizer"
+                          onMouseDown={[Function]}
+                          onTouchStart={[Function]}
+                        />
+                      </Component>
+                    </div>
+                  </ThComponent>
+                  <ThComponent
+                    className=" rt-resizable-header -cursor-pointer"
+                    style={
+                      Object {
+                        "flex": "100 0 auto",
+                        "maxWidth": "80px",
+                        "width": "100px",
+                      }
+                    }
+                    toggleSort={[Function]}
+                  >
+                    <div
+                      className=" rt-resizable-header -cursor-pointer rt-th"
+                      onClick={[Function]}
+                      style={
+                        Object {
+                          "flex": "100 0 auto",
+                          "maxWidth": "80px",
+                          "width": "100px",
+                        }
+                      }
+                    >
+                      <div
+                        className="rt-resizable-header-content"
+                      >
+                        fb msg
+                      </div>
+                      <Component
+                        onMouseDown={[Function]}
+                        onTouchStart={[Function]}
+                      >
+                        <div
+                          className="rt-resizer"
+                          onMouseDown={[Function]}
+                          onTouchStart={[Function]}
+                        />
+                      </Component>
+                    </div>
+                  </ThComponent>
+                  <ThComponent
+                    className=" rt-resizable-header -cursor-pointer"
+                    style={
+                      Object {
+                        "flex": "60 0 auto",
+                        "maxWidth": "100px",
+                        "width": "60px",
+                      }
+                    }
+                    toggleSort={[Function]}
+                  >
+                    <div
+                      className=" rt-resizable-header -cursor-pointer rt-th"
+                      onClick={[Function]}
+                      style={
+                        Object {
+                          "flex": "60 0 auto",
+                          "maxWidth": "100px",
+                          "width": "60px",
+                        }
+                      }
+                    >
+                      <div
+                        className="rt-resizable-header-content"
+                      >
+                        reactions count
+                      </div>
+                      <Component
+                        onMouseDown={[Function]}
+                        onTouchStart={[Function]}
+                      >
+                        <div
+                          className="rt-resizer"
+                          onMouseDown={[Function]}
+                          onTouchStart={[Function]}
+                        />
+                      </Component>
+                    </div>
+                  </ThComponent>
+                  <ThComponent
+                    className=" rt-resizable-header -cursor-pointer"
+                    style={
+                      Object {
+                        "flex": "150 0 auto",
+                        "maxWidth": "200px",
+                        "width": "150px",
+                      }
+                    }
+                    toggleSort={[Function]}
+                  >
+                    <div
+                      className=" rt-resizable-header -cursor-pointer rt-th"
+                      onClick={[Function]}
+                      style={
+                        Object {
+                          "flex": "150 0 auto",
+                          "maxWidth": "200px",
+                          "width": "150px",
+                        }
+                      }
+                    >
+                      <div
+                        className="rt-resizable-header-content"
+                      >
+                        crated time
+                      </div>
+                      <Component
+                        onMouseDown={[Function]}
+                        onTouchStart={[Function]}
+                      >
+                        <div
+                          className="rt-resizer"
+                          onMouseDown={[Function]}
+                          onTouchStart={[Function]}
+                        />
+                      </Component>
+                    </div>
+                  </ThComponent>
+                  <ThComponent
+                    className=" rt-resizable-header -cursor-pointer"
+                    style={
+                      Object {
+                        "flex": "100 0 auto",
+                        "maxWidth": "150px",
+                        "width": "100px",
+                      }
+                    }
+                    toggleSort={[Function]}
+                  >
+                    <div
+                      className=" rt-resizable-header -cursor-pointer rt-th"
+                      onClick={[Function]}
+                      style={
+                        Object {
+                          "flex": "100 0 auto",
+                          "maxWidth": "150px",
+                          "width": "100px",
+                        }
+                      }
+                    >
+                      <div
+                        className="rt-resizable-header-content"
+                      >
+                        added time
+                      </div>
+                      <Component
+                        onMouseDown={[Function]}
+                        onTouchStart={[Function]}
+                      >
+                        <div
+                          className="rt-resizer"
+                          onMouseDown={[Function]}
+                          onTouchStart={[Function]}
+                        />
+                      </Component>
+                    </div>
+                  </ThComponent>
+                  <ThComponent
+                    className=" rt-resizable-header -cursor-pointer"
+                    style={
+                      Object {
+                        "flex": "150 0 auto",
+                        "maxWidth": "200px",
+                        "width": "150px",
+                      }
+                    }
+                    toggleSort={[Function]}
+                  >
+                    <div
+                      className=" rt-resizable-header -cursor-pointer rt-th"
+                      onClick={[Function]}
+                      style={
+                        Object {
+                          "flex": "150 0 auto",
+                          "maxWidth": "200px",
+                          "width": "150px",
+                        }
+                      }
+                    >
+                      <div
+                        className="rt-resizable-header-content"
+                      >
+                        last update
+                      </div>
+                      <Component
+                        onMouseDown={[Function]}
+                        onTouchStart={[Function]}
+                      >
+                        <div
+                          className="rt-resizer"
+                          onMouseDown={[Function]}
+                          onTouchStart={[Function]}
+                        />
+                      </Component>
+                    </div>
+                  </ThComponent>
+                  <ThComponent
+                    className=" rt-resizable-header -cursor-pointer"
+                    style={
+                      Object {
+                        "flex": "300 0 auto",
+                        "maxWidth": "300px",
+                        "width": "300px",
+                      }
+                    }
+                    toggleSort={[Function]}
+                  >
+                    <div
+                      className=" rt-resizable-header -cursor-pointer rt-th"
+                      onClick={[Function]}
+                      style={
+                        Object {
+                          "flex": "300 0 auto",
+                          "maxWidth": "300px",
+                          "width": "300px",
+                        }
+                      }
+                    >
+                      <div
+                        className="rt-resizable-header-content"
+                      >
+                        <span>
+                          link
+                        </span>
+                      </div>
+                      <Component
+                        onMouseDown={[Function]}
+                        onTouchStart={[Function]}
+                      >
+                        <div
+                          className="rt-resizer"
+                          onMouseDown={[Function]}
+                          onTouchStart={[Function]}
+                        />
+                      </Component>
+                    </div>
+                  </ThComponent>
+                </div>
+              </Component>
+            </div>
+          </Component>
+          <Component
+            className=""
+            style={
+              Object {
+                "minWidth": "1090px",
+              }
+            }
+          >
+            <div
+              className="rt-tbody"
+              style={
+                Object {
+                  "minWidth": "1090px",
+                }
+              }
+            >
+              <Component>
+                <div
+                  className="rt-tr-group"
+                >
+                  <Component
+                    className="-odd"
+                  >
+                    <div
+                      className="rt-tr -odd"
+                    >
+                      <Component
+                        className=""
+                        style={
+                          Object {
+                            "flex": "30 0 auto",
+                            "maxWidth": "60px",
+                            "width": "30px",
+                          }
+                        }
+                      >
+                        <div
+                          className="rt-td"
+                          style={
+                            Object {
+                              "flex": "30 0 auto",
+                              "maxWidth": "60px",
+                              "width": "30px",
+                            }
+                          }
+                        >
+                          <Checkbox
+                            bsClass="checkbox1"
+                            checked={false}
+                            disabled={false}
+                            id={0}
+                            inline={false}
+                            name="selected"
+                            onChange={[Function]}
+                          >
+                            <div
+                              className="checkbox1"
+                            >
+                              <label>
+                                <input
+                                  checked={false}
+                                  disabled={false}
+                                  id={0}
+                                  name="selected"
+                                  onChange={[Function]}
+                                  type="checkbox"
+                                />
+                              </label>
+                            </div>
+                          </Checkbox>
+                        </div>
+                      </Component>
+                      <Component
+                        className=""
+                        style={
+                          Object {
+                            "flex": "200 0 auto",
+                            "maxWidth": "300px",
+                            "width": "200px",
+                          }
+                        }
+                      >
+                        <div
+                          className="rt-td"
+                          style={
+                            Object {
+                              "flex": "200 0 auto",
+                              "maxWidth": "300px",
+                              "width": "200px",
+                            }
+                          }
+                        >
+                          <span>
+                            Anna Stanuchowska
+                          </span>
+                        </div>
+                      </Component>
+                      <Component
+                        className=""
+                        style={
+                          Object {
+                            "flex": "100 0 auto",
+                            "maxWidth": "80px",
+                            "width": "100px",
+                          }
+                        }
+                      >
+                        <div
+                          className="rt-td"
+                          style={
+                            Object {
+                              "flex": "100 0 auto",
+                              "maxWidth": "80px",
+                              "width": "100px",
+                            }
+                          }
+                        >
+                          <OverlayTrigger
+                            defaultOverlayShown={false}
+                            overlay={
+                              <Tooltip
+                                bsClass="tooltip"
+                                id="tooltip"
+                                placement="right"
+                              >
+                                Nie wiem, czy to by się nadawało, ale uwielbiam tą nutę &lt;3 
+                              </Tooltip>
+                            }
+                            placement="bottom"
+                            trigger={
+                              Array [
+                                "hover",
+                                "focus",
+                              ]
+                            }
+                          >
+                            <Label
+                              bsClass="label"
+                              bsStyle="success"
+                              onBlur={[Function]}
+                              onClick={null}
+                              onFocus={[Function]}
+                              onMouseOut={[Function]}
+                              onMouseOver={[Function]}
+                            >
+                              <span
+                                className="label label-success"
+                                onBlur={[Function]}
+                                onClick={null}
+                                onFocus={[Function]}
+                                onMouseOut={[Function]}
+                                onMouseOver={[Function]}
+                              >
+                                (...msg...)
+                              </span>
+                            </Label>
+                          </OverlayTrigger>
+                        </div>
+                      </Component>
+                      <Component
+                        className=""
+                        style={
+                          Object {
+                            "flex": "60 0 auto",
+                            "maxWidth": "100px",
+                            "width": "60px",
+                          }
+                        }
+                      >
+                        <div
+                          className="rt-td"
+                          style={
+                            Object {
+                              "flex": "60 0 auto",
+                              "maxWidth": "100px",
+                              "width": "60px",
+                            }
+                          }
+                        >
+                          0
+                        </div>
+                      </Component>
+                      <Component
+                        className=""
+                        style={
+                          Object {
+                            "flex": "150 0 auto",
+                            "maxWidth": "200px",
+                            "width": "150px",
+                          }
+                        }
+                      >
+                        <div
+                          className="rt-td"
+                          style={
+                            Object {
+                              "flex": "150 0 auto",
+                              "maxWidth": "200px",
+                              "width": "150px",
+                            }
+                          }
+                        >
+                          <span>
+                            3/1/2017, 8:36:39 PM
+                          </span>
+                        </div>
+                      </Component>
+                      <Component
+                        className=""
+                        style={
+                          Object {
+                            "flex": "100 0 auto",
+                            "maxWidth": "150px",
+                            "width": "100px",
+                          }
+                        }
+                      >
+                        <div
+                          className="rt-td"
+                          style={
+                            Object {
+                              "flex": "100 0 auto",
+                              "maxWidth": "150px",
+                              "width": "100px",
+                            }
+                          }
+                        >
+                          <OverlayTrigger
+                            defaultOverlayShown={false}
+                            overlay={
+                              <Tooltip
+                                bsClass="tooltip"
+                                id="tooltip"
+                                placement="right"
+                              >
+                                Joanna Kozieńska
+                              </Tooltip>
+                            }
+                            placement="top"
+                            trigger={
+                              Array [
+                                "hover",
+                                "focus",
+                              ]
+                            }
+                          >
+                            <span
+                              onBlur={[Function]}
+                              onClick={null}
+                              onFocus={[Function]}
+                              onMouseOut={[Function]}
+                              onMouseOver={[Function]}
+                            >
+                              03/8/2017
+                            </span>
+                          </OverlayTrigger>
+                        </div>
+                      </Component>
+                      <Component
+                        className=""
+                        style={
+                          Object {
+                            "flex": "150 0 auto",
+                            "maxWidth": "200px",
+                            "width": "150px",
+                          }
+                        }
+                      >
+                        <div
+                          className="rt-td"
+                          style={
+                            Object {
+                              "flex": "150 0 auto",
+                              "maxWidth": "200px",
+                              "width": "150px",
+                            }
+                          }
+                        >
+                          <span>
+                            3/9/2017, 10:46:45 PM
+                          </span>
+                        </div>
+                      </Component>
+                      <Component
+                        className=""
+                        style={
+                          Object {
+                            "flex": "300 0 auto",
+                            "maxWidth": "300px",
+                            "width": "300px",
+                          }
+                        }
+                      >
+                        <div
+                          className="rt-td"
+                          style={
+                            Object {
+                              "flex": "300 0 auto",
+                              "maxWidth": "300px",
+                              "width": "300px",
+                            }
+                          }
+                        >
+                          <a
+                            href="https://www.youtube.com/watch?v=eBlFp2__XtM"
+                            target="_newtab"
+                          >
+                            X Ambassadors - Unsteady (Erich Lee Gravity Remix)
+                          </a>
+                        </div>
+                      </Component>
+                    </div>
+                  </Component>
+                </div>
+              </Component>
+              <Component>
+                <div
+                  className="rt-tr-group"
+                >
+                  <Component
+                    className="-even"
+                  >
+                    <div
+                      className="rt-tr -even"
+                    >
+                      <Component
+                        className=""
+                        style={
+                          Object {
+                            "flex": "30 0 auto",
+                            "maxWidth": "60px",
+                            "width": "30px",
+                          }
+                        }
+                      >
+                        <div
+                          className="rt-td"
+                          style={
+                            Object {
+                              "flex": "30 0 auto",
+                              "maxWidth": "60px",
+                              "width": "30px",
+                            }
+                          }
+                        >
+                          <Checkbox
+                            bsClass="checkbox1"
+                            checked={false}
+                            disabled={false}
+                            id={1}
+                            inline={false}
+                            name="selected"
+                            onChange={[Function]}
+                          >
+                            <div
+                              className="checkbox1"
+                            >
+                              <label>
+                                <input
+                                  checked={false}
+                                  disabled={false}
+                                  id={1}
+                                  name="selected"
+                                  onChange={[Function]}
+                                  type="checkbox"
+                                />
+                              </label>
+                            </div>
+                          </Checkbox>
+                        </div>
+                      </Component>
+                      <Component
+                        className=""
+                        style={
+                          Object {
+                            "flex": "200 0 auto",
+                            "maxWidth": "300px",
+                            "width": "200px",
+                          }
+                        }
+                      >
+                        <div
+                          className="rt-td"
+                          style={
+                            Object {
+                              "flex": "200 0 auto",
+                              "maxWidth": "300px",
+                              "width": "200px",
+                            }
+                          }
+                        >
+                          <span>
+                            Damian Gruszczyński
+                          </span>
+                        </div>
+                      </Component>
+                      <Component
+                        className=""
+                        style={
+                          Object {
+                            "flex": "100 0 auto",
+                            "maxWidth": "80px",
+                            "width": "100px",
+                          }
+                        }
+                      >
+                        <div
+                          className="rt-td"
+                          style={
+                            Object {
+                              "flex": "100 0 auto",
+                              "maxWidth": "80px",
+                              "width": "100px",
+                            }
+                          }
+                        >
+                          <OverlayTrigger
+                            defaultOverlayShown={false}
+                            overlay={
+                              <Tooltip
+                                bsClass="tooltip"
+                                id="tooltip"
+                                placement="right"
+                              >
+                                #całapłytawymiata
+                              </Tooltip>
+                            }
+                            placement="bottom"
+                            trigger={
+                              Array [
+                                "hover",
+                                "focus",
+                              ]
+                            }
+                          >
+                            <Label
+                              bsClass="label"
+                              bsStyle="success"
+                              onBlur={[Function]}
+                              onClick={null}
+                              onFocus={[Function]}
+                              onMouseOut={[Function]}
+                              onMouseOver={[Function]}
+                            >
+                              <span
+                                className="label label-success"
+                                onBlur={[Function]}
+                                onClick={null}
+                                onFocus={[Function]}
+                                onMouseOut={[Function]}
+                                onMouseOver={[Function]}
+                              >
+                                (...msg...)
+                              </span>
+                            </Label>
+                          </OverlayTrigger>
+                        </div>
+                      </Component>
+                      <Component
+                        className=""
+                        style={
+                          Object {
+                            "flex": "60 0 auto",
+                            "maxWidth": "100px",
+                            "width": "60px",
+                          }
+                        }
+                      >
+                        <div
+                          className="rt-td"
+                          style={
+                            Object {
+                              "flex": "60 0 auto",
+                              "maxWidth": "100px",
+                              "width": "60px",
+                            }
+                          }
+                        >
+                          5
+                        </div>
+                      </Component>
+                      <Component
+                        className=""
+                        style={
+                          Object {
+                            "flex": "150 0 auto",
+                            "maxWidth": "200px",
+                            "width": "150px",
+                          }
+                        }
+                      >
+                        <div
+                          className="rt-td"
+                          style={
+                            Object {
+                              "flex": "150 0 auto",
+                              "maxWidth": "200px",
+                              "width": "150px",
+                            }
+                          }
+                        >
+                          <span>
+                            3/3/2017, 7:28:55 AM
+                          </span>
+                        </div>
+                      </Component>
+                      <Component
+                        className=""
+                        style={
+                          Object {
+                            "flex": "100 0 auto",
+                            "maxWidth": "150px",
+                            "width": "100px",
+                          }
+                        }
+                      >
+                        <div
+                          className="rt-td"
+                          style={
+                            Object {
+                              "flex": "100 0 auto",
+                              "maxWidth": "150px",
+                              "width": "100px",
+                            }
+                          }
+                        >
+                          <OverlayTrigger
+                            defaultOverlayShown={false}
+                            overlay={
+                              <Tooltip
+                                bsClass="tooltip"
+                                id="tooltip"
+                                placement="right"
+                              >
+                                Joanna Kozieńska
+                              </Tooltip>
+                            }
+                            placement="top"
+                            trigger={
+                              Array [
+                                "hover",
+                                "focus",
+                              ]
+                            }
+                          >
+                            <span
+                              onBlur={[Function]}
+                              onClick={null}
+                              onFocus={[Function]}
+                              onMouseOut={[Function]}
+                              onMouseOver={[Function]}
+                            >
+                              03/9/2017
+                            </span>
+                          </OverlayTrigger>
+                        </div>
+                      </Component>
+                      <Component
+                        className=""
+                        style={
+                          Object {
+                            "flex": "150 0 auto",
+                            "maxWidth": "200px",
+                            "width": "150px",
+                          }
+                        }
+                      >
+                        <div
+                          className="rt-td"
+                          style={
+                            Object {
+                              "flex": "150 0 auto",
+                              "maxWidth": "200px",
+                              "width": "150px",
+                            }
+                          }
+                        >
+                          <span>
+                            3/9/2017, 9:01:48 AM
+                          </span>
+                        </div>
+                      </Component>
+                      <Component
+                        className=""
+                        style={
+                          Object {
+                            "flex": "300 0 auto",
+                            "maxWidth": "300px",
+                            "width": "300px",
+                          }
+                        }
+                      >
+                        <div
+                          className="rt-td"
+                          style={
+                            Object {
+                              "flex": "300 0 auto",
+                              "maxWidth": "300px",
+                              "width": "300px",
+                            }
+                          }
+                        >
+                          <span>
+                            Barcelona, a song by Ed Sheeran on Spotify
+                          </span>
+                        </div>
+                      </Component>
+                    </div>
+                  </Component>
+                </div>
+              </Component>
+              <Component>
+                <div
+                  className="rt-tr-group"
+                >
+                  <Component
+                    className="-odd"
+                  >
+                    <div
+                      className="rt-tr -odd"
+                    >
+                      <Component
+                        className=""
+                        style={
+                          Object {
+                            "flex": "30 0 auto",
+                            "maxWidth": "60px",
+                            "width": "30px",
+                          }
+                        }
+                      >
+                        <div
+                          className="rt-td"
+                          style={
+                            Object {
+                              "flex": "30 0 auto",
+                              "maxWidth": "60px",
+                              "width": "30px",
+                            }
+                          }
+                        >
+                          <Checkbox
+                            bsClass="checkbox1"
+                            checked={false}
+                            disabled={false}
+                            id={2}
+                            inline={false}
+                            name="selected"
+                            onChange={[Function]}
+                          >
+                            <div
+                              className="checkbox1"
+                            >
+                              <label>
+                                <input
+                                  checked={false}
+                                  disabled={false}
+                                  id={2}
+                                  name="selected"
+                                  onChange={[Function]}
+                                  type="checkbox"
+                                />
+                              </label>
+                            </div>
+                          </Checkbox>
+                        </div>
+                      </Component>
+                      <Component
+                        className=""
+                        style={
+                          Object {
+                            "flex": "200 0 auto",
+                            "maxWidth": "300px",
+                            "width": "200px",
+                          }
+                        }
+                      >
+                        <div
+                          className="rt-td"
+                          style={
+                            Object {
+                              "flex": "200 0 auto",
+                              "maxWidth": "300px",
+                              "width": "200px",
+                            }
+                          }
+                        >
+                          <span>
+                            Damian Gruszczyński
+                          </span>
+                        </div>
+                      </Component>
+                      <Component
+                        className=""
+                        style={
+                          Object {
+                            "flex": "100 0 auto",
+                            "maxWidth": "80px",
+                            "width": "100px",
+                          }
+                        }
+                      >
+                        <div
+                          className="rt-td"
+                          style={
+                            Object {
+                              "flex": "100 0 auto",
+                              "maxWidth": "80px",
+                              "width": "100px",
+                            }
+                          }
+                        >
+                          <OverlayTrigger
+                            defaultOverlayShown={false}
+                            overlay={
+                              <Tooltip
+                                bsClass="tooltip"
+                                id="tooltip"
+                                placement="right"
+                              >
+                                Ed! :-D
+                              </Tooltip>
+                            }
+                            placement="bottom"
+                            trigger={
+                              Array [
+                                "hover",
+                                "focus",
+                              ]
+                            }
+                          >
+                            <Label
+                              bsClass="label"
+                              bsStyle="success"
+                              onBlur={[Function]}
+                              onClick={null}
+                              onFocus={[Function]}
+                              onMouseOut={[Function]}
+                              onMouseOver={[Function]}
+                            >
+                              <span
+                                className="label label-success"
+                                onBlur={[Function]}
+                                onClick={null}
+                                onFocus={[Function]}
+                                onMouseOut={[Function]}
+                                onMouseOver={[Function]}
+                              >
+                                (...msg...)
+                              </span>
+                            </Label>
+                          </OverlayTrigger>
+                        </div>
+                      </Component>
+                      <Component
+                        className=""
+                        style={
+                          Object {
+                            "flex": "60 0 auto",
+                            "maxWidth": "100px",
+                            "width": "60px",
+                          }
+                        }
+                      >
+                        <div
+                          className="rt-td"
+                          style={
+                            Object {
+                              "flex": "60 0 auto",
+                              "maxWidth": "100px",
+                              "width": "60px",
+                            }
+                          }
+                        >
+                          6
+                        </div>
+                      </Component>
+                      <Component
+                        className=""
+                        style={
+                          Object {
+                            "flex": "150 0 auto",
+                            "maxWidth": "200px",
+                            "width": "150px",
+                          }
+                        }
+                      >
+                        <div
+                          className="rt-td"
+                          style={
+                            Object {
+                              "flex": "150 0 auto",
+                              "maxWidth": "200px",
+                              "width": "150px",
+                            }
+                          }
+                        >
+                          <span>
+                            3/3/2017, 7:24:25 AM
+                          </span>
+                        </div>
+                      </Component>
+                      <Component
+                        className=""
+                        style={
+                          Object {
+                            "flex": "100 0 auto",
+                            "maxWidth": "150px",
+                            "width": "100px",
+                          }
+                        }
+                      >
+                        <div
+                          className="rt-td"
+                          style={
+                            Object {
+                              "flex": "100 0 auto",
+                              "maxWidth": "150px",
+                              "width": "100px",
+                            }
+                          }
+                        >
+                          <OverlayTrigger
+                            defaultOverlayShown={false}
+                            overlay={
+                              <Tooltip
+                                bsClass="tooltip"
+                                id="tooltip"
+                                placement="right"
+                              >
+                                Joanna Kozieńska
+                              </Tooltip>
+                            }
+                            placement="top"
+                            trigger={
+                              Array [
+                                "hover",
+                                "focus",
+                              ]
+                            }
+                          >
+                            <span
+                              onBlur={[Function]}
+                              onClick={null}
+                              onFocus={[Function]}
+                              onMouseOut={[Function]}
+                              onMouseOver={[Function]}
+                            >
+                              03/9/2017
+                            </span>
+                          </OverlayTrigger>
+                        </div>
+                      </Component>
+                      <Component
+                        className=""
+                        style={
+                          Object {
+                            "flex": "150 0 auto",
+                            "maxWidth": "200px",
+                            "width": "150px",
+                          }
+                        }
+                      >
+                        <div
+                          className="rt-td"
+                          style={
+                            Object {
+                              "flex": "150 0 auto",
+                              "maxWidth": "200px",
+                              "width": "150px",
+                            }
+                          }
+                        >
+                          <span>
+                            3/9/2017, 12:17:00 AM
+                          </span>
+                        </div>
+                      </Component>
+                      <Component
+                        className=""
+                        style={
+                          Object {
+                            "flex": "300 0 auto",
+                            "maxWidth": "300px",
+                            "width": "300px",
+                          }
+                        }
+                      >
+                        <div
+                          className="rt-td"
+                          style={
+                            Object {
+                              "flex": "300 0 auto",
+                              "maxWidth": "300px",
+                              "width": "300px",
+                            }
+                          }
+                        >
+                          <span>
+                            Galway Girl, a song by Ed Sheeran on Spotify
+                          </span>
+                        </div>
+                      </Component>
+                    </div>
+                  </Component>
+                </div>
+              </Component>
+              <Component>
+                <div
+                  className="rt-tr-group"
+                >
+                  <Component
+                    className="-even"
+                  >
+                    <div
+                      className="rt-tr -even"
+                    >
+                      <Component
+                        className=""
+                        style={
+                          Object {
+                            "flex": "30 0 auto",
+                            "maxWidth": "60px",
+                            "width": "30px",
+                          }
+                        }
+                      >
+                        <div
+                          className="rt-td"
+                          style={
+                            Object {
+                              "flex": "30 0 auto",
+                              "maxWidth": "60px",
+                              "width": "30px",
+                            }
+                          }
+                        >
+                          <Checkbox
+                            bsClass="checkbox1"
+                            checked={false}
+                            disabled={false}
+                            id={3}
+                            inline={false}
+                            name="selected"
+                            onChange={[Function]}
+                          >
+                            <div
+                              className="checkbox1"
+                            >
+                              <label>
+                                <input
+                                  checked={false}
+                                  disabled={false}
+                                  id={3}
+                                  name="selected"
+                                  onChange={[Function]}
+                                  type="checkbox"
+                                />
+                              </label>
+                            </div>
+                          </Checkbox>
+                        </div>
+                      </Component>
+                      <Component
+                        className=""
+                        style={
+                          Object {
+                            "flex": "200 0 auto",
+                            "maxWidth": "300px",
+                            "width": "200px",
+                          }
+                        }
+                      >
+                        <div
+                          className="rt-td"
+                          style={
+                            Object {
+                              "flex": "200 0 auto",
+                              "maxWidth": "300px",
+                              "width": "200px",
+                            }
+                          }
+                        >
+                          <span>
+                            Damian Gruszczyński
+                          </span>
+                        </div>
+                      </Component>
+                      <Component
+                        className=""
+                        style={
+                          Object {
+                            "flex": "100 0 auto",
+                            "maxWidth": "80px",
+                            "width": "100px",
+                          }
+                        }
+                      >
+                        <div
+                          className="rt-td"
+                          style={
+                            Object {
+                              "flex": "100 0 auto",
+                              "maxWidth": "80px",
+                              "width": "100px",
+                            }
+                          }
+                        >
+                          <OverlayTrigger
+                            defaultOverlayShown={false}
+                            overlay={
+                              <Tooltip
+                                bsClass="tooltip"
+                                id="tooltip"
+                                placement="right"
+                              >
+                                #nigdydosyceda ;-)
+                              </Tooltip>
+                            }
+                            placement="bottom"
+                            trigger={
+                              Array [
+                                "hover",
+                                "focus",
+                              ]
+                            }
+                          >
+                            <Label
+                              bsClass="label"
+                              bsStyle="success"
+                              onBlur={[Function]}
+                              onClick={null}
+                              onFocus={[Function]}
+                              onMouseOut={[Function]}
+                              onMouseOver={[Function]}
+                            >
+                              <span
+                                className="label label-success"
+                                onBlur={[Function]}
+                                onClick={null}
+                                onFocus={[Function]}
+                                onMouseOut={[Function]}
+                                onMouseOver={[Function]}
+                              >
+                                (...msg...)
+                              </span>
+                            </Label>
+                          </OverlayTrigger>
+                        </div>
+                      </Component>
+                      <Component
+                        className=""
+                        style={
+                          Object {
+                            "flex": "60 0 auto",
+                            "maxWidth": "100px",
+                            "width": "60px",
+                          }
+                        }
+                      >
+                        <div
+                          className="rt-td"
+                          style={
+                            Object {
+                              "flex": "60 0 auto",
+                              "maxWidth": "100px",
+                              "width": "60px",
+                            }
+                          }
+                        >
+                          8
+                        </div>
+                      </Component>
+                      <Component
+                        className=""
+                        style={
+                          Object {
+                            "flex": "150 0 auto",
+                            "maxWidth": "200px",
+                            "width": "150px",
+                          }
+                        }
+                      >
+                        <div
+                          className="rt-td"
+                          style={
+                            Object {
+                              "flex": "150 0 auto",
+                              "maxWidth": "200px",
+                              "width": "150px",
+                            }
+                          }
+                        >
+                          <span>
+                            3/3/2017, 7:26:21 AM
+                          </span>
+                        </div>
+                      </Component>
+                      <Component
+                        className=""
+                        style={
+                          Object {
+                            "flex": "100 0 auto",
+                            "maxWidth": "150px",
+                            "width": "100px",
+                          }
+                        }
+                      >
+                        <div
+                          className="rt-td"
+                          style={
+                            Object {
+                              "flex": "100 0 auto",
+                              "maxWidth": "150px",
+                              "width": "100px",
+                            }
+                          }
+                        >
+                          <OverlayTrigger
+                            defaultOverlayShown={false}
+                            overlay={
+                              <Tooltip
+                                bsClass="tooltip"
+                                id="tooltip"
+                                placement="right"
+                              >
+                                Joanna Kozieńska
+                              </Tooltip>
+                            }
+                            placement="top"
+                            trigger={
+                              Array [
+                                "hover",
+                                "focus",
+                              ]
+                            }
+                          >
+                            <span
+                              onBlur={[Function]}
+                              onClick={null}
+                              onFocus={[Function]}
+                              onMouseOut={[Function]}
+                              onMouseOver={[Function]}
+                            >
+                              03/9/2017
+                            </span>
+                          </OverlayTrigger>
+                        </div>
+                      </Component>
+                      <Component
+                        className=""
+                        style={
+                          Object {
+                            "flex": "150 0 auto",
+                            "maxWidth": "200px",
+                            "width": "150px",
+                          }
+                        }
+                      >
+                        <div
+                          className="rt-td"
+                          style={
+                            Object {
+                              "flex": "150 0 auto",
+                              "maxWidth": "200px",
+                              "width": "150px",
+                            }
+                          }
+                        >
+                          <span>
+                            3/9/2017, 12:05:45 AM
+                          </span>
+                        </div>
+                      </Component>
+                      <Component
+                        className=""
+                        style={
+                          Object {
+                            "flex": "300 0 auto",
+                            "maxWidth": "300px",
+                            "width": "300px",
+                          }
+                        }
+                      >
+                        <div
+                          className="rt-td"
+                          style={
+                            Object {
+                              "flex": "300 0 auto",
+                              "maxWidth": "300px",
+                              "width": "300px",
+                            }
+                          }
+                        >
+                          <span>
+                            New Man, a song by Ed Sheeran on Spotify
+                          </span>
+                        </div>
+                      </Component>
+                    </div>
+                  </Component>
+                </div>
+              </Component>
+              <Component>
+                <div
+                  className="rt-tr-group"
+                >
+                  <Component
+                    className="-odd"
+                  >
+                    <div
+                      className="rt-tr -odd"
+                    >
+                      <Component
+                        className=""
+                        style={
+                          Object {
+                            "flex": "30 0 auto",
+                            "maxWidth": "60px",
+                            "width": "30px",
+                          }
+                        }
+                      >
+                        <div
+                          className="rt-td"
+                          style={
+                            Object {
+                              "flex": "30 0 auto",
+                              "maxWidth": "60px",
+                              "width": "30px",
+                            }
+                          }
+                        >
+                          <Checkbox
+                            bsClass="checkbox1"
+                            checked={false}
+                            disabled={false}
+                            id={4}
+                            inline={false}
+                            name="selected"
+                            onChange={[Function]}
+                          >
+                            <div
+                              className="checkbox1"
+                            >
+                              <label>
+                                <input
+                                  checked={false}
+                                  disabled={false}
+                                  id={4}
+                                  name="selected"
+                                  onChange={[Function]}
+                                  type="checkbox"
+                                />
+                              </label>
+                            </div>
+                          </Checkbox>
+                        </div>
+                      </Component>
+                      <Component
+                        className=""
+                        style={
+                          Object {
+                            "flex": "200 0 auto",
+                            "maxWidth": "300px",
+                            "width": "200px",
+                          }
+                        }
+                      >
+                        <div
+                          className="rt-td"
+                          style={
+                            Object {
+                              "flex": "200 0 auto",
+                              "maxWidth": "300px",
+                              "width": "200px",
+                            }
+                          }
+                        >
+                          <span>
+                            Mateusz Lech
+                          </span>
+                        </div>
+                      </Component>
+                      <Component
+                        className=""
+                        style={
+                          Object {
+                            "flex": "100 0 auto",
+                            "maxWidth": "80px",
+                            "width": "100px",
+                          }
+                        }
+                      >
+                        <div
+                          className="rt-td"
+                          style={
+                            Object {
+                              "flex": "100 0 auto",
+                              "maxWidth": "80px",
+                              "width": "100px",
+                            }
+                          }
+                        >
+                          <OverlayTrigger
+                            defaultOverlayShown={false}
+                            overlay={
+                              <Tooltip
+                                bsClass="tooltip"
+                                id="tooltip"
+                                placement="right"
+                              >
+                                Wydaje się całkiem skoczne ;)
+                                
+                                #95bpm
+                              </Tooltip>
+                            }
+                            placement="bottom"
+                            trigger={
+                              Array [
+                                "hover",
+                                "focus",
+                              ]
+                            }
+                          >
+                            <Label
+                              bsClass="label"
+                              bsStyle="success"
+                              onBlur={[Function]}
+                              onClick={null}
+                              onFocus={[Function]}
+                              onMouseOut={[Function]}
+                              onMouseOver={[Function]}
+                            >
+                              <span
+                                className="label label-success"
+                                onBlur={[Function]}
+                                onClick={null}
+                                onFocus={[Function]}
+                                onMouseOut={[Function]}
+                                onMouseOver={[Function]}
+                              >
+                                (...msg...)
+                              </span>
+                            </Label>
+                          </OverlayTrigger>
+                        </div>
+                      </Component>
+                      <Component
+                        className=""
+                        style={
+                          Object {
+                            "flex": "60 0 auto",
+                            "maxWidth": "100px",
+                            "width": "60px",
+                          }
+                        }
+                      >
+                        <div
+                          className="rt-td"
+                          style={
+                            Object {
+                              "flex": "60 0 auto",
+                              "maxWidth": "100px",
+                              "width": "60px",
+                            }
+                          }
+                        >
+                          5
+                        </div>
+                      </Component>
+                      <Component
+                        className=""
+                        style={
+                          Object {
+                            "flex": "150 0 auto",
+                            "maxWidth": "200px",
+                            "width": "150px",
+                          }
+                        }
+                      >
+                        <div
+                          className="rt-td"
+                          style={
+                            Object {
+                              "flex": "150 0 auto",
+                              "maxWidth": "200px",
+                              "width": "150px",
+                            }
+                          }
+                        >
+                          <span>
+                            3/3/2017, 9:10:48 PM
+                          </span>
+                        </div>
+                      </Component>
+                      <Component
+                        className=""
+                        style={
+                          Object {
+                            "flex": "100 0 auto",
+                            "maxWidth": "150px",
+                            "width": "100px",
+                          }
+                        }
+                      >
+                        <div
+                          className="rt-td"
+                          style={
+                            Object {
+                              "flex": "100 0 auto",
+                              "maxWidth": "150px",
+                              "width": "100px",
+                            }
+                          }
+                        >
+                          <OverlayTrigger
+                            defaultOverlayShown={false}
+                            overlay={
+                              <Tooltip
+                                bsClass="tooltip"
+                                id="tooltip"
+                                placement="right"
+                              >
+                                Joanna Kozieńska
+                              </Tooltip>
+                            }
+                            placement="top"
+                            trigger={
+                              Array [
+                                "hover",
+                                "focus",
+                              ]
+                            }
+                          >
+                            <span
+                              onBlur={[Function]}
+                              onClick={null}
+                              onFocus={[Function]}
+                              onMouseOut={[Function]}
+                              onMouseOver={[Function]}
+                            >
+                              03/9/2017
+                            </span>
+                          </OverlayTrigger>
+                        </div>
+                      </Component>
+                      <Component
+                        className=""
+                        style={
+                          Object {
+                            "flex": "150 0 auto",
+                            "maxWidth": "200px",
+                            "width": "150px",
+                          }
+                        }
+                      >
+                        <div
+                          className="rt-td"
+                          style={
+                            Object {
+                              "flex": "150 0 auto",
+                              "maxWidth": "200px",
+                              "width": "150px",
+                            }
+                          }
+                        >
+                          <span>
+                            3/9/2017, 12:05:38 AM
+                          </span>
+                        </div>
+                      </Component>
+                      <Component
+                        className=""
+                        style={
+                          Object {
+                            "flex": "300 0 auto",
+                            "maxWidth": "300px",
+                            "width": "300px",
+                          }
+                        }
+                      >
+                        <div
+                          className="rt-td"
+                          style={
+                            Object {
+                              "flex": "300 0 auto",
+                              "maxWidth": "300px",
+                              "width": "300px",
+                            }
+                          }
+                        >
+                          <a
+                            href="https://www.youtube.com/watch?v=5Y6e_T0ySmE"
+                            target="_newtab"
+                          >
+                            Vali - Ain't No Friend Of Mine (Official Video)
+                          </a>
+                        </div>
+                      </Component>
+                    </div>
+                  </Component>
+                </div>
+              </Component>
+              <Component>
+                <div
+                  className="rt-tr-group"
+                >
+                  <Component
+                    className="-even"
+                  >
+                    <div
+                      className="rt-tr -even"
+                    >
+                      <Component
+                        className=""
+                        style={
+                          Object {
+                            "flex": "30 0 auto",
+                            "maxWidth": "60px",
+                            "width": "30px",
+                          }
+                        }
+                      >
+                        <div
+                          className="rt-td"
+                          style={
+                            Object {
+                              "flex": "30 0 auto",
+                              "maxWidth": "60px",
+                              "width": "30px",
+                            }
+                          }
+                        >
+                          <Checkbox
+                            bsClass="checkbox1"
+                            checked={false}
+                            disabled={false}
+                            id={5}
+                            inline={false}
+                            name="selected"
+                            onChange={[Function]}
+                          >
+                            <div
+                              className="checkbox1"
+                            >
+                              <label>
+                                <input
+                                  checked={false}
+                                  disabled={false}
+                                  id={5}
+                                  name="selected"
+                                  onChange={[Function]}
+                                  type="checkbox"
+                                />
+                              </label>
+                            </div>
+                          </Checkbox>
+                        </div>
+                      </Component>
+                      <Component
+                        className=""
+                        style={
+                          Object {
+                            "flex": "200 0 auto",
+                            "maxWidth": "300px",
+                            "width": "200px",
+                          }
+                        }
+                      >
+                        <div
+                          className="rt-td"
+                          style={
+                            Object {
+                              "flex": "200 0 auto",
+                              "maxWidth": "300px",
+                              "width": "200px",
+                            }
+                          }
+                        >
+                          <span>
+                            Joanna Kozieńska
+                          </span>
+                        </div>
+                      </Component>
+                      <Component
+                        className=""
+                        style={
+                          Object {
+                            "flex": "100 0 auto",
+                            "maxWidth": "80px",
+                            "width": "100px",
+                          }
+                        }
+                      >
+                        <div
+                          className="rt-td"
+                          style={
+                            Object {
+                              "flex": "100 0 auto",
+                              "maxWidth": "80px",
+                              "width": "100px",
+                            }
+                          }
+                        >
+                          <OverlayTrigger
+                            defaultOverlayShown={false}
+                            overlay={
+                              <Tooltip
+                                bsClass="tooltip"
+                                id="tooltip"
+                                placement="right"
+                              >
+                                Jedna ode mnie, bo już wieki nie miałam okazji ;) 
+                                
+                                
+                              </Tooltip>
+                            }
+                            placement="bottom"
+                            trigger={
+                              Array [
+                                "hover",
+                                "focus",
+                              ]
+                            }
+                          >
+                            <Label
+                              bsClass="label"
+                              bsStyle="success"
+                              onBlur={[Function]}
+                              onClick={null}
+                              onFocus={[Function]}
+                              onMouseOut={[Function]}
+                              onMouseOver={[Function]}
+                            >
+                              <span
+                                className="label label-success"
+                                onBlur={[Function]}
+                                onClick={null}
+                                onFocus={[Function]}
+                                onMouseOut={[Function]}
+                                onMouseOver={[Function]}
+                              >
+                                (...msg...)
+                              </span>
+                            </Label>
+                          </OverlayTrigger>
+                        </div>
+                      </Component>
+                      <Component
+                        className=""
+                        style={
+                          Object {
+                            "flex": "60 0 auto",
+                            "maxWidth": "100px",
+                            "width": "60px",
+                          }
+                        }
+                      >
+                        <div
+                          className="rt-td"
+                          style={
+                            Object {
+                              "flex": "60 0 auto",
+                              "maxWidth": "100px",
+                              "width": "60px",
+                            }
+                          }
+                        >
+                          9
+                        </div>
+                      </Component>
+                      <Component
+                        className=""
+                        style={
+                          Object {
+                            "flex": "150 0 auto",
+                            "maxWidth": "200px",
+                            "width": "150px",
+                          }
+                        }
+                      >
+                        <div
+                          className="rt-td"
+                          style={
+                            Object {
+                              "flex": "150 0 auto",
+                              "maxWidth": "200px",
+                              "width": "150px",
+                            }
+                          }
+                        >
+                          <span>
+                            3/8/2017, 12:07:03 AM
+                          </span>
+                        </div>
+                      </Component>
+                      <Component
+                        className=""
+                        style={
+                          Object {
+                            "flex": "100 0 auto",
+                            "maxWidth": "150px",
+                            "width": "100px",
+                          }
+                        }
+                      >
+                        <div
+                          className="rt-td"
+                          style={
+                            Object {
+                              "flex": "100 0 auto",
+                              "maxWidth": "150px",
+                              "width": "100px",
+                            }
+                          }
+                        >
+                          <OverlayTrigger
+                            defaultOverlayShown={false}
+                            overlay={
+                              <Tooltip
+                                bsClass="tooltip"
+                                id="tooltip"
+                                placement="right"
+                              >
+                                Joanna Kozieńska
+                              </Tooltip>
+                            }
+                            placement="top"
+                            trigger={
+                              Array [
+                                "hover",
+                                "focus",
+                              ]
+                            }
+                          >
+                            <span
+                              onBlur={[Function]}
+                              onClick={null}
+                              onFocus={[Function]}
+                              onMouseOut={[Function]}
+                              onMouseOver={[Function]}
+                            >
+                              03/8/2017
+                            </span>
+                          </OverlayTrigger>
+                        </div>
+                      </Component>
+                      <Component
+                        className=""
+                        style={
+                          Object {
+                            "flex": "150 0 auto",
+                            "maxWidth": "200px",
+                            "width": "150px",
+                          }
+                        }
+                      >
+                        <div
+                          className="rt-td"
+                          style={
+                            Object {
+                              "flex": "150 0 auto",
+                              "maxWidth": "200px",
+                              "width": "150px",
+                            }
+                          }
+                        >
+                          <span>
+                            3/8/2017, 10:36:01 PM
+                          </span>
+                        </div>
+                      </Component>
+                      <Component
+                        className=""
+                        style={
+                          Object {
+                            "flex": "300 0 auto",
+                            "maxWidth": "300px",
+                            "width": "300px",
+                          }
+                        }
+                      >
+                        <div
+                          className="rt-td"
+                          style={
+                            Object {
+                              "flex": "300 0 auto",
+                              "maxWidth": "300px",
+                              "width": "300px",
+                            }
+                          }
+                        >
+                          <a
+                            href="https://youtu.be/LuxpfnnsdX4"
+                            target="_newtab"
+                          >
+                            Chet Faker - 1998 ft Banks
+                          </a>
+                        </div>
+                      </Component>
+                    </div>
+                  </Component>
+                </div>
+              </Component>
+              <Component>
+                <div
+                  className="rt-tr-group"
+                >
+                  <Component
+                    className="-odd"
+                  >
+                    <div
+                      className="rt-tr -odd"
+                    >
+                      <Component
+                        className=""
+                        style={
+                          Object {
+                            "flex": "30 0 auto",
+                            "maxWidth": "60px",
+                            "width": "30px",
+                          }
+                        }
+                      >
+                        <div
+                          className="rt-td"
+                          style={
+                            Object {
+                              "flex": "30 0 auto",
+                              "maxWidth": "60px",
+                              "width": "30px",
+                            }
+                          }
+                        >
+                          <Checkbox
+                            bsClass="checkbox1"
+                            checked={false}
+                            disabled={false}
+                            id={96}
+                            inline={false}
+                            name="selected"
+                            onChange={[Function]}
+                          >
+                            <div
+                              className="checkbox1"
+                            >
+                              <label>
+                                <input
+                                  checked={false}
+                                  disabled={false}
+                                  id={96}
+                                  name="selected"
+                                  onChange={[Function]}
+                                  type="checkbox"
+                                />
+                              </label>
+                            </div>
+                          </Checkbox>
+                        </div>
+                      </Component>
+                      <Component
+                        className=""
+                        style={
+                          Object {
+                            "flex": "200 0 auto",
+                            "maxWidth": "300px",
+                            "width": "200px",
+                          }
+                        }
+                      >
+                        <div
+                          className="rt-td"
+                          style={
+                            Object {
+                              "flex": "200 0 auto",
+                              "maxWidth": "300px",
+                              "width": "200px",
+                            }
+                          }
+                        >
+                          <span>
+                            Paulina Górka
+                          </span>
+                        </div>
+                      </Component>
+                      <Component
+                        className=""
+                        style={
+                          Object {
+                            "flex": "100 0 auto",
+                            "maxWidth": "80px",
+                            "width": "100px",
+                          }
+                        }
+                      >
+                        <div
+                          className="rt-td"
+                          style={
+                            Object {
+                              "flex": "100 0 auto",
+                              "maxWidth": "80px",
+                              "width": "100px",
+                            }
+                          }
+                        >
+                          <OverlayTrigger
+                            defaultOverlayShown={false}
+                            overlay={
+                              <Tooltip
+                                bsClass="tooltip"
+                                id="tooltip"
+                                placement="right"
+                              >
+                                warte lajków, jak nie to zwątpię :P
+                                
+                              </Tooltip>
+                            }
+                            placement="bottom"
+                            trigger={
+                              Array [
+                                "hover",
+                                "focus",
+                              ]
+                            }
+                          >
+                            <Label
+                              bsClass="label"
+                              bsStyle="success"
+                              onBlur={[Function]}
+                              onClick={null}
+                              onFocus={[Function]}
+                              onMouseOut={[Function]}
+                              onMouseOver={[Function]}
+                            >
+                              <span
+                                className="label label-success"
+                                onBlur={[Function]}
+                                onClick={null}
+                                onFocus={[Function]}
+                                onMouseOut={[Function]}
+                                onMouseOver={[Function]}
+                              >
+                                (...msg...)
+                              </span>
+                            </Label>
+                          </OverlayTrigger>
+                        </div>
+                      </Component>
+                      <Component
+                        className=""
+                        style={
+                          Object {
+                            "flex": "60 0 auto",
+                            "maxWidth": "100px",
+                            "width": "60px",
+                          }
+                        }
+                      >
+                        <div
+                          className="rt-td"
+                          style={
+                            Object {
+                              "flex": "60 0 auto",
+                              "maxWidth": "100px",
+                              "width": "60px",
+                            }
+                          }
+                        >
+                          19
+                        </div>
+                      </Component>
+                      <Component
+                        className=""
+                        style={
+                          Object {
+                            "flex": "150 0 auto",
+                            "maxWidth": "200px",
+                            "width": "150px",
+                          }
+                        }
+                      >
+                        <div
+                          className="rt-td"
+                          style={
+                            Object {
+                              "flex": "150 0 auto",
+                              "maxWidth": "200px",
+                              "width": "150px",
+                            }
+                          }
+                        >
+                          <span>
+                            8/30/2016, 4:20:21 PM
+                          </span>
+                        </div>
+                      </Component>
+                      <Component
+                        className=""
+                        style={
+                          Object {
+                            "flex": "100 0 auto",
+                            "maxWidth": "150px",
+                            "width": "100px",
+                          }
+                        }
+                      >
+                        <div
+                          className="rt-td"
+                          style={
+                            Object {
+                              "flex": "100 0 auto",
+                              "maxWidth": "150px",
+                              "width": "100px",
+                            }
+                          }
+                        >
+                          <i
+                            className="fa fa-minus-circle"
+                            style={
+                              Object {
+                                "color": "red",
+                              }
+                            }
+                          />
+                        </div>
+                      </Component>
+                      <Component
+                        className=""
+                        style={
+                          Object {
+                            "flex": "150 0 auto",
+                            "maxWidth": "200px",
+                            "width": "150px",
+                          }
+                        }
+                      >
+                        <div
+                          className="rt-td"
+                          style={
+                            Object {
+                              "flex": "150 0 auto",
+                              "maxWidth": "200px",
+                              "width": "150px",
+                            }
+                          }
+                        >
+                          <span>
+                            2/7/2017, 11:56:40 AM
+                          </span>
+                        </div>
+                      </Component>
+                      <Component
+                        className=""
+                        style={
+                          Object {
+                            "flex": "300 0 auto",
+                            "maxWidth": "300px",
+                            "width": "300px",
+                          }
+                        }
+                      >
+                        <div
+                          className="rt-td"
+                          style={
+                            Object {
+                              "flex": "300 0 auto",
+                              "maxWidth": "300px",
+                              "width": "300px",
+                            }
+                          }
+                        >
+                          <a
+                            href="https://www.youtube.com/watch?v=EkeZKFa65zs"
+                            target="_newtab"
+                          >
+                            James Hersey - Miss You (Official Audio)
+                          </a>
+                        </div>
+                      </Component>
+                    </div>
+                  </Component>
+                </div>
+              </Component>
+              <Component>
+                <div
+                  className="rt-tr-group"
+                >
+                  <Component
+                    className="-padRow"
+                    style={Object {}}
+                  >
+                    <div
+                      className="rt-tr -padRow"
+                      style={Object {}}
+                    >
+                      <Component
+                        className=""
+                        style={
+                          Object {
+                            "flex": "30 0 auto",
+                            "maxWidth": "60px",
+                            "width": "30px",
+                          }
+                        }
+                      >
+                        <div
+                          className="rt-td"
+                          style={
+                            Object {
+                              "flex": "30 0 auto",
+                              "maxWidth": "60px",
+                              "width": "30px",
+                            }
+                          }
+                        >
+                           
+                        </div>
+                      </Component>
+                      <Component
+                        className=""
+                        style={
+                          Object {
+                            "flex": "200 0 auto",
+                            "maxWidth": "300px",
+                            "width": "200px",
+                          }
+                        }
+                      >
+                        <div
+                          className="rt-td"
+                          style={
+                            Object {
+                              "flex": "200 0 auto",
+                              "maxWidth": "300px",
+                              "width": "200px",
+                            }
+                          }
+                        >
+                           
+                        </div>
+                      </Component>
+                      <Component
+                        className=""
+                        style={
+                          Object {
+                            "flex": "100 0 auto",
+                            "maxWidth": "80px",
+                            "width": "100px",
+                          }
+                        }
+                      >
+                        <div
+                          className="rt-td"
+                          style={
+                            Object {
+                              "flex": "100 0 auto",
+                              "maxWidth": "80px",
+                              "width": "100px",
+                            }
+                          }
+                        >
+                           
+                        </div>
+                      </Component>
+                      <Component
+                        className=""
+                        style={
+                          Object {
+                            "flex": "60 0 auto",
+                            "maxWidth": "100px",
+                            "width": "60px",
+                          }
+                        }
+                      >
+                        <div
+                          className="rt-td"
+                          style={
+                            Object {
+                              "flex": "60 0 auto",
+                              "maxWidth": "100px",
+                              "width": "60px",
+                            }
+                          }
+                        >
+                           
+                        </div>
+                      </Component>
+                      <Component
+                        className=""
+                        style={
+                          Object {
+                            "flex": "150 0 auto",
+                            "maxWidth": "200px",
+                            "width": "150px",
+                          }
+                        }
+                      >
+                        <div
+                          className="rt-td"
+                          style={
+                            Object {
+                              "flex": "150 0 auto",
+                              "maxWidth": "200px",
+                              "width": "150px",
+                            }
+                          }
+                        >
+                           
+                        </div>
+                      </Component>
+                      <Component
+                        className=""
+                        style={
+                          Object {
+                            "flex": "100 0 auto",
+                            "maxWidth": "150px",
+                            "width": "100px",
+                          }
+                        }
+                      >
+                        <div
+                          className="rt-td"
+                          style={
+                            Object {
+                              "flex": "100 0 auto",
+                              "maxWidth": "150px",
+                              "width": "100px",
+                            }
+                          }
+                        >
+                           
+                        </div>
+                      </Component>
+                      <Component
+                        className=""
+                        style={
+                          Object {
+                            "flex": "150 0 auto",
+                            "maxWidth": "200px",
+                            "width": "150px",
+                          }
+                        }
+                      >
+                        <div
+                          className="rt-td"
+                          style={
+                            Object {
+                              "flex": "150 0 auto",
+                              "maxWidth": "200px",
+                              "width": "150px",
+                            }
+                          }
+                        >
+                           
+                        </div>
+                      </Component>
+                      <Component
+                        className=""
+                        style={
+                          Object {
+                            "flex": "300 0 auto",
+                            "maxWidth": "300px",
+                            "width": "300px",
+                          }
+                        }
+                      >
+                        <div
+                          className="rt-td"
+                          style={
+                            Object {
+                              "flex": "300 0 auto",
+                              "maxWidth": "300px",
+                              "width": "300px",
+                            }
+                          }
+                        >
+                           
+                        </div>
+                      </Component>
+                    </div>
+                  </Component>
+                </div>
+              </Component>
+              <Component>
+                <div
+                  className="rt-tr-group"
+                >
+                  <Component
+                    className="-padRow"
+                    style={Object {}}
+                  >
+                    <div
+                      className="rt-tr -padRow"
+                      style={Object {}}
+                    >
+                      <Component
+                        className=""
+                        style={
+                          Object {
+                            "flex": "30 0 auto",
+                            "maxWidth": "60px",
+                            "width": "30px",
+                          }
+                        }
+                      >
+                        <div
+                          className="rt-td"
+                          style={
+                            Object {
+                              "flex": "30 0 auto",
+                              "maxWidth": "60px",
+                              "width": "30px",
+                            }
+                          }
+                        >
+                           
+                        </div>
+                      </Component>
+                      <Component
+                        className=""
+                        style={
+                          Object {
+                            "flex": "200 0 auto",
+                            "maxWidth": "300px",
+                            "width": "200px",
+                          }
+                        }
+                      >
+                        <div
+                          className="rt-td"
+                          style={
+                            Object {
+                              "flex": "200 0 auto",
+                              "maxWidth": "300px",
+                              "width": "200px",
+                            }
+                          }
+                        >
+                           
+                        </div>
+                      </Component>
+                      <Component
+                        className=""
+                        style={
+                          Object {
+                            "flex": "100 0 auto",
+                            "maxWidth": "80px",
+                            "width": "100px",
+                          }
+                        }
+                      >
+                        <div
+                          className="rt-td"
+                          style={
+                            Object {
+                              "flex": "100 0 auto",
+                              "maxWidth": "80px",
+                              "width": "100px",
+                            }
+                          }
+                        >
+                           
+                        </div>
+                      </Component>
+                      <Component
+                        className=""
+                        style={
+                          Object {
+                            "flex": "60 0 auto",
+                            "maxWidth": "100px",
+                            "width": "60px",
+                          }
+                        }
+                      >
+                        <div
+                          className="rt-td"
+                          style={
+                            Object {
+                              "flex": "60 0 auto",
+                              "maxWidth": "100px",
+                              "width": "60px",
+                            }
+                          }
+                        >
+                           
+                        </div>
+                      </Component>
+                      <Component
+                        className=""
+                        style={
+                          Object {
+                            "flex": "150 0 auto",
+                            "maxWidth": "200px",
+                            "width": "150px",
+                          }
+                        }
+                      >
+                        <div
+                          className="rt-td"
+                          style={
+                            Object {
+                              "flex": "150 0 auto",
+                              "maxWidth": "200px",
+                              "width": "150px",
+                            }
+                          }
+                        >
+                           
+                        </div>
+                      </Component>
+                      <Component
+                        className=""
+                        style={
+                          Object {
+                            "flex": "100 0 auto",
+                            "maxWidth": "150px",
+                            "width": "100px",
+                          }
+                        }
+                      >
+                        <div
+                          className="rt-td"
+                          style={
+                            Object {
+                              "flex": "100 0 auto",
+                              "maxWidth": "150px",
+                              "width": "100px",
+                            }
+                          }
+                        >
+                           
+                        </div>
+                      </Component>
+                      <Component
+                        className=""
+                        style={
+                          Object {
+                            "flex": "150 0 auto",
+                            "maxWidth": "200px",
+                            "width": "150px",
+                          }
+                        }
+                      >
+                        <div
+                          className="rt-td"
+                          style={
+                            Object {
+                              "flex": "150 0 auto",
+                              "maxWidth": "200px",
+                              "width": "150px",
+                            }
+                          }
+                        >
+                           
+                        </div>
+                      </Component>
+                      <Component
+                        className=""
+                        style={
+                          Object {
+                            "flex": "300 0 auto",
+                            "maxWidth": "300px",
+                            "width": "300px",
+                          }
+                        }
+                      >
+                        <div
+                          className="rt-td"
+                          style={
+                            Object {
+                              "flex": "300 0 auto",
+                              "maxWidth": "300px",
+                              "width": "300px",
+                            }
+                          }
+                        >
+                           
+                        </div>
+                      </Component>
+                    </div>
+                  </Component>
+                </div>
+              </Component>
+              <Component>
+                <div
+                  className="rt-tr-group"
+                >
+                  <Component
+                    className="-padRow"
+                    style={Object {}}
+                  >
+                    <div
+                      className="rt-tr -padRow"
+                      style={Object {}}
+                    >
+                      <Component
+                        className=""
+                        style={
+                          Object {
+                            "flex": "30 0 auto",
+                            "maxWidth": "60px",
+                            "width": "30px",
+                          }
+                        }
+                      >
+                        <div
+                          className="rt-td"
+                          style={
+                            Object {
+                              "flex": "30 0 auto",
+                              "maxWidth": "60px",
+                              "width": "30px",
+                            }
+                          }
+                        >
+                           
+                        </div>
+                      </Component>
+                      <Component
+                        className=""
+                        style={
+                          Object {
+                            "flex": "200 0 auto",
+                            "maxWidth": "300px",
+                            "width": "200px",
+                          }
+                        }
+                      >
+                        <div
+                          className="rt-td"
+                          style={
+                            Object {
+                              "flex": "200 0 auto",
+                              "maxWidth": "300px",
+                              "width": "200px",
+                            }
+                          }
+                        >
+                           
+                        </div>
+                      </Component>
+                      <Component
+                        className=""
+                        style={
+                          Object {
+                            "flex": "100 0 auto",
+                            "maxWidth": "80px",
+                            "width": "100px",
+                          }
+                        }
+                      >
+                        <div
+                          className="rt-td"
+                          style={
+                            Object {
+                              "flex": "100 0 auto",
+                              "maxWidth": "80px",
+                              "width": "100px",
+                            }
+                          }
+                        >
+                           
+                        </div>
+                      </Component>
+                      <Component
+                        className=""
+                        style={
+                          Object {
+                            "flex": "60 0 auto",
+                            "maxWidth": "100px",
+                            "width": "60px",
+                          }
+                        }
+                      >
+                        <div
+                          className="rt-td"
+                          style={
+                            Object {
+                              "flex": "60 0 auto",
+                              "maxWidth": "100px",
+                              "width": "60px",
+                            }
+                          }
+                        >
+                           
+                        </div>
+                      </Component>
+                      <Component
+                        className=""
+                        style={
+                          Object {
+                            "flex": "150 0 auto",
+                            "maxWidth": "200px",
+                            "width": "150px",
+                          }
+                        }
+                      >
+                        <div
+                          className="rt-td"
+                          style={
+                            Object {
+                              "flex": "150 0 auto",
+                              "maxWidth": "200px",
+                              "width": "150px",
+                            }
+                          }
+                        >
+                           
+                        </div>
+                      </Component>
+                      <Component
+                        className=""
+                        style={
+                          Object {
+                            "flex": "100 0 auto",
+                            "maxWidth": "150px",
+                            "width": "100px",
+                          }
+                        }
+                      >
+                        <div
+                          className="rt-td"
+                          style={
+                            Object {
+                              "flex": "100 0 auto",
+                              "maxWidth": "150px",
+                              "width": "100px",
+                            }
+                          }
+                        >
+                           
+                        </div>
+                      </Component>
+                      <Component
+                        className=""
+                        style={
+                          Object {
+                            "flex": "150 0 auto",
+                            "maxWidth": "200px",
+                            "width": "150px",
+                          }
+                        }
+                      >
+                        <div
+                          className="rt-td"
+                          style={
+                            Object {
+                              "flex": "150 0 auto",
+                              "maxWidth": "200px",
+                              "width": "150px",
+                            }
+                          }
+                        >
+                           
+                        </div>
+                      </Component>
+                      <Component
+                        className=""
+                        style={
+                          Object {
+                            "flex": "300 0 auto",
+                            "maxWidth": "300px",
+                            "width": "300px",
+                          }
+                        }
+                      >
+                        <div
+                          className="rt-td"
+                          style={
+                            Object {
+                              "flex": "300 0 auto",
+                              "maxWidth": "300px",
+                              "width": "300px",
+                            }
+                          }
+                        >
+                           
+                        </div>
+                      </Component>
+                    </div>
+                  </Component>
+                </div>
+              </Component>
+            </div>
+          </Component>
+        </div>
+      </Component>
+      <pagination
+        ExpanderComponent={[Function]}
+        LoadingComponent={[Function]}
+        NoDataComponent={[Function]}
+        PaginationComponent={[Function]}
+        ResizerComponent={[Function]}
+        TableComponent={[Function]}
+        TbodyComponent={[Function]}
+        TdComponent={[Function]}
+        TfootComponent={[Function]}
+        ThComponent={[Function]}
+        TheadComponent={[Function]}
+        TrComponent={[Function]}
+        TrGroupComponent={[Function]}
+        allDecoratedColumns={
+          Array [
+            Object {
+              "accessor": [Function],
+              "className": "",
+              "filterMethod": undefined,
+              "filterRender": [Function],
+              "footer": undefined,
+              "footerClassName": "",
+              "footerStyle": Object {},
+              "getFooterProps": [Function],
+              "getHeaderProps": [Function],
+              "getProps": [Function],
+              "header": [Function],
+              "headerClassName": "",
+              "headerStyle": Object {},
+              "hideFilter": false,
+              "id": "selected",
+              "maxWidth": 60,
+              "minWidth": 30,
+              "render": [Function],
+              "show": true,
+              "sortable": false,
+              "style": Object {},
+            },
+            Object {
+              "accessor": [Function],
+              "className": "",
+              "filterMethod": undefined,
+              "filterRender": [Function],
+              "footer": undefined,
+              "footerClassName": "",
+              "footerStyle": Object {},
+              "getFooterProps": [Function],
+              "getHeaderProps": [Function],
+              "getProps": [Function],
+              "header": "user",
+              "headerClassName": "",
+              "headerStyle": Object {},
+              "hideFilter": false,
+              "id": "from_user",
+              "maxWidth": 300,
+              "minWidth": 200,
+              "render": [Function],
+              "show": true,
+              "sortable": true,
+              "style": Object {},
+            },
+            Object {
+              "accessor": [Function],
+              "className": "",
+              "filterMethod": undefined,
+              "filterRender": [Function],
+              "footer": undefined,
+              "footerClassName": "",
+              "footerStyle": Object {},
+              "getFooterProps": [Function],
+              "getHeaderProps": [Function],
+              "getProps": [Function],
+              "header": "fb msg",
+              "headerClassName": "",
+              "headerStyle": Object {},
+              "hideFilter": false,
+              "id": "message",
+              "maxWidth": 80,
+              "minWidth": 100,
+              "render": [Function],
+              "show": true,
+              "sortable": true,
+              "style": Object {},
+            },
+            Object {
+              "accessor": [Function],
+              "className": "",
+              "filterMethod": undefined,
+              "filterRender": [Function],
+              "footer": undefined,
+              "footerClassName": "",
+              "footerStyle": Object {},
+              "getFooterProps": [Function],
+              "getHeaderProps": [Function],
+              "getProps": [Function],
+              "header": "reactions count",
+              "headerClassName": "",
+              "headerStyle": Object {},
+              "hideFilter": false,
+              "id": "reactions_num",
+              "maxWidth": 100,
+              "minWidth": 60,
+              "render": undefined,
+              "show": true,
+              "sort": "dsc",
+              "sortable": true,
+              "style": Object {},
+            },
+            Object {
+              "accessor": [Function],
+              "className": "",
+              "filterMethod": undefined,
+              "filterRender": [Function],
+              "footer": undefined,
+              "footerClassName": "",
+              "footerStyle": Object {},
+              "getFooterProps": [Function],
+              "getHeaderProps": [Function],
+              "getProps": [Function],
+              "header": "crated time",
+              "headerClassName": "",
+              "headerStyle": Object {},
+              "hideFilter": false,
+              "id": "createTime",
+              "maxWidth": 200,
+              "minWidth": 150,
+              "render": [Function],
+              "show": true,
+              "sortable": true,
+              "style": Object {},
+            },
+            Object {
+              "accessor": [Function],
+              "className": "",
+              "filterMethod": undefined,
+              "filterRender": [Function],
+              "footer": undefined,
+              "footerClassName": "",
+              "footerStyle": Object {},
+              "getFooterProps": [Function],
+              "getHeaderProps": [Function],
+              "getProps": [Function],
+              "header": "added time",
+              "headerClassName": "",
+              "headerStyle": Object {},
+              "hideFilter": false,
+              "id": "addedTime",
+              "maxWidth": 150,
+              "minWidth": 100,
+              "render": [Function],
+              "show": true,
+              "sortable": true,
+              "style": Object {},
+            },
+            Object {
+              "accessor": [Function],
+              "className": "",
+              "filterMethod": undefined,
+              "filterRender": [Function],
+              "footer": undefined,
+              "footerClassName": "",
+              "footerStyle": Object {},
+              "getFooterProps": [Function],
+              "getHeaderProps": [Function],
+              "getProps": [Function],
+              "header": "last update",
+              "headerClassName": "",
+              "headerStyle": Object {},
+              "hideFilter": false,
+              "id": "lastUpdate",
+              "maxWidth": 200,
+              "minWidth": 150,
+              "render": [Function],
+              "show": true,
+              "sortable": true,
+              "style": Object {},
+            },
+            Object {
+              "accessor": [Function],
+              "className": "",
+              "filterMethod": undefined,
+              "filterRender": [Function],
+              "footer": undefined,
+              "footerClassName": "",
+              "footerStyle": Object {},
+              "getFooterProps": [Function],
+              "getHeaderProps": [Function],
+              "getProps": [Function],
+              "header": [Function],
+              "headerClassName": "",
+              "headerStyle": Object {},
+              "hideFilter": false,
+              "id": "yt_link",
+              "maxWidth": 600,
+              "minWidth": 200,
+              "render": [Function],
+              "show": true,
+              "sortable": true,
+              "style": Object {},
+              "width": 300,
+            },
+          ]
+        }
+        allVisibleColumns={
+          Array [
+            Object {
+              "accessor": [Function],
+              "className": "",
+              "filterMethod": undefined,
+              "filterRender": [Function],
+              "footer": undefined,
+              "footerClassName": "",
+              "footerStyle": Object {},
+              "getFooterProps": [Function],
+              "getHeaderProps": [Function],
+              "getProps": [Function],
+              "header": [Function],
+              "headerClassName": "",
+              "headerStyle": Object {},
+              "hideFilter": false,
+              "id": "selected",
+              "maxWidth": 60,
+              "minWidth": 30,
+              "render": [Function],
+              "show": true,
+              "sortable": false,
+              "style": Object {},
+            },
+            Object {
+              "accessor": [Function],
+              "className": "",
+              "filterMethod": undefined,
+              "filterRender": [Function],
+              "footer": undefined,
+              "footerClassName": "",
+              "footerStyle": Object {},
+              "getFooterProps": [Function],
+              "getHeaderProps": [Function],
+              "getProps": [Function],
+              "header": "user",
+              "headerClassName": "",
+              "headerStyle": Object {},
+              "hideFilter": false,
+              "id": "from_user",
+              "maxWidth": 300,
+              "minWidth": 200,
+              "render": [Function],
+              "show": true,
+              "sortable": true,
+              "style": Object {},
+            },
+            Object {
+              "accessor": [Function],
+              "className": "",
+              "filterMethod": undefined,
+              "filterRender": [Function],
+              "footer": undefined,
+              "footerClassName": "",
+              "footerStyle": Object {},
+              "getFooterProps": [Function],
+              "getHeaderProps": [Function],
+              "getProps": [Function],
+              "header": "fb msg",
+              "headerClassName": "",
+              "headerStyle": Object {},
+              "hideFilter": false,
+              "id": "message",
+              "maxWidth": 80,
+              "minWidth": 100,
+              "render": [Function],
+              "show": true,
+              "sortable": true,
+              "style": Object {},
+            },
+            Object {
+              "accessor": [Function],
+              "className": "",
+              "filterMethod": undefined,
+              "filterRender": [Function],
+              "footer": undefined,
+              "footerClassName": "",
+              "footerStyle": Object {},
+              "getFooterProps": [Function],
+              "getHeaderProps": [Function],
+              "getProps": [Function],
+              "header": "reactions count",
+              "headerClassName": "",
+              "headerStyle": Object {},
+              "hideFilter": false,
+              "id": "reactions_num",
+              "maxWidth": 100,
+              "minWidth": 60,
+              "render": undefined,
+              "show": true,
+              "sort": "dsc",
+              "sortable": true,
+              "style": Object {},
+            },
+            Object {
+              "accessor": [Function],
+              "className": "",
+              "filterMethod": undefined,
+              "filterRender": [Function],
+              "footer": undefined,
+              "footerClassName": "",
+              "footerStyle": Object {},
+              "getFooterProps": [Function],
+              "getHeaderProps": [Function],
+              "getProps": [Function],
+              "header": "crated time",
+              "headerClassName": "",
+              "headerStyle": Object {},
+              "hideFilter": false,
+              "id": "createTime",
+              "maxWidth": 200,
+              "minWidth": 150,
+              "render": [Function],
+              "show": true,
+              "sortable": true,
+              "style": Object {},
+            },
+            Object {
+              "accessor": [Function],
+              "className": "",
+              "filterMethod": undefined,
+              "filterRender": [Function],
+              "footer": undefined,
+              "footerClassName": "",
+              "footerStyle": Object {},
+              "getFooterProps": [Function],
+              "getHeaderProps": [Function],
+              "getProps": [Function],
+              "header": "added time",
+              "headerClassName": "",
+              "headerStyle": Object {},
+              "hideFilter": false,
+              "id": "addedTime",
+              "maxWidth": 150,
+              "minWidth": 100,
+              "render": [Function],
+              "show": true,
+              "sortable": true,
+              "style": Object {},
+            },
+            Object {
+              "accessor": [Function],
+              "className": "",
+              "filterMethod": undefined,
+              "filterRender": [Function],
+              "footer": undefined,
+              "footerClassName": "",
+              "footerStyle": Object {},
+              "getFooterProps": [Function],
+              "getHeaderProps": [Function],
+              "getProps": [Function],
+              "header": "last update",
+              "headerClassName": "",
+              "headerStyle": Object {},
+              "hideFilter": false,
+              "id": "lastUpdate",
+              "maxWidth": 200,
+              "minWidth": 150,
+              "render": [Function],
+              "show": true,
+              "sortable": true,
+              "style": Object {},
+            },
+            Object {
+              "accessor": [Function],
+              "className": "",
+              "filterMethod": undefined,
+              "filterRender": [Function],
+              "footer": undefined,
+              "footerClassName": "",
+              "footerStyle": Object {},
+              "getFooterProps": [Function],
+              "getHeaderProps": [Function],
+              "getProps": [Function],
+              "header": [Function],
+              "headerClassName": "",
+              "headerStyle": Object {},
+              "hideFilter": false,
+              "id": "yt_link",
+              "maxWidth": 600,
+              "minWidth": 200,
+              "render": [Function],
+              "show": true,
+              "sortable": true,
+              "style": Object {},
+              "width": 300,
+            },
+          ]
+        }
+        canNext={false}
+        canPrevious={false}
+        collapseOnDataChange={true}
+        collapseOnPageChange={true}
+        collapseOnSortingChange={true}
+        column={
+          Object {
+            "className": "",
+            "filterMethod": undefined,
+            "filterRender": [Function],
+            "footer": undefined,
+            "footerClassName": "",
+            "footerStyle": Object {},
+            "getFooterProps": [Function],
+            "getHeaderProps": [Function],
+            "getProps": [Function],
+            "header": undefined,
+            "headerClassName": "",
+            "headerStyle": Object {},
+            "hideFilter": false,
+            "minWidth": 100,
+            "render": undefined,
+            "show": true,
+            "sortable": true,
+            "style": Object {},
+          }
+        }
+        columns={
+          Array [
+            Object {
+              "columns": Array [
+                Object {
+                  "accessor": "selected",
+                  "header": [Function],
+                  "maxWidth": 60,
+                  "minWidth": 30,
+                  "render": [Function],
+                  "sortable": false,
+                },
+                Object {
+                  "accessor": "from_user",
+                  "header": "user",
+                  "maxWidth": 300,
+                  "minWidth": 200,
+                  "render": [Function],
+                },
+                Object {
+                  "accessor": "message",
+                  "header": "fb msg",
+                  "maxWidth": 80,
+                  "render": [Function],
+                },
+                Object {
+                  "accessor": "reactions_num",
+                  "header": "reactions count",
+                  "maxWidth": 100,
+                  "minWidth": 60,
+                  "sort": "dsc",
+                },
+                Object {
+                  "accessor": [Function],
+                  "header": "crated time",
+                  "id": "createTime",
+                  "maxWidth": 200,
+                  "minWidth": 150,
+                  "render": [Function],
+                },
+                Object {
+                  "accessor": [Function],
+                  "header": "added time",
+                  "id": "addedTime",
+                  "maxWidth": 150,
+                  "render": [Function],
+                },
+                Object {
+                  "accessor": [Function],
+                  "header": "last update",
+                  "id": "lastUpdate",
+                  "maxWidth": 200,
+                  "minWidth": 150,
+                  "render": [Function],
+                },
+                Object {
+                  "accessor": [Function],
+                  "header": [Function],
+                  "id": "yt_link",
+                  "maxWidth": 600,
+                  "minWidth": 200,
+                  "render": [Function],
+                  "width": 300,
+                },
+              ],
+              "header": [Function],
+            },
+          ]
+        }
+        data={
+          Array [
+            Object {
+              "added_by": "Joanna Kozieńska",
+              "added_time": "2017-03-07T23:00:00.000Z",
+              "created_time": "2017-03-01T19:36:39+0000",
+              "from_user": "Anna Stanuchowska",
+              "full_picture": "https://external.xx.fbcdn.net/safe_image.php?d=AQCOBB0IaMR9ATLU&w=720&h=720&url=https%3A%2F%2Fi.ytimg.com%2Fvi%2FeBlFp2__XtM%2Fmaxresdefault.jpg&cfs=1&_nc_hash=AQDB3IuabP5vzAnZ",
+              "id": 0,
+              "likes_num": 0,
+              "link": Object {
+                "name": "X Ambassadors - Unsteady (Erich Lee Gravity Remix)",
+                "title": "X Ambassadors - Unsteady (Erich Lee Gravity Remix)",
+                "type": "video_share_youtube",
+                "url": "https://www.youtube.com/watch?v=eBlFp2__XtM",
+              },
+              "message": "Nie wiem, czy to by się nadawało, ale uwielbiam tą nutę <3 ",
+              "reactions_num": 0,
+              "selected": false,
+              "source": "https://www.youtube.com/embed/eBlFp2__XtM?autoplay=1",
+              "type": "video",
+              "updated_time": "2017-03-09T21:46:45+0000",
+            },
+            Object {
+              "added_by": "Joanna Kozieńska",
+              "added_time": "2017-03-08T23:00:00.000Z",
+              "created_time": "2017-03-03T06:28:55+0000",
+              "from_user": "Damian Gruszczyński",
+              "id": 1,
+              "likes_num": 5,
+              "link": Object {
+                "title": "Barcelona, a song by Ed Sheeran on Spotify",
+                "type": "music_aggregation",
+              },
+              "message": "#całapłytawymiata",
+              "reactions_num": 5,
+              "selected": false,
+              "type": "status",
+              "updated_time": "2017-03-09T08:01:48+0000",
+            },
+            Object {
+              "added_by": "Joanna Kozieńska",
+              "added_time": "2017-03-08T23:00:00.000Z",
+              "created_time": "2017-03-03T06:24:25+0000",
+              "from_user": "Damian Gruszczyński",
+              "id": 2,
+              "likes_num": 6,
+              "link": Object {
+                "title": "Galway Girl, a song by Ed Sheeran on Spotify",
+                "type": "music_aggregation",
+              },
+              "message": "Ed! :-D",
+              "reactions_num": 6,
+              "selected": false,
+              "type": "status",
+              "updated_time": "2017-03-08T23:17:00+0000",
+            },
+            Object {
+              "added_by": "Joanna Kozieńska",
+              "added_time": "2017-03-08T23:00:00.000Z",
+              "created_time": "2017-03-03T06:26:21+0000",
+              "from_user": "Damian Gruszczyński",
+              "id": 3,
+              "likes_num": 8,
+              "link": Object {
+                "title": "New Man, a song by Ed Sheeran on Spotify",
+                "type": "music_aggregation",
+              },
+              "message": "#nigdydosyceda ;-)",
+              "reactions_num": 8,
+              "selected": false,
+              "type": "status",
+              "updated_time": "2017-03-08T23:05:45+0000",
+            },
+            Object {
+              "added_by": "Joanna Kozieńska",
+              "added_time": "2017-03-08T23:00:00.000Z",
+              "created_time": "2017-03-03T20:10:48+0000",
+              "from_user": "Mateusz Lech",
+              "full_picture": "https://external.xx.fbcdn.net/safe_image.php?d=AQDQMhV3vs5i7Ipg&w=720&h=720&url=https%3A%2F%2Fi.ytimg.com%2Fvi%2F5Y6e_T0ySmE%2Fmaxresdefault.jpg&cfs=1&sx=503&sy=0&sw=720&sh=720&_nc_hash=AQAa5L3S7_nVVkZR",
+              "id": 4,
+              "likes_num": 5,
+              "link": Object {
+                "name": "Vali - Ain't No Friend Of Mine (Official Video)",
+                "title": "Vali - Ain't No Friend Of Mine (Official Video)",
+                "type": "video_share_youtube",
+                "url": "https://www.youtube.com/watch?v=5Y6e_T0ySmE",
+              },
+              "message": "Wydaje się całkiem skoczne ;)
+          
+          #95bpm",
+              "reactions_num": 5,
+              "selected": false,
+              "source": "https://www.youtube.com/embed/5Y6e_T0ySmE?autoplay=1",
+              "type": "video",
+              "updated_time": "2017-03-08T23:05:38+0000",
+            },
+            Object {
+              "added_by": "Joanna Kozieńska",
+              "added_time": "2017-03-07T23:00:00.000Z",
+              "created_time": "2017-03-07T23:07:03+0000",
+              "from_user": "Joanna Kozieńska",
+              "full_picture": "https://external.xx.fbcdn.net/safe_image.php?d=AQCimze9kDlMKVl1&w=720&h=720&url=https%3A%2F%2Fi.ytimg.com%2Fvi%2FLuxpfnnsdX4%2Fmaxresdefault.jpg&cfs=1&_nc_hash=AQC7M9AEfyBbtF3g",
+              "id": 5,
+              "likes_num": 8,
+              "link": Object {
+                "name": "Chet Faker - 1998 ft Banks",
+                "title": "Chet Faker - 1998 ft Banks",
+                "type": "video_share_youtube",
+                "url": "https://youtu.be/LuxpfnnsdX4",
+              },
+              "message": "Jedna ode mnie, bo już wieki nie miałam okazji ;) 
+          
+          ",
+              "reactions_num": 9,
+              "selected": false,
+              "source": "https://www.youtube.com/embed/LuxpfnnsdX4?autoplay=1",
+              "type": "video",
+              "updated_time": "2017-03-08T21:36:01+0000",
+            },
+            Object {
+              "created_time": "2016-08-30T14:20:21+0000",
+              "from_user": "Paulina Górka",
+              "full_picture": "https://external.xx.fbcdn.net/safe_image.php?d=AQBiF2VBQG2WfPvh&w=720&h=720&url=https%3A%2F%2Fi.ytimg.com%2Fvi%2FEkeZKFa65zs%2Fmaxresdefault.jpg&cfs=1&_nc_hash=AQBYNj773CB4DtVR",
+              "id": 96,
+              "likes_num": 19,
+              "link": Object {
+                "name": "James Hersey - Miss You (Official Audio)",
+                "title": "James Hersey - Miss You (Official Audio)",
+                "type": "video_share_youtube",
+                "url": "https://www.youtube.com/watch?v=EkeZKFa65zs",
+              },
+              "message": "warte lajków, jak nie to zwątpię :P
+          ",
+              "reactions_num": 19,
+              "selected": false,
+              "source": "https://www.youtube.com/embed/EkeZKFa65zs?autoplay=1",
+              "type": "video",
+              "updated_time": "2017-02-07T10:56:40+0000",
+            },
+          ]
+        }
+        defaultFilterMethod={[Function]}
+        defaultFiltering={Array []}
+        defaultPageSize={20}
+        defaultResizing={Array []}
+        defaultSorting={Array []}
+        expandedRows={Object {}}
+        expanderColumnWidth={35}
+        filtering={Array []}
+        freezeWhenExpanded={false}
+        frozen={false}
+        getLoadingProps={[Function]}
+        getNoDataProps={[Function]}
+        getPaginationProps={[Function]}
+        getProps={[Function]}
+        getResizerProps={[Function]}
+        getTableProps={[Function]}
+        getTbodyProps={[Function]}
+        getTdProps={[Function]}
+        getTfootProps={[Function]}
+        getTfootTdProps={[Function]}
+        getTfootTrProps={[Function]}
+        getTheadFilterProps={[Function]}
+        getTheadFilterThProps={[Function]}
+        getTheadFilterTrProps={[Function]}
+        getTheadGroupProps={[Function]}
+        getTheadGroupThProps={[Function]}
+        getTheadGroupTrProps={[Function]}
+        getTheadProps={[Function]}
+        getTheadThProps={[Function]}
+        getTheadTrProps={[Function]}
+        getTrGroupProps={[Function]}
+        getTrProps={[Function]}
+        hasHeaderGroups={true}
+        headerGroups={
+          Array [
+            Object {
+              "className": "",
+              "columns": Array [
+                Object {
+                  "accessor": [Function],
+                  "className": "",
+                  "filterMethod": undefined,
+                  "filterRender": [Function],
+                  "footer": undefined,
+                  "footerClassName": "",
+                  "footerStyle": Object {},
+                  "getFooterProps": [Function],
+                  "getHeaderProps": [Function],
+                  "getProps": [Function],
+                  "header": [Function],
+                  "headerClassName": "",
+                  "headerStyle": Object {},
+                  "hideFilter": false,
+                  "id": "selected",
+                  "maxWidth": 60,
+                  "minWidth": 30,
+                  "render": [Function],
+                  "show": true,
+                  "sortable": false,
+                  "style": Object {},
+                },
+                Object {
+                  "accessor": [Function],
+                  "className": "",
+                  "filterMethod": undefined,
+                  "filterRender": [Function],
+                  "footer": undefined,
+                  "footerClassName": "",
+                  "footerStyle": Object {},
+                  "getFooterProps": [Function],
+                  "getHeaderProps": [Function],
+                  "getProps": [Function],
+                  "header": "user",
+                  "headerClassName": "",
+                  "headerStyle": Object {},
+                  "hideFilter": false,
+                  "id": "from_user",
+                  "maxWidth": 300,
+                  "minWidth": 200,
+                  "render": [Function],
+                  "show": true,
+                  "sortable": true,
+                  "style": Object {},
+                },
+                Object {
+                  "accessor": [Function],
+                  "className": "",
+                  "filterMethod": undefined,
+                  "filterRender": [Function],
+                  "footer": undefined,
+                  "footerClassName": "",
+                  "footerStyle": Object {},
+                  "getFooterProps": [Function],
+                  "getHeaderProps": [Function],
+                  "getProps": [Function],
+                  "header": "fb msg",
+                  "headerClassName": "",
+                  "headerStyle": Object {},
+                  "hideFilter": false,
+                  "id": "message",
+                  "maxWidth": 80,
+                  "minWidth": 100,
+                  "render": [Function],
+                  "show": true,
+                  "sortable": true,
+                  "style": Object {},
+                },
+                Object {
+                  "accessor": [Function],
+                  "className": "",
+                  "filterMethod": undefined,
+                  "filterRender": [Function],
+                  "footer": undefined,
+                  "footerClassName": "",
+                  "footerStyle": Object {},
+                  "getFooterProps": [Function],
+                  "getHeaderProps": [Function],
+                  "getProps": [Function],
+                  "header": "reactions count",
+                  "headerClassName": "",
+                  "headerStyle": Object {},
+                  "hideFilter": false,
+                  "id": "reactions_num",
+                  "maxWidth": 100,
+                  "minWidth": 60,
+                  "render": undefined,
+                  "show": true,
+                  "sort": "dsc",
+                  "sortable": true,
+                  "style": Object {},
+                },
+                Object {
+                  "accessor": [Function],
+                  "className": "",
+                  "filterMethod": undefined,
+                  "filterRender": [Function],
+                  "footer": undefined,
+                  "footerClassName": "",
+                  "footerStyle": Object {},
+                  "getFooterProps": [Function],
+                  "getHeaderProps": [Function],
+                  "getProps": [Function],
+                  "header": "crated time",
+                  "headerClassName": "",
+                  "headerStyle": Object {},
+                  "hideFilter": false,
+                  "id": "createTime",
+                  "maxWidth": 200,
+                  "minWidth": 150,
+                  "render": [Function],
+                  "show": true,
+                  "sortable": true,
+                  "style": Object {},
+                },
+                Object {
+                  "accessor": [Function],
+                  "className": "",
+                  "filterMethod": undefined,
+                  "filterRender": [Function],
+                  "footer": undefined,
+                  "footerClassName": "",
+                  "footerStyle": Object {},
+                  "getFooterProps": [Function],
+                  "getHeaderProps": [Function],
+                  "getProps": [Function],
+                  "header": "added time",
+                  "headerClassName": "",
+                  "headerStyle": Object {},
+                  "hideFilter": false,
+                  "id": "addedTime",
+                  "maxWidth": 150,
+                  "minWidth": 100,
+                  "render": [Function],
+                  "show": true,
+                  "sortable": true,
+                  "style": Object {},
+                },
+                Object {
+                  "accessor": [Function],
+                  "className": "",
+                  "filterMethod": undefined,
+                  "filterRender": [Function],
+                  "footer": undefined,
+                  "footerClassName": "",
+                  "footerStyle": Object {},
+                  "getFooterProps": [Function],
+                  "getHeaderProps": [Function],
+                  "getProps": [Function],
+                  "header": "last update",
+                  "headerClassName": "",
+                  "headerStyle": Object {},
+                  "hideFilter": false,
+                  "id": "lastUpdate",
+                  "maxWidth": 200,
+                  "minWidth": 150,
+                  "render": [Function],
+                  "show": true,
+                  "sortable": true,
+                  "style": Object {},
+                },
+                Object {
+                  "accessor": [Function],
+                  "className": "",
+                  "filterMethod": undefined,
+                  "filterRender": [Function],
+                  "footer": undefined,
+                  "footerClassName": "",
+                  "footerStyle": Object {},
+                  "getFooterProps": [Function],
+                  "getHeaderProps": [Function],
+                  "getProps": [Function],
+                  "header": [Function],
+                  "headerClassName": "",
+                  "headerStyle": Object {},
+                  "hideFilter": false,
+                  "id": "yt_link",
+                  "maxWidth": 600,
+                  "minWidth": 200,
+                  "render": [Function],
+                  "show": true,
+                  "sortable": true,
+                  "style": Object {},
+                  "width": 300,
+                },
+              ],
+              "filterMethod": undefined,
+              "filterRender": [Function],
+              "footer": undefined,
+              "footerClassName": "",
+              "footerStyle": Object {},
+              "getFooterProps": [Function],
+              "getHeaderProps": [Function],
+              "getProps": [Function],
+              "header": [Function],
+              "headerClassName": "",
+              "headerStyle": Object {},
+              "hideFilter": false,
+              "minWidth": 100,
+              "render": undefined,
+              "show": true,
+              "sortable": true,
+              "style": Object {},
+            },
+          ]
+        }
+        loading={false}
+        loadingText="Loading..."
+        minRows={10}
+        nextText="Next"
+        noDataText={
+          <span>
+            Hi, undefined please click 
+            <strong
+              style={
+                Object {
+                  "color": "blue",
+                }
+              }
+            >
+              Update
+            </strong>
+             to start.
+          </span>
+        }
+        ofText="of"
+        onChange={[Function]}
+        onPageChange={[Function]}
+        onPageSizeChange={[Function]}
+        page={0}
+        pageSize={20}
+        pageSizeOptions={
+          Array [
+            20,
+            50,
+            100,
+          ]
+        }
+        pageText="Page"
+        pages={1}
+        pivotColumnWidth={200}
+        pivotIDKey="_pivotID"
+        pivotValKey="_pivotVal"
+        previousText="Previous"
+        resizable={true}
+        resizing={Array []}
+        resolvedData={
+          Array [
+            Object {
+              "__index": 0,
+              "__original": Object {
+                "added_by": "Joanna Kozieńska",
+                "added_time": "2017-03-07T23:00:00.000Z",
+                "created_time": "2017-03-01T19:36:39+0000",
+                "from_user": "Anna Stanuchowska",
+                "full_picture": "https://external.xx.fbcdn.net/safe_image.php?d=AQCOBB0IaMR9ATLU&w=720&h=720&url=https%3A%2F%2Fi.ytimg.com%2Fvi%2FeBlFp2__XtM%2Fmaxresdefault.jpg&cfs=1&_nc_hash=AQDB3IuabP5vzAnZ",
+                "id": 0,
+                "likes_num": 0,
+                "link": Object {
+                  "name": "X Ambassadors - Unsteady (Erich Lee Gravity Remix)",
+                  "title": "X Ambassadors - Unsteady (Erich Lee Gravity Remix)",
+                  "type": "video_share_youtube",
+                  "url": "https://www.youtube.com/watch?v=eBlFp2__XtM",
+                },
+                "message": "Nie wiem, czy to by się nadawało, ale uwielbiam tą nutę <3 ",
+                "reactions_num": 0,
+                "selected": false,
+                "source": "https://www.youtube.com/embed/eBlFp2__XtM?autoplay=1",
+                "type": "video",
+                "updated_time": "2017-03-09T21:46:45+0000",
+              },
+              "addedTime": 1488927600000,
+              "createTime": 1488396999000,
+              "from_user": "Anna Stanuchowska",
+              "lastUpdate": 1489096005000,
+              "message": "Nie wiem, czy to by się nadawało, ale uwielbiam tą nutę <3 ",
+              "reactions_num": 0,
+              "selected": false,
+              "yt_link": "X Ambassadors - Unsteady (Erich Lee Gravity Remix)",
+            },
+            Object {
+              "__index": 1,
+              "__original": Object {
+                "added_by": "Joanna Kozieńska",
+                "added_time": "2017-03-08T23:00:00.000Z",
+                "created_time": "2017-03-03T06:28:55+0000",
+                "from_user": "Damian Gruszczyński",
+                "id": 1,
+                "likes_num": 5,
+                "link": Object {
+                  "title": "Barcelona, a song by Ed Sheeran on Spotify",
+                  "type": "music_aggregation",
+                },
+                "message": "#całapłytawymiata",
+                "reactions_num": 5,
+                "selected": false,
+                "type": "status",
+                "updated_time": "2017-03-09T08:01:48+0000",
+              },
+              "addedTime": 1489014000000,
+              "createTime": 1488522535000,
+              "from_user": "Damian Gruszczyński",
+              "lastUpdate": 1489046508000,
+              "message": "#całapłytawymiata",
+              "reactions_num": 5,
+              "selected": false,
+              "yt_link": "Barcelona, a song by Ed Sheeran on Spotify",
+            },
+            Object {
+              "__index": 2,
+              "__original": Object {
+                "added_by": "Joanna Kozieńska",
+                "added_time": "2017-03-08T23:00:00.000Z",
+                "created_time": "2017-03-03T06:24:25+0000",
+                "from_user": "Damian Gruszczyński",
+                "id": 2,
+                "likes_num": 6,
+                "link": Object {
+                  "title": "Galway Girl, a song by Ed Sheeran on Spotify",
+                  "type": "music_aggregation",
+                },
+                "message": "Ed! :-D",
+                "reactions_num": 6,
+                "selected": false,
+                "type": "status",
+                "updated_time": "2017-03-08T23:17:00+0000",
+              },
+              "addedTime": 1489014000000,
+              "createTime": 1488522265000,
+              "from_user": "Damian Gruszczyński",
+              "lastUpdate": 1489015020000,
+              "message": "Ed! :-D",
+              "reactions_num": 6,
+              "selected": false,
+              "yt_link": "Galway Girl, a song by Ed Sheeran on Spotify",
+            },
+            Object {
+              "__index": 3,
+              "__original": Object {
+                "added_by": "Joanna Kozieńska",
+                "added_time": "2017-03-08T23:00:00.000Z",
+                "created_time": "2017-03-03T06:26:21+0000",
+                "from_user": "Damian Gruszczyński",
+                "id": 3,
+                "likes_num": 8,
+                "link": Object {
+                  "title": "New Man, a song by Ed Sheeran on Spotify",
+                  "type": "music_aggregation",
+                },
+                "message": "#nigdydosyceda ;-)",
+                "reactions_num": 8,
+                "selected": false,
+                "type": "status",
+                "updated_time": "2017-03-08T23:05:45+0000",
+              },
+              "addedTime": 1489014000000,
+              "createTime": 1488522381000,
+              "from_user": "Damian Gruszczyński",
+              "lastUpdate": 1489014345000,
+              "message": "#nigdydosyceda ;-)",
+              "reactions_num": 8,
+              "selected": false,
+              "yt_link": "New Man, a song by Ed Sheeran on Spotify",
+            },
+            Object {
+              "__index": 4,
+              "__original": Object {
+                "added_by": "Joanna Kozieńska",
+                "added_time": "2017-03-08T23:00:00.000Z",
+                "created_time": "2017-03-03T20:10:48+0000",
+                "from_user": "Mateusz Lech",
+                "full_picture": "https://external.xx.fbcdn.net/safe_image.php?d=AQDQMhV3vs5i7Ipg&w=720&h=720&url=https%3A%2F%2Fi.ytimg.com%2Fvi%2F5Y6e_T0ySmE%2Fmaxresdefault.jpg&cfs=1&sx=503&sy=0&sw=720&sh=720&_nc_hash=AQAa5L3S7_nVVkZR",
+                "id": 4,
+                "likes_num": 5,
+                "link": Object {
+                  "name": "Vali - Ain't No Friend Of Mine (Official Video)",
+                  "title": "Vali - Ain't No Friend Of Mine (Official Video)",
+                  "type": "video_share_youtube",
+                  "url": "https://www.youtube.com/watch?v=5Y6e_T0ySmE",
+                },
+                "message": "Wydaje się całkiem skoczne ;)
+          
+          #95bpm",
+                "reactions_num": 5,
+                "selected": false,
+                "source": "https://www.youtube.com/embed/5Y6e_T0ySmE?autoplay=1",
+                "type": "video",
+                "updated_time": "2017-03-08T23:05:38+0000",
+              },
+              "addedTime": 1489014000000,
+              "createTime": 1488571848000,
+              "from_user": "Mateusz Lech",
+              "lastUpdate": 1489014338000,
+              "message": "Wydaje się całkiem skoczne ;)
+          
+          #95bpm",
+              "reactions_num": 5,
+              "selected": false,
+              "yt_link": "Vali - Ain't No Friend Of Mine (Official Video)",
+            },
+            Object {
+              "__index": 5,
+              "__original": Object {
+                "added_by": "Joanna Kozieńska",
+                "added_time": "2017-03-07T23:00:00.000Z",
+                "created_time": "2017-03-07T23:07:03+0000",
+                "from_user": "Joanna Kozieńska",
+                "full_picture": "https://external.xx.fbcdn.net/safe_image.php?d=AQCimze9kDlMKVl1&w=720&h=720&url=https%3A%2F%2Fi.ytimg.com%2Fvi%2FLuxpfnnsdX4%2Fmaxresdefault.jpg&cfs=1&_nc_hash=AQC7M9AEfyBbtF3g",
+                "id": 5,
+                "likes_num": 8,
+                "link": Object {
+                  "name": "Chet Faker - 1998 ft Banks",
+                  "title": "Chet Faker - 1998 ft Banks",
+                  "type": "video_share_youtube",
+                  "url": "https://youtu.be/LuxpfnnsdX4",
+                },
+                "message": "Jedna ode mnie, bo już wieki nie miałam okazji ;) 
+          
+          ",
+                "reactions_num": 9,
+                "selected": false,
+                "source": "https://www.youtube.com/embed/LuxpfnnsdX4?autoplay=1",
+                "type": "video",
+                "updated_time": "2017-03-08T21:36:01+0000",
+              },
+              "addedTime": 1488927600000,
+              "createTime": 1488928023000,
+              "from_user": "Joanna Kozieńska",
+              "lastUpdate": 1489008961000,
+              "message": "Jedna ode mnie, bo już wieki nie miałam okazji ;) 
+          
+          ",
+              "reactions_num": 9,
+              "selected": false,
+              "yt_link": "Chet Faker - 1998 ft Banks",
+            },
+            Object {
+              "__index": 6,
+              "__original": Object {
+                "created_time": "2016-08-30T14:20:21+0000",
+                "from_user": "Paulina Górka",
+                "full_picture": "https://external.xx.fbcdn.net/safe_image.php?d=AQBiF2VBQG2WfPvh&w=720&h=720&url=https%3A%2F%2Fi.ytimg.com%2Fvi%2FEkeZKFa65zs%2Fmaxresdefault.jpg&cfs=1&_nc_hash=AQBYNj773CB4DtVR",
+                "id": 96,
+                "likes_num": 19,
+                "link": Object {
+                  "name": "James Hersey - Miss You (Official Audio)",
+                  "title": "James Hersey - Miss You (Official Audio)",
+                  "type": "video_share_youtube",
+                  "url": "https://www.youtube.com/watch?v=EkeZKFa65zs",
+                },
+                "message": "warte lajków, jak nie to zwątpię :P
+          ",
+                "reactions_num": 19,
+                "selected": false,
+                "source": "https://www.youtube.com/embed/EkeZKFa65zs?autoplay=1",
+                "type": "video",
+                "updated_time": "2017-02-07T10:56:40+0000",
+              },
+              "addedTime": 0,
+              "createTime": 1472566821000,
+              "from_user": "Paulina Górka",
+              "lastUpdate": 1486465000000,
+              "message": "warte lajków, jak nie to zwątpię :P
+          ",
+              "reactions_num": 19,
+              "selected": false,
+              "yt_link": "James Hersey - Miss You (Official Audio)",
+            },
+          ]
+        }
+        rowsText="rows"
+        showFilters={false}
+        showPageJump={true}
+        showPageSizeOptions={true}
+        showPagination={true}
+        skipNextSort={false}
+        sortedData={
+          Array [
+            Object {
+              "__index": 0,
+              "__original": Object {
+                "added_by": "Joanna Kozieńska",
+                "added_time": "2017-03-07T23:00:00.000Z",
+                "created_time": "2017-03-01T19:36:39+0000",
+                "from_user": "Anna Stanuchowska",
+                "full_picture": "https://external.xx.fbcdn.net/safe_image.php?d=AQCOBB0IaMR9ATLU&w=720&h=720&url=https%3A%2F%2Fi.ytimg.com%2Fvi%2FeBlFp2__XtM%2Fmaxresdefault.jpg&cfs=1&_nc_hash=AQDB3IuabP5vzAnZ",
+                "id": 0,
+                "likes_num": 0,
+                "link": Object {
+                  "name": "X Ambassadors - Unsteady (Erich Lee Gravity Remix)",
+                  "title": "X Ambassadors - Unsteady (Erich Lee Gravity Remix)",
+                  "type": "video_share_youtube",
+                  "url": "https://www.youtube.com/watch?v=eBlFp2__XtM",
+                },
+                "message": "Nie wiem, czy to by się nadawało, ale uwielbiam tą nutę <3 ",
+                "reactions_num": 0,
+                "selected": false,
+                "source": "https://www.youtube.com/embed/eBlFp2__XtM?autoplay=1",
+                "type": "video",
+                "updated_time": "2017-03-09T21:46:45+0000",
+              },
+              "addedTime": 1488927600000,
+              "createTime": 1488396999000,
+              "from_user": "Anna Stanuchowska",
+              "lastUpdate": 1489096005000,
+              "message": "Nie wiem, czy to by się nadawało, ale uwielbiam tą nutę <3 ",
+              "reactions_num": 0,
+              "selected": false,
+              "yt_link": "X Ambassadors - Unsteady (Erich Lee Gravity Remix)",
+            },
+            Object {
+              "__index": 1,
+              "__original": Object {
+                "added_by": "Joanna Kozieńska",
+                "added_time": "2017-03-08T23:00:00.000Z",
+                "created_time": "2017-03-03T06:28:55+0000",
+                "from_user": "Damian Gruszczyński",
+                "id": 1,
+                "likes_num": 5,
+                "link": Object {
+                  "title": "Barcelona, a song by Ed Sheeran on Spotify",
+                  "type": "music_aggregation",
+                },
+                "message": "#całapłytawymiata",
+                "reactions_num": 5,
+                "selected": false,
+                "type": "status",
+                "updated_time": "2017-03-09T08:01:48+0000",
+              },
+              "addedTime": 1489014000000,
+              "createTime": 1488522535000,
+              "from_user": "Damian Gruszczyński",
+              "lastUpdate": 1489046508000,
+              "message": "#całapłytawymiata",
+              "reactions_num": 5,
+              "selected": false,
+              "yt_link": "Barcelona, a song by Ed Sheeran on Spotify",
+            },
+            Object {
+              "__index": 2,
+              "__original": Object {
+                "added_by": "Joanna Kozieńska",
+                "added_time": "2017-03-08T23:00:00.000Z",
+                "created_time": "2017-03-03T06:24:25+0000",
+                "from_user": "Damian Gruszczyński",
+                "id": 2,
+                "likes_num": 6,
+                "link": Object {
+                  "title": "Galway Girl, a song by Ed Sheeran on Spotify",
+                  "type": "music_aggregation",
+                },
+                "message": "Ed! :-D",
+                "reactions_num": 6,
+                "selected": false,
+                "type": "status",
+                "updated_time": "2017-03-08T23:17:00+0000",
+              },
+              "addedTime": 1489014000000,
+              "createTime": 1488522265000,
+              "from_user": "Damian Gruszczyński",
+              "lastUpdate": 1489015020000,
+              "message": "Ed! :-D",
+              "reactions_num": 6,
+              "selected": false,
+              "yt_link": "Galway Girl, a song by Ed Sheeran on Spotify",
+            },
+            Object {
+              "__index": 3,
+              "__original": Object {
+                "added_by": "Joanna Kozieńska",
+                "added_time": "2017-03-08T23:00:00.000Z",
+                "created_time": "2017-03-03T06:26:21+0000",
+                "from_user": "Damian Gruszczyński",
+                "id": 3,
+                "likes_num": 8,
+                "link": Object {
+                  "title": "New Man, a song by Ed Sheeran on Spotify",
+                  "type": "music_aggregation",
+                },
+                "message": "#nigdydosyceda ;-)",
+                "reactions_num": 8,
+                "selected": false,
+                "type": "status",
+                "updated_time": "2017-03-08T23:05:45+0000",
+              },
+              "addedTime": 1489014000000,
+              "createTime": 1488522381000,
+              "from_user": "Damian Gruszczyński",
+              "lastUpdate": 1489014345000,
+              "message": "#nigdydosyceda ;-)",
+              "reactions_num": 8,
+              "selected": false,
+              "yt_link": "New Man, a song by Ed Sheeran on Spotify",
+            },
+            Object {
+              "__index": 4,
+              "__original": Object {
+                "added_by": "Joanna Kozieńska",
+                "added_time": "2017-03-08T23:00:00.000Z",
+                "created_time": "2017-03-03T20:10:48+0000",
+                "from_user": "Mateusz Lech",
+                "full_picture": "https://external.xx.fbcdn.net/safe_image.php?d=AQDQMhV3vs5i7Ipg&w=720&h=720&url=https%3A%2F%2Fi.ytimg.com%2Fvi%2F5Y6e_T0ySmE%2Fmaxresdefault.jpg&cfs=1&sx=503&sy=0&sw=720&sh=720&_nc_hash=AQAa5L3S7_nVVkZR",
+                "id": 4,
+                "likes_num": 5,
+                "link": Object {
+                  "name": "Vali - Ain't No Friend Of Mine (Official Video)",
+                  "title": "Vali - Ain't No Friend Of Mine (Official Video)",
+                  "type": "video_share_youtube",
+                  "url": "https://www.youtube.com/watch?v=5Y6e_T0ySmE",
+                },
+                "message": "Wydaje się całkiem skoczne ;)
+          
+          #95bpm",
+                "reactions_num": 5,
+                "selected": false,
+                "source": "https://www.youtube.com/embed/5Y6e_T0ySmE?autoplay=1",
+                "type": "video",
+                "updated_time": "2017-03-08T23:05:38+0000",
+              },
+              "addedTime": 1489014000000,
+              "createTime": 1488571848000,
+              "from_user": "Mateusz Lech",
+              "lastUpdate": 1489014338000,
+              "message": "Wydaje się całkiem skoczne ;)
+          
+          #95bpm",
+              "reactions_num": 5,
+              "selected": false,
+              "yt_link": "Vali - Ain't No Friend Of Mine (Official Video)",
+            },
+            Object {
+              "__index": 5,
+              "__original": Object {
+                "added_by": "Joanna Kozieńska",
+                "added_time": "2017-03-07T23:00:00.000Z",
+                "created_time": "2017-03-07T23:07:03+0000",
+                "from_user": "Joanna Kozieńska",
+                "full_picture": "https://external.xx.fbcdn.net/safe_image.php?d=AQCimze9kDlMKVl1&w=720&h=720&url=https%3A%2F%2Fi.ytimg.com%2Fvi%2FLuxpfnnsdX4%2Fmaxresdefault.jpg&cfs=1&_nc_hash=AQC7M9AEfyBbtF3g",
+                "id": 5,
+                "likes_num": 8,
+                "link": Object {
+                  "name": "Chet Faker - 1998 ft Banks",
+                  "title": "Chet Faker - 1998 ft Banks",
+                  "type": "video_share_youtube",
+                  "url": "https://youtu.be/LuxpfnnsdX4",
+                },
+                "message": "Jedna ode mnie, bo już wieki nie miałam okazji ;) 
+          
+          ",
+                "reactions_num": 9,
+                "selected": false,
+                "source": "https://www.youtube.com/embed/LuxpfnnsdX4?autoplay=1",
+                "type": "video",
+                "updated_time": "2017-03-08T21:36:01+0000",
+              },
+              "addedTime": 1488927600000,
+              "createTime": 1488928023000,
+              "from_user": "Joanna Kozieńska",
+              "lastUpdate": 1489008961000,
+              "message": "Jedna ode mnie, bo już wieki nie miałam okazji ;) 
+          
+          ",
+              "reactions_num": 9,
+              "selected": false,
+              "yt_link": "Chet Faker - 1998 ft Banks",
+            },
+            Object {
+              "__index": 6,
+              "__original": Object {
+                "created_time": "2016-08-30T14:20:21+0000",
+                "from_user": "Paulina Górka",
+                "full_picture": "https://external.xx.fbcdn.net/safe_image.php?d=AQBiF2VBQG2WfPvh&w=720&h=720&url=https%3A%2F%2Fi.ytimg.com%2Fvi%2FEkeZKFa65zs%2Fmaxresdefault.jpg&cfs=1&_nc_hash=AQBYNj773CB4DtVR",
+                "id": 96,
+                "likes_num": 19,
+                "link": Object {
+                  "name": "James Hersey - Miss You (Official Audio)",
+                  "title": "James Hersey - Miss You (Official Audio)",
+                  "type": "video_share_youtube",
+                  "url": "https://www.youtube.com/watch?v=EkeZKFa65zs",
+                },
+                "message": "warte lajków, jak nie to zwątpię :P
+          ",
+                "reactions_num": 19,
+                "selected": false,
+                "source": "https://www.youtube.com/embed/EkeZKFa65zs?autoplay=1",
+                "type": "video",
+                "updated_time": "2017-02-07T10:56:40+0000",
+              },
+              "addedTime": 0,
+              "createTime": 1472566821000,
+              "from_user": "Paulina Górka",
+              "lastUpdate": 1486465000000,
+              "message": "warte lajków, jak nie to zwątpię :P
+          ",
+              "reactions_num": 19,
+              "selected": false,
+              "yt_link": "James Hersey - Miss You (Official Audio)",
+            },
+          ]
+        }
+        sorting={Array []}
+        subRowsKey="_subRows"
+      >
+        <div
+          className="-pagination"
+        >
+          <div
+            className="-previous"
+          >
+            <defaultButton
+              disabled={true}
+              onClick={[Function]}
+            >
+              <button
+                className="-btn"
+                disabled={true}
+                onClick={[Function]}
+                type="button"
+              >
+                Previous
+              </button>
+            </defaultButton>
+          </div>
+          <div
+            className="-center"
+          >
+            <span
+              className="-pageInfo"
+            >
+              Page
+               
+              <div
+                className="-pageJump"
+              >
+                <input
+                  onBlur={[Function]}
+                  onChange={[Function]}
+                  onKeyPress={[Function]}
+                  type="number"
+                  value={1}
+                />
+              </div>
+               
+              of
+               
+              <span
+                className="-totalPages"
+              >
+                1
+              </span>
+            </span>
+            <span
+              className="select-wrap -pageSizeOptions"
+            >
+              <select
+                onChange={[Function]}
+                value={20}
+              >
+                <option
+                  value={20}
+                >
+                  20
+                   
+                  rows
+                </option>
+                <option
+                  value={50}
+                >
+                  50
+                   
+                  rows
+                </option>
+                <option
+                  value={100}
+                >
+                  100
+                   
+                  rows
+                </option>
+              </select>
+            </span>
+          </div>
+          <div
+            className="-next"
+          >
+            <defaultButton
+              disabled={true}
+              onClick={[Function]}
+            >
+              <button
+                className="-btn"
+                disabled={true}
+                onClick={[Function]}
+                type="button"
+              >
+                Next
+              </button>
+            </defaultButton>
+          </div>
+        </div>
+      </pagination>
+      <LoadingComponent
+        loading={false}
+        loadingText="Loading..."
+      >
+        <div
+          className="-loading"
+        >
+          <div
+            className="-loading-inner"
+          >
+            Loading...
+          </div>
+        </div>
+      </LoadingComponent>
+    </div>
+  </src>
+</ChartTable>
+`;
+
+exports[`<ChartTable/> renders without crashing 1`] = `
+<src
+  ExpanderComponent={[Function]}
+  LoadingComponent={[Function]}
+  NoDataComponent={[Function]}
+  PaginationComponent={[Function]}
+  ResizerComponent={[Function]}
+  TableComponent={[Function]}
+  TbodyComponent={[Function]}
+  TdComponent={[Function]}
+  TfootComponent={[Function]}
+  ThComponent={[Function]}
+  TheadComponent={[Function]}
+  TrComponent={[Function]}
+  TrGroupComponent={[Function]}
+  className="-striped -highlight"
+  collapseOnDataChange={true}
+  collapseOnPageChange={true}
+  collapseOnSortingChange={true}
+  column={
+    Object {
+      "className": "",
+      "filterMethod": undefined,
+      "filterRender": [Function],
+      "footer": undefined,
+      "footerClassName": "",
+      "footerStyle": Object {},
+      "getFooterProps": [Function],
+      "getHeaderProps": [Function],
+      "getProps": [Function],
+      "header": undefined,
+      "headerClassName": "",
+      "headerStyle": Object {},
+      "hideFilter": false,
+      "minWidth": 100,
+      "render": undefined,
+      "show": true,
+      "sortable": true,
+      "style": Object {},
+    }
+  }
+  columns={
+    Array [
+      Object {
+        "columns": Array [
+          Object {
+            "accessor": "selected",
+            "header": [Function],
+            "maxWidth": 60,
+            "minWidth": 30,
+            "render": [Function],
+            "sortable": false,
+          },
+          Object {
+            "accessor": "from_user",
+            "header": "user",
+            "maxWidth": 300,
+            "minWidth": 200,
+            "render": [Function],
+          },
+          Object {
+            "accessor": "message",
+            "header": "fb msg",
+            "maxWidth": 80,
+            "render": [Function],
+          },
+          Object {
+            "accessor": "reactions_num",
+            "header": "reactions count",
+            "maxWidth": 100,
+            "minWidth": 60,
+            "sort": "dsc",
+          },
+          Object {
+            "accessor": [Function],
+            "header": "crated time",
+            "id": "createTime",
+            "maxWidth": 200,
+            "minWidth": 150,
+            "render": [Function],
+          },
+          Object {
+            "accessor": [Function],
+            "header": "added time",
+            "id": "addedTime",
+            "maxWidth": 150,
+            "render": [Function],
+          },
+          Object {
+            "accessor": [Function],
+            "header": "last update",
+            "id": "lastUpdate",
+            "maxWidth": 200,
+            "minWidth": 150,
+            "render": [Function],
+          },
+          Object {
+            "accessor": [Function],
+            "header": [Function],
+            "id": "yt_link",
+            "maxWidth": 600,
+            "minWidth": 200,
+            "render": [Function],
+            "width": 300,
+          },
+        ],
+        "header": [Function],
+      },
+    ]
+  }
+  data={Array []}
+  defaultFilterMethod={[Function]}
+  defaultFiltering={Array []}
+  defaultPageSize={20}
+  defaultResizing={Array []}
+  defaultSorting={Array []}
+  expanderColumnWidth={35}
+  freezeWhenExpanded={false}
+  getLoadingProps={[Function]}
+  getNoDataProps={[Function]}
+  getPaginationProps={[Function]}
+  getProps={[Function]}
+  getResizerProps={[Function]}
+  getTableProps={[Function]}
+  getTbodyProps={[Function]}
+  getTdProps={[Function]}
+  getTfootProps={[Function]}
+  getTfootTdProps={[Function]}
+  getTfootTrProps={[Function]}
+  getTheadFilterProps={[Function]}
+  getTheadFilterThProps={[Function]}
+  getTheadFilterTrProps={[Function]}
+  getTheadGroupProps={[Function]}
+  getTheadGroupThProps={[Function]}
+  getTheadGroupTrProps={[Function]}
+  getTheadProps={[Function]}
+  getTheadThProps={[Function]}
+  getTheadTrProps={[Function]}
+  getTrGroupProps={[Function]}
+  getTrProps={[Function]}
+  loading={false}
+  loadingText="Loading..."
+  minRows={10}
+  nextText="Next"
+  noDataText={
+    <span>
+      Hi, undefined please click 
+      <strong
+        style={
+          Object {
+            "color": "blue",
+          }
+        }
+      >
+        Update
+      </strong>
+       to start.
+    </span>
+  }
+  ofText="of"
+  onChange={[Function]}
+  pageSizeOptions={
+    Array [
+      20,
+      50,
+      100,
+    ]
+  }
+  pageText="Page"
+  pivotColumnWidth={200}
+  pivotIDKey="_pivotID"
+  pivotValKey="_pivotVal"
+  previousText="Previous"
+  resizable={true}
+  rowsText="rows"
+  showFilters={false}
+  showPageJump={true}
+  showPageSizeOptions={true}
+  showPagination={true}
+  style={Object {}}
+  subRowsKey="_subRows"
+/>
+`;

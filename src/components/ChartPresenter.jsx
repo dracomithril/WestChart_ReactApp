@@ -2,6 +2,7 @@
  * Created by Gryzli on 06.04.2017.
  */
 import React from "react";
+import PropTypes from 'prop-types';
 import {Jumbotron} from "react-bootstrap";
 import Summary from "./Summary";
 import ChartTable from "./ChartTable";
@@ -10,10 +11,11 @@ const {sorting} = require('./../utils');
 
 
 export default class ChartPresenter extends React.Component {
+    /*istanbul ignore next*/
     componentWillUnmount() {
         console.log('component ChartPresenter unmounted');
     }
-
+    /*istanbul ignore next*/
     componentDidMount() {
         console.log('component ChartPresenter did mount');
     }
@@ -35,6 +37,6 @@ export default class ChartPresenter extends React.Component {
     }
 }
 ChartPresenter.contextTypes = {
-    store: React.PropTypes.object
+    store: PropTypes.object
 };
 ChartPresenter.propTypes = {};

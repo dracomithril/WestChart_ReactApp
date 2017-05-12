@@ -1,16 +1,18 @@
 /**
  * Created by Gryzli on 12.02.2017.
  */
-import React, {PropTypes} from "react";
+import React from "react";
+import PropTypes from 'prop-types';
 import {Accordion, Button, Checkbox, Label, Panel} from "react-bootstrap";
 import DatePicker from "react-datepicker";
 let utils = require('./../utils');
 const action_types = require('../reducers/action_types');
 export default class PickYourDate extends React.Component {
+    /*istanbul ignore next*/
     componentWillUnmount() {
         console.log('component ChartPresenter unmounted');
     }
-
+    /*istanbul ignore next*/
     componentDidMount() {
         console.log('component ChartPresenter did mount');
         const {store} = this.context;
@@ -39,7 +41,7 @@ export default class PickYourDate extends React.Component {
             utils: until2,
             access_token: user.accessToken
         };
-        utils.get_chart_from_server(query_params, store);
+        utils.getChartFromServer(query_params, store);
     }
 
     render() {
@@ -79,7 +81,7 @@ export default class PickYourDate extends React.Component {
                            bsStyle="danger">{`until: ` + new Date(until).toLocaleString('pl-PL')}</Label>
                 </div>}
                 <div style={{textAlign: "center"}}>
-                    <Button onClick={this.updateChart.bind(this)} bsStyle="primary"
+                    <Button id="updateChartB" onClick={this.updateChart.bind(this)} bsStyle="primary"
                             disabled={!!user.isGroupAdmin === false}
                     >Update</Button>
                 </div>

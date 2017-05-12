@@ -1,4 +1,5 @@
-import React, {Component, PropTypes} from "react";
+import React, {Component} from "react";
+import PropTypes from 'prop-types';
 import LoginAlert from "./components/LoginAlert";
 import Footer from "./components/Footer";
 import PagePresenter from "./components/PagePresenter";
@@ -10,10 +11,6 @@ const spotifyApi = new Spotify();
 const Cookies = require('cookies-js');
 
 class App extends Component {
-    componentWillUnmount() {
-        this.unsubscribe();
-    }
-
     componentDidMount() {
         const {store} = this.context;
         this.unsubscribe = store.subscribe(() => this.forceUpdate());
@@ -45,11 +42,13 @@ class App extends Component {
             });
         }
     }
+    componentWillUnmount() {
+        this.unsubscribe();
+    }
 
     render() {
         const {store} = this.context;
-        const state = store.getState();
-        const {user, sp_user} = state;
+        const {user, sp_user} = store.getState();
         const isLogged = user.id !== undefined && sp_user.id !== undefined;
         return (
             <div className="App">

@@ -1,0 +1,49 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<FilteringOption/> renders without crashing ChartPresenter 1`] = `
+<Checkbox
+  bsClass="checkbox"
+  checked={true}
+  disabled={false}
+  id="create"
+  inline={false}
+  name="date_create_control"
+  onChange={[Function]}
+>
+  created in last 
+  <input
+    className="num_days"
+    id="create"
+    min={0}
+    onChange={[Function]}
+    step={1}
+    type="number"
+    value={7}
+  />
+   days
+</Checkbox>
+`;
+
+exports[`<FilteringOption/> should be able to change state of woc checkbox 1`] = `
+<Checkbox
+  bsClass="checkbox"
+  checked={true}
+  disabled={false}
+  id="create"
+  inline={false}
+  name="date_create_control"
+  onChange={[Function]}
+>
+  created in last 
+  <input
+    className="num_days"
+    id="create"
+    min={0}
+    onChange={[Function]}
+    step={1}
+    type="number"
+    value={7}
+  />
+   days
+</Checkbox>
+`;

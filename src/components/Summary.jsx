@@ -2,6 +2,7 @@
  * Created by Gryzli on 09.04.2017.
  */
 import React from "react";
+import PropTypes from 'prop-types';
 import {Badge} from "react-bootstrap";
 let {sorting} = require('./../utils');
 const create_print_list = (elem, index) => {
@@ -12,10 +13,11 @@ const create_print_list = (elem, index) => {
     </div>
 };
 export default class Summary extends React.Component {
+    /*istanbul ignore next*/
     componentWillUnmount() {
         console.log('component Summary unmounted');
     }
-
+    /*istanbul ignore next*/
     componentDidMount() {
         console.log('component Summary did mount');
     }
@@ -43,6 +45,6 @@ export default class Summary extends React.Component {
     }
 }
 Summary.contextTypes = {
-    store: React.PropTypes.object
+    store: PropTypes.object
 };
 Summary.propTypes = {};

@@ -1,49 +1,29 @@
 /**
  * Created by Gryzli on 28.01.2017.
  */
-import React, {PropTypes} from "react";
+import React from "react";
+import PropTypes from 'prop-types';
 import {Button, Jumbotron} from "react-bootstrap";
 import FacebookLogin from "react-facebook-login";
 import "./LoginAlert.css";
 const notGroupAdmin = "Sorry you are not admin of this group.";
-const groupId = '1707149242852457';
-const url = require('url');
-const querystring = require('querystring');
-const Cookies = require('cookies-js');
-let map_user = (response) => {
-    let isGroupAdmin = response.groups.data.filter((elem) => elem.id === groupId && elem.administrator === true);
-    return {
-        accessToken: response.accessToken,
-        email: response.email,
-        first_name: response.first_name,
-        expiresIn: response.expiresIn,
-        id: response.id,
-        name: response.name,
-        signedRequest: response.signedRequest,
-        userID: response.userID,
-        picture_url: response.picture.data.url,
-        isGroupAdmin: isGroupAdmin
-    };
-};
+let utils = require('./../../utils');
 
 
 export default class LoginAlert extends React.Component {
-
+    /*istanbul ignore next*/
     componentDidMount() {
-        const {store} = this.context;
-        this.unsubscribe = store.subscribe(() => this.forceUpdate());
-
         console.log('component LoginAlert did mount');
     }
-
+    /*istanbul ignore next*/
     componentWillUnmount() {
-        this.unsubscribe();
         console.log('component LoginAlert unmounted');
     }
 
     render() {
         const {store} = this.context;
         const {user, sp_user} = store.getState();
+
 
         return (<Jumbotron bsClass="login-info">
             <h4>{'To start working witch us you need to login to facebook and spotify.'}<i className="fa fa-heart"/>
@@ -55,33 +35,14 @@ export default class LoginAlert extends React.Component {
                 language="pl_PL"
                 autoLoad={true}
                 scope="public_profile,email,user_managed_groups"
-                callback={(response) => {
-                    if (!response.error) {
-                        store.dispatch({type: 'UPDATE_USER', user: map_user(response)});
-                    } else {
-                        console.error('login error.');
-                        console.error(response.error);
-                    }
-                }}
+                callback={(response) => store.dispatch({type: 'UPDATE_USER',response:response})}
                 fields="id,email,name,first_name,picture,groups{administrator}"
                 cssClass="btn btn-social btn-facebook"
                 icon={"fa fa-facebook"}
                 version="v2.8"
             />}
             {sp_user.id === undefined &&
-            <Button className="btn btn-social btn-spotify" onClick={() => {
-                fetch('/api/login').then((response) => {
-                    return response.text()
-                }).then((path) => {
-                    const urlObj = url.parse(path);
-                    const query = querystring.parse(urlObj.query);
-                    Cookies.set('spotify_auth_state', query.state);
-                    console.log(path);
-                    window.location = path
-                }).catch((resp) => {
-                    console.log(resp);
-                })
-            }}><i className="fa fa-spotify"/>Login to
+            <Button className="btn btn-social btn-spotify" onClick={utils.loginToSpotify}><i className="fa fa-spotify"/>Login to
                 spotify</Button>}
         </Jumbotron>)
     }

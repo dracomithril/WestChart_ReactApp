@@ -3,19 +3,22 @@
  */
 
 import filters_def from "./filters";
-const woc_string = "Wielkie Ogarnianie Charta";
 import qs from "querystring";
-const action_types= require('./reducers/action_types');
+const woc_string = "Wielkie Ogarnianie Charta";
+const url = require('url');
+const querystring = require('querystring');
+const Cookies = require('cookies-js');
+const action_types = require('./reducers/action_types');
 /**
  *
  * @param store
  * @returns {{view_chart: (*), error_days: Array.<*>}}
  * @private
  */
-function filterChart(store) {
+export function filterChart(store) {
 
     let songs_per_day_arr = {};
-    let {chart, filters,until, songs_per_day} = store.getState();
+    let {chart, filters, until, songs_per_day} = store.getState();
     const view_chart = chart.filter((elem) => {
         let doTest = (filter) => {
             if (filter.type === 'countDays') {
@@ -26,7 +29,8 @@ function filterChart(store) {
             }
         };
         let results = filters_def.control.filter(e => {
-            return filters[e.input.name].checked});
+            return filters[e.input.name].checked
+        });
         const map = results.map(doTest);
         let res1 = map.reduce((pr, cr) => pr && cr);
 
@@ -55,10 +59,18 @@ function filterChart(store) {
 
     return {view_chart, error_days};
 }
-let sorting = {
+export const sorting = {
+    /**
+     * descending
+     * @param array
+     */
     reaction: (array) => {
         array.sort((a, b) => b.reactions_num - a.reactions_num)
     },
+    /**
+     * ascending
+     * @param array
+     */
     who: (array) => {
         array.sort((a, b) => {
             if (a.from_user < b.from_user)
@@ -69,9 +81,17 @@ let sorting = {
         });
 
     },
+    /**
+     * ascending
+     * @param array
+     */
     when: (array) => {
-        array.sort((a, b) => b.added_time ? b.added_time.getTime() : 0 - a.added_time ? a.added_time.getTime() : 0);
+        array.sort((a, b) => (a.added_time ? a.added_time.getTime() : 0) - (b.added_time ? b.added_time.getTime() : 0));
     },
+    /**
+     * ascending
+     * @param array
+     */
     what: (array) => {
         array.sort((a, b) => {
             if (a.link.name < b.link.name)
@@ -82,35 +102,84 @@ let sorting = {
         });
     }
 };
-let get_chart_from_server = function (query_params, store) {
+export const getChartFromServer = function (query_params, store) {
     let url = 'api/get_chart?' + qs.stringify(query_params);
     console.time('client-obtain-chart');
-    fetch(url).then((resp) => {
+    return fetch(url)
+        .then((resp) => {
             console.log('obtained chart list');
             console.timeEnd('client-obtain-chart');
             if (resp.status === 200) {
                 return resp.json()
             }
             return Promise.reject(resp);
-        }
-    ).then((b) => {
-            // that.setState(b);
+        })
+        .then((b) => {
             store.dispatch({type: action_types.UPDATE_CHART, chart: b.chart});
             store.dispatch({type: action_types.UPDATE_LAST_UPDATE, date: b.last_update});
             store.dispatch({type: action_types.CHANGE_SHOW_WAIT, show: false});
 
-        }
-    ).catch(err => {
-        store.dispatch({type: action_types.CHANGE_SHOW_WAIT, show: false});
-        console.error('Error in fetch chart.');
-        console.error(err);
-    });
+        })
+        .catch(err => {
+            store.dispatch({type: action_types.CHANGE_SHOW_WAIT, show: false});
+            console.error('Error in fetch chart.');
+            console.error(err);
+        });
+};
+export const loginToSpotify = function () {
+    return fetch('/api/login')
+        .then((response) => {
+            return response.text()
+        }).then((path) => {
+            const urlObj = url.parse(path);
+            const query = querystring.parse(urlObj.query);
+            Cookies.set('spotify_auth_state', query.state);
+            console.log(path);
+            window.location.assign(path);
+            return Promise.resolve();
+        }).catch((err) => {
+            console.log(err);
+        })
 };
 
-module.exports = {
+export const getArtist_Title = function (name) {
+    /** regex for artist title
+     *[group 1-2] youtube
+     *[group 1] artist
+     * [group 2] title
+     *[group 3-4] spotify
+     * [group 3] title
+     * [group 4] artist
+     */
+    const regex = /^(.*?)\s-\s(.*?)(?:\s[([](?:[Oo]ff.*l\s(?:[Vv]ideo|[Aa]udio)?|(?:Audio)?)[)\]])?(?:\sft.(.*)?)?$|^(.*?)(?:,\s.*s.*by)\s(.*?)(?:\son.*[Ss]potify)$/g;
+    let title, artist;
+    const m = regex.exec(name);
+    if (m[1] && m[2]) {
+        artist = m[1];
+        title = m[2];
+    } else {
+        artist = m[5];
+        title = m[4];
+    }
+
+    return {title, artist}
+};
+
+const exp = {
     filterChart,
+    loginToSpotify,
     sorting,
     subtractDaysFromDate: filters_def.subtractDaysFromDate,
     woc_string,
-    get_chart_from_server
+    getChartFromServer, getArtist_Title
 };
+module.exports = exp;
+export default {
+    filterChart,
+    loginToSpotify,
+    sorting,
+    subtractDaysFromDate: filters_def.subtractDaysFromDate,
+    woc_string,
+    getChartFromServer,
+    getArtist_Title
+}

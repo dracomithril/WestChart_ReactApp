@@ -2,6 +2,7 @@
  * Created by Gryzli on 29.03.2017.
  */
 import React from "react";
+import PropTypes from 'prop-types';
 import {Panel} from "react-bootstrap";
 export default class SongsPerDay extends React.Component {
     render() {
@@ -9,30 +10,37 @@ export default class SongsPerDay extends React.Component {
         const {songs_per_day} = store.getState();
         const errorDays = this.props.error_days;
         let err_days = errorDays.map((elem) => {
-            return <div key={elem.org}><span style={{color: elem.color}}>{new Date(elem.org).toDateString()}</span>
+            return <div key={elem.org}>
+                <span style={{color: elem.color}}>{new Date(elem.org).toDateString()}</span>
             </div>;
         });
+        let header = (<div>
+            <strong style={{paddingRight: 20}}>{'songs per day'}</strong>
+            <input type="number" value={songs_per_day} className="num_days"
+                   name="songs_per_day" step={1} max={10} min={1}
+                   onChange={(e) => store.dispatch({
+                       type: 'UPDATE_SONGS_PER_DAY',
+                       days: Number(e.target.value)
+                   })}/>
+        </div>);
         return (<Panel
-            header={<div><strong style={{paddingRight: 20}}>{'songs per day'}
-            </strong><input type="number" value={songs_per_day} className="num_days"
-                            name="songs_per_day" step={1} max={10} min={1}
-                            onChange={(e) => store.dispatch({
-                                type: 'UPDATE_SONGS_PER_DAY',
-                                days: Number(e.target.value)
-                            })}/>
-            </div>}
+            header={header}
             bsStyle={err_days.length !== 0 ? "danger" : "success"}
             footer={err_days.length !== 0 && ("miss mach count: " + err_days.length)}>
 
             {err_days.length !== 0 &&
-            <div><strong>Date:</strong>(<span style={{color: 'blue', marginRight: 5}}>not enough</span><span
-                style={{color: 'red'}}>to many</span>)<br/>
-                {err_days}
+            <div>
+                <strong>Date:</strong>
+                (<span style={{color: 'blue', marginRight: 5}}>not enough</span>
+                <span style={{color: 'red'}}>to many</span>)<br/>
+                <div id="error_list">
+                    {err_days}
+                </div>
             </div>}
         </Panel>);
     }
 }
 SongsPerDay.contextTypes = {
-    store: React.PropTypes.object
+    store: PropTypes.object
 };
 SongsPerDay.propTypes = {};

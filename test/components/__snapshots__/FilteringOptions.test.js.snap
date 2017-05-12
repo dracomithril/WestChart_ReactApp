@@ -1,0 +1,335 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<FilteringOptions/> renders without crashing ChartPresenter 1`] = `
+<Accordion>
+  <Panel
+    bsClass="panel"
+    bsStyle="info"
+    defaultExpanded={false}
+    header="Filters"
+  >
+    <Checkbox
+      bsClass="checkbox"
+      checked={true}
+      disabled={false}
+      id="woc"
+      inline={false}
+      onChange={[Function]}
+    >
+      <OverlayTrigger
+        defaultOverlayShown={false}
+        overlay={
+          <Tooltip
+            bsClass="tooltip"
+            id="woc"
+            placement="right"
+          >
+            Will show all [Wielkie Ogarnianie Charta]
+          </Tooltip>
+        }
+        placement="top"
+        trigger={
+          Array [
+            "hover",
+            "focus",
+          ]
+        }
+      >
+        <span>
+          [
+          Wielkie Ogarnianie Charta
+          ]
+        </span>
+      </OverlayTrigger>
+    </Checkbox>
+    <span>
+      Show only posts:
+    </span>
+    <br />
+    <div
+      style={
+        Object {
+          "paddingLeft": 10,
+        }
+      }
+    >
+      <FilterOption
+        check={[Function]}
+        control={
+          Object {
+            "id": "add",
+            "name": "date_added_control",
+          }
+        }
+        description={
+          Object {
+            "end": " days",
+            "start": "added in last ",
+          }
+        }
+        input={
+          Object {
+            "max": 31,
+            "name": "add_control",
+          }
+        }
+        type="countDays"
+        valueName="added_time"
+      />
+      <FilterOption
+        check={[Function]}
+        control={
+          Object {
+            "id": "create",
+            "name": "date_create_control",
+          }
+        }
+        description={
+          Object {
+            "end": " days",
+            "start": "created in last ",
+          }
+        }
+        input={
+          Object {
+            "max": 31,
+            "name": "create_control",
+          }
+        }
+        type="countDays"
+        valueName="created_time"
+      />
+      <FilterOption
+        check={[Function]}
+        control={
+          Object {
+            "id": "update",
+            "name": "date_update_control",
+          }
+        }
+        description={
+          Object {
+            "end": " days",
+            "start": "updated in last ",
+          }
+        }
+        input={
+          Object {
+            "max": 31,
+            "name": "update_control",
+          }
+        }
+        type="countDays"
+        valueName="updated_time"
+      />
+      <FilterOption
+        check={[Function]}
+        control={
+          Object {
+            "id": "more",
+            "name": "more_then_control",
+          }
+        }
+        description={
+          Object {
+            "start": "more then ",
+          }
+        }
+        input={
+          Object {
+            "name": "more_control",
+          }
+        }
+        type="more_or_less"
+      />
+      <FilterOption
+        check={[Function]}
+        control={
+          Object {
+            "id": "less",
+            "name": "less_then_control",
+          }
+        }
+        description={
+          Object {
+            "start": "less then ",
+          }
+        }
+        input={
+          Object {
+            "name": "less_control",
+          }
+        }
+        type="more_or_less"
+      />
+    </div>
+  </Panel>
+</Accordion>
+`;
+
+exports[`<FilteringOptions/> should be able to change state of woc checkbox 1`] = `
+<Accordion>
+  <Panel
+    bsClass="panel"
+    bsStyle="info"
+    defaultExpanded={false}
+    header="Filters"
+  >
+    <Checkbox
+      bsClass="checkbox"
+      checked={true}
+      disabled={false}
+      id="woc"
+      inline={false}
+      onChange={[Function]}
+    >
+      <OverlayTrigger
+        defaultOverlayShown={false}
+        overlay={
+          <Tooltip
+            bsClass="tooltip"
+            id="woc"
+            placement="right"
+          >
+            Will show all [Wielkie Ogarnianie Charta]
+          </Tooltip>
+        }
+        placement="top"
+        trigger={
+          Array [
+            "hover",
+            "focus",
+          ]
+        }
+      >
+        <span>
+          [
+          Wielkie Ogarnianie Charta
+          ]
+        </span>
+      </OverlayTrigger>
+    </Checkbox>
+    <span>
+      Show only posts:
+    </span>
+    <br />
+    <div
+      style={
+        Object {
+          "paddingLeft": 10,
+        }
+      }
+    >
+      <FilterOption
+        check={[Function]}
+        control={
+          Object {
+            "id": "add",
+            "name": "date_added_control",
+          }
+        }
+        description={
+          Object {
+            "end": " days",
+            "start": "added in last ",
+          }
+        }
+        input={
+          Object {
+            "max": 31,
+            "name": "add_control",
+          }
+        }
+        type="countDays"
+        valueName="added_time"
+      />
+      <FilterOption
+        check={[Function]}
+        control={
+          Object {
+            "id": "create",
+            "name": "date_create_control",
+          }
+        }
+        description={
+          Object {
+            "end": " days",
+            "start": "created in last ",
+          }
+        }
+        input={
+          Object {
+            "max": 31,
+            "name": "create_control",
+          }
+        }
+        type="countDays"
+        valueName="created_time"
+      />
+      <FilterOption
+        check={[Function]}
+        control={
+          Object {
+            "id": "update",
+            "name": "date_update_control",
+          }
+        }
+        description={
+          Object {
+            "end": " days",
+            "start": "updated in last ",
+          }
+        }
+        input={
+          Object {
+            "max": 31,
+            "name": "update_control",
+          }
+        }
+        type="countDays"
+        valueName="updated_time"
+      />
+      <FilterOption
+        check={[Function]}
+        control={
+          Object {
+            "id": "more",
+            "name": "more_then_control",
+          }
+        }
+        description={
+          Object {
+            "start": "more then ",
+          }
+        }
+        input={
+          Object {
+            "name": "more_control",
+          }
+        }
+        type="more_or_less"
+      />
+      <FilterOption
+        check={[Function]}
+        control={
+          Object {
+            "id": "less",
+            "name": "less_then_control",
+          }
+        }
+        description={
+          Object {
+            "start": "less then ",
+          }
+        }
+        input={
+          Object {
+            "name": "less_control",
+          }
+        }
+        type="more_or_less"
+      />
+    </div>
+  </Panel>
+</Accordion>
+`;
