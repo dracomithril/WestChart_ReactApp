@@ -30,7 +30,6 @@ export default class PlaylistForm extends Component {
         let list = playlist_name.split(' ').join('_');
         store.dispatch({type: action_types.UPDATE_PLAYLIST_NAME, value: list});
         const search = selected.map((elem) => {
-
             let entry = elem.link.title.split('-');
             return ({
                 artist: entry[0],
