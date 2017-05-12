@@ -36,6 +36,7 @@ export default class PlaylistForm extends Component {
             return ({
                 artist: entry.artist,
                 title: entry.title,
+                full_title:elem.link.title,
                 id: elem.id,
                 items: [],
                 selected: {}

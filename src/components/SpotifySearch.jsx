@@ -34,10 +34,8 @@ export default class SpotifySearch extends React.Component {
             {search_list_view.length > 0 && <table>
                 <thead>
                 <tr>
-                    <td>Artist:</td>
-                    <td id="flip"/>
-                    <td>Title:</td>
-                    <td>options:</td>
+                    <td>Artist & Title</td>
+                    <td>Options:</td>
                     <td>Selected:</td>
                 </tr>
                 </thead>

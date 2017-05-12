@@ -70,19 +70,19 @@ export default class RowSpotifySearch extends React.Component {
                 console.error('error obtaining track', e.message)
             })
         };
-        return (<tr>
-            <td><input style={input_style} type="text" id={search_index} value={search_elem.artist || ''}
+        return (<tr >
+
+            <td style={{border:"1px solid black"}}>
+                <span>{search_elem.full_title}</span><br/>
+                <input style={input_style} type="text" id={search_index} value={search_elem.artist || ''}
                        onChange={update_artist}/>
-            </td>
-            <td>
                 <button onClick={()=>{
                     store.dispatch({
                         type: action_types.SWAP_FIELDS,
                         id: search_index
                     });
                 }}><i className="fa fa-refresh" aria-hidden="true"/></button>
-            </td>
-            <td><input style={input_style} type="text" id={search_index} value={search_elem.title || ''}
+                <input style={input_style} type="text" id={search_index} value={search_elem.title || ''}
                        onChange={update_title}/>
             </td>
             <td>
