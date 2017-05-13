@@ -19,39 +19,40 @@ export default class ChartTable extends React.Component {
         const data = this.props.data;
         const count = data.length;
         const columns = [{
-            header: props => <h3 id="chart_table">{'WCS Chart '}
+            Header: () => <h3 id="chart_table">{'WCS Chart '}
                 <small>{'total ' + count}</small>
             </h3>,
             columns: [
                 {
                     sortable: false,
                     resizable: false,
-                    header: props => <Checkbox bsClass="checkbox1" onClick={() => {
+                    Header: () => <Checkbox bsClass="checkbox1" onClick={() => {
                         store.dispatch({type: 'TOGGLE_ALL'})
                     }}/>,
                     width: 40,
                     accessor: 'selected',
-                    render: props => <Checkbox bsClass="checkbox1" checked={props.value} id={props.row.id}
+                    Cell: props =>{
+                        return <Checkbox bsClass="checkbox1" checked={props.value} id={props.row.id}
                                                name="selected"
                                                onChange={(e) => {
                                                    store.dispatch({
                                                        type: 'TOGGLE_SELECTED', id: e.target.id,
                                                        checked: e.target.checked
                                                    })
-                                               }}/>
+                                               }}/>}
                 },
                 {
-                    header: 'user',
+                    Header: 'user',
                     resizable: true,
                     minWidth: 200,
                     maxWidth: 300,
                     accessor: 'from_user', // String-based value accessors !
-                    render: props => <span>{props.value}</span>
+                    Cell: props => <span>{props.value}</span>
                 }, {
-                    header: 'fb msg',
+                    Header: 'fb msg',
                     accessor: 'message',
                     maxWidth: 80,
-                    render: props => {
+                    Cell: props => {
                         if (props.value !== undefined) {
                             return <OverlayTrigger placement="bottom" overlay={<Tooltip
                                 id="tooltip">{props.value}</Tooltip>}><Label
@@ -60,31 +61,31 @@ export default class ChartTable extends React.Component {
                         return <Label bsStyle="danger">no msg</Label>
                     }
                 }, {
-                    header: 'reactions count',
+                    Header: 'reactions count',
                     accessor: 'reactions_num',
                     sort: 'dsc',
                     minWidth: 60,
                     maxWidth: 80
                 }, {
-                    header: 'crated time',
+                    Header: 'crated time',
                     id: 'createTime',
 
                     resizable: true,
                     minWidth: 150,
                     maxWidth: 200,
                     accessor: d => getTime(d.created_time),
-                    render: props => <span>{formatDate(props.value)}</span>
+                    Cell: props => <span>{formatDate(props.value)}</span>
                 },
                 {
-                    header: 'added time',
+                    Header: 'added time',
                     id: 'addedTime',
                     resizable: true,
                     maxWidth: 150,
                     accessor: d => d.added_time === undefined ? 0 : getTime(d.added_time),
-                    render: props => {
+                    Cell: props => {
                         return props.value === 0 ? <i className="fa fa-minus-circle" style={{color: 'red'}}/> :
                             <OverlayTrigger placement="top" overlay={<Tooltip
-                                id="tooltip">{props.row.added_by}</Tooltip>}><span>{new Date(props.value).toLocaleString('pl-PL', {
+                                id="tooltip">{props.row._original.added_by}</Tooltip>}><span>{new Date(props.value).toLocaleString('pl-PL', {
                                 year: "numeric",
                                 month: "2-digit",
                                 day: "numeric"
@@ -92,22 +93,23 @@ export default class ChartTable extends React.Component {
                     }
 
                 }, {
-                    header: 'last update',
+                    Header: 'last update',
                     id: 'lastUpdate',
                     minWidth: 150,
                     maxWidth: 200,
                     accessor: d => getTime(d.updated_time),
-                    render: props => <span>{formatDate(props.value)}</span>
+                    Cell: props => <span>{formatDate(props.value)}</span>
                 },
                 {
-                    header: props => <span>link</span>, // Custom header components!
-                    accessor: d => d.link.title,
+                    Header: props => <span>link</span>, // Custom header components!
+                    accessor: d => d.link,
                     minWidth: 200,
                     width: 300,
                     maxWidth: 600,
                     id: 'yt_link',
-                    render: props => props.row.link.url === undefined ? (<span>{props.value}</span>) : (
-                        <a href={props.row.link.url} target="_newtab">{props.value}</a>)
+                    Cell: props => {
+                        return props.value.url === undefined ? (<span>{props.value.title}</span>) : (
+                        <a href={props.value.url} target="_newtab">{props.value.title}</a>)}
                 }
             ]
         }
