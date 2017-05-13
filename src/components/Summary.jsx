@@ -5,6 +5,7 @@ import React from "react";
 import PropTypes from 'prop-types';
 import {Badge} from "react-bootstrap";
 let {sorting} = require('./../utils');
+import './components.css';
 const create_print_list = (elem, index) => {
     return <div key={elem.id}>
         <span>{index + 1}</span>
@@ -28,7 +29,7 @@ export default class Summary extends React.Component {
         const sorting_options = Object.keys(sorting)
             .map((elem, index) => <option key={index} value={elem}>{elem.toLowerCase()}</option>);
         let print_list = this.props.selected.map(create_print_list);
-        return (<div>
+        return (<div className="summary">
             <h3 id="list">{'List by: '}
                 <select name="list_sort" value={list_sort}
                         onChange={(e) => store.dispatch({

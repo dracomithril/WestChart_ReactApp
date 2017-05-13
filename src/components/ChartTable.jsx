@@ -22,7 +22,10 @@ export default class ChartTable extends React.Component {
             Header: () => <h3 id="chart_table">{'WCS Chart '}
                 <small>{'total ' + count}</small>
             </h3>,
-            columns: [
+            columns: [{
+                show: false,
+                accessor: 'id',
+            },
                 {
                     sortable: false,
                     resizable: false,
@@ -31,25 +34,26 @@ export default class ChartTable extends React.Component {
                     }}/>,
                     width: 40,
                     accessor: 'selected',
-                    Cell: props =>{
+                    Cell: props => {
                         return <Checkbox bsClass="checkbox1" checked={props.value} id={props.row.id}
-                                               name="selected"
-                                               onChange={(e) => {
-                                                   store.dispatch({
-                                                       type: 'TOGGLE_SELECTED', id: e.target.id,
-                                                       checked: e.target.checked
-                                                   })
-                                               }}/>}
+                                         name="selected"
+                                         onChange={(e) => {
+                                             store.dispatch({
+                                                 type: 'TOGGLE_SELECTED', id: e.target.id,
+                                                 checked: e.target.checked
+                                             })
+                                         }}/>
+                    }
                 },
                 {
-                    Header: 'user',
+                    Header: <i className="fa fa-user-circle" aria-hidden="true">user</i>,
                     resizable: true,
                     minWidth: 200,
                     maxWidth: 300,
                     accessor: 'from_user', // String-based value accessors !
                     Cell: props => <span>{props.value}</span>
                 }, {
-                    Header: 'fb msg',
+                    Header: <i className="fa fa-envelope-o" aria-hidden="true"/>,
                     accessor: 'message',
                     maxWidth: 80,
                     Cell: props => {
@@ -61,7 +65,7 @@ export default class ChartTable extends React.Component {
                         return <Label bsStyle="danger">no msg</Label>
                     }
                 }, {
-                    Header: 'reactions count',
+                    Header: <i className="fa fa-thumbs-o-up" aria-hidden="true"/>,
                     accessor: 'reactions_num',
                     sort: 'dsc',
                     minWidth: 60,
@@ -101,7 +105,7 @@ export default class ChartTable extends React.Component {
                     Cell: props => <span>{formatDate(props.value)}</span>
                 },
                 {
-                    Header: props => <span>link</span>, // Custom header components!
+                    Header: <i className="fa fa-external-link" aria-hidden="true"/>, // Custom header components!
                     accessor: d => d.link,
                     minWidth: 200,
                     width: 300,
@@ -109,7 +113,8 @@ export default class ChartTable extends React.Component {
                     id: 'yt_link',
                     Cell: props => {
                         return props.value.url === undefined ? (<span>{props.value.title}</span>) : (
-                        <a href={props.value.url} target="_newtab">{props.value.title}</a>)}
+                            <a href={props.value.url} target="_newtab">{props.value.title}</a>)
+                    }
                 }
             ]
         }
