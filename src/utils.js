@@ -5,9 +5,7 @@
 import filters_def from "./filters";
 import qs from "querystring";
 const woc_string = "Wielkie Ogarnianie Charta";
-const url = require('url');
-const querystring = require('querystring');
-const Cookies = require('cookies-js');
+
 const action_types = require('./reducers/action_types');
 /**
  *
@@ -126,20 +124,26 @@ export const getChartFromServer = function (query_params, store) {
             console.error(err);
         });
 };
-export const loginToSpotify = function () {
-    return fetch('/api/login')
-        .then((response) => {
-            return response.text()
-        }).then((path) => {
-            const urlObj = url.parse(path);
-            const query = querystring.parse(urlObj.query);
-            Cookies.set('spotify_auth_state', query.state);
-            console.log(path);
-            window.location.assign(path);
-            return Promise.resolve();
-        }).catch((err) => {
-            console.log(err);
-        })
+
+export const UpdateChart = function (store) {
+    store.dispatch({type:action_types.CHANGE_SHOW_WAIT,show:true});
+    const {user, enable_until, start_date, show_last} = store.getState();
+
+    let until = enable_until ? start_date.toDate() : new Date();
+
+    let since = filters_def.subtractDaysFromDate(until, show_last);
+    const since2 = since.toISOString();
+    const until2 = until.toISOString();
+    store.dispatch({type: 'UPDATE_SINCE', date: since2});
+    store.dispatch({type: 'UPDATE_UNTIL', date: until2});
+
+    const query_params = {
+        days: undefined,
+        since: since2,
+        utils: until2,
+        access_token: user.accessToken
+    };
+    getChartFromServer(query_params, store);
 };
 
 export const getArtist_Title = function (name) {
@@ -167,19 +171,18 @@ export const getArtist_Title = function (name) {
 
 const exp = {
     filterChart,
-    loginToSpotify,
     sorting,
     subtractDaysFromDate: filters_def.subtractDaysFromDate,
     woc_string,
-    getChartFromServer, getArtist_Title
+    getChartFromServer, getArtist_Title, UpdateChart
 };
 module.exports = exp;
 export default {
     filterChart,
-    loginToSpotify,
     sorting,
     subtractDaysFromDate: filters_def.subtractDaysFromDate,
     woc_string,
     getChartFromServer,
-    getArtist_Title
+    getArtist_Title,
+    UpdateChart
 }

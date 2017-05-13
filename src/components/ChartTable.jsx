@@ -25,11 +25,11 @@ export default class ChartTable extends React.Component {
             columns: [
                 {
                     sortable: false,
+                    resizable: false,
                     header: props => <Checkbox bsClass="checkbox1" onClick={() => {
                         store.dispatch({type: 'TOGGLE_ALL'})
                     }}/>,
-                    minWidth: 30,
-                    maxWidth: 60,
+                    width: 40,
                     accessor: 'selected',
                     render: props => <Checkbox bsClass="checkbox1" checked={props.value} id={props.row.id}
                                                name="selected"
@@ -42,6 +42,7 @@ export default class ChartTable extends React.Component {
                 },
                 {
                     header: 'user',
+                    resizable: true,
                     minWidth: 200,
                     maxWidth: 300,
                     accessor: 'from_user', // String-based value accessors !
@@ -63,10 +64,12 @@ export default class ChartTable extends React.Component {
                     accessor: 'reactions_num',
                     sort: 'dsc',
                     minWidth: 60,
-                    maxWidth: 100
+                    maxWidth: 80
                 }, {
                     header: 'crated time',
                     id: 'createTime',
+
+                    resizable: true,
                     minWidth: 150,
                     maxWidth: 200,
                     accessor: d => getTime(d.created_time),
@@ -75,6 +78,7 @@ export default class ChartTable extends React.Component {
                 {
                     header: 'added time',
                     id: 'addedTime',
+                    resizable: true,
                     maxWidth: 150,
                     accessor: d => d.added_time === undefined ? 0 : getTime(d.added_time),
                     render: props => {
@@ -109,7 +113,7 @@ export default class ChartTable extends React.Component {
         }
         ];
         return (<ReactTable data={data} className="-striped -highlight" pageSizeOptions={[20, 50, 100]}
-                            columns={columns} defaultPageSize={20} minRows={10}
+                            columns={columns} defaultPageSize={20} minRows={10} resizable={false}
                             noDataText={<span>{`Hi, ${user.first_name} please click `}<strong style={{color: "blue"}}>Update</strong>{` to start.`}</span>}/>);
     }
 }

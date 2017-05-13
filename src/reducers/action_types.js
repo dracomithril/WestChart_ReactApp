@@ -1,4 +1,4 @@
-const action_types = {
+export const action_types = {
     CHANGE_SHOW_WAIT:'CHANGE_SHOW_WAIT',
     SWAP_FIELDS: 'SWAP_FIELDS',
     TOGGLE_ALL: 'TOGGLE_ALL',
@@ -23,5 +23,5 @@ const action_types = {
     UPDATE_SHOW_LAST: 'UPDATE_SHOW_LAST',
 
 };
-
+export default {action_types}
 module.exports = action_types;

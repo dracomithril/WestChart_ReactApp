@@ -93,6 +93,9 @@ const search_list = (state = [], action) => {
             let entry = _.clone(state);
             const entry2 = entry[action.id];
             entry2[action.field] = action.value;
+            if(action.field==='items'){
+                entry2.selected=action.value[0];
+            }
             return entry;
         case action_types.SWAP_FIELDS:
             let entry1 = _.clone(state);
@@ -159,10 +162,10 @@ const filters = (state = {}, action) => {
     }
 };
 const isPlaylistPrivate= (state = false, action) => {
-    return action.type === action_types.TOGGLE_IS_PRIVATE ? action.checked : state;
+    return action.type === action_types.TOGGLE_IS_PRIVATE ? action.value : state;
 };
 const sp_playlist_info = (state = {url:null,pl_name:''}, action) => {
-    return action.type === action_types.UPDATE_PLAYLIST ? action.value : state;
+    return action.type === action_types.UPDATE_PLAYLIST_INFO ? action.value : state;
 };
 
 let reducers = {

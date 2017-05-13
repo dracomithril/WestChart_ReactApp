@@ -90,6 +90,7 @@
 }
 .spotify_sumary{
     border: 2px solid blue;
+    border-radius: 10px;
     padding: 4px;
     margin: 4px;
 }

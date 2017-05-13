@@ -4,43 +4,48 @@
 import React from "react";
 import PropTypes from "prop-types";
 import {Button, DropdownButton, MenuItem} from "react-bootstrap";
-import Spotify from "spotify-web-api-node";
-const spotifyApi = new Spotify();
+import spotify_utils from './../spotify_utils';
 const action_types = require('./../reducers/action_types');
+import './components.css'
+const TrackPreview = (props) => {
+    const track = props.track;
+    const artists = track.artists.map((elem) => elem.name).join(' & ');
+    const audio = track.preview_url !== null ?
+        <audio controls src={track.preview_url} type="audio/mpeg"/> : <span style={{color: "red"}}>No preview</span>;
+    return (<div className="track_view">
+        <strong>{track.name}</strong><br/>
+        {audio}
+        <div >
+            <span>by:</span>
+            <span style={{paddingLeft: 10, color: "green"}}>{artists}</span>
+        </div>
+    </div>)
+};
+TrackPreview.propTypes = {
+    track: PropTypes.object
+};
 
 
 export default class RowSpotifySearch extends React.Component {
     render() {
         const {store} = this.context;
-        const search_index = this.props.search_index;
         const search_elem = this.props.search_elem;
-        const create_menuItems = (track, ind) => {
-            const artists = track.artists.map((elem) => elem.name).join(' & ');
+        const create_menuItems = (track) => {
             let selectTrack = () => {
-                console.log('track was selected ', track, ind);
+                console.log('track was selected %j', track);
                 store.dispatch({
                     type: action_types.UPDATE_SINGLE_SEARCH,
                     field: 'selected',
                     value: track,
-                    id: search_index
+                    id: search_elem.search_id
                 })
             };
-            return (<MenuItem value={track.name} key={ind} id={search_elem.id + '-' + ind} onClick={selectTrack}>
-                <div>
-                    <strong>{track.name}</strong><br/>
-                    <span>by:</span>
-                    <audio controls>
-                        <source src={track.preview_url} type="audio/mpeg"/>
-                        {'Your browser does not support the audio element.'}
-                    </audio>
-                    <div style={{paddingLeft: 10, color: "green"}}>
-                        <span style={{paddingRight: 5}}>{artists}</span>
-                    </div>
-                </div>
+            return (<MenuItem key={track.id} id={'mi_select_track_' + search_elem.id} onClick={selectTrack}>
+                <TrackPreview track={track}/>
             </MenuItem>)
         };
         const items = search_elem.items.map(create_menuItems);
-        const condition = search_elem.selected !== undefined && search_elem.selected.preview_url !== undefined;
+
         const update_artist = (e) => {
             store.dispatch({
                 type: action_types.UPDATE_SINGLE_SEARCH,
@@ -58,49 +63,43 @@ export default class RowSpotifySearch extends React.Component {
             })
         };
         let input_style = {paddingRight: 5};
-        let searchSpotifyTracks = () => {
-            spotifyApi.searchTracks(`${search_elem.artist} ${search_elem.title}`).then((data) => {
-                store.dispatch({
-                    type: action_types.UPDATE_SINGLE_SEARCH,
-                    field: 'items',
-                    value: data.body.tracks.items,
-                    id: search_index
-                });
-            }).catch((e) => {
-                console.error('error obtaining track', e.message)
-            })
-        };
+        let selected_track = search_elem.selected;
+        const condition = selected_track !== undefined && selected_track.preview_url !== undefined;
         return (<tr >
 
-            <td style={{border:"1px solid black"}}>
-                <span>{search_elem.full_title}</span><br/>
-                <input style={input_style} type="text" id={search_index} value={search_elem.artist || ''}
-                       onChange={update_artist}/>
-                <button onClick={()=>{
-                    store.dispatch({
-                        type: action_types.SWAP_FIELDS,
-                        id: search_index
-                    });
-                }}><i className="fa fa-refresh" aria-hidden="true"/></button>
-                <input style={input_style} type="text" id={search_index} value={search_elem.title || ''}
-                       onChange={update_title}/>
+            <td >
+                <div className="track_view">
+                    <span>{search_elem.full_title}</span><br/>
+                    <input style={input_style} type="text" id={search_elem.search_id}
+                           value={search_elem.artist || ''}
+                           onChange={update_artist}/>
+                    <button onClick={() => {
+                        store.dispatch({
+                            type: action_types.SWAP_FIELDS,
+                            id: search_elem.search_id
+                        });
+                    }}><i className="fa fa-refresh" aria-hidden="true"/></button>
+                    <input style={input_style} type="text" id={search_elem.search_id}
+                           value={search_elem.title || ''}
+                           onChange={update_title}/>
+                </div>
             </td>
-            <td>
-                <Button id={'button-' + search_elem.id} onClick={searchSpotifyTracks}>search
-                </Button>
-            </td>
-            <td>
-                {items.length > 0 &&
-                <DropdownButton title={'select'} key={search_index} id={`dropdown-basic-${search_index}`}>
-                    {items}
-                </DropdownButton>}
+            <td >
+                <div>
+                    <Button id={'button-' + search_elem.id} onClick={() => {
+                        spotify_utils.searchForMusic(search_elem, store);
+                    }} bsStyle="info">search
+                    </Button>
+                    <DropdownButton disabled={items.length === 0} title={'select'} key={search_elem.search_id}
+                                    id={`dropdown-basic-${search_elem.search_id}`} bsStyle={items.length === 0?"warning":"success"}>
+                        {items}
+                    </DropdownButton>
+                </div>
             </td>
             <td>
                 {condition &&
-                <audio controls>
-                    <source src={search_elem.selected.preview_url} type="audio/mpeg"/>
-                    {'Your browser does not support the audio element.'}
-                </audio>}
+                <TrackPreview track={selected_track}/>
+                }
             </td>
         </tr>);
     }

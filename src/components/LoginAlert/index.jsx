@@ -7,8 +7,7 @@ import {Button, Jumbotron} from "react-bootstrap";
 import FacebookLogin from "react-facebook-login";
 import "./LoginAlert.css";
 const notGroupAdmin = "Sorry you are not admin of this group.";
-let utils = require('./../../utils');
-
+import {loginToSpotify} from './../../spotify_utils';
 
 export default class LoginAlert extends React.Component {
     /*istanbul ignore next*/
@@ -42,7 +41,7 @@ export default class LoginAlert extends React.Component {
                 version="v2.8"
             />}
             {sp_user.id === undefined &&
-            <Button className="btn btn-social btn-spotify" onClick={utils.loginToSpotify}><i className="fa fa-spotify"/>Login to
+            <Button className="btn btn-social btn-spotify" onClick={loginToSpotify}><i className="fa fa-spotify"/>Login to
                 spotify</Button>}
         </Jumbotron>)
     }

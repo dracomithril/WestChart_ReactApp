@@ -192,10 +192,10 @@ exports[`<ChartTable/> render with objects 1`] = `
             Object {
               "accessor": "selected",
               "header": [Function],
-              "maxWidth": 60,
-              "minWidth": 30,
               "render": [Function],
+              "resizable": false,
               "sortable": false,
+              "width": 40,
             },
             Object {
               "accessor": "from_user",
@@ -203,6 +203,7 @@ exports[`<ChartTable/> render with objects 1`] = `
               "maxWidth": 300,
               "minWidth": 200,
               "render": [Function],
+              "resizable": true,
             },
             Object {
               "accessor": "message",
@@ -213,7 +214,7 @@ exports[`<ChartTable/> render with objects 1`] = `
             Object {
               "accessor": "reactions_num",
               "header": "reactions count",
-              "maxWidth": 100,
+              "maxWidth": 80,
               "minWidth": 60,
               "sort": "dsc",
             },
@@ -224,6 +225,7 @@ exports[`<ChartTable/> render with objects 1`] = `
               "maxWidth": 200,
               "minWidth": 150,
               "render": [Function],
+              "resizable": true,
             },
             Object {
               "accessor": [Function],
@@ -231,6 +233,7 @@ exports[`<ChartTable/> render with objects 1`] = `
               "id": "addedTime",
               "maxWidth": 150,
               "render": [Function],
+              "resizable": true,
             },
             Object {
               "accessor": [Function],
@@ -458,7 +461,7 @@ exports[`<ChartTable/> render with objects 1`] = `
     pivotIDKey="_pivotID"
     pivotValKey="_pivotVal"
     previousText="Previous"
-    resizable={true}
+    resizable={false}
     rowsText="rows"
     showFilters={false}
     showPageJump={true}
@@ -481,7 +484,7 @@ exports[`<ChartTable/> render with objects 1`] = `
             className="-headerGroups"
             style={
               Object {
-                "minWidth": "1090px",
+                "minWidth": "1100px",
               }
             }
           >
@@ -489,7 +492,7 @@ exports[`<ChartTable/> render with objects 1`] = `
               className="rt-thead -headerGroups"
               style={
                 Object {
-                  "minWidth": "1090px",
+                  "minWidth": "1100px",
                 }
               }
             >
@@ -501,9 +504,9 @@ exports[`<ChartTable/> render with objects 1`] = `
                     className=""
                     style={
                       Object {
-                        "flex": "790 0 auto",
-                        "maxWidth": "1390px",
-                        "width": "1090px",
+                        "flex": "760 0 auto",
+                        "maxWidth": "1350px",
+                        "width": "1100px",
                       }
                     }
                   >
@@ -512,9 +515,9 @@ exports[`<ChartTable/> render with objects 1`] = `
                       onClick={[Function]}
                       style={
                         Object {
-                          "flex": "790 0 auto",
-                          "maxWidth": "1390px",
-                          "width": "1090px",
+                          "flex": "760 0 auto",
+                          "maxWidth": "1350px",
+                          "width": "1100px",
                         }
                       }
                     >
@@ -536,7 +539,7 @@ exports[`<ChartTable/> render with objects 1`] = `
             className="-header"
             style={
               Object {
-                "minWidth": "1090px",
+                "minWidth": "1100px",
               }
             }
           >
@@ -544,7 +547,7 @@ exports[`<ChartTable/> render with objects 1`] = `
               className="rt-thead -header"
               style={
                 Object {
-                  "minWidth": "1090px",
+                  "minWidth": "1100px",
                 }
               }
             >
@@ -556,9 +559,9 @@ exports[`<ChartTable/> render with objects 1`] = `
                     className=" rt-resizable-header"
                     style={
                       Object {
-                        "flex": "30 0 auto",
-                        "maxWidth": "60px",
-                        "width": "30px",
+                        "flex": "40 0 auto",
+                        "maxWidth": "40px",
+                        "width": "40px",
                       }
                     }
                     toggleSort={[Function]}
@@ -568,9 +571,9 @@ exports[`<ChartTable/> render with objects 1`] = `
                       onClick={[Function]}
                       style={
                         Object {
-                          "flex": "30 0 auto",
-                          "maxWidth": "60px",
-                          "width": "30px",
+                          "flex": "40 0 auto",
+                          "maxWidth": "40px",
+                          "width": "40px",
                         }
                       }
                     >
@@ -596,16 +599,6 @@ exports[`<ChartTable/> render with objects 1`] = `
                           </div>
                         </Checkbox>
                       </div>
-                      <Component
-                        onMouseDown={[Function]}
-                        onTouchStart={[Function]}
-                      >
-                        <div
-                          className="rt-resizer"
-                          onMouseDown={[Function]}
-                          onTouchStart={[Function]}
-                        />
-                      </Component>
                     </div>
                   </ThComponent>
                   <ThComponent
@@ -635,16 +628,6 @@ exports[`<ChartTable/> render with objects 1`] = `
                       >
                         user
                       </div>
-                      <Component
-                        onMouseDown={[Function]}
-                        onTouchStart={[Function]}
-                      >
-                        <div
-                          className="rt-resizer"
-                          onMouseDown={[Function]}
-                          onTouchStart={[Function]}
-                        />
-                      </Component>
                     </div>
                   </ThComponent>
                   <ThComponent
@@ -674,16 +657,6 @@ exports[`<ChartTable/> render with objects 1`] = `
                       >
                         fb msg
                       </div>
-                      <Component
-                        onMouseDown={[Function]}
-                        onTouchStart={[Function]}
-                      >
-                        <div
-                          className="rt-resizer"
-                          onMouseDown={[Function]}
-                          onTouchStart={[Function]}
-                        />
-                      </Component>
                     </div>
                   </ThComponent>
                   <ThComponent
@@ -691,7 +664,7 @@ exports[`<ChartTable/> render with objects 1`] = `
                     style={
                       Object {
                         "flex": "60 0 auto",
-                        "maxWidth": "100px",
+                        "maxWidth": "80px",
                         "width": "60px",
                       }
                     }
@@ -703,7 +676,7 @@ exports[`<ChartTable/> render with objects 1`] = `
                       style={
                         Object {
                           "flex": "60 0 auto",
-                          "maxWidth": "100px",
+                          "maxWidth": "80px",
                           "width": "60px",
                         }
                       }
@@ -713,16 +686,6 @@ exports[`<ChartTable/> render with objects 1`] = `
                       >
                         reactions count
                       </div>
-                      <Component
-                        onMouseDown={[Function]}
-                        onTouchStart={[Function]}
-                      >
-                        <div
-                          className="rt-resizer"
-                          onMouseDown={[Function]}
-                          onTouchStart={[Function]}
-                        />
-                      </Component>
                     </div>
                   </ThComponent>
                   <ThComponent
@@ -752,16 +715,6 @@ exports[`<ChartTable/> render with objects 1`] = `
                       >
                         crated time
                       </div>
-                      <Component
-                        onMouseDown={[Function]}
-                        onTouchStart={[Function]}
-                      >
-                        <div
-                          className="rt-resizer"
-                          onMouseDown={[Function]}
-                          onTouchStart={[Function]}
-                        />
-                      </Component>
                     </div>
                   </ThComponent>
                   <ThComponent
@@ -791,16 +744,6 @@ exports[`<ChartTable/> render with objects 1`] = `
                       >
                         added time
                       </div>
-                      <Component
-                        onMouseDown={[Function]}
-                        onTouchStart={[Function]}
-                      >
-                        <div
-                          className="rt-resizer"
-                          onMouseDown={[Function]}
-                          onTouchStart={[Function]}
-                        />
-                      </Component>
                     </div>
                   </ThComponent>
                   <ThComponent
@@ -830,16 +773,6 @@ exports[`<ChartTable/> render with objects 1`] = `
                       >
                         last update
                       </div>
-                      <Component
-                        onMouseDown={[Function]}
-                        onTouchStart={[Function]}
-                      >
-                        <div
-                          className="rt-resizer"
-                          onMouseDown={[Function]}
-                          onTouchStart={[Function]}
-                        />
-                      </Component>
                     </div>
                   </ThComponent>
                   <ThComponent
@@ -871,16 +804,6 @@ exports[`<ChartTable/> render with objects 1`] = `
                           link
                         </span>
                       </div>
-                      <Component
-                        onMouseDown={[Function]}
-                        onTouchStart={[Function]}
-                      >
-                        <div
-                          className="rt-resizer"
-                          onMouseDown={[Function]}
-                          onTouchStart={[Function]}
-                        />
-                      </Component>
                     </div>
                   </ThComponent>
                 </div>
@@ -891,7 +814,7 @@ exports[`<ChartTable/> render with objects 1`] = `
             className=""
             style={
               Object {
-                "minWidth": "1090px",
+                "minWidth": "1100px",
               }
             }
           >
@@ -899,7 +822,7 @@ exports[`<ChartTable/> render with objects 1`] = `
               className="rt-tbody"
               style={
                 Object {
-                  "minWidth": "1090px",
+                  "minWidth": "1100px",
                 }
               }
             >
@@ -917,9 +840,9 @@ exports[`<ChartTable/> render with objects 1`] = `
                         className=""
                         style={
                           Object {
-                            "flex": "30 0 auto",
-                            "maxWidth": "60px",
-                            "width": "30px",
+                            "flex": "40 0 auto",
+                            "maxWidth": "40px",
+                            "width": "40px",
                           }
                         }
                       >
@@ -927,9 +850,9 @@ exports[`<ChartTable/> render with objects 1`] = `
                           className="rt-td"
                           style={
                             Object {
-                              "flex": "30 0 auto",
-                              "maxWidth": "60px",
-                              "width": "30px",
+                              "flex": "40 0 auto",
+                              "maxWidth": "40px",
+                              "width": "40px",
                             }
                           }
                         >
@@ -1051,7 +974,7 @@ exports[`<ChartTable/> render with objects 1`] = `
                         style={
                           Object {
                             "flex": "60 0 auto",
-                            "maxWidth": "100px",
+                            "maxWidth": "80px",
                             "width": "60px",
                           }
                         }
@@ -1061,7 +984,7 @@ exports[`<ChartTable/> render with objects 1`] = `
                           style={
                             Object {
                               "flex": "60 0 auto",
-                              "maxWidth": "100px",
+                              "maxWidth": "80px",
                               "width": "60px",
                             }
                           }
@@ -1216,9 +1139,9 @@ exports[`<ChartTable/> render with objects 1`] = `
                         className=""
                         style={
                           Object {
-                            "flex": "30 0 auto",
-                            "maxWidth": "60px",
-                            "width": "30px",
+                            "flex": "40 0 auto",
+                            "maxWidth": "40px",
+                            "width": "40px",
                           }
                         }
                       >
@@ -1226,9 +1149,9 @@ exports[`<ChartTable/> render with objects 1`] = `
                           className="rt-td"
                           style={
                             Object {
-                              "flex": "30 0 auto",
-                              "maxWidth": "60px",
-                              "width": "30px",
+                              "flex": "40 0 auto",
+                              "maxWidth": "40px",
+                              "width": "40px",
                             }
                           }
                         >
@@ -1350,7 +1273,7 @@ exports[`<ChartTable/> render with objects 1`] = `
                         style={
                           Object {
                             "flex": "60 0 auto",
-                            "maxWidth": "100px",
+                            "maxWidth": "80px",
                             "width": "60px",
                           }
                         }
@@ -1360,7 +1283,7 @@ exports[`<ChartTable/> render with objects 1`] = `
                           style={
                             Object {
                               "flex": "60 0 auto",
-                              "maxWidth": "100px",
+                              "maxWidth": "80px",
                               "width": "60px",
                             }
                           }
@@ -1512,9 +1435,9 @@ exports[`<ChartTable/> render with objects 1`] = `
                         className=""
                         style={
                           Object {
-                            "flex": "30 0 auto",
-                            "maxWidth": "60px",
-                            "width": "30px",
+                            "flex": "40 0 auto",
+                            "maxWidth": "40px",
+                            "width": "40px",
                           }
                         }
                       >
@@ -1522,9 +1445,9 @@ exports[`<ChartTable/> render with objects 1`] = `
                           className="rt-td"
                           style={
                             Object {
-                              "flex": "30 0 auto",
-                              "maxWidth": "60px",
-                              "width": "30px",
+                              "flex": "40 0 auto",
+                              "maxWidth": "40px",
+                              "width": "40px",
                             }
                           }
                         >
@@ -1646,7 +1569,7 @@ exports[`<ChartTable/> render with objects 1`] = `
                         style={
                           Object {
                             "flex": "60 0 auto",
-                            "maxWidth": "100px",
+                            "maxWidth": "80px",
                             "width": "60px",
                           }
                         }
@@ -1656,7 +1579,7 @@ exports[`<ChartTable/> render with objects 1`] = `
                           style={
                             Object {
                               "flex": "60 0 auto",
-                              "maxWidth": "100px",
+                              "maxWidth": "80px",
                               "width": "60px",
                             }
                           }
@@ -1808,9 +1731,9 @@ exports[`<ChartTable/> render with objects 1`] = `
                         className=""
                         style={
                           Object {
-                            "flex": "30 0 auto",
-                            "maxWidth": "60px",
-                            "width": "30px",
+                            "flex": "40 0 auto",
+                            "maxWidth": "40px",
+                            "width": "40px",
                           }
                         }
                       >
@@ -1818,9 +1741,9 @@ exports[`<ChartTable/> render with objects 1`] = `
                           className="rt-td"
                           style={
                             Object {
-                              "flex": "30 0 auto",
-                              "maxWidth": "60px",
-                              "width": "30px",
+                              "flex": "40 0 auto",
+                              "maxWidth": "40px",
+                              "width": "40px",
                             }
                           }
                         >
@@ -1942,7 +1865,7 @@ exports[`<ChartTable/> render with objects 1`] = `
                         style={
                           Object {
                             "flex": "60 0 auto",
-                            "maxWidth": "100px",
+                            "maxWidth": "80px",
                             "width": "60px",
                           }
                         }
@@ -1952,7 +1875,7 @@ exports[`<ChartTable/> render with objects 1`] = `
                           style={
                             Object {
                               "flex": "60 0 auto",
-                              "maxWidth": "100px",
+                              "maxWidth": "80px",
                               "width": "60px",
                             }
                           }
@@ -2104,9 +2027,9 @@ exports[`<ChartTable/> render with objects 1`] = `
                         className=""
                         style={
                           Object {
-                            "flex": "30 0 auto",
-                            "maxWidth": "60px",
-                            "width": "30px",
+                            "flex": "40 0 auto",
+                            "maxWidth": "40px",
+                            "width": "40px",
                           }
                         }
                       >
@@ -2114,9 +2037,9 @@ exports[`<ChartTable/> render with objects 1`] = `
                           className="rt-td"
                           style={
                             Object {
-                              "flex": "30 0 auto",
-                              "maxWidth": "60px",
-                              "width": "30px",
+                              "flex": "40 0 auto",
+                              "maxWidth": "40px",
+                              "width": "40px",
                             }
                           }
                         >
@@ -2240,7 +2163,7 @@ exports[`<ChartTable/> render with objects 1`] = `
                         style={
                           Object {
                             "flex": "60 0 auto",
-                            "maxWidth": "100px",
+                            "maxWidth": "80px",
                             "width": "60px",
                           }
                         }
@@ -2250,7 +2173,7 @@ exports[`<ChartTable/> render with objects 1`] = `
                           style={
                             Object {
                               "flex": "60 0 auto",
-                              "maxWidth": "100px",
+                              "maxWidth": "80px",
                               "width": "60px",
                             }
                           }
@@ -2405,9 +2328,9 @@ exports[`<ChartTable/> render with objects 1`] = `
                         className=""
                         style={
                           Object {
-                            "flex": "30 0 auto",
-                            "maxWidth": "60px",
-                            "width": "30px",
+                            "flex": "40 0 auto",
+                            "maxWidth": "40px",
+                            "width": "40px",
                           }
                         }
                       >
@@ -2415,9 +2338,9 @@ exports[`<ChartTable/> render with objects 1`] = `
                           className="rt-td"
                           style={
                             Object {
-                              "flex": "30 0 auto",
-                              "maxWidth": "60px",
-                              "width": "30px",
+                              "flex": "40 0 auto",
+                              "maxWidth": "40px",
+                              "width": "40px",
                             }
                           }
                         >
@@ -2541,7 +2464,7 @@ exports[`<ChartTable/> render with objects 1`] = `
                         style={
                           Object {
                             "flex": "60 0 auto",
-                            "maxWidth": "100px",
+                            "maxWidth": "80px",
                             "width": "60px",
                           }
                         }
@@ -2551,7 +2474,7 @@ exports[`<ChartTable/> render with objects 1`] = `
                           style={
                             Object {
                               "flex": "60 0 auto",
-                              "maxWidth": "100px",
+                              "maxWidth": "80px",
                               "width": "60px",
                             }
                           }
@@ -2706,9 +2629,9 @@ exports[`<ChartTable/> render with objects 1`] = `
                         className=""
                         style={
                           Object {
-                            "flex": "30 0 auto",
-                            "maxWidth": "60px",
-                            "width": "30px",
+                            "flex": "40 0 auto",
+                            "maxWidth": "40px",
+                            "width": "40px",
                           }
                         }
                       >
@@ -2716,9 +2639,9 @@ exports[`<ChartTable/> render with objects 1`] = `
                           className="rt-td"
                           style={
                             Object {
-                              "flex": "30 0 auto",
-                              "maxWidth": "60px",
-                              "width": "30px",
+                              "flex": "40 0 auto",
+                              "maxWidth": "40px",
+                              "width": "40px",
                             }
                           }
                         >
@@ -2841,7 +2764,7 @@ exports[`<ChartTable/> render with objects 1`] = `
                         style={
                           Object {
                             "flex": "60 0 auto",
-                            "maxWidth": "100px",
+                            "maxWidth": "80px",
                             "width": "60px",
                           }
                         }
@@ -2851,7 +2774,7 @@ exports[`<ChartTable/> render with objects 1`] = `
                           style={
                             Object {
                               "flex": "60 0 auto",
-                              "maxWidth": "100px",
+                              "maxWidth": "80px",
                               "width": "60px",
                             }
                           }
@@ -2987,9 +2910,9 @@ exports[`<ChartTable/> render with objects 1`] = `
                         className=""
                         style={
                           Object {
-                            "flex": "30 0 auto",
-                            "maxWidth": "60px",
-                            "width": "30px",
+                            "flex": "40 0 auto",
+                            "maxWidth": "40px",
+                            "width": "40px",
                           }
                         }
                       >
@@ -2997,9 +2920,9 @@ exports[`<ChartTable/> render with objects 1`] = `
                           className="rt-td"
                           style={
                             Object {
-                              "flex": "30 0 auto",
-                              "maxWidth": "60px",
-                              "width": "30px",
+                              "flex": "40 0 auto",
+                              "maxWidth": "40px",
+                              "width": "40px",
                             }
                           }
                         >
@@ -3057,7 +2980,7 @@ exports[`<ChartTable/> render with objects 1`] = `
                         style={
                           Object {
                             "flex": "60 0 auto",
-                            "maxWidth": "100px",
+                            "maxWidth": "80px",
                             "width": "60px",
                           }
                         }
@@ -3067,7 +2990,7 @@ exports[`<ChartTable/> render with objects 1`] = `
                           style={
                             Object {
                               "flex": "60 0 auto",
-                              "maxWidth": "100px",
+                              "maxWidth": "80px",
                               "width": "60px",
                             }
                           }
@@ -3187,9 +3110,9 @@ exports[`<ChartTable/> render with objects 1`] = `
                         className=""
                         style={
                           Object {
-                            "flex": "30 0 auto",
-                            "maxWidth": "60px",
-                            "width": "30px",
+                            "flex": "40 0 auto",
+                            "maxWidth": "40px",
+                            "width": "40px",
                           }
                         }
                       >
@@ -3197,9 +3120,9 @@ exports[`<ChartTable/> render with objects 1`] = `
                           className="rt-td"
                           style={
                             Object {
-                              "flex": "30 0 auto",
-                              "maxWidth": "60px",
-                              "width": "30px",
+                              "flex": "40 0 auto",
+                              "maxWidth": "40px",
+                              "width": "40px",
                             }
                           }
                         >
@@ -3257,7 +3180,7 @@ exports[`<ChartTable/> render with objects 1`] = `
                         style={
                           Object {
                             "flex": "60 0 auto",
-                            "maxWidth": "100px",
+                            "maxWidth": "80px",
                             "width": "60px",
                           }
                         }
@@ -3267,7 +3190,7 @@ exports[`<ChartTable/> render with objects 1`] = `
                           style={
                             Object {
                               "flex": "60 0 auto",
-                              "maxWidth": "100px",
+                              "maxWidth": "80px",
                               "width": "60px",
                             }
                           }
@@ -3387,9 +3310,9 @@ exports[`<ChartTable/> render with objects 1`] = `
                         className=""
                         style={
                           Object {
-                            "flex": "30 0 auto",
-                            "maxWidth": "60px",
-                            "width": "30px",
+                            "flex": "40 0 auto",
+                            "maxWidth": "40px",
+                            "width": "40px",
                           }
                         }
                       >
@@ -3397,9 +3320,9 @@ exports[`<ChartTable/> render with objects 1`] = `
                           className="rt-td"
                           style={
                             Object {
-                              "flex": "30 0 auto",
-                              "maxWidth": "60px",
-                              "width": "30px",
+                              "flex": "40 0 auto",
+                              "maxWidth": "40px",
+                              "width": "40px",
                             }
                           }
                         >
@@ -3457,7 +3380,7 @@ exports[`<ChartTable/> render with objects 1`] = `
                         style={
                           Object {
                             "flex": "60 0 auto",
-                            "maxWidth": "100px",
+                            "maxWidth": "80px",
                             "width": "60px",
                           }
                         }
@@ -3467,7 +3390,7 @@ exports[`<ChartTable/> render with objects 1`] = `
                           style={
                             Object {
                               "flex": "60 0 auto",
-                              "maxWidth": "100px",
+                              "maxWidth": "80px",
                               "width": "60px",
                             }
                           }
@@ -3607,12 +3530,13 @@ exports[`<ChartTable/> render with objects 1`] = `
               "headerStyle": Object {},
               "hideFilter": false,
               "id": "selected",
-              "maxWidth": 60,
-              "minWidth": 30,
+              "minWidth": 100,
               "render": [Function],
+              "resizable": false,
               "show": true,
               "sortable": false,
               "style": Object {},
+              "width": 40,
             },
             Object {
               "accessor": [Function],
@@ -3633,6 +3557,7 @@ exports[`<ChartTable/> render with objects 1`] = `
               "maxWidth": 300,
               "minWidth": 200,
               "render": [Function],
+              "resizable": true,
               "show": true,
               "sortable": true,
               "style": Object {},
@@ -3676,7 +3601,7 @@ exports[`<ChartTable/> render with objects 1`] = `
               "headerStyle": Object {},
               "hideFilter": false,
               "id": "reactions_num",
-              "maxWidth": 100,
+              "maxWidth": 80,
               "minWidth": 60,
               "render": undefined,
               "show": true,
@@ -3703,6 +3628,7 @@ exports[`<ChartTable/> render with objects 1`] = `
               "maxWidth": 200,
               "minWidth": 150,
               "render": [Function],
+              "resizable": true,
               "show": true,
               "sortable": true,
               "style": Object {},
@@ -3726,6 +3652,7 @@ exports[`<ChartTable/> render with objects 1`] = `
               "maxWidth": 150,
               "minWidth": 100,
               "render": [Function],
+              "resizable": true,
               "show": true,
               "sortable": true,
               "style": Object {},
@@ -3797,12 +3724,13 @@ exports[`<ChartTable/> render with objects 1`] = `
               "headerStyle": Object {},
               "hideFilter": false,
               "id": "selected",
-              "maxWidth": 60,
-              "minWidth": 30,
+              "minWidth": 100,
               "render": [Function],
+              "resizable": false,
               "show": true,
               "sortable": false,
               "style": Object {},
+              "width": 40,
             },
             Object {
               "accessor": [Function],
@@ -3823,6 +3751,7 @@ exports[`<ChartTable/> render with objects 1`] = `
               "maxWidth": 300,
               "minWidth": 200,
               "render": [Function],
+              "resizable": true,
               "show": true,
               "sortable": true,
               "style": Object {},
@@ -3866,7 +3795,7 @@ exports[`<ChartTable/> render with objects 1`] = `
               "headerStyle": Object {},
               "hideFilter": false,
               "id": "reactions_num",
-              "maxWidth": 100,
+              "maxWidth": 80,
               "minWidth": 60,
               "render": undefined,
               "show": true,
@@ -3893,6 +3822,7 @@ exports[`<ChartTable/> render with objects 1`] = `
               "maxWidth": 200,
               "minWidth": 150,
               "render": [Function],
+              "resizable": true,
               "show": true,
               "sortable": true,
               "style": Object {},
@@ -3916,6 +3846,7 @@ exports[`<ChartTable/> render with objects 1`] = `
               "maxWidth": 150,
               "minWidth": 100,
               "render": [Function],
+              "resizable": true,
               "show": true,
               "sortable": true,
               "style": Object {},
@@ -4003,10 +3934,10 @@ exports[`<ChartTable/> render with objects 1`] = `
                 Object {
                   "accessor": "selected",
                   "header": [Function],
-                  "maxWidth": 60,
-                  "minWidth": 30,
                   "render": [Function],
+                  "resizable": false,
                   "sortable": false,
+                  "width": 40,
                 },
                 Object {
                   "accessor": "from_user",
@@ -4014,6 +3945,7 @@ exports[`<ChartTable/> render with objects 1`] = `
                   "maxWidth": 300,
                   "minWidth": 200,
                   "render": [Function],
+                  "resizable": true,
                 },
                 Object {
                   "accessor": "message",
@@ -4024,7 +3956,7 @@ exports[`<ChartTable/> render with objects 1`] = `
                 Object {
                   "accessor": "reactions_num",
                   "header": "reactions count",
-                  "maxWidth": 100,
+                  "maxWidth": 80,
                   "minWidth": 60,
                   "sort": "dsc",
                 },
@@ -4035,6 +3967,7 @@ exports[`<ChartTable/> render with objects 1`] = `
                   "maxWidth": 200,
                   "minWidth": 150,
                   "render": [Function],
+                  "resizable": true,
                 },
                 Object {
                   "accessor": [Function],
@@ -4042,6 +3975,7 @@ exports[`<ChartTable/> render with objects 1`] = `
                   "id": "addedTime",
                   "maxWidth": 150,
                   "render": [Function],
+                  "resizable": true,
                 },
                 Object {
                   "accessor": [Function],
@@ -4261,12 +4195,13 @@ exports[`<ChartTable/> render with objects 1`] = `
                   "headerStyle": Object {},
                   "hideFilter": false,
                   "id": "selected",
-                  "maxWidth": 60,
-                  "minWidth": 30,
+                  "minWidth": 100,
                   "render": [Function],
+                  "resizable": false,
                   "show": true,
                   "sortable": false,
                   "style": Object {},
+                  "width": 40,
                 },
                 Object {
                   "accessor": [Function],
@@ -4287,6 +4222,7 @@ exports[`<ChartTable/> render with objects 1`] = `
                   "maxWidth": 300,
                   "minWidth": 200,
                   "render": [Function],
+                  "resizable": true,
                   "show": true,
                   "sortable": true,
                   "style": Object {},
@@ -4330,7 +4266,7 @@ exports[`<ChartTable/> render with objects 1`] = `
                   "headerStyle": Object {},
                   "hideFilter": false,
                   "id": "reactions_num",
-                  "maxWidth": 100,
+                  "maxWidth": 80,
                   "minWidth": 60,
                   "render": undefined,
                   "show": true,
@@ -4357,6 +4293,7 @@ exports[`<ChartTable/> render with objects 1`] = `
                   "maxWidth": 200,
                   "minWidth": 150,
                   "render": [Function],
+                  "resizable": true,
                   "show": true,
                   "sortable": true,
                   "style": Object {},
@@ -4380,6 +4317,7 @@ exports[`<ChartTable/> render with objects 1`] = `
                   "maxWidth": 150,
                   "minWidth": 100,
                   "render": [Function],
+                  "resizable": true,
                   "show": true,
                   "sortable": true,
                   "style": Object {},
@@ -4490,7 +4428,7 @@ exports[`<ChartTable/> render with objects 1`] = `
         pivotIDKey="_pivotID"
         pivotValKey="_pivotVal"
         previousText="Previous"
-        resizable={true}
+        resizable={false}
         resizing={Array []}
         resolvedData={
           Array [
@@ -5114,10 +5052,10 @@ exports[`<ChartTable/> renders without crashing 1`] = `
           Object {
             "accessor": "selected",
             "header": [Function],
-            "maxWidth": 60,
-            "minWidth": 30,
             "render": [Function],
+            "resizable": false,
             "sortable": false,
+            "width": 40,
           },
           Object {
             "accessor": "from_user",
@@ -5125,6 +5063,7 @@ exports[`<ChartTable/> renders without crashing 1`] = `
             "maxWidth": 300,
             "minWidth": 200,
             "render": [Function],
+            "resizable": true,
           },
           Object {
             "accessor": "message",
@@ -5135,7 +5074,7 @@ exports[`<ChartTable/> renders without crashing 1`] = `
           Object {
             "accessor": "reactions_num",
             "header": "reactions count",
-            "maxWidth": 100,
+            "maxWidth": 80,
             "minWidth": 60,
             "sort": "dsc",
           },
@@ -5146,6 +5085,7 @@ exports[`<ChartTable/> renders without crashing 1`] = `
             "maxWidth": 200,
             "minWidth": 150,
             "render": [Function],
+            "resizable": true,
           },
           Object {
             "accessor": [Function],
@@ -5153,6 +5093,7 @@ exports[`<ChartTable/> renders without crashing 1`] = `
             "id": "addedTime",
             "maxWidth": 150,
             "render": [Function],
+            "resizable": true,
           },
           Object {
             "accessor": [Function],
@@ -5239,7 +5180,7 @@ exports[`<ChartTable/> renders without crashing 1`] = `
   pivotIDKey="_pivotID"
   pivotValKey="_pivotVal"
   previousText="Previous"
-  resizable={true}
+  resizable={false}
   rowsText="rows"
   showFilters={false}
   showPageJump={true}
