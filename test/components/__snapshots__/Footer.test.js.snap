@@ -8,9 +8,22 @@ exports[`<Footer/> renders without crashing 1`] = `
     site created by 
     <a
       href="https://github.com/dracomithril"
+      target="_newtab"
     >
-      dracomithril
+      dracomithril 
     </a>
+    repo on
+    <a
+      href="https://github.com/dracomithril/WestChart_ReactApp"
+      target="_newtab"
+    >
+       github
+      <i
+        aria-hidden="true"
+        className="fa fa-github"
+      />
+    </a>
+     
      vundefined © Copyright 2017
   </span>
   <br />

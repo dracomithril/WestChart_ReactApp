@@ -3,55 +3,64 @@
 exports[`<RowSpotifySearch/> renders without crashing 1`] = `
 <tr>
   <td>
-    <input
-      id={0}
-      onChange={[Function]}
-      style={
-        Object {
-          "paddingRight": 5,
-        }
-      }
-      type="text"
-      value=""
-    />
-  </td>
-  <td>
-    <button
-      onClick={[Function]}
+    <div
+      className="track_view"
     >
-      <i
-        aria-hidden="true"
-        className="fa fa-refresh"
+      <span />
+      <br />
+      <input
+        id={0}
+        onChange={[Function]}
+        style={
+          Object {
+            "paddingRight": 5,
+          }
+        }
+        type="text"
+        value=""
       />
-    </button>
-  </td>
-  <td>
-    <input
-      id={0}
-      onChange={[Function]}
-      style={
-        Object {
-          "paddingRight": 5,
+      <button
+        onClick={[Function]}
+      >
+        <i
+          aria-hidden="true"
+          className="fa fa-refresh"
+        />
+      </button>
+      <input
+        id={0}
+        onChange={[Function]}
+        style={
+          Object {
+            "paddingRight": 5,
+          }
         }
-      }
-      type="text"
-      value=""
-    />
+        type="text"
+        value=""
+      />
+    </div>
   </td>
   <td>
-    <Button
-      active={false}
-      block={false}
-      bsClass="btn"
-      bsStyle="default"
-      disabled={false}
-      id="button-0"
-      onClick={[Function]}
-    >
-      search
-    </Button>
+    <div>
+      <Button
+        active={false}
+        block={false}
+        bsClass="btn"
+        bsStyle="info"
+        disabled={false}
+        id="button-0"
+        onClick={[Function]}
+      >
+        search
+      </Button>
+      <DropdownButton
+        bsStyle="warning"
+        disabled={true}
+        id="dropdown-basic-0"
+        title="select"
+      />
+    </div>
   </td>
-  <td />
   <td />
 </tr>
 `;

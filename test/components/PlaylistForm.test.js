@@ -39,9 +39,7 @@ describe('<PlaylistForm/>', () => {
         expect(store.getActions().length).toBe(2)
     });
     it('createPlaylist', () => {
-
-       let sp_use =require('./../../src/spotify_utils');
-       sp_use.create_sp_playlist.mockImplementation((a,b,c,f,info)=>{info('aaa','bbb')});
+        const sp_utils = require('./../../src/spotify_utils');
         const state = Object.assign({}, initial_state, {sp_playlist_name: "test_list_zzzz"});
         const store = mockStore(state);
         const wrapper = shallow(
@@ -58,6 +56,7 @@ describe('<PlaylistForm/>', () => {
         expect(shallowToJson(wrapper)).toMatchSnapshot();
         let start_b = wrapper.find('#crt_pl_button');
         start_b.simulate('click');
-        expect(store.getActions().length).toBe(1)
+        expect(store.getActions().length).toBe(0);
+        expect(sp_utils.createPlaylist.mock.calls.length).toBe(1);
     })
 });

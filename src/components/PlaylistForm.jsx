@@ -31,15 +31,19 @@ export default class PlaylistForm extends Component {
         let playlist_name = 'Chart_' + str2 + '-' + str1;
         let list = playlist_name.split(' ').join('_');
         store.dispatch({type: action_types.UPDATE_PLAYLIST_NAME, value: list});
-        const search = selected.map((elem) => {
-            const entry=utils.getArtist_Title(elem.link.title);
-            return ({
+        const search = selected.map((elem, search_id) => {
+            const entry = utils.getArtist_Title(elem.link.title);
+            let search_track = {
                 artist: entry.artist,
                 title: entry.title,
+                full_title: elem.link.title,
                 id: elem.id,
+                search_id: search_id,
                 items: [],
                 selected: {}
-            });
+            };
+            spotify_utils.searchForMusic(search_track,store);
+            return search_track;
         });
         store.dispatch({type: action_types.UPDATE_SEARCH, search: search})
     }
@@ -47,19 +51,15 @@ export default class PlaylistForm extends Component {
     onCreatePlaylist() {
         const {store} = this.context;
         const {search_list, sp_user, sp_playlist_name, isPlaylistPrivate} = store.getState();
-        // Create a private playlist
-        let update_sp_info = function (spotify_url, sp_name) {
-            store.dispatch({type: action_types.UPDATE_PLAYLIST_INFO, value: {url: spotify_url, pl_name: sp_name}});
-        };
         const selected = search_list.map((elem) => elem.selected !== undefined ? elem.selected.uri : undefined).filter(elem => elem !== undefined);
-        spotify_utils.create_sp_playlist(sp_user, sp_playlist_name, isPlaylistPrivate, selected, update_sp_info);
+        spotify_utils.createPlaylist(sp_user, sp_playlist_name, isPlaylistPrivate, selected, store);
     }
 
     render() {
         const {store} = this.context;
         const {sp_playlist_name, isPlaylistPrivate} = store.getState();
         return ( <Form inline>
-            <Button onClick={this.onStartClick.bind(this)} id="start_sp_button">Start
+            <Button onClick={this.onStartClick.bind(this)} id="start_sp_button" bsStyle="success">Start
             </Button>
             <FormGroup style={{width: 300}} controlId="play_list_name" validationState={((sp_name_length) => {
                 return sp_name_length > 8 ? 'success' : sp_name_length > 5 ? 'warning' : 'error';
@@ -77,7 +77,7 @@ export default class PlaylistForm extends Component {
             </FormGroup>
             <FormGroup>
                 <Button id="crt_pl_button" onClick={this.onCreatePlaylist.bind(this)}
-                        disabled={sp_playlist_name.length < 6}>Create
+                        disabled={sp_playlist_name.length < 6} bsStyle="danger">Create
                     Playlist
                 </Button>
                 <Checkbox style={{paddingLeft: 5}} id="play_list_is_private" onChange={(e) => {

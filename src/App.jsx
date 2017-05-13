@@ -9,11 +9,13 @@ import "react-datepicker/dist/react-datepicker.css";
 import Spotify from "spotify-web-api-node";
 const spotifyApi = new Spotify();
 const Cookies = require('cookies-js');
+import {loginToSpotify, validateCredentials} from './spotify_utils';
 
 class App extends Component {
     componentDidMount() {
         const {store} = this.context;
         this.unsubscribe = store.subscribe(() => this.forceUpdate());
+        const {location, history} = this.props;
         let sp_user_str =Cookies.get('sp_user');
         if (sp_user_str) {
             let sp_user =JSON.parse(sp_user_str);
@@ -24,22 +26,16 @@ class App extends Component {
             }).catch((err) => {
                 console.log('Something went wrong!', err);
             });
-        }
-        const {location, history} = this.props;
-        const {hash} = location;
-        if (hash.includes('/user/')) {
-            let params = hash.replace('#/user/', '');
-            let arr = params.split('/');
-            const access_token = arr[0];
-            spotifyApi.setAccessToken(access_token);
-            spotifyApi.getMe().then(data => {
-                console.log('you loged as :', data.body.id);
-                Cookies.set('sp_user',JSON.stringify({access_token}),{expires:3600});
-                store.dispatch({type: 'UPDATE_SP_USER', user: data.body, access_token});
-                history.push('/#/siema_jak_zycie')
-            }).catch(e => {
-                console.log(JSON.stringify(e));
-            });
+        }else{
+            const {hash} = location;
+            if (hash.includes('/user/')) {
+                let params = hash.replace('#/user/', '');
+                let arr = params.split('/');
+                const access_token = arr[0];
+                validateCredentials(access_token,history,store);
+            }else{
+                loginToSpotify();
+            }
         }
     }
     componentWillUnmount() {

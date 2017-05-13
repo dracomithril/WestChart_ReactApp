@@ -6,12 +6,12 @@ import PropTypes from 'prop-types';
 import {Accordion, Button, Checkbox, Label, Panel} from "react-bootstrap";
 import DatePicker from "react-datepicker";
 let utils = require('./../utils');
-const action_types = require('../reducers/action_types');
 export default class PickYourDate extends React.Component {
     /*istanbul ignore next*/
     componentWillUnmount() {
         console.log('component ChartPresenter unmounted');
     }
+
     /*istanbul ignore next*/
     componentDidMount() {
         console.log('component ChartPresenter did mount');
@@ -22,31 +22,9 @@ export default class PickYourDate extends React.Component {
         }
     }
 
-    updateChart() {
-        const {store} = this.context;
-        store.dispatch({type:action_types.CHANGE_SHOW_WAIT,show:true});
-        const {user, enable_until, start_date, show_last} = store.getState();
-
-        let until = enable_until ? start_date.toDate() : new Date();
-
-        let since = utils.subtractDaysFromDate(until, show_last);
-        const since2 = since.toISOString();
-        const until2 = until.toISOString();
-        store.dispatch({type: 'UPDATE_SINCE', date: since2});
-        store.dispatch({type: 'UPDATE_UNTIL', date: until2});
-
-        const query_params = {
-            days: undefined,
-            since: since2,
-            utils: until2,
-            access_token: user.accessToken
-        };
-        utils.getChartFromServer(query_params, store);
-    }
-
     render() {
         const {store} = this.context;
-        const {user, enable_until, last_update, start_date, show_last, since, until} = store.getState();
+        const {enable_until, last_update, start_date, show_last, since, until} = store.getState();
         const footer = (<small
             id="updateDate">{' Last update: ' + new Date(last_update).toLocaleString('pl-PL')}</small>);
         return (<Accordion>
@@ -81,9 +59,7 @@ export default class PickYourDate extends React.Component {
                            bsStyle="danger">{`until: ` + new Date(until).toLocaleString('pl-PL')}</Label>
                 </div>}
                 <div style={{textAlign: "center"}}>
-                    <Button id="updateChartB" onClick={this.updateChart.bind(this)} bsStyle="primary"
-                            disabled={!!user.isGroupAdmin === false}
-                    >Update</Button>
+                    <Button id="updateChartB" onClick={() => utils.UpdateChart(store)} bsStyle="primary">Update</Button>
                 </div>
             </Panel></Accordion>);
     }

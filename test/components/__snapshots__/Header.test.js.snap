@@ -49,57 +49,64 @@ exports[`<Header/> renders without crashing ChartPresenter 1`] = `
       onAccept={[Function]}
       styles={Object {}}
     >
-      <div
-        className="react-cookie-banner"
-        style={
-          Object {
-            "backgroundColor": "#484848",
-            "height": "45px",
-            "position": "relative",
-            "textAlign": "center",
-            "width": "100%",
-            "zIndex": "10000",
-          }
-        }
+      <BannerContent
+        buttonMessage="Got it"
+        message="Yes, we use cookies. If you don't like it change website, we won't miss you! ;)"
+        onAccept={[Function]}
+        styles={Object {}}
       >
-        <span
-          className="cookie-message"
-          style={
-            Object {
-              "color": "#F0F0F0",
-              "fontWeight": 500,
-              "lineHeight": "45px",
-            }
-          }
-        >
-          Yes, we use cookies. If you don't like it change website, we won't miss you! ;)
-        </span>
         <div
-          className="button-close"
-          onClick={[Function]}
+          className="react-cookie-banner"
           style={
             Object {
-              "backgroundColor": "white",
-              "borderRadius": "3px",
-              "color": "#242424",
-              "cursor": "pointer",
-              "fontSize": "14px",
-              "fontWeight": "500",
-              "height": "24px",
-              "lineHeight": "24px",
-              "marginTop": "-12px",
-              "opacity": "0.5",
-              "paddingLeft": "8px",
-              "paddingRight": "8px",
-              "position": "absolute",
-              "right": "35px",
-              "top": "50%",
+              "backgroundColor": "#484848",
+              "height": "45px",
+              "position": "relative",
+              "textAlign": "center",
+              "width": "100%",
+              "zIndex": "10000",
             }
           }
         >
-          Got it
+          <span
+            className="cookie-message"
+            style={
+              Object {
+                "color": "#F0F0F0",
+                "fontWeight": 500,
+                "lineHeight": "45px",
+              }
+            }
+          >
+            Yes, we use cookies. If you don't like it change website, we won't miss you! ;)
+          </span>
+          <div
+            className="button-close"
+            onClick={[Function]}
+            style={
+              Object {
+                "backgroundColor": "white",
+                "borderRadius": "3px",
+                "color": "#242424",
+                "cursor": "pointer",
+                "fontSize": "14px",
+                "fontWeight": "500",
+                "height": "24px",
+                "lineHeight": "24px",
+                "marginTop": "-12px",
+                "opacity": "0.5",
+                "paddingLeft": "8px",
+                "paddingRight": "8px",
+                "position": "absolute",
+                "right": "35px",
+                "top": "50%",
+              }
+            }
+          >
+            Got it
+          </div>
         </div>
-      </div>
+      </BannerContent>
     </CookieBanner>
     <PageHeader
       bsClass="title-header"

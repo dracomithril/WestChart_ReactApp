@@ -6,6 +6,7 @@ import PropTypes from "prop-types";
 import PlaylistForm from "./PlaylistForm";
 import RowSpotifySearch from "./RowSpotifySearch"
 
+
 export default class SpotifySearch extends React.Component {
     /*istanbul ignore next*/
     componentWillUnmount() {
@@ -20,8 +21,8 @@ export default class SpotifySearch extends React.Component {
     render() {
         const {store} = this.context;
         const {search_list, sp_playlist_info} = store.getState();
-        let search_list_view = search_list.map((search_elem, search_index)=> {
-            return <RowSpotifySearch search_elem={search_elem} search_index={search_index} key={search_elem.id}/>
+        let search_list_view = search_list.map((search_elem)=> {
+            return <RowSpotifySearch search_elem={search_elem} key={search_elem.id}/>
         });
         return (<div>
             <h3 id="list">{'Search music by: '}
@@ -34,10 +35,8 @@ export default class SpotifySearch extends React.Component {
             {search_list_view.length > 0 && <table>
                 <thead>
                 <tr>
-                    <td>Artist:</td>
-                    <td id="flip"/>
-                    <td>Title:</td>
-                    <td>options:</td>
+                    <td>Artist & Title</td>
+                    <td>Options:</td>
                     <td>Selected:</td>
                 </tr>
                 </thead>

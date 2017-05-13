@@ -37,7 +37,7 @@ describe('<PickYourDate/>', () => {
 
         button.simulate('click');
         let actions = store.getActions();
-        expect(actions.length).toBe(3);
-        expect(utils.getChartFromServer.mock.calls.length).toBe(1);
+        expect(actions.length).toBe(0);
+        expect(utils.UpdateChart.mock.calls.length).toBe(1);
     });
 });
