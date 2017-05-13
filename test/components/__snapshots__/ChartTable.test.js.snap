@@ -145,11 +145,14 @@ exports[`<ChartTable/> render with objects 1`] = `
     ]
   }
 >
-  <src
+  <ReactTable
+    AggregatedComponent={[Function]}
     ExpanderComponent={[Function]}
+    FilterComponent={[Function]}
     LoadingComponent={[Function]}
     NoDataComponent={[Function]}
     PaginationComponent={[Function]}
+    PivotValueComponent={[Function]}
     ResizerComponent={[Function]}
     TableComponent={[Function]}
     TbodyComponent={[Function]}
@@ -159,101 +162,109 @@ exports[`<ChartTable/> render with objects 1`] = `
     TheadComponent={[Function]}
     TrComponent={[Function]}
     TrGroupComponent={[Function]}
+    aggregatedKey="_aggregated"
     className="-striped -highlight"
     collapseOnDataChange={true}
     collapseOnPageChange={true}
     collapseOnSortingChange={true}
     column={
       Object {
+        "Aggregated": undefined,
+        "Cell": undefined,
+        "Expander": undefined,
+        "Filter": undefined,
+        "Footer": undefined,
+        "Header": undefined,
+        "Pivot": undefined,
+        "PivotValue": undefined,
+        "aggregate": undefined,
         "className": "",
         "filterMethod": undefined,
-        "filterRender": [Function],
-        "footer": undefined,
+        "filterable": undefined,
         "footerClassName": "",
         "footerStyle": Object {},
         "getFooterProps": [Function],
         "getHeaderProps": [Function],
         "getProps": [Function],
-        "header": undefined,
         "headerClassName": "",
         "headerStyle": Object {},
-        "hideFilter": false,
         "minWidth": 100,
-        "render": undefined,
+        "resizable": undefined,
         "show": true,
-        "sortable": true,
+        "sortMethod": undefined,
+        "sortable": undefined,
         "style": Object {},
       }
     }
     columns={
       Array [
         Object {
+          "Header": [Function],
           "columns": Array [
             Object {
+              "Cell": [Function],
+              "Header": [Function],
               "accessor": "selected",
-              "header": [Function],
-              "render": [Function],
               "resizable": false,
               "sortable": false,
               "width": 40,
             },
             Object {
+              "Cell": [Function],
+              "Header": "user",
               "accessor": "from_user",
-              "header": "user",
               "maxWidth": 300,
               "minWidth": 200,
-              "render": [Function],
               "resizable": true,
             },
             Object {
+              "Cell": [Function],
+              "Header": "fb msg",
               "accessor": "message",
-              "header": "fb msg",
               "maxWidth": 80,
-              "render": [Function],
             },
             Object {
+              "Header": "reactions count",
               "accessor": "reactions_num",
-              "header": "reactions count",
               "maxWidth": 80,
               "minWidth": 60,
               "sort": "dsc",
             },
             Object {
+              "Cell": [Function],
+              "Header": "crated time",
               "accessor": [Function],
-              "header": "crated time",
               "id": "createTime",
               "maxWidth": 200,
               "minWidth": 150,
-              "render": [Function],
               "resizable": true,
             },
             Object {
+              "Cell": [Function],
+              "Header": "added time",
               "accessor": [Function],
-              "header": "added time",
               "id": "addedTime",
               "maxWidth": 150,
-              "render": [Function],
               "resizable": true,
             },
             Object {
+              "Cell": [Function],
+              "Header": "last update",
               "accessor": [Function],
-              "header": "last update",
               "id": "lastUpdate",
               "maxWidth": 200,
               "minWidth": 150,
-              "render": [Function],
             },
             Object {
+              "Cell": [Function],
+              "Header": [Function],
               "accessor": [Function],
-              "header": [Function],
               "id": "yt_link",
               "maxWidth": 600,
               "minWidth": 200,
-              "render": [Function],
               "width": 300,
             },
           ],
-          "header": [Function],
         },
       ]
     }
@@ -399,12 +410,22 @@ exports[`<ChartTable/> render with objects 1`] = `
         },
       ]
     }
+    defaultExpanded={Object {}}
     defaultFilterMethod={[Function]}
-    defaultFiltering={Array []}
+    defaultFiltered={Array []}
     defaultPageSize={20}
-    defaultResizing={Array []}
-    defaultSorting={Array []}
-    expanderColumnWidth={35}
+    defaultResized={Array []}
+    defaultSortMethod={[Function]}
+    defaultSorted={Array []}
+    expanderDefaults={
+      Object {
+        "filterable": false,
+        "resizable": false,
+        "sortable": false,
+        "width": 35,
+      }
+    }
+    filterable={false}
     freezeWhenExpanded={false}
     getLoadingProps={[Function]}
     getNoDataProps={[Function]}
@@ -428,9 +449,12 @@ exports[`<ChartTable/> render with objects 1`] = `
     getTheadTrProps={[Function]}
     getTrGroupProps={[Function]}
     getTrProps={[Function]}
+    groupedByPivotKey="_groupedByPivot"
+    indexKey="_index"
     loading={false}
     loadingText="Loading..."
     minRows={10}
+    nestingLevelKey="_nestingLevel"
     nextText="Next"
     noDataText={
       <span>
@@ -448,7 +472,8 @@ exports[`<ChartTable/> render with objects 1`] = `
       </span>
     }
     ofText="of"
-    onChange={[Function]}
+    onFetchData={[Function]}
+    originalKey="_original"
     pageSizeOptions={
       Array [
         20,
@@ -457,16 +482,16 @@ exports[`<ChartTable/> render with objects 1`] = `
       ]
     }
     pageText="Page"
-    pivotColumnWidth={200}
+    pivotDefaults={Object {}}
     pivotIDKey="_pivotID"
     pivotValKey="_pivotVal"
     previousText="Previous"
     resizable={false}
     rowsText="rows"
-    showFilters={false}
     showPageJump={true}
     showPageSizeOptions={true}
     showPagination={true}
+    sortable={true}
     style={Object {}}
     subRowsKey="_subRows"
   >
@@ -628,6 +653,16 @@ exports[`<ChartTable/> render with objects 1`] = `
                       >
                         user
                       </div>
+                      <Component
+                        onMouseDown={[Function]}
+                        onTouchStart={[Function]}
+                      >
+                        <div
+                          className="rt-resizer"
+                          onMouseDown={[Function]}
+                          onTouchStart={[Function]}
+                        />
+                      </Component>
                     </div>
                   </ThComponent>
                   <ThComponent
@@ -715,6 +750,16 @@ exports[`<ChartTable/> render with objects 1`] = `
                       >
                         crated time
                       </div>
+                      <Component
+                        onMouseDown={[Function]}
+                        onTouchStart={[Function]}
+                      >
+                        <div
+                          className="rt-resizer"
+                          onMouseDown={[Function]}
+                          onTouchStart={[Function]}
+                        />
+                      </Component>
                     </div>
                   </ThComponent>
                   <ThComponent
@@ -744,6 +789,16 @@ exports[`<ChartTable/> render with objects 1`] = `
                       >
                         added time
                       </div>
+                      <Component
+                        onMouseDown={[Function]}
+                        onTouchStart={[Function]}
+                      >
+                        <div
+                          className="rt-resizer"
+                          onMouseDown={[Function]}
+                          onTouchStart={[Function]}
+                        />
+                      </Component>
                     </div>
                   </ThComponent>
                   <ThComponent
@@ -860,7 +915,6 @@ exports[`<ChartTable/> render with objects 1`] = `
                             bsClass="checkbox1"
                             checked={false}
                             disabled={false}
-                            id={0}
                             inline={false}
                             name="selected"
                             onChange={[Function]}
@@ -872,7 +926,6 @@ exports[`<ChartTable/> render with objects 1`] = `
                                 <input
                                   checked={false}
                                   disabled={false}
-                                  id={0}
                                   name="selected"
                                   onChange={[Function]}
                                   type="checkbox"
@@ -1159,7 +1212,6 @@ exports[`<ChartTable/> render with objects 1`] = `
                             bsClass="checkbox1"
                             checked={false}
                             disabled={false}
-                            id={1}
                             inline={false}
                             name="selected"
                             onChange={[Function]}
@@ -1171,7 +1223,6 @@ exports[`<ChartTable/> render with objects 1`] = `
                                 <input
                                   checked={false}
                                   disabled={false}
-                                  id={1}
                                   name="selected"
                                   onChange={[Function]}
                                   type="checkbox"
@@ -1455,7 +1506,6 @@ exports[`<ChartTable/> render with objects 1`] = `
                             bsClass="checkbox1"
                             checked={false}
                             disabled={false}
-                            id={2}
                             inline={false}
                             name="selected"
                             onChange={[Function]}
@@ -1467,7 +1517,6 @@ exports[`<ChartTable/> render with objects 1`] = `
                                 <input
                                   checked={false}
                                   disabled={false}
-                                  id={2}
                                   name="selected"
                                   onChange={[Function]}
                                   type="checkbox"
@@ -1751,7 +1800,6 @@ exports[`<ChartTable/> render with objects 1`] = `
                             bsClass="checkbox1"
                             checked={false}
                             disabled={false}
-                            id={3}
                             inline={false}
                             name="selected"
                             onChange={[Function]}
@@ -1763,7 +1811,6 @@ exports[`<ChartTable/> render with objects 1`] = `
                                 <input
                                   checked={false}
                                   disabled={false}
-                                  id={3}
                                   name="selected"
                                   onChange={[Function]}
                                   type="checkbox"
@@ -2047,7 +2094,6 @@ exports[`<ChartTable/> render with objects 1`] = `
                             bsClass="checkbox1"
                             checked={false}
                             disabled={false}
-                            id={4}
                             inline={false}
                             name="selected"
                             onChange={[Function]}
@@ -2059,7 +2105,6 @@ exports[`<ChartTable/> render with objects 1`] = `
                                 <input
                                   checked={false}
                                   disabled={false}
-                                  id={4}
                                   name="selected"
                                   onChange={[Function]}
                                   type="checkbox"
@@ -2348,7 +2393,6 @@ exports[`<ChartTable/> render with objects 1`] = `
                             bsClass="checkbox1"
                             checked={false}
                             disabled={false}
-                            id={5}
                             inline={false}
                             name="selected"
                             onChange={[Function]}
@@ -2360,7 +2404,6 @@ exports[`<ChartTable/> render with objects 1`] = `
                                 <input
                                   checked={false}
                                   disabled={false}
-                                  id={5}
                                   name="selected"
                                   onChange={[Function]}
                                   type="checkbox"
@@ -2649,7 +2692,6 @@ exports[`<ChartTable/> render with objects 1`] = `
                             bsClass="checkbox1"
                             checked={false}
                             disabled={false}
-                            id={96}
                             inline={false}
                             name="selected"
                             onChange={[Function]}
@@ -2661,7 +2703,6 @@ exports[`<ChartTable/> render with objects 1`] = `
                                 <input
                                   checked={false}
                                   disabled={false}
-                                  id={96}
                                   name="selected"
                                   onChange={[Function]}
                                   type="checkbox"
@@ -2899,11 +2940,11 @@ exports[`<ChartTable/> render with objects 1`] = `
                   className="rt-tr-group"
                 >
                   <Component
-                    className="-padRow"
+                    className="-padRow -even"
                     style={Object {}}
                   >
                     <div
-                      className="rt-tr -padRow"
+                      className="rt-tr -padRow -even"
                       style={Object {}}
                     >
                       <Component
@@ -3099,11 +3140,11 @@ exports[`<ChartTable/> render with objects 1`] = `
                   className="rt-tr-group"
                 >
                   <Component
-                    className="-padRow"
+                    className="-padRow -odd"
                     style={Object {}}
                   >
                     <div
-                      className="rt-tr -padRow"
+                      className="rt-tr -padRow -odd"
                       style={Object {}}
                     >
                       <Component
@@ -3299,11 +3340,11 @@ exports[`<ChartTable/> render with objects 1`] = `
                   className="rt-tr-group"
                 >
                   <Component
-                    className="-padRow"
+                    className="-padRow -even"
                     style={Object {}}
                   >
                     <div
-                      className="rt-tr -padRow"
+                      className="rt-tr -padRow -even"
                       style={Object {}}
                     >
                       <Component
@@ -3498,11 +3539,14 @@ exports[`<ChartTable/> render with objects 1`] = `
           </Component>
         </div>
       </Component>
-      <pagination
+      <ReactTablePagination
+        AggregatedComponent={[Function]}
         ExpanderComponent={[Function]}
+        FilterComponent={[Function]}
         LoadingComponent={[Function]}
         NoDataComponent={[Function]}
         PaginationComponent={[Function]}
+        PivotValueComponent={[Function]}
         ResizerComponent={[Function]}
         TableComponent={[Function]}
         TbodyComponent={[Function]}
@@ -3512,195 +3556,248 @@ exports[`<ChartTable/> render with objects 1`] = `
         TheadComponent={[Function]}
         TrComponent={[Function]}
         TrGroupComponent={[Function]}
+        aggregatedKey="_aggregated"
         allDecoratedColumns={
           Array [
             Object {
+              "Aggregated": undefined,
+              "Cell": [Function],
+              "Expander": undefined,
+              "Filter": undefined,
+              "Footer": undefined,
+              "Header": [Function],
+              "Pivot": undefined,
+              "PivotValue": undefined,
               "accessor": [Function],
+              "aggregate": undefined,
               "className": "",
               "filterMethod": undefined,
-              "filterRender": [Function],
-              "footer": undefined,
+              "filterable": undefined,
               "footerClassName": "",
               "footerStyle": Object {},
               "getFooterProps": [Function],
               "getHeaderProps": [Function],
               "getProps": [Function],
-              "header": [Function],
               "headerClassName": "",
               "headerStyle": Object {},
-              "hideFilter": false,
               "id": "selected",
               "minWidth": 100,
-              "render": [Function],
               "resizable": false,
               "show": true,
+              "sortMethod": undefined,
               "sortable": false,
               "style": Object {},
               "width": 40,
             },
             Object {
+              "Aggregated": undefined,
+              "Cell": [Function],
+              "Expander": undefined,
+              "Filter": undefined,
+              "Footer": undefined,
+              "Header": "user",
+              "Pivot": undefined,
+              "PivotValue": undefined,
               "accessor": [Function],
+              "aggregate": undefined,
               "className": "",
               "filterMethod": undefined,
-              "filterRender": [Function],
-              "footer": undefined,
+              "filterable": undefined,
               "footerClassName": "",
               "footerStyle": Object {},
               "getFooterProps": [Function],
               "getHeaderProps": [Function],
               "getProps": [Function],
-              "header": "user",
               "headerClassName": "",
               "headerStyle": Object {},
-              "hideFilter": false,
               "id": "from_user",
               "maxWidth": 300,
               "minWidth": 200,
-              "render": [Function],
               "resizable": true,
               "show": true,
-              "sortable": true,
+              "sortMethod": undefined,
+              "sortable": undefined,
               "style": Object {},
             },
             Object {
+              "Aggregated": undefined,
+              "Cell": [Function],
+              "Expander": undefined,
+              "Filter": undefined,
+              "Footer": undefined,
+              "Header": "fb msg",
+              "Pivot": undefined,
+              "PivotValue": undefined,
               "accessor": [Function],
+              "aggregate": undefined,
               "className": "",
               "filterMethod": undefined,
-              "filterRender": [Function],
-              "footer": undefined,
+              "filterable": undefined,
               "footerClassName": "",
               "footerStyle": Object {},
               "getFooterProps": [Function],
               "getHeaderProps": [Function],
               "getProps": [Function],
-              "header": "fb msg",
               "headerClassName": "",
               "headerStyle": Object {},
-              "hideFilter": false,
               "id": "message",
               "maxWidth": 80,
               "minWidth": 100,
-              "render": [Function],
+              "resizable": undefined,
               "show": true,
-              "sortable": true,
+              "sortMethod": undefined,
+              "sortable": undefined,
               "style": Object {},
             },
             Object {
+              "Aggregated": undefined,
+              "Cell": undefined,
+              "Expander": undefined,
+              "Filter": undefined,
+              "Footer": undefined,
+              "Header": "reactions count",
+              "Pivot": undefined,
+              "PivotValue": undefined,
               "accessor": [Function],
+              "aggregate": undefined,
               "className": "",
               "filterMethod": undefined,
-              "filterRender": [Function],
-              "footer": undefined,
+              "filterable": undefined,
               "footerClassName": "",
               "footerStyle": Object {},
               "getFooterProps": [Function],
               "getHeaderProps": [Function],
               "getProps": [Function],
-              "header": "reactions count",
               "headerClassName": "",
               "headerStyle": Object {},
-              "hideFilter": false,
               "id": "reactions_num",
               "maxWidth": 80,
               "minWidth": 60,
-              "render": undefined,
+              "resizable": undefined,
               "show": true,
               "sort": "dsc",
-              "sortable": true,
+              "sortMethod": undefined,
+              "sortable": undefined,
               "style": Object {},
             },
             Object {
+              "Aggregated": undefined,
+              "Cell": [Function],
+              "Expander": undefined,
+              "Filter": undefined,
+              "Footer": undefined,
+              "Header": "crated time",
+              "Pivot": undefined,
+              "PivotValue": undefined,
               "accessor": [Function],
+              "aggregate": undefined,
               "className": "",
               "filterMethod": undefined,
-              "filterRender": [Function],
-              "footer": undefined,
+              "filterable": undefined,
               "footerClassName": "",
               "footerStyle": Object {},
               "getFooterProps": [Function],
               "getHeaderProps": [Function],
               "getProps": [Function],
-              "header": "crated time",
               "headerClassName": "",
               "headerStyle": Object {},
-              "hideFilter": false,
               "id": "createTime",
               "maxWidth": 200,
               "minWidth": 150,
-              "render": [Function],
               "resizable": true,
               "show": true,
-              "sortable": true,
+              "sortMethod": undefined,
+              "sortable": undefined,
               "style": Object {},
             },
             Object {
+              "Aggregated": undefined,
+              "Cell": [Function],
+              "Expander": undefined,
+              "Filter": undefined,
+              "Footer": undefined,
+              "Header": "added time",
+              "Pivot": undefined,
+              "PivotValue": undefined,
               "accessor": [Function],
+              "aggregate": undefined,
               "className": "",
               "filterMethod": undefined,
-              "filterRender": [Function],
-              "footer": undefined,
+              "filterable": undefined,
               "footerClassName": "",
               "footerStyle": Object {},
               "getFooterProps": [Function],
               "getHeaderProps": [Function],
               "getProps": [Function],
-              "header": "added time",
               "headerClassName": "",
               "headerStyle": Object {},
-              "hideFilter": false,
               "id": "addedTime",
               "maxWidth": 150,
               "minWidth": 100,
-              "render": [Function],
               "resizable": true,
               "show": true,
-              "sortable": true,
+              "sortMethod": undefined,
+              "sortable": undefined,
               "style": Object {},
             },
             Object {
+              "Aggregated": undefined,
+              "Cell": [Function],
+              "Expander": undefined,
+              "Filter": undefined,
+              "Footer": undefined,
+              "Header": "last update",
+              "Pivot": undefined,
+              "PivotValue": undefined,
               "accessor": [Function],
+              "aggregate": undefined,
               "className": "",
               "filterMethod": undefined,
-              "filterRender": [Function],
-              "footer": undefined,
+              "filterable": undefined,
               "footerClassName": "",
               "footerStyle": Object {},
               "getFooterProps": [Function],
               "getHeaderProps": [Function],
               "getProps": [Function],
-              "header": "last update",
               "headerClassName": "",
               "headerStyle": Object {},
-              "hideFilter": false,
               "id": "lastUpdate",
               "maxWidth": 200,
               "minWidth": 150,
-              "render": [Function],
+              "resizable": undefined,
               "show": true,
-              "sortable": true,
+              "sortMethod": undefined,
+              "sortable": undefined,
               "style": Object {},
             },
             Object {
+              "Aggregated": undefined,
+              "Cell": [Function],
+              "Expander": undefined,
+              "Filter": undefined,
+              "Footer": undefined,
+              "Header": [Function],
+              "Pivot": undefined,
+              "PivotValue": undefined,
               "accessor": [Function],
+              "aggregate": undefined,
               "className": "",
               "filterMethod": undefined,
-              "filterRender": [Function],
-              "footer": undefined,
+              "filterable": undefined,
               "footerClassName": "",
               "footerStyle": Object {},
               "getFooterProps": [Function],
               "getHeaderProps": [Function],
               "getProps": [Function],
-              "header": [Function],
               "headerClassName": "",
               "headerStyle": Object {},
-              "hideFilter": false,
               "id": "yt_link",
               "maxWidth": 600,
               "minWidth": 200,
-              "render": [Function],
+              "resizable": undefined,
               "show": true,
-              "sortable": true,
+              "sortMethod": undefined,
+              "sortable": undefined,
               "style": Object {},
               "width": 300,
             },
@@ -3709,192 +3806,244 @@ exports[`<ChartTable/> render with objects 1`] = `
         allVisibleColumns={
           Array [
             Object {
+              "Aggregated": undefined,
+              "Cell": [Function],
+              "Expander": undefined,
+              "Filter": undefined,
+              "Footer": undefined,
+              "Header": [Function],
+              "Pivot": undefined,
+              "PivotValue": undefined,
               "accessor": [Function],
+              "aggregate": undefined,
               "className": "",
               "filterMethod": undefined,
-              "filterRender": [Function],
-              "footer": undefined,
+              "filterable": undefined,
               "footerClassName": "",
               "footerStyle": Object {},
               "getFooterProps": [Function],
               "getHeaderProps": [Function],
               "getProps": [Function],
-              "header": [Function],
               "headerClassName": "",
               "headerStyle": Object {},
-              "hideFilter": false,
               "id": "selected",
               "minWidth": 100,
-              "render": [Function],
               "resizable": false,
               "show": true,
+              "sortMethod": undefined,
               "sortable": false,
               "style": Object {},
               "width": 40,
             },
             Object {
+              "Aggregated": undefined,
+              "Cell": [Function],
+              "Expander": undefined,
+              "Filter": undefined,
+              "Footer": undefined,
+              "Header": "user",
+              "Pivot": undefined,
+              "PivotValue": undefined,
               "accessor": [Function],
+              "aggregate": undefined,
               "className": "",
               "filterMethod": undefined,
-              "filterRender": [Function],
-              "footer": undefined,
+              "filterable": undefined,
               "footerClassName": "",
               "footerStyle": Object {},
               "getFooterProps": [Function],
               "getHeaderProps": [Function],
               "getProps": [Function],
-              "header": "user",
               "headerClassName": "",
               "headerStyle": Object {},
-              "hideFilter": false,
               "id": "from_user",
               "maxWidth": 300,
               "minWidth": 200,
-              "render": [Function],
               "resizable": true,
               "show": true,
-              "sortable": true,
+              "sortMethod": undefined,
+              "sortable": undefined,
               "style": Object {},
             },
             Object {
+              "Aggregated": undefined,
+              "Cell": [Function],
+              "Expander": undefined,
+              "Filter": undefined,
+              "Footer": undefined,
+              "Header": "fb msg",
+              "Pivot": undefined,
+              "PivotValue": undefined,
               "accessor": [Function],
+              "aggregate": undefined,
               "className": "",
               "filterMethod": undefined,
-              "filterRender": [Function],
-              "footer": undefined,
+              "filterable": undefined,
               "footerClassName": "",
               "footerStyle": Object {},
               "getFooterProps": [Function],
               "getHeaderProps": [Function],
               "getProps": [Function],
-              "header": "fb msg",
               "headerClassName": "",
               "headerStyle": Object {},
-              "hideFilter": false,
               "id": "message",
               "maxWidth": 80,
               "minWidth": 100,
-              "render": [Function],
+              "resizable": undefined,
               "show": true,
-              "sortable": true,
+              "sortMethod": undefined,
+              "sortable": undefined,
               "style": Object {},
             },
             Object {
+              "Aggregated": undefined,
+              "Cell": undefined,
+              "Expander": undefined,
+              "Filter": undefined,
+              "Footer": undefined,
+              "Header": "reactions count",
+              "Pivot": undefined,
+              "PivotValue": undefined,
               "accessor": [Function],
+              "aggregate": undefined,
               "className": "",
               "filterMethod": undefined,
-              "filterRender": [Function],
-              "footer": undefined,
+              "filterable": undefined,
               "footerClassName": "",
               "footerStyle": Object {},
               "getFooterProps": [Function],
               "getHeaderProps": [Function],
               "getProps": [Function],
-              "header": "reactions count",
               "headerClassName": "",
               "headerStyle": Object {},
-              "hideFilter": false,
               "id": "reactions_num",
               "maxWidth": 80,
               "minWidth": 60,
-              "render": undefined,
+              "resizable": undefined,
               "show": true,
               "sort": "dsc",
-              "sortable": true,
+              "sortMethod": undefined,
+              "sortable": undefined,
               "style": Object {},
             },
             Object {
+              "Aggregated": undefined,
+              "Cell": [Function],
+              "Expander": undefined,
+              "Filter": undefined,
+              "Footer": undefined,
+              "Header": "crated time",
+              "Pivot": undefined,
+              "PivotValue": undefined,
               "accessor": [Function],
+              "aggregate": undefined,
               "className": "",
               "filterMethod": undefined,
-              "filterRender": [Function],
-              "footer": undefined,
+              "filterable": undefined,
               "footerClassName": "",
               "footerStyle": Object {},
               "getFooterProps": [Function],
               "getHeaderProps": [Function],
               "getProps": [Function],
-              "header": "crated time",
               "headerClassName": "",
               "headerStyle": Object {},
-              "hideFilter": false,
               "id": "createTime",
               "maxWidth": 200,
               "minWidth": 150,
-              "render": [Function],
               "resizable": true,
               "show": true,
-              "sortable": true,
+              "sortMethod": undefined,
+              "sortable": undefined,
               "style": Object {},
             },
             Object {
+              "Aggregated": undefined,
+              "Cell": [Function],
+              "Expander": undefined,
+              "Filter": undefined,
+              "Footer": undefined,
+              "Header": "added time",
+              "Pivot": undefined,
+              "PivotValue": undefined,
               "accessor": [Function],
+              "aggregate": undefined,
               "className": "",
               "filterMethod": undefined,
-              "filterRender": [Function],
-              "footer": undefined,
+              "filterable": undefined,
               "footerClassName": "",
               "footerStyle": Object {},
               "getFooterProps": [Function],
               "getHeaderProps": [Function],
               "getProps": [Function],
-              "header": "added time",
               "headerClassName": "",
               "headerStyle": Object {},
-              "hideFilter": false,
               "id": "addedTime",
               "maxWidth": 150,
               "minWidth": 100,
-              "render": [Function],
               "resizable": true,
               "show": true,
-              "sortable": true,
+              "sortMethod": undefined,
+              "sortable": undefined,
               "style": Object {},
             },
             Object {
+              "Aggregated": undefined,
+              "Cell": [Function],
+              "Expander": undefined,
+              "Filter": undefined,
+              "Footer": undefined,
+              "Header": "last update",
+              "Pivot": undefined,
+              "PivotValue": undefined,
               "accessor": [Function],
+              "aggregate": undefined,
               "className": "",
               "filterMethod": undefined,
-              "filterRender": [Function],
-              "footer": undefined,
+              "filterable": undefined,
               "footerClassName": "",
               "footerStyle": Object {},
               "getFooterProps": [Function],
               "getHeaderProps": [Function],
               "getProps": [Function],
-              "header": "last update",
               "headerClassName": "",
               "headerStyle": Object {},
-              "hideFilter": false,
               "id": "lastUpdate",
               "maxWidth": 200,
               "minWidth": 150,
-              "render": [Function],
+              "resizable": undefined,
               "show": true,
-              "sortable": true,
+              "sortMethod": undefined,
+              "sortable": undefined,
               "style": Object {},
             },
             Object {
+              "Aggregated": undefined,
+              "Cell": [Function],
+              "Expander": undefined,
+              "Filter": undefined,
+              "Footer": undefined,
+              "Header": [Function],
+              "Pivot": undefined,
+              "PivotValue": undefined,
               "accessor": [Function],
+              "aggregate": undefined,
               "className": "",
               "filterMethod": undefined,
-              "filterRender": [Function],
-              "footer": undefined,
+              "filterable": undefined,
               "footerClassName": "",
               "footerStyle": Object {},
               "getFooterProps": [Function],
               "getHeaderProps": [Function],
               "getProps": [Function],
-              "header": [Function],
               "headerClassName": "",
               "headerStyle": Object {},
-              "hideFilter": false,
               "id": "yt_link",
               "maxWidth": 600,
               "minWidth": 200,
-              "render": [Function],
+              "resizable": undefined,
               "show": true,
-              "sortable": true,
+              "sortMethod": undefined,
+              "sortable": undefined,
               "style": Object {},
               "width": 300,
             },
@@ -3907,98 +4056,106 @@ exports[`<ChartTable/> render with objects 1`] = `
         collapseOnSortingChange={true}
         column={
           Object {
+            "Aggregated": undefined,
+            "Cell": undefined,
+            "Expander": undefined,
+            "Filter": undefined,
+            "Footer": undefined,
+            "Header": undefined,
+            "Pivot": undefined,
+            "PivotValue": undefined,
+            "aggregate": undefined,
             "className": "",
             "filterMethod": undefined,
-            "filterRender": [Function],
-            "footer": undefined,
+            "filterable": undefined,
             "footerClassName": "",
             "footerStyle": Object {},
             "getFooterProps": [Function],
             "getHeaderProps": [Function],
             "getProps": [Function],
-            "header": undefined,
             "headerClassName": "",
             "headerStyle": Object {},
-            "hideFilter": false,
             "minWidth": 100,
-            "render": undefined,
+            "resizable": undefined,
             "show": true,
-            "sortable": true,
+            "sortMethod": undefined,
+            "sortable": undefined,
             "style": Object {},
           }
         }
         columns={
           Array [
             Object {
+              "Header": [Function],
               "columns": Array [
                 Object {
+                  "Cell": [Function],
+                  "Header": [Function],
                   "accessor": "selected",
-                  "header": [Function],
-                  "render": [Function],
                   "resizable": false,
                   "sortable": false,
                   "width": 40,
                 },
                 Object {
+                  "Cell": [Function],
+                  "Header": "user",
                   "accessor": "from_user",
-                  "header": "user",
                   "maxWidth": 300,
                   "minWidth": 200,
-                  "render": [Function],
                   "resizable": true,
                 },
                 Object {
+                  "Cell": [Function],
+                  "Header": "fb msg",
                   "accessor": "message",
-                  "header": "fb msg",
                   "maxWidth": 80,
-                  "render": [Function],
                 },
                 Object {
+                  "Header": "reactions count",
                   "accessor": "reactions_num",
-                  "header": "reactions count",
                   "maxWidth": 80,
                   "minWidth": 60,
                   "sort": "dsc",
                 },
                 Object {
+                  "Cell": [Function],
+                  "Header": "crated time",
                   "accessor": [Function],
-                  "header": "crated time",
                   "id": "createTime",
                   "maxWidth": 200,
                   "minWidth": 150,
-                  "render": [Function],
                   "resizable": true,
                 },
                 Object {
+                  "Cell": [Function],
+                  "Header": "added time",
                   "accessor": [Function],
-                  "header": "added time",
                   "id": "addedTime",
                   "maxWidth": 150,
-                  "render": [Function],
                   "resizable": true,
                 },
                 Object {
+                  "Cell": [Function],
+                  "Header": "last update",
                   "accessor": [Function],
-                  "header": "last update",
                   "id": "lastUpdate",
                   "maxWidth": 200,
                   "minWidth": 150,
-                  "render": [Function],
                 },
                 Object {
+                  "Cell": [Function],
+                  "Header": [Function],
                   "accessor": [Function],
-                  "header": [Function],
                   "id": "yt_link",
                   "maxWidth": 600,
                   "minWidth": 200,
-                  "render": [Function],
                   "width": 300,
                 },
               ],
-              "header": [Function],
             },
           ]
         }
+        currentlyResizing={false}
         data={
           Array [
             Object {
@@ -4141,14 +4298,24 @@ exports[`<ChartTable/> render with objects 1`] = `
             },
           ]
         }
+        defaultExpanded={Object {}}
         defaultFilterMethod={[Function]}
-        defaultFiltering={Array []}
+        defaultFiltered={Array []}
         defaultPageSize={20}
-        defaultResizing={Array []}
-        defaultSorting={Array []}
-        expandedRows={Object {}}
-        expanderColumnWidth={35}
-        filtering={Array []}
+        defaultResized={Array []}
+        defaultSortMethod={[Function]}
+        defaultSorted={Array []}
+        expanded={Object {}}
+        expanderDefaults={
+          Object {
+            "filterable": false,
+            "resizable": false,
+            "sortable": false,
+            "width": 35,
+          }
+        }
+        filterable={false}
+        filtered={Array []}
         freezeWhenExpanded={false}
         frozen={false}
         getLoadingProps={[Function]}
@@ -4173,226 +4340,288 @@ exports[`<ChartTable/> render with objects 1`] = `
         getTheadTrProps={[Function]}
         getTrGroupProps={[Function]}
         getTrProps={[Function]}
+        groupedByPivotKey="_groupedByPivot"
         hasHeaderGroups={true}
         headerGroups={
           Array [
             Object {
+              "Aggregated": undefined,
+              "Cell": undefined,
+              "Expander": undefined,
+              "Filter": undefined,
+              "Footer": undefined,
+              "Header": [Function],
+              "Pivot": undefined,
+              "PivotValue": undefined,
+              "aggregate": undefined,
               "className": "",
               "columns": Array [
                 Object {
+                  "Aggregated": undefined,
+                  "Cell": [Function],
+                  "Expander": undefined,
+                  "Filter": undefined,
+                  "Footer": undefined,
+                  "Header": [Function],
+                  "Pivot": undefined,
+                  "PivotValue": undefined,
                   "accessor": [Function],
+                  "aggregate": undefined,
                   "className": "",
                   "filterMethod": undefined,
-                  "filterRender": [Function],
-                  "footer": undefined,
+                  "filterable": undefined,
                   "footerClassName": "",
                   "footerStyle": Object {},
                   "getFooterProps": [Function],
                   "getHeaderProps": [Function],
                   "getProps": [Function],
-                  "header": [Function],
                   "headerClassName": "",
                   "headerStyle": Object {},
-                  "hideFilter": false,
                   "id": "selected",
                   "minWidth": 100,
-                  "render": [Function],
                   "resizable": false,
                   "show": true,
+                  "sortMethod": undefined,
                   "sortable": false,
                   "style": Object {},
                   "width": 40,
                 },
                 Object {
+                  "Aggregated": undefined,
+                  "Cell": [Function],
+                  "Expander": undefined,
+                  "Filter": undefined,
+                  "Footer": undefined,
+                  "Header": "user",
+                  "Pivot": undefined,
+                  "PivotValue": undefined,
                   "accessor": [Function],
+                  "aggregate": undefined,
                   "className": "",
                   "filterMethod": undefined,
-                  "filterRender": [Function],
-                  "footer": undefined,
+                  "filterable": undefined,
                   "footerClassName": "",
                   "footerStyle": Object {},
                   "getFooterProps": [Function],
                   "getHeaderProps": [Function],
                   "getProps": [Function],
-                  "header": "user",
                   "headerClassName": "",
                   "headerStyle": Object {},
-                  "hideFilter": false,
                   "id": "from_user",
                   "maxWidth": 300,
                   "minWidth": 200,
-                  "render": [Function],
                   "resizable": true,
                   "show": true,
-                  "sortable": true,
+                  "sortMethod": undefined,
+                  "sortable": undefined,
                   "style": Object {},
                 },
                 Object {
+                  "Aggregated": undefined,
+                  "Cell": [Function],
+                  "Expander": undefined,
+                  "Filter": undefined,
+                  "Footer": undefined,
+                  "Header": "fb msg",
+                  "Pivot": undefined,
+                  "PivotValue": undefined,
                   "accessor": [Function],
+                  "aggregate": undefined,
                   "className": "",
                   "filterMethod": undefined,
-                  "filterRender": [Function],
-                  "footer": undefined,
+                  "filterable": undefined,
                   "footerClassName": "",
                   "footerStyle": Object {},
                   "getFooterProps": [Function],
                   "getHeaderProps": [Function],
                   "getProps": [Function],
-                  "header": "fb msg",
                   "headerClassName": "",
                   "headerStyle": Object {},
-                  "hideFilter": false,
                   "id": "message",
                   "maxWidth": 80,
                   "minWidth": 100,
-                  "render": [Function],
+                  "resizable": undefined,
                   "show": true,
-                  "sortable": true,
+                  "sortMethod": undefined,
+                  "sortable": undefined,
                   "style": Object {},
                 },
                 Object {
+                  "Aggregated": undefined,
+                  "Cell": undefined,
+                  "Expander": undefined,
+                  "Filter": undefined,
+                  "Footer": undefined,
+                  "Header": "reactions count",
+                  "Pivot": undefined,
+                  "PivotValue": undefined,
                   "accessor": [Function],
+                  "aggregate": undefined,
                   "className": "",
                   "filterMethod": undefined,
-                  "filterRender": [Function],
-                  "footer": undefined,
+                  "filterable": undefined,
                   "footerClassName": "",
                   "footerStyle": Object {},
                   "getFooterProps": [Function],
                   "getHeaderProps": [Function],
                   "getProps": [Function],
-                  "header": "reactions count",
                   "headerClassName": "",
                   "headerStyle": Object {},
-                  "hideFilter": false,
                   "id": "reactions_num",
                   "maxWidth": 80,
                   "minWidth": 60,
-                  "render": undefined,
+                  "resizable": undefined,
                   "show": true,
                   "sort": "dsc",
-                  "sortable": true,
+                  "sortMethod": undefined,
+                  "sortable": undefined,
                   "style": Object {},
                 },
                 Object {
+                  "Aggregated": undefined,
+                  "Cell": [Function],
+                  "Expander": undefined,
+                  "Filter": undefined,
+                  "Footer": undefined,
+                  "Header": "crated time",
+                  "Pivot": undefined,
+                  "PivotValue": undefined,
                   "accessor": [Function],
+                  "aggregate": undefined,
                   "className": "",
                   "filterMethod": undefined,
-                  "filterRender": [Function],
-                  "footer": undefined,
+                  "filterable": undefined,
                   "footerClassName": "",
                   "footerStyle": Object {},
                   "getFooterProps": [Function],
                   "getHeaderProps": [Function],
                   "getProps": [Function],
-                  "header": "crated time",
                   "headerClassName": "",
                   "headerStyle": Object {},
-                  "hideFilter": false,
                   "id": "createTime",
                   "maxWidth": 200,
                   "minWidth": 150,
-                  "render": [Function],
                   "resizable": true,
                   "show": true,
-                  "sortable": true,
+                  "sortMethod": undefined,
+                  "sortable": undefined,
                   "style": Object {},
                 },
                 Object {
+                  "Aggregated": undefined,
+                  "Cell": [Function],
+                  "Expander": undefined,
+                  "Filter": undefined,
+                  "Footer": undefined,
+                  "Header": "added time",
+                  "Pivot": undefined,
+                  "PivotValue": undefined,
                   "accessor": [Function],
+                  "aggregate": undefined,
                   "className": "",
                   "filterMethod": undefined,
-                  "filterRender": [Function],
-                  "footer": undefined,
+                  "filterable": undefined,
                   "footerClassName": "",
                   "footerStyle": Object {},
                   "getFooterProps": [Function],
                   "getHeaderProps": [Function],
                   "getProps": [Function],
-                  "header": "added time",
                   "headerClassName": "",
                   "headerStyle": Object {},
-                  "hideFilter": false,
                   "id": "addedTime",
                   "maxWidth": 150,
                   "minWidth": 100,
-                  "render": [Function],
                   "resizable": true,
                   "show": true,
-                  "sortable": true,
+                  "sortMethod": undefined,
+                  "sortable": undefined,
                   "style": Object {},
                 },
                 Object {
+                  "Aggregated": undefined,
+                  "Cell": [Function],
+                  "Expander": undefined,
+                  "Filter": undefined,
+                  "Footer": undefined,
+                  "Header": "last update",
+                  "Pivot": undefined,
+                  "PivotValue": undefined,
                   "accessor": [Function],
+                  "aggregate": undefined,
                   "className": "",
                   "filterMethod": undefined,
-                  "filterRender": [Function],
-                  "footer": undefined,
+                  "filterable": undefined,
                   "footerClassName": "",
                   "footerStyle": Object {},
                   "getFooterProps": [Function],
                   "getHeaderProps": [Function],
                   "getProps": [Function],
-                  "header": "last update",
                   "headerClassName": "",
                   "headerStyle": Object {},
-                  "hideFilter": false,
                   "id": "lastUpdate",
                   "maxWidth": 200,
                   "minWidth": 150,
-                  "render": [Function],
+                  "resizable": undefined,
                   "show": true,
-                  "sortable": true,
+                  "sortMethod": undefined,
+                  "sortable": undefined,
                   "style": Object {},
                 },
                 Object {
+                  "Aggregated": undefined,
+                  "Cell": [Function],
+                  "Expander": undefined,
+                  "Filter": undefined,
+                  "Footer": undefined,
+                  "Header": [Function],
+                  "Pivot": undefined,
+                  "PivotValue": undefined,
                   "accessor": [Function],
+                  "aggregate": undefined,
                   "className": "",
                   "filterMethod": undefined,
-                  "filterRender": [Function],
-                  "footer": undefined,
+                  "filterable": undefined,
                   "footerClassName": "",
                   "footerStyle": Object {},
                   "getFooterProps": [Function],
                   "getHeaderProps": [Function],
                   "getProps": [Function],
-                  "header": [Function],
                   "headerClassName": "",
                   "headerStyle": Object {},
-                  "hideFilter": false,
                   "id": "yt_link",
                   "maxWidth": 600,
                   "minWidth": 200,
-                  "render": [Function],
+                  "resizable": undefined,
                   "show": true,
-                  "sortable": true,
+                  "sortMethod": undefined,
+                  "sortable": undefined,
                   "style": Object {},
                   "width": 300,
                 },
               ],
               "filterMethod": undefined,
-              "filterRender": [Function],
-              "footer": undefined,
+              "filterable": undefined,
               "footerClassName": "",
               "footerStyle": Object {},
               "getFooterProps": [Function],
               "getHeaderProps": [Function],
               "getProps": [Function],
-              "header": [Function],
               "headerClassName": "",
               "headerStyle": Object {},
-              "hideFilter": false,
               "minWidth": 100,
-              "render": undefined,
+              "resizable": undefined,
               "show": true,
-              "sortable": true,
+              "sortMethod": undefined,
+              "sortable": undefined,
               "style": Object {},
             },
           ]
         }
+        indexKey="_index"
         loading={false}
         loadingText="Loading..."
         minRows={10}
+        nestingLevelKey="_nestingLevel"
         nextText="Next"
         noDataText={
           <span>
@@ -4410,9 +4639,10 @@ exports[`<ChartTable/> render with objects 1`] = `
           </span>
         }
         ofText="of"
-        onChange={[Function]}
+        onFetchData={[Function]}
         onPageChange={[Function]}
         onPageSizeChange={[Function]}
+        originalKey="_original"
         page={0}
         pageSize={20}
         pageSizeOptions={
@@ -4424,17 +4654,18 @@ exports[`<ChartTable/> render with objects 1`] = `
         }
         pageText="Page"
         pages={1}
-        pivotColumnWidth={200}
+        pivotDefaults={Object {}}
         pivotIDKey="_pivotID"
         pivotValKey="_pivotVal"
         previousText="Previous"
         resizable={false}
-        resizing={Array []}
+        resized={Array []}
         resolvedData={
           Array [
             Object {
-              "__index": 0,
-              "__original": Object {
+              "_index": 0,
+              "_nestingLevel": 0,
+              "_original": Object {
                 "added_by": "Joanna Kozieńska",
                 "added_time": "2017-03-07T23:00:00.000Z",
                 "created_time": "2017-03-01T19:36:39+0000",
@@ -4455,6 +4686,7 @@ exports[`<ChartTable/> render with objects 1`] = `
                 "type": "video",
                 "updated_time": "2017-03-09T21:46:45+0000",
               },
+              "_subRows": undefined,
               "addedTime": 1488927600000,
               "createTime": 1488396999000,
               "from_user": "Anna Stanuchowska",
@@ -4462,11 +4694,17 @@ exports[`<ChartTable/> render with objects 1`] = `
               "message": "Nie wiem, czy to by się nadawało, ale uwielbiam tą nutę <3 ",
               "reactions_num": 0,
               "selected": false,
-              "yt_link": "X Ambassadors - Unsteady (Erich Lee Gravity Remix)",
+              "yt_link": Object {
+                "name": "X Ambassadors - Unsteady (Erich Lee Gravity Remix)",
+                "title": "X Ambassadors - Unsteady (Erich Lee Gravity Remix)",
+                "type": "video_share_youtube",
+                "url": "https://www.youtube.com/watch?v=eBlFp2__XtM",
+              },
             },
             Object {
-              "__index": 1,
-              "__original": Object {
+              "_index": 1,
+              "_nestingLevel": 0,
+              "_original": Object {
                 "added_by": "Joanna Kozieńska",
                 "added_time": "2017-03-08T23:00:00.000Z",
                 "created_time": "2017-03-03T06:28:55+0000",
@@ -4483,6 +4721,7 @@ exports[`<ChartTable/> render with objects 1`] = `
                 "type": "status",
                 "updated_time": "2017-03-09T08:01:48+0000",
               },
+              "_subRows": undefined,
               "addedTime": 1489014000000,
               "createTime": 1488522535000,
               "from_user": "Damian Gruszczyński",
@@ -4490,11 +4729,15 @@ exports[`<ChartTable/> render with objects 1`] = `
               "message": "#całapłytawymiata",
               "reactions_num": 5,
               "selected": false,
-              "yt_link": "Barcelona, a song by Ed Sheeran on Spotify",
+              "yt_link": Object {
+                "title": "Barcelona, a song by Ed Sheeran on Spotify",
+                "type": "music_aggregation",
+              },
             },
             Object {
-              "__index": 2,
-              "__original": Object {
+              "_index": 2,
+              "_nestingLevel": 0,
+              "_original": Object {
                 "added_by": "Joanna Kozieńska",
                 "added_time": "2017-03-08T23:00:00.000Z",
                 "created_time": "2017-03-03T06:24:25+0000",
@@ -4511,6 +4754,7 @@ exports[`<ChartTable/> render with objects 1`] = `
                 "type": "status",
                 "updated_time": "2017-03-08T23:17:00+0000",
               },
+              "_subRows": undefined,
               "addedTime": 1489014000000,
               "createTime": 1488522265000,
               "from_user": "Damian Gruszczyński",
@@ -4518,11 +4762,15 @@ exports[`<ChartTable/> render with objects 1`] = `
               "message": "Ed! :-D",
               "reactions_num": 6,
               "selected": false,
-              "yt_link": "Galway Girl, a song by Ed Sheeran on Spotify",
+              "yt_link": Object {
+                "title": "Galway Girl, a song by Ed Sheeran on Spotify",
+                "type": "music_aggregation",
+              },
             },
             Object {
-              "__index": 3,
-              "__original": Object {
+              "_index": 3,
+              "_nestingLevel": 0,
+              "_original": Object {
                 "added_by": "Joanna Kozieńska",
                 "added_time": "2017-03-08T23:00:00.000Z",
                 "created_time": "2017-03-03T06:26:21+0000",
@@ -4539,6 +4787,7 @@ exports[`<ChartTable/> render with objects 1`] = `
                 "type": "status",
                 "updated_time": "2017-03-08T23:05:45+0000",
               },
+              "_subRows": undefined,
               "addedTime": 1489014000000,
               "createTime": 1488522381000,
               "from_user": "Damian Gruszczyński",
@@ -4546,11 +4795,15 @@ exports[`<ChartTable/> render with objects 1`] = `
               "message": "#nigdydosyceda ;-)",
               "reactions_num": 8,
               "selected": false,
-              "yt_link": "New Man, a song by Ed Sheeran on Spotify",
+              "yt_link": Object {
+                "title": "New Man, a song by Ed Sheeran on Spotify",
+                "type": "music_aggregation",
+              },
             },
             Object {
-              "__index": 4,
-              "__original": Object {
+              "_index": 4,
+              "_nestingLevel": 0,
+              "_original": Object {
                 "added_by": "Joanna Kozieńska",
                 "added_time": "2017-03-08T23:00:00.000Z",
                 "created_time": "2017-03-03T20:10:48+0000",
@@ -4573,6 +4826,7 @@ exports[`<ChartTable/> render with objects 1`] = `
                 "type": "video",
                 "updated_time": "2017-03-08T23:05:38+0000",
               },
+              "_subRows": undefined,
               "addedTime": 1489014000000,
               "createTime": 1488571848000,
               "from_user": "Mateusz Lech",
@@ -4582,11 +4836,17 @@ exports[`<ChartTable/> render with objects 1`] = `
           #95bpm",
               "reactions_num": 5,
               "selected": false,
-              "yt_link": "Vali - Ain't No Friend Of Mine (Official Video)",
+              "yt_link": Object {
+                "name": "Vali - Ain't No Friend Of Mine (Official Video)",
+                "title": "Vali - Ain't No Friend Of Mine (Official Video)",
+                "type": "video_share_youtube",
+                "url": "https://www.youtube.com/watch?v=5Y6e_T0ySmE",
+              },
             },
             Object {
-              "__index": 5,
-              "__original": Object {
+              "_index": 5,
+              "_nestingLevel": 0,
+              "_original": Object {
                 "added_by": "Joanna Kozieńska",
                 "added_time": "2017-03-07T23:00:00.000Z",
                 "created_time": "2017-03-07T23:07:03+0000",
@@ -4609,6 +4869,7 @@ exports[`<ChartTable/> render with objects 1`] = `
                 "type": "video",
                 "updated_time": "2017-03-08T21:36:01+0000",
               },
+              "_subRows": undefined,
               "addedTime": 1488927600000,
               "createTime": 1488928023000,
               "from_user": "Joanna Kozieńska",
@@ -4618,11 +4879,17 @@ exports[`<ChartTable/> render with objects 1`] = `
           ",
               "reactions_num": 9,
               "selected": false,
-              "yt_link": "Chet Faker - 1998 ft Banks",
+              "yt_link": Object {
+                "name": "Chet Faker - 1998 ft Banks",
+                "title": "Chet Faker - 1998 ft Banks",
+                "type": "video_share_youtube",
+                "url": "https://youtu.be/LuxpfnnsdX4",
+              },
             },
             Object {
-              "__index": 6,
-              "__original": Object {
+              "_index": 6,
+              "_nestingLevel": 0,
+              "_original": Object {
                 "created_time": "2016-08-30T14:20:21+0000",
                 "from_user": "Paulina Górka",
                 "full_picture": "https://external.xx.fbcdn.net/safe_image.php?d=AQBiF2VBQG2WfPvh&w=720&h=720&url=https%3A%2F%2Fi.ytimg.com%2Fvi%2FEkeZKFa65zs%2Fmaxresdefault.jpg&cfs=1&_nc_hash=AQBYNj773CB4DtVR",
@@ -4642,6 +4909,7 @@ exports[`<ChartTable/> render with objects 1`] = `
                 "type": "video",
                 "updated_time": "2017-02-07T10:56:40+0000",
               },
+              "_subRows": undefined,
               "addedTime": 0,
               "createTime": 1472566821000,
               "from_user": "Paulina Górka",
@@ -4650,21 +4918,28 @@ exports[`<ChartTable/> render with objects 1`] = `
           ",
               "reactions_num": 19,
               "selected": false,
-              "yt_link": "James Hersey - Miss You (Official Audio)",
+              "yt_link": Object {
+                "name": "James Hersey - Miss You (Official Audio)",
+                "title": "James Hersey - Miss You (Official Audio)",
+                "type": "video_share_youtube",
+                "url": "https://www.youtube.com/watch?v=EkeZKFa65zs",
+              },
             },
           ]
         }
         rowsText="rows"
-        showFilters={false}
         showPageJump={true}
         showPageSizeOptions={true}
         showPagination={true}
         skipNextSort={false}
+        sortable={true}
+        sorted={Array []}
         sortedData={
           Array [
             Object {
-              "__index": 0,
-              "__original": Object {
+              "_index": 0,
+              "_nestingLevel": 0,
+              "_original": Object {
                 "added_by": "Joanna Kozieńska",
                 "added_time": "2017-03-07T23:00:00.000Z",
                 "created_time": "2017-03-01T19:36:39+0000",
@@ -4685,6 +4960,7 @@ exports[`<ChartTable/> render with objects 1`] = `
                 "type": "video",
                 "updated_time": "2017-03-09T21:46:45+0000",
               },
+              "_subRows": undefined,
               "addedTime": 1488927600000,
               "createTime": 1488396999000,
               "from_user": "Anna Stanuchowska",
@@ -4692,11 +4968,17 @@ exports[`<ChartTable/> render with objects 1`] = `
               "message": "Nie wiem, czy to by się nadawało, ale uwielbiam tą nutę <3 ",
               "reactions_num": 0,
               "selected": false,
-              "yt_link": "X Ambassadors - Unsteady (Erich Lee Gravity Remix)",
+              "yt_link": Object {
+                "name": "X Ambassadors - Unsteady (Erich Lee Gravity Remix)",
+                "title": "X Ambassadors - Unsteady (Erich Lee Gravity Remix)",
+                "type": "video_share_youtube",
+                "url": "https://www.youtube.com/watch?v=eBlFp2__XtM",
+              },
             },
             Object {
-              "__index": 1,
-              "__original": Object {
+              "_index": 1,
+              "_nestingLevel": 0,
+              "_original": Object {
                 "added_by": "Joanna Kozieńska",
                 "added_time": "2017-03-08T23:00:00.000Z",
                 "created_time": "2017-03-03T06:28:55+0000",
@@ -4713,6 +4995,7 @@ exports[`<ChartTable/> render with objects 1`] = `
                 "type": "status",
                 "updated_time": "2017-03-09T08:01:48+0000",
               },
+              "_subRows": undefined,
               "addedTime": 1489014000000,
               "createTime": 1488522535000,
               "from_user": "Damian Gruszczyński",
@@ -4720,11 +5003,15 @@ exports[`<ChartTable/> render with objects 1`] = `
               "message": "#całapłytawymiata",
               "reactions_num": 5,
               "selected": false,
-              "yt_link": "Barcelona, a song by Ed Sheeran on Spotify",
+              "yt_link": Object {
+                "title": "Barcelona, a song by Ed Sheeran on Spotify",
+                "type": "music_aggregation",
+              },
             },
             Object {
-              "__index": 2,
-              "__original": Object {
+              "_index": 2,
+              "_nestingLevel": 0,
+              "_original": Object {
                 "added_by": "Joanna Kozieńska",
                 "added_time": "2017-03-08T23:00:00.000Z",
                 "created_time": "2017-03-03T06:24:25+0000",
@@ -4741,6 +5028,7 @@ exports[`<ChartTable/> render with objects 1`] = `
                 "type": "status",
                 "updated_time": "2017-03-08T23:17:00+0000",
               },
+              "_subRows": undefined,
               "addedTime": 1489014000000,
               "createTime": 1488522265000,
               "from_user": "Damian Gruszczyński",
@@ -4748,11 +5036,15 @@ exports[`<ChartTable/> render with objects 1`] = `
               "message": "Ed! :-D",
               "reactions_num": 6,
               "selected": false,
-              "yt_link": "Galway Girl, a song by Ed Sheeran on Spotify",
+              "yt_link": Object {
+                "title": "Galway Girl, a song by Ed Sheeran on Spotify",
+                "type": "music_aggregation",
+              },
             },
             Object {
-              "__index": 3,
-              "__original": Object {
+              "_index": 3,
+              "_nestingLevel": 0,
+              "_original": Object {
                 "added_by": "Joanna Kozieńska",
                 "added_time": "2017-03-08T23:00:00.000Z",
                 "created_time": "2017-03-03T06:26:21+0000",
@@ -4769,6 +5061,7 @@ exports[`<ChartTable/> render with objects 1`] = `
                 "type": "status",
                 "updated_time": "2017-03-08T23:05:45+0000",
               },
+              "_subRows": undefined,
               "addedTime": 1489014000000,
               "createTime": 1488522381000,
               "from_user": "Damian Gruszczyński",
@@ -4776,11 +5069,15 @@ exports[`<ChartTable/> render with objects 1`] = `
               "message": "#nigdydosyceda ;-)",
               "reactions_num": 8,
               "selected": false,
-              "yt_link": "New Man, a song by Ed Sheeran on Spotify",
+              "yt_link": Object {
+                "title": "New Man, a song by Ed Sheeran on Spotify",
+                "type": "music_aggregation",
+              },
             },
             Object {
-              "__index": 4,
-              "__original": Object {
+              "_index": 4,
+              "_nestingLevel": 0,
+              "_original": Object {
                 "added_by": "Joanna Kozieńska",
                 "added_time": "2017-03-08T23:00:00.000Z",
                 "created_time": "2017-03-03T20:10:48+0000",
@@ -4803,6 +5100,7 @@ exports[`<ChartTable/> render with objects 1`] = `
                 "type": "video",
                 "updated_time": "2017-03-08T23:05:38+0000",
               },
+              "_subRows": undefined,
               "addedTime": 1489014000000,
               "createTime": 1488571848000,
               "from_user": "Mateusz Lech",
@@ -4812,11 +5110,17 @@ exports[`<ChartTable/> render with objects 1`] = `
           #95bpm",
               "reactions_num": 5,
               "selected": false,
-              "yt_link": "Vali - Ain't No Friend Of Mine (Official Video)",
+              "yt_link": Object {
+                "name": "Vali - Ain't No Friend Of Mine (Official Video)",
+                "title": "Vali - Ain't No Friend Of Mine (Official Video)",
+                "type": "video_share_youtube",
+                "url": "https://www.youtube.com/watch?v=5Y6e_T0ySmE",
+              },
             },
             Object {
-              "__index": 5,
-              "__original": Object {
+              "_index": 5,
+              "_nestingLevel": 0,
+              "_original": Object {
                 "added_by": "Joanna Kozieńska",
                 "added_time": "2017-03-07T23:00:00.000Z",
                 "created_time": "2017-03-07T23:07:03+0000",
@@ -4839,6 +5143,7 @@ exports[`<ChartTable/> render with objects 1`] = `
                 "type": "video",
                 "updated_time": "2017-03-08T21:36:01+0000",
               },
+              "_subRows": undefined,
               "addedTime": 1488927600000,
               "createTime": 1488928023000,
               "from_user": "Joanna Kozieńska",
@@ -4848,11 +5153,17 @@ exports[`<ChartTable/> render with objects 1`] = `
           ",
               "reactions_num": 9,
               "selected": false,
-              "yt_link": "Chet Faker - 1998 ft Banks",
+              "yt_link": Object {
+                "name": "Chet Faker - 1998 ft Banks",
+                "title": "Chet Faker - 1998 ft Banks",
+                "type": "video_share_youtube",
+                "url": "https://youtu.be/LuxpfnnsdX4",
+              },
             },
             Object {
-              "__index": 6,
-              "__original": Object {
+              "_index": 6,
+              "_nestingLevel": 0,
+              "_original": Object {
                 "created_time": "2016-08-30T14:20:21+0000",
                 "from_user": "Paulina Górka",
                 "full_picture": "https://external.xx.fbcdn.net/safe_image.php?d=AQBiF2VBQG2WfPvh&w=720&h=720&url=https%3A%2F%2Fi.ytimg.com%2Fvi%2FEkeZKFa65zs%2Fmaxresdefault.jpg&cfs=1&_nc_hash=AQBYNj773CB4DtVR",
@@ -4872,6 +5183,7 @@ exports[`<ChartTable/> render with objects 1`] = `
                 "type": "video",
                 "updated_time": "2017-02-07T10:56:40+0000",
               },
+              "_subRows": undefined,
               "addedTime": 0,
               "createTime": 1472566821000,
               "from_user": "Paulina Górka",
@@ -4880,11 +5192,15 @@ exports[`<ChartTable/> render with objects 1`] = `
           ",
               "reactions_num": 19,
               "selected": false,
-              "yt_link": "James Hersey - Miss You (Official Audio)",
+              "yt_link": Object {
+                "name": "James Hersey - Miss You (Official Audio)",
+                "title": "James Hersey - Miss You (Official Audio)",
+                "type": "video_share_youtube",
+                "url": "https://www.youtube.com/watch?v=EkeZKFa65zs",
+              },
             },
           ]
         }
-        sorting={Array []}
         subRowsKey="_subRows"
       >
         <div
@@ -4984,7 +5300,7 @@ exports[`<ChartTable/> render with objects 1`] = `
             </defaultButton>
           </div>
         </div>
-      </pagination>
+      </ReactTablePagination>
       <LoadingComponent
         loading={false}
         loadingText="Loading..."
@@ -5000,16 +5316,19 @@ exports[`<ChartTable/> render with objects 1`] = `
         </div>
       </LoadingComponent>
     </div>
-  </src>
+  </ReactTable>
 </ChartTable>
 `;
 
 exports[`<ChartTable/> renders without crashing 1`] = `
-<src
+<ReactTable
+  AggregatedComponent={[Function]}
   ExpanderComponent={[Function]}
+  FilterComponent={[Function]}
   LoadingComponent={[Function]}
   NoDataComponent={[Function]}
   PaginationComponent={[Function]}
+  PivotValueComponent={[Function]}
   ResizerComponent={[Function]}
   TableComponent={[Function]}
   TbodyComponent={[Function]}
@@ -5019,111 +5338,129 @@ exports[`<ChartTable/> renders without crashing 1`] = `
   TheadComponent={[Function]}
   TrComponent={[Function]}
   TrGroupComponent={[Function]}
+  aggregatedKey="_aggregated"
   className="-striped -highlight"
   collapseOnDataChange={true}
   collapseOnPageChange={true}
   collapseOnSortingChange={true}
   column={
     Object {
+      "Aggregated": undefined,
+      "Cell": undefined,
+      "Expander": undefined,
+      "Filter": undefined,
+      "Footer": undefined,
+      "Header": undefined,
+      "Pivot": undefined,
+      "PivotValue": undefined,
+      "aggregate": undefined,
       "className": "",
       "filterMethod": undefined,
-      "filterRender": [Function],
-      "footer": undefined,
+      "filterable": undefined,
       "footerClassName": "",
       "footerStyle": Object {},
       "getFooterProps": [Function],
       "getHeaderProps": [Function],
       "getProps": [Function],
-      "header": undefined,
       "headerClassName": "",
       "headerStyle": Object {},
-      "hideFilter": false,
       "minWidth": 100,
-      "render": undefined,
+      "resizable": undefined,
       "show": true,
-      "sortable": true,
+      "sortMethod": undefined,
+      "sortable": undefined,
       "style": Object {},
     }
   }
   columns={
     Array [
       Object {
+        "Header": [Function],
         "columns": Array [
           Object {
+            "Cell": [Function],
+            "Header": [Function],
             "accessor": "selected",
-            "header": [Function],
-            "render": [Function],
             "resizable": false,
             "sortable": false,
             "width": 40,
           },
           Object {
+            "Cell": [Function],
+            "Header": "user",
             "accessor": "from_user",
-            "header": "user",
             "maxWidth": 300,
             "minWidth": 200,
-            "render": [Function],
             "resizable": true,
           },
           Object {
+            "Cell": [Function],
+            "Header": "fb msg",
             "accessor": "message",
-            "header": "fb msg",
             "maxWidth": 80,
-            "render": [Function],
           },
           Object {
+            "Header": "reactions count",
             "accessor": "reactions_num",
-            "header": "reactions count",
             "maxWidth": 80,
             "minWidth": 60,
             "sort": "dsc",
           },
           Object {
+            "Cell": [Function],
+            "Header": "crated time",
             "accessor": [Function],
-            "header": "crated time",
             "id": "createTime",
             "maxWidth": 200,
             "minWidth": 150,
-            "render": [Function],
             "resizable": true,
           },
           Object {
+            "Cell": [Function],
+            "Header": "added time",
             "accessor": [Function],
-            "header": "added time",
             "id": "addedTime",
             "maxWidth": 150,
-            "render": [Function],
             "resizable": true,
           },
           Object {
+            "Cell": [Function],
+            "Header": "last update",
             "accessor": [Function],
-            "header": "last update",
             "id": "lastUpdate",
             "maxWidth": 200,
             "minWidth": 150,
-            "render": [Function],
           },
           Object {
+            "Cell": [Function],
+            "Header": [Function],
             "accessor": [Function],
-            "header": [Function],
             "id": "yt_link",
             "maxWidth": 600,
             "minWidth": 200,
-            "render": [Function],
             "width": 300,
           },
         ],
-        "header": [Function],
       },
     ]
   }
   data={Array []}
+  defaultExpanded={Object {}}
   defaultFilterMethod={[Function]}
-  defaultFiltering={Array []}
+  defaultFiltered={Array []}
   defaultPageSize={20}
-  defaultResizing={Array []}
-  defaultSorting={Array []}
-  expanderColumnWidth={35}
+  defaultResized={Array []}
+  defaultSortMethod={[Function]}
+  defaultSorted={Array []}
+  expanderDefaults={
+    Object {
+      "filterable": false,
+      "resizable": false,
+      "sortable": false,
+      "width": 35,
+    }
+  }
+  filterable={false}
   freezeWhenExpanded={false}
   getLoadingProps={[Function]}
   getNoDataProps={[Function]}
@@ -5147,9 +5484,12 @@ exports[`<ChartTable/> renders without crashing 1`] = `
   getTheadTrProps={[Function]}
   getTrGroupProps={[Function]}
   getTrProps={[Function]}
+  groupedByPivotKey="_groupedByPivot"
+  indexKey="_index"
   loading={false}
   loadingText="Loading..."
   minRows={10}
+  nestingLevelKey="_nestingLevel"
   nextText="Next"
   noDataText={
     <span>
@@ -5167,7 +5507,8 @@ exports[`<ChartTable/> renders without crashing 1`] = `
     </span>
   }
   ofText="of"
-  onChange={[Function]}
+  onFetchData={[Function]}
+  originalKey="_original"
   pageSizeOptions={
     Array [
       20,
@@ -5176,16 +5517,16 @@ exports[`<ChartTable/> renders without crashing 1`] = `
     ]
   }
   pageText="Page"
-  pivotColumnWidth={200}
+  pivotDefaults={Object {}}
   pivotIDKey="_pivotID"
   pivotValKey="_pivotVal"
   previousText="Previous"
   resizable={false}
   rowsText="rows"
-  showFilters={false}
   showPageJump={true}
   showPageSizeOptions={true}
   showPagination={true}
+  sortable={true}
   style={Object {}}
   subRowsKey="_subRows"
 />
