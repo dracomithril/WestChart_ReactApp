@@ -61,7 +61,7 @@ export default class PlaylistForm extends Component {
         return ( <Form inline>
             <Button onClick={this.onStartClick.bind(this)} id="start_sp_button" bsStyle="success">Start
             </Button>
-            <FormGroup style={{width: 300}} controlId="play_list_name" validationState={((sp_name_length) => {
+            <FormGroup style={{margin: "1px 5px 5px 5px"}} controlId="play_list_name" validationState={((sp_name_length) => {
                 return sp_name_length > 8 ? 'success' : sp_name_length > 5 ? 'warning' : 'error';
             })(sp_playlist_name.length)}>
                 <InputGroup>
