@@ -23,7 +23,7 @@ exports[`<PlaylistForm/> createPlaylist 1`] = `
     controlId="play_list_name"
     style={
       Object {
-        "width": 300,
+        "margin": "1px 5px 5px 5px",
       }
     }
     validationState="success"
@@ -110,7 +110,7 @@ exports[`<PlaylistForm/> renders without crashing 1`] = `
     controlId="play_list_name"
     style={
       Object {
-        "width": 300,
+        "margin": "1px 5px 5px 5px",
       }
     }
     validationState="error"
@@ -197,7 +197,7 @@ exports[`<PlaylistForm/> start_click 1`] = `
     controlId="play_list_name"
     style={
       Object {
-        "width": 300,
+        "margin": "1px 5px 5px 5px",
       }
     }
     validationState="success"
