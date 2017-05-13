@@ -7,11 +7,16 @@ import {Button, DropdownButton, MenuItem} from "react-bootstrap";
 import spotify_utils from './../spotify_utils';
 const action_types = require('./../reducers/action_types');
 import './components.css'
-const TrackPreview = (props) => {
+const TrackPreview = function(props) {
     const track = props.track;
     const artists = track.artists.map((elem) => elem.name).join(' & ');
     const audio = track.preview_url !== null ?
-        <audio controls src={track.preview_url} type="audio/mpeg"/> : <span style={{color: "red"}}>No preview</span>;
+        <audio controls src={track.preview_url} type="audio/mpeg"/> :
+        <span style={{color: "red"}}>No preview
+            {!props.nolink&&<a href={(track.external_urls || {}).spotify}
+                                                  target="_newtab">{" go to "}
+            <i className="fa fa-spotify" aria-hidden="true"/>
+        </a>}</span>;
     return (<div className="track_view">
         <strong>{track.name}</strong><br/>
         {audio}
@@ -41,7 +46,7 @@ export default class RowSpotifySearch extends React.Component {
                 })
             };
             return (<MenuItem key={track.id} id={'mi_select_track_' + search_elem.id} onClick={selectTrack}>
-                <TrackPreview track={track}/>
+                <TrackPreview track={track} nolink/>
             </MenuItem>)
         };
         const items = search_elem.items.map(create_menuItems);
@@ -91,7 +96,8 @@ export default class RowSpotifySearch extends React.Component {
                     }} bsStyle="info">search
                     </Button>
                     <DropdownButton disabled={items.length === 0} title={'select'} key={search_elem.search_id}
-                                    id={`dropdown-basic-${search_elem.search_id}`} bsStyle={items.length === 0?"warning":"success"}>
+                                    id={`dropdown-basic-${search_elem.search_id}`}
+                                    bsStyle={items.length === 0 ? "warning" : "success"}>
                         {items}
                     </DropdownButton>
                 </div>

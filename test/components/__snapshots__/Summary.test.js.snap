@@ -1,7 +1,9 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`<Summary/> renders without crashing 1`] = `
-<div>
+<div
+  className="summary"
+>
   <h3
     id="list"
   >

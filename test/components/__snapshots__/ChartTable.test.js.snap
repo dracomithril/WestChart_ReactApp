@@ -202,6 +202,10 @@ exports[`<ChartTable/> render with objects 1`] = `
           "Header": [Function],
           "columns": Array [
             Object {
+              "accessor": "id",
+              "show": false,
+            },
+            Object {
               "Cell": [Function],
               "Header": [Function],
               "accessor": "selected",
@@ -211,7 +215,12 @@ exports[`<ChartTable/> render with objects 1`] = `
             },
             Object {
               "Cell": [Function],
-              "Header": "user",
+              "Header": <i
+                aria-hidden="true"
+                className="fa fa-user-circle"
+      >
+                user
+      </i>,
               "accessor": "from_user",
               "maxWidth": 300,
               "minWidth": 200,
@@ -219,12 +228,18 @@ exports[`<ChartTable/> render with objects 1`] = `
             },
             Object {
               "Cell": [Function],
-              "Header": "fb msg",
+              "Header": <i
+                aria-hidden="true"
+                className="fa fa-envelope-o"
+      />,
               "accessor": "message",
               "maxWidth": 80,
             },
             Object {
-              "Header": "reactions count",
+              "Header": <i
+                aria-hidden="true"
+                className="fa fa-thumbs-o-up"
+      />,
               "accessor": "reactions_num",
               "maxWidth": 80,
               "minWidth": 60,
@@ -257,7 +272,10 @@ exports[`<ChartTable/> render with objects 1`] = `
             },
             Object {
               "Cell": [Function],
-              "Header": [Function],
+              "Header": <i
+                aria-hidden="true"
+                className="fa fa-external-link"
+      />,
               "accessor": [Function],
               "id": "yt_link",
               "maxWidth": 600,
@@ -651,7 +669,12 @@ exports[`<ChartTable/> render with objects 1`] = `
                       <div
                         className="rt-resizable-header-content"
                       >
-                        user
+                        <i
+                          aria-hidden="true"
+                          className="fa fa-user-circle"
+                        >
+                          user
+                        </i>
                       </div>
                       <Component
                         onMouseDown={[Function]}
@@ -690,7 +713,10 @@ exports[`<ChartTable/> render with objects 1`] = `
                       <div
                         className="rt-resizable-header-content"
                       >
-                        fb msg
+                        <i
+                          aria-hidden="true"
+                          className="fa fa-envelope-o"
+                        />
                       </div>
                     </div>
                   </ThComponent>
@@ -719,7 +745,10 @@ exports[`<ChartTable/> render with objects 1`] = `
                       <div
                         className="rt-resizable-header-content"
                       >
-                        reactions count
+                        <i
+                          aria-hidden="true"
+                          className="fa fa-thumbs-o-up"
+                        />
                       </div>
                     </div>
                   </ThComponent>
@@ -855,9 +884,10 @@ exports[`<ChartTable/> render with objects 1`] = `
                       <div
                         className="rt-resizable-header-content"
                       >
-                        <span>
-                          link
-                        </span>
+                        <i
+                          aria-hidden="true"
+                          className="fa fa-external-link"
+                        />
                       </div>
                     </div>
                   </ThComponent>
@@ -915,6 +945,7 @@ exports[`<ChartTable/> render with objects 1`] = `
                             bsClass="checkbox1"
                             checked={false}
                             disabled={false}
+                            id={0}
                             inline={false}
                             name="selected"
                             onChange={[Function]}
@@ -926,6 +957,7 @@ exports[`<ChartTable/> render with objects 1`] = `
                                 <input
                                   checked={false}
                                   disabled={false}
+                                  id={0}
                                   name="selected"
                                   onChange={[Function]}
                                   type="checkbox"
@@ -1212,6 +1244,7 @@ exports[`<ChartTable/> render with objects 1`] = `
                             bsClass="checkbox1"
                             checked={false}
                             disabled={false}
+                            id={1}
                             inline={false}
                             name="selected"
                             onChange={[Function]}
@@ -1223,6 +1256,7 @@ exports[`<ChartTable/> render with objects 1`] = `
                                 <input
                                   checked={false}
                                   disabled={false}
+                                  id={1}
                                   name="selected"
                                   onChange={[Function]}
                                   type="checkbox"
@@ -1506,6 +1540,7 @@ exports[`<ChartTable/> render with objects 1`] = `
                             bsClass="checkbox1"
                             checked={false}
                             disabled={false}
+                            id={2}
                             inline={false}
                             name="selected"
                             onChange={[Function]}
@@ -1517,6 +1552,7 @@ exports[`<ChartTable/> render with objects 1`] = `
                                 <input
                                   checked={false}
                                   disabled={false}
+                                  id={2}
                                   name="selected"
                                   onChange={[Function]}
                                   type="checkbox"
@@ -1800,6 +1836,7 @@ exports[`<ChartTable/> render with objects 1`] = `
                             bsClass="checkbox1"
                             checked={false}
                             disabled={false}
+                            id={3}
                             inline={false}
                             name="selected"
                             onChange={[Function]}
@@ -1811,6 +1848,7 @@ exports[`<ChartTable/> render with objects 1`] = `
                                 <input
                                   checked={false}
                                   disabled={false}
+                                  id={3}
                                   name="selected"
                                   onChange={[Function]}
                                   type="checkbox"
@@ -2094,6 +2132,7 @@ exports[`<ChartTable/> render with objects 1`] = `
                             bsClass="checkbox1"
                             checked={false}
                             disabled={false}
+                            id={4}
                             inline={false}
                             name="selected"
                             onChange={[Function]}
@@ -2105,6 +2144,7 @@ exports[`<ChartTable/> render with objects 1`] = `
                                 <input
                                   checked={false}
                                   disabled={false}
+                                  id={4}
                                   name="selected"
                                   onChange={[Function]}
                                   type="checkbox"
@@ -2393,6 +2433,7 @@ exports[`<ChartTable/> render with objects 1`] = `
                             bsClass="checkbox1"
                             checked={false}
                             disabled={false}
+                            id={5}
                             inline={false}
                             name="selected"
                             onChange={[Function]}
@@ -2404,6 +2445,7 @@ exports[`<ChartTable/> render with objects 1`] = `
                                 <input
                                   checked={false}
                                   disabled={false}
+                                  id={5}
                                   name="selected"
                                   onChange={[Function]}
                                   type="checkbox"
@@ -2692,6 +2734,7 @@ exports[`<ChartTable/> render with objects 1`] = `
                             bsClass="checkbox1"
                             checked={false}
                             disabled={false}
+                            id={96}
                             inline={false}
                             name="selected"
                             onChange={[Function]}
@@ -2703,6 +2746,7 @@ exports[`<ChartTable/> render with objects 1`] = `
                                 <input
                                   checked={false}
                                   disabled={false}
+                                  id={96}
                                   name="selected"
                                   onChange={[Function]}
                                   type="checkbox"
@@ -3561,6 +3605,35 @@ exports[`<ChartTable/> render with objects 1`] = `
           Array [
             Object {
               "Aggregated": undefined,
+              "Cell": undefined,
+              "Expander": undefined,
+              "Filter": undefined,
+              "Footer": undefined,
+              "Header": undefined,
+              "Pivot": undefined,
+              "PivotValue": undefined,
+              "accessor": [Function],
+              "aggregate": undefined,
+              "className": "",
+              "filterMethod": undefined,
+              "filterable": undefined,
+              "footerClassName": "",
+              "footerStyle": Object {},
+              "getFooterProps": [Function],
+              "getHeaderProps": [Function],
+              "getProps": [Function],
+              "headerClassName": "",
+              "headerStyle": Object {},
+              "id": "id",
+              "minWidth": 100,
+              "resizable": undefined,
+              "show": false,
+              "sortMethod": undefined,
+              "sortable": undefined,
+              "style": Object {},
+            },
+            Object {
+              "Aggregated": undefined,
               "Cell": [Function],
               "Expander": undefined,
               "Filter": undefined,
@@ -3595,7 +3668,12 @@ exports[`<ChartTable/> render with objects 1`] = `
               "Expander": undefined,
               "Filter": undefined,
               "Footer": undefined,
-              "Header": "user",
+              "Header": <i
+                aria-hidden="true"
+                className="fa fa-user-circle"
+          >
+                user
+          </i>,
               "Pivot": undefined,
               "PivotValue": undefined,
               "accessor": [Function],
@@ -3625,7 +3703,10 @@ exports[`<ChartTable/> render with objects 1`] = `
               "Expander": undefined,
               "Filter": undefined,
               "Footer": undefined,
-              "Header": "fb msg",
+              "Header": <i
+                aria-hidden="true"
+                className="fa fa-envelope-o"
+          />,
               "Pivot": undefined,
               "PivotValue": undefined,
               "accessor": [Function],
@@ -3655,7 +3736,10 @@ exports[`<ChartTable/> render with objects 1`] = `
               "Expander": undefined,
               "Filter": undefined,
               "Footer": undefined,
-              "Header": "reactions count",
+              "Header": <i
+                aria-hidden="true"
+                className="fa fa-thumbs-o-up"
+          />,
               "Pivot": undefined,
               "PivotValue": undefined,
               "accessor": [Function],
@@ -3776,7 +3860,10 @@ exports[`<ChartTable/> render with objects 1`] = `
               "Expander": undefined,
               "Filter": undefined,
               "Footer": undefined,
-              "Header": [Function],
+              "Header": <i
+                aria-hidden="true"
+                className="fa fa-external-link"
+          />,
               "Pivot": undefined,
               "PivotValue": undefined,
               "accessor": [Function],
@@ -3841,7 +3928,12 @@ exports[`<ChartTable/> render with objects 1`] = `
               "Expander": undefined,
               "Filter": undefined,
               "Footer": undefined,
-              "Header": "user",
+              "Header": <i
+                aria-hidden="true"
+                className="fa fa-user-circle"
+          >
+                user
+          </i>,
               "Pivot": undefined,
               "PivotValue": undefined,
               "accessor": [Function],
@@ -3871,7 +3963,10 @@ exports[`<ChartTable/> render with objects 1`] = `
               "Expander": undefined,
               "Filter": undefined,
               "Footer": undefined,
-              "Header": "fb msg",
+              "Header": <i
+                aria-hidden="true"
+                className="fa fa-envelope-o"
+          />,
               "Pivot": undefined,
               "PivotValue": undefined,
               "accessor": [Function],
@@ -3901,7 +3996,10 @@ exports[`<ChartTable/> render with objects 1`] = `
               "Expander": undefined,
               "Filter": undefined,
               "Footer": undefined,
-              "Header": "reactions count",
+              "Header": <i
+                aria-hidden="true"
+                className="fa fa-thumbs-o-up"
+          />,
               "Pivot": undefined,
               "PivotValue": undefined,
               "accessor": [Function],
@@ -4022,7 +4120,10 @@ exports[`<ChartTable/> render with objects 1`] = `
               "Expander": undefined,
               "Filter": undefined,
               "Footer": undefined,
-              "Header": [Function],
+              "Header": <i
+                aria-hidden="true"
+                className="fa fa-external-link"
+          />,
               "Pivot": undefined,
               "PivotValue": undefined,
               "accessor": [Function],
@@ -4089,6 +4190,10 @@ exports[`<ChartTable/> render with objects 1`] = `
               "Header": [Function],
               "columns": Array [
                 Object {
+                  "accessor": "id",
+                  "show": false,
+                },
+                Object {
                   "Cell": [Function],
                   "Header": [Function],
                   "accessor": "selected",
@@ -4098,7 +4203,12 @@ exports[`<ChartTable/> render with objects 1`] = `
                 },
                 Object {
                   "Cell": [Function],
-                  "Header": "user",
+                  "Header": <i
+                    aria-hidden="true"
+                    className="fa fa-user-circle"
+          >
+                    user
+          </i>,
                   "accessor": "from_user",
                   "maxWidth": 300,
                   "minWidth": 200,
@@ -4106,12 +4216,18 @@ exports[`<ChartTable/> render with objects 1`] = `
                 },
                 Object {
                   "Cell": [Function],
-                  "Header": "fb msg",
+                  "Header": <i
+                    aria-hidden="true"
+                    className="fa fa-envelope-o"
+          />,
                   "accessor": "message",
                   "maxWidth": 80,
                 },
                 Object {
-                  "Header": "reactions count",
+                  "Header": <i
+                    aria-hidden="true"
+                    className="fa fa-thumbs-o-up"
+          />,
                   "accessor": "reactions_num",
                   "maxWidth": 80,
                   "minWidth": 60,
@@ -4144,7 +4260,10 @@ exports[`<ChartTable/> render with objects 1`] = `
                 },
                 Object {
                   "Cell": [Function],
-                  "Header": [Function],
+                  "Header": <i
+                    aria-hidden="true"
+                    className="fa fa-external-link"
+          />,
                   "accessor": [Function],
                   "id": "yt_link",
                   "maxWidth": 600,
@@ -4392,7 +4511,12 @@ exports[`<ChartTable/> render with objects 1`] = `
                   "Expander": undefined,
                   "Filter": undefined,
                   "Footer": undefined,
-                  "Header": "user",
+                  "Header": <i
+                    aria-hidden="true"
+                    className="fa fa-user-circle"
+          >
+                    user
+          </i>,
                   "Pivot": undefined,
                   "PivotValue": undefined,
                   "accessor": [Function],
@@ -4422,7 +4546,10 @@ exports[`<ChartTable/> render with objects 1`] = `
                   "Expander": undefined,
                   "Filter": undefined,
                   "Footer": undefined,
-                  "Header": "fb msg",
+                  "Header": <i
+                    aria-hidden="true"
+                    className="fa fa-envelope-o"
+          />,
                   "Pivot": undefined,
                   "PivotValue": undefined,
                   "accessor": [Function],
@@ -4452,7 +4579,10 @@ exports[`<ChartTable/> render with objects 1`] = `
                   "Expander": undefined,
                   "Filter": undefined,
                   "Footer": undefined,
-                  "Header": "reactions count",
+                  "Header": <i
+                    aria-hidden="true"
+                    className="fa fa-thumbs-o-up"
+          />,
                   "Pivot": undefined,
                   "PivotValue": undefined,
                   "accessor": [Function],
@@ -4573,7 +4703,10 @@ exports[`<ChartTable/> render with objects 1`] = `
                   "Expander": undefined,
                   "Filter": undefined,
                   "Footer": undefined,
-                  "Header": [Function],
+                  "Header": <i
+                    aria-hidden="true"
+                    className="fa fa-external-link"
+          />,
                   "Pivot": undefined,
                   "PivotValue": undefined,
                   "accessor": [Function],
@@ -4690,6 +4823,7 @@ exports[`<ChartTable/> render with objects 1`] = `
               "addedTime": 1488927600000,
               "createTime": 1488396999000,
               "from_user": "Anna Stanuchowska",
+              "id": 0,
               "lastUpdate": 1489096005000,
               "message": "Nie wiem, czy to by się nadawało, ale uwielbiam tą nutę <3 ",
               "reactions_num": 0,
@@ -4725,6 +4859,7 @@ exports[`<ChartTable/> render with objects 1`] = `
               "addedTime": 1489014000000,
               "createTime": 1488522535000,
               "from_user": "Damian Gruszczyński",
+              "id": 1,
               "lastUpdate": 1489046508000,
               "message": "#całapłytawymiata",
               "reactions_num": 5,
@@ -4758,6 +4893,7 @@ exports[`<ChartTable/> render with objects 1`] = `
               "addedTime": 1489014000000,
               "createTime": 1488522265000,
               "from_user": "Damian Gruszczyński",
+              "id": 2,
               "lastUpdate": 1489015020000,
               "message": "Ed! :-D",
               "reactions_num": 6,
@@ -4791,6 +4927,7 @@ exports[`<ChartTable/> render with objects 1`] = `
               "addedTime": 1489014000000,
               "createTime": 1488522381000,
               "from_user": "Damian Gruszczyński",
+              "id": 3,
               "lastUpdate": 1489014345000,
               "message": "#nigdydosyceda ;-)",
               "reactions_num": 8,
@@ -4830,6 +4967,7 @@ exports[`<ChartTable/> render with objects 1`] = `
               "addedTime": 1489014000000,
               "createTime": 1488571848000,
               "from_user": "Mateusz Lech",
+              "id": 4,
               "lastUpdate": 1489014338000,
               "message": "Wydaje się całkiem skoczne ;)
           
@@ -4873,6 +5011,7 @@ exports[`<ChartTable/> render with objects 1`] = `
               "addedTime": 1488927600000,
               "createTime": 1488928023000,
               "from_user": "Joanna Kozieńska",
+              "id": 5,
               "lastUpdate": 1489008961000,
               "message": "Jedna ode mnie, bo już wieki nie miałam okazji ;) 
           
@@ -4913,6 +5052,7 @@ exports[`<ChartTable/> render with objects 1`] = `
               "addedTime": 0,
               "createTime": 1472566821000,
               "from_user": "Paulina Górka",
+              "id": 96,
               "lastUpdate": 1486465000000,
               "message": "warte lajków, jak nie to zwątpię :P
           ",
@@ -4964,6 +5104,7 @@ exports[`<ChartTable/> render with objects 1`] = `
               "addedTime": 1488927600000,
               "createTime": 1488396999000,
               "from_user": "Anna Stanuchowska",
+              "id": 0,
               "lastUpdate": 1489096005000,
               "message": "Nie wiem, czy to by się nadawało, ale uwielbiam tą nutę <3 ",
               "reactions_num": 0,
@@ -4999,6 +5140,7 @@ exports[`<ChartTable/> render with objects 1`] = `
               "addedTime": 1489014000000,
               "createTime": 1488522535000,
               "from_user": "Damian Gruszczyński",
+              "id": 1,
               "lastUpdate": 1489046508000,
               "message": "#całapłytawymiata",
               "reactions_num": 5,
@@ -5032,6 +5174,7 @@ exports[`<ChartTable/> render with objects 1`] = `
               "addedTime": 1489014000000,
               "createTime": 1488522265000,
               "from_user": "Damian Gruszczyński",
+              "id": 2,
               "lastUpdate": 1489015020000,
               "message": "Ed! :-D",
               "reactions_num": 6,
@@ -5065,6 +5208,7 @@ exports[`<ChartTable/> render with objects 1`] = `
               "addedTime": 1489014000000,
               "createTime": 1488522381000,
               "from_user": "Damian Gruszczyński",
+              "id": 3,
               "lastUpdate": 1489014345000,
               "message": "#nigdydosyceda ;-)",
               "reactions_num": 8,
@@ -5104,6 +5248,7 @@ exports[`<ChartTable/> render with objects 1`] = `
               "addedTime": 1489014000000,
               "createTime": 1488571848000,
               "from_user": "Mateusz Lech",
+              "id": 4,
               "lastUpdate": 1489014338000,
               "message": "Wydaje się całkiem skoczne ;)
           
@@ -5147,6 +5292,7 @@ exports[`<ChartTable/> render with objects 1`] = `
               "addedTime": 1488927600000,
               "createTime": 1488928023000,
               "from_user": "Joanna Kozieńska",
+              "id": 5,
               "lastUpdate": 1489008961000,
               "message": "Jedna ode mnie, bo już wieki nie miałam okazji ;) 
           
@@ -5187,6 +5333,7 @@ exports[`<ChartTable/> render with objects 1`] = `
               "addedTime": 0,
               "createTime": 1472566821000,
               "from_user": "Paulina Górka",
+              "id": 96,
               "lastUpdate": 1486465000000,
               "message": "warte lajków, jak nie to zwątpię :P
           ",
@@ -5378,6 +5525,10 @@ exports[`<ChartTable/> renders without crashing 1`] = `
         "Header": [Function],
         "columns": Array [
           Object {
+            "accessor": "id",
+            "show": false,
+          },
+          Object {
             "Cell": [Function],
             "Header": [Function],
             "accessor": "selected",
@@ -5387,7 +5538,12 @@ exports[`<ChartTable/> renders without crashing 1`] = `
           },
           Object {
             "Cell": [Function],
-            "Header": "user",
+            "Header": <i
+              aria-hidden="true"
+              className="fa fa-user-circle"
+    >
+              user
+    </i>,
             "accessor": "from_user",
             "maxWidth": 300,
             "minWidth": 200,
@@ -5395,12 +5551,18 @@ exports[`<ChartTable/> renders without crashing 1`] = `
           },
           Object {
             "Cell": [Function],
-            "Header": "fb msg",
+            "Header": <i
+              aria-hidden="true"
+              className="fa fa-envelope-o"
+    />,
             "accessor": "message",
             "maxWidth": 80,
           },
           Object {
-            "Header": "reactions count",
+            "Header": <i
+              aria-hidden="true"
+              className="fa fa-thumbs-o-up"
+    />,
             "accessor": "reactions_num",
             "maxWidth": 80,
             "minWidth": 60,
@@ -5433,7 +5595,10 @@ exports[`<ChartTable/> renders without crashing 1`] = `
           },
           Object {
             "Cell": [Function],
-            "Header": [Function],
+            "Header": <i
+              aria-hidden="true"
+              className="fa fa-external-link"
+    />,
             "accessor": [Function],
             "id": "yt_link",
             "maxWidth": 600,
