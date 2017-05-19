@@ -149,6 +149,10 @@ describe('[utils]', () => {
             description: "Imagine Dragons - Thunder (Audio)",
             artist: "Imagine Dragons", title: "Thunder"
         };
+        const str10 = {
+            description: "Pitbull Ft Mayer Hawthorne Do It Lyrics",
+            artist: null, title: "Pitbull Ft Mayer Hawthorne Do It Lyrics"
+        };
 
 
         it('should return artist and title', function () {
@@ -180,7 +184,11 @@ describe('[utils]', () => {
             expect(res9.artist).toBe(str9.artist);
             expect(res9.title).toBe(str9.title);
         });
-
+        it('should return title if no mach from regex', function () {
+            const res10 = utils.getArtist_Title(str10.description);
+            expect(res10.artist).toBe(str10.artist);
+            expect(res10.title).toBe(str10.title);
+        });
 
 
     });

@@ -4,7 +4,7 @@ exports[`<RowSpotifySearch/> renders without crashing 1`] = `
 <tr>
   <td>
     <div
-      className="track_view"
+      className="track_view error_bg"
     >
       <span />
       <br />

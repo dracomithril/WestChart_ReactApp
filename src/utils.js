@@ -126,7 +126,7 @@ export const getChartFromServer = function (query_params, store) {
 };
 
 export const UpdateChart = function (store) {
-    store.dispatch({type:action_types.CHANGE_SHOW_WAIT,show:true});
+    store.dispatch({type: action_types.CHANGE_SHOW_WAIT, show: true});
     const {user, enable_until, start_date, show_last} = store.getState();
 
     let until = enable_until ? start_date.toDate() : new Date();
@@ -155,9 +155,12 @@ export const getArtist_Title = function (name) {
      * [group 3] title
      * [group 4] artist
      */
-    const regex = /^(.*?)\s-\s(.*?)(?:\s[([](?:[Oo]ff.*l\s(?:[Vv]ideo|[Aa]udio)?|(?:Audio)?)[)\]])?(?:\sft.(.*)?)?$|^(.*?)(?:,\s.*s.*by)\s(.*?)(?:\son.*[Ss]potify)$/g;
+    const regex = /^(.*?)\s-\s(.*?)(?:\s[([](?:[Oo]ff.*l.*(?:[Vv]ideo|[Aa]udio)?|(?:Audio)?)[)\]])?(?:\sft.(.*)?)?$|^(.*?)(?:,\s.*s.*by)\s(.*?)(?:\son.*[Ss]potify)$/g;
     let title, artist;
     const m = regex.exec(name);
+    if (m === null) {
+        return {title: name, artist: null}
+    }
     if (m[1] && m[2]) {
         artist = m[1];
         title = m[2];
@@ -165,7 +168,6 @@ export const getArtist_Title = function (name) {
         artist = m[5];
         title = m[4];
     }
-
     return {title, artist}
 };
 
