@@ -6,6 +6,9 @@
     padding: 5px;
     background-color: snow;
 }
+.error_bg{
+    background-color: #ff0e10;
+}
 
 .summary{
     border: 1px solid black;

@@ -70,10 +70,10 @@ export default class RowSpotifySearch extends React.Component {
         let input_style = {paddingRight: 5};
         let selected_track = search_elem.selected;
         const condition = selected_track !== undefined && selected_track.preview_url !== undefined;
+        const haveIssue = !search_elem.artist ||!search_elem.title;
         return (<tr >
-
             <td >
-                <div className="track_view">
+                <div className={`track_view${haveIssue?' error_bg':''}`}>
                     <span>{search_elem.full_title}</span><br/>
                     <input style={input_style} type="text" id={search_elem.search_id}
                            value={search_elem.artist || ''}
