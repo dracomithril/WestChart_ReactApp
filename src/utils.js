@@ -141,7 +141,7 @@ export const UpdateChart = function (store) {
     const query_params = {
         days: undefined,
         since: since2,
-        utils: until2,
+        until: until2,
         access_token: user.accessToken
     };
     getChartFromServer(query_params, store);

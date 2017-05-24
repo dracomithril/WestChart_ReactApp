@@ -2,8 +2,8 @@
  * Created by Gryzli on 29.03.2017.
  */
 import React from "react";
-import PropTypes from 'prop-types';
-import {Panel, Popover, Tooltip, OverlayTrigger} from "react-bootstrap";
+import PropTypes from "prop-types";
+import {OverlayTrigger, Panel, Popover, Tooltip} from "react-bootstrap";
 export default class SongsPerDay extends React.Component {
     render() {
         const {store} = this.context;
@@ -36,8 +36,8 @@ export default class SongsPerDay extends React.Component {
             {err_days_more}
         </Popover>);
         const tooltipMore = <Tooltip id="haveMoreDays">{more_header}</Tooltip>;
-        let footer = (<div>
-            {"errors count: " + errorDays.length}
+        let footer = (<div style={{textAlign:'center'}}>
+            {err_days_less.length === 0&&<strong style={{color:"green"}}>No data</strong>}
             {err_days_less.length > 0 && <OverlayTrigger trigger={['hover', 'focus']} placement="bottom"
                                                          overlay={err_days_less.length > 0 ? popoverLess : tooltipLess}>
                 <i style={{color: 'blue', marginRight: 5, marginLeft: 5}}
@@ -48,8 +48,7 @@ export default class SongsPerDay extends React.Component {
                 <i style={{color: 'red', marginLeft: 5}} className="fa fa-arrow-circle-up"
                    aria-hidden="true">{err_days_more.length}</i></OverlayTrigger>}
         </div>);
-        return (<Panel style={{float: 'left'}} header={header}
-                       bsStyle={errorDays.length !== 0 ? "danger" : "success"}>
+        return (<Panel id="songsPerDay" header={header} bsStyle={errorDays.length !== 0 ? "danger" : "success"}>
             {footer}
         </Panel>);
     }

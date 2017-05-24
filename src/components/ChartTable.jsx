@@ -4,10 +4,10 @@
 import React from "react";
 import PropTypes from "prop-types";
 import ReactTable from "react-table";
-import {OverlayTrigger, Checkbox, Label, Tooltip, Button, Popover, ButtonGroup} from 'react-bootstrap';
+import {Button, ButtonGroup, Checkbox, Label, OverlayTrigger, Popover, Tooltip} from "react-bootstrap";
 import SongsPerDay from "./SongsPerDay";
 import FilteringOptions from "./FilteringOptions";
-import PickYourDate from './PickYourDate';
+import PickYourDate from "./PickYourDate";
 let utils = require('./../utils');
 function formatDate(date) {
     return new Date(date).toLocaleString('pl-PL');
@@ -15,23 +15,18 @@ function formatDate(date) {
 let getTime = function (date) {
     return new Date(date).getTime();
 };
-export default class ChartTable extends React.Component {
-    constructor(props) {
-        super(props);
-        this.state = {
-            show: false
-        }
-    }
-
+class ChartHeader extends React.Component {
     render() {
         const {store} = this.context;
-        const {user, since, until, last_update} = store.getState();
+        const {since, until, last_update} = store.getState();
         const {data, error_days} = this.props;
-        const count = data.length;
         const options = {weekday: 'short', month: '2-digit', day: 'numeric'};
-        let header = () => <div>
-            <SongsPerDay error_days={error_days}/>
-            <PickYourDate/>
+        const count = data.length;
+        return (<div>
+            <div className="dock1">
+                <SongsPerDay error_days={error_days} />
+                <PickYourDate/>
+            </div>
             <small style={{float: "right"}}>{count}</small>
             <div style={{textAlign: "center"}}>
                 <ButtonGroup bsSize="large">
@@ -52,9 +47,26 @@ export default class ChartTable extends React.Component {
                 </ButtonGroup>
             </div>
 
-        </div>;
+        </div>)
+    }
+}
+ChartHeader.contextTypes = {
+    store: PropTypes.object
+};
+export default class ChartTable extends React.Component {
+    constructor(props) {
+        super(props);
+        this.state = {
+            show: false
+        }
+    }
+
+    render() {
+        const {store} = this.context;
+        const {user, show_wait} = store.getState();
+        const {data} = this.props;
         const columns = [{
-            Header: header,
+            Header: <ChartHeader {...this.props}/>,
             columns: [{
                 show: false,
                 accessor: 'id',
@@ -162,7 +174,7 @@ export default class ChartTable extends React.Component {
 
         };
         return (<ReactTable data={data} className="-striped -highlight" {...tableOptions}
-                            columns={columns} defaultPageSize={20} minRows={10}
+                            columns={columns} defaultPageSize={20} minRows={10} loading={show_wait}
                             noDataText={<span>{`Hi, ${user.first_name} please click `}<strong style={{color: "blue"}}>Update</strong>{` to start.`}</span>}
         />);
     }
