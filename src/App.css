@@ -82,9 +82,13 @@
 .popover{
     max-width: 600px;
 }
+.datePiker input[type="text"]:disabled{
+    background-color: rgb(235,235,228);
+}
 .react-datepicker__input-container input {
     width: 80px;
 }
+
 #d_until{
     margin-left: 50px;
 }

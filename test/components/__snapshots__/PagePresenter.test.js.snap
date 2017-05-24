@@ -109,49 +109,11 @@ exports[`<PagePresenter/> should obtain chart objects 1`] = `
           undefined we are fetching data please wait.
         </ModalBody>
       </Modal>
-      <SongsPerDay
-        error_days={
-          Array [
-            Object {
-              "color": "blue",
-              "count": 1,
-              "org": "2017-03-07T23:00:00.000Z",
-            },
-          ]
-        }
-      />
+      <SongsPerDay />
       <PickYourDate />
       <FilteringOptions />
     </div>
-    <ChartPresenter
-      view_chart={
-        Array [
-          Object {
-            "added_by": "Joanna Kozieńska",
-            "added_time": "2017-03-07T23:00:00.000Z",
-            "created_time": "2017-03-07T23:07:03+0000",
-            "from_user": "Joanna Kozieńska",
-            "full_picture": "https://external.xx.fbcdn.net/safe_image.php?d=AQCimze9kDlMKVl1&w=720&h=720&url=https%3A%2F%2Fi.ytimg.com%2Fvi%2FLuxpfnnsdX4%2Fmaxresdefault.jpg&cfs=1&_nc_hash=AQC7M9AEfyBbtF3g",
-            "id": 5,
-            "likes_num": 8,
-            "link": Object {
-              "name": "Chet Faker - 1998 ft Banks",
-              "title": "Chet Faker - 1998 ft Banks",
-              "type": "video_share_youtube",
-              "url": "https://youtu.be/LuxpfnnsdX4",
-            },
-            "message": "Jedna ode mnie, bo już wieki nie miałam okazji ;) 
-        
-        ",
-            "reactions_num": 9,
-            "selected": false,
-            "source": "https://www.youtube.com/embed/LuxpfnnsdX4?autoplay=1",
-            "type": "video",
-            "updated_time": "2017-03-08T21:36:01+0000",
-          },
-        ]
-      }
-    />
+    <ChartPresenter />
   </div>
 </div>
 `;

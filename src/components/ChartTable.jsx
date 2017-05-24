@@ -4,8 +4,11 @@
 import React from "react";
 import PropTypes from "prop-types";
 import ReactTable from "react-table";
-import {Checkbox, Label, OverlayTrigger, Tooltip} from "react-bootstrap";
-
+import {OverlayTrigger, Checkbox, Label, Tooltip, Button, Popover, ButtonGroup} from 'react-bootstrap';
+import SongsPerDay from "./SongsPerDay";
+import FilteringOptions from "./FilteringOptions";
+import PickYourDate from './PickYourDate';
+let utils = require('./../utils');
 function formatDate(date) {
     return new Date(date).toLocaleString('pl-PL');
 }
@@ -13,15 +16,45 @@ let getTime = function (date) {
     return new Date(date).getTime();
 };
 export default class ChartTable extends React.Component {
+    constructor(props) {
+        super(props);
+        this.state = {
+            show: false
+        }
+    }
+
     render() {
         const {store} = this.context;
-        const {user} = store.getState();
-        const data = this.props.data;
+        const {user, since, until, last_update} = store.getState();
+        const {data, error_days} = this.props;
         const count = data.length;
+        const options = {weekday: 'short', month: '2-digit', day: 'numeric'};
+        let header = () => <div>
+            <SongsPerDay error_days={error_days}/>
+            <PickYourDate/>
+            <small style={{float: "right"}}>{count}</small>
+            <div style={{textAlign: "center"}}>
+                <ButtonGroup bsSize="large">
+                    <OverlayTrigger trigger={["hover", "focus"]} placement="top" overlay={<Popover id="update_info">
+                        <span>{"since: "}</span>
+                        <Label
+                            bsStyle="success">{since !== '' ? new Date(since).toLocaleDateString('pl-PL', options) : 'null'}</Label>
+                        <span>{" to "}</span>
+                        <Label
+                            bsStyle="danger">{until !== '' ? new Date(until).toLocaleDateString('pl-PL', options) : 'null'}</Label><br/>
+                        <small
+                            id="updateDate">{' Last update: ' + new Date(last_update).toLocaleString('pl-PL')}</small>
+                    </Popover>}>
+                        <Button id="updateChartB" onClick={() => utils.UpdateChart(store)}
+                                bsStyle="primary">Update</Button>
+                    </OverlayTrigger>
+                    <FilteringOptions/>
+                </ButtonGroup>
+            </div>
+
+        </div>;
         const columns = [{
-            Header: () => <h3 id="chart_table">{'WCS Chart '}
-                <small>{'total ' + count}</small>
-            </h3>,
+            Header: header,
             columns: [{
                 show: false,
                 accessor: 'id',
@@ -50,11 +83,13 @@ export default class ChartTable extends React.Component {
                     resizable: true,
                     minWidth: 200,
                     maxWidth: 300,
+                    id: 'user',
                     accessor: 'from_user', // String-based value accessors !
                     Cell: props => <span>{props.value}</span>
                 }, {
                     Header: <i className="fa fa-envelope-o" aria-hidden="true"/>,
                     accessor: 'message',
+                    id: 'woc_f',
                     maxWidth: 80,
                     Cell: props => {
                         if (props.value !== undefined) {
@@ -119,12 +154,23 @@ export default class ChartTable extends React.Component {
             ]
         }
         ];
-        return (<ReactTable data={data} className="-striped -highlight" pageSizeOptions={[20, 50, 100]}
-                            columns={columns} defaultPageSize={20} minRows={10} resizable={false}
-                            noDataText={<span>{`Hi, ${user.first_name} please click `}<strong style={{color: "blue"}}>Update</strong>{` to start.`}</span>}/>);
+        const tableOptions = {
+            filterable: false,
+            // filtered:[{id:'woc_f'},{id:'user'}],
+            resizable: false,
+            pageSizeOptions: [20, 50, 100],
+
+        };
+        return (<ReactTable data={data} className="-striped -highlight" {...tableOptions}
+                            columns={columns} defaultPageSize={20} minRows={10}
+                            noDataText={<span>{`Hi, ${user.first_name} please click `}<strong style={{color: "blue"}}>Update</strong>{` to start.`}</span>}
+        />);
     }
 }
 ChartTable.contextTypes = {
     store: PropTypes.object
 };
-ChartTable.propTypes = {};
+ChartTable.propTypes = {
+    data: PropTypes.array,
+    error_days: PropTypes.array
+};
