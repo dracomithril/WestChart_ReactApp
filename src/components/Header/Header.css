@@ -2,7 +2,8 @@
     height: 150px;
     margin-right: 10px;
 }
-.header {
+.wcs_header {
+    /*width: 1150px;*/
     height: 150px;
     color: white;
     background: #030049 url(baner.png) no-repeat center;

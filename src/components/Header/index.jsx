@@ -21,7 +21,7 @@ export default class Header extends React.Component {
     render() {
         const {store} = this.context;
         let {user} = store.getState();
-        return (<div className="header">
+        return (<div className="wcs_header">
                             <CookieBanner
                     message={'Yes, we use cookies. If you don\'t like it change website, we won\'t miss you! ;)'}
                     onAccept={() => {

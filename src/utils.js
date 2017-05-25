@@ -2,8 +2,8 @@
  * Created by Gryzli on 28.01.2017.
  */
 
-import filters_def from "./filters";
 import qs from "querystring";
+const filters_def = require('./filters_def');
 const woc_string = "Wielkie Ogarnianie Charta";
 
 const action_types = require('./reducers/action_types');
@@ -17,7 +17,7 @@ export function filterChart(store) {
 
     let songs_per_day_arr = {};
     let {chart, filters, until, songs_per_day} = store.getState();
-    const view_chart = chart.filter((elem) => {
+    let filterIt = (elem) => {
         let doTest = (filter) => {
             if (filter.type === 'countDays') {
                 return filter.check(elem[filter.valueName], until, filters[filter.input.name].days) > 0;
@@ -30,7 +30,7 @@ export function filterChart(store) {
             return filters[e.input.name].checked
         });
         const map = results.map(doTest);
-        let res1 = map.reduce((pr, cr) => pr && cr);
+        let res1 = map.length>0?map.reduce((pr, cr) => pr && cr):true;
 
         if (!filters.woc_control.checked) {
             res1 &= elem.message !== undefined ? !elem.message.toLowerCase().includes(woc_string.toLowerCase()) : true;
@@ -46,7 +46,8 @@ export function filterChart(store) {
             }
         }
         return res1;
-    });
+    };
+    const view_chart = chart.filter(filterIt);
     let error_days = Object.keys(songs_per_day_arr).filter(key => {
         return songs_per_day_arr[key].count !== songs_per_day
     }).map(elem => {
@@ -140,7 +141,7 @@ export const UpdateChart = function (store) {
     const query_params = {
         days: undefined,
         since: since2,
-        utils: until2,
+        until: until2,
         access_token: user.accessToken
     };
     getChartFromServer(query_params, store);
