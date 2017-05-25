@@ -24,7 +24,7 @@ describe('<PickYourDate/>', () => {
         );
         expect(shallowToJson(wrapper)).toMatchSnapshot();
     });
-    it('renders without crashing', () => {
+    xit('is able to click btn', () => {
         const store = mockStore(initial_state);
         const utils = require('./../../src/utils');
         const wrapper = shallow(

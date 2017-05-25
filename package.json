@@ -1,6 +1,6 @@
 {
   "name": "WestChart_ReactApp",
-  "version": "0.5.3",
+  "version": "0.6.0",
   "private": true,
   "engines": {
     "node": "6.10.1"
@@ -76,12 +76,12 @@
     "react-cookie-banner": "0.0.18",
     "react-datepicker": "0.46.0",
     "react-dom": "^15.5.4",
-    "react-facebook-login": "3.6.0",
+    "react-facebook-login": "3.6.1",
     "react-redux": "5.0.4",
     "react-router": "4.1.1",
     "react-router-dom": "4.1.1",
     "react-router-redux": "4.0.8",
-    "react-table": "6.0.1",
+    "react-table": "6.0.5",
     "redux": "3.6.0",
     "request": "^2.79.0",
     "spotify-web-api-node": "2.4.0",

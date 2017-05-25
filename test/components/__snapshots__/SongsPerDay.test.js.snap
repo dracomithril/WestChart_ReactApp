@@ -5,7 +5,6 @@ exports[`<SongsPerDay/> renders without crashing 1`] = `
   bsClass="panel"
   bsStyle="success"
   defaultExpanded={false}
-  footer={false}
   header={
     <div>
       <strong
@@ -29,7 +28,26 @@ exports[`<SongsPerDay/> renders without crashing 1`] = `
       />
     </div>
   }
-/>
+  id="songsPerDay"
+>
+  <div
+    style={
+      Object {
+        "textAlign": "center",
+      }
+    }
+  >
+    <strong
+      style={
+        Object {
+          "color": "green",
+        }
+      }
+    >
+      No data
+    </strong>
+  </div>
+</Panel>
 `;
 
 exports[`<SongsPerDay/> renders without crashing 2`] = `
@@ -37,7 +55,6 @@ exports[`<SongsPerDay/> renders without crashing 2`] = `
   bsClass="panel"
   bsStyle="danger"
   defaultExpanded={false}
-  footer="miss mach count: 1"
   header={
     <div>
       <strong
@@ -61,48 +78,24 @@ exports[`<SongsPerDay/> renders without crashing 2`] = `
       />
     </div>
   }
+  id="songsPerDay"
 >
-  <div>
-    <strong>
-      Date:
+  <div
+    style={
+      Object {
+        "textAlign": "center",
+      }
+    }
+  >
+    <strong
+      style={
+        Object {
+          "color": "green",
+        }
+      }
+    >
+      No data
     </strong>
-    (
-    <span
-      style={
-        Object {
-          "color": "blue",
-          "marginRight": 5,
-        }
-      }
-    >
-      not enough
-    </span>
-    <span
-      style={
-        Object {
-          "color": "red",
-        }
-      }
-    >
-      to many
-    </span>
-    )
-    <br />
-    <div
-      id="error_list"
-    >
-      <div>
-        <span
-          style={
-            Object {
-              "color": undefined,
-            }
-          }
-        >
-          Tue May 02 2017
-        </span>
-      </div>
-    </div>
   </div>
 </Panel>
 `;

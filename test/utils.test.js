@@ -3,6 +3,7 @@
  */
 const sinon = require('sinon');
 import configureMockStore from 'redux-mock-store';
+const chart =require('./data/fbResult.json').data;
 const mockStore = configureMockStore([]);
 describe('[utils]', () => {
     let utils;
@@ -119,7 +120,7 @@ describe('[utils]', () => {
         };
         const str2 = {
             description: "Chet Faker - 1998 ft Banks",
-            artist: "Chet Faker", title: "1998", ft:"Banks"
+            artist: "Chet Faker", title: "1998", ft: "Banks"
         };
         const str4 = {
             description: "X Ambassadors - Unsteady (Erich Lee Gravity Remix)",
@@ -192,5 +193,22 @@ describe('[utils]', () => {
 
 
     });
-
+    describe('[filterChart]', function () {
+        it('should be able to filter', function () {
+            let getStore = {
+                chart: chart, filters: {
+                    woc: {checked: false},
+                    add_control: {checked: false},
+                    create_control: {checked: false},
+                    update_control: {checked: false},
+                    less_control: {checked: false},
+                    more_control: {checked: false},
+                    woc_control:{checked:true}
+                }, until: null, songs_per_day: []
+            };
+            const store = mockStore(getStore);
+            let filtered = utils.filterChart(store);
+            //todo tests
+        });
+    });
 });

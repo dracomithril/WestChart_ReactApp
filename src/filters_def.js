@@ -75,3 +75,4 @@ let exp = {
     subtractDaysFromDate: subtractDaysFromDate
 };
 module.exports = exp;
+export default exp;

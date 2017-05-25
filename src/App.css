@@ -16,32 +16,35 @@
     margin-top: 5px;
 }
 
-
 .checkbox1 {
     position: relative;
     display: block;
     /*margin-top: 10px;*/
     /*margin-bottom: 10px;*/
 }
+
 .checkbox1 input[type=checkbox]:checked {
     background-color: green;
 }
-#updateDate{
+
+#updateDate {
     color: red;
     margin-left: 10px;
 }
 
-.formArea{
+.formArea {
     width: 240px;
     margin-bottom: 5px;
     margin-left: 5px;
     float: left;
 }
+
 .label {
     margin: 0;
     padding: .6em .9em .5em;
 }
-.footer{
+
+.footer {
     color: #a9a9a9;
     font-size: smaller;
     clear: both;
@@ -51,7 +54,12 @@
     margin-top: -3em;
 }
 
-.likes{
+.dock1 {
+    float: left;
+    height: 90px;
+}
+
+.likes {
     display: inline-block;
     min-width: 10px;
     padding: 3px 7px;
@@ -65,7 +73,8 @@
     background-color: #337ab7;
     border-radius: 10px;
 }
-.elements_count{
+
+.elements_count {
     display: inline-block;
     min-width: 10px;
     padding: 3px 7px;
@@ -79,25 +88,38 @@
     background-color: #b7001e;
     border-radius: 10px;
 }
-.popover{
+
+.popover {
     max-width: 600px;
 }
+.datePiker input[type="text"]{
+    padding: 0;
+}
+.datePiker input[type="text"]:disabled {
+    background-color: rgb(235, 235, 228);
+}
+
 .react-datepicker__input-container input {
     width: 80px;
 }
-#d_until{
+
+#d_until {
     margin-left: 50px;
 }
-.spotify_sumary{
+
+.spotify_sumary {
     border: 2px solid blue;
     border-radius: 10px;
     padding: 4px;
     margin: 4px;
 }
-.spotify_sumary span{
+
+.spotify_sumary span {
     color: darkgreen;
     font-size: medium;
 }
+
 .modal {
-    top:300px
+    top: 300px
 }
+
