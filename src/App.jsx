@@ -2,7 +2,7 @@ import React, {Component} from "react";
 import PropTypes from 'prop-types';
 import LoginAlert from "./components/LoginAlert";
 import Footer from "./components/Footer";
-import PagePresenter from "./components/PagePresenter";
+import ChartPresenter from "./components/ChartPresenter";
 import "./App.css";
 import "react-table/react-table.css";
 import "react-datepicker/dist/react-datepicker.css";
@@ -49,7 +49,10 @@ class App extends Component {
         return (
             <div className="App">
                 {!isLogged && <LoginAlert/>}
-                {isLogged && <PagePresenter/>}
+                {isLogged && user.isGroupAdmin &&
+                <div id="groupAdmin">
+                    <ChartPresenter/>
+                </div>}
                 <Footer/>
             </div>
         );

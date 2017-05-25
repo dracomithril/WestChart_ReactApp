@@ -16,3 +16,29 @@
     background-color: cornsilk;
     padding-bottom: 20px;
 }
+.chartHeader {
+    height: 100px;
+    margin: 1px;
+    padding: 2px;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+}
+.chartButtons{
+    text-align: center;
+    padding-top: 15px;
+}
+
+#songsPerDay {
+    float: inherit;
+    height: inherit;
+    width: 200px;
+}
+
+
+#pickYourDate {
+    float: inherit;
+    height: inherit;
+    width: 200px;
+    padding-top: 5px;
+    padding-left: 10px;
+    background-color: #faebcc;
+}

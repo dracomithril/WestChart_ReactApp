@@ -2,7 +2,7 @@
 
 exports[`<Header/> render user info 1`] = `
 <div
-  className="header"
+  className="wcs_header"
 >
   <CookieBanner
     buttonMessage="Got it"
@@ -33,7 +33,7 @@ exports[`<Header/> render user info 1`] = `
 exports[`<Header/> renders without crashing ChartPresenter 1`] = `
 <Header>
   <div
-    className="header"
+    className="wcs_header"
   >
     <CookieBanner
       buttonMessage="Got it"

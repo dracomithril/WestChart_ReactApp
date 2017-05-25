@@ -6,6 +6,7 @@ import PropTypes from 'prop-types';
 import {Jumbotron} from "react-bootstrap";
 import Summary from "./Summary";
 import ChartTable from "./ChartTable";
+import ChartHeader from "./ChartHeader";
 import SpotifySearch from "./SpotifySearch";
 const {sorting, filterChart} = require('./../utils');
 
@@ -37,6 +38,7 @@ export default class ChartPresenter extends React.Component {
         return (
             <Jumbotron bsClass="App-body">
                 <div>
+                    <ChartHeader error_days={error_days} count={view_chart.length}/>
                     <ChartTable data={view_chart} error_days={error_days}/>
                     <Summary selected={selected}/>
                     <SpotifySearch selected={selected}/>

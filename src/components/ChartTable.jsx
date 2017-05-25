@@ -4,11 +4,9 @@
 import React from "react";
 import PropTypes from "prop-types";
 import ReactTable from "react-table";
-import {OverlayTrigger, Checkbox, Label, Tooltip, Button, Popover, ButtonGroup} from 'react-bootstrap';
-import SongsPerDay from "./SongsPerDay";
-import FilteringOptions from "./FilteringOptions";
-import PickYourDate from './PickYourDate';
-let utils = require('./../utils');
+import {Checkbox, Label, OverlayTrigger, Tooltip} from "react-bootstrap";
+
+import "./components.css";
 function formatDate(date) {
     return new Date(date).toLocaleString('pl-PL');
 }
@@ -25,61 +23,35 @@ export default class ChartTable extends React.Component {
 
     render() {
         const {store} = this.context;
-        const {user, since, until, last_update} = store.getState();
-        const {data, error_days} = this.props;
-        const count = data.length;
-        const options = {weekday: 'short', month: '2-digit', day: 'numeric'};
-        let header = () => <div>
-            <SongsPerDay error_days={error_days}/>
-            <PickYourDate/>
-            <small style={{float: "right"}}>{count}</small>
-            <div style={{textAlign: "center"}}>
-                <ButtonGroup bsSize="large">
-                    <OverlayTrigger trigger={["hover", "focus"]} placement="top" overlay={<Popover id="update_info">
-                        <span>{"since: "}</span>
-                        <Label
-                            bsStyle="success">{since !== '' ? new Date(since).toLocaleDateString('pl-PL', options) : 'null'}</Label>
-                        <span>{" to "}</span>
-                        <Label
-                            bsStyle="danger">{until !== '' ? new Date(until).toLocaleDateString('pl-PL', options) : 'null'}</Label><br/>
-                        <small
-                            id="updateDate">{' Last update: ' + new Date(last_update).toLocaleString('pl-PL')}</small>
-                    </Popover>}>
-                        <Button id="updateChartB" onClick={() => utils.UpdateChart(store)}
-                                bsStyle="primary">Update</Button>
-                    </OverlayTrigger>
-                    <FilteringOptions/>
-                </ButtonGroup>
-            </div>
-
-        </div>;
+        const {user, show_wait} = store.getState();
+        const {data} = this.props;
         const columns = [{
-            Header: header,
-            columns: [{
-                show: false,
-                accessor: 'id',
-            },
+            Header: 'id',
+            show: false,
+            accessor: 'id',
+        }, {
+            sortable: false,
+            resizable: false,
+            Header: () => <Checkbox bsClass="checkbox1" onClick={() => {
+                store.dispatch({type: 'TOGGLE_ALL'})
+            }}/>,
+            width: 40,
+            accessor: 'selected',
+            Cell: props => {
+                return <Checkbox bsClass="checkbox1" checked={props.value} id={props.row.id}
+                                 name="selected"
+                                 onChange={(e) => {
+                                     store.dispatch({
+                                         type: 'TOGGLE_SELECTED', id: e.target.id,
+                                         checked: e.target.checked
+                                     })
+                                 }}/>
+            }
+        }, {
+            Header: 'Post Info',
+            columns: [
                 {
-                    sortable: false,
-                    resizable: false,
-                    Header: () => <Checkbox bsClass="checkbox1" onClick={() => {
-                        store.dispatch({type: 'TOGGLE_ALL'})
-                    }}/>,
-                    width: 40,
-                    accessor: 'selected',
-                    Cell: props => {
-                        return <Checkbox bsClass="checkbox1" checked={props.value} id={props.row.id}
-                                         name="selected"
-                                         onChange={(e) => {
-                                             store.dispatch({
-                                                 type: 'TOGGLE_SELECTED', id: e.target.id,
-                                                 checked: e.target.checked
-                                             })
-                                         }}/>
-                    }
-                },
-                {
-                    Header: <i className="fa fa-user-circle" aria-hidden="true">user</i>,
+                    Header: <i className="fa fa-user-circle" style={{color: 'green'}} aria-hidden="true">user</i>,
                     resizable: true,
                     minWidth: 200,
                     maxWidth: 300,
@@ -87,7 +59,7 @@ export default class ChartTable extends React.Component {
                     accessor: 'from_user', // String-based value accessors !
                     Cell: props => <span>{props.value}</span>
                 }, {
-                    Header: <i className="fa fa-envelope-o" aria-hidden="true"/>,
+                    Header: <i className="fa fa-envelope-o" style={{color: 'orange'}} aria-hidden="true"/>,
                     accessor: 'message',
                     id: 'woc_f',
                     maxWidth: 80,
@@ -100,23 +72,26 @@ export default class ChartTable extends React.Component {
                         return <Label bsStyle="danger">no msg</Label>
                     }
                 }, {
-                    Header: <i className="fa fa-thumbs-o-up" aria-hidden="true"/>,
+                    Header: <i className="fa fa-thumbs-o-up" style={{color: 'blue'}} aria-hidden="true"/>,
                     accessor: 'reactions_num',
                     sort: 'dsc',
                     minWidth: 60,
                     maxWidth: 80
-                }, {
-                    Header: 'crated time',
-                    id: 'createTime',
+                }]
+        }, {
+            Header: 'Time',
+            columns: [{
+                Header: 'crated',
+                id: 'createTime',
 
-                    resizable: true,
-                    minWidth: 150,
-                    maxWidth: 200,
-                    accessor: d => getTime(d.created_time),
-                    Cell: props => <span>{formatDate(props.value)}</span>
-                },
+                resizable: true,
+                minWidth: 150,
+                maxWidth: 200,
+                accessor: d => getTime(d.created_time),
+                Cell: props => <span>{formatDate(props.value)}</span>
+            },
                 {
-                    Header: 'added time',
+                    Header: 'added',
                     id: 'addedTime',
                     resizable: true,
                     maxWidth: 150,
@@ -130,29 +105,33 @@ export default class ChartTable extends React.Component {
                                 day: "numeric"
                             })}</span></OverlayTrigger>
                     }
-
                 }, {
-                    Header: 'last update',
+                    Header: 'updated',
                     id: 'lastUpdate',
                     minWidth: 150,
                     maxWidth: 200,
                     accessor: d => getTime(d.updated_time),
                     Cell: props => <span>{formatDate(props.value)}</span>
-                },
-                {
-                    Header: <i className="fa fa-external-link" aria-hidden="true"/>, // Custom header components!
-                    accessor: d => d.link,
-                    minWidth: 200,
-                    width: 300,
-                    maxWidth: 600,
-                    id: 'yt_link',
-                    Cell: props => {
-                        return props.value.url === undefined ? (<span>{props.value.title}</span>) : (
-                            <a href={props.value.url} target="_newtab">{props.value.title}</a>)
+                }]
+        },
+            {
+                Header: 'Link',
+                columns: [
+                    {
+                        Header: <i className="fa fa-external-link" style={{color:'red'}} aria-hidden="true"/>, // Custom header components!
+                        accessor: d => d.link,
+                        minWidth: 200,
+                        width: 300,
+                        maxWidth: 600,
+                        id: 'yt_link',
+                        Cell: props => {
+                            return props.value.url === undefined ? (<span>{props.value.title}</span>) : (
+                                <a href={props.value.url} target="_newtab">{props.value.title}</a>)
+                        }
                     }
-                }
-            ]
-        }
+                ]
+            }
+
         ];
         const tableOptions = {
             filterable: false,
@@ -162,7 +141,7 @@ export default class ChartTable extends React.Component {
 
         };
         return (<ReactTable data={data} className="-striped -highlight" {...tableOptions}
-                            columns={columns} defaultPageSize={20} minRows={10}
+                            columns={columns} defaultPageSize={20} minRows={10} loading={show_wait}
                             noDataText={<span>{`Hi, ${user.first_name} please click `}<strong style={{color: "blue"}}>Update</strong>{` to start.`}</span>}
         />);
     }

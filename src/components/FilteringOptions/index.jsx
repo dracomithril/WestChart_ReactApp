@@ -24,9 +24,9 @@ export default class FilteringOptions extends React.Component {
                 <Checkbox checked={filters['woc_control'].checked} onChange={(e) => {
                     const {id, checked} = e.target;
                     store.dispatch({type: 'TOGGLE_FILTER', id: id, checked: checked})
-                }} id="woc">
+                }} id="woc_cb">
                     <OverlayTrigger placement="top" overlay={<Tooltip
-                        id="woc">{`Will show all [${utils.woc_string}]`}</Tooltip>}>
+                        id="woc_tp">{`Will show all [${utils.woc_string}]`}</Tooltip>}>
                             <span>
                             [{utils.woc_string}]</span>
                     </OverlayTrigger>
@@ -37,7 +37,7 @@ export default class FilteringOptions extends React.Component {
                 </div>
             </div>
         </Popover>}>
-            <Button bsStyle="info">
+            <Button bsStyle="info" id="bFilters">
                 filters
             </Button>
         </OverlayTrigger>

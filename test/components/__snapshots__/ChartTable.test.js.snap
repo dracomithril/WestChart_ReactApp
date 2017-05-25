@@ -199,29 +199,36 @@ exports[`<ChartTable/> render with objects 1`] = `
     columns={
       Array [
         Object {
+          "Header": "id",
+          "accessor": "id",
+          "show": false,
+        },
+        Object {
+          "Cell": [Function],
           "Header": [Function],
+          "accessor": "selected",
+          "resizable": false,
+          "sortable": false,
+          "width": 40,
+        },
+        Object {
+          "Header": "Post Info",
           "columns": Array [
-            Object {
-              "accessor": "id",
-              "show": false,
-            },
-            Object {
-              "Cell": [Function],
-              "Header": [Function],
-              "accessor": "selected",
-              "resizable": false,
-              "sortable": false,
-              "width": 40,
-            },
             Object {
               "Cell": [Function],
               "Header": <i
                 aria-hidden="true"
                 className="fa fa-user-circle"
+                style={
+                          Object {
+                                    "color": "green",
+                                  }
+                }
       >
                 user
       </i>,
               "accessor": "from_user",
+              "id": "user",
               "maxWidth": 300,
               "minWidth": 200,
               "resizable": true,
@@ -231,23 +238,39 @@ exports[`<ChartTable/> render with objects 1`] = `
               "Header": <i
                 aria-hidden="true"
                 className="fa fa-envelope-o"
+                style={
+                          Object {
+                                    "color": "orange",
+                                  }
+                }
       />,
               "accessor": "message",
+              "id": "woc_f",
               "maxWidth": 80,
             },
             Object {
               "Header": <i
                 aria-hidden="true"
                 className="fa fa-thumbs-o-up"
+                style={
+                          Object {
+                                    "color": "blue",
+                                  }
+                }
       />,
               "accessor": "reactions_num",
               "maxWidth": 80,
               "minWidth": 60,
               "sort": "dsc",
             },
+          ],
+        },
+        Object {
+          "Header": "Time",
+          "columns": Array [
             Object {
               "Cell": [Function],
-              "Header": "crated time",
+              "Header": "crated",
               "accessor": [Function],
               "id": "createTime",
               "maxWidth": 200,
@@ -256,7 +279,7 @@ exports[`<ChartTable/> render with objects 1`] = `
             },
             Object {
               "Cell": [Function],
-              "Header": "added time",
+              "Header": "added",
               "accessor": [Function],
               "id": "addedTime",
               "maxWidth": 150,
@@ -264,17 +287,27 @@ exports[`<ChartTable/> render with objects 1`] = `
             },
             Object {
               "Cell": [Function],
-              "Header": "last update",
+              "Header": "updated",
               "accessor": [Function],
               "id": "lastUpdate",
               "maxWidth": 200,
               "minWidth": 150,
             },
+          ],
+        },
+        Object {
+          "Header": "Link",
+          "columns": Array [
             Object {
               "Cell": [Function],
               "Header": <i
                 aria-hidden="true"
                 className="fa fa-external-link"
+                style={
+                          Object {
+                                    "color": "red",
+                                  }
+                }
       />,
               "accessor": [Function],
               "id": "yt_link",
@@ -547,9 +580,9 @@ exports[`<ChartTable/> render with objects 1`] = `
                     className=""
                     style={
                       Object {
-                        "flex": "760 0 auto",
-                        "maxWidth": "1350px",
-                        "width": "1100px",
+                        "flex": "0 0 auto",
+                        "maxWidth": "40px",
+                        "width": "40px",
                       }
                     }
                   >
@@ -558,20 +591,83 @@ exports[`<ChartTable/> render with objects 1`] = `
                       onClick={[Function]}
                       style={
                         Object {
-                          "flex": "760 0 auto",
-                          "maxWidth": "1350px",
-                          "width": "1100px",
+                          "flex": "0 0 auto",
+                          "maxWidth": "40px",
+                          "width": "40px",
+                        }
+                      }
+                    />
+                  </ThComponent>
+                  <ThComponent
+                    className=""
+                    style={
+                      Object {
+                        "flex": "360 0 auto",
+                        "maxWidth": "460px",
+                        "width": "360px",
+                      }
+                    }
+                  >
+                    <div
+                      className="rt-th"
+                      onClick={[Function]}
+                      style={
+                        Object {
+                          "flex": "360 0 auto",
+                          "maxWidth": "460px",
+                          "width": "360px",
                         }
                       }
                     >
-                      <h3
-                        id="chart_table"
-                      >
-                        WCS Chart 
-                        <small>
-                          total 7
-                        </small>
-                      </h3>
+                      Post Info
+                    </div>
+                  </ThComponent>
+                  <ThComponent
+                    className=""
+                    style={
+                      Object {
+                        "flex": "400 0 auto",
+                        "maxWidth": "550px",
+                        "width": "400px",
+                      }
+                    }
+                  >
+                    <div
+                      className="rt-th"
+                      onClick={[Function]}
+                      style={
+                        Object {
+                          "flex": "400 0 auto",
+                          "maxWidth": "550px",
+                          "width": "400px",
+                        }
+                      }
+                    >
+                      Time
+                    </div>
+                  </ThComponent>
+                  <ThComponent
+                    className=""
+                    style={
+                      Object {
+                        "flex": "0 0 auto",
+                        "maxWidth": "300px",
+                        "width": "300px",
+                      }
+                    }
+                  >
+                    <div
+                      className="rt-th"
+                      onClick={[Function]}
+                      style={
+                        Object {
+                          "flex": "0 0 auto",
+                          "maxWidth": "300px",
+                          "width": "300px",
+                        }
+                      }
+                    >
+                      Link
                     </div>
                   </ThComponent>
                 </div>
@@ -672,6 +768,11 @@ exports[`<ChartTable/> render with objects 1`] = `
                         <i
                           aria-hidden="true"
                           className="fa fa-user-circle"
+                          style={
+                            Object {
+                              "color": "green",
+                            }
+                          }
                         >
                           user
                         </i>
@@ -716,6 +817,11 @@ exports[`<ChartTable/> render with objects 1`] = `
                         <i
                           aria-hidden="true"
                           className="fa fa-envelope-o"
+                          style={
+                            Object {
+                              "color": "orange",
+                            }
+                          }
                         />
                       </div>
                     </div>
@@ -748,6 +854,11 @@ exports[`<ChartTable/> render with objects 1`] = `
                         <i
                           aria-hidden="true"
                           className="fa fa-thumbs-o-up"
+                          style={
+                            Object {
+                              "color": "blue",
+                            }
+                          }
                         />
                       </div>
                     </div>
@@ -777,7 +888,7 @@ exports[`<ChartTable/> render with objects 1`] = `
                       <div
                         className="rt-resizable-header-content"
                       >
-                        crated time
+                        crated
                       </div>
                       <Component
                         onMouseDown={[Function]}
@@ -816,7 +927,7 @@ exports[`<ChartTable/> render with objects 1`] = `
                       <div
                         className="rt-resizable-header-content"
                       >
-                        added time
+                        added
                       </div>
                       <Component
                         onMouseDown={[Function]}
@@ -855,7 +966,7 @@ exports[`<ChartTable/> render with objects 1`] = `
                       <div
                         className="rt-resizable-header-content"
                       >
-                        last update
+                        updated
                       </div>
                     </div>
                   </ThComponent>
@@ -887,6 +998,11 @@ exports[`<ChartTable/> render with objects 1`] = `
                         <i
                           aria-hidden="true"
                           className="fa fa-external-link"
+                          style={
+                            Object {
+                              "color": "red",
+                            }
+                          }
                         />
                       </div>
                     </div>
@@ -3609,7 +3725,7 @@ exports[`<ChartTable/> render with objects 1`] = `
               "Expander": undefined,
               "Filter": undefined,
               "Footer": undefined,
-              "Header": undefined,
+              "Header": "id",
               "Pivot": undefined,
               "PivotValue": undefined,
               "accessor": [Function],
@@ -3671,6 +3787,11 @@ exports[`<ChartTable/> render with objects 1`] = `
               "Header": <i
                 aria-hidden="true"
                 className="fa fa-user-circle"
+                style={
+                      Object {
+                            "color": "green",
+                          }
+                }
           >
                 user
           </i>,
@@ -3688,7 +3809,7 @@ exports[`<ChartTable/> render with objects 1`] = `
               "getProps": [Function],
               "headerClassName": "",
               "headerStyle": Object {},
-              "id": "from_user",
+              "id": "user",
               "maxWidth": 300,
               "minWidth": 200,
               "resizable": true,
@@ -3706,6 +3827,11 @@ exports[`<ChartTable/> render with objects 1`] = `
               "Header": <i
                 aria-hidden="true"
                 className="fa fa-envelope-o"
+                style={
+                      Object {
+                            "color": "orange",
+                          }
+                }
           />,
               "Pivot": undefined,
               "PivotValue": undefined,
@@ -3721,7 +3847,7 @@ exports[`<ChartTable/> render with objects 1`] = `
               "getProps": [Function],
               "headerClassName": "",
               "headerStyle": Object {},
-              "id": "message",
+              "id": "woc_f",
               "maxWidth": 80,
               "minWidth": 100,
               "resizable": undefined,
@@ -3739,6 +3865,11 @@ exports[`<ChartTable/> render with objects 1`] = `
               "Header": <i
                 aria-hidden="true"
                 className="fa fa-thumbs-o-up"
+                style={
+                      Object {
+                            "color": "blue",
+                          }
+                }
           />,
               "Pivot": undefined,
               "PivotValue": undefined,
@@ -3770,7 +3901,7 @@ exports[`<ChartTable/> render with objects 1`] = `
               "Expander": undefined,
               "Filter": undefined,
               "Footer": undefined,
-              "Header": "crated time",
+              "Header": "crated",
               "Pivot": undefined,
               "PivotValue": undefined,
               "accessor": [Function],
@@ -3800,7 +3931,7 @@ exports[`<ChartTable/> render with objects 1`] = `
               "Expander": undefined,
               "Filter": undefined,
               "Footer": undefined,
-              "Header": "added time",
+              "Header": "added",
               "Pivot": undefined,
               "PivotValue": undefined,
               "accessor": [Function],
@@ -3830,7 +3961,7 @@ exports[`<ChartTable/> render with objects 1`] = `
               "Expander": undefined,
               "Filter": undefined,
               "Footer": undefined,
-              "Header": "last update",
+              "Header": "updated",
               "Pivot": undefined,
               "PivotValue": undefined,
               "accessor": [Function],
@@ -3863,6 +3994,11 @@ exports[`<ChartTable/> render with objects 1`] = `
               "Header": <i
                 aria-hidden="true"
                 className="fa fa-external-link"
+                style={
+                      Object {
+                            "color": "red",
+                          }
+                }
           />,
               "Pivot": undefined,
               "PivotValue": undefined,
@@ -3931,6 +4067,11 @@ exports[`<ChartTable/> render with objects 1`] = `
               "Header": <i
                 aria-hidden="true"
                 className="fa fa-user-circle"
+                style={
+                      Object {
+                            "color": "green",
+                          }
+                }
           >
                 user
           </i>,
@@ -3948,7 +4089,7 @@ exports[`<ChartTable/> render with objects 1`] = `
               "getProps": [Function],
               "headerClassName": "",
               "headerStyle": Object {},
-              "id": "from_user",
+              "id": "user",
               "maxWidth": 300,
               "minWidth": 200,
               "resizable": true,
@@ -3966,6 +4107,11 @@ exports[`<ChartTable/> render with objects 1`] = `
               "Header": <i
                 aria-hidden="true"
                 className="fa fa-envelope-o"
+                style={
+                      Object {
+                            "color": "orange",
+                          }
+                }
           />,
               "Pivot": undefined,
               "PivotValue": undefined,
@@ -3981,7 +4127,7 @@ exports[`<ChartTable/> render with objects 1`] = `
               "getProps": [Function],
               "headerClassName": "",
               "headerStyle": Object {},
-              "id": "message",
+              "id": "woc_f",
               "maxWidth": 80,
               "minWidth": 100,
               "resizable": undefined,
@@ -3999,6 +4145,11 @@ exports[`<ChartTable/> render with objects 1`] = `
               "Header": <i
                 aria-hidden="true"
                 className="fa fa-thumbs-o-up"
+                style={
+                      Object {
+                            "color": "blue",
+                          }
+                }
           />,
               "Pivot": undefined,
               "PivotValue": undefined,
@@ -4030,7 +4181,7 @@ exports[`<ChartTable/> render with objects 1`] = `
               "Expander": undefined,
               "Filter": undefined,
               "Footer": undefined,
-              "Header": "crated time",
+              "Header": "crated",
               "Pivot": undefined,
               "PivotValue": undefined,
               "accessor": [Function],
@@ -4060,7 +4211,7 @@ exports[`<ChartTable/> render with objects 1`] = `
               "Expander": undefined,
               "Filter": undefined,
               "Footer": undefined,
-              "Header": "added time",
+              "Header": "added",
               "Pivot": undefined,
               "PivotValue": undefined,
               "accessor": [Function],
@@ -4090,7 +4241,7 @@ exports[`<ChartTable/> render with objects 1`] = `
               "Expander": undefined,
               "Filter": undefined,
               "Footer": undefined,
-              "Header": "last update",
+              "Header": "updated",
               "Pivot": undefined,
               "PivotValue": undefined,
               "accessor": [Function],
@@ -4123,6 +4274,11 @@ exports[`<ChartTable/> render with objects 1`] = `
               "Header": <i
                 aria-hidden="true"
                 className="fa fa-external-link"
+                style={
+                      Object {
+                            "color": "red",
+                          }
+                }
           />,
               "Pivot": undefined,
               "PivotValue": undefined,
@@ -4187,29 +4343,36 @@ exports[`<ChartTable/> render with objects 1`] = `
         columns={
           Array [
             Object {
+              "Header": "id",
+              "accessor": "id",
+              "show": false,
+            },
+            Object {
+              "Cell": [Function],
               "Header": [Function],
+              "accessor": "selected",
+              "resizable": false,
+              "sortable": false,
+              "width": 40,
+            },
+            Object {
+              "Header": "Post Info",
               "columns": Array [
-                Object {
-                  "accessor": "id",
-                  "show": false,
-                },
-                Object {
-                  "Cell": [Function],
-                  "Header": [Function],
-                  "accessor": "selected",
-                  "resizable": false,
-                  "sortable": false,
-                  "width": 40,
-                },
                 Object {
                   "Cell": [Function],
                   "Header": <i
                     aria-hidden="true"
                     className="fa fa-user-circle"
+                    style={
+                              Object {
+                                        "color": "green",
+                                      }
+                    }
           >
                     user
           </i>,
                   "accessor": "from_user",
+                  "id": "user",
                   "maxWidth": 300,
                   "minWidth": 200,
                   "resizable": true,
@@ -4219,23 +4382,39 @@ exports[`<ChartTable/> render with objects 1`] = `
                   "Header": <i
                     aria-hidden="true"
                     className="fa fa-envelope-o"
+                    style={
+                              Object {
+                                        "color": "orange",
+                                      }
+                    }
           />,
                   "accessor": "message",
+                  "id": "woc_f",
                   "maxWidth": 80,
                 },
                 Object {
                   "Header": <i
                     aria-hidden="true"
                     className="fa fa-thumbs-o-up"
+                    style={
+                              Object {
+                                        "color": "blue",
+                                      }
+                    }
           />,
                   "accessor": "reactions_num",
                   "maxWidth": 80,
                   "minWidth": 60,
                   "sort": "dsc",
                 },
+              ],
+            },
+            Object {
+              "Header": "Time",
+              "columns": Array [
                 Object {
                   "Cell": [Function],
-                  "Header": "crated time",
+                  "Header": "crated",
                   "accessor": [Function],
                   "id": "createTime",
                   "maxWidth": 200,
@@ -4244,7 +4423,7 @@ exports[`<ChartTable/> render with objects 1`] = `
                 },
                 Object {
                   "Cell": [Function],
-                  "Header": "added time",
+                  "Header": "added",
                   "accessor": [Function],
                   "id": "addedTime",
                   "maxWidth": 150,
@@ -4252,17 +4431,27 @@ exports[`<ChartTable/> render with objects 1`] = `
                 },
                 Object {
                   "Cell": [Function],
-                  "Header": "last update",
+                  "Header": "updated",
                   "accessor": [Function],
                   "id": "lastUpdate",
                   "maxWidth": 200,
                   "minWidth": 150,
                 },
+              ],
+            },
+            Object {
+              "Header": "Link",
+              "columns": Array [
                 Object {
                   "Cell": [Function],
                   "Header": <i
                     aria-hidden="true"
                     className="fa fa-external-link"
+                    style={
+                              Object {
+                                        "color": "red",
+                                      }
+                    }
           />,
                   "accessor": [Function],
                   "id": "yt_link",
@@ -4469,7 +4658,7 @@ exports[`<ChartTable/> render with objects 1`] = `
               "Expander": undefined,
               "Filter": undefined,
               "Footer": undefined,
-              "Header": [Function],
+              "Header": undefined,
               "Pivot": undefined,
               "PivotValue": undefined,
               "aggregate": undefined,
@@ -4505,6 +4694,35 @@ exports[`<ChartTable/> render with objects 1`] = `
                   "style": Object {},
                   "width": 40,
                 },
+              ],
+              "filterMethod": undefined,
+              "filterable": undefined,
+              "footerClassName": "",
+              "footerStyle": Object {},
+              "getFooterProps": [Function],
+              "getHeaderProps": [Function],
+              "getProps": [Function],
+              "headerClassName": "",
+              "headerStyle": Object {},
+              "minWidth": 100,
+              "resizable": undefined,
+              "show": true,
+              "sortMethod": undefined,
+              "sortable": undefined,
+              "style": Object {},
+            },
+            Object {
+              "Aggregated": undefined,
+              "Cell": undefined,
+              "Expander": undefined,
+              "Filter": undefined,
+              "Footer": undefined,
+              "Header": "Post Info",
+              "Pivot": undefined,
+              "PivotValue": undefined,
+              "aggregate": undefined,
+              "className": "",
+              "columns": Array [
                 Object {
                   "Aggregated": undefined,
                   "Cell": [Function],
@@ -4514,6 +4732,11 @@ exports[`<ChartTable/> render with objects 1`] = `
                   "Header": <i
                     aria-hidden="true"
                     className="fa fa-user-circle"
+                    style={
+                              Object {
+                                        "color": "green",
+                                      }
+                    }
           >
                     user
           </i>,
@@ -4531,7 +4754,7 @@ exports[`<ChartTable/> render with objects 1`] = `
                   "getProps": [Function],
                   "headerClassName": "",
                   "headerStyle": Object {},
-                  "id": "from_user",
+                  "id": "user",
                   "maxWidth": 300,
                   "minWidth": 200,
                   "resizable": true,
@@ -4549,6 +4772,11 @@ exports[`<ChartTable/> render with objects 1`] = `
                   "Header": <i
                     aria-hidden="true"
                     className="fa fa-envelope-o"
+                    style={
+                              Object {
+                                        "color": "orange",
+                                      }
+                    }
           />,
                   "Pivot": undefined,
                   "PivotValue": undefined,
@@ -4564,7 +4792,7 @@ exports[`<ChartTable/> render with objects 1`] = `
                   "getProps": [Function],
                   "headerClassName": "",
                   "headerStyle": Object {},
-                  "id": "message",
+                  "id": "woc_f",
                   "maxWidth": 80,
                   "minWidth": 100,
                   "resizable": undefined,
@@ -4582,6 +4810,11 @@ exports[`<ChartTable/> render with objects 1`] = `
                   "Header": <i
                     aria-hidden="true"
                     className="fa fa-thumbs-o-up"
+                    style={
+                              Object {
+                                        "color": "blue",
+                                      }
+                    }
           />,
                   "Pivot": undefined,
                   "PivotValue": undefined,
@@ -4607,13 +4840,42 @@ exports[`<ChartTable/> render with objects 1`] = `
                   "sortable": undefined,
                   "style": Object {},
                 },
+              ],
+              "filterMethod": undefined,
+              "filterable": undefined,
+              "footerClassName": "",
+              "footerStyle": Object {},
+              "getFooterProps": [Function],
+              "getHeaderProps": [Function],
+              "getProps": [Function],
+              "headerClassName": "",
+              "headerStyle": Object {},
+              "minWidth": 100,
+              "resizable": undefined,
+              "show": true,
+              "sortMethod": undefined,
+              "sortable": undefined,
+              "style": Object {},
+            },
+            Object {
+              "Aggregated": undefined,
+              "Cell": undefined,
+              "Expander": undefined,
+              "Filter": undefined,
+              "Footer": undefined,
+              "Header": "Time",
+              "Pivot": undefined,
+              "PivotValue": undefined,
+              "aggregate": undefined,
+              "className": "",
+              "columns": Array [
                 Object {
                   "Aggregated": undefined,
                   "Cell": [Function],
                   "Expander": undefined,
                   "Filter": undefined,
                   "Footer": undefined,
-                  "Header": "crated time",
+                  "Header": "crated",
                   "Pivot": undefined,
                   "PivotValue": undefined,
                   "accessor": [Function],
@@ -4643,7 +4905,7 @@ exports[`<ChartTable/> render with objects 1`] = `
                   "Expander": undefined,
                   "Filter": undefined,
                   "Footer": undefined,
-                  "Header": "added time",
+                  "Header": "added",
                   "Pivot": undefined,
                   "PivotValue": undefined,
                   "accessor": [Function],
@@ -4673,7 +4935,7 @@ exports[`<ChartTable/> render with objects 1`] = `
                   "Expander": undefined,
                   "Filter": undefined,
                   "Footer": undefined,
-                  "Header": "last update",
+                  "Header": "updated",
                   "Pivot": undefined,
                   "PivotValue": undefined,
                   "accessor": [Function],
@@ -4697,6 +4959,35 @@ exports[`<ChartTable/> render with objects 1`] = `
                   "sortable": undefined,
                   "style": Object {},
                 },
+              ],
+              "filterMethod": undefined,
+              "filterable": undefined,
+              "footerClassName": "",
+              "footerStyle": Object {},
+              "getFooterProps": [Function],
+              "getHeaderProps": [Function],
+              "getProps": [Function],
+              "headerClassName": "",
+              "headerStyle": Object {},
+              "minWidth": 100,
+              "resizable": undefined,
+              "show": true,
+              "sortMethod": undefined,
+              "sortable": undefined,
+              "style": Object {},
+            },
+            Object {
+              "Aggregated": undefined,
+              "Cell": undefined,
+              "Expander": undefined,
+              "Filter": undefined,
+              "Footer": undefined,
+              "Header": "Link",
+              "Pivot": undefined,
+              "PivotValue": undefined,
+              "aggregate": undefined,
+              "className": "",
+              "columns": Array [
                 Object {
                   "Aggregated": undefined,
                   "Cell": [Function],
@@ -4706,6 +4997,11 @@ exports[`<ChartTable/> render with objects 1`] = `
                   "Header": <i
                     aria-hidden="true"
                     className="fa fa-external-link"
+                    style={
+                              Object {
+                                        "color": "red",
+                                      }
+                    }
           />,
                   "Pivot": undefined,
                   "PivotValue": undefined,
@@ -4822,12 +5118,12 @@ exports[`<ChartTable/> render with objects 1`] = `
               "_subRows": undefined,
               "addedTime": 1488927600000,
               "createTime": 1488396999000,
-              "from_user": "Anna Stanuchowska",
               "id": 0,
               "lastUpdate": 1489096005000,
-              "message": "Nie wiem, czy to by się nadawało, ale uwielbiam tą nutę <3 ",
               "reactions_num": 0,
               "selected": false,
+              "user": "Anna Stanuchowska",
+              "woc_f": "Nie wiem, czy to by się nadawało, ale uwielbiam tą nutę <3 ",
               "yt_link": Object {
                 "name": "X Ambassadors - Unsteady (Erich Lee Gravity Remix)",
                 "title": "X Ambassadors - Unsteady (Erich Lee Gravity Remix)",
@@ -4858,12 +5154,12 @@ exports[`<ChartTable/> render with objects 1`] = `
               "_subRows": undefined,
               "addedTime": 1489014000000,
               "createTime": 1488522535000,
-              "from_user": "Damian Gruszczyński",
               "id": 1,
               "lastUpdate": 1489046508000,
-              "message": "#całapłytawymiata",
               "reactions_num": 5,
               "selected": false,
+              "user": "Damian Gruszczyński",
+              "woc_f": "#całapłytawymiata",
               "yt_link": Object {
                 "title": "Barcelona, a song by Ed Sheeran on Spotify",
                 "type": "music_aggregation",
@@ -4892,12 +5188,12 @@ exports[`<ChartTable/> render with objects 1`] = `
               "_subRows": undefined,
               "addedTime": 1489014000000,
               "createTime": 1488522265000,
-              "from_user": "Damian Gruszczyński",
               "id": 2,
               "lastUpdate": 1489015020000,
-              "message": "Ed! :-D",
               "reactions_num": 6,
               "selected": false,
+              "user": "Damian Gruszczyński",
+              "woc_f": "Ed! :-D",
               "yt_link": Object {
                 "title": "Galway Girl, a song by Ed Sheeran on Spotify",
                 "type": "music_aggregation",
@@ -4926,12 +5222,12 @@ exports[`<ChartTable/> render with objects 1`] = `
               "_subRows": undefined,
               "addedTime": 1489014000000,
               "createTime": 1488522381000,
-              "from_user": "Damian Gruszczyński",
               "id": 3,
               "lastUpdate": 1489014345000,
-              "message": "#nigdydosyceda ;-)",
               "reactions_num": 8,
               "selected": false,
+              "user": "Damian Gruszczyński",
+              "woc_f": "#nigdydosyceda ;-)",
               "yt_link": Object {
                 "title": "New Man, a song by Ed Sheeran on Spotify",
                 "type": "music_aggregation",
@@ -4966,14 +5262,14 @@ exports[`<ChartTable/> render with objects 1`] = `
               "_subRows": undefined,
               "addedTime": 1489014000000,
               "createTime": 1488571848000,
-              "from_user": "Mateusz Lech",
               "id": 4,
               "lastUpdate": 1489014338000,
-              "message": "Wydaje się całkiem skoczne ;)
-          
-          #95bpm",
               "reactions_num": 5,
               "selected": false,
+              "user": "Mateusz Lech",
+              "woc_f": "Wydaje się całkiem skoczne ;)
+          
+          #95bpm",
               "yt_link": Object {
                 "name": "Vali - Ain't No Friend Of Mine (Official Video)",
                 "title": "Vali - Ain't No Friend Of Mine (Official Video)",
@@ -5010,14 +5306,14 @@ exports[`<ChartTable/> render with objects 1`] = `
               "_subRows": undefined,
               "addedTime": 1488927600000,
               "createTime": 1488928023000,
-              "from_user": "Joanna Kozieńska",
               "id": 5,
               "lastUpdate": 1489008961000,
-              "message": "Jedna ode mnie, bo już wieki nie miałam okazji ;) 
-          
-          ",
               "reactions_num": 9,
               "selected": false,
+              "user": "Joanna Kozieńska",
+              "woc_f": "Jedna ode mnie, bo już wieki nie miałam okazji ;) 
+          
+          ",
               "yt_link": Object {
                 "name": "Chet Faker - 1998 ft Banks",
                 "title": "Chet Faker - 1998 ft Banks",
@@ -5051,13 +5347,13 @@ exports[`<ChartTable/> render with objects 1`] = `
               "_subRows": undefined,
               "addedTime": 0,
               "createTime": 1472566821000,
-              "from_user": "Paulina Górka",
               "id": 96,
               "lastUpdate": 1486465000000,
-              "message": "warte lajków, jak nie to zwątpię :P
-          ",
               "reactions_num": 19,
               "selected": false,
+              "user": "Paulina Górka",
+              "woc_f": "warte lajków, jak nie to zwątpię :P
+          ",
               "yt_link": Object {
                 "name": "James Hersey - Miss You (Official Audio)",
                 "title": "James Hersey - Miss You (Official Audio)",
@@ -5103,12 +5399,12 @@ exports[`<ChartTable/> render with objects 1`] = `
               "_subRows": undefined,
               "addedTime": 1488927600000,
               "createTime": 1488396999000,
-              "from_user": "Anna Stanuchowska",
               "id": 0,
               "lastUpdate": 1489096005000,
-              "message": "Nie wiem, czy to by się nadawało, ale uwielbiam tą nutę <3 ",
               "reactions_num": 0,
               "selected": false,
+              "user": "Anna Stanuchowska",
+              "woc_f": "Nie wiem, czy to by się nadawało, ale uwielbiam tą nutę <3 ",
               "yt_link": Object {
                 "name": "X Ambassadors - Unsteady (Erich Lee Gravity Remix)",
                 "title": "X Ambassadors - Unsteady (Erich Lee Gravity Remix)",
@@ -5139,12 +5435,12 @@ exports[`<ChartTable/> render with objects 1`] = `
               "_subRows": undefined,
               "addedTime": 1489014000000,
               "createTime": 1488522535000,
-              "from_user": "Damian Gruszczyński",
               "id": 1,
               "lastUpdate": 1489046508000,
-              "message": "#całapłytawymiata",
               "reactions_num": 5,
               "selected": false,
+              "user": "Damian Gruszczyński",
+              "woc_f": "#całapłytawymiata",
               "yt_link": Object {
                 "title": "Barcelona, a song by Ed Sheeran on Spotify",
                 "type": "music_aggregation",
@@ -5173,12 +5469,12 @@ exports[`<ChartTable/> render with objects 1`] = `
               "_subRows": undefined,
               "addedTime": 1489014000000,
               "createTime": 1488522265000,
-              "from_user": "Damian Gruszczyński",
               "id": 2,
               "lastUpdate": 1489015020000,
-              "message": "Ed! :-D",
               "reactions_num": 6,
               "selected": false,
+              "user": "Damian Gruszczyński",
+              "woc_f": "Ed! :-D",
               "yt_link": Object {
                 "title": "Galway Girl, a song by Ed Sheeran on Spotify",
                 "type": "music_aggregation",
@@ -5207,12 +5503,12 @@ exports[`<ChartTable/> render with objects 1`] = `
               "_subRows": undefined,
               "addedTime": 1489014000000,
               "createTime": 1488522381000,
-              "from_user": "Damian Gruszczyński",
               "id": 3,
               "lastUpdate": 1489014345000,
-              "message": "#nigdydosyceda ;-)",
               "reactions_num": 8,
               "selected": false,
+              "user": "Damian Gruszczyński",
+              "woc_f": "#nigdydosyceda ;-)",
               "yt_link": Object {
                 "title": "New Man, a song by Ed Sheeran on Spotify",
                 "type": "music_aggregation",
@@ -5247,14 +5543,14 @@ exports[`<ChartTable/> render with objects 1`] = `
               "_subRows": undefined,
               "addedTime": 1489014000000,
               "createTime": 1488571848000,
-              "from_user": "Mateusz Lech",
               "id": 4,
               "lastUpdate": 1489014338000,
-              "message": "Wydaje się całkiem skoczne ;)
-          
-          #95bpm",
               "reactions_num": 5,
               "selected": false,
+              "user": "Mateusz Lech",
+              "woc_f": "Wydaje się całkiem skoczne ;)
+          
+          #95bpm",
               "yt_link": Object {
                 "name": "Vali - Ain't No Friend Of Mine (Official Video)",
                 "title": "Vali - Ain't No Friend Of Mine (Official Video)",
@@ -5291,14 +5587,14 @@ exports[`<ChartTable/> render with objects 1`] = `
               "_subRows": undefined,
               "addedTime": 1488927600000,
               "createTime": 1488928023000,
-              "from_user": "Joanna Kozieńska",
               "id": 5,
               "lastUpdate": 1489008961000,
-              "message": "Jedna ode mnie, bo już wieki nie miałam okazji ;) 
-          
-          ",
               "reactions_num": 9,
               "selected": false,
+              "user": "Joanna Kozieńska",
+              "woc_f": "Jedna ode mnie, bo już wieki nie miałam okazji ;) 
+          
+          ",
               "yt_link": Object {
                 "name": "Chet Faker - 1998 ft Banks",
                 "title": "Chet Faker - 1998 ft Banks",
@@ -5332,13 +5628,13 @@ exports[`<ChartTable/> render with objects 1`] = `
               "_subRows": undefined,
               "addedTime": 0,
               "createTime": 1472566821000,
-              "from_user": "Paulina Górka",
               "id": 96,
               "lastUpdate": 1486465000000,
-              "message": "warte lajków, jak nie to zwątpię :P
-          ",
               "reactions_num": 19,
               "selected": false,
+              "user": "Paulina Górka",
+              "woc_f": "warte lajków, jak nie to zwątpię :P
+          ",
               "yt_link": Object {
                 "name": "James Hersey - Miss You (Official Audio)",
                 "title": "James Hersey - Miss You (Official Audio)",
@@ -5522,29 +5818,36 @@ exports[`<ChartTable/> renders without crashing 1`] = `
   columns={
     Array [
       Object {
+        "Header": "id",
+        "accessor": "id",
+        "show": false,
+      },
+      Object {
+        "Cell": [Function],
         "Header": [Function],
+        "accessor": "selected",
+        "resizable": false,
+        "sortable": false,
+        "width": 40,
+      },
+      Object {
+        "Header": "Post Info",
         "columns": Array [
-          Object {
-            "accessor": "id",
-            "show": false,
-          },
-          Object {
-            "Cell": [Function],
-            "Header": [Function],
-            "accessor": "selected",
-            "resizable": false,
-            "sortable": false,
-            "width": 40,
-          },
           Object {
             "Cell": [Function],
             "Header": <i
               aria-hidden="true"
               className="fa fa-user-circle"
+              style={
+                        Object {
+                                  "color": "green",
+                                }
+              }
     >
               user
     </i>,
             "accessor": "from_user",
+            "id": "user",
             "maxWidth": 300,
             "minWidth": 200,
             "resizable": true,
@@ -5554,23 +5857,39 @@ exports[`<ChartTable/> renders without crashing 1`] = `
             "Header": <i
               aria-hidden="true"
               className="fa fa-envelope-o"
+              style={
+                        Object {
+                                  "color": "orange",
+                                }
+              }
     />,
             "accessor": "message",
+            "id": "woc_f",
             "maxWidth": 80,
           },
           Object {
             "Header": <i
               aria-hidden="true"
               className="fa fa-thumbs-o-up"
+              style={
+                        Object {
+                                  "color": "blue",
+                                }
+              }
     />,
             "accessor": "reactions_num",
             "maxWidth": 80,
             "minWidth": 60,
             "sort": "dsc",
           },
+        ],
+      },
+      Object {
+        "Header": "Time",
+        "columns": Array [
           Object {
             "Cell": [Function],
-            "Header": "crated time",
+            "Header": "crated",
             "accessor": [Function],
             "id": "createTime",
             "maxWidth": 200,
@@ -5579,7 +5898,7 @@ exports[`<ChartTable/> renders without crashing 1`] = `
           },
           Object {
             "Cell": [Function],
-            "Header": "added time",
+            "Header": "added",
             "accessor": [Function],
             "id": "addedTime",
             "maxWidth": 150,
@@ -5587,17 +5906,27 @@ exports[`<ChartTable/> renders without crashing 1`] = `
           },
           Object {
             "Cell": [Function],
-            "Header": "last update",
+            "Header": "updated",
             "accessor": [Function],
             "id": "lastUpdate",
             "maxWidth": 200,
             "minWidth": 150,
           },
+        ],
+      },
+      Object {
+        "Header": "Link",
+        "columns": Array [
           Object {
             "Cell": [Function],
             "Header": <i
               aria-hidden="true"
               className="fa fa-external-link"
+              style={
+                        Object {
+                                  "color": "red",
+                                }
+              }
     />,
             "accessor": [Function],
             "id": "yt_link",
