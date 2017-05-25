@@ -23,11 +23,10 @@ export default class LoginAlert extends React.Component {
         const {store} = this.context;
         const {user, sp_user} = store.getState();
 
-
         return (<Jumbotron bsClass="login-info">
             <h4>{'To start working witch us you need to login to facebook and spotify.'}<i className="fa fa-heart"/>
             </h4>
-            <p>{user.isGroupAdmin ? '' : notGroupAdmin}</p>
+            <p>{user.isGroupAdmin===true||user.isGroupAdmin===undefined ? '' : notGroupAdmin}</p>
 
             {user.id === undefined && <FacebookLogin
                 appId={process.env.NODE_ENV === 'production' ? "1173483302721639" : "1173486879387948"}
