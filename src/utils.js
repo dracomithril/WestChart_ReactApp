@@ -102,7 +102,7 @@ export const sorting = {
     }
 };
 export const getChartFromServer = function (query_params, store) {
-    let url = 'api/get_chart?' + qs.stringify(query_params);
+    let url = '/api/get_chart?' + qs.stringify(query_params);
     console.time('client-obtain-chart');
     return fetch(url)
         .then((resp) => {
