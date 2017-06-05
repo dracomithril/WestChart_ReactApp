@@ -1,5 +1,5 @@
 import React, {Component} from "react";
-import PropTypes from 'prop-types';
+import PropTypes from "prop-types";
 import LoginAlert from "./components/LoginAlert";
 import Footer from "./components/Footer";
 import ChartPresenter from "./components/ChartPresenter";
@@ -7,9 +7,10 @@ import "./App.css";
 import "react-table/react-table.css";
 import "react-datepicker/dist/react-datepicker.css";
 import Spotify from "spotify-web-api-node";
+import {loginToSpotify, validateCredentials} from "./spotify_utils";
 const spotifyApi = new Spotify();
+const action_types = require('./reducers/action_types');
 const Cookies = require('cookies-js');
-import {loginToSpotify, validateCredentials} from './spotify_utils';
 
 class App extends Component {
     componentDidMount() {
@@ -22,7 +23,14 @@ class App extends Component {
             spotifyApi.setAccessToken(sp_user.access_token);
             spotifyApi.getMe().then(function (data) {
                 console.log('Some information about the authenticated user', data.body.id);
-                store.dispatch({type: 'UPDATE_SP_USER', user: data.body, access_token: sp_user.access_token});
+                store.dispatch({type: action_types.UPDATE_SP_USER, user: data.body, access_token: sp_user.access_token});
+                spotifyApi.getUserPlaylists(data.body.id)
+                    .then(function (data) {
+                        store.dispatch({type: action_types.UPDATE_SP_USER_PLAYLIST, playlists:data.body.items});
+                        console.log('Retrieved playlists', data.body);
+                    }, function (err) {
+                        console.log('Something went wrong!', err);
+                    });
             }).catch((err) => {
                 console.log('Something went wrong!', err);
             });

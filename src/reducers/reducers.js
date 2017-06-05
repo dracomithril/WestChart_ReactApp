@@ -58,6 +58,11 @@ const sp_user = (state = {}, action) => {
                 access_token: action.access_token,
                 refresh_token: action.refresh_token
             });
+        case action_types.UPDATE_SP_USER_PLAYLIST:
+            return{
+                ...state,
+                playlists:action.playlists
+            };
         default:
             return state;
     }
