@@ -30,7 +30,7 @@ export function filterChart(store) {
             return filters[e.input.name].checked
         });
         const map = results.map(doTest);
-        let res1 = map.length>0?map.reduce((pr, cr) => pr && cr):true;
+        let res1 = map.length > 0 ? map.reduce((pr, cr) => pr && cr) : true;
 
         if (!filters.woc_control.checked) {
             res1 &= elem.message !== undefined ? !elem.message.toLowerCase().includes(woc_string.toLowerCase()) : true;
