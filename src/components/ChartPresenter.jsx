@@ -3,7 +3,7 @@
  */
 import React from "react";
 import PropTypes from 'prop-types';
-import {Jumbotron} from "react-bootstrap";
+
 import Summary from "./Summary";
 import ChartTable from "./ChartTable";
 import ChartHeader from "./ChartHeader";
@@ -35,15 +35,12 @@ export default class ChartPresenter extends React.Component {
         const {view_chart, error_days} = chart.length > 0 ? filterChart(store) : {view_chart: [], error_days: []};
         let selected = view_chart.filter((elem) => elem.selected);
         sorting[list_sort](selected);
-        return (
-            <Jumbotron bsClass="App-body">
-                <div>
-                    <ChartHeader error_days={error_days} count={view_chart.length}/>
-                    <ChartTable data={view_chart} error_days={error_days}/>
-                    <Summary selected={selected}/>
-                    <SpotifySearch selected={selected}/>
-                </div>
-            </Jumbotron>);
+        return (<div>
+            <ChartHeader error_days={error_days} count={view_chart.length}/>
+            <ChartTable data={view_chart} error_days={error_days}/>
+            <Summary selected={selected}/>
+            <SpotifySearch selected={selected}/>
+        </div>);
     }
 }
 ChartPresenter.contextTypes = {

@@ -16,28 +16,29 @@ class App extends Component {
         const {store} = this.context;
         this.unsubscribe = store.subscribe(() => this.forceUpdate());
         const {location, history} = this.props;
-        let sp_user_str =Cookies.get('sp_user');
+        let sp_user_str = Cookies.get('sp_user');
         if (sp_user_str) {
-            let sp_user =JSON.parse(sp_user_str);
+            let sp_user = JSON.parse(sp_user_str);
             spotifyApi.setAccessToken(sp_user.access_token);
             spotifyApi.getMe().then(function (data) {
                 console.log('Some information about the authenticated user', data.body.id);
-                store.dispatch({type: 'UPDATE_SP_USER', user: data.body, access_token:sp_user.access_token});
+                store.dispatch({type: 'UPDATE_SP_USER', user: data.body, access_token: sp_user.access_token});
             }).catch((err) => {
                 console.log('Something went wrong!', err);
             });
-        }else{
+        } else {
             const {hash} = location;
             if (hash.includes('/user/')) {
                 let params = hash.replace('#/user/', '');
                 let arr = params.split('/');
                 const access_token = arr[0];
-                validateCredentials(access_token,history,store);
-            }else{
+                validateCredentials(access_token, history, store);
+            } else {
                 loginToSpotify();
             }
         }
     }
+
     componentWillUnmount() {
         this.unsubscribe();
     }
@@ -50,9 +51,11 @@ class App extends Component {
             <div className="App">
                 {!isLogged && <LoginAlert/>}
                 {isLogged && user.isGroupAdmin &&
-                <div id="groupAdmin">
+                <div className="App-body">
                     <ChartPresenter/>
-                </div>}
+                </div>
+
+                }
                 <Footer/>
             </div>
         );

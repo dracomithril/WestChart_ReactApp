@@ -3,7 +3,7 @@
  */
 import React from "react";
 import PropTypes from 'prop-types';
-import { PageHeader} from "react-bootstrap";
+import {PageHeader} from "react-bootstrap";
 import CookieBanner from "react-cookie-banner";
 import UserInfo from "./../UserInfo";
 import "bootstrap-social";
@@ -14,6 +14,7 @@ export default class Header extends React.Component {
         const {store} = this.context;
         this.unsubscribe = store.subscribe(() => this.forceUpdate());
     }
+
     componentWillUnmount() {
         this.unsubscribe();
     }
@@ -22,14 +23,24 @@ export default class Header extends React.Component {
         const {store} = this.context;
         let {user} = store.getState();
         return (<div className="wcs_header">
-                            <CookieBanner
-                    message={'Yes, we use cookies. If you don\'t like it change website, we won\'t miss you! ;)'}
-                    onAccept={() => {
-                    }}
-                    cookie='user-has-accepted-cookies'/>
+            <CookieBanner
+                message={'Yes, we use cookies. If you don\'t like it change website, we won\'t miss you! ;)'}
+                onAccept={() => {
+                }}
+                cookie='user-has-accepted-cookies'/>
 
-            <PageHeader bsClass="title-header">West Coast Swing Dance Chart
-                <small>Admin helper</small>
+            <PageHeader bsClass="title-header">W
+                <small>est</small>
+                C
+                <small>oast</small>
+                S
+                <small>wing</small>
+                D
+                <small>ance</small>
+                C
+                <small>hart</small>
+                H
+                <small>{'elper'}</small>
             </PageHeader>
             {user.name && <UserInfo/>}
         </div>);
@@ -38,5 +49,4 @@ export default class Header extends React.Component {
 Header.contextTypes = {
     store: PropTypes.object
 };
-Header.propTypes = {
-};
+Header.propTypes = {};

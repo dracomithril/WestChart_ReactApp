@@ -20,10 +20,9 @@ export let createPlaylist = function (sp_user, sp_playlist_name, isPlaylistPriva
     spotifyApi.createPlaylist(sp_user.id, sp_playlist_name, {'public': !isPlaylistPrivate})
         .then(function ({body}) {
             const spotify_url = body.external_urls.spotify;
-            console.log(spotify_url);
-            let name = body.name;
-            console.log('Created playlist! name: ', name);
-            store.dispatch({type: action_types.UPDATE_PLAYLIST_INFO, value: {url: spotify_url, pl_name: name}});
+            let playlist_name = body.name;
+            console.log(`Created playlist! name: ${playlist_name} url: ${spotify_url}`);
+            store.dispatch({type: action_types.UPDATE_PLAYLIST_INFO, value: {url: spotify_url, pl_name: playlist_name}});
             return spotifyApi.addTracksToPlaylist(sp_user.id, body.id, selected)
         })
         .then(function () {
@@ -40,7 +39,7 @@ export let createPlaylist = function (sp_user, sp_playlist_name, isPlaylistPriva
  * @param search_id
  * @param store
  */
-export const searchForMusic = function ({artist, title, search_id},store) {
+export const searchForMusic = function ({artist, title, search_id}, store) {
     spotifyApi.searchTracks(`${artist} ${title}`).then((data) => {
         store.dispatch({
             type: action_types.UPDATE_SINGLE_SEARCH,

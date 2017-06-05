@@ -21,9 +21,29 @@ exports[`<Header/> render user info 1`] = `
   <PageHeader
     bsClass="title-header"
   >
-    West Coast Swing Dance Chart
+    W
     <small>
-      Admin helper
+      est
+    </small>
+    C
+    <small>
+      oast
+    </small>
+    S
+    <small>
+      wing
+    </small>
+    D
+    <small>
+      ance
+    </small>
+    C
+    <small>
+      hart
+    </small>
+    H
+    <small>
+      elper
     </small>
   </PageHeader>
   <UserInfo />
@@ -115,9 +135,29 @@ exports[`<Header/> renders without crashing ChartPresenter 1`] = `
         className="title-header"
       >
         <h1>
-          West Coast Swing Dance Chart
+          W
           <small>
-            Admin helper
+            est
+          </small>
+          C
+          <small>
+            oast
+          </small>
+          S
+          <small>
+            wing
+          </small>
+          D
+          <small>
+            ance
+          </small>
+          C
+          <small>
+            hart
+          </small>
+          H
+          <small>
+            elper
           </small>
         </h1>
       </div>
