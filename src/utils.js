@@ -117,7 +117,6 @@ export const getChartFromServer = function (query_params, store) {
             store.dispatch({type: action_types.UPDATE_CHART, chart: b.chart});
             store.dispatch({type: action_types.UPDATE_LAST_UPDATE, date: b.last_update});
             store.dispatch({type: action_types.CHANGE_SHOW_WAIT, show: false});
-
         })
         .catch(err => {
             store.dispatch({type: action_types.CHANGE_SHOW_WAIT, show: false});

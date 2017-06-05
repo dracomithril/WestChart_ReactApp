@@ -4,7 +4,7 @@
 import React from "react";
 import PropTypes from "prop-types";
 import ReactTable from "react-table";
-import {Checkbox, Label, OverlayTrigger, Tooltip} from "react-bootstrap";
+import {Checkbox, Image, Label, OverlayTrigger, Tooltip} from "react-bootstrap";
 
 import "./components.css";
 function formatDate(date) {
@@ -22,7 +22,7 @@ export default class ChartTable extends React.Component {
     }
 
     render() {
-        const isMobile= false;
+        const isMobile = false;
         const {store} = this.context;
         const {user, show_wait} = store.getState();
         const {data} = this.props;
@@ -35,8 +35,13 @@ export default class ChartTable extends React.Component {
                     minWidth: 140,
                     maxWidth: 300,
                     id: 'user',
-                    accessor: 'from_user', // String-based value accessors !
-                    Cell: props => <span>{props.value}</span>
+                    accessor: 'from', // String-based value accessors !
+                    Cell: props => {
+                        return <div style={{textAlign:'left'}}>
+                             <Image src={`https://graph.facebook.com/v2.9/${props.value.id}/picture`}/>
+                            <span style={{paddingLeft:10}}>{props.value.name}</span>
+                        </div>
+                    }
                 }, {
                     Header: <i className="fa fa-envelope-o" style={{color: 'orange'}} aria-hidden="true"/>,
                     accessor: 'message',
@@ -69,7 +74,7 @@ export default class ChartTable extends React.Component {
                     id: 'addedTime',
                     resizable: true,
                     maxWidth: 150,
-                    width:90,
+                    width: 90,
                     accessor: d => d.added_time === undefined ? 0 : getTime(d.added_time),
                     Cell: props => {
                         return props.value === 0 ? <i className="fa fa-minus-circle" style={{color: 'red'}}/> :
