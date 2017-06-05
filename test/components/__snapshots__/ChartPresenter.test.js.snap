@@ -1,25 +1,20 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`<ChartPresenter/> renders without crashing ChartPresenter 1`] = `
-<Jumbotron
-  bsClass="App-body"
-  componentClass="div"
->
-  <div>
-    <ChartHeader
-      count={0}
-      error_days={Array []}
-    />
-    <ChartTable
-      data={Array []}
-      error_days={Array []}
-    />
-    <Summary
-      selected={Array []}
-    />
-    <SpotifySearch
-      selected={Array []}
-    />
-  </div>
-</Jumbotron>
+<div>
+  <ChartHeader
+    count={0}
+    error_days={Array []}
+  />
+  <ChartTable
+    data={Array []}
+    error_days={Array []}
+  />
+  <Summary
+    selected={Array []}
+  />
+  <SpotifySearch
+    selected={Array []}
+  />
+</div>
 `;
