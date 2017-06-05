@@ -22,9 +22,83 @@ export default class ChartTable extends React.Component {
     }
 
     render() {
+        const isMobile= false;
         const {store} = this.context;
         const {user, show_wait} = store.getState();
         const {data} = this.props;
+        let post_info = {
+            Header: 'Post Info',
+            columns: [
+                {
+                    Header: <i className="fa fa-user-circle" style={{color: 'green'}} aria-hidden="true">user</i>,
+                    resizable: true,
+                    minWidth: 140,
+                    maxWidth: 300,
+                    id: 'user',
+                    accessor: 'from_user', // String-based value accessors !
+                    Cell: props => <span>{props.value}</span>
+                }, {
+                    Header: <i className="fa fa-envelope-o" style={{color: 'orange'}} aria-hidden="true"/>,
+                    accessor: 'message',
+                    id: 'woc_f',
+                    maxWidth: 50,
+                    Cell: props => {
+                        if (props.value !== undefined) {
+                            return <OverlayTrigger placement="bottom" overlay={<Tooltip
+                                id="tooltip">{props.value}</Tooltip>}>
+                                <Label bsStyle="success">
+                                    <i className="fa fa-envelope-o" aria-hidden="true"/>
+                                </Label>
+                            </OverlayTrigger>
+                        }
+                        return <Label bsStyle="danger"><i className="fa fa-times" aria-hidden="true"/></Label>
+                    }
+                }, {
+                    Header: <i className="fa fa-thumbs-o-up" style={{color: 'blue'}} aria-hidden="true"/>,
+                    accessor: 'reactions_num',
+                    sort: 'dsc',
+                    minWidth: 60,
+                    maxWidth: 80
+                }]
+        };
+        let time = {
+            Header: 'Time',
+            columns: [
+                {
+                    Header: 'added',
+                    id: 'addedTime',
+                    resizable: true,
+                    maxWidth: 150,
+                    width:90,
+                    accessor: d => d.added_time === undefined ? 0 : getTime(d.added_time),
+                    Cell: props => {
+                        return props.value === 0 ? <i className="fa fa-minus-circle" style={{color: 'red'}}/> :
+                            <OverlayTrigger placement="top" overlay={<Tooltip
+                                id="tooltip">{props.row._original.added_by}</Tooltip>}><span>{new Date(props.value).toLocaleString('pl-PL', {
+                                year: "numeric",
+                                month: "2-digit",
+                                day: "numeric"
+                            })}</span></OverlayTrigger>
+                    }
+                }, {
+                    Header: 'created',
+                    id: 'createTime',
+                    show: !isMobile,
+                    resizable: true,
+                    minWidth: 150,
+                    maxWidth: 200,
+                    accessor: d => getTime(d.created_time),
+                    Cell: props => <span>{formatDate(props.value)}</span>
+                }, {
+                    Header: 'updated',
+                    id: 'lastUpdate',
+                    show: !isMobile,
+                    minWidth: 150,
+                    maxWidth: 200,
+                    accessor: d => getTime(d.updated_time),
+                    Cell: props => <span>{formatDate(props.value)}</span>
+                }]
+        };
         const columns = [{
             Header: 'id',
             show: false,
@@ -47,82 +121,16 @@ export default class ChartTable extends React.Component {
                                      })
                                  }}/>
             }
-        }, {
-            Header: 'Post Info',
-            columns: [
-                {
-                    Header: <i className="fa fa-user-circle" style={{color: 'green'}} aria-hidden="true">user</i>,
-                    resizable: true,
-                    minWidth: 200,
-                    maxWidth: 300,
-                    id: 'user',
-                    accessor: 'from_user', // String-based value accessors !
-                    Cell: props => <span>{props.value}</span>
-                }, {
-                    Header: <i className="fa fa-envelope-o" style={{color: 'orange'}} aria-hidden="true"/>,
-                    accessor: 'message',
-                    id: 'woc_f',
-                    maxWidth: 80,
-                    Cell: props => {
-                        if (props.value !== undefined) {
-                            return <OverlayTrigger placement="bottom" overlay={<Tooltip
-                                id="tooltip">{props.value}</Tooltip>}><Label
-                                bsStyle="success">(...msg...)</Label></OverlayTrigger>
-                        }
-                        return <Label bsStyle="danger">no msg</Label>
-                    }
-                }, {
-                    Header: <i className="fa fa-thumbs-o-up" style={{color: 'blue'}} aria-hidden="true"/>,
-                    accessor: 'reactions_num',
-                    sort: 'dsc',
-                    minWidth: 60,
-                    maxWidth: 80
-                }]
-        }, {
-            Header: 'Time',
-            columns: [{
-                Header: 'crated',
-                id: 'createTime',
-
-                resizable: true,
-                minWidth: 150,
-                maxWidth: 200,
-                accessor: d => getTime(d.created_time),
-                Cell: props => <span>{formatDate(props.value)}</span>
-            },
-                {
-                    Header: 'added',
-                    id: 'addedTime',
-                    resizable: true,
-                    maxWidth: 150,
-                    accessor: d => d.added_time === undefined ? 0 : getTime(d.added_time),
-                    Cell: props => {
-                        return props.value === 0 ? <i className="fa fa-minus-circle" style={{color: 'red'}}/> :
-                            <OverlayTrigger placement="top" overlay={<Tooltip
-                                id="tooltip">{props.row._original.added_by}</Tooltip>}><span>{new Date(props.value).toLocaleString('pl-PL', {
-                                year: "numeric",
-                                month: "2-digit",
-                                day: "numeric"
-                            })}</span></OverlayTrigger>
-                    }
-                }, {
-                    Header: 'updated',
-                    id: 'lastUpdate',
-                    minWidth: 150,
-                    maxWidth: 200,
-                    accessor: d => getTime(d.updated_time),
-                    Cell: props => <span>{formatDate(props.value)}</span>
-                }]
-        },
+        }, post_info, time,
             {
                 Header: 'Link',
                 columns: [
                     {
-                        Header: <i className="fa fa-external-link" style={{color:'red'}} aria-hidden="true"/>, // Custom header components!
+                        Header: <i className="fa fa-external-link" style={{color: 'red'}} aria-hidden="true"/>, // Custom header components!
                         accessor: d => d.link,
                         minWidth: 200,
                         width: 300,
-                        maxWidth: 600,
+                        maxWidth: 400,
                         id: 'yt_link',
                         Cell: props => {
                             return props.value.url === undefined ? (<span>{props.value.title}</span>) : (

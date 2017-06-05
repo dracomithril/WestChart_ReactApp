@@ -5,9 +5,8 @@
 .App-body {
     padding: 5px 5px;
     margin: 0 10px 50px;
-    color: inherit;
     background-color: #eee;
-    float: left;
+    /*float: left;*/
     /*width: 80%;*/
 }
 
