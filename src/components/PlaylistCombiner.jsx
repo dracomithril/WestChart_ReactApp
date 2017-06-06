@@ -3,13 +3,15 @@
  */
 import React from "react";
 import PropTypes from "prop-types";
-import {ControlLabel, FormControl, FormGroup} from "react-bootstrap";
+import {ControlLabel, FormControl, FormGroup, Image, Radio} from "react-bootstrap";
 export default class PlaylistCombiner extends React.Component {
     constructor(props) {
         super(props);
         this.state = {
             selected: [],
-            chosen: undefined, indexer: []
+            chosen: undefined, indexer: [],
+            isCurrentUser: true,
+            userType:"this_user"
         }
 
 
@@ -25,7 +27,7 @@ export default class PlaylistCombiner extends React.Component {
 
     render() {
         const {sp_user} = this.context.store.getState();
-        const {selected, chosen, indexer} = this.state;
+        const {selected, chosen, indexer, isCurrentUser} = this.state;
         const map_selected = selected.map(elem => {
             return <div key={'sel_' + elem.id}>
                 <span>{elem.name}</span>
@@ -37,7 +39,22 @@ export default class PlaylistCombiner extends React.Component {
         return (<div>
             <h3>Combiner</h3>
             <div>
-                <h5>From {sp_user.id}:</h5>
+
+                <h5>From: </h5>
+                <FormGroup onChange={(e) => {
+                    this.setState({isCurrentUser:e.target.id==='this_user'?e.target.checked:false});
+                    console.log(e.target.id);
+                    console.log(e.target.checked);
+                }}>
+                    <Radio name="user" id="this_user">
+                        <Image style={{width: 40, height: 40, padding: 5}} src={(sp_user.images[0] || {}).url}
+                               rounded/>{sp_user.id}
+                    </Radio>
+                    <Radio name="user" id="dif_user">
+                        <input type="text" disabled={isCurrentUser}/>
+                        <button disabled={isCurrentUser}><i className="fa fa-search"/></button>
+                    </Radio>
+                </FormGroup>
                 <FormGroup controlId="formControlsSelectMultiple">
                     <ControlLabel>Multiple select</ControlLabel>
                     <FormControl componentClass="select" multiple>
