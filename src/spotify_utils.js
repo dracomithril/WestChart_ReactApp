@@ -70,7 +70,7 @@ export const loginToSpotify = function () {
 let validateCredentials = function (access_token, history, store) {
     spotifyApi.setAccessToken(access_token);
     spotifyApi.getMe().then(data => {
-        console.log('you loged as :', data.body.id);
+        console.log('you logged as :', data.body.id);
         Cookies.set('sp_user', JSON.stringify({access_token}), {expires: 3600});
         store.dispatch({type: 'UPDATE_SP_USER', user: data.body, access_token});
         history.push('')
