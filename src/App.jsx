@@ -24,13 +24,6 @@ class App extends Component {
             spotifyApi.getMe().then(function (data) {
                 console.log('Some information about the authenticated user', data.body.id);
                 store.dispatch({type: action_types.UPDATE_SP_USER, user: data.body, access_token: sp_user.access_token});
-                spotifyApi.getUserPlaylists(data.body.id)
-                    .then(function (data) {
-                        store.dispatch({type: action_types.UPDATE_SP_USER_PLAYLIST, playlists:data.body.items});
-                        console.log('Retrieved playlists', data.body);
-                    }, function (err) {
-                        console.log('Something went wrong!', err);
-                    });
             }).catch((err) => {
                 console.log('Something went wrong!', err);
             });

@@ -44,3 +44,11 @@
     padding-left: 10px;
     background-color: #faebcc;
 }
+.playlists_view_conteiner{
+    height: 200px;
+}
+.playlists_view{
+    width: 300px;
+    height: 250px;
+    float: left;
+}
