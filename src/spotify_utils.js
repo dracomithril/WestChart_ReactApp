@@ -40,6 +40,8 @@ export let createPlaylist = function (sp_user, sp_playlist_name, isPlaylistPriva
  * @param store
  */
 export const searchForMusic = function ({artist, title, search_id}, store) {
+    const {sp_user}= store.getState();
+    spotifyApi.setAccessToken(sp_user.access_token);
     spotifyApi.searchTracks(`${artist} ${title}`).then((data) => {
         store.dispatch({
             type: action_types.UPDATE_SINGLE_SEARCH,

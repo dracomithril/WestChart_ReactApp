@@ -80,7 +80,7 @@ export default class PlaylistForm extends Component {
                         disabled={sp_playlist_name.length < 6} bsStyle="danger">Create
                     Playlist
                 </Button>
-                <Checkbox style={{paddingLeft: 5}} id="play_list_is_private" onChange={(e) => {
+                <Checkbox id="play_list_is_private" onChange={(e) => {
                     store.dispatch({
                         type: action_types.TOGGLE_IS_PRIVATE,
                         value: e.target.checked

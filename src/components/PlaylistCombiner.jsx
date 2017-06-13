@@ -9,22 +9,24 @@ const spotifyApi = new Spotify();
 
 
 const UserPlaylist = (props) => {
-    return <FormGroup controlId={props.user + '_playlist'} bsClass="playlists_view form-group">
-        <ControlLabel> <Image style={{width: 40, height: 40, padding: 5}}
-                              src={props.pic}
-                              rounded/>{props.user}</ControlLabel>
-        <Button className="fa fa-refresh" onClick={() => props.update(props.user)}/>
-        <Button className="fa fa-minus" onClick={()=>alert('not implemented')}/>
-        <FormControl componentClass="select" style={{height:150}} multiple>
-            {props.items}
+    let user = props.user || {};
+    const items = (user.items || []).map((elem) => {
+        return <option key={elem.id}>{elem.name}</option>
+    });
+    return <FormGroup controlId={user.id + '_playlist'} bsClass="playlists_view form-group">
+        <ControlLabel> <Image src={user.pic} rounded/>{user.id}</ControlLabel>
+        <Button className="fa fa-refresh" onClick={() => props.onUpdate(user.id)}/>
+        <Button className="fa fa-minus" onClick={() => props.onDelete(user.id)} disabled={!props.erasable}/>
+        <FormControl componentClass="select" multiple>
+            {items}
         </FormControl>
     </FormGroup>
 };
 UserPlaylist.propTypes = {
-    user: PropTypes.string,
-    pic: PropTypes.string,
-    items: PropTypes.array,
-    update: PropTypes.func
+    user: PropTypes.object,
+    onUpdate: PropTypes.func,
+    onDelete: PropTypes.func,
+    erasable: PropTypes.bool
 };
 
 
@@ -33,12 +35,15 @@ export default class PlaylistCombiner extends React.Component {
         super(props);
         this.state = {
             selected: [],
-            chosen: undefined, indexer: [],
+            chosen: undefined,
+            indexer: [],
             isCurrentUser: true,
-            userType: "this_user", userField: undefined,
+            userType: "this_user",
+            userField: "",
             users: {}
         };
         this.getUserInformation = this.getUserInformation.bind(this);
+        this.deleteUserPlaylist = this.deleteUserPlaylist.bind(this);
     }
 
     componentWillUnmount() {
@@ -46,7 +51,7 @@ export default class PlaylistCombiner extends React.Component {
     }
 
     getUserInformation(user) {
-        console.log(user);
+        console.log('get ' + user);
 
         const that = this;
         const {sp_user} = this.context.store.getState();
@@ -80,6 +85,14 @@ export default class PlaylistCombiner extends React.Component {
             });
     }
 
+    deleteUserPlaylist(user_id) {
+        console.log('delete ' + user_id);
+        const users_new = Object.assign({}, this.state.users);
+        delete users_new[user_id];
+        this.setState({users: users_new});
+
+    }
+
     componentDidMount() {
         console.log('component PlaylistCombiner did mount');
         const {sp_user} = this.context.store.getState();
@@ -94,23 +107,24 @@ export default class PlaylistCombiner extends React.Component {
                 <span>{elem.name}</span>
             </div>
         });
-        let map_playlist = (elem) => {
-            return <option key={elem.id}>{elem.name}</option>
-        };
-        const item_list = ((users[sp_user.id] || {}).items || []).map(map_playlist);
+        // const item_list = ((users[sp_user.id] || {}).items || []).map((elem) => <option
+        //     key={elem.id}>{elem.name}</option>);
         const users_playlists = Object.keys(users).map((el) => {
-            const m = (users[el].items || []).map(map_playlist);
-            return <UserPlaylist user={users[el].id} key={el + "_playlists"} items={m} pic={(users[el] || {}).pic}
-                                 update={this.getUserInformation}/>
+            return <UserPlaylist user={users[el]} key={el + "_playlists"}
+                                 onUpdate={this.getUserInformation} onDelete={this.deleteUserPlaylist}
+                                 erasable={(users[el] || {}).id !== sp_user.id}/>
         });
         return (<div>
             <h3>Combiner</h3>
             <div id="from_playlist">
                 <h5>From: </h5>
-
-                <input type="text" value={userField} placeholder="spotify user"
-                       onChange={(e) => this.setState({userField: e.target.value})}/>
-                <Button onClick={() => this.getUserInformation(userField)} className="fa fa-search"/>
+                <input type="text" value={userField} placeholder="spotify user name"
+                       onChange={(e) => this.setState({userField: e.target.value})} onKeyPress={(e) => {
+                    if (e.which === 13) {
+                        this.getUserInformation(userField)
+                    }
+                }}/>
+                <Button type="submit" onClick={() => this.getUserInformation(userField)} className="fa fa-search"/>
                 <div className="playlists_view_conteiner">
                     {users_playlists}
                 </div>
@@ -121,12 +135,12 @@ export default class PlaylistCombiner extends React.Component {
                 }}/>
                 {map_selected}
             </div>
-            <div style={{border: '1px solid black', background: 'grey'}}>
+            <div id="destination_panel">
                 <h5>To:</h5>
-                <span>Existing playlist</span>
-                <select>
-                    {item_list}
-                </select>
+                {/*<span>Existing playlist</span>*/}
+                {/*<select>*/}
+                {/*{item_list}*/}
+                {/*</select>*/}
                 <span>New playlist</span>
                 <input type="text"/>
             </div>

@@ -8,6 +8,7 @@ import FilterOption from "./FilterOption";
 import "./FilteringOptions.css";
 import filters_def from "./../../filters_def";
 let utils = require('./../../utils');
+const action_types = require('./../../reducers/action_types');
 
 export default class FilteringOptions extends React.Component {
     render() {
@@ -23,7 +24,7 @@ export default class FilteringOptions extends React.Component {
             <div >
                 <Checkbox checked={filters['woc_control'].checked} onChange={(e) => {
                     const {id, checked} = e.target;
-                    store.dispatch({type: 'TOGGLE_FILTER', id: id, checked: checked})
+                    store.dispatch({type:action_types.TOGGLE_FILTER, id: id, checked: checked})
                 }} id="woc_cb">
                     <OverlayTrigger placement="top" overlay={<Tooltip
                         id="woc_tp">{`Will show all [${utils.woc_string}]`}</Tooltip>}>

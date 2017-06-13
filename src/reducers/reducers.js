@@ -163,7 +163,7 @@ const filters = (state = {}, action) => {
         update_control: create_control(state.update_control || {checked: false, id: 'update', days: showDays}, action),
         less_control: create_control(state.less_control || {checked: false, id: 'less', days: 15}, action),
         more_control: create_control(state.more_control || {checked: false, id: 'more', days: 0}, action),
-        woc_control: create_control(state.woc_control || {checked: true, id: 'woc'}, action)
+        woc_control: create_control(state.woc_control || {checked: true, id: 'woc_cb'}, action)
     }
 };
 const isPlaylistPrivate= (state = false, action) => {

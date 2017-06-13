@@ -21,7 +21,7 @@ export default class ChartHeader extends React.Component {
                 <SongsPerDay error_days={error_days}/>
                 <PickYourDate/>
             </div>
-            <small style={{float: "right"}}>{count}</small>
+            <small>{count}</small>
             <div className="chartButtons">
                 <ButtonGroup bsSize="large">
                     <OverlayTrigger trigger={["hover", "focus"]} placement="top" overlay={<Popover id="update_info">

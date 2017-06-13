@@ -32,12 +32,12 @@ export default class SpotifySearch extends React.Component {
                 </div>}
                 <PlaylistForm {...this.props}/>
             </h3>
-            {search_list_view.length > 0 && <table style={{marginLeft:"10px"}}>
+            {search_list_view.length > 0 && <table style={{marginLeft:10}}>
                 <thead>
                 <tr>
-                    <td>Artist & Title</td>
-                    <td>Options:</td>
-                    <td>Selected:</td>
+                    <th>Artist & Title</th>
+                    <th>Options:</th>
+                    <th>Selected:</th>
                 </tr>
                 </thead>
                 <tbody>

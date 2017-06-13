@@ -7,22 +7,22 @@ import {Button, DropdownButton, MenuItem} from "react-bootstrap";
 import spotify_utils from './../spotify_utils';
 const action_types = require('./../reducers/action_types');
 import './components.css'
-const TrackPreview = function(props) {
+const TrackPreview = function (props) {
     const track = props.track;
     const artists = track.artists.map((elem) => elem.name).join(' & ');
     const audio = track.preview_url !== null ?
         <audio controls src={track.preview_url} type="audio/mpeg"/> :
         <span style={{color: "red"}}>No preview
-            {!props.nolink&&<a href={(track.external_urls || {}).spotify}
-                                                  target="_newtab">{" go to "}
-            <i className="fa fa-spotify" aria-hidden="true"/>
-        </a>}</span>;
+            {!props.nolink && <a href={(track.external_urls || {}).spotify}
+                                 target="_newtab">{" go to "}
+                <i className="fa fa-spotify" aria-hidden="true"/>
+            </a>}</span>;
     return (<div className="track_view">
         <strong>{track.name}</strong><br/>
         {audio}
         <div >
             <span>by:</span>
-            <span style={{paddingLeft: 10, color: "green"}}>{artists}</span>
+            <span className="artist_name">{artists}</span>
         </div>
     </div>)
 };
@@ -67,15 +67,14 @@ export default class RowSpotifySearch extends React.Component {
                 id: e.target.id
             })
         };
-        let input_style = {paddingRight: 5};
         let selected_track = search_elem.selected;
         const condition = selected_track !== undefined && selected_track.preview_url !== undefined;
-        const haveIssue = !search_elem.artist ||!search_elem.title;
-        return (<tr >
+        const haveIssue = !search_elem.artist || !search_elem.title;
+        return (<tr style={condition?undefined:{background:"red"}}>
             <td >
-                <div className={`track_view${haveIssue?' error_bg':''}`}>
+                <div className={`track_view ${haveIssue ? 'error_bg' : ''}`}>
                     <span>{search_elem.full_title}</span><br/>
-                    <input style={input_style} type="text" id={search_elem.search_id}
+                    <input type="text" id={search_elem.search_id}
                            value={search_elem.artist || ''}
                            onChange={update_artist}/>
                     <button onClick={() => {
@@ -84,7 +83,7 @@ export default class RowSpotifySearch extends React.Component {
                             id: search_elem.search_id
                         });
                     }}><i className="fa fa-refresh" aria-hidden="true"/></button>
-                    <input style={input_style} type="text" id={search_elem.search_id}
+                    <input type="text" id={search_elem.search_id}
                            value={search_elem.title || ''}
                            onChange={update_title}/>
                 </div>

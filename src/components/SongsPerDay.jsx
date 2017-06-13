@@ -10,8 +10,9 @@ export default class SongsPerDay extends React.Component {
         const {songs_per_day} = store.getState();
         const errorDays = this.props.error_days;
         let DayEntry = (props) => <div key={props.org}>
-        <span style={{color: props.color}}
-        >{new Date(props.org).toDateString()}</span>
+            <span style={{color: props.color}}>
+            {new Date(props.org).toDateString()}
+            </span>
         </div>;
 
         const err_days_less = errorDays.filter((elem) => elem.color === 'blue').map((elem) => DayEntry(elem));
@@ -36,17 +37,17 @@ export default class SongsPerDay extends React.Component {
             {err_days_more}
         </Popover>);
         const tooltipMore = <Tooltip id="haveMoreDays">{more_header}</Tooltip>;
-        let footer = (<div style={{textAlign:'center'}}>
-            {err_days_less.length === 0&&<strong style={{color:"green"}}>No data</strong>}
+        let footer = (<div style={{textAlign: 'center'}}>
+            {errorDays.length === 0 && <strong style={{color: "green"}}>No data</strong>}
             {err_days_less.length > 0 && <OverlayTrigger trigger={['hover', 'focus']} placement="bottom"
                                                          overlay={err_days_less.length > 0 ? popoverLess : tooltipLess}>
-                <i style={{color: 'blue', marginRight: 5, marginLeft: 5}}
-                   className="fa fa-arrow-circle-down" aria-hidden="true">{err_days_less.length}</i>
+                <i id="less_days" className="fa fa-arrow-circle-down" aria-hidden="true">{err_days_less.length}</i>
             </OverlayTrigger>}
             {err_days_more.length > 0 && <OverlayTrigger trigger={['hover', 'focus']} placement="bottom"
                                                          overlay={err_days_more.length > 0 ? popoverMore : tooltipMore}>
-                <i style={{color: 'red', marginLeft: 5}} className="fa fa-arrow-circle-up"
-                   aria-hidden="true">{err_days_more.length}</i></OverlayTrigger>}
+                <i id="more_days" className="fa fa-arrow-circle-up"
+                   aria-hidden="true">{err_days_more.length}</i>
+            </OverlayTrigger>}
         </div>);
         return (<Panel id="songsPerDay" header={header} bsStyle={errorDays.length !== 0 ? "danger" : "success"}>
             {footer}
