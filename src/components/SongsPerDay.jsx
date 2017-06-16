@@ -3,7 +3,7 @@
  */
 import React from "react";
 import PropTypes from "prop-types";
-import {OverlayTrigger, Panel, Popover, Tooltip} from "react-bootstrap";
+import {OverlayTrigger, Popover, Tooltip} from "react-bootstrap";
 export default class SongsPerDay extends React.Component {
     render() {
         const {store} = this.context;
@@ -18,15 +18,7 @@ export default class SongsPerDay extends React.Component {
         const err_days_less = errorDays.filter((elem) => elem.color === 'blue').map((elem) => DayEntry(elem));
         const err_days_more = errorDays.filter((elem) => elem.color === 'red').map((elem) => DayEntry(elem));
 
-        let header = (<div>
-            <strong style={{paddingRight: 20}}>{'songs per day'}</strong>
-            <input type="number" value={songs_per_day} className="num_days"
-                   name="songs_per_day" step={1} max={10} min={1}
-                   onChange={(e) => store.dispatch({
-                       type: 'UPDATE_SONGS_PER_DAY',
-                       days: Number(e.target.value)
-                   })}/>
-        </div>);
+
         let less_header = "less then expected";
         const popoverLess = (<Popover id="haveLessDays" title={less_header}>
             {err_days_less}
@@ -37,21 +29,25 @@ export default class SongsPerDay extends React.Component {
             {err_days_more}
         </Popover>);
         const tooltipMore = <Tooltip id="haveMoreDays">{more_header}</Tooltip>;
-        let footer = (<div style={{textAlign: 'center'}}>
-            {errorDays.length === 0 && <strong style={{color: "green"}}>No data</strong>}
-            {err_days_less.length > 0 && <OverlayTrigger trigger={['hover', 'focus']} placement="bottom"
-                                                         overlay={err_days_less.length > 0 ? popoverLess : tooltipLess}>
-                <i id="less_days" className="fa fa-arrow-circle-down" aria-hidden="true">{err_days_less.length}</i>
-            </OverlayTrigger>}
-            {err_days_more.length > 0 && <OverlayTrigger trigger={['hover', 'focus']} placement="bottom"
-                                                         overlay={err_days_more.length > 0 ? popoverMore : tooltipMore}>
-                <i id="more_days" className="fa fa-arrow-circle-up"
-                   aria-hidden="true">{err_days_more.length}</i>
-            </OverlayTrigger>}
+        return (<div id="songsPerDay" className={errorDays.length !== 0 ? "songsPerDay_err" : "songsPerDay_good"}>
+            <span style={{paddingRight: 10}}>songs per day</span>
+            <input type="number" value={songs_per_day} className="num_days"
+                   name="songs_per_day" step={1} max={10} min={1}
+                   onChange={(e) => store.dispatch({
+                       type: 'UPDATE_SONGS_PER_DAY',
+                       days: Number(e.target.value)
+                   })}/>
+                {/*{errorDays.length === 0 && <strong style={{color: "green"}}>No data</strong>}*/}
+                {err_days_less.length > 0 && <OverlayTrigger trigger={['hover', 'focus']} placement="bottom"
+                                                             overlay={err_days_less.length > 0 ? popoverLess : tooltipLess}>
+                    <i id="less_days" className="fa fa-arrow-circle-down" aria-hidden="true">{err_days_less.length}</i>
+                </OverlayTrigger>}
+                {err_days_more.length > 0 && <OverlayTrigger trigger={['hover', 'focus']} placement="bottom"
+                                                             overlay={err_days_more.length > 0 ? popoverMore : tooltipMore}>
+                    <i id="more_days" className="fa fa-arrow-circle-up"
+                       aria-hidden="true">{err_days_more.length}</i>
+                </OverlayTrigger>}
         </div>);
-        return (<Panel id="songsPerDay" header={header} bsStyle={errorDays.length !== 0 ? "danger" : "success"}>
-            {footer}
-        </Panel>);
     }
 }
 SongsPerDay.contextTypes = {

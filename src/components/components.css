@@ -32,6 +32,8 @@
 
 .chartHeader small {
     float: right;
+    position: absolute;
+    z-index: 9;
 }
 
 .chartButtons {
@@ -39,21 +41,43 @@
     margin-left: 10px;
     text-align: center;
     padding-top: 15px;
+    height: 90px;
 }
 
 #songsPerDay {
-    float: inherit;
-    height: inherit;
-    width: 200px;
+    /*float: inherit;*/
+    height: 45px;
+    width: inherit;
+    padding-top: 5px;
+    padding-left: 10px;
+    border-radius: 3px;
+}
+.songsPerDay_err{
+    color: #a94442;
+    background-color: #f2dede;
+    border: 1px solid #ebccd1;
+}
+.songsPerDay_good{
+    color: #3c763d;
+    background-color: #dff0d8;
+    border: 1px solid #d6e9c6;
+}
+.dock1 {
+    float: left;
+    height: 90px;
+    width: 250px;
+    text-align: left;
 }
 
 #pickYourDate {
-    float: left;
-    height: inherit;
-    width: 200px;
+    /*float: left;*/
+    height: 45px;
+    width: inherit;
     padding-top: 5px;
     padding-left: 10px;
-    background-color: #faebcc;
+    background-color: #fcf8e3;
+    border: 1px solid #faebcc;
+    border-radius: 3px;
 }
 
 .playlists_view_conteiner {

@@ -3,7 +3,7 @@
  */
 import React from "react";
 import PropTypes from "prop-types";
-import {Checkbox, OverlayTrigger, Panel, Tooltip} from "react-bootstrap";
+import {Checkbox, OverlayTrigger, Popover, Tooltip, Button} from "react-bootstrap";
 import DatePicker from "react-datepicker";
 export default class PickYourDate extends React.Component {
     /*istanbul ignore next*/
@@ -14,22 +14,29 @@ export default class PickYourDate extends React.Component {
     /*istanbul ignore next*/
     componentDidMount() {
         console.log('component ChartPresenter did mount');
-        const {store} = this.context;
-        const {user} = store.getState();
-        if (user.isGroupAdmin) {
-            //this.updateChart()
-        }
     }
 
     render() {
         const {store} = this.context;
         const {enable_until, start_date, show_last} = store.getState();
-        return (
-            <Panel id="pickYourDate">
+        const footer = <div className="datePiker">
+            <Checkbox checked={enable_until} name="enable_until"
+                      onChange={(e) => store.dispatch({
+                          type: 'TOGGLE_ENABLE_UNTIL',
+                          checked: e.target.checked
+                      })}>{'Use date: '}
+                <DatePicker
+                    selected={start_date}
+                    dateFormat="DD/MM/YYYY"
+                    onChange={date => store.dispatch({type: 'UPDATE_START_TIME', date})}
+                    disabled={!enable_until}/>
+            </Checkbox>
+        </div>;
+        return (<div id="pickYourDate">
                 <OverlayTrigger trigger={["hover", "focus"]} overlay={<Tooltip id="go_back">
                     {'How far in time you will travel'}
                 </Tooltip>}>
-                    <label>{'go back '}
+                    <span style={{paddingRight:10}}>{'go back '}
                         <input className="num_days"
                                type="number"
                                name="show_last"
@@ -39,23 +46,14 @@ export default class PickYourDate extends React.Component {
                                onChange={(e) => {
                                    store.dispatch({type: 'UPDATE_SHOW_LAST', days: Number(e.target.value)})
                                }}/>{' days'}
-                    </label>
+                    </span>
                 </OverlayTrigger>
-                <div className="datePiker">
-
-                    <Checkbox checked={enable_until} name="enable_until"
-                              onChange={(e) => store.dispatch({
-                                  type: 'TOGGLE_ENABLE_UNTIL',
-                                  checked: e.target.checked
-                              })}>{'Use date: '}
-                        <DatePicker
-                            selected={start_date}
-                            dateFormat="DD/MM/YYYY"
-                            onChange={date => store.dispatch({type: 'UPDATE_START_TIME', date})}
-                            disabled={!enable_until}/>
-                    </Checkbox>
-                </div>
-            </Panel>);
+                <OverlayTrigger trigger={"click"} placement="bottom" overlay={<Popover id="more_options_chose_date">
+                    {footer}
+                </Popover>}>
+                    <Button className="fa fa-angle-double-down" bsSize="small"/>
+                </OverlayTrigger>
+            </div>);
     }
 }
 PickYourDate.contextTypes = {

@@ -1,7 +1,13 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`<RowSpotifySearch/> renders without crashing 1`] = `
-<tr>
+<tr
+  style={
+    Object {
+      "background": "red",
+    }
+  }
+>
   <td>
     <div
       className="track_view error_bg"
@@ -11,11 +17,6 @@ exports[`<RowSpotifySearch/> renders without crashing 1`] = `
       <input
         id={0}
         onChange={[Function]}
-        style={
-          Object {
-            "paddingRight": 5,
-          }
-        }
         type="text"
         value=""
       />
@@ -30,11 +31,6 @@ exports[`<RowSpotifySearch/> renders without crashing 1`] = `
       <input
         id={0}
         onChange={[Function]}
-        style={
-          Object {
-            "paddingRight": 5,
-          }
-        }
         type="text"
         value=""
       />

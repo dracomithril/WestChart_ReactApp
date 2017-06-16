@@ -109,6 +109,8 @@ export default class ChartTable extends React.Component {
             show: false,
             accessor: 'id',
         }, {
+            Header:<small>{data.length}</small>,
+            columns:[{
             sortable: false,
             resizable: false,
             Header: () => <Checkbox bsClass="checkbox1" onClick={() => {
@@ -126,7 +128,7 @@ export default class ChartTable extends React.Component {
                                      })
                                  }}/>
             }
-        }, post_info, time,
+        }]}, post_info, time,
             {
                 Header: 'Link',
                 columns: [

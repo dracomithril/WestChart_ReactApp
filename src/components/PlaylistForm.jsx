@@ -42,7 +42,12 @@ export default class PlaylistForm extends Component {
                 items: [],
                 selected: {}
             };
-            spotify_utils.searchForMusic(search_track,store);
+            spotify_utils.searchForMusic(search_track, store).then(res => store.dispatch({
+                type: action_types.UPDATE_SINGLE_SEARCH,
+                field: 'items',
+                value: res.value,
+                id: res.id
+            }));
             return search_track;
         });
         store.dispatch({type: action_types.UPDATE_SEARCH, search: search})
@@ -52,7 +57,10 @@ export default class PlaylistForm extends Component {
         const {store} = this.context;
         const {search_list, sp_user, sp_playlist_name, isPlaylistPrivate} = store.getState();
         const selected = search_list.map((elem) => elem.selected !== undefined ? elem.selected.uri : undefined).filter(elem => elem !== undefined);
-        spotify_utils.createPlaylist(sp_user, sp_playlist_name, isPlaylistPrivate, selected, store);
+        spotify_utils.createPlaylistAndAddTracks(sp_user, sp_playlist_name, isPlaylistPrivate, selected).then(info => store.dispatch({
+            type: action_types.UPDATE_PLAYLIST_INFO,
+            value: info
+        }));
     }
 
     render() {
@@ -61,9 +69,10 @@ export default class PlaylistForm extends Component {
         return ( <Form inline>
             <Button onClick={this.onStartClick.bind(this)} id="start_sp_button" bsStyle="success">Start
             </Button>
-            <FormGroup style={{margin: "1px 5px 5px 5px"}} controlId="play_list_name" validationState={((sp_name_length) => {
-                return sp_name_length > 8 ? 'success' : sp_name_length > 5 ? 'warning' : 'error';
-            })(sp_playlist_name.length)}>
+            <FormGroup style={{margin: "1px 5px 5px 5px"}} controlId="play_list_name"
+                       validationState={((sp_name_length) => {
+                           return sp_name_length > 8 ? 'success' : sp_name_length > 5 ? 'warning' : 'error';
+                       })(sp_playlist_name.length)}>
                 <InputGroup>
                     <InputGroup.Addon><Glyphicon glyph="music"/></InputGroup.Addon>
                     <FormControl type="text" placeholder="playlist name" value={sp_playlist_name} onChange={(e) => {

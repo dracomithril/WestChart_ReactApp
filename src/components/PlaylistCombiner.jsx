@@ -3,9 +3,9 @@
  */
 import React from "react";
 import PropTypes from "prop-types";
-import {ControlLabel, FormControl, FormGroup, Image, Button} from "react-bootstrap";
-import Spotify from "spotify-web-api-node";
-const spotifyApi = new Spotify();
+import {Button, ButtonGroup, ControlLabel, FormControl, FormGroup, Image} from "react-bootstrap";
+import {getUserAndPlaylists} from "./../spotify_utils";
+
 
 
 const UserPlaylist = (props) => {
@@ -15,8 +15,10 @@ const UserPlaylist = (props) => {
     });
     return <FormGroup controlId={user.id + '_playlist'} bsClass="playlists_view form-group">
         <ControlLabel> <Image src={user.pic} rounded/>{user.id}</ControlLabel>
-        <Button className="fa fa-refresh" onClick={() => props.onUpdate(user.id)}/>
-        <Button className="fa fa-minus" onClick={() => props.onDelete(user.id)} disabled={!props.erasable}/>
+        <ButtonGroup>
+            <Button className="fa fa-refresh" onClick={() => props.onUpdate(user.id)}/>
+            <Button className="fa fa-minus" onClick={() => props.onDelete(user.id)} disabled={!props.erasable}/>
+        </ButtonGroup>
         <FormControl componentClass="select" multiple>
             {items}
         </FormControl>
@@ -46,43 +48,25 @@ export default class PlaylistCombiner extends React.Component {
         this.deleteUserPlaylist = this.deleteUserPlaylist.bind(this);
     }
 
-    componentWillUnmount() {
+    static componentWillUnmount() {
         console.log('component PlaylistCombiner unmounted');
     }
 
     getUserInformation(user) {
         console.log('get ' + user);
-
+//todo users should not be more then 4
         const that = this;
         const {sp_user} = this.context.store.getState();
-        spotifyApi.setAccessToken(sp_user.access_token);
-        spotifyApi.getUser(user)
-            .then(data => {
-                const user_id = data.body.id;
-                let new_user = {
-                    pic: (data.body.images[0] || {}).url,
-                    id: user_id
-                };
-                const update_user = Object.assign({}, that.state.users[user_id], new_user);
-                let newUsers = {};
-                newUsers[user_id] = update_user;
-                const users_new = Object.assign({}, that.state.users, newUsers);
-                that.setState({users: users_new});
-                spotifyApi.getUserPlaylists(user_id)
-                    .then(data => {
-                        let new_user = Object.assign({}, that.state.users[user_id], {items: data.body.items});
-                        let newUsers = {};
-                        newUsers[user_id] = new_user;
-                        const users_new = Object.assign({}, that.state.users, newUsers);
-                        that.setState({users: users_new});
-                        console.log('Retrieved playlists', data.body);
-                    }, (err) => {
-                        console.log('Something went wrong!', err);
-                    });
-                console.log('Some information about user', data.body);
-            }, err => {
-                console.log('Something went wrong!', err);
-            });
+        let updateUsers = function (new_user) {
+            const user = that.state.users[new_user.id];
+            let newUsers = {};
+            newUsers[new_user.id] = Object.assign({}, user, new_user);
+            return Object.assign({}, that.state.users, newUsers);
+        };
+        getUserAndPlaylists(sp_user.access_token, user).then(new_user => {
+            that.setState({users: updateUsers(new_user)});
+            console.log('Retrieved playlists ', new_user)
+        });
     }
 
     deleteUserPlaylist(user_id) {
@@ -118,7 +102,7 @@ export default class PlaylistCombiner extends React.Component {
             <h3>Combiner</h3>
             <div id="from_playlist">
                 <h5>From: </h5>
-                <input type="text" value={userField} placeholder="spotify user name"
+                <input type="text" value={userField} placeholder="spotify user name" autoComplete="on"
                        onChange={(e) => this.setState({userField: e.target.value})} onKeyPress={(e) => {
                     if (e.which === 13) {
                         this.getUserInformation(userField)

@@ -3,12 +3,12 @@ import PropTypes from "prop-types";
 import LoginAlert from "./components/LoginAlert";
 import Footer from "./components/Footer";
 import ChartPresenter from "./components/ChartPresenter";
+import PlaylistCombiner from './components/PlaylistCombiner';
+import {Tab, Tabs} from "react-bootstrap";
 import "./App.css";
 import "react-table/react-table.css";
 import "react-datepicker/dist/react-datepicker.css";
-import Spotify from "spotify-web-api-node";
-import {loginToSpotify, validateCredentials} from "./spotify_utils";
-const spotifyApi = new Spotify();
+const {loginToSpotify, validateCredentials}=require("./spotify_utils");
 const action_types = require('./reducers/action_types');
 const Cookies = require('cookies-js');
 
@@ -20,12 +20,12 @@ class App extends Component {
         let sp_user_str = Cookies.get('sp_user');
         if (sp_user_str) {
             let sp_user = JSON.parse(sp_user_str);
-            spotifyApi.setAccessToken(sp_user.access_token);
-            spotifyApi.getMe().then(function (data) {
-                console.log('Some information about the authenticated user', data.body.id);
-                store.dispatch({type: action_types.UPDATE_SP_USER, user: data.body, access_token: sp_user.access_token});
-            }).catch((err) => {
-                console.log('Something went wrong!', err);
+            validateCredentials(sp_user.access_token).then(res=>{
+                store.dispatch({
+                    type: action_types.UPDATE_SP_USER,
+                    user: res.user,
+                    access_token: res.access_token
+                });
             });
         } else {
             const {hash} = location;
@@ -33,7 +33,11 @@ class App extends Component {
                 let params = hash.replace('#/user/', '');
                 let arr = params.split('/');
                 const access_token = arr[0];
-                validateCredentials(access_token, history, store);
+                validateCredentials(access_token).then(res=>{
+                    Cookies.set('sp_user', JSON.stringify({access_token}), {expires: 3600});
+                    store.dispatch({type: 'UPDATE_SP_USER', user: res.user, access_token:res.access_token});
+                    history.push('')
+                });
             } else {
                 loginToSpotify();
             }
@@ -51,12 +55,11 @@ class App extends Component {
         return (
             <div className="App">
                 {!isLogged && <LoginAlert/>}
-                {isLogged && user.isGroupAdmin &&
-                <div className="App-body">
-                    <ChartPresenter/>
-                </div>
-
-                }
+                {isLogged &&
+                <Tabs defaultActiveKey={1} id="uncontrolled-tab-example" className="App-body">
+                    <Tab eventKey={1} title="Chart"><ChartPresenter/></Tab>
+                    <Tab eventKey={2} title="Combiner"><PlaylistCombiner/></Tab>
+                </Tabs>}
                 <Footer/>
             </div>
         );

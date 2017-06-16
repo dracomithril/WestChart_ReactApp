@@ -25,7 +25,7 @@ export default class SpotifySearch extends React.Component {
             return <RowSpotifySearch search_elem={search_elem} key={search_elem.id}/>
         });
         return (<div>
-            <h3 id="list">{'Search music by: '}
+            <h3 id="list">{'Create '}<i className="fa fa-spotify" aria-hidden="true">Spotify playlist:</i>
                 {sp_playlist_info.url !== null && <div className="spotify_sumary">
                     <span>{'Created playlist! name: ' + sp_playlist_info.pl_name}</span><br/>
                     <a href={sp_playlist_info.url} target="_newtab">{sp_playlist_info.pl_name}</a>

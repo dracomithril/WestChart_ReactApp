@@ -11,7 +11,6 @@ exports[`<LoginAlert/> renders without crashing ChartPresenter 1`] = `
       className="fa fa-heart"
     />
   </h4>
-  <p />
   <t
     appId="1173486879387948"
     autoLoad={true}

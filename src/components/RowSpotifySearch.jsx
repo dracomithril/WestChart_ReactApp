@@ -91,7 +91,12 @@ export default class RowSpotifySearch extends React.Component {
             <td >
                 <div>
                     <Button id={'button-' + search_elem.id} onClick={() => {
-                        spotify_utils.searchForMusic(search_elem, store);
+                        spotify_utils.searchForMusic(search_elem, store).then(res=>store.dispatch({
+                            type: action_types.UPDATE_SINGLE_SEARCH,
+                            field: 'items',
+                            value: res.value,
+                            id: res.id
+                        }));
                     }} bsStyle="info">search
                     </Button>
                     <DropdownButton disabled={items.length === 0} title={'select'} key={search_elem.search_id}

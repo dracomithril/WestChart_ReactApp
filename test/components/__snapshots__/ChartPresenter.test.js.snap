@@ -3,7 +3,6 @@
 exports[`<ChartPresenter/> renders without crashing ChartPresenter 1`] = `
 <div>
   <ChartHeader
-    count={0}
     error_days={Array []}
   />
   <ChartTable

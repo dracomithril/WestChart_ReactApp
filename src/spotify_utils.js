@@ -1,9 +1,8 @@
 /**
  * Created by XKTR67 on 5/11/2017.
  */
-import Spotify from "spotify-web-api-node";
+const Spotify = require("spotify-web-api-node");
 const spotifyApi = new Spotify();
-const action_types = require('./reducers/action_types');
 const url = require('url');
 const querystring = require('querystring');
 const Cookies = require('cookies-js');
@@ -12,23 +11,53 @@ const Cookies = require('cookies-js');
  * @param sp_user
  * @param sp_playlist_name
  * @param isPlaylistPrivate
- * @param selected
- * @param store
+ * @param tracks
  */
-export let createPlaylist = function (sp_user, sp_playlist_name, isPlaylistPrivate, selected, store) {
-    spotifyApi.setAccessToken(sp_user.access_token);
-    spotifyApi.createPlaylist(sp_user.id, sp_playlist_name, {'public': !isPlaylistPrivate})
+let createPlaylistAndAddTracks = function (sp_user, sp_playlist_name, isPlaylistPrivate, tracks) {
+    spotifyApi.setAccessToken(sp_user.accessToken);
+    let playlist_info;
+    return spotifyApi.createPlaylist(sp_user.id, sp_playlist_name, {'public': !isPlaylistPrivate})
         .then(function ({body}) {
-            const spotify_url = body.external_urls.spotify;
-            let playlist_name = body.name;
-            console.log(`Created playlist! name: ${playlist_name} url: ${spotify_url}`);
-            store.dispatch({type: action_types.UPDATE_PLAYLIST_INFO, value: {url: spotify_url, pl_name: playlist_name}});
-            return spotifyApi.addTracksToPlaylist(sp_user.id, body.id, selected)
+            if (body) {
+                const spotify_url = body.external_urls.spotify;
+                const playlist_name = body.name;
+                console.log(`Created playlist! name: ${playlist_name} url: ${spotify_url}`);
+                playlist_info = {url: spotify_url, pl_name: playlist_name};
+                const playlist_id = body.id;
+                return spotifyApi.addTracksToPlaylist(sp_user.id, playlist_id, tracks)
+            }
+            else {
+                return Promise.reject(new Error('missing body'));
+            }
         })
-        .then(function () {
-            console.log('Added tracks to playlist!');
+        .then(function (data) {
+            console.log('Added tracks to playlist! ', data);
+            return Promise.resolve(playlist_info)
         })
         .catch(function (err) {
+            console.log('Something went wrong!', err);
+            return Promise.reject(err);
+        });
+};
+
+
+const getUserAndPlaylists = function (accessToken, user) {
+    spotifyApi.setAccessToken(accessToken);
+    let new_user;
+    return spotifyApi.getUser(user)
+        .then((data) => {
+            const user_id = data.body.id;
+            new_user = {
+                pic: (data.body.images[0] || {}).url,
+                id: user_id
+            };
+            // that.setState({users: updateUsers(user_id, new_user)});
+            return spotifyApi.getUserPlaylists(user_id)
+
+        }).then((playlist_data) => {
+            new_user.items = playlist_data.body.items;
+            return Promise.resolve(new_user);
+        }).catch(err => {
             console.log('Something went wrong!', err);
         });
 };
@@ -39,13 +68,11 @@ export let createPlaylist = function (sp_user, sp_playlist_name, isPlaylistPriva
  * @param search_id
  * @param store
  */
-export const searchForMusic = function ({artist, title, search_id}, store) {
-    const {sp_user}= store.getState();
+const searchForMusic = function ({artist, title, search_id}, store) {
+    const {sp_user} = store.getState();
     spotifyApi.setAccessToken(sp_user.access_token);
-    spotifyApi.searchTracks(`${artist} ${title}`).then((data) => {
-        store.dispatch({
-            type: action_types.UPDATE_SINGLE_SEARCH,
-            field: 'items',
+    return spotifyApi.searchTracks(`${artist} ${title}`).then((data) => {
+        return Promise.resolve({
             value: data.body.tracks.items,
             id: search_id
         });
@@ -54,7 +81,7 @@ export const searchForMusic = function ({artist, title, search_id}, store) {
     })
 };
 
-export const loginToSpotify = function () {
+const loginToSpotify = function () {
     return fetch('/api/login')
         .then((response) => {
             return response.text()
@@ -69,22 +96,23 @@ export const loginToSpotify = function () {
             console.log(err);
         })
 };
-let validateCredentials = function (access_token, history, store) {
+/**
+ *
+ * @param access_token
+ * @returns {Promise.<TResult>}
+ */
+let validateCredentials = function (access_token) {
     spotifyApi.setAccessToken(access_token);
-    spotifyApi.getMe().then(data => {
+    return spotifyApi.getMe().then(data => {
         console.log('you logged as :', data.body.id);
-        Cookies.set('sp_user', JSON.stringify({access_token}), {expires: 3600});
-        store.dispatch({type: 'UPDATE_SP_USER', user: data.body, access_token});
-        history.push('')
+        return Promise.resolve({user: data.body, access_token});
     }).catch(e => {
         console.log(JSON.stringify(e));
     });
 };
 
 let exports = {
-    createPlaylist, searchForMusic, loginToSpotify, validateCredentials
+    createPlaylistAndAddTracks, searchForMusic, loginToSpotify, validateCredentials, getUserAndPlaylists
 };
 module.exports = exports;
-
-export default exports;
 

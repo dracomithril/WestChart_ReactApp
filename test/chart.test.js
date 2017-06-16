@@ -27,14 +27,14 @@ describe('[chart]', function () {
     });
     afterEach(function () {
     });
-    it('should be able to obtain list from chart', function () {
+    it('should be able to obtain list from chart', function (done) {
         let groupId = '1707149242852457';
         const body1 = {
             statusCode: 200,
             body: test_body
         };
         let options = {
-            "uri": "/v2.8/1707149242852457/feed",
+            "uri": "/v2.9/1707149242852457/feed",
             "baseUrl": "https://graph.facebook.com",
             "qs": {
                 "fields": "story,from,link,caption,icon,created_time,source,name,type,message,attachments,full_picture,updated_time,likes.limit(1).summary(true),reactions.limit(1).summary(true),comments.limit(50).summary(true){message,from}",
@@ -44,7 +44,7 @@ describe('[chart]', function () {
                 "until": "2017-03-03T23:00:00.000Z"
             },
             "port": 443,
-            "path": "/v2.8/1707149242852457/feed",
+            "path": "/v2.9/1707149242852457/feed",
             "method": "GET",
             "timeout": 9000,
             "simple": true,
@@ -64,6 +64,7 @@ describe('[chart]', function () {
         return Chart(31, since_date.toISOString(), date.toISOString(), '', groupId).then((res) => {
             assert.calledOnce(requestMock.getAsync);
             expect(res.chart.length).toEqual(97);
+            done();
         })
     });
 });
