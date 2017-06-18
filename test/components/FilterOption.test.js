@@ -3,7 +3,7 @@
  */
 import React from "react";
 import PropTypes from "prop-types";
-import FilteringOption from "../../src/components/FilteringOptions/FilterOption";
+import FilteringOption from "../../src/front/components/FilteringOptions/FilterOption";
 import {shallow} from "enzyme";
 import {shallowToJson} from "enzyme-to-json";
 import configureMockStore from "redux-mock-store";

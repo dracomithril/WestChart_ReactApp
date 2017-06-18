@@ -1,26 +1,18 @@
 /**
  * Created by Gryzli on 24.01.2017.
  */
-/* eslint-env node, mocha, es6 */
-let sinon = require('sinon'),
-    rewire = require('rewire'),
-    assert = sinon.assert;
-let Promise = require("bluebird");
-let test_body = require('./data/fbResult.json');
-let test_body2 = require('./data/fbResult2.json');
+/* eslint-env node, es6 */
+let sinon = require('sinon');
+let test_body = require('../data/fbResult.json');
+let test_body2 = require('../data/fbResult2.json');
 
 describe('[chart]', function () {
     let Chart, clock;
-    let requestMock = {
-        getAsync: sinon.stub()
-    };
-    beforeAll(() =>{
-        const date = new Date('2017-03-03T23:00:00');
-        clock = sinon.useFakeTimers(date.getTime());
-        Chart = rewire('./server/chart');
-        Chart.__set__('request', requestMock);
+    beforeAll(() => {
+        jest.mock('request-promise-native');
+        Chart = require('../../src/server/chart');
     });
-    afterAll(() =>{
+    afterAll(() => {
         clock.restore();
     });
     beforeEach(function () {
@@ -28,7 +20,9 @@ describe('[chart]', function () {
     afterEach(function () {
     });
     it('should be able to obtain list from chart', function (done) {
+
         let groupId = '1707149242852457';
+
         const body1 = {
             statusCode: 200,
             body: test_body
@@ -39,9 +33,7 @@ describe('[chart]', function () {
             "qs": {
                 "fields": "story,from,link,caption,icon,created_time,source,name,type,message,attachments,full_picture,updated_time,likes.limit(1).summary(true),reactions.limit(1).summary(true),comments.limit(50).summary(true){message,from}",
                 "limit": 100,
-                "access_token": "",
-                "since": "2017-01-31T23:00:00.000Z",
-                "until": "2017-03-03T23:00:00.000Z"
+                "access_token": ""
             },
             "port": 443,
             "path": "/v2.9/1707149242852457/feed",
@@ -55,17 +47,23 @@ describe('[chart]', function () {
             statusCode: 200,
             body: test_body2
         };
-        requestMock.getAsync.withArgs(sinon.match(options)).returns(Promise.resolve(body1));
-        requestMock.getAsync.withArgs(sinon.match({url: test_body.paging.next})).returns(Promise.resolve(body2));
-        let date = new Date();
+        let request = require('request-promise-native');
+        request.mockReturnValueOnce(Promise.resolve(body1))
+            .mockReturnValueOnce(Promise.resolve(body2));
+
+        const date = new Date('2017-03-03T23:00:00');
         let since_date = new Date(date.toISOString());
         since_date.setDate(date.getDate() - 31);
 
-        return Chart(31, since_date.toISOString(), date.toISOString(), '', groupId).then((res) => {
-            assert.calledOnce(requestMock.getAsync);
+        Chart(31, since_date.toISOString(), date.toISOString(), '', groupId).then((res) => {
+            expect(request.mock.calls.length).toBe(1);
             expect(res.chart.length).toEqual(97);
             done();
-        })
+        }).catch(err => {
+            console.log('error');
+            return Promise.reject(err);
+        });
+        // jest.runAllTimers();
     });
 });
 

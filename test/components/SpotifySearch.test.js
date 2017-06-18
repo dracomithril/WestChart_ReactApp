@@ -3,7 +3,7 @@
  */
 import React from 'react';
 import PropTypes from 'prop-types';
-import SpotifySearch from '../../src/components/SpotifySearch';
+import SpotifySearch from '../../src/front/components/SpotifySearch';
 import {shallow} from 'enzyme';
 import {shallowToJson} from 'enzyme-to-json';
 import configureMockStore from 'redux-mock-store';

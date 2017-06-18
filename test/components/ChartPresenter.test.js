@@ -3,7 +3,7 @@
  */
 import React from 'react';
 import PropTypes from 'prop-types';
-import ChartPresenter from '../../src/components/ChartPresenter';
+import ChartPresenter from '../../src/front/components/ChartPresenter';
 import {shallow} from 'enzyme';
 import {shallowToJson} from 'enzyme-to-json';
 import configureMockStore from 'redux-mock-store';

@@ -1,11 +1,9 @@
 /**
  * Created by Gryzli on 02.04.2017.
  */
-
-let Promise = require("bluebird");
 const Spotify = require('spotify-web-api-node');
 const winston = require('winston');
-let request = Promise.promisifyAll(require("request"));
+let request = require("request-promise-native");
 const clientId = process.env.client_id;
 const clientSecret = process.env.client_secret;
 

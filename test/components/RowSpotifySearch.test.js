@@ -3,7 +3,7 @@
  */
 import React from 'react';
 import PropTypes from 'prop-types';
-import RowSpotifySearch from '../../src/components/RowSpotifySearch';
+import RowSpotifySearch from '../../src/front/components/RowSpotifySearch';
 import {shallow} from 'enzyme';
 import {shallowToJson} from 'enzyme-to-json';
 import configureMockStore from 'redux-mock-store';

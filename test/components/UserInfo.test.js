@@ -3,7 +3,7 @@
  */
 import React from 'react';
 import PropTypes from 'prop-types';
-import UserInfo from '../../src/components/UserInfo';
+import UserInfo from '../../src/front/components/UserInfo';
 import {shallow} from 'enzyme';
 import {shallowToJson} from 'enzyme-to-json';
 import configureMockStore from 'redux-mock-store';

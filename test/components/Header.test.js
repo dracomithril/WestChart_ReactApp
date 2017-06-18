@@ -3,7 +3,7 @@
  */
 import React from "react";
 import PropTypes from "prop-types";
-import Header from "../../src/components/Header/index";
+import Header from "../../src/front/components/Header/index";
 import {shallow, mount} from "enzyme";
 import { mountToJson, shallowToJson} from "enzyme-to-json";
 import configureMockStore from "redux-mock-store";

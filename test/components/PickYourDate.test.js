@@ -3,11 +3,11 @@
  */
 import React from "react";
 import PropTypes from "prop-types";
-import PickYourDate from "../../src/components/PickYourDate";
+import PickYourDate from "../../src/front/components/PickYourDate";
 import {shallow} from "enzyme";
 import {shallowToJson} from "enzyme-to-json";
 import configureMockStore from "redux-mock-store";
-jest.mock('./../../src/utils');
+jest.mock('./../../src/front/utils');
 const initial_state = require('../data/initial_state.json');
 const mockStore = configureMockStore([]);
 describe('<PickYourDate/>', () => {
@@ -26,7 +26,7 @@ describe('<PickYourDate/>', () => {
     });
     xit('is able to click btn', () => {
         const store = mockStore(initial_state);
-        const utils = require('./../../src/utils');
+        const utils = require('../../src/front/utils');
         const wrapper = shallow(
             <PickYourDate />, {
                 context: {store},

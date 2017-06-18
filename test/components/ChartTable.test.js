@@ -3,7 +3,7 @@
  */
 import React from 'react';
 import PropTypes from 'prop-types';
-import ChartTable from '../../src/components/ChartTable';
+import ChartTable from '../../src/front/components/ChartTable';
 import {shallow, mount} from 'enzyme';
 import {shallowToJson, mountToJson} from 'enzyme-to-json';
 import configureMockStore from 'redux-mock-store';

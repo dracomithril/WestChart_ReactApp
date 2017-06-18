@@ -35,7 +35,7 @@ let createPlaylistAndAddTracks = function (sp_user, sp_playlist_name, isPlaylist
             return Promise.resolve(playlist_info)
         })
         .catch(function (err) {
-            console.log('Something went wrong!', err);
+            console.error('Something went wrong!', err);
             return Promise.reject(err);
         });
 };

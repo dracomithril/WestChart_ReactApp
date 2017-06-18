@@ -3,7 +3,7 @@
  */
 import React from 'react';
 import PropTypes from 'prop-types';
-import LoginAlert from '../../src/components/LoginAlert/index';
+import LoginAlert from '../../src/front/components/LoginAlert/index';
 import {shallow} from 'enzyme';
 import {shallowToJson} from 'enzyme-to-json';
 import configureMockStore from 'redux-mock-store';
