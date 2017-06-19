@@ -1,0 +1,75 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<ChartHeader/> renders without crashing ChartPresenter 1`] = `
+<div
+  className="chartHeader"
+>
+  <div
+    className="dock1"
+  >
+    <SongsPerDay
+      error_days={Array []}
+    />
+    <PickYourDate />
+  </div>
+  <div
+    className="chartButtons"
+  >
+    <OverlayTrigger
+      defaultOverlayShown={false}
+      overlay={
+        <Popover
+          bsClass="popover"
+          id="update_info"
+          placement="right"
+        >
+          <span>
+            since: 
+          </span>
+          <Label
+            bsClass="label"
+            bsStyle="success"
+          >
+            Invalid Date
+          </Label>
+          <span>
+             to 
+          </span>
+          <Label
+            bsClass="label"
+            bsStyle="danger"
+          >
+            03-11, Sat
+          </Label>
+          <br />
+          <small
+            id="updateDate"
+          >
+             Last update: Invalid Date
+          </small>
+        </Popover>
+      }
+      placement="top"
+      trigger={
+        Array [
+          "hover",
+          "focus",
+        ]
+      }
+    >
+      <Button
+        active={false}
+        block={false}
+        bsClass="btn"
+        bsStyle="primary"
+        disabled={false}
+        id="updateChartB"
+        onClick={[Function]}
+      >
+        Update
+      </Button>
+    </OverlayTrigger>
+  </div>
+  <FilteringOptions />
+</div>
+`;

@@ -85,8 +85,8 @@
 }
 
 .playlists_view {
-    width: 300px;
-    height: 250px;
+    width: 230px;
+    /*height: 190px;*/
     float: left;
 }
 
@@ -103,8 +103,16 @@
 #destination_panel {
     border: 1px solid black;
     background: gray;
+    width: 300px;
+    height: 250px;
+    float: left;
 }
-
+#from_playlist{
+    background-color: aquamarine;
+    width: 700px;
+    height: 250px;
+    float: left;
+}
 #play_list_is_private {
     margin-left: 10px;
     padding-left: 5px;
