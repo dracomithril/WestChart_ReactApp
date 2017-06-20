@@ -3,12 +3,12 @@
  */
 import React from 'react';
 import PropTypes from 'prop-types';
-import ChartTable from '../../src/front/components/ChartTable';
+import ChartTable from './../../src/components/ChartTable';
 import {shallow, mount} from 'enzyme';
 import {shallowToJson, mountToJson} from 'enzyme-to-json';
 import configureMockStore from 'redux-mock-store';
-const initial_state =require('../data/initial_state.json');
-const data =require('../data/response.json').chart;
+const initial_state =require('./../data/initial_state.json');
+const data =require('./../data/response.json').chart;
 const mockStore = configureMockStore([]);
 
 describe('<ChartTable/>', () => {

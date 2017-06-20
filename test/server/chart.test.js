@@ -2,7 +2,7 @@
  * Created by Gryzli on 24.01.2017.
  */
 /* eslint-env node, es6 */
-let sinon = require('sinon');
+// let sinon = require('sinon');
 let test_body = require('../data/fbResult.json');
 let test_body2 = require('../data/fbResult2.json');
 
@@ -10,10 +10,11 @@ describe('[chart]', function () {
     let Chart, clock;
     beforeAll(() => {
         jest.mock('request-promise-native');
-        Chart = require('../../src/server/chart');
+        Chart = require('../../server/chart');
     });
     afterAll(() => {
         clock.restore();
+        jest.unmock('request-promise-native');
     });
     beforeEach(function () {
     });

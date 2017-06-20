@@ -6,49 +6,66 @@ exports[`<PlaylistCombiner/> renders without crashing ChartPresenter 1`] = `
     Combiner
   </h3>
   <div
-    id="from_playlist"
+    style={
+      Object {
+        "display": "inline-block",
+      }
+    }
   >
-    <h5>
-      From: 
-    </h5>
-    <input
-      autoComplete="on"
-      onChange={[Function]}
-      onKeyPress={[Function]}
-      placeholder="spotify user name"
-      type="text"
-      value=""
-    />
-    <Button
-      active={false}
-      block={false}
-      bsClass="btn"
-      bsStyle="default"
-      className="fa fa-search"
-      disabled={false}
-      onClick={[Function]}
-      type="submit"
-    />
     <div
-      className="playlists_view_conteiner"
-    />
-    <i
-      aria-hidden="true"
-      className="fa fa-plus"
-    />
-  </div>
-  <div
-    id="destination_panel"
-  >
-    <h5>
-      To:
-    </h5>
-    <span>
-      New playlist
-    </span>
-    <input
-      type="text"
-    />
+      id="from_playlist"
+    >
+      <label>
+        From: 
+        <input
+          autoComplete="on"
+          onChange={[Function]}
+          onKeyPress={[Function]}
+          placeholder="spotify user name"
+          type="text"
+          value=""
+        />
+      </label>
+      <Button
+        active={false}
+        block={false}
+        bsClass="btn"
+        bsStyle="default"
+        className="fa fa-search"
+        disabled={false}
+        onClick={[Function]}
+        type="submit"
+      />
+      <div
+        className="playlists_view_conteiner"
+      />
+    </div>
+    <div
+      id="destination_panel"
+    >
+      <h5>
+        To:
+      </h5>
+      <label>
+        New playlist 
+        <input
+          onChange={[Function]}
+          placeholder="new playlist"
+          type="text"
+          value=""
+        />
+      </label>
+      <Button
+        active={false}
+        block={false}
+        bsClass="btn"
+        bsStyle="default"
+        disabled={false}
+        onClick={[Function]}
+      >
+        Combine
+      </Button>
+    </div>
   </div>
 </div>
 `;

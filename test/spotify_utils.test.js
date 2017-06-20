@@ -16,7 +16,7 @@ describe('[sp_utils]', () => {
         jest.mock("spotify-web-api-node");
         const sp_apiMock = require("spotify-web-api-node");
         sp_apiMock.mockImplementation(() => sp_mock);
-        sp_utils = require('../src/front/spotify_utils');
+        sp_utils = require('../src/spotify_utils');
     });
     afterAll(() => {
         jest.unmock('cookies-js');

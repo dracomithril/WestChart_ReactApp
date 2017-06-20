@@ -3,13 +3,13 @@
  */
 import React from "react";
 import PropTypes from "prop-types";
-import PlaylistCombiner from "../../src/front/components/PlaylistCombiner";
+import PlaylistCombiner from "./../../src/components/PlaylistCombiner";
 import {shallow} from "enzyme";
 import {shallowToJson} from "enzyme-to-json";
 import configureMockStore from "redux-mock-store";
 const sinon = require('sinon');
-jest.mock('./../../src/front/spotify_utils');
-const initial_state = require('../data/initial_state.json');
+jest.mock('./../../src/spotify_utils');
+const initial_state = require('./../data/initial_state.json');
 const mockStore = configureMockStore([]);
 describe('<PlaylistCombiner/>', () => {
     it('renders without crashing ChartPresenter', () => {
@@ -23,7 +23,7 @@ describe('<PlaylistCombiner/>', () => {
             }
         );
         expect(shallowToJson(wrapper)).toMatchSnapshot();
-
     });
+
 
 });

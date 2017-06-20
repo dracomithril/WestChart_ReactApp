@@ -3,11 +3,11 @@
  */
 import React from "react";
 import PropTypes from "prop-types";
-import Header from "../../src/front/components/Header/index";
-import {shallow, mount} from "enzyme";
-import { mountToJson, shallowToJson} from "enzyme-to-json";
+import Header from "./../../src/components/Header/index";
+import {mount, shallow} from "enzyme";
+import {mountToJson, shallowToJson} from "enzyme-to-json";
 import configureMockStore from "redux-mock-store";
-const initial_state = require('../data/initial_state.json');
+const initial_state = require('./../data/initial_state.json');
 const mockStore = configureMockStore([]);
 describe('<Header/>', () => {
     it('renders without crashing ChartPresenter', () => {
@@ -24,7 +24,7 @@ describe('<Header/>', () => {
         expect(mountToJson(wrapper)).toMatchSnapshot();
     });
     it('render user info', () => {
-        let state = Object.assign({},initial_state, {user:{name:'Simba'}});
+        let state = Object.assign({}, initial_state, {user: {name: 'Simba'}});
         const store = mockStore(state);
         const wrapper = shallow(
             <Header />, {

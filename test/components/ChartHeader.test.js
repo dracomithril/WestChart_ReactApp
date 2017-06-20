@@ -3,11 +3,11 @@
  */
 import React from 'react';
 import PropTypes from 'prop-types';
-import ChartHeader from '../../src/front/components/ChartHeader';
+import ChartHeader from './../../src/components/ChartHeader';
 import {shallow} from 'enzyme';
 import {shallowToJson} from 'enzyme-to-json';
 import configureMockStore from 'redux-mock-store';
-const initial_state =require('../data/initial_state.json');
+const initial_state =require('./../data/initial_state.json');
 const mockStore = configureMockStore([]);
 describe('<ChartHeader/>', () => {
     it('renders without crashing ChartPresenter', () => {
