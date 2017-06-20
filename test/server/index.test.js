@@ -23,7 +23,7 @@ describe('[server]', function () {
         jest.mock('express');
         let express= require('express');
         express.mockImplementation(()=>expressMock);
-        server = require('../../server');
+        server = require('./../../server');
 
         sinon.assert.calledOnce(expressMock.listen);
         sinon.assert.callCount(expressMock.get,5);

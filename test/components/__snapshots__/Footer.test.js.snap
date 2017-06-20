@@ -24,7 +24,7 @@ exports[`<Footer/> renders without crashing 1`] = `
       />
     </a>
      
-     vundefined © Copyright 2017
+     v0.6.3 © Copyright 2017
   </span>
   <br />
   <span>

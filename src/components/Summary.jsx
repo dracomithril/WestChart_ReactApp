@@ -4,8 +4,8 @@
 import React from "react";
 import PropTypes from 'prop-types';
 import {Badge} from "react-bootstrap";
-let {sorting} = require('./../utils');
 import './components.css';
+let {sorting} = require('./../utils');
 const create_print_list = (elem, index) => {
     return <div key={elem.id}>
         <span>{index + 1}</span>

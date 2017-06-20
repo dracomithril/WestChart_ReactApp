@@ -5,8 +5,8 @@ import React from "react";
 import PropTypes from "prop-types";
 import {Button, DropdownButton, MenuItem} from "react-bootstrap";
 import spotify_utils from './../spotify_utils';
-const action_types = require('./../reducers/action_types');
 import './components.css'
+const action_types = require('./../reducers/action_types');
 const TrackPreview = function (props) {
     const track = props.track;
     const artists = track.artists.map((elem) => elem.name).join(' & ');
