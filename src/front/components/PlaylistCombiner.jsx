@@ -4,8 +4,8 @@
 import React from "react";
 import PropTypes from "prop-types";
 import {Button, ButtonGroup, ControlLabel, FormControl, FormGroup, Image} from "react-bootstrap";
-import {getTracks, getUserAndPlaylists} from "./../spotify_utils";
-
+import {getTracks, getUserAndPlaylists, createPlaylistAndAddTracks} from "./../spotify_utils";
+const _ = require('lodash');
 
 const UserPlaylist = (props) => {
     let user = props.user || {};
@@ -70,46 +70,33 @@ export default class PlaylistCombiner extends React.Component {
         console.log('get ' + user);
         const that = this;
         const {sp_user} = this.context.store.getState();
-        if (Object.keys(this.state.users).length < 3) {
-            let updateUsers = function (new_user) {
-                const user = that.state.users[new_user.id];
-                let newUsers = {};
-                newUsers[new_user.id] = Object.assign({}, user, new_user);
-                return {users: Object.assign({}, that.state.users, newUsers)};
-            };
-            getUserAndPlaylists(sp_user.access_token, user).then(new_user => {
-                that.setState(updateUsers(new_user));
-                console.log('Retrieved playlists ', new_user)
-            });
-        } else {
-            alert('Sorry you can only combine list from 3 users. Delete one of users to add new one.')
-        }
+
+        let updateUsers = function (new_user) {
+            const user = that.state.users[new_user.id];
+            let newUsers = {};
+            newUsers[new_user.id] = Object.assign({}, user, new_user);
+            return {users: Object.assign({}, that.state.users, newUsers)};
+        };
+        getUserAndPlaylists(sp_user.access_token, user).then(new_user => {
+            that.setState(updateUsers(new_user));
+            console.log('Retrieved playlists ', new_user)
+        });
+
     }
 
     combinePlaylists() {
+        //todo check if playlist exists
         const {sp_user} = this.context.store.getState();
         const {selected, new_playlist} = this.state;
-        let array = [];
-        let count = 0;
-
-        let test = Object.keys(selected).map(el => array.push(...selected[el]));
-        let fn = function (user, playlist) {
-            return getTracks(sp_user.access_token, user, playlist)
-        };
-        //     .forEach(el => {
-        //     selected[el].forEach(pl => {
-        //         getTracks(sp_user.access_token, el, pl).then(resp => {
-        //             array.push(...resp);
-        //             console.log(count++);
-        //             console.log('tracks count: ' + array.length)
-        //         });
-        //     })
-        //
-        // });
-        let actions = array.map(el => fn(...el));
+        let array = _.flatMap(selected, n => n);
+        let actions = array.map(el => getTracks(sp_user.access_token, ...el));
         Promise.all(actions).then(data => {
             console.log('all done!!!');
-            console.log(...data);
+            let flat_tracks = _.flatMap(data, n => n);// [].concat.apply([], data);
+            let uniq = _.uniq(flat_tracks);
+            createPlaylistAndAddTracks(sp_user, new_playlist, false, uniq).then(d => {
+                console.log(d);
+            })
         });
     }
 
@@ -148,7 +135,7 @@ export default class PlaylistCombiner extends React.Component {
         });
         return (<div>
                 <h3>Combiner</h3>
-                <div>
+                <div style={{display:'inline-block'}}>
                     <div id="from_playlist">
                         <label>{"From: "}
                             <input type="text" value={userField} placeholder="spotify user name" autoComplete="on"
@@ -158,18 +145,20 @@ export default class PlaylistCombiner extends React.Component {
                                 }
                             }}/>
                         </label>
-                        <Button type="submit" onClick={() => this.getUserInformation(userField)}
-                                className="fa fa-search"/>
-                        <div className="playlists_view_conteiner">
+                        <Button type="submit" onClick={() => {
+                            if (Object.keys(this.state.users).length < 3) {
+                                this.getUserInformation(userField)
+                            } else {
+                                alert('Sorry you can only combine list from 3 users. Delete one of users to add new one.')
+                            }
+                        }} className="fa fa-search"/>
+                        < div
+                            className="playlists_view_conteiner">
                             {users_playlists}
                         </div>
                     </div>
                     <div id="destination_panel">
                         <h5>To:</h5>
-                        {/*<span>Existing playlist</span>*/}
-                        {/*<select>*/}
-                        {/*{item_list}*/}
-                        {/*</select>*/}
                         <label>{"New playlist "}
                             <input type="text" placeholder="new playlist" value={this.state.new_playlist}
                                    onChange={event => this.setState({new_playlist: event.target.value})}/>
