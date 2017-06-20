@@ -55,10 +55,22 @@ const getUserAndPlaylists = function (accessToken, user) {
             return spotifyApi.getUserPlaylists(user_id)
 
         }).then((playlist_data) => {
-            new_user.items = playlist_data.body.items;
+            new_user.items = playlist_data.body.items.filter(el=>{
+                return el.owner.id===new_user.id;
+            });
+            console.log(`user: ${new_user.id} have ${new_user.items.length}(his own)/ total ${playlist_data.body.items.length}`);
             return Promise.resolve(new_user);
         }).catch(err => {
             console.log('Something went wrong!', err);
+        });
+};
+const getTracks = function (accessToken, user, playlist_name) {
+    spotifyApi.setAccessToken(accessToken);
+    return spotifyApi.getPlaylist(user, playlist_name)
+        .then(function (data) {
+            let tracks= data.body.tracks.items.map(item=>item.track.id);
+            console.log('Some information about this playlist', data.body);
+            return Promise.resolve(tracks);
         });
 };
 /**
@@ -112,7 +124,7 @@ let validateCredentials = function (access_token) {
 };
 
 let exports = {
-    createPlaylistAndAddTracks, searchForMusic, loginToSpotify, validateCredentials, getUserAndPlaylists
+    createPlaylistAndAddTracks, searchForMusic, loginToSpotify, validateCredentials, getUserAndPlaylists, getTracks
 };
 module.exports = exports;
 

@@ -4,13 +4,13 @@
 import React from "react";
 import PropTypes from "prop-types";
 import {Button, ButtonGroup, ControlLabel, FormControl, FormGroup, Image} from "react-bootstrap";
-import {getUserAndPlaylists} from "./../spotify_utils";
+import {getTracks, getUserAndPlaylists} from "./../spotify_utils";
 
 
 const UserPlaylist = (props) => {
     let user = props.user || {};
     const items = (user.items || []).map((elem) => {
-        return <option key={elem.id}>{elem.name}</option>
+        return <option key={elem.id} value={elem.id}>{elem.name + " - " + ((elem.tracks || {}).total || 0)}</option>
     });
     return <FormGroup controlId={user.id + '_playlist'} bsClass="playlists_view form-group">
         <ControlLabel> <Image src={user.pic} rounded/>{user.id}</ControlLabel>
@@ -22,10 +22,11 @@ const UserPlaylist = (props) => {
             let name = e.target.name;
             let sel = [];
             for (let el of e.target.selectedOptions) {
-                sel.push(el.label)
+                sel.push([name, el.value])
             }
 
             console.log('elements');
+
             props.onSelect(name, sel);
         }}>
             {items}
@@ -52,11 +53,13 @@ export default class PlaylistCombiner extends React.Component {
             userType: "this_user",
             userField: "",
             users: {},
+            new_playlist: ""
 
         };
         this.getUserInformation = this.getUserInformation.bind(this);
         this.deleteUserPlaylist = this.deleteUserPlaylist.bind(this);
         this.updateSelectedPlaylist = this.updateSelectedPlaylist.bind(this);
+        this.combinePlaylists = this.combinePlaylists.bind(this);
     }
 
     static componentWillUnmount() {
@@ -65,18 +68,48 @@ export default class PlaylistCombiner extends React.Component {
 
     getUserInformation(user) {
         console.log('get ' + user);
-//todo users should not be more then 4
         const that = this;
         const {sp_user} = this.context.store.getState();
-        let updateUsers = function (new_user) {
-            const user = that.state.users[new_user.id];
-            let newUsers = {};
-            newUsers[new_user.id] = Object.assign({}, user, new_user);
-            return {users: Object.assign({}, that.state.users, newUsers)};
+        if (Object.keys(this.state.users).length < 3) {
+            let updateUsers = function (new_user) {
+                const user = that.state.users[new_user.id];
+                let newUsers = {};
+                newUsers[new_user.id] = Object.assign({}, user, new_user);
+                return {users: Object.assign({}, that.state.users, newUsers)};
+            };
+            getUserAndPlaylists(sp_user.access_token, user).then(new_user => {
+                that.setState(updateUsers(new_user));
+                console.log('Retrieved playlists ', new_user)
+            });
+        } else {
+            alert('Sorry you can only combine list from 3 users. Delete one of users to add new one.')
+        }
+    }
+
+    combinePlaylists() {
+        const {sp_user} = this.context.store.getState();
+        const {selected, new_playlist} = this.state;
+        let array = [];
+        let count = 0;
+
+        let test = Object.keys(selected).map(el => array.push(...selected[el]));
+        let fn = function (user, playlist) {
+            return getTracks(sp_user.access_token, user, playlist)
         };
-        getUserAndPlaylists(sp_user.access_token, user).then(new_user => {
-            that.setState(updateUsers(new_user));
-            console.log('Retrieved playlists ', new_user)
+        //     .forEach(el => {
+        //     selected[el].forEach(pl => {
+        //         getTracks(sp_user.access_token, el, pl).then(resp => {
+        //             array.push(...resp);
+        //             console.log(count++);
+        //             console.log('tracks count: ' + array.length)
+        //         });
+        //     })
+        //
+        // });
+        let actions = array.map(el => fn(...el));
+        Promise.all(actions).then(data => {
+            console.log('all done!!!');
+            console.log(...data);
         });
     }
 
@@ -89,8 +122,8 @@ export default class PlaylistCombiner extends React.Component {
     }
 
     updateSelectedPlaylist(user, selected) {
-        let that=this;
-        let updateSelected =  (id, arr)=> {
+        let that = this;
+        let updateSelected = (id, arr) => {
             let newSelected = {};
             newSelected[id] = arr;
             return {selected: Object.assign({}, that.state.selected, newSelected)};
@@ -106,16 +139,7 @@ export default class PlaylistCombiner extends React.Component {
 
     render() {
         const {sp_user} = this.context.store.getState();
-        const {selected, chosen, indexer, userField, users} = this.state;
-        // const map_selected = Object.keys(selected).map(elem => {
-        //     const playlists=selected[elem].map(el=><div key={"elem_"+el}>
-        //         <strong>{elem}</strong>{el}</div>);
-        //     return <div key={'sel_' + elem}>
-        //         {playlists}
-        //     </div>
-        // });
-        // const item_list = ((users[sp_user.id] || {}).items || []).map((elem) => <option
-        //     key={elem.id}>{elem.name}</option>);
+        const {userField, users} = this.state;
         const users_playlists = Object.keys(users).map((el) => {
             return <UserPlaylist user={users[el]} key={el + "_playlists"}
                                  onUpdate={this.getUserInformation} onDelete={this.deleteUserPlaylist}
@@ -123,35 +147,38 @@ export default class PlaylistCombiner extends React.Component {
                                  erasable={(users[el] || {}).id !== sp_user.id}/>
         });
         return (<div>
-            <h3>Combiner</h3>
-            <div id="from_playlist">
-                <h5>From: </h5>
-                <input type="text" value={userField} placeholder="spotify user name" autoComplete="on"
-                       onChange={(e) => this.setState({userField: e.target.value})} onKeyPress={(e) => {
-                    if (e.which === 13) {
-                        this.getUserInformation(userField)
-                    }
-                }}/>
-                <Button type="submit" onClick={() => this.getUserInformation(userField)} className="fa fa-search"/>
-                <div className="playlists_view_conteiner">
-                    {users_playlists}
+                <h3>Combiner</h3>
+                <div>
+                    <div id="from_playlist">
+                        <label>{"From: "}
+                            <input type="text" value={userField} placeholder="spotify user name" autoComplete="on"
+                                   onChange={(e) => this.setState({userField: e.target.value})} onKeyPress={(e) => {
+                                if (e.which === 13) {
+                                    this.getUserInformation(userField)
+                                }
+                            }}/>
+                        </label>
+                        <Button type="submit" onClick={() => this.getUserInformation(userField)}
+                                className="fa fa-search"/>
+                        <div className="playlists_view_conteiner">
+                            {users_playlists}
+                        </div>
+                    </div>
+                    <div id="destination_panel">
+                        <h5>To:</h5>
+                        {/*<span>Existing playlist</span>*/}
+                        {/*<select>*/}
+                        {/*{item_list}*/}
+                        {/*</select>*/}
+                        <label>{"New playlist "}
+                            <input type="text" placeholder="new playlist" value={this.state.new_playlist}
+                                   onChange={event => this.setState({new_playlist: event.target.value})}/>
+                        </label>
+                        <Button onClick={this.combinePlaylists}>Combine</Button>
+                    </div>
                 </div>
-                <i className="fa fa-plus" aria-hidden="true" onClick={() => {
-                    // if (chosen && !indexer.contains(chosen.name)) {
-                    //     this.setState({selected: [...selected, chosen]})
-                    // }
-                }}/>
             </div>
-            <div id="destination_panel">
-                <h5>To:</h5>
-                {/*<span>Existing playlist</span>*/}
-                {/*<select>*/}
-                {/*{item_list}*/}
-                {/*</select>*/}
-                <span>New playlist</span>
-                <input type="text"/>
-            </div>
-        </div>);
+        );
     }
 }
 PlaylistCombiner.contextTypes = {
