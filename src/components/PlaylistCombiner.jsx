@@ -159,7 +159,7 @@ export default class PlaylistCombiner extends React.Component {
                                  erasable={(users[el] || {}).id !== sp_user.id}/>
         });
         return (<div>
-                <h3>Combiner</h3>
+                <h3>Combiner<strong style={{color:'red'}}>(BETA)</strong></h3>
                 <div>
                 <span>
                     Combiner gets only 50 last active playlists from your spotify account and from that list selects
