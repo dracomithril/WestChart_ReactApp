@@ -14,7 +14,12 @@
     margin-bottom: 10px;
     margin-top: 5px;
 }
-
+.console-log{
+    border: 5px dashed red;
+    background-color: indianred;
+    margin: 10px;
+    padding: 0 5px 5px 5px;
+}
 .checkbox1 {
     position: relative;
     display: block;

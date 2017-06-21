@@ -33,7 +33,7 @@ let createPlaylistAndAddTracks = function (sp_user, sp_playlist_name, isPlaylist
                      * @param count {number}
                      * @returns {Array}
                      */
-                    let sliceCount=function (array, count) {
+                    let sliceCount = function (array, count) {
                         if (array.length > count) {
                             let t1 = _.take(array, count);
                             let d1 = _.drop(array, count);
@@ -49,10 +49,10 @@ let createPlaylistAndAddTracks = function (sp_user, sp_playlist_name, isPlaylist
                     }
 
                     let tz = sliceCount(tracks, 100);
-                    let actions = tz.map(el=>spotifyApi.addTracksToPlaylist(sp_user.id, playlist_id, el));
+                    let actions = tz.map(el => spotifyApi.addTracksToPlaylist(sp_user.id, playlist_id, el));
                     return Promise.all(actions).then(d5 => {
                         console.log('zzzz')
-                    }).catch(e=>{
+                    }).catch(e => {
                         console.error(e);
                     })
                 }
@@ -78,22 +78,25 @@ const getUserAndPlaylists = function (accessToken, user) {
     let new_user;
     return spotifyApi.getUser(user)
         .then((data) => {
-            const user_id = data.body.id;
+            const user_id = (data.body||{}).id;
             new_user = {
                 pic: (data.body.images[0] || {}).url,
                 id: user_id
             };
             // that.setState({users: updateUsers(user_id, new_user)});
-            return spotifyApi.getUserPlaylists(user_id)
+            return spotifyApi.getUserPlaylists(user_id, {limit: 50})
 
         }).then((playlist_data) => {
             new_user.items = playlist_data.body.items.filter(el => {
                 return el.owner.id === new_user.id;
             });
+            new_user.total = playlist_data.body.total;
             console.log(`user: ${new_user.id} have ${new_user.items.length}(his own)/ total ${playlist_data.body.items.length}`);
             return Promise.resolve(new_user);
         }).catch(err => {
+            let error = err.message==='Not Found'?new Error('No user named '+user):err;
             console.log('Something went wrong!', err);
+            return Promise.reject(error);
         });
 };
 const getTracks = function (accessToken, user, playlist_name) {

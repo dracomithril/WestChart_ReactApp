@@ -3,30 +3,34 @@
  */
 import React from "react";
 import PropTypes from "prop-types";
-import {Button, ButtonGroup, ControlLabel, FormControl, FormGroup, Image} from "react-bootstrap";
+import {Button, ButtonGroup, ControlLabel, FormControl, FormGroup, Image, Badge} from "react-bootstrap";
 import {getTracks, getUserAndPlaylists, createPlaylistAndAddTracks} from "./../spotify_utils";
+import PlaylistInfo from './PlaylistInfo';
 const _ = require('lodash');
-
+const action_types = require('./../reducers/action_types');
+//todo add modal to block usage of tool when playlist crating
 const UserPlaylist = (props) => {
     let user = props.user || {};
     const items = (user.items || []).map((elem) => {
         return <option key={elem.id} value={elem.id}>{elem.name + " - " + ((elem.tracks || {}).total || 0)}</option>
     });
     return <FormGroup controlId={user.id + '_playlist'} bsClass="playlists_view form-group">
-        <ControlLabel> <Image src={user.pic} rounded/>{user.id}</ControlLabel>
-        <ButtonGroup>
-            <Button className="fa fa-refresh" onClick={() => props.onUpdate(user.id)}/>
-            <Button className="fa fa-minus" onClick={() => props.onDelete(user.id)} disabled={!props.erasable}/>
-        </ButtonGroup>
+        <div>
+            <ControlLabel> <Image src={user.pic} rounded/>
+                <span>{user.id.length > 12 ? user.id.substr(0, 9) + '...' : user.id}</span>
+            </ControlLabel><Badge
+            bsStyle="warning">{user.total}</Badge>
+            <ButtonGroup>
+                <Button className="fa fa-refresh" onClick={() => props.onUpdate(user.id)}/>
+                <Button className="fa fa-minus" onClick={() => props.onDelete(user.id)} disabled={!props.erasable}/>
+            </ButtonGroup>
+        </div>
         <FormControl name={user.id} componentClass="select" multiple onChange={(e) => {
             let name = e.target.name;
             let sel = [];
             for (let el of e.target.selectedOptions) {
                 sel.push([name, el.value])
             }
-
-            console.log('elements');
-
             props.onSelect(name, sel);
         }}>
             {items}
@@ -53,23 +57,36 @@ export default class PlaylistCombiner extends React.Component {
             userType: "this_user",
             userField: "",
             users: {},
-            new_playlist: ""
-
+            new_playlist: "",
+            sp_playlist_info: {
+                url: null
+            }
         };
         this.getUserInformation = this.getUserInformation.bind(this);
         this.deleteUserPlaylist = this.deleteUserPlaylist.bind(this);
         this.updateSelectedPlaylist = this.updateSelectedPlaylist.bind(this);
         this.combinePlaylists = this.combinePlaylists.bind(this);
+        this.searchForUser_click = this.searchForUser_click.bind(this);
     }
 
-    static componentWillUnmount() {
+    componentWillUnmount() {
         console.log('component PlaylistCombiner unmounted');
+    }
+
+    searchForUser_click() {
+        const {users, userField} = this.state;
+        if (Object.keys(users).length < 3) {
+            this.getUserInformation(userField).then(() => this.setState({userField: ""}));
+        } else {
+            alert('Sorry you can only combine list from 3 users. Delete one of users to add new one.')
+        }
     }
 
     getUserInformation(user) {
         console.log('get ' + user);
         const that = this;
-        const {sp_user} = this.context.store.getState();
+        let store = this.context.store;
+        const {sp_user} = store.getState();
 
         let updateUsers = function (new_user) {
             const user = that.state.users[new_user.id];
@@ -77,16 +94,20 @@ export default class PlaylistCombiner extends React.Component {
             newUsers[new_user.id] = Object.assign({}, user, new_user);
             return {users: Object.assign({}, that.state.users, newUsers)};
         };
-        getUserAndPlaylists(sp_user.access_token, user).then(new_user => {
+        return getUserAndPlaylists(sp_user.access_token, user).then(new_user => {
             that.setState(updateUsers(new_user));
-            console.log('Retrieved playlists ', new_user)
+            console.log('Retrieved playlists ', new_user);
+            return Promise.resolve(new_user.id);
+        }).catch(e => {
+            store.dispatch({type: action_types.ADD_ERROR, error: e})
         });
 
     }
 
     combinePlaylists() {
         //todo check if playlist exists
-        const {sp_user} = this.context.store.getState();
+        let store = this.context.store;
+        const {sp_user} = store.getState();
         const {selected, new_playlist} = this.state;
         let array = _.flatMap(selected, n => n);
         let actions = array.map(el => getTracks(sp_user.access_token, ...el));
@@ -94,9 +115,13 @@ export default class PlaylistCombiner extends React.Component {
             console.log('all done!!!');
             let flat_tracks = _.flatMap(data, n => n);// [].concat.apply([], data);
             let uniq = _.uniq(flat_tracks);
-            createPlaylistAndAddTracks(sp_user, new_playlist, false, uniq).then(d => {
+            return createPlaylistAndAddTracks(sp_user, new_playlist, false, uniq).then(d => {
                 console.log(d);
+                this.setState({sp_playlist_info: d});
+                this.getUserInformation(sp_user.id);
             })
+        }).catch(e => {
+            store.dispatch({type: action_types.ADD_ERROR, error: e})
         });
     }
 
@@ -126,7 +151,7 @@ export default class PlaylistCombiner extends React.Component {
 
     render() {
         const {sp_user} = this.context.store.getState();
-        const {userField, users} = this.state;
+        const {userField, users, sp_playlist_info} = this.state;
         const users_playlists = Object.keys(users).map((el) => {
             return <UserPlaylist user={users[el]} key={el + "_playlists"}
                                  onUpdate={this.getUserInformation} onDelete={this.deleteUserPlaylist}
@@ -135,23 +160,26 @@ export default class PlaylistCombiner extends React.Component {
         });
         return (<div>
                 <h3>Combiner</h3>
-                <div style={{display:'inline-block'}}>
+                <div>
+                <span>
+                    Combiner gets only 50 last active playlists from your spotify account and from that list selects
+                    only playlists that belongs to the user that you are looking for.
+                Right now there is no simple way to look for users using their Name or Surname. Only valid 'spotify id' is valid.
+                    If account is created using Facebook creation 'spotify id' is number that is hard to obtain. Sorry we will work on it.
+                </span>
+                </div>
+                <PlaylistInfo info={sp_playlist_info}/>
+                <div style={{display: 'inline-block'}}>
                     <div id="from_playlist">
                         <label>{"From: "}
                             <input type="text" value={userField} placeholder="spotify user name" autoComplete="on"
                                    onChange={(e) => this.setState({userField: e.target.value})} onKeyPress={(e) => {
                                 if (e.which === 13) {
-                                    this.getUserInformation(userField)
+                                    this.searchForUser_click()
                                 }
                             }}/>
                         </label>
-                        <Button type="submit" onClick={() => {
-                            if (Object.keys(this.state.users).length < 3) {
-                                this.getUserInformation(userField)
-                            } else {
-                                alert('Sorry you can only combine list from 3 users. Delete one of users to add new one.')
-                            }
-                        }} className="fa fa-search"/>
+                        <Button type="submit" onClick={this.searchForUser_click} className="fa fa-search"/>
                         < div
                             className="playlists_view_conteiner">
                             {users_playlists}

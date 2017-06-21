@@ -5,6 +5,7 @@ import React from "react";
 import PropTypes from "prop-types";
 import PlaylistForm from "./PlaylistForm";
 import RowSpotifySearch from "./RowSpotifySearch"
+import PlaylistInfo from './PlaylistInfo';
 
 
 export default class SpotifySearch extends React.Component {
@@ -21,18 +22,15 @@ export default class SpotifySearch extends React.Component {
     render() {
         const {store} = this.context;
         const {search_list, sp_playlist_info} = store.getState();
-        let search_list_view = search_list.map((search_elem)=> {
+        let search_list_view = search_list.map((search_elem) => {
             return <RowSpotifySearch search_elem={search_elem} key={search_elem.id}/>
         });
         return (<div>
             <h3 id="list">{'Create '}<i className="fa fa-spotify" aria-hidden="true">Spotify playlist:</i>
-                {sp_playlist_info.url !== null && <div className="spotify_sumary">
-                    <span>{'Created playlist! name: ' + sp_playlist_info.pl_name}</span><br/>
-                    <a href={sp_playlist_info.url} target="_newtab">{sp_playlist_info.pl_name}</a>
-                </div>}
+                <PlaylistInfo info={sp_playlist_info}/>
                 <PlaylistForm {...this.props}/>
             </h3>
-            {search_list_view.length > 0 && <table style={{marginLeft:10}}>
+            {search_list_view.length > 0 && <table style={{marginLeft: 10}}>
                 <thead>
                 <tr>
                     <th>Artist & Title</th>
