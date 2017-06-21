@@ -15,6 +15,7 @@ export default class Footer extends React.Component {
                         </a> {' v' + process.env.npm_package_version + ' © Copyright 2017'}</span><br/>
             <span>{'Any questions? '}<a
                 href="mailto:dracomithril@gmail.com?subject=[WCSChartAdmin]">contact me</a></span>
+            <a href="/api/fb_policy">{" Facebook Policy"}</a>
         </footer>);
     }
 }
