@@ -1,15 +1,17 @@
-.panel{
+.panel {
     padding: 0;
     margin: 0 0 5px;
     /*position: relative;*/
     /*z-index: 1000;*/
 }
+
 .panel-heading {
     padding: 5px 5px;
     border-bottom: 1px solid transparent;
     border-top-left-radius: 3px;
     border-top-right-radius: 3px;
 }
+
 .panel-body {
     padding: 5px;
     text-align: left;
@@ -19,4 +21,17 @@
     padding-left: 5px;
     text-align: right;
     width: 50px;
+}
+
+.filter_panel {
+    float: left;
+    border: 1px solid #bce8f1;
+    background: azure;
+    margin-left: 10px;
+    text-align: left;
+    padding-left: 10px;
+    height: 90px;
+    font-size: smaller;
+    overflow-y: scroll;
+    border-radius: 3px;
 }

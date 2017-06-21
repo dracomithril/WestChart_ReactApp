@@ -58,6 +58,11 @@ const sp_user = (state = {}, action) => {
                 access_token: action.access_token,
                 refresh_token: action.refresh_token
             });
+        case action_types.UPDATE_SP_USER_PLAYLIST:
+            return {
+                ...state,
+                playlists: action.playlists
+            };
         default:
             return state;
     }
@@ -93,8 +98,8 @@ const search_list = (state = [], action) => {
             let entry = _.clone(state);
             const entry2 = entry[action.id];
             entry2[action.field] = action.value;
-            if(action.field==='items'){
-                entry2.selected=action.value[0];
+            if (action.field === 'items') {
+                entry2.selected = action.value[0];
             }
             return entry;
         case action_types.SWAP_FIELDS:
@@ -158,18 +163,28 @@ const filters = (state = {}, action) => {
         update_control: create_control(state.update_control || {checked: false, id: 'update', days: showDays}, action),
         less_control: create_control(state.less_control || {checked: false, id: 'less', days: 15}, action),
         more_control: create_control(state.more_control || {checked: false, id: 'more', days: 0}, action),
-        woc_control: create_control(state.woc_control || {checked: true, id: 'woc'}, action)
+        woc_control: create_control(state.woc_control || {checked: true, id: 'woc_cb'}, action)
     }
 };
-const isPlaylistPrivate= (state = false, action) => {
+const errors = (state = [], action) => {
+    switch (action.type) {
+        case action_types.ADD_ERROR:
+            return _.takeRight([action.error, ...state],3);
+        case action_types.CLEAR_ERRORS:
+            return [];
+        default:
+            return state;
+    }
+};
+const isPlaylistPrivate = (state = false, action) => {
     return action.type === action_types.TOGGLE_IS_PRIVATE ? action.value : state;
 };
-const sp_playlist_info = (state = {url:null,pl_name:''}, action) => {
+const sp_playlist_info = (state = {url: null, pl_name: ''}, action) => {
     return action.type === action_types.UPDATE_PLAYLIST_INFO ? action.value : state;
 };
 
 let reducers = {
     filters, user, chart, enable_until, last_update, start_date, show_last, since, until, list_sort, songs_per_day,
-    sp_user, search_list, sp_playlist_name, show_wait, isPlaylistPrivate, sp_playlist_info
+    sp_user, search_list, sp_playlist_name, show_wait, isPlaylistPrivate, sp_playlist_info, errors
 };
 export default reducers;

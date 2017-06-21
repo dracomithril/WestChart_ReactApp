@@ -9,7 +9,7 @@ describe('[utils]', () => {
     let utils;
     beforeAll(() => {
         jest.mock('cookies-js');
-        utils = require('./../src/utils');
+        utils = require('../src/utils');
     });
     afterAll(() => {
         jest.unmock('cookies-js');

@@ -10,7 +10,6 @@ import ChartHeader from "./ChartHeader";
 import SpotifySearch from "./SpotifySearch";
 const {sorting, filterChart} = require('./../utils');
 
-
 export default class ChartPresenter extends React.Component {
     constructor(props) {
         super(props);
@@ -35,8 +34,9 @@ export default class ChartPresenter extends React.Component {
         const {view_chart, error_days} = chart.length > 0 ? filterChart(store) : {view_chart: [], error_days: []};
         let selected = view_chart.filter((elem) => elem.selected);
         sorting[list_sort](selected);
+
         return (<div>
-            <ChartHeader error_days={error_days} count={view_chart.length}/>
+            <ChartHeader error_days={error_days}/>
             <ChartTable data={view_chart} error_days={error_days}/>
             <Summary selected={selected}/>
             <SpotifySearch selected={selected}/>

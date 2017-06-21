@@ -6,41 +6,129 @@
     padding: 5px;
     background-color: snow;
 }
-.error_bg{
+
+.track_view input {
+    padding-right: 5px;
+    text-align: center;
+}
+
+.error_bg {
     background-color: #ff0e10;
 }
 
-.summary{
+.summary {
     border: 1px solid black;
     border-radius: 10px;
     background-color: cornsilk;
     padding-bottom: 20px;
 }
+
 .chartHeader {
     height: 100px;
     margin: 1px;
     padding: 2px;
     border: 1px solid rgba(0, 0, 0, 0.1);
 }
-.chartButtons{
+
+.chartHeader small {
+    float: right;
+    position: absolute;
+    z-index: 9;
+}
+
+.chartButtons {
     float: left;
     margin-left: 10px;
     text-align: center;
     padding-top: 15px;
+    height: 90px;
 }
 
 #songsPerDay {
-    float: inherit;
-    height: inherit;
-    width: 200px;
-}
-
-
-#pickYourDate {
-    float: inherit;
-    height: inherit;
-    width: 200px;
+    /*float: inherit;*/
+    height: 45px;
+    width: inherit;
     padding-top: 5px;
     padding-left: 10px;
-    background-color: #faebcc;
+    border-radius: 3px;
 }
+.songsPerDay_err{
+    color: #a94442;
+    background-color: #f2dede;
+    border: 1px solid #ebccd1;
+}
+.songsPerDay_good{
+    color: #3c763d;
+    background-color: #dff0d8;
+    border: 1px solid #d6e9c6;
+}
+.dock1 {
+    float: left;
+    height: 90px;
+    width: 250px;
+    text-align: left;
+}
+
+#pickYourDate {
+    /*float: left;*/
+    height: 45px;
+    width: inherit;
+    padding-top: 5px;
+    padding-left: 10px;
+    background-color: #fcf8e3;
+    border: 1px solid #faebcc;
+    border-radius: 3px;
+}
+
+.playlists_view_conteiner {
+    height: 200px;
+}
+
+.playlists_view {
+    width: 230px;
+    /*height: 190px;*/
+    float: left;
+}
+
+.playlists_view img {
+    width: 40px;
+    height: 40px;
+    padding: 5px;
+}
+
+.playlists_view select {
+    height: 150px;
+}
+
+#destination_panel {
+    border: 1px solid black;
+    background: gray;
+    width: 300px;
+    height: 250px;
+    float: left;
+}
+#from_playlist{
+    background-color: aquamarine;
+    width: 700px;
+    height: 250px;
+    float: left;
+}
+#play_list_is_private {
+    margin-left: 10px;
+    padding-left: 5px;
+}
+
+.artist_name {
+    padding-left: 10px;
+    color: green;
+}
+#less_days{
+    color: blue;
+    margin-left: 5px;
+    margin-right: 5px;
+}
+#more_days{
+    color: red;
+    margin-left: 5px;
+}
+

@@ -4,7 +4,10 @@ exports[`<Summary/> renders without crashing 1`] = `
 <div
   className="summary"
 >
-  <h3
+  <h3>
+    Summary
+  </h3>
+  <h6
     id="list"
   >
     List by: 
@@ -34,7 +37,7 @@ exports[`<Summary/> renders without crashing 1`] = `
         what
       </option>
     </select>
-  </h3>
+  </h6>
   <div
     id="popover-contained"
     title="Print list"

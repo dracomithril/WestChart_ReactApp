@@ -1,10 +1,9 @@
 /**
  * Created by Gryzli on 24.01.2017.
  */
-let Promise = require("bluebird");
 const winston = require('winston');
-let request = Promise.promisifyAll(require("request"));
-const api_ver = 'v2.8';
+let request = require("request-promise-native");
+const api_ver = 'v2.9';
 const limit = 100;
 let days = 7;
 // let EventEmitter = require('events').EventEmitter;
@@ -45,18 +44,18 @@ function obtainList(since, until, groupId, access_token) {
             timeout: timeout,
             simple: true,
             json: true,
-            resolveWithFullResponse: false
+            resolveWithFullResponse: true
         };
 
         function reactOnBody(res) {
             if (res.statusCode === 200) {
-                let b = res.body;
-                winston.debug(`in react on body. Grabbed ${ b.data ? b.data.length : 0} elements.`);
-                all_charts.push(...b.data);
-                if (b.data.length === 100 && b.paging && b.paging.next) {
+                let body = res.body;
+                winston.debug(`in react on body. Grabbed ${ body.data ? body.data.length : 0} elements.`);
+                all_charts.push(...body.data);
+                if (body.data.length === limit && body.paging && body.paging.next) {
                     winston.debug('get next part of response.');
                     return request.getAsync({
-                        url: b.paging.next,
+                        url: body.paging.next,
                         json: true,
                         method: 'GET',
                         timeout: timeout
@@ -73,8 +72,8 @@ function obtainList(since, until, groupId, access_token) {
                 reject(error)
             }
         }
-
-        request.getAsync(options).then(reactOnBody).catch(reject);
+//todo modify to use reject errors resolveWithFullResponse: false
+        request(options).then(reactOnBody).catch(reject);
     })
 }
 function filterChartAndMap(body) {
@@ -109,6 +108,7 @@ function filterChartAndMap(body) {
                 added_time: addedTime,
                 added_by: addedBy,
                 created_time: elem.created_time,
+                from:elem.from,
                 from_user: elem.from.name,
                 full_picture: elem.full_picture,
                 id: id,

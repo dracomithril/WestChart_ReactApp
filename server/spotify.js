@@ -1,16 +1,14 @@
 /**
  * Created by Gryzli on 02.04.2017.
  */
-
-let Promise = require("bluebird");
 const Spotify = require('spotify-web-api-node');
 const winston = require('winston');
-let request = Promise.promisifyAll(require("request"));
+let request = require("request-promise-native");
 const clientId = process.env.client_id;
 const clientSecret = process.env.client_secret;
 
 const redirectUri = process.env.redirect_uri || `http://localhost:${process.env.PORT || 3001}/api/callback`;
-const scopes = ['user-read-private', 'user-read-email', 'playlist-modify-private', 'playlist-modify-public'];
+const scopes = ['user-read-private', 'user-read-email','user-follow-read','user-library-read', 'playlist-modify-private', 'playlist-modify-public'];
 // configure spotify
 const spotifyApi = new Spotify({
     clientId: clientId,

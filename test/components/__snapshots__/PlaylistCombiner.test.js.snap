@@ -1,0 +1,71 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<PlaylistCombiner/> renders without crashing ChartPresenter 1`] = `
+<div>
+  <h3>
+    Combiner
+  </h3>
+  <div
+    style={
+      Object {
+        "display": "inline-block",
+      }
+    }
+  >
+    <div
+      id="from_playlist"
+    >
+      <label>
+        From: 
+        <input
+          autoComplete="on"
+          onChange={[Function]}
+          onKeyPress={[Function]}
+          placeholder="spotify user name"
+          type="text"
+          value=""
+        />
+      </label>
+      <Button
+        active={false}
+        block={false}
+        bsClass="btn"
+        bsStyle="default"
+        className="fa fa-search"
+        disabled={false}
+        onClick={[Function]}
+        type="submit"
+      />
+      <div
+        className="playlists_view_conteiner"
+      />
+    </div>
+    <div
+      id="destination_panel"
+    >
+      <h5>
+        To:
+      </h5>
+      <label>
+        New playlist 
+        <input
+          onChange={[Function]}
+          placeholder="new playlist"
+          type="text"
+          value=""
+        />
+      </label>
+      <Button
+        active={false}
+        block={false}
+        bsClass="btn"
+        bsStyle="default"
+        disabled={false}
+        onClick={[Function]}
+      >
+        Combine
+      </Button>
+    </div>
+  </div>
+</div>
+`;

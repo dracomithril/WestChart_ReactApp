@@ -3,11 +3,12 @@
  */
 import React from "react";
 import PropTypes from "prop-types";
-import { Checkbox, OverlayTrigger, Tooltip, Button, Popover} from "react-bootstrap";
+import {Checkbox, OverlayTrigger, Tooltip} from "react-bootstrap";
 import FilterOption from "./FilterOption";
 import "./FilteringOptions.css";
 import filters_def from "./../../filters_def";
 let utils = require('./../../utils');
+const action_types = require('./../../reducers/action_types');
 
 export default class FilteringOptions extends React.Component {
     render() {
@@ -18,12 +19,10 @@ export default class FilteringOptions extends React.Component {
         });
 
         return (
-        <OverlayTrigger trigger={["click"]} rootClose
-                        placement="bottom" overlay={<Popover id="filters_p">
-            <div >
+            <div className="filter_panel">
                 <Checkbox checked={filters['woc_control'].checked} onChange={(e) => {
                     const {id, checked} = e.target;
-                    store.dispatch({type: 'TOGGLE_FILTER', id: id, checked: checked})
+                    store.dispatch({type: action_types.TOGGLE_FILTER, id: id, checked: checked})
                 }} id="woc_cb">
                     <OverlayTrigger placement="top" overlay={<Tooltip
                         id="woc_tp">{`Will show all [${utils.woc_string}]`}</Tooltip>}>
@@ -31,16 +30,8 @@ export default class FilteringOptions extends React.Component {
                             [{utils.woc_string}]</span>
                     </OverlayTrigger>
                 </Checkbox>
-                <span>Show only posts:</span><br/>
-                <div style={{paddingLeft: 10}}>
-                    {map}
-                </div>
+                {map}
             </div>
-        </Popover>}>
-            <Button bsStyle="info" id="bFilters">
-                filters
-            </Button>
-        </OverlayTrigger>
 
         )
     }

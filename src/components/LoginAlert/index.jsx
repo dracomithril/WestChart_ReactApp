@@ -6,7 +6,7 @@ import PropTypes from 'prop-types';
 import {Button, Jumbotron} from "react-bootstrap";
 import FacebookLogin from "react-facebook-login";
 import "./LoginAlert.css";
-const notGroupAdmin = "Sorry you are not admin of this group.";
+// const notGroupAdmin = "Sorry you are not admin of this group.";
 import {loginToSpotify} from './../../spotify_utils';
 
 export default class LoginAlert extends React.Component {
@@ -26,7 +26,7 @@ export default class LoginAlert extends React.Component {
         return (<Jumbotron bsClass="login-info">
             <h4>{'To start working witch us you need to login to facebook and spotify.'}<i className="fa fa-heart"/>
             </h4>
-            <p>{user.isGroupAdmin===true||user.isGroupAdmin===undefined ? '' : notGroupAdmin}</p>
+            {/*<p>{user.isGroupAdmin===true||user.isGroupAdmin===undefined ? '' : notGroupAdmin}</p>*/}
 
             {user.id === undefined && <FacebookLogin
                 appId={process.env.NODE_ENV === 'production' ? "1173483302721639" : "1173486879387948"}
