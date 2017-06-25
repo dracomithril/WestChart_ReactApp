@@ -4,7 +4,28 @@ exports[`<PlaylistCombiner/> renders without crashing ChartPresenter 1`] = `
 <div>
   <h3>
     Combiner
+    <strong
+      style={
+        Object {
+          "color": "red",
+        }
+      }
+    >
+      (BETA)
+    </strong>
   </h3>
+  <div>
+    <span>
+      Combiner gets only 50 last active playlists from your spotify account and from that list selects only playlists that belongs to the user that you are looking for. Right now there is no simple way to look for users using their Name or Surname. Only valid 'spotify id' is valid. If account is created using Facebook creation 'spotify id' is number that is hard to obtain. Sorry we will work on it.
+    </span>
+  </div>
+  <PlaylistInfo
+    info={
+      Object {
+        "url": null,
+      }
+    }
+  />
   <div
     style={
       Object {

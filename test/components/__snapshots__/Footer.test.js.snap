@@ -35,5 +35,10 @@ exports[`<Footer/> renders without crashing 1`] = `
       contact me
     </a>
   </span>
+  <a
+    href="/api/fb_policy"
+  >
+     Facebook Policy
+  </a>
 </footer>
 `;

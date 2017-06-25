@@ -3,7 +3,7 @@
  */
 import React, {Component} from "react";
 import PropTypes from "prop-types";
-import {Button, Checkbox, Form, FormControl, FormGroup, Glyphicon, InputGroup} from "react-bootstrap";
+import {Button, Form, FormControl, FormGroup, Glyphicon, InputGroup} from "react-bootstrap";
 import spotify_utils from "./../spotify_utils";
 import utils from "../utils";
 const action_types = require('./../reducers/action_types');
@@ -73,7 +73,8 @@ export default class PlaylistForm extends Component {
                        validationState={((sp_name_length) => {
                            return sp_name_length > 8 ? 'success' : sp_name_length > 5 ? 'warning' : 'error';
                        })(sp_playlist_name.length)}>
-                <InputGroup>
+
+                <InputGroup style={{maxWidth: 250}}>
                     <InputGroup.Addon><Glyphicon glyph="music"/></InputGroup.Addon>
                     <FormControl type="text" placeholder="playlist name" value={sp_playlist_name} onChange={(e) => {
                         store.dispatch({
@@ -83,19 +84,20 @@ export default class PlaylistForm extends Component {
                     }}/>
                     <FormControl.Feedback />
                 </InputGroup>
+
             </FormGroup>
-            <FormGroup>
-                <Button id="crt_pl_button" onClick={this.onCreatePlaylist.bind(this)}
-                        disabled={sp_playlist_name.length < 6} bsStyle="danger">Create
-                    Playlist
-                </Button>
-                <Checkbox id="play_list_is_private" onChange={(e) => {
+            <Button id="crt_pl_button" onClick={this.onCreatePlaylist.bind(this)}
+                    disabled={sp_playlist_name.length < 6} bsStyle="danger">
+                Create Playlist
+            </Button>
+            <label>
+                <input type="checkbox" id="play_list_is_private" onChange={(e) => {
                     store.dispatch({
                         type: action_types.TOGGLE_IS_PRIVATE,
                         value: e.target.checked
                     })
-                }} value="private" checked={isPlaylistPrivate}>{'private ?'}</Checkbox>
-            </FormGroup>
+                }} value="private" checked={isPlaylistPrivate}/>{'private ?'}
+            </label>
         </Form>);
     }
 }
