@@ -36,8 +36,8 @@ export default class LoginAlert extends React.Component {
             });
         };
         const {location, history} = this.props;
-        const {pathname, search} = location;
-        if (pathname.includes('/user')) {
+        const {search} = location;
+        if (search.includes('access_token')) {
             const query = querystring.parse(search.substr(1, search.length));
             validateCredentials(query.access_token).then(res => {
                 setCookies(query.access_token, query.access_token);
