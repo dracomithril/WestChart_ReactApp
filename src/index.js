@@ -4,7 +4,7 @@ import App from "./App";
 import {routerReducer, syncHistoryWithStore} from "react-router-redux";
 import createHistory from "history/createBrowserHistory";
 import Header from "./components/Header";
-
+import ErrorConsole from "./components/ErrorConsole";
 import {combineReducers, createStore} from "redux";
 import {Provider} from "react-redux";
 import "./index.css";
@@ -26,6 +26,7 @@ ReactDOM.render(
         <Router history={history}>
             <div>
                 <Header/>
+                <ErrorConsole/>
                 <Route path="/" component={App}/>
             </div>
         </Router>

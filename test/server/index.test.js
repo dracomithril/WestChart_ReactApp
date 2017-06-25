@@ -8,6 +8,7 @@ describe('[server]', function () {
     let expressMock={
         use:sinon.stub(),
         get:sinon.stub(),
+        put:sinon.stub(),
         listen: sinon.stub()
     };
     beforeAll(() => {
@@ -27,6 +28,6 @@ describe('[server]', function () {
 
         sinon.assert.calledOnce(expressMock.listen);
         sinon.assert.callCount(expressMock.get,5);
-        sinon.assert.callCount(expressMock.use,2);
+        sinon.assert.callCount(expressMock.use,5);
     });
 });

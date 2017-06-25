@@ -12,6 +12,13 @@ exports[`<SpotifySearch/> renders without crashing 1`] = `
     >
       Spotify playlist:
     </i>
+    <PlaylistInfo
+      info={
+        Object {
+          "url": null,
+        }
+      }
+    />
     <PlaylistForm
       selected={Array []}
     />

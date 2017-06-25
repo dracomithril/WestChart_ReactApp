@@ -182,9 +182,11 @@ const isPlaylistPrivate = (state = false, action) => {
 const sp_playlist_info = (state = {url: null, pl_name: ''}, action) => {
     return action.type === action_types.UPDATE_PLAYLIST_INFO ? action.value : state;
 };
-
+const hasAcCookie= (state = false, action) => {
+    return action.type === action_types.TOGGLE_HAS_COOKIE ? action.value : state;
+};
 let reducers = {
     filters, user, chart, enable_until, last_update, start_date, show_last, since, until, list_sort, songs_per_day,
-    sp_user, search_list, sp_playlist_name, show_wait, isPlaylistPrivate, sp_playlist_info, errors
+    sp_user, search_list, sp_playlist_name, show_wait, isPlaylistPrivate, sp_playlist_info, errors, hasAcCookie
 };
 export default reducers;

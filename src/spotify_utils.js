@@ -78,7 +78,7 @@ const getUserAndPlaylists = function (accessToken, user) {
     let new_user;
     return spotifyApi.getUser(user)
         .then((data) => {
-            const user_id = (data.body||{}).id;
+            const user_id = (data.body || {}).id;
             new_user = {
                 pic: (data.body.images[0] || {}).url,
                 id: user_id
@@ -94,7 +94,7 @@ const getUserAndPlaylists = function (accessToken, user) {
             console.log(`user: ${new_user.id} have ${new_user.items.length}(his own)/ total ${playlist_data.body.items.length}`);
             return Promise.resolve(new_user);
         }).catch(err => {
-            let error = err.message==='Not Found'?new Error('No user named '+user):err;
+            let error = err.message === 'Not Found' ? new Error('No user named ' + user) : err;
             console.log('Something went wrong!', err);
             return Promise.reject(error);
         });
@@ -143,6 +143,21 @@ const loginToSpotify = function () {
             console.log(err);
         })
 };
+const refresh_auth = function (refresh_token) {
+    return fetch('/api/refresh_token?' + querystring.stringify({refresh_token: refresh_token}), {method: 'GET'})
+        .then((response) => {
+            return response.text()
+        }).then((path) => {
+            const urlObj = url.parse(path);
+            const query = querystring.parse(urlObj.query);
+            Cookies.set('spotify_auth_state', query.state);
+            console.log(path);
+            window.location.assign(path);
+            return Promise.resolve();
+        }).catch((err) => {
+            console.log(err);
+        })
+};
 /**
  *
  * @param access_token
@@ -159,7 +174,8 @@ let validateCredentials = function (access_token) {
 };
 
 let exports = {
-    createPlaylistAndAddTracks, searchForMusic, loginToSpotify, validateCredentials, getUserAndPlaylists, getTracks
+    createPlaylistAndAddTracks, searchForMusic, loginToSpotify, refresh_auth,
+    validateCredentials, getUserAndPlaylists, getTracks
 };
 module.exports = exports;
 

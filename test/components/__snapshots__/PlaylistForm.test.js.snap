@@ -30,6 +30,11 @@ exports[`<PlaylistForm/> createPlaylistAndAddTracks 1`] = `
   >
     <InputGroup
       bsClass="input-group"
+      style={
+        Object {
+          "maxWidth": 250,
+        }
+      }
     >
       <InputGroupAddon
         bsClass="input-group-addon"
@@ -53,32 +58,27 @@ exports[`<PlaylistForm/> createPlaylistAndAddTracks 1`] = `
       />
     </InputGroup>
   </FormGroup>
-  <FormGroup
-    bsClass="form-group"
+  <Button
+    active={false}
+    block={false}
+    bsClass="btn"
+    bsStyle="danger"
+    disabled={false}
+    id="crt_pl_button"
+    onClick={[Function]}
   >
-    <Button
-      active={false}
-      block={false}
-      bsClass="btn"
-      bsStyle="danger"
-      disabled={false}
-      id="crt_pl_button"
-      onClick={[Function]}
-    >
-      Create Playlist
-    </Button>
-    <Checkbox
-      bsClass="checkbox"
+    Create Playlist
+  </Button>
+  <label>
+    <input
       checked={false}
-      disabled={false}
       id="play_list_is_private"
-      inline={false}
       onChange={[Function]}
+      type="checkbox"
       value="private"
-    >
-      private ?
-    </Checkbox>
-  </FormGroup>
+    />
+    private ?
+  </label>
 </Form>
 `;
 
@@ -112,6 +112,11 @@ exports[`<PlaylistForm/> renders without crashing 1`] = `
   >
     <InputGroup
       bsClass="input-group"
+      style={
+        Object {
+          "maxWidth": 250,
+        }
+      }
     >
       <InputGroupAddon
         bsClass="input-group-addon"
@@ -135,32 +140,27 @@ exports[`<PlaylistForm/> renders without crashing 1`] = `
       />
     </InputGroup>
   </FormGroup>
-  <FormGroup
-    bsClass="form-group"
+  <Button
+    active={false}
+    block={false}
+    bsClass="btn"
+    bsStyle="danger"
+    disabled={true}
+    id="crt_pl_button"
+    onClick={[Function]}
   >
-    <Button
-      active={false}
-      block={false}
-      bsClass="btn"
-      bsStyle="danger"
-      disabled={true}
-      id="crt_pl_button"
-      onClick={[Function]}
-    >
-      Create Playlist
-    </Button>
-    <Checkbox
-      bsClass="checkbox"
+    Create Playlist
+  </Button>
+  <label>
+    <input
       checked={false}
-      disabled={false}
       id="play_list_is_private"
-      inline={false}
       onChange={[Function]}
+      type="checkbox"
       value="private"
-    >
-      private ?
-    </Checkbox>
-  </FormGroup>
+    />
+    private ?
+  </label>
 </Form>
 `;
 
@@ -194,6 +194,11 @@ exports[`<PlaylistForm/> start_click 1`] = `
   >
     <InputGroup
       bsClass="input-group"
+      style={
+        Object {
+          "maxWidth": 250,
+        }
+      }
     >
       <InputGroupAddon
         bsClass="input-group-addon"
@@ -217,31 +222,26 @@ exports[`<PlaylistForm/> start_click 1`] = `
       />
     </InputGroup>
   </FormGroup>
-  <FormGroup
-    bsClass="form-group"
+  <Button
+    active={false}
+    block={false}
+    bsClass="btn"
+    bsStyle="danger"
+    disabled={false}
+    id="crt_pl_button"
+    onClick={[Function]}
   >
-    <Button
-      active={false}
-      block={false}
-      bsClass="btn"
-      bsStyle="danger"
-      disabled={false}
-      id="crt_pl_button"
-      onClick={[Function]}
-    >
-      Create Playlist
-    </Button>
-    <Checkbox
-      bsClass="checkbox"
+    Create Playlist
+  </Button>
+  <label>
+    <input
       checked={false}
-      disabled={false}
       id="play_list_is_private"
-      inline={false}
       onChange={[Function]}
+      type="checkbox"
       value="private"
-    >
-      private ?
-    </Checkbox>
-  </FormGroup>
+    />
+    private ?
+  </label>
 </Form>
 `;

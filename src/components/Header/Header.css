@@ -8,6 +8,7 @@
     color: white;
     background: #030049 url(baner.png) no-repeat center;
     margin-bottom: 10px;
+    min-width: 700px;
 }
 .title-header {
     margin: 10px 0 20px;
