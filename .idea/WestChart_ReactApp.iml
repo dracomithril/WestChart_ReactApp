@@ -20,9 +20,6 @@
     <orderEntry type="library" name="jest-DefinitelyTyped" level="application" />
     <orderEntry type="library" name="sinon-DefinitelyTyped" level="application" />
     <orderEntry type="library" name="react-dom-DefinitelyTyped" level="application" />
-    <orderEntry type="library" name="prop-types-DefinitelyTyped" level="application" />
-    <orderEntry type="library" name="react-bootstrap-DefinitelyTyped" level="application" />
-    <orderEntry type="library" name="winston-DefinitelyTyped" level="application" />
     <orderEntry type="library" name="express-DefinitelyTyped" level="application" />
     <orderEntry type="library" name="mongodb-DefinitelyTyped" level="application" />
   </component>
