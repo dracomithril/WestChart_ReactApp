@@ -7,7 +7,9 @@ let showDays = 7;
 let _ = require('lodash');
 const action_types = require('./action_types');
 let map_user = (response) => {
-    let isGroupAdmin = response.groups.data.filter((elem) => elem.id === '1707149242852457' && elem.administrator === true);
+    let isGroupAdmin = response.groups.data
+            .filter((elem) => elem.id === '1707149242852457' && elem.administrator === true)
+            .length > 0;
     return {
         accessToken: response.accessToken,
         email: response.email,
@@ -21,6 +23,23 @@ let map_user = (response) => {
         isGroupAdmin: isGroupAdmin
     };
 };
+
+
+const user = (state = {}, action) => {
+    switch (action.type) {
+        case action_types.UPDATE_USER:
+            const response = action.response;
+            if (!response.error) {
+                return map_user(response);
+            } else {
+                console.error('login error.');
+                console.error(response.error);
+                return state;
+            }
+        default:
+            return state;
+    }
+};
 const create_control = (control, action) => {
     if (control.id === action.id) {
         switch (action.type) {
@@ -33,22 +52,6 @@ const create_control = (control, action) => {
         }
     } else {
         return control;
-    }
-};
-
-const user = (state = {}, action) => {
-    switch (action.type) {
-        case action_types.UPDATE_USER:
-            const response = action.response;
-            if (!response.error) {
-                return map_user(response);
-            } else {
-                console.error('login error.');
-                console.error(response.error);
-                break;
-            }
-        default:
-            return state;
     }
 };
 const sp_user = (state = {}, action) => {
@@ -134,10 +137,6 @@ const sp_playlist_name = (state = '', action) => {
 const last_update = (state = '', action) => {
     return action.type === action_types.UPDATE_LAST_UPDATE ? action.date : state;
 };
-const show_wait = (state = false, action) => {
-    return action.type === action_types.CHANGE_SHOW_WAIT ? action.show : state;
-};
-
 const start_date = (state = moment(), action) => {
     return action.type === action_types.UPDATE_START_TIME ? action.date : state;
 };
@@ -147,6 +146,10 @@ const since = (state = '', action) => {
 const until = (state = '', action) => {
     return action.type === action_types.UPDATE_UNTIL ? action.date : state;
 };
+const show_wait = (state = false, action) => {
+    return action.type === action_types.CHANGE_SHOW_WAIT ? action.show : state;
+};
+
 const songs_per_day = (state = 2, action) => {
     return action.type === action_types.UPDATE_SONGS_PER_DAY ? action.days : state;
 };
@@ -167,7 +170,7 @@ const filters = (state = {}, action) => {
 const errors = (state = [], action) => {
     switch (action.type) {
         case action_types.ADD_ERROR:
-            return _.takeRight([action.error, ...state],3);
+            return _.takeRight([action.error, ...state], 3);
         case action_types.CLEAR_ERRORS:
             return [];
         default:
@@ -180,7 +183,7 @@ const isPlaylistPrivate = (state = false, action) => {
 const sp_playlist_info = (state = {url: null, pl_name: ''}, action) => {
     return action.type === action_types.UPDATE_PLAYLIST_INFO ? action.value : state;
 };
-const hasAcCookie= (state = false, action) => {
+const hasAcCookie = (state = false, action) => {
     return action.type === action_types.TOGGLE_HAS_COOKIE ? action.value : state;
 };
 let reducers = {
