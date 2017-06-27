@@ -111,7 +111,7 @@ const search_list = (state = [], action) => {
  */
 const enable_until = (state = false, action) => {
     return action.type === action_types.TOGGLE_ENABLE_UNTIL ? action.checked : state;
-}
+};
 const sp_playlist_name = (state = '', action) => {
     return action.type === action_types.UPDATE_PLAYLIST_NAME ? action.value : state;
 };

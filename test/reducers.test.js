@@ -19,14 +19,14 @@ describe('[reducers]', function () {
             const date = "2017-06-16T19:54:25.672Z";
             const state = '';
             Object.freeze(state);
-            let resp = reducers.last_update(state, {type: action_types.UPDATE_LAST_UPDATE, date: date})
+            let resp = reducers.last_update(state, {type: action_types.UPDATE_LAST_UPDATE, date: date});
             expect(resp).toBe(date);
         });
         it('should return current state if type don\'t match', function () {
             const date = "2017-06-16T19:54:25.672Z";
             const state = undefined;
             Object.freeze(state);
-            let resp = reducers.last_update(state, {type: action_types.TOGGLE_HAS_COOKIE, date: date})
+            let resp = reducers.last_update(state, {type: action_types.TOGGLE_HAS_COOKIE, date: date});
             expect(resp).toBe('');
         });
         //todo  improve to check if it's date string
@@ -36,14 +36,14 @@ describe('[reducers]', function () {
             const show_wait = false;
             const state = true;
             Object.freeze(state);
-            let resp = reducers.show_wait(state, {type: action_types.CHANGE_SHOW_WAIT, show: show_wait})
+            let resp = reducers.show_wait(state, {type: action_types.CHANGE_SHOW_WAIT, show: show_wait});
             expect(resp).toBe(show_wait);
         });
         it('should return current state if type don\'t match', function () {
             const date = "zzz";
             const state = undefined;
             Object.freeze(state);
-            let resp = reducers.show_wait(state, {type: action_types.TOGGLE_HAS_COOKIE, show: date})
+            let resp = reducers.show_wait(state, {type: action_types.TOGGLE_HAS_COOKIE, show: date});
             expect(resp).toBe(false);
         });
     });
@@ -53,7 +53,7 @@ describe('[reducers]', function () {
             const date = "2017-06-16T19:54:25.672Z";
             const state = new Date('2017-06-06');
             Object.freeze(state);
-            let resp = reducers.start_date(state, {type: action_types.UPDATE_START_TIME, date: date})
+            let resp = reducers.start_date(state, {type: action_types.UPDATE_START_TIME, date: date});
             expect(resp).toBe(date);
         });
         it('should return current state if type don\'t match', function () {
@@ -69,14 +69,14 @@ describe('[reducers]', function () {
             const date = "2017-06-16T19:54:25.672Z";
             const state = '';
             Object.freeze(state);
-            let resp = reducers.since(state, {type: action_types.UPDATE_SINCE, date: date})
+            let resp = reducers.since(state, {type: action_types.UPDATE_SINCE, date: date});
             expect(resp).toBe(date);
         });
         it('should return current state if type don\'t match', function () {
             const date = "2017-06-16T19:54:25.672Z";
             const state = undefined;
             Object.freeze(state);
-            let resp = reducers.since(state, {type: action_types.TOGGLE_HAS_COOKIE, date: date})
+            let resp = reducers.since(state, {type: action_types.TOGGLE_HAS_COOKIE, date: date});
             expect(resp).toBe('');
         });
         //todo  improve to check if it's date string
@@ -86,14 +86,14 @@ describe('[reducers]', function () {
             const date = "2017-06-16T19:54:25.672Z";
             const state = '';
             Object.freeze(state);
-            let resp = reducers.until(state, {type: action_types.UPDATE_UNTIL, date: date})
+            let resp = reducers.until(state, {type: action_types.UPDATE_UNTIL, date: date});
             expect(resp).toBe(date);
         });
         it('should return current state if type don\'t match', function () {
             const date = "2017-06-16T19:54:25.672Z";
             const state = undefined;
             Object.freeze(state);
-            let resp = reducers.until(state, {type: action_types.TOGGLE_HAS_COOKIE, date: date})
+            let resp = reducers.until(state, {type: action_types.TOGGLE_HAS_COOKIE, date: date});
             expect(resp).toBe('');
         });
         //todo  improve to check if it's date string
