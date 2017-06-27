@@ -187,5 +187,139 @@ describe('[reducers]', function () {
             expect(resp).toEqual(result);
         });
     });
+    describe('filters', function () {
+        it('should return initialized state', function () {
+            const action = {};
+            const state = undefined;
+            const result = reducers.filters(state, action);
+            const expected = {
+                "add_control": {"checked": true, "days": 7, "id": "add"},
+                "create_control": {"checked": false, "days": 7, "id": "create"},
+                "less_control": {"checked": false, "days": 15, "id": "less"},
+                "more_control": {"checked": false, "days": 0, "id": "more"},
+                "update_control": {"checked": false, "days": 7, "id": "update"},
+                "woc_control": {"checked": true, "id": "woc_cb"}
+            };
+            expect(result).toEqual(expected)
+        });
+        it('should only change selected action control [UPDATE_DAYS]', function () {
+            const action = {
+                type: action_types.UPDATE_DAYS,
+                id: "add",
+                value: 9
+            };
+            const state = undefined;
+            const result = reducers.filters(state, action);
+            const expected = {
+                "add_control": {"checked": true, "days": 9, "id": "add"},
+                "create_control": {"checked": false, "days": 7, "id": "create"},
+                "less_control": {"checked": false, "days": 15, "id": "less"},
+                "more_control": {"checked": false, "days": 0, "id": "more"},
+                "update_control": {"checked": false, "days": 7, "id": "update"},
+                "woc_control": {"checked": true, "id": "woc_cb"}
+            };
+            expect(result).toEqual(expected)
+        });
+        it('should only change selected action control [TOGGLE_FILTER]', function () {
+            const action = {
+                type: action_types.TOGGLE_FILTER,
+                id: "less",
+                checked: true
+            };
+            const state = {
+                "add_control": {"checked": true, "days": 9, "id": "add"},
+                "create_control": {"checked": false, "days": 7, "id": "create"},
+                "less_control": {"checked": false, "days": 15, "id": "less"},
+                "more_control": {"checked": false, "days": 0, "id": "more"},
+                "update_control": {"checked": false, "days": 7, "id": "update"},
+                "woc_control": {"checked": true, "id": "woc_cb"}
+            };
+            const result = reducers.filters(state, action);
+            const expected = {
+                "add_control": {"checked": true, "days": 9, "id": "add"},
+                "create_control": {"checked": false, "days": 7, "id": "create"},
+                "less_control": {"checked": true, "days": 15, "id": "less"},
+                "more_control": {"checked": false, "days": 0, "id": "more"},
+                "update_control": {"checked": false, "days": 7, "id": "update"},
+                "woc_control": {"checked": true, "id": "woc_cb"}
+            };
+            expect(result).toEqual(expected)
+        });
+        it('should return current state if type don\'t match', function () {
+            const action = {
+                type: action_types.UPDATE_USER,
+                id: "less",
+                checked: true
+            };
+            const state = {
+                "add_control": {"checked": true, "days": 9, "id": "add"},
+                "create_control": {"checked": false, "days": 7, "id": "create"},
+                "less_control": {"checked": false, "days": 15, "id": "less"},
+                "more_control": {"checked": false, "days": 0, "id": "more"},
+                "update_control": {"checked": false, "days": 7, "id": "update"},
+                "woc_control": {"checked": true, "id": "woc_cb"}
+            };
+
+            const result = reducers.filters(state, action);
+
+            const expected = {
+                "add_control": {"checked": true, "days": 9, "id": "add"},
+                "create_control": {"checked": false, "days": 7, "id": "create"},
+                "less_control": {"checked": false, "days": 15, "id": "less"},
+                "more_control": {"checked": false, "days": 0, "id": "more"},
+                "update_control": {"checked": false, "days": 7, "id": "update"},
+                "woc_control": {"checked": true, "id": "woc_cb"}
+            };
+            expect(result).toEqual(expected)
+        });
+    });
+    describe('sp_user', function () {
+        it('should be able to update sp_user', function () {
+            const state = {};
+            const action = {
+                type: action_types.UPDATE_SP_USER,
+                access_token: 'asdf',
+                refresh_token: 'qwer',
+                user: {
+                    id: 'zebra',
+                    uri: 'spotify::uri::zebra'
+                }
+            };
+
+            const result = reducers.sp_user(state, action);
+
+            const expected = {
+                access_token: 'asdf',
+                refresh_token: 'qwer',
+                id: 'zebra',
+                uri: 'spotify::uri::zebra'
+            };
+            expect(result).toEqual(expected)
+        });
+        it('should be able to update sp_user playlist', function () {
+            const state = {
+                access_token: 'asdf',
+                refresh_token: 'qwer',
+                id: 'zebra',
+                uri: 'spotify::uri::zebra'
+            };
+            Object.freeze(state);
+            const action = {
+                type: action_types.UPDATE_SP_USER_PLAYLIST,
+                playlists: [{}, {}]
+            };
+
+            const result = reducers.sp_user(state, action);
+
+            const expected = {
+                access_token: 'asdf',
+                refresh_token: 'qwer',
+                id: 'zebra',
+                uri: 'spotify::uri::zebra',
+                playlists: [{}, {}]
+            };
+            expect(result).toEqual(expected)
+        });
+    });
 
 });

@@ -40,20 +40,7 @@ const user = (state = {}, action) => {
             return state;
     }
 };
-const create_control = (control, action) => {
-    if (control.id === action.id) {
-        switch (action.type) {
-            case action_types.TOGGLE_FILTER:
-                return Object.assign({}, control, {checked: action.checked});
-            case action_types.UPDATE_DAYS:
-                return Object.assign({}, control, {days: action.value});
-            default:
-                return control;
-        }
-    } else {
-        return control;
-    }
-};
+
 const sp_user = (state = {}, action) => {
     switch (action.type) {
         case action_types.UPDATE_SP_USER:
@@ -157,11 +144,32 @@ const show_last = (state = 31, action) => {
     return action.type === action_types.UPDATE_SHOW_LAST ? action.days : state;
 };
 
+/**
+ *
+ * @param control {Object}
+ * @param action {Action}
+ * @returns {*}
+ */
+const create_control = (control, action) => {
+    if (control.id === action.id) {
+        switch (action.type) {
+            case action_types.TOGGLE_FILTER:
+                return Object.assign({}, control, {checked: action.checked});
+            case action_types.UPDATE_DAYS:
+                return Object.assign({}, control, {days: action.value});
+            default:
+                return control;
+        }
+    } else {
+        return control;
+    }
+};
 const filters = (state = {}, action) => {
     return {
         add_control: create_control(state.add_control || {checked: true, id: 'add', days: showDays}, action),
         create_control: create_control(state.create_control || {checked: false, id: 'create', days: showDays}, action),
         update_control: create_control(state.update_control || {checked: false, id: 'update', days: showDays}, action),
+        //todo less & more should be count or value it shows how many reaction was for post
         less_control: create_control(state.less_control || {checked: false, id: 'less', days: 15}, action),
         more_control: create_control(state.more_control || {checked: false, id: 'more', days: 0}, action),
         woc_control: create_control(state.woc_control || {checked: true, id: 'woc_cb'}, action)
