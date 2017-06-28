@@ -69,7 +69,7 @@ class utils {
         return cookies_name;
     };
 
-    static get     woc_string() {
+    static get woc_string() {
         return woc_string
     };
 
@@ -81,21 +81,21 @@ class utils {
         return filters_def.subtractDaysFromDate;
     }
 
-    static writeUserData(fb_user={},sp_user={}) {
-        const data={
-            sp_id:sp_user.id,
-            sp_name:sp_user.name,
-            fb_name:fb_user.name,
-            fb_email:fb_user.email,
-            fb_id:fb_user.id
+    static writeUserData(fb_user = {}, sp_user = {}) {
+        const data = {
+            sp_id: sp_user.id,
+            sp_name: sp_user.name,
+            fb_name: fb_user.name,
+            fb_email: fb_user.email,
+            fb_id: fb_user.id
         };
-        var data1 = new FormData();
-        data1.append( "json", JSON.stringify( data ) );
-        fetch('/api/user/login/' + fb_user.id, {method: 'PUT', body: JSON.stringify( data ),headers: {
-            'Accept': 'application/json',
-            'Content-Type': 'application/json'
-        },}).then(res => {
-            console.log('zzzz')
+        fetch('/api/user/login/' + fb_user.id, {
+            method: 'PUT', body: JSON.stringify(data), headers: {
+                'Accept': 'application/json',
+                'Content-Type': 'application/json'
+            },
+        }).then(res => {
+            console.log('data sanded to database '+res.status)
         });
     }
 

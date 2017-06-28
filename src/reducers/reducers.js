@@ -7,7 +7,9 @@ let showDays = 7;
 let _ = require('lodash');
 const action_types = require('./action_types');
 let map_user = (response) => {
-    let isGroupAdmin = response.groups.data.filter((elem) => elem.id === '1707149242852457' && elem.administrator === true);
+    let isGroupAdmin = response.groups.data
+            .filter((elem) => elem.id === '1707149242852457' && elem.administrator === true)
+            .length > 0;
     return {
         accessToken: response.accessToken,
         email: response.email,
@@ -21,20 +23,7 @@ let map_user = (response) => {
         isGroupAdmin: isGroupAdmin
     };
 };
-const create_control = (control, action) => {
-    if (control.id === action.id) {
-        switch (action.type) {
-            case action_types.TOGGLE_FILTER:
-                return Object.assign({}, control, {checked: action.checked});
-            case action_types.UPDATE_DAYS:
-                return Object.assign({}, control, {days: action.value});
-            default:
-                return control;
-        }
-    } else {
-        return control;
-    }
-};
+
 
 const user = (state = {}, action) => {
     switch (action.type) {
@@ -45,12 +34,13 @@ const user = (state = {}, action) => {
             } else {
                 console.error('login error.');
                 console.error(response.error);
-                break;
+                return state;
             }
         default:
             return state;
     }
 };
+
 const sp_user = (state = {}, action) => {
     switch (action.type) {
         case action_types.UPDATE_SP_USER:
@@ -121,7 +111,7 @@ const search_list = (state = [], action) => {
  */
 const enable_until = (state = false, action) => {
     return action.type === action_types.TOGGLE_ENABLE_UNTIL ? action.checked : state;
-}
+};
 const sp_playlist_name = (state = '', action) => {
     return action.type === action_types.UPDATE_PLAYLIST_NAME ? action.value : state;
 };
@@ -134,10 +124,6 @@ const sp_playlist_name = (state = '', action) => {
 const last_update = (state = '', action) => {
     return action.type === action_types.UPDATE_LAST_UPDATE ? action.date : state;
 };
-const show_wait = (state = false, action) => {
-    return action.type === action_types.CHANGE_SHOW_WAIT ? action.show : state;
-};
-
 const start_date = (state = moment(), action) => {
     return action.type === action_types.UPDATE_START_TIME ? action.date : state;
 };
@@ -147,6 +133,10 @@ const since = (state = '', action) => {
 const until = (state = '', action) => {
     return action.type === action_types.UPDATE_UNTIL ? action.date : state;
 };
+const show_wait = (state = false, action) => {
+    return action.type === action_types.CHANGE_SHOW_WAIT ? action.show : state;
+};
+
 const songs_per_day = (state = 2, action) => {
     return action.type === action_types.UPDATE_SONGS_PER_DAY ? action.days : state;
 };
@@ -154,11 +144,32 @@ const show_last = (state = 31, action) => {
     return action.type === action_types.UPDATE_SHOW_LAST ? action.days : state;
 };
 
+/**
+ *
+ * @param control {Object}
+ * @param action {Action}
+ * @returns {*}
+ */
+const create_control = (control, action) => {
+    if (control.id === action.id) {
+        switch (action.type) {
+            case action_types.TOGGLE_FILTER:
+                return Object.assign({}, control, {checked: action.checked});
+            case action_types.UPDATE_DAYS:
+                return Object.assign({}, control, {days: action.value});
+            default:
+                return control;
+        }
+    } else {
+        return control;
+    }
+};
 const filters = (state = {}, action) => {
     return {
         add_control: create_control(state.add_control || {checked: true, id: 'add', days: showDays}, action),
         create_control: create_control(state.create_control || {checked: false, id: 'create', days: showDays}, action),
         update_control: create_control(state.update_control || {checked: false, id: 'update', days: showDays}, action),
+        //todo less & more should be count or value it shows how many reaction was for post
         less_control: create_control(state.less_control || {checked: false, id: 'less', days: 15}, action),
         more_control: create_control(state.more_control || {checked: false, id: 'more', days: 0}, action),
         woc_control: create_control(state.woc_control || {checked: true, id: 'woc_cb'}, action)
@@ -167,7 +178,7 @@ const filters = (state = {}, action) => {
 const errors = (state = [], action) => {
     switch (action.type) {
         case action_types.ADD_ERROR:
-            return _.takeRight([action.error, ...state],3);
+            return _.takeRight([action.error, ...state], 3);
         case action_types.CLEAR_ERRORS:
             return [];
         default:
@@ -180,7 +191,7 @@ const isPlaylistPrivate = (state = false, action) => {
 const sp_playlist_info = (state = {url: null, pl_name: ''}, action) => {
     return action.type === action_types.UPDATE_PLAYLIST_INFO ? action.value : state;
 };
-const hasAcCookie= (state = false, action) => {
+const hasAcCookie = (state = false, action) => {
     return action.type === action_types.TOGGLE_HAS_COOKIE ? action.value : state;
 };
 let reducers = {
