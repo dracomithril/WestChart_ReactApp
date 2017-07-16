@@ -10,9 +10,6 @@ import "./LoginAlert.css";
 import {loginToSpotify, validateCredentials} from "./../../spotify_utils";
 // const {loginToSpotify, validateCredentials} = require("./spotify_utils");
 const action_types = require('./../../reducers/action_types');
-const {cookies_name} = require('./../../utils');
-const Cookies = require('cookies-js');
-const querystring = require('querystring');
 
 export default class LoginAlert extends React.Component {
     /*istanbul ignore next*/
@@ -21,13 +18,6 @@ export default class LoginAlert extends React.Component {
         const state = store.getState();
         const {hasAcCookie} = state;
         console.log('component LoginAlert did mount');
-
-        const setCookies = function (access_token, refresh_token) {
-            Cookies.set('wcs_sp_user_ac', access_token, {
-                expires: 3600
-            });
-            Cookies.set(cookies_name.refresh_token, refresh_token);
-        };
         let update_user = function (res) {
             store.dispatch({
                 type: action_types.UPDATE_SP_USER,
@@ -35,19 +25,12 @@ export default class LoginAlert extends React.Component {
                 access_token: res.access_token
             });
         };
-        const {location, history} = this.props;
-        const {search} = location;
-        if (search.includes('access_token')) {
-            const query = querystring.parse(search.substr(1, search.length));
-            validateCredentials(query.access_token).then(res => {
-                setCookies(query.access_token, query.access_token);
-                update_user(res);
-                history.push('')
+        if (!hasAcCookie) {
+            loginToSpotify().then((access_token) => {
+                validateCredentials(access_token).then(res => {
+                    update_user(res);
+                });
             });
-        } else if (hasAcCookie) {
-            console.log('we have cookie');
-        } else {
-            loginToSpotify();
         }
     }
 
