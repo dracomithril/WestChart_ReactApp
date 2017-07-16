@@ -1,10 +1,10 @@
 {
   "name": "WestChart_ReactApp",
-  "version": "0.8.8",
+  "version": "0.8.9",
   "private": true,
   "engines": {
     "node": "6.11.0",
-    "npm": "5.0.3"
+    "npm": "5.3.0"
   },
   "devDependencies": {
     "autoprefixer": "7.0.1",

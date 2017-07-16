@@ -62,6 +62,7 @@ const sp_user = (state = {}, action) => {
 const chart = (state = [], action) => {
     switch (action.type) {
         case action_types.UPDATE_CHART:
+            //todo change to [...action.chart]
             return action.chart;
         case action_types.TOGGLE_SELECTED:
             let l = _.clone(state);
