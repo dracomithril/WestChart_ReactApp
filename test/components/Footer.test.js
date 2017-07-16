@@ -11,6 +11,7 @@ import configureMockStore from 'redux-mock-store';
 const mockStore = configureMockStore([]);
 describe('<Footer/>', () => {
     it('renders without crashing', () => {
+        process.env.npm_package_version="0.6.3";
         const store = mockStore({});
         const wrapper = shallow(
             <Footer />, {
