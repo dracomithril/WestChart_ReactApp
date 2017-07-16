@@ -234,6 +234,7 @@ describe('[reducers]', function () {
                 "update_control": {"checked": false, "days": 7, "id": "update"},
                 "woc_control": {"checked": true, "id": "woc_cb"}
             };
+            Object.freeze(state);
             const result = reducers.filters(state, action);
             const expected = {
                 "add_control": {"checked": true, "days": 9, "id": "add"},
@@ -259,7 +260,7 @@ describe('[reducers]', function () {
                 "update_control": {"checked": false, "days": 7, "id": "update"},
                 "woc_control": {"checked": true, "id": "woc_cb"}
             };
-
+            Object.freeze(state);
             const result = reducers.filters(state, action);
 
             const expected = {
@@ -276,6 +277,7 @@ describe('[reducers]', function () {
     describe('sp_user', function () {
         it('should be able to update sp_user', function () {
             const state = {};
+            Object.freeze(state);
             const action = {
                 type: action_types.UPDATE_SP_USER,
                 access_token: 'asdf',
@@ -319,6 +321,148 @@ describe('[reducers]', function () {
                 playlists: [{}, {}]
             };
             expect(result).toEqual(expected)
+        });
+    });
+    describe('errors', function () {
+        it('should be able to add errors to list', function () {
+            const state = undefined;
+            Object.freeze(state);
+            const action = {
+                type: action_types.ADD_ERROR,
+                error: "NEW_ERROR"
+            };
+
+            const result = reducers.errors(state, action);
+
+            const expected = [action.error];
+            expect(result).toEqual(expected)
+        });
+        it('should be able to clear errors', function () {
+            const state = ["Error_1", "Error_2"];
+            Object.freeze(state);
+            const action = {
+                type: action_types.CLEAR_ERRORS
+            };
+
+            const result = reducers.errors(state, action);
+
+            const expected = [];
+            expect(result).toEqual(expected)
+        });
+        it('should return default on diferent acrion', function () {
+            const state = ["Error_1", "Error_2"];
+            Object.freeze(state);
+            const action = {
+                type: action_types.TOGGLE_FILTER
+            };
+
+            const result = reducers.errors(state, action);
+
+            expect(result).toEqual(state)
+        });
+
+
+    });
+    describe('isPlaylistPrivate', function () {
+        it("should replace current state by new value", function () {
+
+            const state = undefined;
+            Object.freeze(state);
+            const action = {type: action_types.TOGGLE_IS_PRIVATE, value: true};
+            let resp = reducers.isPlaylistPrivate(state, action);
+            expect(resp).toBe(true);
+        });
+        it('should return current state if type don\'t match', function () {
+            const state = false;
+            Object.freeze(state);
+            const action = {type: action_types.TOGGLE_FILTER, value: true};
+            let resp = reducers.isPlaylistPrivate(state, action);
+            expect(resp).toBe(state);
+        });
+    });
+    describe('sp_playlist_info', function () {
+        it("should replace current state by new value", function () {
+
+            const state = undefined;
+            Object.freeze(state);
+            const action = {type: action_types.UPDATE_PLAYLIST_INFO, value: {url: "new_url", pl_name: "new_playlist"}};
+            let resp = reducers.sp_playlist_info(state, action);
+            expect(resp).toBe(action.value);
+        });
+        it('should return current state if type don\'t match', function () {
+            const state = {url: "url", pl_name: "playlist"};
+            Object.freeze(state);
+            const action = {type: action_types.TOGGLE_FILTER, value: true};
+            let resp = reducers.sp_playlist_info(state, action);
+            expect(resp).toBe(state);
+        });
+    });
+    describe('hasAcCookie', function () {
+        it("should replace current state by new value", function () {
+
+            const state = undefined;
+            Object.freeze(state);
+            const action = {type: action_types.TOGGLE_HAS_COOKIE, value: true};
+            let resp = reducers.hasAcCookie(state, action);
+            expect(resp).toBe(true);
+        });
+        it('should return current state if type don\'t match', function () {
+            const state = false;
+            Object.freeze(state);
+            const action = {type: action_types.TOGGLE_FILTER, value: true};
+            let resp = reducers.hasAcCookie(state, action);
+            expect(resp).toBe(state);
+        });
+    });
+    describe('enable_until', function () {
+        it("should replace current state by new value", function () {
+
+            const state = undefined;
+            Object.freeze(state);
+            const action = {type: action_types.TOGGLE_ENABLE_UNTIL, checked: true};
+            let resp = reducers.enable_until(state, action);
+            expect(resp).toBe(true);
+        });
+        it('should return current state if type don\'t match', function () {
+            const state = false;
+            Object.freeze(state);
+            const action = {type: action_types.TOGGLE_FILTER, value: true};
+            let resp = reducers.enable_until(state, action);
+            expect(resp).toBe(state);
+        });
+    });
+    describe('sp_playlist_name', function () {
+        it("should replace current state by new value", function () {
+
+            const state = undefined;
+            Object.freeze(state);
+            const action = {type: action_types.UPDATE_PLAYLIST_NAME, value: "new_Name"};
+            let resp = reducers.sp_playlist_name(state, action);
+            expect(resp).toBe(action.value);
+        });
+        it('should return current state if type don\'t match', function () {
+            const state = "name1";
+            Object.freeze(state);
+            const action = {type: action_types.TOGGLE_FILTER, value: "zebra"};
+            let resp = reducers.sp_playlist_name(state, action);
+            expect(resp).toBe(state);
+        });
+    });
+    describe('list_sort', function () {
+        it("should replace current state by new value", function () {
+
+            const state = undefined;
+            Object.freeze(state);
+            const action = {type: action_types.UPDATE_LIST_SORT, sort: "new_Name"};
+            let resp = reducers.list_sort(state, action);
+            expect(resp).toBe(action.sort);
+        });
+        it('should return current state if type don\'t match', function () {
+            const state = "reaction";
+            Object.freeze(state);
+            const action = {type: action_types.TOGGLE_FILTER, value: "zebra"};
+            let resp = reducers.list_sort(state, action);
+            expect(resp).toBe(state);
         });
     });
 
