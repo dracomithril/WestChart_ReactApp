@@ -129,16 +129,35 @@ const searchForMusic = function ({artist, title, search_id}, store) {
 };
 
 const loginToSpotify = function () {
-    return fetch('/api/login')
+    return fetch('/api/login', {credentials: 'include'})
         .then((response) => {
             return response.text()
         }).then((path) => {
-            const urlObj = url.parse(path);
-            const query = querystring.parse(urlObj.query);
-            Cookies.set('spotify_auth_state', query.state);
-            console.log(path);
-            window.location.assign(path);
-            return Promise.resolve();
+            return new Promise((resolve, reject) => {
+                // const urlObj = url.parse(path);
+
+                const signinWin = window.open(path, "SignIn", "width=780,height=410,toolbar=0,scrollbars=0,status=0,resizable=0,location=0,menuBar=0");
+                // setTimeout(CheckLoginStatus, 2000);
+                signinWin.onbeforeunload = function () {
+                    console.log('closed');
+                };
+                let counter = 0;
+                let int = setInterval(() => {
+                    const ac = Cookies.get('wcs_sp_user_ac');
+                    if (ac) {
+                        clearInterval(int);
+                        console.log(ac);
+                        console.log(signinWin.status);
+                       return resolve(ac);
+                    }
+                    if (counter === 5) {
+                        clearInterval(int);
+                        return reject(new Error('to many retries'));
+                    }
+                    counter++;
+                }, 200);
+                signinWin.focus();
+            })
         }).catch((err) => {
             console.log(err);
         })
