@@ -7,9 +7,9 @@ import {Button, Jumbotron} from "react-bootstrap";
 import FacebookLogin from "react-facebook-login";
 import "./LoginAlert.css";
 // const notGroupAdmin = "Sorry you are not admin of this group.";
-import {loginToSpotify, validateCredentials} from "./../../spotify_utils";
-// const {loginToSpotify, validateCredentials} = require("./spotify_utils");
+import {loginToSpotify, setATInterval, validateCredentials} from "./../../spotify_utils";
 const action_types = require('./../../reducers/action_types');
+const spotify_login_uri = '/api/spotify/login_r';
 
 export default class LoginAlert extends React.Component {
     /*istanbul ignore next*/
@@ -18,19 +18,14 @@ export default class LoginAlert extends React.Component {
         const state = store.getState();
         const {hasAcCookie} = state;
         console.log('component LoginAlert did mount');
-        let update_user = function (res) {
-            store.dispatch({
-                type: action_types.UPDATE_SP_USER,
-                user: res.user,
-                access_token: res.access_token
-            });
-        };
         if (!hasAcCookie) {
-            loginToSpotify().then((access_token) => {
-                validateCredentials(access_token).then(res => {
-                    update_user(res);
+            loginToSpotify().then(validateCredentials).then((res) => {
+                store.dispatch({
+                    type: action_types.UPDATE_SP_USER,
+                    user: res.user,
+                    access_token: res.access_token
                 });
-            });
+            }).catch((e) => console.warn(e));
         }
     }
 
@@ -42,6 +37,12 @@ export default class LoginAlert extends React.Component {
     render() {
         const {store} = this.context;
         const {user, sp_user} = store.getState();
+        let url;
+        if (process.env.NODE_ENV === 'production') {
+            url = spotify_login_uri;
+        } else {
+            url = `http://localhost:3001${spotify_login_uri}`
+        }
         return (<Jumbotron bsClass="login-info">
             <h4>{'To start working witch us you need to login to facebook and spotify.'}<i className="fa fa-heart"/>
             </h4>
@@ -59,9 +60,18 @@ export default class LoginAlert extends React.Component {
                 version="v2.8"
             />}
             {sp_user.id === undefined &&
-            <Button className="btn btn-social btn-spotify" onClick={loginToSpotify}><i className="fa fa-spotify"/>Login
-                to
-                spotify</Button>}
+            <Button className="btn btn-social btn-spotify" onClick={() => {
+                window.open(url, '_blank', "width=780,height=410,toolbar=0,scrollbars=0,status=0,resizable=0,location=0,menuBar=0");
+                setATInterval().then(validateCredentials).then(res => {
+                    store.dispatch({
+                        type: action_types.UPDATE_SP_USER,
+                        user: res.user,
+                        access_token: res.access_token
+                    });
+                });
+            }}>
+                <i className="fa fa-spotify"/>Login to spotify
+            </Button>}
         </Jumbotron>)
     }
 }

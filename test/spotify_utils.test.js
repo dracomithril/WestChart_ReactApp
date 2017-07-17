@@ -29,11 +29,15 @@ describe('[sp_utils]', () => {
     describe('[loginToSpotify]', function () {
         it('should be able to react for server response', function (done) {
             let fetch = sinon.stub(window, 'fetch');
-            let assign = sinon.spy(window.location, 'assign');
+            let open = sinon.stub(window, 'open');
+
+            const win = {focus:sinon.spy()};
+            open.returns(win);
             global.fetch = fetch;
 
             let CookiesMock = require('cookies-js');
-            CookiesMock.set = sinon.spy();
+            CookiesMock.get = sinon.stub();
+            CookiesMock.get.withArgs('wcs_sp_user_ac').returns('access_token');
             const resp = {
                 text: sinon.stub(),
                 json: sinon.stub()
@@ -41,21 +45,20 @@ describe('[sp_utils]', () => {
             const state = "azasaswwaadda";
             let path = `http://someurl.com/text?state=${state}`;
             resp.text.returns(Promise.resolve(path));
-            fetch.withArgs('/api/login').returns(Promise.resolve(resp));
+            fetch.withArgs('/api/spotify/login_f').returns(Promise.resolve(resp));
+
+
             return sp_utils.loginToSpotify().then(() => {
-                sinon.assert.calledOnce(assign);
-                sinon.assert.calledWith(assign, path);
-                sinon.assert.calledOnce(CookiesMock.set);
-                sinon.assert.calledWith(CookiesMock.set, sinon.match.string, sinon.match(state));
+                sinon.assert.calledOnce(CookiesMock.get);
+                sinon.assert.calledWith(CookiesMock.get, sinon.match.string);
                 window.fetch.restore();
-                window.location.assign.restore();
+                window.open.restore();
                 done();
-            })
+            });
         });
     });
     describe('[createPlaylistAndAddTracks]', function () {
         it('should react if no body from spotify', function (done) {
-
             sp_mock.createPlaylist.returns(Promise.resolve({}));
             sp_utils.createPlaylistAndAddTracks({}, '', false, []).catch(err => {
                 expect(err.message).toBe('missing body');

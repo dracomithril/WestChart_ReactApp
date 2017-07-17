@@ -46,12 +46,13 @@ let createPlaylistAndAddTracks = function (sp_user, sp_playlist_name, isPlaylist
                         else {
                             return tracks;
                         }
-                    }
+                    };
 
                     let tz = sliceCount(tracks, 100);
                     let actions = tz.map(el => spotifyApi.addTracksToPlaylist(sp_user.id, playlist_id, el));
-                    return Promise.all(actions).then(d5 => {
-                        console.log('zzzz')
+                    return Promise.all(actions).then((/*d5*/) => {
+                        // console.log(d5.length);
+                        console.log('all adding done?')
                     }).catch(e => {
                         console.error(e);
                     })
@@ -128,38 +129,39 @@ const searchForMusic = function ({artist, title, search_id}, store) {
     })
 };
 
+function setATInterval() {
+    return new Promise((resolve, reject) => {
+        let counter = 0;
+        let int = setInterval(() => {
+            const ac = Cookies.get('wcs_sp_user_ac');
+            if (ac) {
+                clearInterval(int);
+                resolve(ac);
+            }
+            console.log("counter: " + counter);
+            if (counter === 10) {
+                clearInterval(int);
+                reject(new Error('to many retries on getting access_token'))
+            }
+            counter++;
+        }, 1000);
+    });
+}
+
 const loginToSpotify = function () {
-    return fetch('/api/login', {credentials: 'include'})
+    return fetch('/api/spotify/login_f', {credentials: 'include'})
         .then((response) => {
             return response.text()
         }).then((path) => {
-            return new Promise((resolve, reject) => {
-                // const urlObj = url.parse(path);
+            const signinWin = window.open(path, '_blank', "width=780,height=410,toolbar=0,scrollbars=0,status=0,resizable=0,location=0,menuBar=0");
 
-                const signinWin = window.open(path, "SignIn", "width=780,height=410,toolbar=0,scrollbars=0,status=0,resizable=0,location=0,menuBar=0");
-                // setTimeout(CheckLoginStatus, 2000);
-                signinWin.onbeforeunload = function () {
-                    console.log('closed');
-                };
-                let counter = 0;
-                let int = setInterval(() => {
-                    const ac = Cookies.get('wcs_sp_user_ac');
-                    if (ac) {
-                        clearInterval(int);
-                        console.log(ac);
-                        console.log(signinWin.status);
-                       return resolve(ac);
-                    }
-                    if (counter === 5) {
-                        clearInterval(int);
-                        return reject(new Error('to many retries'));
-                    }
-                    counter++;
-                }, 200);
+            if (signinWin === null) {
+                alert("Sorry. To login you need to enable popups for this page or click on Login to Spotify button. Have a nice day ;) ")
+            } else {
                 signinWin.focus();
-            })
-        }).catch((err) => {
-            console.log(err);
+                return setATInterval()
+            }
+            return Promise.reject(new Error('Popup Blocked'))
         })
 };
 const refresh_auth = function (refresh_token) {
@@ -177,24 +179,22 @@ const refresh_auth = function (refresh_token) {
             console.log(err);
         })
 };
+
 /**
  *
  * @param access_token
- * @returns {Promise.<TResult>}
  */
 let validateCredentials = function (access_token) {
     spotifyApi.setAccessToken(access_token);
     return spotifyApi.getMe().then(data => {
         console.log('you logged as :', data.body.id);
         return Promise.resolve({user: data.body, access_token});
-    }).catch(e => {
-        console.log(JSON.stringify(e));
     });
 };
 
 let exports = {
     createPlaylistAndAddTracks, searchForMusic, loginToSpotify, refresh_auth,
-    validateCredentials, getUserAndPlaylists, getTracks
+    validateCredentials, getUserAndPlaylists, getTracks, setATInterval
 };
 module.exports = exports;
 

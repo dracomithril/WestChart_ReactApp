@@ -9,6 +9,7 @@ exports[`<FilteringOption/> renders without crashing ChartPresenter 1`] = `
   inline={false}
   name="date_create_control"
   onChange={[Function]}
+  title=""
 >
   created in last 
   <input
@@ -33,6 +34,7 @@ exports[`<FilteringOption/> should be able to change state of woc checkbox 1`] =
   inline={false}
   name="date_create_control"
   onChange={[Function]}
+  title=""
 >
   created in last 
   <input

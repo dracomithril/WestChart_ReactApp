@@ -4,7 +4,6 @@
 /* eslint-env node, es6 */
 const sinon =require('sinon');
 describe('[server]', function () {
-    let server;
     let expressMock={
         use:sinon.stub(),
         get:sinon.stub(),
@@ -24,10 +23,10 @@ describe('[server]', function () {
         jest.mock('express');
         let express= require('express');
         express.mockImplementation(()=>expressMock);
-        server = require('./../../server');
+         require('./../../server');
 
         sinon.assert.calledOnce(expressMock.listen);
-        sinon.assert.callCount(expressMock.get,5);
+        sinon.assert.callCount(expressMock.get,6);
         sinon.assert.callCount(expressMock.use,5);
     });
 });
