@@ -11,6 +11,7 @@ exports[`<FilteringOptions/> renders without crashing ChartPresenter 1`] = `
     id="woc_cb"
     inline={false}
     onChange={[Function]}
+    title=""
   >
     <OverlayTrigger
       defaultOverlayShown={false}

@@ -60,6 +60,7 @@ exports[`<PickYourDate/> renders without crashing 1`] = `
             inline={false}
             name="enable_until"
             onChange={[Function]}
+            title=""
           >
             Use date: 
             <t
@@ -74,19 +75,9 @@ exports[`<PickYourDate/> renders without crashing 1`] = `
               onChange={[Function]}
               onClickOutside={[Function]}
               onFocus={[Function]}
+              onKeyDown={[Function]}
               onMonthChange={[Function]}
               onSelect={[Function]}
-              popoverAttachment="top left"
-              popoverTargetAttachment="bottom left"
-              popoverTargetOffset="10px 0"
-              tetherConstraints={
-                Array [
-                  Object {
-                    "attachment": "together",
-                    "to": "window",
-                  },
-                ]
-              }
               utcOffset={120}
               withPortal={false}
             />
