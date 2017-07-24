@@ -157,7 +157,7 @@ class utils {
             .catch(err => {
                 store.dispatch({type: action_types.CHANGE_SHOW_WAIT, show: false});
                 console.error('Error in fetch chart.');
-                console.error(Object.inspect(err));
+                console.error(JSON.stringify(err, null, 4));
             });
     };
 
