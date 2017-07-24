@@ -193,12 +193,13 @@ describe('[reducers]', function () {
             const state = undefined;
             const result = reducers.filters(state, action);
             const expected = {
-                "add_control": {"checked": true, "days": 7, "id": "add"},
-                "create_control": {"checked": false, "days": 7, "id": "create"},
+                "create_control": {"checked": true, "days": 7, "id": "create"},
                 "less_control": {"checked": false, "days": 15, "id": "less"},
                 "more_control": {"checked": false, "days": 0, "id": "more"},
                 "update_control": {"checked": false, "days": 7, "id": "update"},
-                "woc_control": {"checked": true, "id": "woc_cb"}
+                "woc_control": {"checked": true, "id": "woc_cb"},
+                "westletter_control": {"checked": true, "id": "westletter_cb"}
+
             };
             expect(result).toEqual(expected)
         });
@@ -211,12 +212,12 @@ describe('[reducers]', function () {
             const state = undefined;
             const result = reducers.filters(state, action);
             const expected = {
-                "add_control": {"checked": true, "days": 9, "id": "add"},
-                "create_control": {"checked": false, "days": 7, "id": "create"},
+                "create_control": {"checked": true, "days": 7, "id": "create"},
                 "less_control": {"checked": false, "days": 15, "id": "less"},
                 "more_control": {"checked": false, "days": 0, "id": "more"},
                 "update_control": {"checked": false, "days": 7, "id": "update"},
-                "woc_control": {"checked": true, "id": "woc_cb"}
+                "woc_control": {"checked": true, "id": "woc_cb"},
+                "westletter_control": {"checked": true, "id": "westletter_cb"}
             };
             expect(result).toEqual(expected)
         });
@@ -227,22 +228,22 @@ describe('[reducers]', function () {
                 checked: true
             };
             const state = {
-                "add_control": {"checked": true, "days": 9, "id": "add"},
-                "create_control": {"checked": false, "days": 7, "id": "create"},
+                "create_control": {"checked": true, "days": 7, "id": "create"},
                 "less_control": {"checked": false, "days": 15, "id": "less"},
                 "more_control": {"checked": false, "days": 0, "id": "more"},
                 "update_control": {"checked": false, "days": 7, "id": "update"},
-                "woc_control": {"checked": true, "id": "woc_cb"}
+                "woc_control": {"checked": true, "id": "woc_cb"},
+                "westletter_control": {"checked": true, "id": "westletter_cb"}
             };
             Object.freeze(state);
             const result = reducers.filters(state, action);
             const expected = {
-                "add_control": {"checked": true, "days": 9, "id": "add"},
-                "create_control": {"checked": false, "days": 7, "id": "create"},
+                "create_control": {"checked": true, "days": 7, "id": "create"},
                 "less_control": {"checked": true, "days": 15, "id": "less"},
                 "more_control": {"checked": false, "days": 0, "id": "more"},
                 "update_control": {"checked": false, "days": 7, "id": "update"},
-                "woc_control": {"checked": true, "id": "woc_cb"}
+                "woc_control": {"checked": true, "id": "woc_cb"},
+                "westletter_control": {"checked": true, "id": "westletter_cb"}
             };
             expect(result).toEqual(expected)
         });
@@ -253,23 +254,22 @@ describe('[reducers]', function () {
                 checked: true
             };
             const state = {
-                "add_control": {"checked": true, "days": 9, "id": "add"},
-                "create_control": {"checked": false, "days": 7, "id": "create"},
+                "create_control": {"checked": true, "days": 7, "id": "create"},
                 "less_control": {"checked": false, "days": 15, "id": "less"},
                 "more_control": {"checked": false, "days": 0, "id": "more"},
                 "update_control": {"checked": false, "days": 7, "id": "update"},
-                "woc_control": {"checked": true, "id": "woc_cb"}
+                "woc_control": {"checked": true, "id": "woc_cb"},
+
             };
             Object.freeze(state);
             const result = reducers.filters(state, action);
 
             const expected = {
-                "add_control": {"checked": true, "days": 9, "id": "add"},
-                "create_control": {"checked": false, "days": 7, "id": "create"},
+                "create_control": {"checked": true, "days": 7, "id": "create"},
                 "less_control": {"checked": false, "days": 15, "id": "less"},
                 "more_control": {"checked": false, "days": 0, "id": "more"},
                 "update_control": {"checked": false, "days": 7, "id": "update"},
-                "woc_control": {"checked": true, "id": "woc_cb"}
+                "woc_control": {"checked": true, "id": "woc_cb"},"westletter_control": {"checked": true, "id": "westletter_cb"}
             };
             expect(result).toEqual(expected)
         });

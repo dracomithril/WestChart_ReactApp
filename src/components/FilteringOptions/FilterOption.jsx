@@ -34,4 +34,8 @@ export default class FilterOption extends React.Component {
 FilterOption.contextTypes = {
     store: PropTypes.object
 };
-FilterOption.propTypes = {};
+FilterOption.propTypes = {
+    control:PropTypes.object,
+    input:PropTypes.object,
+    description: PropTypes.object
+};

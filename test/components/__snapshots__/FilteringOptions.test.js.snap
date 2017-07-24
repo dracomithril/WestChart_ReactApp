@@ -4,63 +4,35 @@ exports[`<FilteringOptions/> renders without crashing ChartPresenter 1`] = `
 <div
   className="filter_panel"
 >
-  <Checkbox
-    bsClass="checkbox"
-    checked={true}
-    disabled={false}
-    id="woc_cb"
-    inline={false}
-    onChange={[Function]}
-    title=""
-  >
-    <OverlayTrigger
-      defaultOverlayShown={false}
-      overlay={
-        <Tooltip
-          bsClass="tooltip"
-          id="woc_tp"
-          placement="right"
-        >
-          Will show all [Wielkie Ogarnianie Charta]
-        </Tooltip>
-      }
-      placement="top"
-      trigger={
-        Array [
-          "hover",
-          "focus",
-        ]
-      }
-    >
-      <span>
-        [
-        Wielkie Ogarnianie Charta
-        ]
-      </span>
-    </OverlayTrigger>
-  </Checkbox>
-  <FilterOption
+  <MessageControl
     check={[Function]}
     control={
       Object {
-        "id": "add",
-        "name": "date_added_control",
-      }
-    }
-    description={
-      Object {
-        "end": " days",
-        "start": "added in last ",
+        "id": "woc_cb",
+        "name": "woc_text_control",
       }
     }
     input={
       Object {
-        "max": 31,
-        "name": "add_control",
+        "name": "woc_control",
       }
     }
-    type="countDays"
-    valueName="added_time"
+    text="wielkie ogarnianie charta"
+  />
+  <MessageControl
+    check={[Function]}
+    control={
+      Object {
+        "id": "westletter_cb",
+        "name": "westletter_text_control",
+      }
+    }
+    input={
+      Object {
+        "name": "westletter_control",
+      }
+    }
+    text="wcs weekly westletter"
   />
   <FilterOption
     check={[Function]}
@@ -126,7 +98,7 @@ exports[`<FilteringOptions/> renders without crashing ChartPresenter 1`] = `
         "name": "more_control",
       }
     }
-    type="more_or_less"
+    type="more"
   />
   <FilterOption
     check={[Function]}
@@ -146,7 +118,7 @@ exports[`<FilteringOptions/> renders without crashing ChartPresenter 1`] = `
         "name": "less_control",
       }
     }
-    type="more_or_less"
+    type="less"
   />
 </div>
 `;

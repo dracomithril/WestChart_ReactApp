@@ -3,8 +3,9 @@
  */
 
 import qs from "querystring";
+
 const filters_def = require('./filters_def');
-const woc_string = "Wielkie Ogarnianie Charta";
+
 
 
 const cookies_name = {
@@ -69,10 +70,6 @@ class utils {
         return cookies_name;
     };
 
-    static get woc_string() {
-        return woc_string
-    };
-
     static get sorting() {
         return sorting;
     }
@@ -95,7 +92,7 @@ class utils {
                 'Content-Type': 'application/json'
             },
         }).then(res => {
-            console.log('data sanded to database '+res.status)
+            console.log('data sanded to database ' + res.status)
         });
     }
 
@@ -104,45 +101,39 @@ class utils {
 
         let songs_per_day_arr = {};
         let {chart, filters, until, songs_per_day} = store.getState();
-        let filterIt = (elem) => {
-            let doTest = (filter) => {
-                if (filter.type === 'countDays') {
-                    return filter.check(elem[filter.valueName], until, filters[filter.input.name].days) > 0;
-                }
-                else {
-                    return filter.check(elem.reactions_num, filter.input.name, filters)
-                }
-            };
-            let results = filters_def.control.filter(e => {
-                return filters[e.input.name].checked
-            });
-            const map = results.map(doTest);
-            let res1 = map.length > 0 ? map.reduce((pr, cr) => pr && cr) : true;
 
-            if (!filters.woc_control.checked) {
-                res1 &= elem.message !== undefined ? !elem.message.toLowerCase().includes(woc_string.toLowerCase()) : true;
-            }
-            if (res1 && elem.added_time !== undefined) {
-                if (songs_per_day_arr[elem.added_time]) {
-                    songs_per_day_arr[elem.added_time].count++
-                } else {
-                    songs_per_day_arr[elem.added_time] = {
-                        count: 1,
-                        org: elem.added_time
-                    };
-                }
-            }
-            return res1;
-        };
-        const view_chart = chart.filter(filterIt);
-        let error_days = Object.keys(songs_per_day_arr).filter(key => {
-            return songs_per_day_arr[key].count !== songs_per_day
-        }).map(elem => {
-            const songsPerDay = songs_per_day_arr[elem];
-            songsPerDay.color = songs_per_day_arr[elem].count > songs_per_day ? 'red' : 'blue';
-            return songsPerDay
+        const filters_defaults = [...filters_def.control, ...filters_def.text];
+        let results = filters_defaults.filter(e => {
+            return filters[e.input.name].checked
+        }).map(e => {
+            return {...e, days: filters[e.input.name].days, until: until};
         });
 
+
+        let filterIt = (elem) => {
+            const map = results.map((filter) => filter.check(elem, filter));
+            return map.length > 0 ? map.reduce((pr, cr) => pr && cr) : true;
+        };
+        const view_chart = chart.filter(filterIt);
+
+        view_chart.forEach(elem => {
+            const createdTime = new Date(elem.created_time).toDateString();
+            if (songs_per_day_arr[createdTime]) {
+                songs_per_day_arr[createdTime].count++
+            } else {
+                songs_per_day_arr[createdTime] = {
+                    count: 1,
+                    get color() {
+                        return this.count > this._spd ? 'red' : 'blue'
+                    },
+                    _spd: songs_per_day,
+                    org: createdTime
+                };
+            }
+        });
+        let error_days = Object.keys(songs_per_day_arr)
+            .filter(key => songs_per_day_arr[key].count !== songs_per_day)
+            .map(elem => songs_per_day_arr[elem]);
         return {view_chart, error_days};
     }
 
@@ -166,7 +157,7 @@ class utils {
             .catch(err => {
                 store.dispatch({type: action_types.CHANGE_SHOW_WAIT, show: false});
                 console.error('Error in fetch chart.');
-                console.error(err);
+                console.error(Object.inspect(err));
             });
     };
 
@@ -216,4 +207,5 @@ class utils {
         return {title, artist}
     };
 }
+
 module.exports = utils;
