@@ -51,7 +51,8 @@ class App extends Component {
                 {!isLogged ? <LoginAlert {...alert_props}/> :
                     <Tabs defaultActiveKey={1} id="uncontrolled-tab-example" className="App-body">
                         <Tab eventKey={1} title="Chart"><ChartPresenter/></Tab>
-                        <Tab eventKey={2} title="Combiner (BETA)"><PlaylistCombiner/></Tab>
+                        {/*<Tab eventKey={2} title="Summary" disabled={true}/>*/}
+                        <Tab eventKey={3} title="Combiner (BETA)"><PlaylistCombiner/></Tab>
                     </Tabs>}
                 <Footer/>
             </div>

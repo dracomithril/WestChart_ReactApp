@@ -7,29 +7,49 @@ import {Checkbox, OverlayTrigger, Tooltip} from "react-bootstrap";
 import FilterOption from "./FilterOption";
 import "./FilteringOptions.css";
 import filters_def from "./../../filters_def";
-let utils = require('./../../utils');
+
 const action_types = require('./../../reducers/action_types');
+
+
+class MessageControl extends React.Component {
+    render() {
+
+        const {store} = this.context;
+        const {filters} = store.getState();
+        const name = this.props.input.name;
+        return <Checkbox checked={!filters[name].checked} onChange={(e) => {
+            const {id, checked} = e.target;
+            store.dispatch({type: action_types.TOGGLE_FILTER, id: id, checked: !checked})
+        }} {...this.props.control}>
+            <OverlayTrigger placement="top" overlay={<Tooltip
+                id={name + "_tp"}>{`Will show all [${this.props.text}]`}</Tooltip>}>
+                            <span>
+                            [{this.props.text}]</span>
+            </OverlayTrigger>
+        </Checkbox>
+
+    }
+}
+
+MessageControl.contextTypes = {
+    store: PropTypes.object
+};
+MessageControl.propTypes = {
+    input: PropTypes.object,
+    text: PropTypes.string
+};
 
 export default class FilteringOptions extends React.Component {
     render() {
-        const {store} = this.context;
-        const {filters} = store.getState();
         const map = filters_def.control.map((elem) => {
             return (<FilterOption {...elem} key={elem.input.name}/>)
         });
-
+        const map_t = filters_def.text.map((elem) => {
+            return (<MessageControl {...elem} key={elem.input.name}/>)
+        });
         return (
             <div className="filter_panel">
-                <Checkbox checked={filters['woc_control'].checked} onChange={(e) => {
-                    const {id, checked} = e.target;
-                    store.dispatch({type: action_types.TOGGLE_FILTER, id: id, checked: checked})
-                }} id="woc_cb">
-                    <OverlayTrigger placement="top" overlay={<Tooltip
-                        id="woc_tp">{`Will show all [${utils.woc_string}]`}</Tooltip>}>
-                            <span>
-                            [{utils.woc_string}]</span>
-                    </OverlayTrigger>
-                </Checkbox>
+                {map_t}
                 {map}
             </div>
 

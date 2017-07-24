@@ -63,7 +63,7 @@ exports[`<ChartTable/> render with objects 1`] = `
       Object {
         "added_by": "Joanna Kozieńska",
         "added_time": "2017-06-15T22:00:00.000Z",
-        "created_time": "2017-06-13T14:26:23+0000",
+        "created_time": "2017-06-15T22:00:00+0000",
         "from": Object {
           "id": "1663928107235442",
           "name": "Aldona Bochen",
@@ -88,7 +88,7 @@ exports[`<ChartTable/> render with objects 1`] = `
       Object {
         "added_by": "Joanna Kozieńska",
         "added_time": "2017-06-15T22:00:00.000Z",
-        "created_time": "2017-06-12T14:42:41+0000",
+        "created_time": "2017-06-15T22:00:00+0000",
         "from": Object {
           "id": "1533148270088505",
           "name": "Alin Rostas",
@@ -113,7 +113,7 @@ exports[`<ChartTable/> render with objects 1`] = `
       Object {
         "added_by": "Joanna Kozieńska",
         "added_time": "2017-06-12T22:00:00.000Z",
-        "created_time": "2017-06-09T11:37:19+0000",
+        "created_time": "2017-06-12T22:00:00+0000",
         "from": Object {
           "id": "10213444859181757",
           "name": "Gabriela Młyńska",
@@ -138,7 +138,7 @@ exports[`<ChartTable/> render with objects 1`] = `
       Object {
         "added_by": "Joanna Kozieńska",
         "added_time": "2017-06-06T22:00:00.000Z",
-        "created_time": "2017-05-21T19:25:39+0000",
+        "created_time": "2017-06-06T22:00:00+0000",
         "from": Object {
           "id": "10208047442080192",
           "name": "Agnieszka Orzeł",
@@ -162,7 +162,7 @@ exports[`<ChartTable/> render with objects 1`] = `
       Object {
         "added_by": "Joanna Kozieńska",
         "added_time": "2017-06-08T22:00:00.000Z",
-        "created_time": "2017-06-08T09:41:49+0000",
+        "created_time": "2017-06-08T22:00:00+0000",
         "from": Object {
           "id": "1242592522496562",
           "name": "Adam Jaskiernik",
@@ -187,7 +187,7 @@ exports[`<ChartTable/> render with objects 1`] = `
       Object {
         "added_by": "Joanna Kozieńska",
         "added_time": "2017-06-13T22:00:00.000Z",
-        "created_time": "2017-06-10T18:15:29+0000",
+        "created_time": "2017-06-13T22:00:00+0000",
         "from": Object {
           "id": "10154096820541759",
           "name": "Paweł Zubrycki",
@@ -212,7 +212,7 @@ exports[`<ChartTable/> render with objects 1`] = `
       Object {
         "added_by": "Joanna Kozieńska",
         "added_time": "2017-06-14T22:00:00.000Z",
-        "created_time": "2017-05-23T17:43:20+0000",
+        "created_time": "2017-06-14T22:00:00+0000",
         "from": Object {
           "id": "10208047442080192",
           "name": "Agnieszka Orzeł",
@@ -236,7 +236,7 @@ exports[`<ChartTable/> render with objects 1`] = `
       Object {
         "added_by": "Joanna Kozieńska",
         "added_time": "2017-06-14T22:00:00.000Z",
-        "created_time": "2017-05-25T09:59:48+0000",
+        "created_time": "2017-06-14T22:00:00+0000",
         "from": Object {
           "id": "859129380897011",
           "name": "Przemysław Przemysł",
@@ -261,7 +261,7 @@ exports[`<ChartTable/> render with objects 1`] = `
       Object {
         "added_by": "Joanna Kozieńska",
         "added_time": "2017-06-11T22:00:00.000Z",
-        "created_time": "2017-05-04T09:50:23+0000",
+        "created_time": "2017-06-11T22:00:00+0000",
         "from": Object {
           "id": "1574584592571204",
           "name": "Dariusz Winiarski",
@@ -419,22 +419,12 @@ exports[`<ChartTable/> render with objects 1`] = `
           "columns": Array [
             Object {
               "Cell": [Function],
-              "Header": "added",
-              "accessor": [Function],
-              "id": "addedTime",
-              "maxWidth": 150,
-              "resizable": true,
-              "width": 90,
-            },
-            Object {
-              "Cell": [Function],
               "Header": "created",
               "accessor": [Function],
               "id": "createTime",
               "maxWidth": 200,
               "minWidth": 150,
               "resizable": true,
-              "show": true,
             },
             Object {
               "Cell": [Function],
@@ -532,7 +522,7 @@ exports[`<ChartTable/> render with objects 1`] = `
         Object {
           "added_by": "Joanna Kozieńska",
           "added_time": "2017-06-15T22:00:00.000Z",
-          "created_time": "2017-06-13T14:26:23+0000",
+          "created_time": "2017-06-15T22:00:00+0000",
           "from": Object {
             "id": "1663928107235442",
             "name": "Aldona Bochen",
@@ -557,7 +547,7 @@ exports[`<ChartTable/> render with objects 1`] = `
         Object {
           "added_by": "Joanna Kozieńska",
           "added_time": "2017-06-15T22:00:00.000Z",
-          "created_time": "2017-06-12T14:42:41+0000",
+          "created_time": "2017-06-15T22:00:00+0000",
           "from": Object {
             "id": "1533148270088505",
             "name": "Alin Rostas",
@@ -582,7 +572,7 @@ exports[`<ChartTable/> render with objects 1`] = `
         Object {
           "added_by": "Joanna Kozieńska",
           "added_time": "2017-06-12T22:00:00.000Z",
-          "created_time": "2017-06-09T11:37:19+0000",
+          "created_time": "2017-06-12T22:00:00+0000",
           "from": Object {
             "id": "10213444859181757",
             "name": "Gabriela Młyńska",
@@ -607,7 +597,7 @@ exports[`<ChartTable/> render with objects 1`] = `
         Object {
           "added_by": "Joanna Kozieńska",
           "added_time": "2017-06-06T22:00:00.000Z",
-          "created_time": "2017-05-21T19:25:39+0000",
+          "created_time": "2017-06-06T22:00:00+0000",
           "from": Object {
             "id": "10208047442080192",
             "name": "Agnieszka Orzeł",
@@ -631,7 +621,7 @@ exports[`<ChartTable/> render with objects 1`] = `
         Object {
           "added_by": "Joanna Kozieńska",
           "added_time": "2017-06-08T22:00:00.000Z",
-          "created_time": "2017-06-08T09:41:49+0000",
+          "created_time": "2017-06-08T22:00:00+0000",
           "from": Object {
             "id": "1242592522496562",
             "name": "Adam Jaskiernik",
@@ -656,7 +646,7 @@ exports[`<ChartTable/> render with objects 1`] = `
         Object {
           "added_by": "Joanna Kozieńska",
           "added_time": "2017-06-13T22:00:00.000Z",
-          "created_time": "2017-06-10T18:15:29+0000",
+          "created_time": "2017-06-13T22:00:00+0000",
           "from": Object {
             "id": "10154096820541759",
             "name": "Paweł Zubrycki",
@@ -681,7 +671,7 @@ exports[`<ChartTable/> render with objects 1`] = `
         Object {
           "added_by": "Joanna Kozieńska",
           "added_time": "2017-06-14T22:00:00.000Z",
-          "created_time": "2017-05-23T17:43:20+0000",
+          "created_time": "2017-06-14T22:00:00+0000",
           "from": Object {
             "id": "10208047442080192",
             "name": "Agnieszka Orzeł",
@@ -705,7 +695,7 @@ exports[`<ChartTable/> render with objects 1`] = `
         Object {
           "added_by": "Joanna Kozieńska",
           "added_time": "2017-06-14T22:00:00.000Z",
-          "created_time": "2017-05-25T09:59:48+0000",
+          "created_time": "2017-06-14T22:00:00+0000",
           "from": Object {
             "id": "859129380897011",
             "name": "Przemysław Przemysł",
@@ -730,7 +720,7 @@ exports[`<ChartTable/> render with objects 1`] = `
         Object {
           "added_by": "Joanna Kozieńska",
           "added_time": "2017-06-11T22:00:00.000Z",
-          "created_time": "2017-05-04T09:50:23+0000",
+          "created_time": "2017-06-11T22:00:00+0000",
           "from": Object {
             "id": "1574584592571204",
             "name": "Dariusz Winiarski",
@@ -855,7 +845,7 @@ exports[`<ChartTable/> render with objects 1`] = `
             className="-headerGroups"
             style={
               Object {
-                "minWidth": "1030px",
+                "minWidth": "940px",
               }
             }
           >
@@ -863,7 +853,7 @@ exports[`<ChartTable/> render with objects 1`] = `
               className="rt-thead -headerGroups"
               style={
                 Object {
-                  "minWidth": "1030px",
+                  "minWidth": "940px",
                 }
               }
             >
@@ -926,8 +916,8 @@ exports[`<ChartTable/> render with objects 1`] = `
                     style={
                       Object {
                         "flex": "300 0 auto",
-                        "maxWidth": "490px",
-                        "width": "390px",
+                        "maxWidth": "400px",
+                        "width": "300px",
                       }
                     }
                   >
@@ -937,8 +927,8 @@ exports[`<ChartTable/> render with objects 1`] = `
                       style={
                         Object {
                           "flex": "300 0 auto",
-                          "maxWidth": "490px",
-                          "width": "390px",
+                          "maxWidth": "400px",
+                          "width": "300px",
                         }
                       }
                     >
@@ -977,7 +967,7 @@ exports[`<ChartTable/> render with objects 1`] = `
             className="-header"
             style={
               Object {
-                "minWidth": "1030px",
+                "minWidth": "940px",
               }
             }
           >
@@ -985,7 +975,7 @@ exports[`<ChartTable/> render with objects 1`] = `
               className="rt-thead -header"
               style={
                 Object {
-                  "minWidth": "1030px",
+                  "minWidth": "940px",
                 }
               }
             >
@@ -1169,45 +1159,6 @@ exports[`<ChartTable/> render with objects 1`] = `
                     className=" rt-resizable-header -cursor-pointer"
                     style={
                       Object {
-                        "flex": "90 0 auto",
-                        "maxWidth": "90px",
-                        "width": "90px",
-                      }
-                    }
-                    toggleSort={[Function]}
-                  >
-                    <div
-                      className=" rt-resizable-header -cursor-pointer rt-th"
-                      onClick={[Function]}
-                      style={
-                        Object {
-                          "flex": "90 0 auto",
-                          "maxWidth": "90px",
-                          "width": "90px",
-                        }
-                      }
-                    >
-                      <div
-                        className="rt-resizable-header-content"
-                      >
-                        added
-                      </div>
-                      <Resizer
-                        onMouseDown={[Function]}
-                        onTouchStart={[Function]}
-                      >
-                        <div
-                          className="rt-resizer"
-                          onMouseDown={[Function]}
-                          onTouchStart={[Function]}
-                        />
-                      </Resizer>
-                    </div>
-                  </ThComponent>
-                  <ThComponent
-                    className=" rt-resizable-header -cursor-pointer"
-                    style={
-                      Object {
                         "flex": "150 0 auto",
                         "maxWidth": "200px",
                         "width": "150px",
@@ -1317,7 +1268,7 @@ exports[`<ChartTable/> render with objects 1`] = `
             className=""
             style={
               Object {
-                "minWidth": "1030px",
+                "minWidth": "940px",
               }
             }
           >
@@ -1325,7 +1276,7 @@ exports[`<ChartTable/> render with objects 1`] = `
               className="rt-tbody"
               style={
                 Object {
-                  "minWidth": "1030px",
+                  "minWidth": "940px",
                 }
               }
             >
@@ -1560,36 +1511,6 @@ exports[`<ChartTable/> render with objects 1`] = `
                           }
                         >
                           4
-                        </div>
-                      </Td>
-                      <Td
-                        className=""
-                        style={
-                          Object {
-                            "flex": "90 0 auto",
-                            "maxWidth": "90px",
-                            "width": "90px",
-                          }
-                        }
-                      >
-                        <div
-                          className="rt-td"
-                          style={
-                            Object {
-                              "flex": "90 0 auto",
-                              "maxWidth": "90px",
-                              "width": "90px",
-                            }
-                          }
-                        >
-                          <i
-                            className="fa fa-minus-circle"
-                            style={
-                              Object {
-                                "color": "red",
-                              }
-                            }
-                          />
                         </div>
                       </Td>
                       <Td
@@ -1877,57 +1798,6 @@ exports[`<ChartTable/> render with objects 1`] = `
                         className=""
                         style={
                           Object {
-                            "flex": "90 0 auto",
-                            "maxWidth": "90px",
-                            "width": "90px",
-                          }
-                        }
-                      >
-                        <div
-                          className="rt-td"
-                          style={
-                            Object {
-                              "flex": "90 0 auto",
-                              "maxWidth": "90px",
-                              "width": "90px",
-                            }
-                          }
-                        >
-                          <OverlayTrigger
-                            defaultOverlayShown={false}
-                            overlay={
-                              <Tooltip
-                                bsClass="tooltip"
-                                id="tooltip"
-                                placement="right"
-                              >
-                                Joanna Kozieńska
-                              </Tooltip>
-                            }
-                            placement="top"
-                            trigger={
-                              Array [
-                                "hover",
-                                "focus",
-                              ]
-                            }
-                          >
-                            <span
-                              onBlur={[Function]}
-                              onClick={null}
-                              onFocus={[Function]}
-                              onMouseOut={[Function]}
-                              onMouseOver={[Function]}
-                            >
-                              2017-06-16
-                            </span>
-                          </OverlayTrigger>
-                        </div>
-                      </Td>
-                      <Td
-                        className=""
-                        style={
-                          Object {
                             "flex": "150 0 auto",
                             "maxWidth": "200px",
                             "width": "150px",
@@ -1945,7 +1815,7 @@ exports[`<ChartTable/> render with objects 1`] = `
                           }
                         >
                           <span>
-                            2017-6-13 16:26:23
+                            2017-6-16 00:00:00
                           </span>
                         </div>
                       </Td>
@@ -2209,57 +2079,6 @@ exports[`<ChartTable/> render with objects 1`] = `
                         className=""
                         style={
                           Object {
-                            "flex": "90 0 auto",
-                            "maxWidth": "90px",
-                            "width": "90px",
-                          }
-                        }
-                      >
-                        <div
-                          className="rt-td"
-                          style={
-                            Object {
-                              "flex": "90 0 auto",
-                              "maxWidth": "90px",
-                              "width": "90px",
-                            }
-                          }
-                        >
-                          <OverlayTrigger
-                            defaultOverlayShown={false}
-                            overlay={
-                              <Tooltip
-                                bsClass="tooltip"
-                                id="tooltip"
-                                placement="right"
-                              >
-                                Joanna Kozieńska
-                              </Tooltip>
-                            }
-                            placement="top"
-                            trigger={
-                              Array [
-                                "hover",
-                                "focus",
-                              ]
-                            }
-                          >
-                            <span
-                              onBlur={[Function]}
-                              onClick={null}
-                              onFocus={[Function]}
-                              onMouseOut={[Function]}
-                              onMouseOver={[Function]}
-                            >
-                              2017-06-16
-                            </span>
-                          </OverlayTrigger>
-                        </div>
-                      </Td>
-                      <Td
-                        className=""
-                        style={
-                          Object {
                             "flex": "150 0 auto",
                             "maxWidth": "200px",
                             "width": "150px",
@@ -2277,7 +2096,7 @@ exports[`<ChartTable/> render with objects 1`] = `
                           }
                         >
                           <span>
-                            2017-6-12 16:42:41
+                            2017-6-16 00:00:00
                           </span>
                         </div>
                       </Td>
@@ -2541,57 +2360,6 @@ exports[`<ChartTable/> render with objects 1`] = `
                         className=""
                         style={
                           Object {
-                            "flex": "90 0 auto",
-                            "maxWidth": "90px",
-                            "width": "90px",
-                          }
-                        }
-                      >
-                        <div
-                          className="rt-td"
-                          style={
-                            Object {
-                              "flex": "90 0 auto",
-                              "maxWidth": "90px",
-                              "width": "90px",
-                            }
-                          }
-                        >
-                          <OverlayTrigger
-                            defaultOverlayShown={false}
-                            overlay={
-                              <Tooltip
-                                bsClass="tooltip"
-                                id="tooltip"
-                                placement="right"
-                              >
-                                Joanna Kozieńska
-                              </Tooltip>
-                            }
-                            placement="top"
-                            trigger={
-                              Array [
-                                "hover",
-                                "focus",
-                              ]
-                            }
-                          >
-                            <span
-                              onBlur={[Function]}
-                              onClick={null}
-                              onFocus={[Function]}
-                              onMouseOut={[Function]}
-                              onMouseOver={[Function]}
-                            >
-                              2017-06-13
-                            </span>
-                          </OverlayTrigger>
-                        </div>
-                      </Td>
-                      <Td
-                        className=""
-                        style={
-                          Object {
                             "flex": "150 0 auto",
                             "maxWidth": "200px",
                             "width": "150px",
@@ -2609,7 +2377,7 @@ exports[`<ChartTable/> render with objects 1`] = `
                           }
                         >
                           <span>
-                            2017-6-9 13:37:19
+                            2017-6-13 00:00:00
                           </span>
                         </div>
                       </Td>
@@ -2843,57 +2611,6 @@ exports[`<ChartTable/> render with objects 1`] = `
                         className=""
                         style={
                           Object {
-                            "flex": "90 0 auto",
-                            "maxWidth": "90px",
-                            "width": "90px",
-                          }
-                        }
-                      >
-                        <div
-                          className="rt-td"
-                          style={
-                            Object {
-                              "flex": "90 0 auto",
-                              "maxWidth": "90px",
-                              "width": "90px",
-                            }
-                          }
-                        >
-                          <OverlayTrigger
-                            defaultOverlayShown={false}
-                            overlay={
-                              <Tooltip
-                                bsClass="tooltip"
-                                id="tooltip"
-                                placement="right"
-                              >
-                                Joanna Kozieńska
-                              </Tooltip>
-                            }
-                            placement="top"
-                            trigger={
-                              Array [
-                                "hover",
-                                "focus",
-                              ]
-                            }
-                          >
-                            <span
-                              onBlur={[Function]}
-                              onClick={null}
-                              onFocus={[Function]}
-                              onMouseOut={[Function]}
-                              onMouseOver={[Function]}
-                            >
-                              2017-06-7
-                            </span>
-                          </OverlayTrigger>
-                        </div>
-                      </Td>
-                      <Td
-                        className=""
-                        style={
-                          Object {
                             "flex": "150 0 auto",
                             "maxWidth": "200px",
                             "width": "150px",
@@ -2911,7 +2628,7 @@ exports[`<ChartTable/> render with objects 1`] = `
                           }
                         >
                           <span>
-                            2017-5-21 21:25:39
+                            2017-6-7 00:00:00
                           </span>
                         </div>
                       </Td>
@@ -3175,57 +2892,6 @@ exports[`<ChartTable/> render with objects 1`] = `
                         className=""
                         style={
                           Object {
-                            "flex": "90 0 auto",
-                            "maxWidth": "90px",
-                            "width": "90px",
-                          }
-                        }
-                      >
-                        <div
-                          className="rt-td"
-                          style={
-                            Object {
-                              "flex": "90 0 auto",
-                              "maxWidth": "90px",
-                              "width": "90px",
-                            }
-                          }
-                        >
-                          <OverlayTrigger
-                            defaultOverlayShown={false}
-                            overlay={
-                              <Tooltip
-                                bsClass="tooltip"
-                                id="tooltip"
-                                placement="right"
-                              >
-                                Joanna Kozieńska
-                              </Tooltip>
-                            }
-                            placement="top"
-                            trigger={
-                              Array [
-                                "hover",
-                                "focus",
-                              ]
-                            }
-                          >
-                            <span
-                              onBlur={[Function]}
-                              onClick={null}
-                              onFocus={[Function]}
-                              onMouseOut={[Function]}
-                              onMouseOver={[Function]}
-                            >
-                              2017-06-9
-                            </span>
-                          </OverlayTrigger>
-                        </div>
-                      </Td>
-                      <Td
-                        className=""
-                        style={
-                          Object {
                             "flex": "150 0 auto",
                             "maxWidth": "200px",
                             "width": "150px",
@@ -3243,7 +2909,7 @@ exports[`<ChartTable/> render with objects 1`] = `
                           }
                         >
                           <span>
-                            2017-6-8 11:41:49
+                            2017-6-9 00:00:00
                           </span>
                         </div>
                       </Td>
@@ -3507,57 +3173,6 @@ exports[`<ChartTable/> render with objects 1`] = `
                         className=""
                         style={
                           Object {
-                            "flex": "90 0 auto",
-                            "maxWidth": "90px",
-                            "width": "90px",
-                          }
-                        }
-                      >
-                        <div
-                          className="rt-td"
-                          style={
-                            Object {
-                              "flex": "90 0 auto",
-                              "maxWidth": "90px",
-                              "width": "90px",
-                            }
-                          }
-                        >
-                          <OverlayTrigger
-                            defaultOverlayShown={false}
-                            overlay={
-                              <Tooltip
-                                bsClass="tooltip"
-                                id="tooltip"
-                                placement="right"
-                              >
-                                Joanna Kozieńska
-                              </Tooltip>
-                            }
-                            placement="top"
-                            trigger={
-                              Array [
-                                "hover",
-                                "focus",
-                              ]
-                            }
-                          >
-                            <span
-                              onBlur={[Function]}
-                              onClick={null}
-                              onFocus={[Function]}
-                              onMouseOut={[Function]}
-                              onMouseOver={[Function]}
-                            >
-                              2017-06-14
-                            </span>
-                          </OverlayTrigger>
-                        </div>
-                      </Td>
-                      <Td
-                        className=""
-                        style={
-                          Object {
                             "flex": "150 0 auto",
                             "maxWidth": "200px",
                             "width": "150px",
@@ -3575,7 +3190,7 @@ exports[`<ChartTable/> render with objects 1`] = `
                           }
                         >
                           <span>
-                            2017-6-10 20:15:29
+                            2017-6-14 00:00:00
                           </span>
                         </div>
                       </Td>
@@ -3809,57 +3424,6 @@ exports[`<ChartTable/> render with objects 1`] = `
                         className=""
                         style={
                           Object {
-                            "flex": "90 0 auto",
-                            "maxWidth": "90px",
-                            "width": "90px",
-                          }
-                        }
-                      >
-                        <div
-                          className="rt-td"
-                          style={
-                            Object {
-                              "flex": "90 0 auto",
-                              "maxWidth": "90px",
-                              "width": "90px",
-                            }
-                          }
-                        >
-                          <OverlayTrigger
-                            defaultOverlayShown={false}
-                            overlay={
-                              <Tooltip
-                                bsClass="tooltip"
-                                id="tooltip"
-                                placement="right"
-                              >
-                                Joanna Kozieńska
-                              </Tooltip>
-                            }
-                            placement="top"
-                            trigger={
-                              Array [
-                                "hover",
-                                "focus",
-                              ]
-                            }
-                          >
-                            <span
-                              onBlur={[Function]}
-                              onClick={null}
-                              onFocus={[Function]}
-                              onMouseOut={[Function]}
-                              onMouseOver={[Function]}
-                            >
-                              2017-06-15
-                            </span>
-                          </OverlayTrigger>
-                        </div>
-                      </Td>
-                      <Td
-                        className=""
-                        style={
-                          Object {
                             "flex": "150 0 auto",
                             "maxWidth": "200px",
                             "width": "150px",
@@ -3877,7 +3441,7 @@ exports[`<ChartTable/> render with objects 1`] = `
                           }
                         >
                           <span>
-                            2017-5-23 19:43:20
+                            2017-6-15 00:00:00
                           </span>
                         </div>
                       </Td>
@@ -4141,57 +3705,6 @@ exports[`<ChartTable/> render with objects 1`] = `
                         className=""
                         style={
                           Object {
-                            "flex": "90 0 auto",
-                            "maxWidth": "90px",
-                            "width": "90px",
-                          }
-                        }
-                      >
-                        <div
-                          className="rt-td"
-                          style={
-                            Object {
-                              "flex": "90 0 auto",
-                              "maxWidth": "90px",
-                              "width": "90px",
-                            }
-                          }
-                        >
-                          <OverlayTrigger
-                            defaultOverlayShown={false}
-                            overlay={
-                              <Tooltip
-                                bsClass="tooltip"
-                                id="tooltip"
-                                placement="right"
-                              >
-                                Joanna Kozieńska
-                              </Tooltip>
-                            }
-                            placement="top"
-                            trigger={
-                              Array [
-                                "hover",
-                                "focus",
-                              ]
-                            }
-                          >
-                            <span
-                              onBlur={[Function]}
-                              onClick={null}
-                              onFocus={[Function]}
-                              onMouseOut={[Function]}
-                              onMouseOver={[Function]}
-                            >
-                              2017-06-15
-                            </span>
-                          </OverlayTrigger>
-                        </div>
-                      </Td>
-                      <Td
-                        className=""
-                        style={
-                          Object {
                             "flex": "150 0 auto",
                             "maxWidth": "200px",
                             "width": "150px",
@@ -4209,7 +3722,7 @@ exports[`<ChartTable/> render with objects 1`] = `
                           }
                         >
                           <span>
-                            2017-5-25 11:59:48
+                            2017-6-15 00:00:00
                           </span>
                         </div>
                       </Td>
@@ -4443,57 +3956,6 @@ exports[`<ChartTable/> render with objects 1`] = `
                         className=""
                         style={
                           Object {
-                            "flex": "90 0 auto",
-                            "maxWidth": "90px",
-                            "width": "90px",
-                          }
-                        }
-                      >
-                        <div
-                          className="rt-td"
-                          style={
-                            Object {
-                              "flex": "90 0 auto",
-                              "maxWidth": "90px",
-                              "width": "90px",
-                            }
-                          }
-                        >
-                          <OverlayTrigger
-                            defaultOverlayShown={false}
-                            overlay={
-                              <Tooltip
-                                bsClass="tooltip"
-                                id="tooltip"
-                                placement="right"
-                              >
-                                Joanna Kozieńska
-                              </Tooltip>
-                            }
-                            placement="top"
-                            trigger={
-                              Array [
-                                "hover",
-                                "focus",
-                              ]
-                            }
-                          >
-                            <span
-                              onBlur={[Function]}
-                              onClick={null}
-                              onFocus={[Function]}
-                              onMouseOut={[Function]}
-                              onMouseOver={[Function]}
-                            >
-                              2017-06-12
-                            </span>
-                          </OverlayTrigger>
-                        </div>
-                      </Td>
-                      <Td
-                        className=""
-                        style={
-                          Object {
                             "flex": "150 0 auto",
                             "maxWidth": "200px",
                             "width": "150px",
@@ -4511,7 +3973,7 @@ exports[`<ChartTable/> render with objects 1`] = `
                           }
                         >
                           <span>
-                            2017-5-4 11:50:23
+                            2017-6-12 00:00:00
                           </span>
                         </div>
                       </Td>
@@ -4787,38 +4249,6 @@ exports[`<ChartTable/> render with objects 1`] = `
                 "Expander": undefined,
                 "Filter": undefined,
                 "Footer": undefined,
-                "Header": "added",
-                "Pivot": undefined,
-                "PivotValue": undefined,
-                "accessor": [Function],
-                "aggregate": undefined,
-                "className": "",
-                "filterAll": false,
-                "filterMethod": undefined,
-                "filterable": undefined,
-                "footerClassName": "",
-                "footerStyle": Object {},
-                "getFooterProps": [Function],
-                "getHeaderProps": [Function],
-                "getProps": [Function],
-                "headerClassName": "",
-                "headerStyle": Object {},
-                "id": "addedTime",
-                "maxWidth": 150,
-                "minWidth": 100,
-                "resizable": true,
-                "show": true,
-                "sortMethod": undefined,
-                "sortable": undefined,
-                "style": Object {},
-                "width": 90,
-              },
-              Object {
-                "Aggregated": undefined,
-                "Cell": [Function],
-                "Expander": undefined,
-                "Filter": undefined,
-                "Footer": undefined,
                 "Header": "created",
                 "Pivot": undefined,
                 "PivotValue": undefined,
@@ -5076,38 +4506,6 @@ exports[`<ChartTable/> render with objects 1`] = `
                 "Expander": undefined,
                 "Filter": undefined,
                 "Footer": undefined,
-                "Header": "added",
-                "Pivot": undefined,
-                "PivotValue": undefined,
-                "accessor": [Function],
-                "aggregate": undefined,
-                "className": "",
-                "filterAll": false,
-                "filterMethod": undefined,
-                "filterable": undefined,
-                "footerClassName": "",
-                "footerStyle": Object {},
-                "getFooterProps": [Function],
-                "getHeaderProps": [Function],
-                "getProps": [Function],
-                "headerClassName": "",
-                "headerStyle": Object {},
-                "id": "addedTime",
-                "maxWidth": 150,
-                "minWidth": 100,
-                "resizable": true,
-                "show": true,
-                "sortMethod": undefined,
-                "sortable": undefined,
-                "style": Object {},
-                "width": 90,
-              },
-              Object {
-                "Aggregated": undefined,
-                "Cell": [Function],
-                "Expander": undefined,
-                "Filter": undefined,
-                "Footer": undefined,
                 "Header": "created",
                 "Pivot": undefined,
                 "PivotValue": undefined,
@@ -5322,22 +4720,12 @@ exports[`<ChartTable/> render with objects 1`] = `
                 "columns": Array [
                   Object {
                     "Cell": [Function],
-                    "Header": "added",
-                    "accessor": [Function],
-                    "id": "addedTime",
-                    "maxWidth": 150,
-                    "resizable": true,
-                    "width": 90,
-                  },
-                  Object {
-                    "Cell": [Function],
                     "Header": "created",
                     "accessor": [Function],
                     "id": "createTime",
                     "maxWidth": 200,
                     "minWidth": 150,
                     "resizable": true,
-                    "show": true,
                   },
                   Object {
                     "Cell": [Function],
@@ -5436,7 +4824,7 @@ exports[`<ChartTable/> render with objects 1`] = `
               Object {
                 "added_by": "Joanna Kozieńska",
                 "added_time": "2017-06-15T22:00:00.000Z",
-                "created_time": "2017-06-13T14:26:23+0000",
+                "created_time": "2017-06-15T22:00:00+0000",
                 "from": Object {
                   "id": "1663928107235442",
                   "name": "Aldona Bochen",
@@ -5461,7 +4849,7 @@ exports[`<ChartTable/> render with objects 1`] = `
               Object {
                 "added_by": "Joanna Kozieńska",
                 "added_time": "2017-06-15T22:00:00.000Z",
-                "created_time": "2017-06-12T14:42:41+0000",
+                "created_time": "2017-06-15T22:00:00+0000",
                 "from": Object {
                   "id": "1533148270088505",
                   "name": "Alin Rostas",
@@ -5486,7 +4874,7 @@ exports[`<ChartTable/> render with objects 1`] = `
               Object {
                 "added_by": "Joanna Kozieńska",
                 "added_time": "2017-06-12T22:00:00.000Z",
-                "created_time": "2017-06-09T11:37:19+0000",
+                "created_time": "2017-06-12T22:00:00+0000",
                 "from": Object {
                   "id": "10213444859181757",
                   "name": "Gabriela Młyńska",
@@ -5511,7 +4899,7 @@ exports[`<ChartTable/> render with objects 1`] = `
               Object {
                 "added_by": "Joanna Kozieńska",
                 "added_time": "2017-06-06T22:00:00.000Z",
-                "created_time": "2017-05-21T19:25:39+0000",
+                "created_time": "2017-06-06T22:00:00+0000",
                 "from": Object {
                   "id": "10208047442080192",
                   "name": "Agnieszka Orzeł",
@@ -5535,7 +4923,7 @@ exports[`<ChartTable/> render with objects 1`] = `
               Object {
                 "added_by": "Joanna Kozieńska",
                 "added_time": "2017-06-08T22:00:00.000Z",
-                "created_time": "2017-06-08T09:41:49+0000",
+                "created_time": "2017-06-08T22:00:00+0000",
                 "from": Object {
                   "id": "1242592522496562",
                   "name": "Adam Jaskiernik",
@@ -5560,7 +4948,7 @@ exports[`<ChartTable/> render with objects 1`] = `
               Object {
                 "added_by": "Joanna Kozieńska",
                 "added_time": "2017-06-13T22:00:00.000Z",
-                "created_time": "2017-06-10T18:15:29+0000",
+                "created_time": "2017-06-13T22:00:00+0000",
                 "from": Object {
                   "id": "10154096820541759",
                   "name": "Paweł Zubrycki",
@@ -5585,7 +4973,7 @@ exports[`<ChartTable/> render with objects 1`] = `
               Object {
                 "added_by": "Joanna Kozieńska",
                 "added_time": "2017-06-14T22:00:00.000Z",
-                "created_time": "2017-05-23T17:43:20+0000",
+                "created_time": "2017-06-14T22:00:00+0000",
                 "from": Object {
                   "id": "10208047442080192",
                   "name": "Agnieszka Orzeł",
@@ -5609,7 +4997,7 @@ exports[`<ChartTable/> render with objects 1`] = `
               Object {
                 "added_by": "Joanna Kozieńska",
                 "added_time": "2017-06-14T22:00:00.000Z",
-                "created_time": "2017-05-25T09:59:48+0000",
+                "created_time": "2017-06-14T22:00:00+0000",
                 "from": Object {
                   "id": "859129380897011",
                   "name": "Przemysław Przemysł",
@@ -5634,7 +5022,7 @@ exports[`<ChartTable/> render with objects 1`] = `
               Object {
                 "added_by": "Joanna Kozieńska",
                 "added_time": "2017-06-11T22:00:00.000Z",
-                "created_time": "2017-05-04T09:50:23+0000",
+                "created_time": "2017-06-11T22:00:00+0000",
                 "from": Object {
                   "id": "1574584592571204",
                   "name": "Dariusz Winiarski",
@@ -5935,38 +5323,6 @@ exports[`<ChartTable/> render with objects 1`] = `
                     "Expander": undefined,
                     "Filter": undefined,
                     "Footer": undefined,
-                    "Header": "added",
-                    "Pivot": undefined,
-                    "PivotValue": undefined,
-                    "accessor": [Function],
-                    "aggregate": undefined,
-                    "className": "",
-                    "filterAll": false,
-                    "filterMethod": undefined,
-                    "filterable": undefined,
-                    "footerClassName": "",
-                    "footerStyle": Object {},
-                    "getFooterProps": [Function],
-                    "getHeaderProps": [Function],
-                    "getProps": [Function],
-                    "headerClassName": "",
-                    "headerStyle": Object {},
-                    "id": "addedTime",
-                    "maxWidth": 150,
-                    "minWidth": 100,
-                    "resizable": true,
-                    "show": true,
-                    "sortMethod": undefined,
-                    "sortable": undefined,
-                    "style": Object {},
-                    "width": 90,
-                  },
-                  Object {
-                    "Aggregated": undefined,
-                    "Cell": [Function],
-                    "Expander": undefined,
-                    "Filter": undefined,
-                    "Footer": undefined,
                     "Header": "created",
                     "Pivot": undefined,
                     "PivotValue": undefined,
@@ -6218,7 +5574,6 @@ exports[`<ChartTable/> render with objects 1`] = `
                   "updated_time": "2017-06-16T16:12:46+0000",
                 },
                 "_subRows": undefined,
-                "addedTime": 0,
                 "createTime": 1497622812000,
                 "id": 0,
                 "lastUpdate": 1497629566000,
@@ -6276,7 +5631,7 @@ exports[`<ChartTable/> render with objects 1`] = `
                 "_original": Object {
                   "added_by": "Joanna Kozieńska",
                   "added_time": "2017-06-15T22:00:00.000Z",
-                  "created_time": "2017-06-13T14:26:23+0000",
+                  "created_time": "2017-06-15T22:00:00+0000",
                   "from": Object {
                     "id": "1663928107235442",
                     "name": "Aldona Bochen",
@@ -6299,8 +5654,7 @@ exports[`<ChartTable/> render with objects 1`] = `
                   "updated_time": "2017-06-15T22:26:18+0000",
                 },
                 "_subRows": undefined,
-                "addedTime": 1497564000000,
-                "createTime": 1497363983000,
+                "createTime": 1497564000000,
                 "id": 1,
                 "lastUpdate": 1497565578000,
                 "reactions_num": 6,
@@ -6323,7 +5677,7 @@ exports[`<ChartTable/> render with objects 1`] = `
                 "_original": Object {
                   "added_by": "Joanna Kozieńska",
                   "added_time": "2017-06-15T22:00:00.000Z",
-                  "created_time": "2017-06-12T14:42:41+0000",
+                  "created_time": "2017-06-15T22:00:00+0000",
                   "from": Object {
                     "id": "1533148270088505",
                     "name": "Alin Rostas",
@@ -6346,8 +5700,7 @@ exports[`<ChartTable/> render with objects 1`] = `
                   "updated_time": "2017-06-15T22:26:15+0000",
                 },
                 "_subRows": undefined,
-                "addedTime": 1497564000000,
-                "createTime": 1497278561000,
+                "createTime": 1497564000000,
                 "id": 2,
                 "lastUpdate": 1497565575000,
                 "reactions_num": 0,
@@ -6370,7 +5723,7 @@ exports[`<ChartTable/> render with objects 1`] = `
                 "_original": Object {
                   "added_by": "Joanna Kozieńska",
                   "added_time": "2017-06-12T22:00:00.000Z",
-                  "created_time": "2017-06-09T11:37:19+0000",
+                  "created_time": "2017-06-12T22:00:00+0000",
                   "from": Object {
                     "id": "10213444859181757",
                     "name": "Gabriela Młyńska",
@@ -6393,8 +5746,7 @@ exports[`<ChartTable/> render with objects 1`] = `
                   "updated_time": "2017-06-15T14:11:35+0000",
                 },
                 "_subRows": undefined,
-                "addedTime": 1497304800000,
-                "createTime": 1497008239000,
+                "createTime": 1497304800000,
                 "id": 3,
                 "lastUpdate": 1497535895000,
                 "reactions_num": 7,
@@ -6417,7 +5769,7 @@ exports[`<ChartTable/> render with objects 1`] = `
                 "_original": Object {
                   "added_by": "Joanna Kozieńska",
                   "added_time": "2017-06-06T22:00:00.000Z",
-                  "created_time": "2017-05-21T19:25:39+0000",
+                  "created_time": "2017-06-06T22:00:00+0000",
                   "from": Object {
                     "id": "10208047442080192",
                     "name": "Agnieszka Orzeł",
@@ -6439,8 +5791,7 @@ exports[`<ChartTable/> render with objects 1`] = `
                   "updated_time": "2017-06-15T10:36:54+0000",
                 },
                 "_subRows": undefined,
-                "addedTime": 1496786400000,
-                "createTime": 1495394739000,
+                "createTime": 1496786400000,
                 "id": 4,
                 "lastUpdate": 1497523014000,
                 "reactions_num": 5,
@@ -6463,7 +5814,7 @@ exports[`<ChartTable/> render with objects 1`] = `
                 "_original": Object {
                   "added_by": "Joanna Kozieńska",
                   "added_time": "2017-06-08T22:00:00.000Z",
-                  "created_time": "2017-06-08T09:41:49+0000",
+                  "created_time": "2017-06-08T22:00:00+0000",
                   "from": Object {
                     "id": "1242592522496562",
                     "name": "Adam Jaskiernik",
@@ -6486,8 +5837,7 @@ exports[`<ChartTable/> render with objects 1`] = `
                   "updated_time": "2017-06-15T09:11:44+0000",
                 },
                 "_subRows": undefined,
-                "addedTime": 1496959200000,
-                "createTime": 1496914909000,
+                "createTime": 1496959200000,
                 "id": 5,
                 "lastUpdate": 1497517904000,
                 "reactions_num": 2,
@@ -6510,7 +5860,7 @@ exports[`<ChartTable/> render with objects 1`] = `
                 "_original": Object {
                   "added_by": "Joanna Kozieńska",
                   "added_time": "2017-06-13T22:00:00.000Z",
-                  "created_time": "2017-06-10T18:15:29+0000",
+                  "created_time": "2017-06-13T22:00:00+0000",
                   "from": Object {
                     "id": "10154096820541759",
                     "name": "Paweł Zubrycki",
@@ -6533,8 +5883,7 @@ exports[`<ChartTable/> render with objects 1`] = `
                   "updated_time": "2017-06-14T22:13:23+0000",
                 },
                 "_subRows": undefined,
-                "addedTime": 1497391200000,
-                "createTime": 1497118529000,
+                "createTime": 1497391200000,
                 "id": 6,
                 "lastUpdate": 1497478403000,
                 "reactions_num": 2,
@@ -6557,7 +5906,7 @@ exports[`<ChartTable/> render with objects 1`] = `
                 "_original": Object {
                   "added_by": "Joanna Kozieńska",
                   "added_time": "2017-06-14T22:00:00.000Z",
-                  "created_time": "2017-05-23T17:43:20+0000",
+                  "created_time": "2017-06-14T22:00:00+0000",
                   "from": Object {
                     "id": "10208047442080192",
                     "name": "Agnieszka Orzeł",
@@ -6579,8 +5928,7 @@ exports[`<ChartTable/> render with objects 1`] = `
                   "updated_time": "2017-06-14T22:07:11+0000",
                 },
                 "_subRows": undefined,
-                "addedTime": 1497477600000,
-                "createTime": 1495561400000,
+                "createTime": 1497477600000,
                 "id": 7,
                 "lastUpdate": 1497478031000,
                 "reactions_num": 6,
@@ -6603,7 +5951,7 @@ exports[`<ChartTable/> render with objects 1`] = `
                 "_original": Object {
                   "added_by": "Joanna Kozieńska",
                   "added_time": "2017-06-14T22:00:00.000Z",
-                  "created_time": "2017-05-25T09:59:48+0000",
+                  "created_time": "2017-06-14T22:00:00+0000",
                   "from": Object {
                     "id": "859129380897011",
                     "name": "Przemysław Przemysł",
@@ -6626,8 +5974,7 @@ exports[`<ChartTable/> render with objects 1`] = `
                   "updated_time": "2017-06-14T22:07:08+0000",
                 },
                 "_subRows": undefined,
-                "addedTime": 1497477600000,
-                "createTime": 1495706388000,
+                "createTime": 1497477600000,
                 "id": 8,
                 "lastUpdate": 1497478028000,
                 "reactions_num": 1,
@@ -6650,7 +5997,7 @@ exports[`<ChartTable/> render with objects 1`] = `
                 "_original": Object {
                   "added_by": "Joanna Kozieńska",
                   "added_time": "2017-06-11T22:00:00.000Z",
-                  "created_time": "2017-05-04T09:50:23+0000",
+                  "created_time": "2017-06-11T22:00:00+0000",
                   "from": Object {
                     "id": "1574584592571204",
                     "name": "Dariusz Winiarski",
@@ -6672,8 +6019,7 @@ exports[`<ChartTable/> render with objects 1`] = `
                   "updated_time": "2017-06-14T08:55:13+0000",
                 },
                 "_subRows": undefined,
-                "addedTime": 1497218400000,
-                "createTime": 1493891423000,
+                "createTime": 1497218400000,
                 "id": 9,
                 "lastUpdate": 1497430513000,
                 "reactions_num": 1,
@@ -6763,7 +6109,6 @@ exports[`<ChartTable/> render with objects 1`] = `
                   "updated_time": "2017-06-16T16:12:46+0000",
                 },
                 "_subRows": undefined,
-                "addedTime": 0,
                 "createTime": 1497622812000,
                 "id": 0,
                 "lastUpdate": 1497629566000,
@@ -6821,7 +6166,7 @@ exports[`<ChartTable/> render with objects 1`] = `
                 "_original": Object {
                   "added_by": "Joanna Kozieńska",
                   "added_time": "2017-06-15T22:00:00.000Z",
-                  "created_time": "2017-06-13T14:26:23+0000",
+                  "created_time": "2017-06-15T22:00:00+0000",
                   "from": Object {
                     "id": "1663928107235442",
                     "name": "Aldona Bochen",
@@ -6844,8 +6189,7 @@ exports[`<ChartTable/> render with objects 1`] = `
                   "updated_time": "2017-06-15T22:26:18+0000",
                 },
                 "_subRows": undefined,
-                "addedTime": 1497564000000,
-                "createTime": 1497363983000,
+                "createTime": 1497564000000,
                 "id": 1,
                 "lastUpdate": 1497565578000,
                 "reactions_num": 6,
@@ -6868,7 +6212,7 @@ exports[`<ChartTable/> render with objects 1`] = `
                 "_original": Object {
                   "added_by": "Joanna Kozieńska",
                   "added_time": "2017-06-15T22:00:00.000Z",
-                  "created_time": "2017-06-12T14:42:41+0000",
+                  "created_time": "2017-06-15T22:00:00+0000",
                   "from": Object {
                     "id": "1533148270088505",
                     "name": "Alin Rostas",
@@ -6891,8 +6235,7 @@ exports[`<ChartTable/> render with objects 1`] = `
                   "updated_time": "2017-06-15T22:26:15+0000",
                 },
                 "_subRows": undefined,
-                "addedTime": 1497564000000,
-                "createTime": 1497278561000,
+                "createTime": 1497564000000,
                 "id": 2,
                 "lastUpdate": 1497565575000,
                 "reactions_num": 0,
@@ -6915,7 +6258,7 @@ exports[`<ChartTable/> render with objects 1`] = `
                 "_original": Object {
                   "added_by": "Joanna Kozieńska",
                   "added_time": "2017-06-12T22:00:00.000Z",
-                  "created_time": "2017-06-09T11:37:19+0000",
+                  "created_time": "2017-06-12T22:00:00+0000",
                   "from": Object {
                     "id": "10213444859181757",
                     "name": "Gabriela Młyńska",
@@ -6938,8 +6281,7 @@ exports[`<ChartTable/> render with objects 1`] = `
                   "updated_time": "2017-06-15T14:11:35+0000",
                 },
                 "_subRows": undefined,
-                "addedTime": 1497304800000,
-                "createTime": 1497008239000,
+                "createTime": 1497304800000,
                 "id": 3,
                 "lastUpdate": 1497535895000,
                 "reactions_num": 7,
@@ -6962,7 +6304,7 @@ exports[`<ChartTable/> render with objects 1`] = `
                 "_original": Object {
                   "added_by": "Joanna Kozieńska",
                   "added_time": "2017-06-06T22:00:00.000Z",
-                  "created_time": "2017-05-21T19:25:39+0000",
+                  "created_time": "2017-06-06T22:00:00+0000",
                   "from": Object {
                     "id": "10208047442080192",
                     "name": "Agnieszka Orzeł",
@@ -6984,8 +6326,7 @@ exports[`<ChartTable/> render with objects 1`] = `
                   "updated_time": "2017-06-15T10:36:54+0000",
                 },
                 "_subRows": undefined,
-                "addedTime": 1496786400000,
-                "createTime": 1495394739000,
+                "createTime": 1496786400000,
                 "id": 4,
                 "lastUpdate": 1497523014000,
                 "reactions_num": 5,
@@ -7008,7 +6349,7 @@ exports[`<ChartTable/> render with objects 1`] = `
                 "_original": Object {
                   "added_by": "Joanna Kozieńska",
                   "added_time": "2017-06-08T22:00:00.000Z",
-                  "created_time": "2017-06-08T09:41:49+0000",
+                  "created_time": "2017-06-08T22:00:00+0000",
                   "from": Object {
                     "id": "1242592522496562",
                     "name": "Adam Jaskiernik",
@@ -7031,8 +6372,7 @@ exports[`<ChartTable/> render with objects 1`] = `
                   "updated_time": "2017-06-15T09:11:44+0000",
                 },
                 "_subRows": undefined,
-                "addedTime": 1496959200000,
-                "createTime": 1496914909000,
+                "createTime": 1496959200000,
                 "id": 5,
                 "lastUpdate": 1497517904000,
                 "reactions_num": 2,
@@ -7055,7 +6395,7 @@ exports[`<ChartTable/> render with objects 1`] = `
                 "_original": Object {
                   "added_by": "Joanna Kozieńska",
                   "added_time": "2017-06-13T22:00:00.000Z",
-                  "created_time": "2017-06-10T18:15:29+0000",
+                  "created_time": "2017-06-13T22:00:00+0000",
                   "from": Object {
                     "id": "10154096820541759",
                     "name": "Paweł Zubrycki",
@@ -7078,8 +6418,7 @@ exports[`<ChartTable/> render with objects 1`] = `
                   "updated_time": "2017-06-14T22:13:23+0000",
                 },
                 "_subRows": undefined,
-                "addedTime": 1497391200000,
-                "createTime": 1497118529000,
+                "createTime": 1497391200000,
                 "id": 6,
                 "lastUpdate": 1497478403000,
                 "reactions_num": 2,
@@ -7102,7 +6441,7 @@ exports[`<ChartTable/> render with objects 1`] = `
                 "_original": Object {
                   "added_by": "Joanna Kozieńska",
                   "added_time": "2017-06-14T22:00:00.000Z",
-                  "created_time": "2017-05-23T17:43:20+0000",
+                  "created_time": "2017-06-14T22:00:00+0000",
                   "from": Object {
                     "id": "10208047442080192",
                     "name": "Agnieszka Orzeł",
@@ -7124,8 +6463,7 @@ exports[`<ChartTable/> render with objects 1`] = `
                   "updated_time": "2017-06-14T22:07:11+0000",
                 },
                 "_subRows": undefined,
-                "addedTime": 1497477600000,
-                "createTime": 1495561400000,
+                "createTime": 1497477600000,
                 "id": 7,
                 "lastUpdate": 1497478031000,
                 "reactions_num": 6,
@@ -7148,7 +6486,7 @@ exports[`<ChartTable/> render with objects 1`] = `
                 "_original": Object {
                   "added_by": "Joanna Kozieńska",
                   "added_time": "2017-06-14T22:00:00.000Z",
-                  "created_time": "2017-05-25T09:59:48+0000",
+                  "created_time": "2017-06-14T22:00:00+0000",
                   "from": Object {
                     "id": "859129380897011",
                     "name": "Przemysław Przemysł",
@@ -7171,8 +6509,7 @@ exports[`<ChartTable/> render with objects 1`] = `
                   "updated_time": "2017-06-14T22:07:08+0000",
                 },
                 "_subRows": undefined,
-                "addedTime": 1497477600000,
-                "createTime": 1495706388000,
+                "createTime": 1497477600000,
                 "id": 8,
                 "lastUpdate": 1497478028000,
                 "reactions_num": 1,
@@ -7195,7 +6532,7 @@ exports[`<ChartTable/> render with objects 1`] = `
                 "_original": Object {
                   "added_by": "Joanna Kozieńska",
                   "added_time": "2017-06-11T22:00:00.000Z",
-                  "created_time": "2017-05-04T09:50:23+0000",
+                  "created_time": "2017-06-11T22:00:00+0000",
                   "from": Object {
                     "id": "1574584592571204",
                     "name": "Dariusz Winiarski",
@@ -7217,8 +6554,7 @@ exports[`<ChartTable/> render with objects 1`] = `
                   "updated_time": "2017-06-14T08:55:13+0000",
                 },
                 "_subRows": undefined,
-                "addedTime": 1497218400000,
-                "createTime": 1493891423000,
+                "createTime": 1497218400000,
                 "id": 9,
                 "lastUpdate": 1497430513000,
                 "reactions_num": 1,
@@ -7492,22 +6828,12 @@ exports[`<ChartTable/> renders without crashing 1`] = `
         "columns": Array [
           Object {
             "Cell": [Function],
-            "Header": "added",
-            "accessor": [Function],
-            "id": "addedTime",
-            "maxWidth": 150,
-            "resizable": true,
-            "width": 90,
-          },
-          Object {
-            "Cell": [Function],
             "Header": "created",
             "accessor": [Function],
             "id": "createTime",
             "maxWidth": 200,
             "minWidth": 150,
             "resizable": true,
-            "show": true,
           },
           Object {
             "Cell": [Function],

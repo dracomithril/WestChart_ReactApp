@@ -69,26 +69,9 @@ export default class ChartTable extends React.Component {
         let time = {
             Header: 'Time',
             columns: [
-                {
-                    Header: 'added',
-                    id: 'addedTime',
-                    resizable: true,
-                    maxWidth: 150,
-                    width: 90,
-                    accessor: d => d.added_time === undefined ? 0 : getTime(d.added_time),
-                    Cell: props => {
-                        return props.value === 0 ? <i className="fa fa-minus-circle" style={{color: 'red'}}/> :
-                            <OverlayTrigger placement="top" overlay={<Tooltip
-                                id="tooltip">{props.row._original.added_by}</Tooltip>}><span>{new Date(props.value).toLocaleString('pl-PL', {
-                                year: "numeric",
-                                month: "2-digit",
-                                day: "numeric"
-                            })}</span></OverlayTrigger>
-                    }
-                }, {
+                 {
                     Header: 'created',
                     id: 'createTime',
-                    show: !isMobile,
                     resizable: true,
                     minWidth: 150,
                     maxWidth: 200,

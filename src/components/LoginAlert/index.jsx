@@ -52,12 +52,12 @@ export default class LoginAlert extends React.Component {
                 appId={process.env.NODE_ENV === 'production' ? "1173483302721639" : "1173486879387948"}
                 language="pl_PL"
                 autoLoad={true}
-                scope="public_profile,email,user_managed_groups"
+                scope={"public_profile,email,user_managed_groups"}
                 callback={(response) => store.dispatch({type: 'UPDATE_USER', response: response})}
-                fields="id,email,name,first_name,picture,groups{administrator}"
+                fields={"id,email,name,first_name,picture,groups{administrator}"}
                 cssClass="btn btn-social btn-facebook"
                 icon={"fa fa-facebook"}
-                version="v2.8"
+                version={"v2.9"}
             />}
             {sp_user.id === undefined &&
             <Button className="btn btn-social btn-spotify" onClick={() => {

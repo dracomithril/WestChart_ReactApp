@@ -29,7 +29,7 @@ exports[`<LoginAlert/> renders without crashing ChartPresenter 1`] = `
     tag="button"
     textButton="Login with Facebook"
     typeButton="button"
-    version="v2.8"
+    version="v2.9"
     xfbml={false}
   />
   <Button

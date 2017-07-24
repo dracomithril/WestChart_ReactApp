@@ -3,7 +3,8 @@
  */
 const sinon = require('sinon');
 import configureMockStore from 'redux-mock-store';
-const chart =require('./data/fbResult.json').data;
+
+const chart = require('./data/response.json').chart;
 const mockStore = configureMockStore([]);
 describe('[utils]', () => {
     let utils;
@@ -197,18 +198,36 @@ describe('[utils]', () => {
         it('should be able to filter', function () {
             let getStore = {
                 chart: chart, filters: {
-                    woc: {checked: false},
                     add_control: {checked: false},
                     create_control: {checked: false},
                     update_control: {checked: false},
                     less_control: {checked: false},
                     more_control: {checked: false},
-                    woc_control:{checked:true}
-                }, until: null, songs_per_day: []
+                    woc_control: {checked: true},
+                    westletter_control: {checked: true}
+                }, until: "2017-06-16T19:54:25.672Z", songs_per_day: []
             };
             const store = mockStore(getStore);
             let filtered = utils.filterChart(store);
-            //todo tests
+            expect(filtered.view_chart.length).toBe(9);
         });
+        it('should be able to filter when add_control', function () {
+            let getStore = {
+                chart: chart,
+                filters: {
+                    create_control: {checked: true, days:7},
+                    update_control: {checked: false},
+                    less_control: {checked: false},
+                    more_control: {checked: false},
+                    woc_control: {checked: true},
+                    westletter_control: {checked: true}
+                }, until: "2017-06-16T19:54:25.672Z", songs_per_day: []
+            };
+
+            const store = mockStore(getStore);
+            let filtered = utils.filterChart(store);
+            expect(filtered.view_chart.length).toBe(7);
+        });
+
     });
 });

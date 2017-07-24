@@ -167,13 +167,13 @@ const create_control = (control, action) => {
 };
 const filters = (state = {}, action) => {
     return {
-        add_control: create_control(state.add_control || {checked: true, id: 'add', days: showDays}, action),
-        create_control: create_control(state.create_control || {checked: false, id: 'create', days: showDays}, action),
+        create_control: create_control(state.create_control || {checked: true, id: 'create', days: showDays}, action),
         update_control: create_control(state.update_control || {checked: false, id: 'update', days: showDays}, action),
         //todo less & more should be count or value it shows how many reaction was for post
         less_control: create_control(state.less_control || {checked: false, id: 'less', days: 15}, action),
         more_control: create_control(state.more_control || {checked: false, id: 'more', days: 0}, action),
-        woc_control: create_control(state.woc_control || {checked: true, id: 'woc_cb'}, action)
+        woc_control: create_control(state.woc_control || {checked: true, id: 'woc_cb'}, action),
+        westletter_control: create_control(state.westletter_control || {checked: true, id: 'westletter_cb'}, action)
     }
 };
 const errors = (state = [], action) => {
