@@ -329,12 +329,12 @@ describe('[reducers]', function () {
             Object.freeze(state);
             const action = {
                 type: action_types.ADD_ERROR,
-                error: "NEW_ERROR"
+                value: "NEW_ERROR"
             };
 
             const result = reducers.errors(state, action);
 
-            const expected = [action.error];
+            const expected = [action.value];
             expect(result).toEqual(expected)
         });
         it('should be able to clear errors', function () {

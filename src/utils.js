@@ -7,7 +7,6 @@ import qs from "querystring";
 const filters_def = require('./filters_def');
 
 
-
 const cookies_name = {
     access_token: 'wcs_sp_user_ac',
     refresh_token: 'wcs_sp_user_refresh_token'
@@ -150,14 +149,15 @@ class utils {
                 return Promise.reject(resp);
             })
             .then((body) => {
+                console.log("chart list witch " + body.chart.length);
                 store.dispatch({type: action_types.UPDATE_CHART, chart: body.chart});
                 store.dispatch({type: action_types.UPDATE_LAST_UPDATE, date: body.last_update});
                 store.dispatch({type: action_types.CHANGE_SHOW_WAIT, show: false});
             })
             .catch(err => {
                 store.dispatch({type: action_types.CHANGE_SHOW_WAIT, show: false});
+                store.dispatch({type: action_types.ADD_ERROR, values: err});
                 console.error('Error in fetch chart.');
-                console.error(Object.inspect(err));
             });
     };
 
@@ -174,7 +174,7 @@ class utils {
         store.dispatch({type: 'UPDATE_UNTIL', date: until2});
 
         const query_params = {
-            days: undefined,
+            days: show_last,
             since: since2,
             until: until2,
             access_token: user.accessToken
