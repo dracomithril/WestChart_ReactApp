@@ -22,18 +22,4 @@ describe('<SongsPerDay/>', () => {
         expect(shallowToJson(wrapper)).toMatchSnapshot();
 
     });
-    xit('renders without crashing', () => {
-        const err_per_da= [{org:"2017/05/02"}];
-        const store = mockStore(initial_state);
-        const wrapper = shallow(
-            <SongsPerDay error_days={err_per_da}/>, {
-                context: {store},
-                childContextTypes: {store: PropTypes.object}
-            }
-        );
-        expect(shallowToJson(wrapper)).toMatchSnapshot();
-        // let children =wrapper.find('div#error_list');
-        // expect(children.children().key()).toBe("2017/05/02");
-
-    });
 });

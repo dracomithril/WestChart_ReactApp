@@ -141,6 +141,12 @@ const show_wait = (state = false, action) => {
 const songs_per_day = (state = 2, action) => {
     return action.type === action_types.UPDATE_SONGS_PER_DAY ? action.days : state;
 };
+/**
+ * shows days from now or from selected date
+ * @param state
+ * @param action
+ * @returns {number}
+ */
 const show_last = (state = 31, action) => {
     return action.type === action_types.UPDATE_SHOW_LAST ? action.days : state;
 };
@@ -179,7 +185,7 @@ const filters = (state = {}, action) => {
 const errors = (state = [], action) => {
     switch (action.type) {
         case action_types.ADD_ERROR:
-            return _.takeRight([action.error, ...state], 3);
+            return _.takeRight([action.value, ...state], 3);
         case action_types.CLEAR_ERRORS:
             return [];
         default:

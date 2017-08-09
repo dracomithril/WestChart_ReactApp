@@ -99,7 +99,7 @@ export default class PlaylistCombiner extends React.Component {
             console.log('Retrieved playlists ', new_user);
             return Promise.resolve(new_user.id);
         }).catch(e => {
-            store.dispatch({type: action_types.ADD_ERROR, error: e})
+            store.dispatch({type: action_types.ADD_ERROR, value: e})
         });
 
     }
@@ -121,7 +121,7 @@ export default class PlaylistCombiner extends React.Component {
                 this.getUserInformation(sp_user.id);
             })
         }).catch(e => {
-            store.dispatch({type: action_types.ADD_ERROR, error: e})
+            store.dispatch({type: action_types.ADD_ERROR, value: e})
         });
     }
 
