@@ -8,7 +8,8 @@ import SongsPerDay from "./SongsPerDay";
 import FilteringOptions from "./FilteringOptions";
 import PickYourDate from "./PickYourDate";
 import "./components.css";
-import  {action_types} from "../reducers/action_types";
+
+const action_types = require('./../reducers/action_types');
 
 let utils = require('./../utils');
 
@@ -37,7 +38,16 @@ export default class ChartHeader extends React.Component {
                     <div>
                         <Button id="updateChartB" onClick={() => utils.UpdateChart(store)}
                                 bsStyle="primary">Update</Button>
-                        <Button id={"quickSummary"} onClick={() => utils.UpdateChart(store).then(()=>store.dispatch({type: action_types.TOGGLE_ALL}))} bsStyle="success">Quick summary</Button>
+                        <Button id={"quickSummary"} onClick={() => {
+                            utils.UpdateChart(store).then(() => {
+                                store.dispatch({type: action_types.TOGGLE_ALL});
+                                return Promise.resolve();
+                            }).then(() => {
+                                const elementById = document.getElementById("start_sp_button");
+                                elementById.click();
+                                location.hash="#summary";
+                            });
+                        }} bsStyle="success">Quick summary</Button>
                     </div>
                 </OverlayTrigger>
             </div>

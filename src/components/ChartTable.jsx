@@ -7,7 +7,7 @@ import ReactTable from "react-table";
 import {Checkbox, Image, Label, OverlayTrigger, Tooltip} from "react-bootstrap";
 
 import "./components.css";
-import {action_types} from "../reducers/action_types";
+const action_types = require('./../reducers/action_types');
 function formatDate(date) {
     return new Date(date).toLocaleString('pl-PL');
 }
