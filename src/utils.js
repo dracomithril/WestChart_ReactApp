@@ -136,23 +136,29 @@ class utils {
         return {view_chart, error_days};
     }
 
-    static getChartFromServer(query_params, store) {
+    static getChartFromServer(query_params) {
         let url = '/api/get_chart?' + qs.stringify(query_params);
         console.time('client-obtain-chart');
-        return fetch(url)
-            .then((resp) => {
-                console.log('obtained chart list');
-                console.timeEnd('client-obtain-chart');
-                if (resp.status === 200) {
-                    return resp.json()
-                }
-                return Promise.reject(resp);
-            })
+        return fetch(url).then((resp) => {
+            console.log('obtained chart list');
+            console.timeEnd('client-obtain-chart');
+            return resp.status === 200 ? resp.json() : Promise.reject(resp);
+        });
+    };
+
+    static UpdateChart(store) {
+        store.dispatch({type: action_types.CHANGE_SHOW_WAIT, show: true});
+        const {user, enable_until, start_date, show_last} = store.getState();
+        const query_params = this.getQueryParams(enable_until, start_date, show_last, user);
+        store.dispatch({type: 'UPDATE_SINCE', date: query_params.since});
+        store.dispatch({type: 'UPDATE_UNTIL', date: query_params.until});
+        return utils.getChartFromServer(query_params)
             .then((body) => {
                 console.log("chart list witch " + body.chart.length);
                 store.dispatch({type: action_types.UPDATE_CHART, chart: body.chart});
                 store.dispatch({type: action_types.UPDATE_LAST_UPDATE, date: body.last_update});
                 store.dispatch({type: action_types.CHANGE_SHOW_WAIT, show: false});
+                return Promise.resolve();
             })
             .catch(err => {
                 store.dispatch({type: action_types.CHANGE_SHOW_WAIT, show: false});
@@ -161,17 +167,11 @@ class utils {
             });
     };
 
-    static UpdateChart(store) {
-        store.dispatch({type: action_types.CHANGE_SHOW_WAIT, show: true});
-        const {user, enable_until, start_date, show_last} = store.getState();
-
+    static getQueryParams(enable_until, start_date, show_last, user) {
         let until = enable_until ? start_date.toDate() : new Date();
-
         let since = filters_def.subtractDaysFromDate(until, show_last);
         const since2 = since.toISOString();
         const until2 = until.toISOString();
-        store.dispatch({type: 'UPDATE_SINCE', date: since2});
-        store.dispatch({type: 'UPDATE_UNTIL', date: until2});
 
         const query_params = {
             days: show_last,
@@ -179,8 +179,8 @@ class utils {
             until: until2,
             access_token: user.accessToken
         };
-        utils.getChartFromServer(query_params, store);
-    };
+        return query_params;
+    }
 
     static getArtist_Title(name) {
         /** regex for artist title
