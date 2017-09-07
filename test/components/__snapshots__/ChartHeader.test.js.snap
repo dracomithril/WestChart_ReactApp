@@ -39,7 +39,7 @@ exports[`<ChartHeader/> renders without crashing ChartPresenter 1`] = `
             bsClass="label"
             bsStyle="danger"
           >
-            03-11, Sat
+            Sat, 03/11
           </Label>
           <br />
           <small

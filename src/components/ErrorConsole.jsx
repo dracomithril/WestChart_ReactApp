@@ -6,9 +6,13 @@ const action_types = require('./../reducers/action_types');
 export default class ErrorConsole extends React.Component {
     componentWillUnmount() {
         console.log('component ErrorConsole unmounted');
+        this.unsubscribe();
     }
 
     componentDidMount() {
+        const {store} = this.context;
+        this.unsubscribe = store.subscribe(() => this.forceUpdate());
+
         console.log('component ErrorConsole did mount');
     }
 

@@ -30,8 +30,9 @@
     margin-left: 10px;
     text-align: left;
     padding-left: 10px;
-    height: 90px;
+    padding-right: 5px;
+    height: 100px;
     font-size: smaller;
-    overflow-y: scroll;
+    /*overflow-y: scroll;*/
     border-radius: 3px;
 }

@@ -3,13 +3,14 @@
  */
 
 import moment from "moment";
+
 let showDays = 7;
 let _ = require('lodash');
 const action_types = require('./action_types');
 let map_user = (response) => {
     let isGroupAdmin = response.groups.data
-            .filter((elem) => elem.id === '1707149242852457' && elem.administrator === true)
-            .length > 0;
+        .filter((elem) => elem.id === '1707149242852457' && elem.administrator === true)
+        .length > 0;
     return {
         accessToken: response.accessToken,
         email: response.email,
@@ -185,7 +186,8 @@ const filters = (state = {}, action) => {
 const errors = (state = [], action) => {
     switch (action.type) {
         case action_types.ADD_ERROR:
-            return _.takeRight([action.value, ...state], 3);
+            let takeRight = _.takeRight([action.value, ...state], 3);
+            return takeRight;
         case action_types.CLEAR_ERRORS:
             return [];
         default:

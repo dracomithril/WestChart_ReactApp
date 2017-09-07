@@ -3,49 +3,23 @@
  */
 import React from "react";
 import PropTypes from "prop-types";
-import {Button, ButtonGroup, ControlLabel, FormControl, FormGroup, Image, Badge} from "react-bootstrap";
-import {getTracks, getUserAndPlaylists, createPlaylistAndAddTracks} from "./../spotify_utils";
+import {Button} from "react-bootstrap";
+import {
+    getTracks,
+    getUserAndPlaylists,
+    createPlaylistAndAddTracks,
+    addTrucksToPlaylistNoRepeats
+} from "./../spotify_utils";
 import PlaylistInfo from './PlaylistInfo';
+import UserPlaylist from './UserPlaylist';
+
 const _ = require('lodash');
 const action_types = require('./../reducers/action_types');
 //todo add modal to block usage of tool when playlist crating
-const UserPlaylist = (props) => {
-    let user = props.user || {};
-    const items = (user.items || []).map((elem) => {
-        return <option key={elem.id} value={elem.id}>{elem.name + " - " + ((elem.tracks || {}).total || 0)}</option>
-    });
-    return <FormGroup controlId={user.id + '_playlist'} bsClass="playlists_view form-group">
-        <div>
-            <ControlLabel> <Image src={user.pic} rounded/>
-                <span>{user.id.length > 12 ? user.id.substr(0, 9) + '...' : user.id}</span>
-            </ControlLabel><Badge
-            bsStyle="warning">{user.total}</Badge>
-            <ButtonGroup>
-                <Button className="fa fa-refresh" onClick={() => props.onUpdate(user.id)}/>
-                <Button className="fa fa-minus" onClick={() => props.onDelete(user.id)} disabled={!props.erasable}/>
-            </ButtonGroup>
-        </div>
-        <FormControl name={user.id} componentClass="select" multiple onChange={(e) => {
-            let name = e.target.name;
-            let sel = [];
-            for (let el of e.target.selectedOptions) {
-                sel.push([name, el.value])
-            }
-            props.onSelect(name, sel);
-        }}>
-            {items}
-        </FormControl>
-    </FormGroup>
+const cf = {
+    existing: "existing",
+    new_list: "new_list"
 };
-UserPlaylist.propTypes = {
-    user: PropTypes.object,
-    onUpdate: PropTypes.func,
-    onDelete: PropTypes.func,
-    onSelect: PropTypes.func,
-    erasable: PropTypes.bool
-};
-
-
 export default class PlaylistCombiner extends React.Component {
     constructor(props) {
         super(props);
@@ -57,6 +31,7 @@ export default class PlaylistCombiner extends React.Component {
             userType: "this_user",
             userField: "",
             users: {},
+            createFrom: cf.existing,
             new_playlist: "",
             sp_playlist_info: {
                 url: null
@@ -107,22 +82,26 @@ export default class PlaylistCombiner extends React.Component {
     combinePlaylists() {
         //todo check if playlist exists
         let store = this.context.store;
+        let createFrom_selected = document.getElementById("select_user_playlist").value;
         const {sp_user} = store.getState();
-        const {selected, new_playlist} = this.state;
+        const {selected, new_playlist, createFrom} = this.state;
         let array = _.flatMap(selected, n => n);
+
         let actions = array.map(el => getTracks(sp_user.access_token, ...el));
         Promise.all(actions).then(data => {
             console.log('all done!!!');
             let flat_tracks = _.flatMap(data, n => n);// [].concat.apply([], data);
             let uniq = _.uniq(flat_tracks);
-            return createPlaylistAndAddTracks(sp_user, new_playlist, false, uniq).then(d => {
+            return (createFrom === cf.existing ? addTrucksToPlaylistNoRepeats(sp_user.id, createFrom_selected, uniq) : createPlaylistAndAddTracks(sp_user, new_playlist, false, uniq)).then(d => {
                 console.log(d);
                 this.setState({sp_playlist_info: d});
                 this.getUserInformation(sp_user.id);
+                this.forceUpdate();
             })
         }).catch(e => {
             store.dispatch({type: action_types.ADD_ERROR, value: e})
         });
+
     }
 
     deleteUserPlaylist(user_id) {
@@ -151,15 +130,21 @@ export default class PlaylistCombiner extends React.Component {
 
     render() {
         const {sp_user} = this.context.store.getState();
-        const {userField, users, sp_playlist_info} = this.state;
+        const {userField, users, sp_playlist_info, createFrom} = this.state;
         const users_playlists = Object.keys(users).map((el) => {
             return <UserPlaylist user={users[el]} key={el + "_playlists"}
                                  onUpdate={this.getUserInformation} onDelete={this.deleteUserPlaylist}
                                  onSelect={this.updateSelectedPlaylist}
                                  erasable={(users[el] || {}).id !== sp_user.id}/>
         });
+        const user_playlists = ((users[sp_user.id] || {}).items || []).map(UserPlaylist.mapUserPlaylistToOptions);
+        let newList_checked = cf.new_list === createFrom;
+        let existing_checked = cf.existing === createFrom;
+        let updateSelected = (e) => this.setState({
+            createFrom: e.target.id
+        });
         return (<div>
-                <h3>Combiner<strong style={{color:'red'}}>(BETA)</strong></h3>
+                <h3>Combiner<strong style={{color: 'red'}}>(BETA)</strong></h3>
                 <div>
                 <span>
                     Combiner gets only 50 last active playlists from your spotify account and from that list selects
@@ -187,10 +172,23 @@ export default class PlaylistCombiner extends React.Component {
                     </div>
                     <div id="destination_panel">
                         <h5>To:</h5>
-                        <label>{"New playlist "}
-                            <input type="text" placeholder="new playlist" value={this.state.new_playlist}
+                        <div>
+                            <input type={"radio"} id={cf.existing}
+                                   checked={existing_checked}
+                                   onChange={updateSelected}/>
+                            <label target="select_user_playlist">{"Existing List "}</label>
+                            <br/>
+                            <select id="select_user_playlist" disabled={!existing_checked}>{user_playlists}</select>
+                            <br/>
+                            <input type={"radio"} id={cf.new_list}
+                                   checked={newList_checked}
+                                   onChange={updateSelected}/>
+                            <label target={cf.new_list + "_txt"}>{"New playlist"}
+                            </label><br/>
+                            <input type="text" id={cf.new_list + "_txt"} disabled={!newList_checked}
+                                   placeholder="new playlist" value={this.state.new_playlist}
                                    onChange={event => this.setState({new_playlist: event.target.value})}/>
-                        </label>
+                        </div>
                         <Button onClick={this.combinePlaylists}>Combine</Button>
                     </div>
                 </div>
