@@ -8,6 +8,8 @@ import SongsPerDay from "./SongsPerDay";
 import FilteringOptions from "./FilteringOptions";
 import PickYourDate from "./PickYourDate";
 import "./components.css";
+import  {action_types} from "../reducers/action_types";
+
 let utils = require('./../utils');
 
 export default class ChartHeader extends React.Component {
@@ -32,8 +34,11 @@ export default class ChartHeader extends React.Component {
                     <small
                         id="updateDate">{' Last update: ' + new Date(last_update).toLocaleString('pl-PL')}</small>
                 </Popover>}>
-                    <Button id="updateChartB" onClick={() => utils.UpdateChart(store)}
-                            bsStyle="primary">Update</Button>
+                    <div>
+                        <Button id="updateChartB" onClick={() => utils.UpdateChart(store)}
+                                bsStyle="primary">Update</Button>
+                        <Button id={"quickSummary"} onClick={() => utils.UpdateChart(store).then(()=>store.dispatch({type: action_types.TOGGLE_ALL}))} bsStyle="success">Quick summary</Button>
+                    </div>
                 </OverlayTrigger>
             </div>
             <FilteringOptions/>
@@ -43,6 +48,6 @@ export default class ChartHeader extends React.Component {
 ChartHeader.contextTypes = {
     store: PropTypes.object
 };
-ChartHeader.propTypes={
-    error_days:PropTypes.array
+ChartHeader.propTypes = {
+    error_days: PropTypes.array
 };

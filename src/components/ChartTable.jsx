@@ -7,6 +7,7 @@ import ReactTable from "react-table";
 import {Checkbox, Image, Label, OverlayTrigger, Tooltip} from "react-bootstrap";
 
 import "./components.css";
+import {action_types} from "../reducers/action_types";
 function formatDate(date) {
     return new Date(date).toLocaleString('pl-PL');
 }
@@ -97,7 +98,7 @@ export default class ChartTable extends React.Component {
             sortable: false,
             resizable: false,
             Header: () => <Checkbox bsClass="checkbox1" onClick={() => {
-                store.dispatch({type: 'TOGGLE_ALL'})
+                store.dispatch({type: action_types.TOGGLE_ALL})
             }}/>,
             width: 40,
             accessor: 'selected',
