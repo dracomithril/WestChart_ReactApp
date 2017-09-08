@@ -57,17 +57,30 @@ exports[`<ChartHeader/> renders without crashing ChartPresenter 1`] = `
         ]
       }
     >
-      <Button
-        active={false}
-        block={false}
-        bsClass="btn"
-        bsStyle="primary"
-        disabled={false}
-        id="updateChartB"
-        onClick={[Function]}
-      >
-        Update
-      </Button>
+      <div>
+        <Button
+          active={false}
+          block={false}
+          bsClass="btn"
+          bsStyle="primary"
+          disabled={false}
+          id="updateChartB"
+          onClick={[Function]}
+        >
+          Update
+        </Button>
+        <Button
+          active={false}
+          block={false}
+          bsClass="btn"
+          bsStyle="success"
+          disabled={false}
+          id="quickSummary"
+          onClick={[Function]}
+        >
+          Quick summary
+        </Button>
+      </div>
     </OverlayTrigger>
   </div>
   <FilteringOptions />
