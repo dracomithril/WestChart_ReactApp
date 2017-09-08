@@ -183,28 +183,27 @@ class utils {
     }
 
     static getArtist_Title(name) {
-        /** regex for artist title
-         *[group 1-2] youtube
-         *[group 1] artist
-         * [group 2] title
-         *[group 3-4] spotify
-         * [group 3] title
-         * [group 4] artist
-         */
-        const regex = /^(.*?)\s-\s(.*?)(?:\s[([](?:[Oo]ff.*l.*(?:[Vv]ideo|[Aa]udio)?|(?:Audio)?)[)\]])?(?:\sft.(.*)?)?$|^(.*?)(?:,\s.*s.*by)\s(.*?)(?:\son.*[Ss]potify)$/g;
-        let title, artist;
-        const m = regex.exec(name);
-        if (m === null) {
-            return {title: name, artist: null}
+        // const regex_drop_trash = /^(.*?)(?:[.\s][([](?:[A-Za-z,\s]*)[)\]])?(?:\sft.\s[a-zA-Z\s]*)?(?:[-\sa-zA-Z]*)$/g;
+        const sp_regex = /^(.*?)(?:,\s.*s.*by)\s(.*?)(?:\son.*[Ss]potify)$/g;
+        const split_track = /^(.*?)\s?[-|]+\s?(.*?)$/g;
+        const clean_up_req = /^([\dA-Za-z'\s-]*)(?:.[([](?:[A-Za-z,\s]*)[)\]])?(?:\sft.\s[a-zA-Z\s]*)?(?:[-\sa-zA-Z]*)$/g;
+        const sp = sp_regex.exec(name);
+        let def_ret = {artist: null, title: name};
+        if (sp && sp[1] && sp[2]) {
+            return {title: sp[1], artist: sp[2]}
         }
-        if (m[1] && m[2]) {
-            artist = m[1];
-            title = m[2];
-        } else {
-            artist = m[5];
-            title = m[4];
+        const z = split_track.exec(name);
+        if (z && z[1] && z[2]) {
+            return {
+                artist: z[1],
+                title: (track => {
+                    const t = clean_up_req.exec(track);
+                    return t &&t[1]!==""? t[1] : track;
+                })(z[2])
+            };
         }
-        return {title, artist}
+
+        return def_ret;
     };
 }
 
