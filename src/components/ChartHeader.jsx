@@ -3,7 +3,7 @@
  */
 import React from "react";
 import PropTypes from "prop-types";
-import {Button, Label, OverlayTrigger, Popover} from "react-bootstrap";
+import {Button, Label, OverlayTrigger, Popover, ButtonGroup} from "react-bootstrap";
 import SongsPerDay from "./SongsPerDay";
 import FilteringOptions from "./FilteringOptions";
 import PickYourDate from "./PickYourDate";
@@ -36,18 +36,20 @@ export default class ChartHeader extends React.Component {
                         id="updateDate">{' Last update: ' + new Date(last_update).toLocaleString('pl-PL')}</small>
                 </Popover>}>
                     <div>
-                        <Button id="updateChartB" onClick={() => utils.UpdateChart(store)}
-                                bsStyle="primary">Update</Button>
-                        <Button id={"quickSummary"} onClick={() => {
-                            utils.UpdateChart(store).then(() => {
-                                store.dispatch({type: action_types.TOGGLE_ALL});
-                                return Promise.resolve();
-                            }).then(() => {
-                                const elementById = document.getElementById("start_sp_button");
-                                elementById.click();
-                                location.hash="#summary";
-                            });
-                        }} bsStyle="success">Quick summary</Button>
+                        <ButtonGroup vertical>
+                            <Button id="updateChartB" onClick={() => utils.UpdateChart(store)}
+                                    bsStyle="primary">Update</Button>
+                            <Button id={"quickSummary"} onClick={() => {
+                                utils.UpdateChart(store).then(() => {
+                                    store.dispatch({type: action_types.TOGGLE_ALL});
+                                    return Promise.resolve();
+                                }).then(() => {
+                                    const elementById = document.getElementById("start_sp_button");
+                                    elementById.click();
+                                    location.hash = "#summary";
+                                });
+                            }} bsStyle="success">Quick summary</Button>
+                        </ButtonGroup>
                     </div>
                 </OverlayTrigger>
             </div>

@@ -49,7 +49,7 @@ class App extends Component {
         return (
             <div className="App">
                 {!isLogged ? <LoginAlert {...alert_props}/> :
-                    <Tabs defaultActiveKey={0} id="uncontrolled-tab-example" className="App-body">
+                    <Tabs defaultActiveKey={1} id="uncontrolled-tab-example" className="App-body">
                         <Tab eventKey={0} title="Info"><div><span>Hi That will be introduction</span></div></Tab>
                         <Tab eventKey={1} title="Chart"><ChartPresenter/></Tab>
                         {/*<Tab eventKey={2} title="Summary" disabled={true}/>*/}
