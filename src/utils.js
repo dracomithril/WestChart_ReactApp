@@ -161,9 +161,9 @@ class utils {
                 return Promise.resolve();
             })
             .catch(err => {
-                store.dispatch({type: action_types.CHANGE_SHOW_WAIT, show: false});
-                store.dispatch({type: action_types.ADD_ERROR, values: err});
                 console.error('Error in fetch chart.');
+                store.dispatch({type: action_types.ADD_ERROR, values: err});
+                store.dispatch({type: action_types.CHANGE_SHOW_WAIT, show: false});
             });
     };
 

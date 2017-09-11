@@ -3,9 +3,10 @@
  */
 import React, {Component} from "react";
 import PropTypes from "prop-types";
-import {Button, Form, FormControl, FormGroup, Glyphicon, InputGroup} from "react-bootstrap";
+import {Button, Form, FormControl, FormGroup, InputGroup} from "react-bootstrap";
 import spotify_utils from "./../spotify_utils";
 import utils from "../utils";
+
 const action_types = require('./../reducers/action_types');
 
 
@@ -75,17 +76,18 @@ export default class PlaylistForm extends Component {
                        })(sp_playlist_name.length)}>
 
                 <InputGroup style={{maxWidth: 250}}>
-                    <InputGroup.Addon><Glyphicon glyph="music"/></InputGroup.Addon>
                     <FormControl type="text" placeholder="playlist name" value={sp_playlist_name} onChange={(e) => {
                         store.dispatch({
                             type: action_types.UPDATE_PLAYLIST_NAME,
                             value: e.target.value,
                         })
                     }}/>
-                    <FormControl.Feedback />
+                    <FormControl.Feedback/>
+                    {/*<InputGroup.Addon><Glyphicon glyph="music"/></InputGroup.Addon>*/}
                 </InputGroup>
 
             </FormGroup>
+
             <Button id="crt_pl_button" onClick={this.onCreatePlaylist.bind(this)}
                     disabled={sp_playlist_name.length < 6} bsStyle="danger">
                 Create Playlist

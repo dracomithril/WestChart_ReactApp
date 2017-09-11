@@ -5,7 +5,8 @@ import React from "react";
 import PropTypes from 'prop-types';
 import {Badge} from "react-bootstrap";
 import './components.css';
-let {sorting} = require('./../utils');
+
+// let {sorting} = require('./../utils');
 const create_print_list = (elem, index) => {
     return <div key={elem.id}>
         <span>{index + 1}</span>
@@ -18,31 +19,25 @@ export default class Summary extends React.Component {
     componentWillUnmount() {
         console.log('component Summary unmounted');
     }
+
     /*istanbul ignore next*/
     componentDidMount() {
         console.log('component Summary did mount');
     }
 
     render() {
-        const {store} = this.context;
-        const {list_sort} = store.getState();
-        const sorting_options = Object.keys(sorting)
-            .map((elem, index) => <option key={index} value={elem}>{elem.toLowerCase()}</option>);
+         const {store} = this.context;
+        const { sp_playlist_info} = store.getState();
         let print_list = this.props.selected.map(create_print_list);
         return (<div className="summary">
             <h3 id="summary">Summary</h3>
-            <h6 id="list">{'List by: '}
-                <select name="list_sort" value={list_sort}
-                        onChange={(e) => store.dispatch({
-                            type: 'UPDATE_LIST_SORT',
-                            sort: e.target.value
-                        })}>
-                    {sorting_options}
-                </select>
-            </h6>
+            {print_list.length > 0 && <h6>[WCS Weekly Westletter]</h6>}
             <div id="popover-contained" title="Print list">
                 {print_list}
             </div>
+            {sp_playlist_info.url&&<h6>{"Link to spotify playlist: "}
+            <a href={sp_playlist_info.url} target="_newtab">{sp_playlist_info.url}</a>
+            </h6>}
         </div>);
     }
 }
