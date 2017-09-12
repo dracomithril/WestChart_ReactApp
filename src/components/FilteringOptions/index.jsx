@@ -7,7 +7,7 @@ import {Checkbox, OverlayTrigger, Tooltip} from "react-bootstrap";
 import FilterOption from "./FilterOption";
 import "./FilteringOptions.css";
 import filters_def from "./../../filters_def";
-
+const _ = require('lodash');
 const action_types = require('./../../reducers/action_types');
 
 
@@ -41,16 +41,21 @@ MessageControl.propTypes = {
 
 export default class FilteringOptions extends React.Component {
     render() {
-        const map = filters_def.control.map((elem) => {
+        const map_c = filters_def.control.map((elem) => {
             return (<FilterOption {...elem} key={elem.input.name}/>)
         });
         const map_t = filters_def.text.map((elem) => {
             return (<MessageControl {...elem} key={elem.input.name}/>)
         });
-        return (
-            <div className="filter_panel">
-                {map_t}
-                {map}
+        const combined_map = [...map_t, ...map_c];
+        const chunk_combined_map = _.chunk(combined_map,Math.floor(combined_map.length/2));
+        return (<div>
+                <div className="filter_panel">
+                    {chunk_combined_map[0]}
+                </div>
+                <div className="filter_panel">
+                    {chunk_combined_map[1]}
+                </div>
             </div>
 
         )
