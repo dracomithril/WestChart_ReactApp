@@ -3,7 +3,7 @@
  */
 import React, {Component} from "react";
 import PropTypes from "prop-types";
-import {Button, Form, FormControl, FormGroup, InputGroup} from "react-bootstrap";
+import {Button, ButtonGroup, Form, FormControl, FormGroup, InputGroup} from "react-bootstrap";
 import spotify_utils from "./../spotify_utils";
 import utils from "../utils";
 
@@ -91,12 +91,15 @@ export default class PlaylistForm extends Component {
                 </InputGroup>
 
             </FormGroup>
-            <Button onClick={this.onGenPlaylistName.bind(this)} id="genName_sp_button" bsStyle="default">generate name
+            <ButtonGroup>
+                <Button onClick={this.onGenPlaylistName.bind(this)} id="genName_sp_button" bsStyle="primary">gen.
+                name
             </Button>
-            <Button id="crt_pl_button" onClick={this.onCreatePlaylist.bind(this)}
-                    disabled={sp_playlist_name.length < 6} bsStyle="danger">
-                Create Playlist
-            </Button>
+                <Button id="crt_pl_button" onClick={this.onCreatePlaylist.bind(this)}
+                        disabled={sp_playlist_name.length < 6} bsStyle="danger">
+                    Create Playlist
+                </Button>
+            </ButtonGroup>
             <label>
                 <input type="checkbox" id="play_list_is_private" onChange={(e) => {
                     store.dispatch({
