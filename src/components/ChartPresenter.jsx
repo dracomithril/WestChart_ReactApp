@@ -38,8 +38,8 @@ export default class ChartPresenter extends React.Component {
         return (<div>
             <ChartHeader error_days={error_days}/>
             <ChartTable data={view_chart} error_days={error_days}/>
-            <SpotifySearch selected={selected}/>
             <Summary selected={selected}/>
+            <SpotifySearch selected={selected}/>
         </div>);
     }
 }

@@ -49,7 +49,7 @@ export default class RowSpotifySearch extends React.Component {
                 <TrackPreview track={track} nolink/>
             </MenuItem>)
         };
-        const items = search_elem.items.map(create_menuItems);
+        const items = (search_elem.items||[]).map(create_menuItems);
 
         const update_artist = (e) => {
             store.dispatch({
