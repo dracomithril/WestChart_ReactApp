@@ -189,7 +189,7 @@ export default class PlaylistCombiner extends React.Component {
                                    placeholder="new playlist" value={this.state.new_playlist}
                                    onChange={event => this.setState({new_playlist: event.target.value})}/>
                         </div>
-                        <Button onClick={this.combinePlaylists}>Combine</Button>
+                        <Button onClick={this.combinePlaylists} bsStyle="danger">Combine</Button>
                     </div>
                 </div>
             </div>

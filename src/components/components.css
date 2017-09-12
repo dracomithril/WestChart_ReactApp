@@ -82,6 +82,7 @@
 
 .playlists_view_conteiner {
     height: 200px;
+    border-top: solid 1px black;
 }
 
 .playlists_view {
@@ -102,13 +103,13 @@
 
 #destination_panel {
     border: 1px solid black;
-    background-color: aliceblue;
+    background-color: white;
     width: 300px;
     height: 250px;
     float: left;
 }
 #from_playlist{
-    background-color: aliceblue;
+    background-color: white;
     border: 1px solid black;
     width: 700px;
     height: 250px;
