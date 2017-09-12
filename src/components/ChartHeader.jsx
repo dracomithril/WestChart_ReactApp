@@ -44,8 +44,10 @@ export default class ChartHeader extends React.Component {
                                     store.dispatch({type: action_types.TOGGLE_ALL});
                                     return Promise.resolve();
                                 }).then(() => {
-                                    const elementById = document.getElementById("start_sp_button");
-                                    elementById.click();
+                                    const start_bt = document.getElementById("start_sp_button");
+                                    start_bt.click();
+                                    const gen_bt = document.getElementById("genName_sp_button");
+                                    gen_bt.click();
                                     location.hash = "#summary";
                                 });
                             }} bsStyle="success">Quick summary</Button>
