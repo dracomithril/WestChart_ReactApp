@@ -7,7 +7,6 @@ import PlaylistForm from "./PlaylistForm";
 import RowSpotifySearch from "./RowSpotifySearch"
 import PlaylistInfo from './PlaylistInfo';
 
-
 export default class SpotifySearch extends React.Component {
     /*istanbul ignore next*/
     componentWillUnmount() {

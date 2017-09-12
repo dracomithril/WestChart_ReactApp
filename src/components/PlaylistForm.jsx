@@ -24,14 +24,6 @@ export default class PlaylistForm extends Component {
     onStartClick() {
         const {store} = this.context;
         const {selected} = this.props;
-        const date = new Date();
-        const day1 = date.getDate();
-        const str1 = date.toLocaleString('en-US', {month: 'short', day: 'numeric'}).toUpperCase();
-        date.setDate(day1 - 4);
-        const str2 = date.toLocaleString('en-US', {month: 'short', day: 'numeric'}).toUpperCase();
-        let playlist_name = 'Chart_' + str2 + '-' + str1;
-        let list = playlist_name.split(' ').join('_');
-        store.dispatch({type: action_types.UPDATE_PLAYLIST_NAME, value: list});
         const search = selected.map((elem, search_id) => {
             const entry = utils.getArtist_Title(elem.link.title);
             let search_track = {
@@ -52,6 +44,18 @@ export default class PlaylistForm extends Component {
             return search_track;
         });
         store.dispatch({type: action_types.UPDATE_SEARCH, search: search})
+    }
+
+    onGenPlaylistName() {
+        const {store} = this.context;
+        const date = new Date();
+        const day1 = date.getDate();
+        const str1 = date.toLocaleString('en-US', {month: 'short', day: 'numeric'}).toUpperCase();
+        date.setDate(day1 - 4);
+        const str2 = date.toLocaleString('en-US', {month: 'short', day: 'numeric'}).toUpperCase();
+        let playlist_name = 'Chart_' + str2 + '-' + str1;
+        let list = playlist_name.split(' ').join('_');
+        store.dispatch({type: action_types.UPDATE_PLAYLIST_NAME, value: list});
     }
 
     onCreatePlaylist() {
@@ -87,7 +91,8 @@ export default class PlaylistForm extends Component {
                 </InputGroup>
 
             </FormGroup>
-
+            <Button onClick={this.onGenPlaylistName.bind(this)} id="genName_sp_button" bsStyle="default">generate name
+            </Button>
             <Button id="crt_pl_button" onClick={this.onCreatePlaylist.bind(this)}
                     disabled={sp_playlist_name.length < 6} bsStyle="danger">
                 Create Playlist
