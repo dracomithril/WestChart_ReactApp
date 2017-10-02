@@ -1,12 +1,12 @@
 .App {
     text-align: center;
-    min-width: 700px;
+    min-width: 760px;
 }
 
 .App-body {
     padding: 5px 5px;
     margin: 0 10px 50px;
-    background-color: #eee;
+    /*background-color: #eee;*/
     /*float: left;*/
     /*width: 80%;*/
 }

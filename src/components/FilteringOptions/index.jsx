@@ -49,7 +49,7 @@ export default class FilteringOptions extends React.Component {
         });
         const combined_map = [...map_t, ...map_c];
         const chunk_combined_map = _.chunk(combined_map,Math.floor(combined_map.length/2));
-        return (<div>
+        return (<div style={{"display":"-webkit-box"}}>
                 <div className="filter_panel">
                     {chunk_combined_map[0]}
                 </div>

@@ -19,7 +19,7 @@ export default class ErrorConsole extends React.Component {
     render() {
         const {store} = this.context;
         const {errors} = store.getState();
-        const error_logs = errors.map((el, id) => <div key={'error_' + id}>{el.message}</div>);
+        const error_logs = errors.map((el, id) =><div key={'error_' + id}>{(el||{}).message||"no message look to console logs"}</div>);
         return error_logs.length > 0 && <div className="console-log">
             <h3>Errors!!!
                 <button className="fa fa-trash-o"

@@ -49,7 +49,7 @@ class App extends Component {
         return (
             <div className="App">
                 {!isLogged ? <LoginAlert {...alert_props}/> :
-                    <Tabs defaultActiveKey={1} id="uncontrolled-tab-example" className="App-body">
+                    <Tabs defaultActiveKey={1} id="chart_tabs" className="App-body">
                         <Tab eventKey={0} title="Info"><div><h2>Hi That will be introduction</h2>
                         <h3 style={{color:"red"}}>Creation in progress</h3>
                         <h4 style={{color: "gray"}}>Nothing is true everything is permitted</h4></div></Tab>

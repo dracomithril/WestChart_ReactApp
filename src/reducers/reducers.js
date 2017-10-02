@@ -158,7 +158,7 @@ const show_last = (state = 31, action) => {
  * @param action {Action}
  * @returns {*}
  */
-const create_control = (control, action) => {
+const control_state = (control, action) => {
     if (control.id === action.id) {
         switch (action.type) {
             case action_types.TOGGLE_FILTER:
@@ -174,13 +174,13 @@ const create_control = (control, action) => {
 };
 const filters = (state = {}, action) => {
     return {
-        create_control: create_control(state.create_control || {checked: true, id: 'create', days: showDays}, action),
-        update_control: create_control(state.update_control || {checked: false, id: 'update', days: showDays}, action),
+        create_control: control_state(state.create_control || {checked: true, id: 'create', days: showDays}, action),
+        update_control: control_state(state.update_control || {checked: false, id: 'update', days: showDays}, action),
         //todo less & more should be count or value it shows how many reaction was for post
-        less_control: create_control(state.less_control || {checked: false, id: 'less', days: 15}, action),
-        more_control: create_control(state.more_control || {checked: false, id: 'more', days: 0}, action),
-        woc_control: create_control(state.woc_control || {checked: true, id: 'woc_cb'}, action),
-        westletter_control: create_control(state.westletter_control || {checked: true, id: 'westletter_cb'}, action)
+        less_control: control_state(state.less_control || {checked: false, id: 'less', days: 15}, action),
+        more_control: control_state(state.more_control || {checked: false, id: 'more', days: 0}, action),
+        woc_control: control_state(state.woc_control || {checked: true, id: 'woc_cb'}, action),
+        westletter_control: control_state(state.westletter_control || {checked: true, id: 'westletter_cb'}, action)
     }
 };
 const errors = (state = [], action) => {

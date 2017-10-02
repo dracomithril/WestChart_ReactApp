@@ -36,7 +36,7 @@ export default class ChartPresenter extends React.Component {
         sorting[list_sort](selected);
 
         return (<div>
-            <ChartHeader error_days={error_days}/>
+            <ChartHeader error_days={error_days} view_chart={view_chart}/>
             <ChartTable data={view_chart} error_days={error_days}/>
             <Summary selected={selected}/>
             <SpotifySearch selected={selected}/>

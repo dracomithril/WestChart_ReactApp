@@ -12,8 +12,30 @@ import "./components.css";
 const action_types = require('./../reducers/action_types');
 
 let utils = require('./../utils');
-
 export default class ChartHeader extends React.Component {
+
+    quickSummary(){
+        const {store} = this.context;
+        utils.UpdateChart(store).then(() => {
+            const { chart} = store.getState();
+            store.dispatch({type:action_types.TOGGLE_FILTER, id:'create', checked:true});
+            store.dispatch({type:action_types.UPDATE_DAYS, id:'create', value:5});
+            const {view_chart}= chart.length > 0 ? utils.filterChart(store) : {view_chart: []};
+            view_chart.forEach((elem)=>{
+                store.dispatch({type:action_types.TOGGLE_SELECTED, id:elem.id,checked:true})
+            });
+            // store.dispatch({type: action_types.TOGGLE_ALL});
+            return Promise.resolve();
+        }).then(() => {
+            const start_bt = document.getElementById("start_sp_button");
+            start_bt.click();
+            const gen_bt = document.getElementById("genName_sp_button");
+            gen_bt.click();
+            location.hash= "";
+            location.hash = "#summary";
+        });
+    }
+
     render() {
         const {store} = this.context;
         const {since, until, last_update} = store.getState();
@@ -24,7 +46,7 @@ export default class ChartHeader extends React.Component {
                 <SongsPerDay error_days={error_days}/>
                 <PickYourDate/>
             </div>
-            <div className="chartButtons">
+            <div className="chartButtons" >
                 <OverlayTrigger trigger={["hover", "focus"]} placement="top" overlay={<Popover id="update_info">
                     <span>{"since: "}</span>
                     <Label
@@ -39,18 +61,7 @@ export default class ChartHeader extends React.Component {
                         <ButtonGroup vertical>
                             <Button id="updateChartB" onClick={() => utils.UpdateChart(store)}
                                     bsStyle="primary">Update</Button>
-                            <Button id={"quickSummary"} onClick={() => {
-                                utils.UpdateChart(store).then(() => {
-                                    store.dispatch({type: action_types.TOGGLE_ALL});
-                                    return Promise.resolve();
-                                }).then(() => {
-                                    const start_bt = document.getElementById("start_sp_button");
-                                    start_bt.click();
-                                    const gen_bt = document.getElementById("genName_sp_button");
-                                    gen_bt.click();
-                                    location.hash = "#summary";
-                                });
-                            }} bsStyle="success">Quick summary</Button>
+                            <Button id={"quickSummary"} onClick={this.quickSummary.bind(this)} bsStyle="success">Quick summary</Button>
                         </ButtonGroup>
                     </div>
                 </OverlayTrigger>

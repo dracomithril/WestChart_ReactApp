@@ -45,14 +45,22 @@ ${sp_playlist_info.url ? "Link to spotify playlist:" + sp_playlist_info.url : ""
         const {sp_playlist_info} = store.getState();
         let print_list = this.props.selected.map(create_print_list);
         return (<div className="summary">
-            <h3 id="summary">Summary<Button bsStyle="info" onClick={this.onCopyToClipboard.bind(this)}><i className="fa fa-copy"/></Button></h3>
-            {print_list.length > 0 && <h6>[WCS Weekly Westletter]</h6>}
-            <div id="popover-contained" title="Print list">
+            <h3 id="summary">Summary<Button bsStyle="info" onClick={this.onCopyToClipboard.bind(this)}><i
+                className="fa fa-copy"/></Button><Button onClick={()=>{alert("Not implemented jet.")}} disabled>Publish2fb</Button></h3>
+            <h6>[WCS Weekly Westletter]</h6>
+            <textarea id={"textarea_add"} className="write_your_mind" placeholder={"Here write what you want"}/>
+            {print_list.length === 0 && <div>
+                <span style={{color: "red"}}>Here will be list of tracks your choosing</span>
+            </div>}
+            < div id="popover-contained" title="Print list">
                 {print_list}
             </div>
-            {sp_playlist_info.url && <h6>{"Link to spotify playlist: "}
-                <a href={sp_playlist_info.url} target="_newtab">{sp_playlist_info.url}</a>
-            </h6>}
+             <h6>{"Link to spotify playlist: "}
+                {sp_playlist_info.url && <a href={sp_playlist_info.url} target="_newtab">{sp_playlist_info.url}</a>}
+                 {!sp_playlist_info.url&&<span style={{color: "red"}}>No link</span>}
+            </h6>
+            <textarea id="riddler" className="write_your_mind" placeholder={"riddle that you have in mind"}/>
+            <text id={"link2riddle"} placeholder={"link to riddle"}/>
         </div>);
     }
 }
