@@ -25,17 +25,32 @@ export default class Summary extends React.Component {
         console.log('component Summary did mount');
     }
 
+    constructor(props) {
+        super(props);
+        this.state = {
+            introText: null,
+            riddleText: null,
+            riddleUrl: null
+        }
+
+    }
+
     onCopyToClipboard() {
         const {store} = this.context;
         const {sp_playlist_info} = store.getState();
         let playList = this.props.selected.map((elem, ind) => `${ind + 1}. ${elem.link.title} ${elem.reactions_num} likes\r\n`).join("");
         let text = `[WCS Weekly Westletter]
 
-{YOUR TEXT}
+${this.state.introText}
 
 ${playList}
 
-${sp_playlist_info.url ? "Link to spotify playlist:" + sp_playlist_info.url : ""}`;
+${sp_playlist_info.url ? "Link to spotify playlist:" + sp_playlist_info.url : "No link"}
+
+Roddle:
+${this.state.riddleText}
+
+${this.state.riddleUrl}`;
         copy(text);
         alert("Summary was copied to clipboard")
     }
@@ -46,21 +61,33 @@ ${sp_playlist_info.url ? "Link to spotify playlist:" + sp_playlist_info.url : ""
         let print_list = this.props.selected.map(create_print_list);
         return (<div className="summary">
             <h3 id="summary">Summary<Button bsStyle="info" onClick={this.onCopyToClipboard.bind(this)}><i
-                className="fa fa-copy"/></Button><Button onClick={()=>{alert("Not implemented jet.")}} disabled>Publish2fb</Button></h3>
+                className="fa fa-copy"/></Button><Button onClick={() => {
+                alert("Not implemented jet.")
+            }} disabled>Publish2fb</Button></h3>
             <h6>[WCS Weekly Westletter]</h6>
-            <textarea id={"textarea_add"} className="write_your_mind" placeholder={"Here write what you want"}/>
+            <textarea id={"textarea_add"} className="write_your_mind" placeholder={"Here write what you want"}
+                      value={this.state.introText} onChange={(e) => {
+                this.setState({introText: e.target.value})
+            }}/>
             {print_list.length === 0 && <div>
                 <span style={{color: "red"}}>Here will be list of tracks your choosing</span>
             </div>}
             < div id="popover-contained" title="Print list">
                 {print_list}
             </div>
-             <h6>{"Link to spotify playlist: "}
+            <h6>{"Link to spotify playlist: "}
                 {sp_playlist_info.url && <a href={sp_playlist_info.url} target="_newtab">{sp_playlist_info.url}</a>}
-                 {!sp_playlist_info.url&&<span style={{color: "red"}}>No link</span>}
+                {!sp_playlist_info.url && <span style={{color: "red"}}>No link</span>}
             </h6>
-            <textarea id="riddler" className="write_your_mind" placeholder={"riddle that you have in mind"}/>
-            <text id={"link2riddle"} placeholder={"link to riddle"}/>
+            <textarea id="riddler" className="write_your_mind" placeholder={"riddle that you have in mind"}
+                      value={this.state.riddleText} onChange={(e) => {
+                this.setState({riddleText: e.target.value})
+            }}/><br/>
+            <label target="link2riddle">Link for Riddle</label>
+            <input type="text" id="link2riddle" placeholder={" link to riddle"} value={this.state.riddleUrl}
+                   onChange={(e) => {
+                       this.setState({riddleUrl: e.target.value})
+                   }}/>
         </div>);
     }
 }
