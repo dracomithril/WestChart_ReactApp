@@ -28,9 +28,9 @@ export default class Summary extends React.Component {
     constructor(props) {
         super(props);
         this.state = {
-            introText: null,
-            riddleText: null,
-            riddleUrl: null
+            introText: "",
+            riddleText: "",
+            riddleUrl: ""
         }
 
     }
@@ -60,12 +60,17 @@ ${this.state.riddleUrl}`;
         const {sp_playlist_info} = store.getState();
         let print_list = this.props.selected.map(create_print_list);
         return (<div className="summary">
-            <h3 id="summary">Summary<Button bsStyle="info" onClick={this.onCopyToClipboard.bind(this)}><i
-                className="fa fa-copy"/></Button><Button onClick={() => {
-                alert("Not implemented jet.")
-            }} disabled>Publish2fb</Button></h3>
+            <h3 id="summary">Summary
+                <Button bsStyle="info" onClick={this.onCopyToClipboard.bind(this)}>
+                    <i className="fa fa-clipboard"/>
+                </Button>
+                <Button onClick={() => {
+                    alert("Not implemented jet.")
+                }} disabled>Publish2<i className="fa fa-facebook-official"/>
+                </Button>
+            </h3>
             <h6>[WCS Weekly Westletter]</h6>
-            <textarea id={"textarea_add"} className="write_your_mind" placeholder={"Here write what you want"}
+            <textarea id="textarea_add" className="write_your_mind" placeholder={"Here write what you want"}
                       value={this.state.introText} onChange={(e) => {
                 this.setState({introText: e.target.value})
             }}/>

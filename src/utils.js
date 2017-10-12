@@ -92,6 +92,8 @@ class utils {
             },
         }).then(res => {
             console.log('data sanded to database ' + res.status)
+        }).catch(()=>{
+            console.error("error connecting to server site");
         });
     }
 

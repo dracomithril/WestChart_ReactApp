@@ -71,6 +71,8 @@ export default class PlaylistForm extends Component {
     render() {
         const {store} = this.context;
         const {sp_playlist_name, isPlaylistPrivate} = store.getState();
+        const {selected} = this.props;
+        let disable_create = !(sp_playlist_name.length > 5 && selected.length > 0);
         return ( <Form inline>
             <Button onClick={this.onStartClick.bind(this)} id="start_sp_button" bsStyle="success">Start
             </Button>
@@ -96,8 +98,8 @@ export default class PlaylistForm extends Component {
                 name
             </Button>
                 <Button id="crt_pl_button" onClick={this.onCreatePlaylist.bind(this)}
-                        disabled={sp_playlist_name.length < 6} bsStyle="danger">
-                    Create Playlist
+                        disabled={disable_create} bsStyle="danger">
+                    <i className="fa fa-save"/> Playlist
                 </Button>
             </ButtonGroup>
             <label>
