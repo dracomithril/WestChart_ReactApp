@@ -67,15 +67,45 @@ exports[`<PlaylistCombiner/> renders without crashing ChartPresenter 1`] = `
       <h5>
         To:
       </h5>
-      <label>
-        New playlist 
+      <div>
         <input
+          checked={true}
+          id="existing"
+          onChange={[Function]}
+          type="radio"
+        />
+        <label
+          target="select_user_playlist"
+        >
+          Existing List 
+        </label>
+        <br />
+        <select
+          disabled={false}
+          id="select_user_playlist"
+        />
+        <br />
+        <input
+          checked={false}
+          id="new_list"
+          onChange={[Function]}
+          type="radio"
+        />
+        <label
+          target="new_list_txt"
+        >
+          New playlist
+        </label>
+        <br />
+        <input
+          disabled={true}
+          id="new_list_txt"
           onChange={[Function]}
           placeholder="new playlist"
           type="text"
           value=""
         />
-      </label>
+      </div>
       <Button
         active={false}
         block={false}

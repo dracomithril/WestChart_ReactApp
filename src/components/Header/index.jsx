@@ -29,18 +29,8 @@ export default class Header extends React.Component {
                 }}
                 cookie='user-has-accepted-cookies'/>
 
-            <PageHeader bsClass="title-header">W
-                <small>est</small>
-                C
-                <small>oast</small>
-                S
-                <small>wing</small>
-                D
-                <small>ance</small>
-                C
-                <small>hart</small>
-                H
-                <small>{'elper'}</small>
+            <PageHeader bsClass="title-header">
+                Music Helper
             </PageHeader>
             {user.name && <UserInfo/>}
         </div>);

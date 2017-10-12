@@ -3,11 +3,12 @@
  */
 import React from "react";
 import PropTypes from 'prop-types';
-
+import {Tab, Tabs} from "react-bootstrap";
 import Summary from "./Summary";
 import ChartTable from "./ChartTable";
 import ChartHeader from "./ChartHeader";
 import SpotifySearch from "./SpotifySearch";
+
 const {sorting, filterChart} = require('./../utils');
 
 export default class ChartPresenter extends React.Component {
@@ -36,10 +37,18 @@ export default class ChartPresenter extends React.Component {
         sorting[list_sort](selected);
 
         return (<div>
-            <ChartHeader error_days={error_days}/>
-            <ChartTable data={view_chart} error_days={error_days}/>
-            <Summary selected={selected}/>
-            <SpotifySearch selected={selected}/>
+            <Tabs defaultActiveKey={0} id="chart_tabs">
+                <Tab eventKey={0} title={<i className="fa fa-facebook"> Posts</i>}>
+                    <ChartHeader error_days={error_days} view_chart={view_chart}/>
+                    <ChartTable data={view_chart} error_days={error_days}/>
+                </Tab>
+                <Tab eventKey={1} title={<i className="fa fa-spotify" id="chart_playlist_tab"> Playlist</i>}>
+                    <SpotifySearch selected={selected}/>
+                </Tab>
+                <Tab eventKey={2} title={<i className="fa fa-list">Summary</i>}>
+                    <Summary selected={selected}/>
+                </Tab>
+            </Tabs>
         </div>);
     }
 }

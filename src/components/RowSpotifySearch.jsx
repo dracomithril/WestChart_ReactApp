@@ -3,7 +3,7 @@
  */
 import React from "react";
 import PropTypes from "prop-types";
-import {Button, DropdownButton, MenuItem} from "react-bootstrap";
+import {Button, DropdownButton, MenuItem, ButtonGroup} from "react-bootstrap";
 import spotify_utils from './../spotify_utils';
 import './components.css'
 const action_types = require('./../reducers/action_types');
@@ -49,7 +49,7 @@ export default class RowSpotifySearch extends React.Component {
                 <TrackPreview track={track} nolink/>
             </MenuItem>)
         };
-        const items = search_elem.items.map(create_menuItems);
+        const items = (search_elem.items||[]).map(create_menuItems);
 
         const update_artist = (e) => {
             store.dispatch({
@@ -90,6 +90,7 @@ export default class RowSpotifySearch extends React.Component {
             </td>
             <td >
                 <div>
+                    <ButtonGroup vertical>
                     <Button id={'button-' + search_elem.id} onClick={() => {
                         spotify_utils.searchForMusic(search_elem, store).then(res=>store.dispatch({
                             type: action_types.UPDATE_SINGLE_SEARCH,
@@ -104,6 +105,7 @@ export default class RowSpotifySearch extends React.Component {
                                     bsStyle={items.length === 0 ? "warning" : "success"}>
                         {items}
                     </DropdownButton>
+                    </ButtonGroup>
                 </div>
             </td>
             <td>

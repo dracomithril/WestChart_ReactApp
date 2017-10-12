@@ -92,6 +92,8 @@ class utils {
             },
         }).then(res => {
             console.log('data sanded to database ' + res.status)
+        }).catch(()=>{
+            console.error("error connecting to server site");
         });
     }
 
@@ -136,42 +138,42 @@ class utils {
         return {view_chart, error_days};
     }
 
-    static getChartFromServer(query_params, store) {
+    static getChartFromServer(query_params) {
         let url = '/api/get_chart?' + qs.stringify(query_params);
         console.time('client-obtain-chart');
-        return fetch(url)
-            .then((resp) => {
-                console.log('obtained chart list');
-                console.timeEnd('client-obtain-chart');
-                if (resp.status === 200) {
-                    return resp.json()
-                }
-                return Promise.reject(resp);
-            })
-            .then((body) => {
-                console.log("chart list witch " + body.chart.length);
-                store.dispatch({type: action_types.UPDATE_CHART, chart: body.chart});
-                store.dispatch({type: action_types.UPDATE_LAST_UPDATE, date: body.last_update});
-                store.dispatch({type: action_types.CHANGE_SHOW_WAIT, show: false});
-            })
-            .catch(err => {
-                store.dispatch({type: action_types.CHANGE_SHOW_WAIT, show: false});
-                store.dispatch({type: action_types.ADD_ERROR, values: err});
-                console.error('Error in fetch chart.');
-            });
+        return fetch(url).then((resp) => {
+            console.log('obtained chart list');
+            console.timeEnd('client-obtain-chart');
+            return resp.status === 200 ? resp.json() : Promise.reject(resp);
+        });
     };
 
     static UpdateChart(store) {
         store.dispatch({type: action_types.CHANGE_SHOW_WAIT, show: true});
         const {user, enable_until, start_date, show_last} = store.getState();
+        const query_params = this.getQueryParams(enable_until, start_date, show_last, user);
+        store.dispatch({type: 'UPDATE_SINCE', date: query_params.since});
+        store.dispatch({type: 'UPDATE_UNTIL', date: query_params.until});
+        return utils.getChartFromServer(query_params)
+            .then((body) => {
+                console.log("chart list witch " + body.chart.length);
+                store.dispatch({type: action_types.UPDATE_CHART, chart: body.chart});
+                store.dispatch({type: action_types.UPDATE_LAST_UPDATE, date: body.last_update});
+                store.dispatch({type: action_types.CHANGE_SHOW_WAIT, show: false});
+                return Promise.resolve();
+            })
+            .catch(err => {
+                console.error('Error in fetch chart.');
+                store.dispatch({type: action_types.ADD_ERROR, values: err});
+                store.dispatch({type: action_types.CHANGE_SHOW_WAIT, show: false});
+            });
+    };
 
+    static getQueryParams(enable_until, start_date, show_last, user) {
         let until = enable_until ? start_date.toDate() : new Date();
-
         let since = filters_def.subtractDaysFromDate(until, show_last);
         const since2 = since.toISOString();
         const until2 = until.toISOString();
-        store.dispatch({type: 'UPDATE_SINCE', date: since2});
-        store.dispatch({type: 'UPDATE_UNTIL', date: until2});
 
         const query_params = {
             days: show_last,
@@ -179,32 +181,31 @@ class utils {
             until: until2,
             access_token: user.accessToken
         };
-        utils.getChartFromServer(query_params, store);
-    };
+        return query_params;
+    }
 
     static getArtist_Title(name) {
-        /** regex for artist title
-         *[group 1-2] youtube
-         *[group 1] artist
-         * [group 2] title
-         *[group 3-4] spotify
-         * [group 3] title
-         * [group 4] artist
-         */
-        const regex = /^(.*?)\s-\s(.*?)(?:\s[([](?:[Oo]ff.*l.*(?:[Vv]ideo|[Aa]udio)?|(?:Audio)?)[)\]])?(?:\sft.(.*)?)?$|^(.*?)(?:,\s.*s.*by)\s(.*?)(?:\son.*[Ss]potify)$/g;
-        let title, artist;
-        const m = regex.exec(name);
-        if (m === null) {
-            return {title: name, artist: null}
+        // const regex_drop_trash = /^(.*?)(?:[.\s][([](?:[A-Za-z,\s]*)[)\]])?(?:\sft.\s[a-zA-Z\s]*)?(?:[-\sa-zA-Z]*)$/g;
+        const sp_regex = /^(.*?)(?:,\s.*s.*by)\s(.*?)(?:\son.*[Ss]potify)$/g;
+        const split_track = /^(.*?)\s?[-|]+\s?(.*?)$/g;
+        const clean_up_req = /^([\dA-Za-z'\s-]*)(?:.[([](?:[A-Za-z,\s]*)[)\]])?(?:\sft.\s[a-zA-Z\s]*)?(?:[-\sa-zA-Z]*)$/g;
+        const sp = sp_regex.exec(name);
+        let def_ret = {artist: null, title: name};
+        if (sp && sp[1] && sp[2]) {
+            return {title: sp[1], artist: sp[2]}
         }
-        if (m[1] && m[2]) {
-            artist = m[1];
-            title = m[2];
-        } else {
-            artist = m[5];
-            title = m[4];
+        const z = split_track.exec(name);
+        if (z && z[1] && z[2]) {
+            return {
+                artist: z[1],
+                title: (track => {
+                    const t = clean_up_req.exec(track);
+                    return t &&t[1]!==""? t[1] : track;
+                })(z[2])
+            };
         }
-        return {title, artist}
+
+        return def_ret;
     };
 }
 
