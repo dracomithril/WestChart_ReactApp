@@ -97,11 +97,20 @@ class utils {
         });
     }
 
-
+    /**
+     *
+     * @param store
+     * @returns {{view_chart: Array, error_days: Array, newsLetter: Array}}
+     */
     static filterChart(store) {
 
         let songs_per_day_arr = {};
         let {chart, filters, until, songs_per_day} = store.getState();
+
+        let news_letter_filter= filters_def.text[1];
+        let newsLetter = chart.filter((elem)=>{
+            return elem.message !== undefined ? elem.message.toLowerCase().includes(news_letter_filter.text) : false;
+        });
 
         const filters_defaults = [...filters_def.control, ...filters_def.text];
         let results = filters_defaults.filter(e => {
@@ -135,7 +144,7 @@ class utils {
         let error_days = Object.keys(songs_per_day_arr)
             .filter(key => songs_per_day_arr[key].count !== songs_per_day)
             .map(elem => songs_per_day_arr[elem]);
-        return {view_chart, error_days};
+        return {view_chart, error_days,newsLetter};
     }
 
     static getChartFromServer(query_params) {

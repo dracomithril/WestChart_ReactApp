@@ -150,5 +150,4 @@ ChartTable.contextTypes = {
 };
 ChartTable.propTypes = {
     data: PropTypes.array,
-    error_days: PropTypes.array
 };

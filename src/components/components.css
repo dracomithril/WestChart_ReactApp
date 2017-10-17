@@ -147,3 +147,6 @@ select:disabled{
     height: 100px;
     resize: none;
 }
+#chart_tabs i::before{
+    padding-right: 3px;
+}
