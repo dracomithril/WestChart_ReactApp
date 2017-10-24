@@ -38,7 +38,7 @@ describe('<PlaylistForm/>', () => {
         expect(shallowToJson(wrapper)).toMatchSnapshot();
         let start_b = wrapper.find('#start_sp_button');
         start_b.simulate('click');
-        expect(store.getActions().length).toBe(2);
+        expect(store.getActions().length).toBe(1);
         done();
     });
     it('createPlaylistAndAddTracks', () => {

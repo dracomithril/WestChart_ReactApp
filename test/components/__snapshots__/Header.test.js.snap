@@ -21,30 +21,7 @@ exports[`<Header/> render user info 1`] = `
   <PageHeader
     bsClass="title-header"
   >
-    W
-    <small>
-      est
-    </small>
-    C
-    <small>
-      oast
-    </small>
-    S
-    <small>
-      wing
-    </small>
-    D
-    <small>
-      ance
-    </small>
-    C
-    <small>
-      hart
-    </small>
-    H
-    <small>
-      elper
-    </small>
+    Music Helper
   </PageHeader>
   <UserInfo />
 </div>
@@ -135,30 +112,7 @@ exports[`<Header/> renders without crashing ChartPresenter 1`] = `
         className="title-header"
       >
         <h1>
-          W
-          <small>
-            est
-          </small>
-          C
-          <small>
-            oast
-          </small>
-          S
-          <small>
-            wing
-          </small>
-          D
-          <small>
-            ance
-          </small>
-          C
-          <small>
-            hart
-          </small>
-          H
-          <small>
-            elper
-          </small>
+          Music Helper
         </h1>
       </div>
     </PageHeader>
@@ -166,4 +120,4 @@ exports[`<Header/> renders without crashing ChartPresenter 1`] = `
 </Header>
 `;
 
-exports[`<Header/> renders without crashing ChartPresenter 2`] = `""`;
+exports[`<Header/> renders without crashing ChartPresenter 2`] = `null`;

@@ -38,23 +38,30 @@ exports[`<RowSpotifySearch/> renders without crashing 1`] = `
   </td>
   <td>
     <div>
-      <Button
-        active={false}
+      <ButtonGroup
         block={false}
-        bsClass="btn"
-        bsStyle="info"
-        disabled={false}
-        id="button-0"
-        onClick={[Function]}
+        bsClass="btn-group"
+        justified={false}
+        vertical={true}
       >
-        search
-      </Button>
-      <DropdownButton
-        bsStyle="warning"
-        disabled={true}
-        id="dropdown-basic-0"
-        title="select"
-      />
+        <Button
+          active={false}
+          block={false}
+          bsClass="btn"
+          bsStyle="info"
+          disabled={false}
+          id="button-0"
+          onClick={[Function]}
+        >
+          search
+        </Button>
+        <DropdownButton
+          bsStyle="warning"
+          disabled={true}
+          id="dropdown-basic-0"
+          title="select"
+        />
+      </ButtonGroup>
     </div>
   </td>
   <td />

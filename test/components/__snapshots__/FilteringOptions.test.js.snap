@@ -2,124 +2,136 @@
 
 exports[`<FilteringOptions/> renders without crashing ChartPresenter 1`] = `
 <div
-  className="filter_panel"
+  style={
+    Object {
+      "display": "-webkit-box",
+    }
+  }
 >
-  <MessageControl
-    check={[Function]}
-    control={
-      Object {
-        "id": "woc_cb",
-        "name": "woc_text_control",
+  <div
+    className="filter_panel"
+  >
+    <MessageControl
+      check={[Function]}
+      control={
+        Object {
+          "id": "woc_cb",
+          "name": "woc_text_control",
+        }
       }
-    }
-    input={
-      Object {
-        "name": "woc_control",
+      input={
+        Object {
+          "name": "woc_control",
+        }
       }
-    }
-    text="wielkie ogarnianie charta"
-  />
-  <MessageControl
-    check={[Function]}
-    control={
-      Object {
-        "id": "westletter_cb",
-        "name": "westletter_text_control",
+      text="wielkie ogarnianie charta"
+    />
+    <MessageControl
+      check={[Function]}
+      control={
+        Object {
+          "id": "westletter_cb",
+          "name": "westletter_text_control",
+        }
       }
-    }
-    input={
-      Object {
-        "name": "westletter_control",
+      input={
+        Object {
+          "name": "westletter_control",
+        }
       }
-    }
-    text="wcs weekly westletter"
-  />
-  <FilterOption
-    check={[Function]}
-    control={
-      Object {
-        "id": "create",
-        "name": "date_create_control",
+      text="wcs weekly westletter"
+    />
+    <FilterOption
+      check={[Function]}
+      control={
+        Object {
+          "id": "create",
+          "name": "date_create_control",
+        }
       }
-    }
-    description={
-      Object {
-        "end": " days",
-        "start": "created in last ",
+      description={
+        Object {
+          "end": " days",
+          "start": "created in last ",
+        }
       }
-    }
-    input={
-      Object {
-        "max": 31,
-        "name": "create_control",
+      input={
+        Object {
+          "max": 31,
+          "name": "create_control",
+        }
       }
-    }
-    type="countDays"
-    valueName="created_time"
-  />
-  <FilterOption
-    check={[Function]}
-    control={
-      Object {
-        "id": "update",
-        "name": "date_update_control",
+      type="countDays"
+      valueName="created_time"
+    />
+  </div>
+  <div
+    className="filter_panel"
+  >
+    <FilterOption
+      check={[Function]}
+      control={
+        Object {
+          "id": "update",
+          "name": "date_update_control",
+        }
       }
-    }
-    description={
-      Object {
-        "end": " days",
-        "start": "updated in last ",
+      description={
+        Object {
+          "end": " days",
+          "start": "updated in last ",
+        }
       }
-    }
-    input={
-      Object {
-        "max": 31,
-        "name": "update_control",
+      input={
+        Object {
+          "max": 31,
+          "name": "update_control",
+        }
       }
-    }
-    type="countDays"
-    valueName="updated_time"
-  />
-  <FilterOption
-    check={[Function]}
-    control={
-      Object {
-        "id": "more",
-        "name": "more_then_control",
+      type="countDays"
+      valueName="updated_time"
+    />
+    <FilterOption
+      check={[Function]}
+      control={
+        Object {
+          "id": "more",
+          "name": "more_then_control",
+        }
       }
-    }
-    description={
-      Object {
-        "start": "more then ",
+      description={
+        Object {
+          "start": "more then ",
+        }
       }
-    }
-    input={
-      Object {
-        "name": "more_control",
+      input={
+        Object {
+          "name": "more_control",
+        }
       }
-    }
-    type="more"
-  />
-  <FilterOption
-    check={[Function]}
-    control={
-      Object {
-        "id": "less",
-        "name": "less_then_control",
+      type="more"
+    />
+    <FilterOption
+      check={[Function]}
+      control={
+        Object {
+          "id": "less",
+          "name": "less_then_control",
+        }
       }
-    }
-    description={
-      Object {
-        "start": "less then ",
+      description={
+        Object {
+          "start": "less then ",
+        }
       }
-    }
-    input={
-      Object {
-        "name": "less_control",
+      input={
+        Object {
+          "name": "less_control",
+        }
       }
-    }
-    type="less"
-  />
+      type="less"
+    />
+  </div>
 </div>
 `;
 

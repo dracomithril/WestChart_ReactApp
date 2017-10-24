@@ -8,6 +8,7 @@ import Summary from "./Summary";
 import ChartTable from "./ChartTable";
 import ChartHeader from "./ChartHeader";
 import SpotifySearch from "./SpotifySearch";
+import NewsLetter from "./NewsLetter";
 
 const {sorting, filterChart} = require('./../utils');
 
@@ -49,7 +50,7 @@ export default class ChartPresenter extends React.Component {
                     <Summary selected={selected}/>
                 </Tab>
                 <Tab eventKey={3} title={<i className="fa fa-table">News Letters</i>}>
-                    <ChartTable data={newsLetter}/>
+                    <NewsLetter data={newsLetter}/>
                 </Tab>
             </Tabs>
         </div>);
