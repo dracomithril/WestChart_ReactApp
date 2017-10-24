@@ -67,6 +67,7 @@
     "clipboard-copy": "^1.2.0",
     "cookie-parser": "^1.4.3",
     "cookies-js": "^1.2.3",
+    "ejs": "^2.5.7",
     "express": "^4.15.3",
     "express-winston": "^2.4.0",
     "history": "^4.6.3",
@@ -93,7 +94,7 @@
   },
   "proxy": "http://localhost:3001/",
   "scripts": {
-    "start:dev_srv": "concurrently --prefix \"[{name}]\" --names \"Client,Server\" \"npm run start:dev\" \"npm run start:srv\"",
+    "start:dev_srv": "concurrently --prefix \"[{name}]\" -c \"green.dim,blue.italic\" --names \"Client,Server\" \"npm run start:dev\" \"npm run start:srv\"",
     "start:dev": "node scripts/start.js",
     "start": "node server",
     "start:srv": "node scripts/start_srv.js",

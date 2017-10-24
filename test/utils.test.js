@@ -107,7 +107,7 @@ describe('[utils]', () => {
                 status: 200
             };
             resp.json.returns(Promise.resolve({chart: ['zzz', 'bbb'], last_update: 'update'}));
-            fetch.withArgs('/api/get_chart?').returns(Promise.resolve(resp));
+            fetch.withArgs('/api/fb/get_chart?').returns(Promise.resolve(resp));
             return utils.getChartFromServer({}, store).then((z) => {
                 expect(store.getActions().length).toBe(0);
                 expect(z.chart.length).toBe(2);

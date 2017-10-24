@@ -148,7 +148,7 @@ class utils {
     }
 
     static getChartFromServer(query_params) {
-        let url = '/api/get_chart?' + qs.stringify(query_params);
+        let url = '/api/fb/get_chart?' + qs.stringify(query_params);
         console.time('client-obtain-chart');
         return fetch(url).then((resp) => {
             console.log('obtained chart list');
