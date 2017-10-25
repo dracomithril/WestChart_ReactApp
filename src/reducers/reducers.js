@@ -67,7 +67,8 @@ const chart = (state = [], action) => {
             return action.chart;
         case action_types.TOGGLE_SELECTED:
             let l = _.clone(state);
-            l[action.id].selected = action.checked;
+            let findIndex = l.findIndex((elem)=>elem.id===action.id);
+            l[findIndex].selected = action.checked;
             return l;
         case action_types.TOGGLE_ALL:
             return state.map((elem) => {

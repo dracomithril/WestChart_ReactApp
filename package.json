@@ -89,8 +89,10 @@
     "redux": "3.7.0",
     "request": "^2.81.0",
     "request-promise-native": "^1.0.4",
+    "serve-favicon": "^2.4.5",
     "spotify-web-api-node": "2.4.0",
-    "winston": "^2.3.1"
+    "winston": "^2.3.1",
+    "serve-static": "latest"
   },
   "proxy": "http://localhost:3001/",
   "scripts": {

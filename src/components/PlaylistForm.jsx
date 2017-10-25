@@ -48,12 +48,12 @@ export default class PlaylistForm extends Component {
 
     onGenPlaylistName() {
         const {store} = this.context;
-        const date = new Date();
-        const day1 = date.getDate();
-        const str1 = date.toLocaleString('en-US', {month: 'short', day: 'numeric'}).toUpperCase();
-        date.setDate(day1 - 4);
-        const str2 = date.toLocaleString('en-US', {month: 'short', day: 'numeric'}).toUpperCase();
-        let playlist_name = 'Chart_' + str2 + '-' + str1;
+        let {monday,friday} = utils.weekInfo(new Date());
+
+        const monday_str = monday.toLocaleString('en-US', {month: 'short', day: 'numeric'}).toUpperCase();
+        const friday_str = friday.toLocaleString('en-US', {month: 'short', day: 'numeric'}).toUpperCase();
+
+        let playlist_name = `Chart_${monday_str}-${friday_str}`;
         let list = playlist_name.split(' ').join('_');
         store.dispatch({type: action_types.UPDATE_PLAYLIST_NAME, value: list});
     }
@@ -95,8 +95,8 @@ export default class PlaylistForm extends Component {
             </FormGroup>
             <ButtonGroup>
                 <Button onClick={this.onGenPlaylistName.bind(this)} id="genName_sp_button" bsStyle="primary">gen.
-                name
-            </Button>
+                    name
+                </Button>
                 <Button id="crt_pl_button" onClick={this.onCreatePlaylist.bind(this)}
                         disabled={disable_create} bsStyle="danger">
                     <i className="fa fa-save"/> Playlist
