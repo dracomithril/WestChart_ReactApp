@@ -10,7 +10,7 @@ import NewsLetter from "../../src/components/NewsLetter";
 const initial_state =require('./../data/initial_state.json');
 const westletters_state =require('./../data/WestLetter.json');
 const mockStore = configureMockStore([]);
-describe('<NewsLetter/>', () => {
+describe('<WestLetter/>', () => {
     it('renders without crashing ChartPresenter', () => {
         const store = mockStore(initial_state);
         const wrapper = shallow(

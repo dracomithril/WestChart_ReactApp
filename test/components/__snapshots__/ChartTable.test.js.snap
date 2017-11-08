@@ -1371,12 +1371,12 @@ exports[`<ChartTable/> render with objects 1`] = `
                               circle={false}
                               responsive={false}
                               rounded={false}
-                              src="https://graph.facebook.com/v2.9/10202921980928649/picture"
+                              src="https://graph.facebook.com/v2.10/10202921980928649/picture"
                               thumbnail={false}
                             >
                               <img
                                 className=""
-                                src="https://graph.facebook.com/v2.9/10202921980928649/picture"
+                                src="https://graph.facebook.com/v2.10/10202921980928649/picture"
                               />
                             </Image>
                             <span
@@ -1686,12 +1686,12 @@ exports[`<ChartTable/> render with objects 1`] = `
                               circle={false}
                               responsive={false}
                               rounded={false}
-                              src="https://graph.facebook.com/v2.9/1663928107235442/picture"
+                              src="https://graph.facebook.com/v2.10/1663928107235442/picture"
                               thumbnail={false}
                             >
                               <img
                                 className=""
-                                src="https://graph.facebook.com/v2.9/1663928107235442/picture"
+                                src="https://graph.facebook.com/v2.10/1663928107235442/picture"
                               />
                             </Image>
                             <span
@@ -1967,12 +1967,12 @@ exports[`<ChartTable/> render with objects 1`] = `
                               circle={false}
                               responsive={false}
                               rounded={false}
-                              src="https://graph.facebook.com/v2.9/1533148270088505/picture"
+                              src="https://graph.facebook.com/v2.10/1533148270088505/picture"
                               thumbnail={false}
                             >
                               <img
                                 className=""
-                                src="https://graph.facebook.com/v2.9/1533148270088505/picture"
+                                src="https://graph.facebook.com/v2.10/1533148270088505/picture"
                               />
                             </Image>
                             <span
@@ -2248,12 +2248,12 @@ exports[`<ChartTable/> render with objects 1`] = `
                               circle={false}
                               responsive={false}
                               rounded={false}
-                              src="https://graph.facebook.com/v2.9/10213444859181757/picture"
+                              src="https://graph.facebook.com/v2.10/10213444859181757/picture"
                               thumbnail={false}
                             >
                               <img
                                 className=""
-                                src="https://graph.facebook.com/v2.9/10213444859181757/picture"
+                                src="https://graph.facebook.com/v2.10/10213444859181757/picture"
                               />
                             </Image>
                             <span
@@ -2529,12 +2529,12 @@ exports[`<ChartTable/> render with objects 1`] = `
                               circle={false}
                               responsive={false}
                               rounded={false}
-                              src="https://graph.facebook.com/v2.9/10208047442080192/picture"
+                              src="https://graph.facebook.com/v2.10/10208047442080192/picture"
                               thumbnail={false}
                             >
                               <img
                                 className=""
-                                src="https://graph.facebook.com/v2.9/10208047442080192/picture"
+                                src="https://graph.facebook.com/v2.10/10208047442080192/picture"
                               />
                             </Image>
                             <span
@@ -2780,12 +2780,12 @@ exports[`<ChartTable/> render with objects 1`] = `
                               circle={false}
                               responsive={false}
                               rounded={false}
-                              src="https://graph.facebook.com/v2.9/1242592522496562/picture"
+                              src="https://graph.facebook.com/v2.10/1242592522496562/picture"
                               thumbnail={false}
                             >
                               <img
                                 className=""
-                                src="https://graph.facebook.com/v2.9/1242592522496562/picture"
+                                src="https://graph.facebook.com/v2.10/1242592522496562/picture"
                               />
                             </Image>
                             <span
@@ -3061,12 +3061,12 @@ exports[`<ChartTable/> render with objects 1`] = `
                               circle={false}
                               responsive={false}
                               rounded={false}
-                              src="https://graph.facebook.com/v2.9/10154096820541759/picture"
+                              src="https://graph.facebook.com/v2.10/10154096820541759/picture"
                               thumbnail={false}
                             >
                               <img
                                 className=""
-                                src="https://graph.facebook.com/v2.9/10154096820541759/picture"
+                                src="https://graph.facebook.com/v2.10/10154096820541759/picture"
                               />
                             </Image>
                             <span
@@ -3342,12 +3342,12 @@ exports[`<ChartTable/> render with objects 1`] = `
                               circle={false}
                               responsive={false}
                               rounded={false}
-                              src="https://graph.facebook.com/v2.9/10208047442080192/picture"
+                              src="https://graph.facebook.com/v2.10/10208047442080192/picture"
                               thumbnail={false}
                             >
                               <img
                                 className=""
-                                src="https://graph.facebook.com/v2.9/10208047442080192/picture"
+                                src="https://graph.facebook.com/v2.10/10208047442080192/picture"
                               />
                             </Image>
                             <span
@@ -3593,12 +3593,12 @@ exports[`<ChartTable/> render with objects 1`] = `
                               circle={false}
                               responsive={false}
                               rounded={false}
-                              src="https://graph.facebook.com/v2.9/859129380897011/picture"
+                              src="https://graph.facebook.com/v2.10/859129380897011/picture"
                               thumbnail={false}
                             >
                               <img
                                 className=""
-                                src="https://graph.facebook.com/v2.9/859129380897011/picture"
+                                src="https://graph.facebook.com/v2.10/859129380897011/picture"
                               />
                             </Image>
                             <span
@@ -3874,12 +3874,12 @@ exports[`<ChartTable/> render with objects 1`] = `
                               circle={false}
                               responsive={false}
                               rounded={false}
-                              src="https://graph.facebook.com/v2.9/1574584592571204/picture"
+                              src="https://graph.facebook.com/v2.10/1574584592571204/picture"
                               thumbnail={false}
                             >
                               <img
                                 className=""
-                                src="https://graph.facebook.com/v2.9/1574584592571204/picture"
+                                src="https://graph.facebook.com/v2.10/1574584592571204/picture"
                               />
                             </Image>
                             <span

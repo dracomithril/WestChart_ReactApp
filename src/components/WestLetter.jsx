@@ -6,20 +6,20 @@ import PropTypes from "prop-types";
 import {Image, Tooltip, OverlayTrigger} from "react-bootstrap";
 import utils from "../utils";
 
-export default class NewsLetter extends React.Component {
+export default class WestLetter extends React.Component {
     componentWillUnmount() {
-        console.log('component NewsLetter unmounted');
+        console.log('component WestLetter unmounted');
     }
 
     componentDidMount() {
-        console.log('component NewsLetter did mount');
+        console.log('component WestLetter did mount');
     }
 
     render() {
-        const newsLetter = this.props.data;
+        const westLetter = this.props.data;
         const today = new Date();
         const today_week= utils.weekInfo(today);
-        const show = newsLetter.map((elem) => {
+        const show = westLetter.map((elem) => {
             let create_date = new Date(elem.created_time);
             const {weekNumber}= utils.weekInfo(create_date);
             return (<div style={{padding: 2, display: "block", border: "1px black solid"}} key={elem.id}>
@@ -37,6 +37,11 @@ export default class NewsLetter extends React.Component {
             </div>)
         });
         return (<div>
+            <div className="beta">
+            <h1>This site is still in BeTa version</h1>
+                <h2>Soon we will be able to track WestLetters in each week ;)</h2>
+            </div>
+
             <h4>We have {today_week.weekNumber} week of {today.getFullYear()}</h4>
             <div style={{display:"inline-flex"}}>
             {show}
@@ -44,9 +49,9 @@ export default class NewsLetter extends React.Component {
         </div>);
     }
 }
-NewsLetter.propTypes = {
+WestLetter.propTypes = {
     data: PropTypes.array
 };
-NewsLetter.contextTypes = {
+WestLetter.contextTypes = {
     store: PropTypes.object
 };

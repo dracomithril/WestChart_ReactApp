@@ -17,14 +17,29 @@ exports[`<Footer/> renders without crashing 1`] = `
       href="https://github.com/dracomithril/WestChart_ReactApp"
       target="_newtab"
     >
-       github
       <i
         aria-hidden="true"
         className="fa fa-github"
+        style={
+          Object {
+            "paddingLeft": 3,
+          }
+        }
       />
+      <br />
     </a>
      
-     v0.6.3 © Copyright 2017
+     v0.6.3
+    <i
+      className="fa fa-copyright"
+      style={
+        Object {
+          "paddingLeft": 3,
+        }
+      }
+    >
+       Copyright 2017
+    </i>
   </span>
   <br />
   <span>
@@ -32,13 +47,30 @@ exports[`<Footer/> renders without crashing 1`] = `
     <a
       href="mailto:dracomithril@gmail.com?subject=[WCSChartAdmin]"
     >
+      <i
+        className="fa fa-envelope"
+        style={
+          Object {
+            "paddingLeft": 3,
+          }
+        }
+      />
       contact me
     </a>
   </span>
+  <br />
   <a
-    href="/api/fb_policy"
+    href="/api/fb/policy"
   >
-     Facebook Policy
+    <i
+      className="fa fa-facebook-square"
+      style={
+        Object {
+          "paddingLeft": 3,
+        }
+      }
+    />
+     Policy
   </a>
 </footer>
 `;

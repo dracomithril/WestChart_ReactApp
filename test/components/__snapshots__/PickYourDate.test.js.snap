@@ -78,7 +78,7 @@ exports[`<PickYourDate/> renders without crashing 1`] = `
               onKeyDown={[Function]}
               onMonthChange={[Function]}
               onSelect={[Function]}
-              utcOffset={120}
+              utcOffset={60}
               withPortal={false}
             />
           </Checkbox>

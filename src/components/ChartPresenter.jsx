@@ -8,7 +8,7 @@ import Summary from "./Summary";
 import ChartTable from "./ChartTable";
 import ChartHeader from "./ChartHeader";
 import SpotifySearch from "./SpotifySearch";
-import NewsLetter from "./NewsLetter";
+import WestLetter from "./WestLetter";
 
 const {sorting, filterChart} = require('./../utils');
 
@@ -33,7 +33,7 @@ export default class ChartPresenter extends React.Component {
     render() {
         const {store} = this.context;
         const {list_sort, chart} = store.getState();
-        const {view_chart, error_days, newsLetter} = chart.length > 0 ? filterChart(store) : {view_chart: [], error_days: [], newsLetter:[]};
+        const {view_chart, error_days, westLetters} = chart.length > 0 ? filterChart(store) : {view_chart: [], error_days: [], westLetters:[]};
         let selected = view_chart.filter((elem) => elem.selected);
         sorting[list_sort](selected);
 
@@ -49,8 +49,8 @@ export default class ChartPresenter extends React.Component {
                 <Tab eventKey={2} title={<i className="fa fa-list">Summary</i>}>
                     <Summary selected={selected}/>
                 </Tab>
-                <Tab eventKey={3} title={<i className="fa fa-table">News Letters</i>}>
-                    <NewsLetter data={newsLetter}/>
+                <Tab eventKey={3} title={<i className="fa fa-table">West Letters</i>}>
+                    <WestLetter data={westLetters}/>
                 </Tab>
             </Tabs>
         </div>);

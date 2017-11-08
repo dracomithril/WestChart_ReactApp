@@ -12,7 +12,7 @@ exports[`<ChartPresenter/> renders without crashing ChartPresenter 1`] = `
         <i
           className="fa fa-facebook"
         >
-           Posts
+          Posts
         </i>
       }
     >
@@ -22,7 +22,6 @@ exports[`<ChartPresenter/> renders without crashing ChartPresenter 1`] = `
       />
       <ChartTable
         data={Array []}
-        error_days={Array []}
       />
     </Tab>
     <Tab
@@ -32,7 +31,7 @@ exports[`<ChartPresenter/> renders without crashing ChartPresenter 1`] = `
           className="fa fa-spotify"
           id="chart_playlist_tab"
         >
-           Playlist
+          Playlist
         </i>
       }
     >
@@ -52,6 +51,20 @@ exports[`<ChartPresenter/> renders without crashing ChartPresenter 1`] = `
     >
       <Summary
         selected={Array []}
+      />
+    </Tab>
+    <Tab
+      eventKey={3}
+      title={
+        <i
+          className="fa fa-table"
+        >
+          West Letters
+        </i>
+      }
+    >
+      <WestLetter
+        data={Array []}
       />
     </Tab>
   </Uncontrolled(Tabs)>
