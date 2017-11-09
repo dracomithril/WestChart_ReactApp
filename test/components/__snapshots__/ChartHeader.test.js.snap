@@ -39,7 +39,7 @@ exports[`<ChartHeader/> renders without crashing ChartPresenter 1`] = `
             bsClass="label"
             bsStyle="danger"
           >
-            Sat, 03/11
+            03-11, Sat
           </Label>
           <br />
           <small
@@ -58,28 +58,35 @@ exports[`<ChartHeader/> renders without crashing ChartPresenter 1`] = `
       }
     >
       <div>
-        <Button
-          active={false}
+        <ButtonGroup
           block={false}
-          bsClass="btn"
-          bsStyle="primary"
-          disabled={false}
-          id="updateChartB"
-          onClick={[Function]}
+          bsClass="btn-group"
+          justified={false}
+          vertical={true}
         >
-          Update
-        </Button>
-        <Button
-          active={false}
-          block={false}
-          bsClass="btn"
-          bsStyle="success"
-          disabled={false}
-          id="quickSummary"
-          onClick={[Function]}
-        >
-          Quick summary
-        </Button>
+          <Button
+            active={false}
+            block={false}
+            bsClass="btn"
+            bsStyle="primary"
+            disabled={false}
+            id="updateChartB"
+            onClick={[Function]}
+          >
+            Update
+          </Button>
+          <Button
+            active={false}
+            block={false}
+            bsClass="btn"
+            bsStyle="success"
+            disabled={false}
+            id="quickSummary"
+            onClick={[Function]}
+          >
+            Quick summary
+          </Button>
+        </ButtonGroup>
       </div>
     </OverlayTrigger>
   </div>

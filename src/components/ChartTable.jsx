@@ -5,7 +5,7 @@ import React from "react";
 import PropTypes from "prop-types";
 import ReactTable from "react-table";
 import {Checkbox, Image, Label, OverlayTrigger, Tooltip} from "react-bootstrap";
-
+import utils from "./../utils";
 import "./components.css";
 const action_types = require('./../reducers/action_types');
 function formatDate(date) {
@@ -39,7 +39,7 @@ export default class ChartTable extends React.Component {
                     accessor: 'from', // String-based value accessors !
                     Cell: props => {
                         return <div style={{textAlign:'left'}}>
-                             <Image src={`https://graph.facebook.com/v2.9/${props.value.id}/picture`}/>
+                             <Image src={utils.getFbPictureUrl(props.value.id)}/>
                             <span style={{paddingLeft:10}}>{props.value.name}</span>
                         </div>
                     }
@@ -150,5 +150,4 @@ ChartTable.contextTypes = {
 };
 ChartTable.propTypes = {
     data: PropTypes.array,
-    error_days: PropTypes.array
 };

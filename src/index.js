@@ -27,7 +27,7 @@ ReactDOM.render(
             <div>
                 <Header/>
                 <ErrorConsole/>
-                <Route path="/" component={App}/>
+                <Route exact path="/" component={App}/>
             </div>
         </Router>
     </Provider>

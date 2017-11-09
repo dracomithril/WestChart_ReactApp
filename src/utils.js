@@ -65,6 +65,7 @@ const sorting = {
 };
 
 class utils {
+
     static get cookies_name() {
         return cookies_name;
     };
@@ -92,16 +93,26 @@ class utils {
             },
         }).then(res => {
             console.log('data sanded to database ' + res.status)
-        }).catch(()=>{
+        }).catch(() => {
             console.error("error connecting to server site");
         });
     }
 
 
+    /**
+     *
+     * @param store
+     * @returns {{view_chart: Array, error_days: Array, westLetters: Array}}
+     */
     static filterChart(store) {
 
         let songs_per_day_arr = {};
         let {chart, filters, until, songs_per_day} = store.getState();
+
+        let news_letter_filter = filters_def.text[1];
+        let westLetters = chart.filter((elem) => {
+            return elem.message !== undefined ? elem.message.toLowerCase().includes(news_letter_filter.text) : false;
+        });
 
         const filters_defaults = [...filters_def.control, ...filters_def.text];
         let results = filters_defaults.filter(e => {
@@ -135,11 +146,48 @@ class utils {
         let error_days = Object.keys(songs_per_day_arr)
             .filter(key => songs_per_day_arr[key].count !== songs_per_day)
             .map(elem => songs_per_day_arr[elem]);
-        return {view_chart, error_days};
+        return {view_chart, error_days, westLetters};
+    }
+
+    static getFbPictureUrl(id) {
+        return `https://graph.facebook.com/v2.10/${id}/picture`
+    }
+
+    static weeknNumber(date) {
+        const onejan = new Date(date.getFullYear(), 0, 1);
+        return Math.ceil((((date - onejan) / 86400000) + onejan.getDay() + 1) / 7);
+    }
+
+    /**
+     *
+     * @param date
+     * @return {{monday: Date, friday: Date, sunday: Date, weekNumber: number}}
+     */
+    static weekInfo(date) {
+        let dayOfWeek = date.getDay();
+
+        /**
+         *
+         * @param dateToChange {Date}
+         * @param move {Number} how many days to add
+         * @return {Date} Date after change
+         */
+        const moveFor = function (dateToChange, move) {
+            return new Date(new Date(dateToChange.getTime()).setDate(dateToChange.getDate() + move))
+        };
+
+        let diff = 0 - dayOfWeek + (dayOfWeek === 0 ? -6 : 1);
+        let monday = moveFor(date, diff);
+        let friday = moveFor(monday, 4);
+        let sunday = moveFor(monday, 6);
+
+        return {
+            monday, friday, sunday, weekNumber:utils.weeknNumber(date)
+        }
     }
 
     static getChartFromServer(query_params) {
-        let url = '/api/get_chart?' + qs.stringify(query_params);
+        let url = '/api/fb/get_chart?' + qs.stringify(query_params);
         console.time('client-obtain-chart');
         return fetch(url).then((resp) => {
             console.log('obtained chart list');
@@ -200,7 +248,7 @@ class utils {
                 artist: z[1],
                 title: (track => {
                     const t = clean_up_req.exec(track);
-                    return t &&t[1]!==""? t[1] : track;
+                    return t && t[1] !== "" ? t[1] : track;
                 })(z[2])
             };
         }
@@ -210,3 +258,4 @@ class utils {
 }
 
 module.exports = utils;
+export default utils;

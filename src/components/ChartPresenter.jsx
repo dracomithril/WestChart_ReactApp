@@ -8,6 +8,7 @@ import Summary from "./Summary";
 import ChartTable from "./ChartTable";
 import ChartHeader from "./ChartHeader";
 import SpotifySearch from "./SpotifySearch";
+import WestLetter from "./WestLetter";
 
 const {sorting, filterChart} = require('./../utils');
 
@@ -32,21 +33,24 @@ export default class ChartPresenter extends React.Component {
     render() {
         const {store} = this.context;
         const {list_sort, chart} = store.getState();
-        const {view_chart, error_days} = chart.length > 0 ? filterChart(store) : {view_chart: [], error_days: []};
+        const {view_chart, error_days, westLetters} = chart.length > 0 ? filterChart(store) : {view_chart: [], error_days: [], westLetters:[]};
         let selected = view_chart.filter((elem) => elem.selected);
         sorting[list_sort](selected);
 
         return (<div>
             <Tabs defaultActiveKey={0} id="chart_tabs">
-                <Tab eventKey={0} title={<i className="fa fa-facebook"> Posts</i>}>
+                <Tab eventKey={0} title={<i className="fa fa-facebook">Posts</i>}>
                     <ChartHeader error_days={error_days} view_chart={view_chart}/>
-                    <ChartTable data={view_chart} error_days={error_days}/>
+                    <ChartTable data={view_chart}/>
                 </Tab>
-                <Tab eventKey={1} title={<i className="fa fa-spotify" id="chart_playlist_tab"> Playlist</i>}>
+                <Tab eventKey={1} title={<i className="fa fa-spotify" id="chart_playlist_tab">Playlist</i>}>
                     <SpotifySearch selected={selected}/>
                 </Tab>
                 <Tab eventKey={2} title={<i className="fa fa-list">Summary</i>}>
                     <Summary selected={selected}/>
+                </Tab>
+                <Tab eventKey={3} title={<i className="fa fa-table">West Letters</i>}>
+                    <WestLetter data={westLetters}/>
                 </Tab>
             </Tabs>
         </div>);
@@ -56,6 +60,4 @@ ChartPresenter.contextTypes = {
     store: PropTypes.object
 };
 ChartPresenter.propTypes = {
-    view_chart: PropTypes.array,
-    error_days: PropTypes.array
 };

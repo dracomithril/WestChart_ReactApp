@@ -115,7 +115,7 @@ function filterChartAndMap(body) {
                 from: elem.from,
                 from_user: elem.from.name,
                 full_picture: elem.full_picture,
-                id: id,
+                id: elem.id,
                 likes_num: elem.likes.summary.total_count,
                 link: link,
                 message: elem.message,
@@ -153,7 +153,8 @@ function UpdateChart(show_days, since, until, access_token, groupId) {
             a_since = since;
             a_until = until
         }
-        obtainList(a_since, a_until, groupId, access_token).then(filterChartAndMap).then((body) => {
+        obtainList(a_since, a_until, groupId, access_token)
+            .then(filterChartAndMap).then((body) => {
             let until = new Date().toISOString();
             let cache = {
                 chart: body,

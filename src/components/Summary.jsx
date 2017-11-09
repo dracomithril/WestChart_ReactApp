@@ -14,6 +14,9 @@ const create_print_list = (elem, index) => {
         <Badge bsClass="likes">{elem.reactions_num + ' likes'}</Badge>
     </div>
 };
+// const create_print_list_txt = (elem, index) => {
+//     return `${index + 1}. ${elem.link.title} ${elem.reactions_num} likes`
+// };
 export default class Summary extends React.Component {
     /*istanbul ignore next*/
     componentWillUnmount() {
@@ -80,6 +83,8 @@ ${this.state.riddleUrl}`;
             < div id="popover-contained" title="Print list">
                 {print_list}
             </div>
+
+            {/*<textarea id="popover-contained" title="Print list" className="write_your_mind " placeholder={"Print list"} value={print_list.join('\n')}/>*/}
             <h6>{"Link to spotify playlist: "}
                 {sp_playlist_info.url && <a href={sp_playlist_info.url} target="_newtab">{sp_playlist_info.url}</a>}
                 {!sp_playlist_info.url && <span style={{color: "red"}}>No link</span>}

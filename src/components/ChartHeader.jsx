@@ -64,7 +64,7 @@ export default class ChartHeader extends React.Component {
                             <Button id={"quickSummary"} onClick={this.quickSummary.bind(this)} bsStyle="success">Quick summary</Button>
                         </ButtonGroup>
                     </div>
-                </OverlayTrigger>
+                 </OverlayTrigger>
             </div>
             <FilteringOptions/>
         </div>)

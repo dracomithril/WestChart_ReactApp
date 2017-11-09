@@ -147,3 +147,15 @@ select:disabled{
     height: 100px;
     resize: none;
 }
+#chart_tabs i::before{
+    padding-right: 3px;
+}
+
+.beta{
+    color: firebrick;
+    background-color: beige;
+    border: 1px double firebrick;
+}
+.list_sum_chart{
+    font-size: 12px;
+}

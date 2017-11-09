@@ -36,14 +36,6 @@ exports[`<PlaylistForm/> createPlaylistAndAddTracks 1`] = `
         }
       }
     >
-      <InputGroupAddon
-        bsClass="input-group-addon"
-      >
-        <Glyphicon
-          bsClass="glyphicon"
-          glyph="music"
-        />
-      </InputGroupAddon>
       <FormControl
         bsClass="form-control"
         componentClass="input"
@@ -58,17 +50,38 @@ exports[`<PlaylistForm/> createPlaylistAndAddTracks 1`] = `
       />
     </InputGroup>
   </FormGroup>
-  <Button
-    active={false}
+  <ButtonGroup
     block={false}
-    bsClass="btn"
-    bsStyle="danger"
-    disabled={false}
-    id="crt_pl_button"
-    onClick={[Function]}
+    bsClass="btn-group"
+    justified={false}
+    vertical={false}
   >
-    Create Playlist
-  </Button>
+    <Button
+      active={false}
+      block={false}
+      bsClass="btn"
+      bsStyle="primary"
+      disabled={false}
+      id="genName_sp_button"
+      onClick={[Function]}
+    >
+      gen. name
+    </Button>
+    <Button
+      active={false}
+      block={false}
+      bsClass="btn"
+      bsStyle="danger"
+      disabled={false}
+      id="crt_pl_button"
+      onClick={[Function]}
+    >
+      <i
+        className="fa fa-save"
+      />
+       Playlist
+    </Button>
+  </ButtonGroup>
   <label>
     <input
       checked={false}
@@ -118,14 +131,6 @@ exports[`<PlaylistForm/> renders without crashing 1`] = `
         }
       }
     >
-      <InputGroupAddon
-        bsClass="input-group-addon"
-      >
-        <Glyphicon
-          bsClass="glyphicon"
-          glyph="music"
-        />
-      </InputGroupAddon>
       <FormControl
         bsClass="form-control"
         componentClass="input"
@@ -140,17 +145,38 @@ exports[`<PlaylistForm/> renders without crashing 1`] = `
       />
     </InputGroup>
   </FormGroup>
-  <Button
-    active={false}
+  <ButtonGroup
     block={false}
-    bsClass="btn"
-    bsStyle="danger"
-    disabled={true}
-    id="crt_pl_button"
-    onClick={[Function]}
+    bsClass="btn-group"
+    justified={false}
+    vertical={false}
   >
-    Create Playlist
-  </Button>
+    <Button
+      active={false}
+      block={false}
+      bsClass="btn"
+      bsStyle="primary"
+      disabled={false}
+      id="genName_sp_button"
+      onClick={[Function]}
+    >
+      gen. name
+    </Button>
+    <Button
+      active={false}
+      block={false}
+      bsClass="btn"
+      bsStyle="danger"
+      disabled={true}
+      id="crt_pl_button"
+      onClick={[Function]}
+    >
+      <i
+        className="fa fa-save"
+      />
+       Playlist
+    </Button>
+  </ButtonGroup>
   <label>
     <input
       checked={false}
@@ -200,14 +226,6 @@ exports[`<PlaylistForm/> start_click 1`] = `
         }
       }
     >
-      <InputGroupAddon
-        bsClass="input-group-addon"
-      >
-        <Glyphicon
-          bsClass="glyphicon"
-          glyph="music"
-        />
-      </InputGroupAddon>
       <FormControl
         bsClass="form-control"
         componentClass="input"
@@ -222,17 +240,38 @@ exports[`<PlaylistForm/> start_click 1`] = `
       />
     </InputGroup>
   </FormGroup>
-  <Button
-    active={false}
+  <ButtonGroup
     block={false}
-    bsClass="btn"
-    bsStyle="danger"
-    disabled={false}
-    id="crt_pl_button"
-    onClick={[Function]}
+    bsClass="btn-group"
+    justified={false}
+    vertical={false}
   >
-    Create Playlist
-  </Button>
+    <Button
+      active={false}
+      block={false}
+      bsClass="btn"
+      bsStyle="primary"
+      disabled={false}
+      id="genName_sp_button"
+      onClick={[Function]}
+    >
+      gen. name
+    </Button>
+    <Button
+      active={false}
+      block={false}
+      bsClass="btn"
+      bsStyle="danger"
+      disabled={false}
+      id="crt_pl_button"
+      onClick={[Function]}
+    >
+      <i
+        className="fa fa-save"
+      />
+       Playlist
+    </Button>
+  </ButtonGroup>
   <label>
     <input
       checked={false}

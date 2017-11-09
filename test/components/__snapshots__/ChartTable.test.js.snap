@@ -1371,12 +1371,12 @@ exports[`<ChartTable/> render with objects 1`] = `
                               circle={false}
                               responsive={false}
                               rounded={false}
-                              src="https://graph.facebook.com/v2.9/10202921980928649/picture"
+                              src="https://graph.facebook.com/v2.10/10202921980928649/picture"
                               thumbnail={false}
                             >
                               <img
                                 className=""
-                                src="https://graph.facebook.com/v2.9/10202921980928649/picture"
+                                src="https://graph.facebook.com/v2.10/10202921980928649/picture"
                               />
                             </Image>
                             <span
@@ -1534,7 +1534,7 @@ exports[`<ChartTable/> render with objects 1`] = `
                           }
                         >
                           <span>
-                            6/16/2017, 4:20:12 PM
+                            2017-6-16 16:20:12
                           </span>
                         </div>
                       </Td>
@@ -1559,7 +1559,7 @@ exports[`<ChartTable/> render with objects 1`] = `
                           }
                         >
                           <span>
-                            6/16/2017, 6:12:46 PM
+                            2017-6-16 18:12:46
                           </span>
                         </div>
                       </Td>
@@ -1686,12 +1686,12 @@ exports[`<ChartTable/> render with objects 1`] = `
                               circle={false}
                               responsive={false}
                               rounded={false}
-                              src="https://graph.facebook.com/v2.9/1663928107235442/picture"
+                              src="https://graph.facebook.com/v2.10/1663928107235442/picture"
                               thumbnail={false}
                             >
                               <img
                                 className=""
-                                src="https://graph.facebook.com/v2.9/1663928107235442/picture"
+                                src="https://graph.facebook.com/v2.10/1663928107235442/picture"
                               />
                             </Image>
                             <span
@@ -1815,7 +1815,7 @@ exports[`<ChartTable/> render with objects 1`] = `
                           }
                         >
                           <span>
-                            6/16/2017, 12:00:00 AM
+                            2017-6-16 00:00:00
                           </span>
                         </div>
                       </Td>
@@ -1840,7 +1840,7 @@ exports[`<ChartTable/> render with objects 1`] = `
                           }
                         >
                           <span>
-                            6/16/2017, 12:26:18 AM
+                            2017-6-16 00:26:18
                           </span>
                         </div>
                       </Td>
@@ -1967,12 +1967,12 @@ exports[`<ChartTable/> render with objects 1`] = `
                               circle={false}
                               responsive={false}
                               rounded={false}
-                              src="https://graph.facebook.com/v2.9/1533148270088505/picture"
+                              src="https://graph.facebook.com/v2.10/1533148270088505/picture"
                               thumbnail={false}
                             >
                               <img
                                 className=""
-                                src="https://graph.facebook.com/v2.9/1533148270088505/picture"
+                                src="https://graph.facebook.com/v2.10/1533148270088505/picture"
                               />
                             </Image>
                             <span
@@ -2096,7 +2096,7 @@ exports[`<ChartTable/> render with objects 1`] = `
                           }
                         >
                           <span>
-                            6/16/2017, 12:00:00 AM
+                            2017-6-16 00:00:00
                           </span>
                         </div>
                       </Td>
@@ -2121,7 +2121,7 @@ exports[`<ChartTable/> render with objects 1`] = `
                           }
                         >
                           <span>
-                            6/16/2017, 12:26:15 AM
+                            2017-6-16 00:26:15
                           </span>
                         </div>
                       </Td>
@@ -2248,12 +2248,12 @@ exports[`<ChartTable/> render with objects 1`] = `
                               circle={false}
                               responsive={false}
                               rounded={false}
-                              src="https://graph.facebook.com/v2.9/10213444859181757/picture"
+                              src="https://graph.facebook.com/v2.10/10213444859181757/picture"
                               thumbnail={false}
                             >
                               <img
                                 className=""
-                                src="https://graph.facebook.com/v2.9/10213444859181757/picture"
+                                src="https://graph.facebook.com/v2.10/10213444859181757/picture"
                               />
                             </Image>
                             <span
@@ -2377,7 +2377,7 @@ exports[`<ChartTable/> render with objects 1`] = `
                           }
                         >
                           <span>
-                            6/13/2017, 12:00:00 AM
+                            2017-6-13 00:00:00
                           </span>
                         </div>
                       </Td>
@@ -2402,7 +2402,7 @@ exports[`<ChartTable/> render with objects 1`] = `
                           }
                         >
                           <span>
-                            6/15/2017, 4:11:35 PM
+                            2017-6-15 16:11:35
                           </span>
                         </div>
                       </Td>
@@ -2529,12 +2529,12 @@ exports[`<ChartTable/> render with objects 1`] = `
                               circle={false}
                               responsive={false}
                               rounded={false}
-                              src="https://graph.facebook.com/v2.9/10208047442080192/picture"
+                              src="https://graph.facebook.com/v2.10/10208047442080192/picture"
                               thumbnail={false}
                             >
                               <img
                                 className=""
-                                src="https://graph.facebook.com/v2.9/10208047442080192/picture"
+                                src="https://graph.facebook.com/v2.10/10208047442080192/picture"
                               />
                             </Image>
                             <span
@@ -2628,7 +2628,7 @@ exports[`<ChartTable/> render with objects 1`] = `
                           }
                         >
                           <span>
-                            6/7/2017, 12:00:00 AM
+                            2017-6-7 00:00:00
                           </span>
                         </div>
                       </Td>
@@ -2653,7 +2653,7 @@ exports[`<ChartTable/> render with objects 1`] = `
                           }
                         >
                           <span>
-                            6/15/2017, 12:36:54 PM
+                            2017-6-15 12:36:54
                           </span>
                         </div>
                       </Td>
@@ -2780,12 +2780,12 @@ exports[`<ChartTable/> render with objects 1`] = `
                               circle={false}
                               responsive={false}
                               rounded={false}
-                              src="https://graph.facebook.com/v2.9/1242592522496562/picture"
+                              src="https://graph.facebook.com/v2.10/1242592522496562/picture"
                               thumbnail={false}
                             >
                               <img
                                 className=""
-                                src="https://graph.facebook.com/v2.9/1242592522496562/picture"
+                                src="https://graph.facebook.com/v2.10/1242592522496562/picture"
                               />
                             </Image>
                             <span
@@ -2909,7 +2909,7 @@ exports[`<ChartTable/> render with objects 1`] = `
                           }
                         >
                           <span>
-                            6/9/2017, 12:00:00 AM
+                            2017-6-9 00:00:00
                           </span>
                         </div>
                       </Td>
@@ -2934,7 +2934,7 @@ exports[`<ChartTable/> render with objects 1`] = `
                           }
                         >
                           <span>
-                            6/15/2017, 11:11:44 AM
+                            2017-6-15 11:11:44
                           </span>
                         </div>
                       </Td>
@@ -3061,12 +3061,12 @@ exports[`<ChartTable/> render with objects 1`] = `
                               circle={false}
                               responsive={false}
                               rounded={false}
-                              src="https://graph.facebook.com/v2.9/10154096820541759/picture"
+                              src="https://graph.facebook.com/v2.10/10154096820541759/picture"
                               thumbnail={false}
                             >
                               <img
                                 className=""
-                                src="https://graph.facebook.com/v2.9/10154096820541759/picture"
+                                src="https://graph.facebook.com/v2.10/10154096820541759/picture"
                               />
                             </Image>
                             <span
@@ -3190,7 +3190,7 @@ exports[`<ChartTable/> render with objects 1`] = `
                           }
                         >
                           <span>
-                            6/14/2017, 12:00:00 AM
+                            2017-6-14 00:00:00
                           </span>
                         </div>
                       </Td>
@@ -3215,7 +3215,7 @@ exports[`<ChartTable/> render with objects 1`] = `
                           }
                         >
                           <span>
-                            6/15/2017, 12:13:23 AM
+                            2017-6-15 00:13:23
                           </span>
                         </div>
                       </Td>
@@ -3342,12 +3342,12 @@ exports[`<ChartTable/> render with objects 1`] = `
                               circle={false}
                               responsive={false}
                               rounded={false}
-                              src="https://graph.facebook.com/v2.9/10208047442080192/picture"
+                              src="https://graph.facebook.com/v2.10/10208047442080192/picture"
                               thumbnail={false}
                             >
                               <img
                                 className=""
-                                src="https://graph.facebook.com/v2.9/10208047442080192/picture"
+                                src="https://graph.facebook.com/v2.10/10208047442080192/picture"
                               />
                             </Image>
                             <span
@@ -3441,7 +3441,7 @@ exports[`<ChartTable/> render with objects 1`] = `
                           }
                         >
                           <span>
-                            6/15/2017, 12:00:00 AM
+                            2017-6-15 00:00:00
                           </span>
                         </div>
                       </Td>
@@ -3466,7 +3466,7 @@ exports[`<ChartTable/> render with objects 1`] = `
                           }
                         >
                           <span>
-                            6/15/2017, 12:07:11 AM
+                            2017-6-15 00:07:11
                           </span>
                         </div>
                       </Td>
@@ -3593,12 +3593,12 @@ exports[`<ChartTable/> render with objects 1`] = `
                               circle={false}
                               responsive={false}
                               rounded={false}
-                              src="https://graph.facebook.com/v2.9/859129380897011/picture"
+                              src="https://graph.facebook.com/v2.10/859129380897011/picture"
                               thumbnail={false}
                             >
                               <img
                                 className=""
-                                src="https://graph.facebook.com/v2.9/859129380897011/picture"
+                                src="https://graph.facebook.com/v2.10/859129380897011/picture"
                               />
                             </Image>
                             <span
@@ -3722,7 +3722,7 @@ exports[`<ChartTable/> render with objects 1`] = `
                           }
                         >
                           <span>
-                            6/15/2017, 12:00:00 AM
+                            2017-6-15 00:00:00
                           </span>
                         </div>
                       </Td>
@@ -3747,7 +3747,7 @@ exports[`<ChartTable/> render with objects 1`] = `
                           }
                         >
                           <span>
-                            6/15/2017, 12:07:08 AM
+                            2017-6-15 00:07:08
                           </span>
                         </div>
                       </Td>
@@ -3874,12 +3874,12 @@ exports[`<ChartTable/> render with objects 1`] = `
                               circle={false}
                               responsive={false}
                               rounded={false}
-                              src="https://graph.facebook.com/v2.9/1574584592571204/picture"
+                              src="https://graph.facebook.com/v2.10/1574584592571204/picture"
                               thumbnail={false}
                             >
                               <img
                                 className=""
-                                src="https://graph.facebook.com/v2.9/1574584592571204/picture"
+                                src="https://graph.facebook.com/v2.10/1574584592571204/picture"
                               />
                             </Image>
                             <span
@@ -3973,7 +3973,7 @@ exports[`<ChartTable/> render with objects 1`] = `
                           }
                         >
                           <span>
-                            6/12/2017, 12:00:00 AM
+                            2017-6-12 00:00:00
                           </span>
                         </div>
                       </Td>
@@ -3998,7 +3998,7 @@ exports[`<ChartTable/> render with objects 1`] = `
                           }
                         >
                           <span>
-                            6/14/2017, 10:55:13 AM
+                            2017-6-14 10:55:13
                           </span>
                         </div>
                       </Td>

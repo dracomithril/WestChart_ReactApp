@@ -110,7 +110,7 @@ exports[`<PlaylistCombiner/> renders without crashing ChartPresenter 1`] = `
         active={false}
         block={false}
         bsClass="btn"
-        bsStyle="default"
+        bsStyle="danger"
         disabled={false}
         onClick={[Function]}
       >

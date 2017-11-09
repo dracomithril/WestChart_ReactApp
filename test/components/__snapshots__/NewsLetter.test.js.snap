@@ -1,0 +1,26 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<NewsLetter/> renders users 1`] = `
+<div>
+  <div>
+    <span>
+      1707149242852457_1938133309754048
+    </span>
+    <img
+      src="https://external.xx.fbcdn.net/safe_image.php?d=AQA4vhd4mqW12H4V&w=720&h=720&url=https%3A%2F%2Fi.ytimg.com%2Fvi%2FKL1XR6kT_40%2Fhqdefault.jpg&cfs=1&_nc_hash=AQCzRB4ci2NToCWh"
+    />
+    <span />
+  </div>
+  <div>
+    <span>
+      1707149242852457_1941491366084909
+    </span>
+    <img
+      src="https://scontent.xx.fbcdn.net/v/t1.0-9/17022295_10203108927922207_1006771455463995321_n.jpg?oh=03e07f893abcd6b19475b974b05d4463&oe=59370A6C"
+    />
+    <span />
+  </div>
+</div>
+`;
+
+exports[`<NewsLetter/> renders without crashing ChartPresenter 1`] = `<div />`;
