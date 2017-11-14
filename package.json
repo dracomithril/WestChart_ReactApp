@@ -92,7 +92,8 @@
     "serve-favicon": "^2.4.5",
     "serve-static": "latest",
     "spotify-web-api-node": "2.4.0",
-    "winston": "^2.4.0"
+    "winston": "^2.4.0",
+    "compression": "latest"
   },
   "proxy": "http://localhost:3001/",
   "scripts": {
