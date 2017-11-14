@@ -1,6 +1,6 @@
 {
   "name": "WestChart_ReactApp",
-  "version": "0.12.5",
+  "version": "0.12.6",
   "private": true,
   "engines": {
     "node": "8.9.1",
@@ -92,7 +92,8 @@
     "serve-favicon": "^2.4.5",
     "serve-static": "latest",
     "spotify-web-api-node": "2.4.0",
-    "winston": "^2.4.0"
+    "winston": "^2.4.0",
+    "compression": "latest"
   },
   "proxy": "http://localhost:3001/",
   "scripts": {
