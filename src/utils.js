@@ -150,7 +150,7 @@ class utils {
     }
 
     static getFbPictureUrl(id) {
-        return `https://graph.facebook.com/v2.10/${id}/picture`
+        return `https://graph.facebook.com/v2.10/${id}/picture?height=50`
     }
 
     static weeknNumber(date) {
@@ -222,14 +222,12 @@ class utils {
         let since = filters_def.subtractDaysFromDate(until, show_last);
         const since2 = since.toISOString();
         const until2 = until.toISOString();
-
-        const query_params = {
+        return {
             days: show_last,
             since: since2,
             until: until2,
             access_token: user.accessToken
         };
-        return query_params;
     }
 
     static getArtist_Title(name) {
