@@ -44,7 +44,7 @@ export default class ChartTable extends React.Component {
         const {user, show_wait} = store.getState();
         const {data} = this.props;
         let time = {
-            Header: 'Time',
+            Header: <i className="fa fa-clock-o">Time</i>,
             id: 'createTime',
             resizable: true,
             minWidth: 150,
