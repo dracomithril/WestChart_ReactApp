@@ -22,9 +22,9 @@ function formatDate(date) {
         second: '2-digit'
     };
     if (yearNow === date2.getFullYear()) {
-        return date2.toLocaleString('pl-PL',options)
+        return date2.toLocaleString('pl-PL', options)
     } else {
-        return date2.toLocaleString('pl-PL',{year:'numeric',...options});
+        return date2.toLocaleString('pl-PL', {year: 'numeric', ...options});
     }
 }
 
@@ -56,10 +56,13 @@ export default class ChartTable extends React.Component {
                 }
             },
             Cell: props => {
-                return <div>
-                    <span style={{color: 'red'}}>c: {formatDate(props.value.created_time)}</span><br/>
-                    <span style={{color: 'green'}}>u: {formatDate(props.value.updated_time)}</span>
-                </div>
+                const time = props.value;
+                return !(time.created_time === time.updated_time) ? (<div>
+                    <span style={{color: 'red'}}>c: {formatDate(time.created_time)}</span><br/>
+                    <span style={{color: 'green'}}>u: {formatDate(time.updated_time)}</span>
+                </div>) : (<div>
+                    <span style={{color: 'red'}}>c: {formatDate(time.created_time)}</span>
+                </div>)
             }
         };
         const link = {
@@ -81,13 +84,17 @@ export default class ChartTable extends React.Component {
                     Header: <i className="fa fa-user-circle" style={{color: 'green'}} aria-hidden="true">user</i>,
                     resizable: true,
                     minWidth: 140,
-                    maxWidth: 300,
+                    maxWidth: 180,
                     id: 'user',
                     accessor: 'from', // String-based value accessors !
                     Cell: props => {
+                        const from = props.value;
                         return <div style={{textAlign: 'left'}}>
-                            <Image src={utils.getFbPictureUrl(props.value.id)}/>
-                            <span style={{paddingLeft: 10}}>{props.value.name}</span>
+                            <Image style={{float: 'left'}} src={utils.getFbPictureUrl(from.id)}/>
+                            <div style={{display: 'inline-grid'}}>
+                                <span style={{paddingLeft: 10}}>{from.first_name}</span>
+                                <span style={{paddingLeft: 10}}>{from.last_name}</span>
+                            </div>
                         </div>
                     }
                 }, {

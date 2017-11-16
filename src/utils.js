@@ -200,8 +200,8 @@ class utils {
         store.dispatch({type: action_types.CHANGE_SHOW_WAIT, show: true});
         const {user, enable_until, start_date, show_last} = store.getState();
         const query_params = this.getQueryParams(enable_until, start_date, show_last, user);
-        store.dispatch({type: 'UPDATE_SINCE', date: query_params.since});
-        store.dispatch({type: 'UPDATE_UNTIL', date: query_params.until});
+        store.dispatch({type: 'UPDATE_SINCE', date: query_params.since*1000});
+        store.dispatch({type: 'UPDATE_UNTIL', date: query_params.until*1000});
         return utils.getChartFromServer(query_params)
             .then((body) => {
                 console.log("chart list witch " + body.chart.length);
@@ -217,11 +217,19 @@ class utils {
             });
     };
 
+    /**
+     *
+     * @param enable_until {boolean}
+     * @param start_date {Date}
+     * @param show_last {Number}
+     * @param user {string}
+     * @returns {{days: *, since: number, until: number, access_token: (string|*)}}
+     */
     static getQueryParams(enable_until, start_date, show_last, user) {
         let until = enable_until ? start_date.toDate() : new Date();
         let since = filters_def.subtractDaysFromDate(until, show_last);
-        const since2 = since.toISOString();
-        const until2 = until.toISOString();
+        const since2 =Math.round(since.getTime()/1000.0);
+        const until2 = Math.round(until.getTime()/1000.0);
         return {
             days: show_last,
             since: since2,
