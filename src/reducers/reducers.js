@@ -140,7 +140,7 @@ const show_wait = (state = false, action) => {
     return action.type === action_types.CHANGE_SHOW_WAIT ? action.show : state;
 };
 
-const songs_per_day = (state = 2, action) => {
+const songs_per_day = (state = 3, action) => {
     return action.type === action_types.UPDATE_SONGS_PER_DAY ? action.days : state;
 };
 /**
@@ -187,8 +187,7 @@ const filters = (state = {}, action) => {
 const errors = (state = [], action) => {
     switch (action.type) {
         case action_types.ADD_ERROR:
-            let takeRight = _.takeRight([action.value, ...state], 3);
-            return takeRight;
+            return _.takeRight([action.value, ...state], 3);
         case action_types.CLEAR_ERRORS:
             return [];
         default:

@@ -49,9 +49,8 @@
 #songsPerDay {
     /*float: inherit;*/
     height: 50px;
-    width: inherit;
+    width: 100%;
     text-align: center;
-    padding-top: 10px;
     padding-left: 10px;
     border-radius: 3px;
 }

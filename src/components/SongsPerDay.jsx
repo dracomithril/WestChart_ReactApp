@@ -4,6 +4,7 @@
 import React from "react";
 import PropTypes from "prop-types";
 import {OverlayTrigger, Popover, Tooltip} from "react-bootstrap";
+
 export default class SongsPerDay extends React.Component {
     render() {
         const {store} = this.context;
@@ -30,14 +31,22 @@ export default class SongsPerDay extends React.Component {
         </Popover>);
         const tooltipMore = <Tooltip id="haveMoreDays">{more_header}</Tooltip>;
         return (<div id="songsPerDay" className={errorDays.length !== 0 ? "songsPerDay_err" : "songsPerDay_good"}>
-            <span style={{paddingRight: 10}}>songs per day</span>
-            <input type="number" value={songs_per_day} className="num_days"
-                   name="songs_per_day" step={1} max={10} min={1}
-                   onChange={(e) => store.dispatch({
-                       type: 'UPDATE_SONGS_PER_DAY',
-                       days: Number(e.target.value)
-                   })}/>
-                {/*{errorDays.length === 0 && <strong style={{color: "green"}}>No data</strong>}*/}
+            <div style={{width: '80%', float: 'left', paddingTop: 10}}>
+                <label style={{
+                    paddingRight: 10,
+                    float: 'left', width: '70%', paddingTop:3
+                }}
+                       htmlFor="songs_per_day">
+                    songs per day
+                </label>
+                <input type="number" value={songs_per_day} className="num_days" style={{float: 'left', width: '30%'}}
+                       name="songs_per_day" id={"songs_per_day"} step={1} max={10} min={1}
+                       onChange={(e) => store.dispatch({
+                           type: 'UPDATE_SONGS_PER_DAY',
+                           days: Number(e.target.value)
+                       })}/>
+            </div>
+            <div style={{width: '20%', float: 'left', paddingTop: 5}}>
                 {err_days_less.length > 0 && <OverlayTrigger trigger={['hover', 'focus']} placement="bottom"
                                                              overlay={err_days_less.length > 0 ? popoverLess : tooltipLess}>
                     <i id="less_days" className="fa fa-arrow-circle-down" aria-hidden="true">{err_days_less.length}</i>
@@ -47,6 +56,8 @@ export default class SongsPerDay extends React.Component {
                     <i id="more_days" className="fa fa-arrow-circle-up"
                        aria-hidden="true">{err_days_more.length}</i>
                 </OverlayTrigger>}
+            </div>
+
         </div>);
     }
 }

@@ -7,10 +7,27 @@ import ReactTable from "react-table";
 import {Checkbox, Image, Label, OverlayTrigger, Tooltip} from "react-bootstrap";
 import utils from "./../utils";
 import "./components.css";
+
 const action_types = require('./../reducers/action_types');
+
 function formatDate(date) {
-    return new Date(date).toLocaleString('pl-PL');
+
+    const date2 = new Date(date);
+    const yearNow = new Date().getFullYear();
+    const options = {
+        day: 'numeric',
+        month: 'short',
+        hour: '2-digit',
+        minute: '2-digit',
+        second: '2-digit'
+    };
+    if (yearNow === date2.getFullYear()) {
+        return date2.toLocaleString('pl-PL', options)
+    } else {
+        return date2.toLocaleString('pl-PL', {year: 'numeric', ...options});
+    }
 }
+
 let getTime = function (date) {
     return new Date(date).getTime();
 };
@@ -23,10 +40,43 @@ export default class ChartTable extends React.Component {
     }
 
     render() {
-        const isMobile = false;
         const {store} = this.context;
         const {user, show_wait} = store.getState();
         const {data} = this.props;
+        let time = {
+            Header: <i className="fa fa-clock-o">Time</i>,
+            id: 'createTime',
+            resizable: true,
+            minWidth: 150,
+            maxWidth: 200,
+            accessor: d => {
+                return {
+                    created_time: getTime(d.created_time),
+                    updated_time: getTime(d.updated_time)
+                }
+            },
+            Cell: props => {
+                const time = props.value;
+                return !(time.created_time === time.updated_time) ? (<div>
+                    <span style={{color: 'red'}}>c: {formatDate(time.created_time)}</span><br/>
+                    <span style={{color: 'green'}}>u: {formatDate(time.updated_time)}</span>
+                </div>) : (<div>
+                    <span style={{color: 'red'}}>c: {formatDate(time.created_time)}</span>
+                </div>)
+            }
+        };
+        const link = {
+            Header: <i className="fa fa-external-link" style={{color: 'red'}} aria-hidden="true">Link</i>, // Custom header components!
+            accessor: d => d.link,
+            minWidth: 200,
+            width: 300,
+            maxWidth: 400,
+            id: 'yt_link',
+            Cell: props => {
+                return props.value.url === undefined ? (<span>{props.value.title}</span>) : (
+                    <a href={props.value.url} target="_newtab">{props.value.title}</a>)
+            }
+        };
         let post_info = {
             Header: 'Post Info',
             columns: [
@@ -34,104 +84,75 @@ export default class ChartTable extends React.Component {
                     Header: <i className="fa fa-user-circle" style={{color: 'green'}} aria-hidden="true">user</i>,
                     resizable: true,
                     minWidth: 140,
-                    maxWidth: 300,
+                    maxWidth: 180,
                     id: 'user',
                     accessor: 'from', // String-based value accessors !
                     Cell: props => {
-                        return <div style={{textAlign:'left'}}>
-                             <Image src={utils.getFbPictureUrl(props.value.id)}/>
-                            <span style={{paddingLeft:10}}>{props.value.name}</span>
+                        const from = props.value;
+                        return <div style={{textAlign: 'left'}}>
+                            <Image style={{float: 'left'}} src={utils.getFbPictureUrl(from.id)}/>
+                            <div style={{display: 'inline-grid'}}>
+                                <span style={{paddingLeft: 10}}>{from.first_name}</span>
+                                <span style={{paddingLeft: 10}}>{from.last_name}</span>
+                            </div>
                         </div>
                     }
                 }, {
-                    Header: <i className="fa fa-envelope-o" style={{color: 'orange'}} aria-hidden="true"/>,
-                    accessor: 'message',
+                    Header: <i className="fa fa-info-circle" style={{color: 'blue'}} aria-hidden="true"/>,
+                    accessor: d => {
+                        return {message: d.message, reactions_num: d.reactions_num}
+                    },
                     id: 'woc_f',
                     maxWidth: 50,
                     Cell: props => {
-                        if (props.value !== undefined) {
-                            return <OverlayTrigger placement="bottom" overlay={<Tooltip
-                                id="tooltip">{props.value}</Tooltip>}>
+                        const condition = props.value && props.value.message;
+                        return <div>
+                            {(condition) &&
+                            <OverlayTrigger placement="bottom" overlay={<Tooltip
+                                id="tooltip">{props.value.message}</Tooltip>}>
                                 <Label bsStyle="success">
                                     <i className="fa fa-envelope-o" aria-hidden="true"/>
                                 </Label>
                             </OverlayTrigger>
-                        }
-                        return <Label bsStyle="danger"><i className="fa fa-times" aria-hidden="true"/></Label>
+                            }
+                            {(!condition) &&
+                            <Label bsStyle="danger"><i className="fa fa-times" aria-hidden="true"/></Label>}
+                            <div>
+                                <i className="fa fa-thumbs-o-up" style={{color: 'blue'}}
+                                   aria-hidden="true"/>{props.value.reactions_num}
+                            </div>
+                        </div>
                     }
-                }, {
-                    Header: <i className="fa fa-thumbs-o-up" style={{color: 'blue'}} aria-hidden="true"/>,
-                    accessor: 'reactions_num',
-                    sort: 'dsc',
-                    minWidth: 60,
-                    maxWidth: 80
-                }]
+                }, time, link]
         };
-        let time = {
-            Header: 'Time',
-            columns: [
-                 {
-                    Header: 'created',
-                    id: 'createTime',
-                    resizable: true,
-                    minWidth: 150,
-                    maxWidth: 200,
-                    accessor: d => getTime(d.created_time),
-                    Cell: props => <span>{formatDate(props.value)}</span>
-                }, {
-                    Header: 'updated',
-                    id: 'lastUpdate',
-                    show: !isMobile,
-                    minWidth: 150,
-                    maxWidth: 200,
-                    accessor: d => getTime(d.updated_time),
-                    Cell: props => <span>{formatDate(props.value)}</span>
-                }]
-        };
+
+
         const columns = [{
             Header: 'id',
             show: false,
             accessor: 'id',
         }, {
-            Header:<small>{data.length}</small>,
-            columns:[{
-            sortable: false,
-            resizable: false,
-            Header: () => <Checkbox bsClass="checkbox1" onClick={() => {
-                store.dispatch({type: action_types.TOGGLE_ALL})
-            }}/>,
-            width: 40,
-            accessor: 'selected',
-            Cell: props => {
-                return <Checkbox bsClass="checkbox1" checked={props.value} id={props.row.id}
-                                 name="selected"
-                                 onChange={(e) => {
-                                     store.dispatch({
-                                         type: 'TOGGLE_SELECTED', id: e.target.id,
-                                         checked: e.target.checked
-                                     })
-                                 }}/>
-            }
-        }]}, post_info, time,
-            {
-                Header: 'Link',
-                columns: [
-                    {
-                        Header: <i className="fa fa-external-link" style={{color: 'red'}} aria-hidden="true"/>, // Custom header components!
-                        accessor: d => d.link,
-                        minWidth: 200,
-                        width: 300,
-                        maxWidth: 400,
-                        id: 'yt_link',
-                        Cell: props => {
-                            return props.value.url === undefined ? (<span>{props.value.title}</span>) : (
-                                <a href={props.value.url} target="_newtab">{props.value.title}</a>)
-                        }
-                    }
-                ]
-            }
-
-        ];
+            Header: <small>{data.length}</small>,
+            columns: [{
+                sortable: false,
+                resizable: false,
+                Header: () => <Checkbox bsClass="checkbox1" onClick={() => {
+                    store.dispatch({type: action_types.TOGGLE_ALL})
+                }}/>,
+                width: 40,
+                accessor: 'selected',
+                Cell: props => {
+                    return <Checkbox bsClass="checkbox1" checked={props.value} id={props.row.id}
+                                     name="selected"
+                                     onChange={(e) => {
+                                         store.dispatch({
+                                             type: 'TOGGLE_SELECTED', id: e.target.id,
+                                             checked: e.target.checked
+                                         })
+                                     }}/>
+                }
+            }]
+        }, post_info];
         const tableOptions = {
             filterable: false,
             // filtered:[{id:'woc_f'},{id:'user'}],
