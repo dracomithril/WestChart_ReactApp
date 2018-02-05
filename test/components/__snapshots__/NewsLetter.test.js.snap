@@ -26,6 +26,7 @@ exports[`<WestLetter/> renders users 1`] = `
     }
   >
     <div
+      key="1707149242852457_1938133309754048"
       style={
         Object {
           "border": "1px black solid",
@@ -84,6 +85,7 @@ exports[`<WestLetter/> renders users 1`] = `
       </div>
     </div>
     <div
+      key="1707149242852457_1941491366084909"
       style={
         Object {
           "border": "1px black solid",
