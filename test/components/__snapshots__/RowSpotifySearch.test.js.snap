@@ -59,6 +59,7 @@ exports[`<RowSpotifySearch/> renders without crashing 1`] = `
           bsStyle="warning"
           disabled={true}
           id="dropdown-basic-0"
+          key="0"
           title="select"
         />
       </ButtonGroup>

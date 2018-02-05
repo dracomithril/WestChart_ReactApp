@@ -56,6 +56,7 @@ exports[`<PickYourDate/> renders without crashing 1`] = `
         >
           <Checkbox
             bsClass="checkbox"
+            checked={undefined}
             disabled={false}
             inline={false}
             name="enable_until"
@@ -63,7 +64,7 @@ exports[`<PickYourDate/> renders without crashing 1`] = `
             title=""
           >
             Use date: 
-            <t
+            <DatePicker
               allowSameDay={false}
               dateFormat="DD/MM/YYYY"
               dateFormatCalendar="MMMM YYYY"
@@ -78,7 +79,12 @@ exports[`<PickYourDate/> renders without crashing 1`] = `
               onKeyDown={[Function]}
               onMonthChange={[Function]}
               onSelect={[Function]}
-              utcOffset={60}
+              onYearChange={[Function]}
+              preventOpenOnFocus={false}
+              selected={undefined}
+              shouldCloseOnSelect={true}
+              showTimeSelect={false}
+              timeIntervals={30}
               withPortal={false}
             />
           </Checkbox>
