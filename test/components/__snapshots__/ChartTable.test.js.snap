@@ -21,40 +21,40 @@ exports[`<ChartTable/> render with objects 1`] = `
           "url": "https://www.facebook.com/photo.php?fbid=10203589450734977&set=gm.2000501083517270&type=3",
         },
         "message": "[WCS Weekly Westletter]
-    
-    Hello, Sweeties :)
-    
-    Sorry for not preparing the recap last week - I was totally Baltic Swung ;)
-    
-    Here's your list of songs added in the last two weeks:
-    
-    1. Rita Ora - Your Song (Official Lyric Video) 13 likes
-    2. Lukas Graham - Drunk In The Morning [Official Music Video ] 6 likes
-    3. Katy Perry - Swish Swish (Audio) ft. Nicki Minaj 6 likes
-    4. Birdy - Deep End 6 likes
-    5. Chris Cornell - Part Of Me (Explicit) ft. Timbaland 5 likes
-    6. Clean Bandit - Rockabye (ft. Sean Paul & Anne-Marie) [Autograf Remix] 5 likes
-    7. DJ Khaled - I'm the One ft. Justin Bieber, Quavo, Chance the Rapper, Lil Wayne 5 likes
-    8. CloZee - Eyes In Eyes (feat. LF) (Free Download) 4 likes
-    9. Jocelyn Alice - Feels Right (Galloway Remix) [Music Video] 4 likes
-    10. Hailee Steinfeld - Most Girls 4 likes
-    11. Ne-Yo - Miss Independent 3 likes
-    12. Socalled - You Are Never Alone 3 likes
-    13. Labrinth - Let It Be 2 likes
-    14. Katy Perry - I´m still breathing 2 likes
-    15. KYLE - iSpy (feat. Lil Yachty) [Lyric Video] 1 like
-    16. Chris Brown - Yeah 3x 1 like
-    17. David Guetta ft Justin Bieber - 2U (The Victoria’s Secret Angels Lip Sync) 1 like
-    18. The Weeknd - Secrets 0 likes
-    19. Tinashe - Flame 0 likes
-    
-    Spotify playlist:
-    https://open.spotify.com/user/jesiennik/playlist/4EOF5fwiuRnwe3BqauA8gQ
-    
-    Today's puzzle consists of two parts, enjoy :)
-    
-    Bisous,
-    Asia",
+
+Hello, Sweeties :)
+
+Sorry for not preparing the recap last week - I was totally Baltic Swung ;)
+
+Here's your list of songs added in the last two weeks:
+
+1. Rita Ora - Your Song (Official Lyric Video) 13 likes
+2. Lukas Graham - Drunk In The Morning [Official Music Video ] 6 likes
+3. Katy Perry - Swish Swish (Audio) ft. Nicki Minaj 6 likes
+4. Birdy - Deep End 6 likes
+5. Chris Cornell - Part Of Me (Explicit) ft. Timbaland 5 likes
+6. Clean Bandit - Rockabye (ft. Sean Paul & Anne-Marie) [Autograf Remix] 5 likes
+7. DJ Khaled - I'm the One ft. Justin Bieber, Quavo, Chance the Rapper, Lil Wayne 5 likes
+8. CloZee - Eyes In Eyes (feat. LF) (Free Download) 4 likes
+9. Jocelyn Alice - Feels Right (Galloway Remix) [Music Video] 4 likes
+10. Hailee Steinfeld - Most Girls 4 likes
+11. Ne-Yo - Miss Independent 3 likes
+12. Socalled - You Are Never Alone 3 likes
+13. Labrinth - Let It Be 2 likes
+14. Katy Perry - I´m still breathing 2 likes
+15. KYLE - iSpy (feat. Lil Yachty) [Lyric Video] 1 like
+16. Chris Brown - Yeah 3x 1 like
+17. David Guetta ft Justin Bieber - 2U (The Victoria’s Secret Angels Lip Sync) 1 like
+18. The Weeknd - Secrets 0 likes
+19. Tinashe - Flame 0 likes
+
+Spotify playlist:
+https://open.spotify.com/user/jesiennik/playlist/4EOF5fwiuRnwe3BqauA8gQ
+
+Today's puzzle consists of two parts, enjoy :)
+
+Bisous,
+Asia",
         "reactions_num": 4,
         "selected": false,
         "type": "photo",
@@ -348,7 +348,7 @@ exports[`<ChartTable/> render with objects 1`] = `
         Object {
           "Header": <small>
             10
-      </small>,
+          </small>,
           "columns": Array [
             Object {
               "Cell": [Function],
@@ -369,13 +369,13 @@ exports[`<ChartTable/> render with objects 1`] = `
                 aria-hidden="true"
                 className="fa fa-user-circle"
                 style={
-                          Object {
-                                    "color": "green",
-                                  }
+                  Object {
+                    "color": "green",
+                  }
                 }
-      >
+              >
                 user
-      </i>,
+              </i>,
               "accessor": "from",
               "id": "user",
               "maxWidth": 180,
@@ -388,11 +388,11 @@ exports[`<ChartTable/> render with objects 1`] = `
                 aria-hidden="true"
                 className="fa fa-info-circle"
                 style={
-                          Object {
-                                    "color": "blue",
-                                  }
+                  Object {
+                    "color": "blue",
+                  }
                 }
-      />,
+              />,
               "accessor": [Function],
               "id": "woc_f",
               "maxWidth": 50,
@@ -401,9 +401,9 @@ exports[`<ChartTable/> render with objects 1`] = `
               "Cell": [Function],
               "Header": <i
                 className="fa fa-clock-o"
-      >
+              >
                 Time
-      </i>,
+              </i>,
               "accessor": [Function],
               "id": "createTime",
               "maxWidth": 200,
@@ -416,13 +416,13 @@ exports[`<ChartTable/> render with objects 1`] = `
                 aria-hidden="true"
                 className="fa fa-external-link"
                 style={
-                          Object {
-                                    "color": "red",
-                                  }
+                  Object {
+                    "color": "red",
+                  }
                 }
-      >
+              >
                 Link
-      </i>,
+              </i>,
               "accessor": [Function],
               "id": "yt_link",
               "maxWidth": 400,
@@ -452,40 +452,40 @@ exports[`<ChartTable/> render with objects 1`] = `
             "url": "https://www.facebook.com/photo.php?fbid=10203589450734977&set=gm.2000501083517270&type=3",
           },
           "message": "[WCS Weekly Westletter]
-      
-      Hello, Sweeties :)
-      
-      Sorry for not preparing the recap last week - I was totally Baltic Swung ;)
-      
-      Here's your list of songs added in the last two weeks:
-      
-      1. Rita Ora - Your Song (Official Lyric Video) 13 likes
-      2. Lukas Graham - Drunk In The Morning [Official Music Video ] 6 likes
-      3. Katy Perry - Swish Swish (Audio) ft. Nicki Minaj 6 likes
-      4. Birdy - Deep End 6 likes
-      5. Chris Cornell - Part Of Me (Explicit) ft. Timbaland 5 likes
-      6. Clean Bandit - Rockabye (ft. Sean Paul & Anne-Marie) [Autograf Remix] 5 likes
-      7. DJ Khaled - I'm the One ft. Justin Bieber, Quavo, Chance the Rapper, Lil Wayne 5 likes
-      8. CloZee - Eyes In Eyes (feat. LF) (Free Download) 4 likes
-      9. Jocelyn Alice - Feels Right (Galloway Remix) [Music Video] 4 likes
-      10. Hailee Steinfeld - Most Girls 4 likes
-      11. Ne-Yo - Miss Independent 3 likes
-      12. Socalled - You Are Never Alone 3 likes
-      13. Labrinth - Let It Be 2 likes
-      14. Katy Perry - I´m still breathing 2 likes
-      15. KYLE - iSpy (feat. Lil Yachty) [Lyric Video] 1 like
-      16. Chris Brown - Yeah 3x 1 like
-      17. David Guetta ft Justin Bieber - 2U (The Victoria’s Secret Angels Lip Sync) 1 like
-      18. The Weeknd - Secrets 0 likes
-      19. Tinashe - Flame 0 likes
-      
-      Spotify playlist:
-      https://open.spotify.com/user/jesiennik/playlist/4EOF5fwiuRnwe3BqauA8gQ
-      
-      Today's puzzle consists of two parts, enjoy :)
-      
-      Bisous,
-      Asia",
+
+Hello, Sweeties :)
+
+Sorry for not preparing the recap last week - I was totally Baltic Swung ;)
+
+Here's your list of songs added in the last two weeks:
+
+1. Rita Ora - Your Song (Official Lyric Video) 13 likes
+2. Lukas Graham - Drunk In The Morning [Official Music Video ] 6 likes
+3. Katy Perry - Swish Swish (Audio) ft. Nicki Minaj 6 likes
+4. Birdy - Deep End 6 likes
+5. Chris Cornell - Part Of Me (Explicit) ft. Timbaland 5 likes
+6. Clean Bandit - Rockabye (ft. Sean Paul & Anne-Marie) [Autograf Remix] 5 likes
+7. DJ Khaled - I'm the One ft. Justin Bieber, Quavo, Chance the Rapper, Lil Wayne 5 likes
+8. CloZee - Eyes In Eyes (feat. LF) (Free Download) 4 likes
+9. Jocelyn Alice - Feels Right (Galloway Remix) [Music Video] 4 likes
+10. Hailee Steinfeld - Most Girls 4 likes
+11. Ne-Yo - Miss Independent 3 likes
+12. Socalled - You Are Never Alone 3 likes
+13. Labrinth - Let It Be 2 likes
+14. Katy Perry - I´m still breathing 2 likes
+15. KYLE - iSpy (feat. Lil Yachty) [Lyric Video] 1 like
+16. Chris Brown - Yeah 3x 1 like
+17. David Guetta ft Justin Bieber - 2U (The Victoria’s Secret Angels Lip Sync) 1 like
+18. The Weeknd - Secrets 0 likes
+19. Tinashe - Flame 0 likes
+
+Spotify playlist:
+https://open.spotify.com/user/jesiennik/playlist/4EOF5fwiuRnwe3BqauA8gQ
+
+Today's puzzle consists of two parts, enjoy :)
+
+Bisous,
+Asia",
           "reactions_num": 4,
           "selected": false,
           "type": "photo",
@@ -1334,40 +1334,40 @@ exports[`<ChartTable/> render with objects 1`] = `
                                   placement="right"
                                 >
                                   [WCS Weekly Westletter]
-                                  
-                                  Hello, Sweeties :)
-                                  
-                                  Sorry for not preparing the recap last week - I was totally Baltic Swung ;)
-                                  
-                                  Here's your list of songs added in the last two weeks:
-                                  
-                                  1. Rita Ora - Your Song (Official Lyric Video) 13 likes
-                                  2. Lukas Graham - Drunk In The Morning [Official Music Video ] 6 likes
-                                  3. Katy Perry - Swish Swish (Audio) ft. Nicki Minaj 6 likes
-                                  4. Birdy - Deep End 6 likes
-                                  5. Chris Cornell - Part Of Me (Explicit) ft. Timbaland 5 likes
-                                  6. Clean Bandit - Rockabye (ft. Sean Paul & Anne-Marie) [Autograf Remix] 5 likes
-                                  7. DJ Khaled - I'm the One ft. Justin Bieber, Quavo, Chance the Rapper, Lil Wayne 5 likes
-                                  8. CloZee - Eyes In Eyes (feat. LF) (Free Download) 4 likes
-                                  9. Jocelyn Alice - Feels Right (Galloway Remix) [Music Video] 4 likes
-                                  10. Hailee Steinfeld - Most Girls 4 likes
-                                  11. Ne-Yo - Miss Independent 3 likes
-                                  12. Socalled - You Are Never Alone 3 likes
-                                  13. Labrinth - Let It Be 2 likes
-                                  14. Katy Perry - I´m still breathing 2 likes
-                                  15. KYLE - iSpy (feat. Lil Yachty) [Lyric Video] 1 like
-                                  16. Chris Brown - Yeah 3x 1 like
-                                  17. David Guetta ft Justin Bieber - 2U (The Victoria’s Secret Angels Lip Sync) 1 like
-                                  18. The Weeknd - Secrets 0 likes
-                                  19. Tinashe - Flame 0 likes
-                                  
-                                  Spotify playlist:
-                                  https://open.spotify.com/user/jesiennik/playlist/4EOF5fwiuRnwe3BqauA8gQ
-                                  
-                                  Today's puzzle consists of two parts, enjoy :)
-                                  
-                                  Bisous,
-                                  Asia
+
+Hello, Sweeties :)
+
+Sorry for not preparing the recap last week - I was totally Baltic Swung ;)
+
+Here's your list of songs added in the last two weeks:
+
+1. Rita Ora - Your Song (Official Lyric Video) 13 likes
+2. Lukas Graham - Drunk In The Morning [Official Music Video ] 6 likes
+3. Katy Perry - Swish Swish (Audio) ft. Nicki Minaj 6 likes
+4. Birdy - Deep End 6 likes
+5. Chris Cornell - Part Of Me (Explicit) ft. Timbaland 5 likes
+6. Clean Bandit - Rockabye (ft. Sean Paul & Anne-Marie) [Autograf Remix] 5 likes
+7. DJ Khaled - I'm the One ft. Justin Bieber, Quavo, Chance the Rapper, Lil Wayne 5 likes
+8. CloZee - Eyes In Eyes (feat. LF) (Free Download) 4 likes
+9. Jocelyn Alice - Feels Right (Galloway Remix) [Music Video] 4 likes
+10. Hailee Steinfeld - Most Girls 4 likes
+11. Ne-Yo - Miss Independent 3 likes
+12. Socalled - You Are Never Alone 3 likes
+13. Labrinth - Let It Be 2 likes
+14. Katy Perry - I´m still breathing 2 likes
+15. KYLE - iSpy (feat. Lil Yachty) [Lyric Video] 1 like
+16. Chris Brown - Yeah 3x 1 like
+17. David Guetta ft Justin Bieber - 2U (The Victoria’s Secret Angels Lip Sync) 1 like
+18. The Weeknd - Secrets 0 likes
+19. Tinashe - Flame 0 likes
+
+Spotify playlist:
+https://open.spotify.com/user/jesiennik/playlist/4EOF5fwiuRnwe3BqauA8gQ
+
+Today's puzzle consists of two parts, enjoy :)
+
+Bisous,
+Asia
                                 </Tooltip>
                               }
                               placement="bottom"
@@ -4258,7 +4258,7 @@ exports[`<ChartTable/> render with objects 1`] = `
                 "parentColumn": Object {
                   "Header": <small>
                     10
-            </small>,
+                  </small>,
                   "columns": Array [
                     Object {
                       "Cell": [Function],
@@ -4287,13 +4287,13 @@ exports[`<ChartTable/> render with objects 1`] = `
                   aria-hidden="true"
                   className="fa fa-user-circle"
                   style={
-                        Object {
-                              "color": "green",
-                            }
+                    Object {
+                      "color": "green",
+                    }
                   }
-            >
+                >
                   user
-            </i>,
+                </i>,
                 "Pivot": undefined,
                 "PivotValue": undefined,
                 "accessor": [Function],
@@ -4321,13 +4321,13 @@ exports[`<ChartTable/> render with objects 1`] = `
                         aria-hidden="true"
                         className="fa fa-user-circle"
                         style={
-                                    Object {
-                                                "color": "green",
-                                              }
+                          Object {
+                            "color": "green",
+                          }
                         }
-            >
+                      >
                         user
-            </i>,
+                      </i>,
                       "accessor": "from",
                       "id": "user",
                       "maxWidth": 180,
@@ -4340,11 +4340,11 @@ exports[`<ChartTable/> render with objects 1`] = `
                         aria-hidden="true"
                         className="fa fa-info-circle"
                         style={
-                                    Object {
-                                                "color": "blue",
-                                              }
+                          Object {
+                            "color": "blue",
+                          }
                         }
-            />,
+                      />,
                       "accessor": [Function],
                       "id": "woc_f",
                       "maxWidth": 50,
@@ -4353,9 +4353,9 @@ exports[`<ChartTable/> render with objects 1`] = `
                       "Cell": [Function],
                       "Header": <i
                         className="fa fa-clock-o"
-            >
+                      >
                         Time
-            </i>,
+                      </i>,
                       "accessor": [Function],
                       "id": "createTime",
                       "maxWidth": 200,
@@ -4368,13 +4368,13 @@ exports[`<ChartTable/> render with objects 1`] = `
                         aria-hidden="true"
                         className="fa fa-external-link"
                         style={
-                                    Object {
-                                                "color": "red",
-                                              }
+                          Object {
+                            "color": "red",
+                          }
                         }
-            >
+                      >
                         Link
-            </i>,
+                      </i>,
                       "accessor": [Function],
                       "id": "yt_link",
                       "maxWidth": 400,
@@ -4399,11 +4399,11 @@ exports[`<ChartTable/> render with objects 1`] = `
                   aria-hidden="true"
                   className="fa fa-info-circle"
                   style={
-                        Object {
-                              "color": "blue",
-                            }
+                    Object {
+                      "color": "blue",
+                    }
                   }
-            />,
+                />,
                 "Pivot": undefined,
                 "PivotValue": undefined,
                 "accessor": [Function],
@@ -4431,13 +4431,13 @@ exports[`<ChartTable/> render with objects 1`] = `
                         aria-hidden="true"
                         className="fa fa-user-circle"
                         style={
-                                    Object {
-                                                "color": "green",
-                                              }
+                          Object {
+                            "color": "green",
+                          }
                         }
-            >
+                      >
                         user
-            </i>,
+                      </i>,
                       "accessor": "from",
                       "id": "user",
                       "maxWidth": 180,
@@ -4450,11 +4450,11 @@ exports[`<ChartTable/> render with objects 1`] = `
                         aria-hidden="true"
                         className="fa fa-info-circle"
                         style={
-                                    Object {
-                                                "color": "blue",
-                                              }
+                          Object {
+                            "color": "blue",
+                          }
                         }
-            />,
+                      />,
                       "accessor": [Function],
                       "id": "woc_f",
                       "maxWidth": 50,
@@ -4463,9 +4463,9 @@ exports[`<ChartTable/> render with objects 1`] = `
                       "Cell": [Function],
                       "Header": <i
                         className="fa fa-clock-o"
-            >
+                      >
                         Time
-            </i>,
+                      </i>,
                       "accessor": [Function],
                       "id": "createTime",
                       "maxWidth": 200,
@@ -4478,13 +4478,13 @@ exports[`<ChartTable/> render with objects 1`] = `
                         aria-hidden="true"
                         className="fa fa-external-link"
                         style={
-                                    Object {
-                                                "color": "red",
-                                              }
+                          Object {
+                            "color": "red",
+                          }
                         }
-            >
+                      >
                         Link
-            </i>,
+                      </i>,
                       "accessor": [Function],
                       "id": "yt_link",
                       "maxWidth": 400,
@@ -4507,9 +4507,9 @@ exports[`<ChartTable/> render with objects 1`] = `
                 "Footer": undefined,
                 "Header": <i
                   className="fa fa-clock-o"
-            >
+                >
                   Time
-            </i>,
+                </i>,
                 "Pivot": undefined,
                 "PivotValue": undefined,
                 "accessor": [Function],
@@ -4537,13 +4537,13 @@ exports[`<ChartTable/> render with objects 1`] = `
                         aria-hidden="true"
                         className="fa fa-user-circle"
                         style={
-                                    Object {
-                                                "color": "green",
-                                              }
+                          Object {
+                            "color": "green",
+                          }
                         }
-            >
+                      >
                         user
-            </i>,
+                      </i>,
                       "accessor": "from",
                       "id": "user",
                       "maxWidth": 180,
@@ -4556,11 +4556,11 @@ exports[`<ChartTable/> render with objects 1`] = `
                         aria-hidden="true"
                         className="fa fa-info-circle"
                         style={
-                                    Object {
-                                                "color": "blue",
-                                              }
+                          Object {
+                            "color": "blue",
+                          }
                         }
-            />,
+                      />,
                       "accessor": [Function],
                       "id": "woc_f",
                       "maxWidth": 50,
@@ -4569,9 +4569,9 @@ exports[`<ChartTable/> render with objects 1`] = `
                       "Cell": [Function],
                       "Header": <i
                         className="fa fa-clock-o"
-            >
+                      >
                         Time
-            </i>,
+                      </i>,
                       "accessor": [Function],
                       "id": "createTime",
                       "maxWidth": 200,
@@ -4584,13 +4584,13 @@ exports[`<ChartTable/> render with objects 1`] = `
                         aria-hidden="true"
                         className="fa fa-external-link"
                         style={
-                                    Object {
-                                                "color": "red",
-                                              }
+                          Object {
+                            "color": "red",
+                          }
                         }
-            >
+                      >
                         Link
-            </i>,
+                      </i>,
                       "accessor": [Function],
                       "id": "yt_link",
                       "maxWidth": 400,
@@ -4615,13 +4615,13 @@ exports[`<ChartTable/> render with objects 1`] = `
                   aria-hidden="true"
                   className="fa fa-external-link"
                   style={
-                        Object {
-                              "color": "red",
-                            }
+                    Object {
+                      "color": "red",
+                    }
                   }
-            >
+                >
                   Link
-            </i>,
+                </i>,
                 "Pivot": undefined,
                 "PivotValue": undefined,
                 "accessor": [Function],
@@ -4649,13 +4649,13 @@ exports[`<ChartTable/> render with objects 1`] = `
                         aria-hidden="true"
                         className="fa fa-user-circle"
                         style={
-                                    Object {
-                                                "color": "green",
-                                              }
+                          Object {
+                            "color": "green",
+                          }
                         }
-            >
+                      >
                         user
-            </i>,
+                      </i>,
                       "accessor": "from",
                       "id": "user",
                       "maxWidth": 180,
@@ -4668,11 +4668,11 @@ exports[`<ChartTable/> render with objects 1`] = `
                         aria-hidden="true"
                         className="fa fa-info-circle"
                         style={
-                                    Object {
-                                                "color": "blue",
-                                              }
+                          Object {
+                            "color": "blue",
+                          }
                         }
-            />,
+                      />,
                       "accessor": [Function],
                       "id": "woc_f",
                       "maxWidth": 50,
@@ -4681,9 +4681,9 @@ exports[`<ChartTable/> render with objects 1`] = `
                       "Cell": [Function],
                       "Header": <i
                         className="fa fa-clock-o"
-            >
+                      >
                         Time
-            </i>,
+                      </i>,
                       "accessor": [Function],
                       "id": "createTime",
                       "maxWidth": 200,
@@ -4696,13 +4696,13 @@ exports[`<ChartTable/> render with objects 1`] = `
                         aria-hidden="true"
                         className="fa fa-external-link"
                         style={
-                                    Object {
-                                                "color": "red",
-                                              }
+                          Object {
+                            "color": "red",
+                          }
                         }
-            >
+                      >
                         Link
-            </i>,
+                      </i>,
                       "accessor": [Function],
                       "id": "yt_link",
                       "maxWidth": 400,
@@ -4749,7 +4749,7 @@ exports[`<ChartTable/> render with objects 1`] = `
                 "parentColumn": Object {
                   "Header": <small>
                     10
-            </small>,
+                  </small>,
                   "columns": Array [
                     Object {
                       "Cell": [Function],
@@ -4778,13 +4778,13 @@ exports[`<ChartTable/> render with objects 1`] = `
                   aria-hidden="true"
                   className="fa fa-user-circle"
                   style={
-                        Object {
-                              "color": "green",
-                            }
+                    Object {
+                      "color": "green",
+                    }
                   }
-            >
+                >
                   user
-            </i>,
+                </i>,
                 "Pivot": undefined,
                 "PivotValue": undefined,
                 "accessor": [Function],
@@ -4812,13 +4812,13 @@ exports[`<ChartTable/> render with objects 1`] = `
                         aria-hidden="true"
                         className="fa fa-user-circle"
                         style={
-                                    Object {
-                                                "color": "green",
-                                              }
+                          Object {
+                            "color": "green",
+                          }
                         }
-            >
+                      >
                         user
-            </i>,
+                      </i>,
                       "accessor": "from",
                       "id": "user",
                       "maxWidth": 180,
@@ -4831,11 +4831,11 @@ exports[`<ChartTable/> render with objects 1`] = `
                         aria-hidden="true"
                         className="fa fa-info-circle"
                         style={
-                                    Object {
-                                                "color": "blue",
-                                              }
+                          Object {
+                            "color": "blue",
+                          }
                         }
-            />,
+                      />,
                       "accessor": [Function],
                       "id": "woc_f",
                       "maxWidth": 50,
@@ -4844,9 +4844,9 @@ exports[`<ChartTable/> render with objects 1`] = `
                       "Cell": [Function],
                       "Header": <i
                         className="fa fa-clock-o"
-            >
+                      >
                         Time
-            </i>,
+                      </i>,
                       "accessor": [Function],
                       "id": "createTime",
                       "maxWidth": 200,
@@ -4859,13 +4859,13 @@ exports[`<ChartTable/> render with objects 1`] = `
                         aria-hidden="true"
                         className="fa fa-external-link"
                         style={
-                                    Object {
-                                                "color": "red",
-                                              }
+                          Object {
+                            "color": "red",
+                          }
                         }
-            >
+                      >
                         Link
-            </i>,
+                      </i>,
                       "accessor": [Function],
                       "id": "yt_link",
                       "maxWidth": 400,
@@ -4890,11 +4890,11 @@ exports[`<ChartTable/> render with objects 1`] = `
                   aria-hidden="true"
                   className="fa fa-info-circle"
                   style={
-                        Object {
-                              "color": "blue",
-                            }
+                    Object {
+                      "color": "blue",
+                    }
                   }
-            />,
+                />,
                 "Pivot": undefined,
                 "PivotValue": undefined,
                 "accessor": [Function],
@@ -4922,13 +4922,13 @@ exports[`<ChartTable/> render with objects 1`] = `
                         aria-hidden="true"
                         className="fa fa-user-circle"
                         style={
-                                    Object {
-                                                "color": "green",
-                                              }
+                          Object {
+                            "color": "green",
+                          }
                         }
-            >
+                      >
                         user
-            </i>,
+                      </i>,
                       "accessor": "from",
                       "id": "user",
                       "maxWidth": 180,
@@ -4941,11 +4941,11 @@ exports[`<ChartTable/> render with objects 1`] = `
                         aria-hidden="true"
                         className="fa fa-info-circle"
                         style={
-                                    Object {
-                                                "color": "blue",
-                                              }
+                          Object {
+                            "color": "blue",
+                          }
                         }
-            />,
+                      />,
                       "accessor": [Function],
                       "id": "woc_f",
                       "maxWidth": 50,
@@ -4954,9 +4954,9 @@ exports[`<ChartTable/> render with objects 1`] = `
                       "Cell": [Function],
                       "Header": <i
                         className="fa fa-clock-o"
-            >
+                      >
                         Time
-            </i>,
+                      </i>,
                       "accessor": [Function],
                       "id": "createTime",
                       "maxWidth": 200,
@@ -4969,13 +4969,13 @@ exports[`<ChartTable/> render with objects 1`] = `
                         aria-hidden="true"
                         className="fa fa-external-link"
                         style={
-                                    Object {
-                                                "color": "red",
-                                              }
+                          Object {
+                            "color": "red",
+                          }
                         }
-            >
+                      >
                         Link
-            </i>,
+                      </i>,
                       "accessor": [Function],
                       "id": "yt_link",
                       "maxWidth": 400,
@@ -4998,9 +4998,9 @@ exports[`<ChartTable/> render with objects 1`] = `
                 "Footer": undefined,
                 "Header": <i
                   className="fa fa-clock-o"
-            >
+                >
                   Time
-            </i>,
+                </i>,
                 "Pivot": undefined,
                 "PivotValue": undefined,
                 "accessor": [Function],
@@ -5028,13 +5028,13 @@ exports[`<ChartTable/> render with objects 1`] = `
                         aria-hidden="true"
                         className="fa fa-user-circle"
                         style={
-                                    Object {
-                                                "color": "green",
-                                              }
+                          Object {
+                            "color": "green",
+                          }
                         }
-            >
+                      >
                         user
-            </i>,
+                      </i>,
                       "accessor": "from",
                       "id": "user",
                       "maxWidth": 180,
@@ -5047,11 +5047,11 @@ exports[`<ChartTable/> render with objects 1`] = `
                         aria-hidden="true"
                         className="fa fa-info-circle"
                         style={
-                                    Object {
-                                                "color": "blue",
-                                              }
+                          Object {
+                            "color": "blue",
+                          }
                         }
-            />,
+                      />,
                       "accessor": [Function],
                       "id": "woc_f",
                       "maxWidth": 50,
@@ -5060,9 +5060,9 @@ exports[`<ChartTable/> render with objects 1`] = `
                       "Cell": [Function],
                       "Header": <i
                         className="fa fa-clock-o"
-            >
+                      >
                         Time
-            </i>,
+                      </i>,
                       "accessor": [Function],
                       "id": "createTime",
                       "maxWidth": 200,
@@ -5075,13 +5075,13 @@ exports[`<ChartTable/> render with objects 1`] = `
                         aria-hidden="true"
                         className="fa fa-external-link"
                         style={
-                                    Object {
-                                                "color": "red",
-                                              }
+                          Object {
+                            "color": "red",
+                          }
                         }
-            >
+                      >
                         Link
-            </i>,
+                      </i>,
                       "accessor": [Function],
                       "id": "yt_link",
                       "maxWidth": 400,
@@ -5106,13 +5106,13 @@ exports[`<ChartTable/> render with objects 1`] = `
                   aria-hidden="true"
                   className="fa fa-external-link"
                   style={
-                        Object {
-                              "color": "red",
-                            }
+                    Object {
+                      "color": "red",
+                    }
                   }
-            >
+                >
                   Link
-            </i>,
+                </i>,
                 "Pivot": undefined,
                 "PivotValue": undefined,
                 "accessor": [Function],
@@ -5140,13 +5140,13 @@ exports[`<ChartTable/> render with objects 1`] = `
                         aria-hidden="true"
                         className="fa fa-user-circle"
                         style={
-                                    Object {
-                                                "color": "green",
-                                              }
+                          Object {
+                            "color": "green",
+                          }
                         }
-            >
+                      >
                         user
-            </i>,
+                      </i>,
                       "accessor": "from",
                       "id": "user",
                       "maxWidth": 180,
@@ -5159,11 +5159,11 @@ exports[`<ChartTable/> render with objects 1`] = `
                         aria-hidden="true"
                         className="fa fa-info-circle"
                         style={
-                                    Object {
-                                                "color": "blue",
-                                              }
+                          Object {
+                            "color": "blue",
+                          }
                         }
-            />,
+                      />,
                       "accessor": [Function],
                       "id": "woc_f",
                       "maxWidth": 50,
@@ -5172,9 +5172,9 @@ exports[`<ChartTable/> render with objects 1`] = `
                       "Cell": [Function],
                       "Header": <i
                         className="fa fa-clock-o"
-            >
+                      >
                         Time
-            </i>,
+                      </i>,
                       "accessor": [Function],
                       "id": "createTime",
                       "maxWidth": 200,
@@ -5187,13 +5187,13 @@ exports[`<ChartTable/> render with objects 1`] = `
                         aria-hidden="true"
                         className="fa fa-external-link"
                         style={
-                                    Object {
-                                                "color": "red",
-                                              }
+                          Object {
+                            "color": "red",
+                          }
                         }
-            >
+                      >
                         Link
-            </i>,
+                      </i>,
                       "accessor": [Function],
                       "id": "yt_link",
                       "maxWidth": 400,
@@ -5256,7 +5256,7 @@ exports[`<ChartTable/> render with objects 1`] = `
               Object {
                 "Header": <small>
                   10
-            </small>,
+                </small>,
                 "columns": Array [
                   Object {
                     "Cell": [Function],
@@ -5277,13 +5277,13 @@ exports[`<ChartTable/> render with objects 1`] = `
                       aria-hidden="true"
                       className="fa fa-user-circle"
                       style={
-                                Object {
-                                          "color": "green",
-                                        }
+                        Object {
+                          "color": "green",
+                        }
                       }
-            >
+                    >
                       user
-            </i>,
+                    </i>,
                     "accessor": "from",
                     "id": "user",
                     "maxWidth": 180,
@@ -5296,11 +5296,11 @@ exports[`<ChartTable/> render with objects 1`] = `
                       aria-hidden="true"
                       className="fa fa-info-circle"
                       style={
-                                Object {
-                                          "color": "blue",
-                                        }
+                        Object {
+                          "color": "blue",
+                        }
                       }
-            />,
+                    />,
                     "accessor": [Function],
                     "id": "woc_f",
                     "maxWidth": 50,
@@ -5309,9 +5309,9 @@ exports[`<ChartTable/> render with objects 1`] = `
                     "Cell": [Function],
                     "Header": <i
                       className="fa fa-clock-o"
-            >
+                    >
                       Time
-            </i>,
+                    </i>,
                     "accessor": [Function],
                     "id": "createTime",
                     "maxWidth": 200,
@@ -5324,13 +5324,13 @@ exports[`<ChartTable/> render with objects 1`] = `
                       aria-hidden="true"
                       className="fa fa-external-link"
                       style={
-                                Object {
-                                          "color": "red",
-                                        }
+                        Object {
+                          "color": "red",
+                        }
                       }
-            >
+                    >
                       Link
-            </i>,
+                    </i>,
                     "accessor": [Function],
                     "id": "yt_link",
                     "maxWidth": 400,
@@ -5361,40 +5361,40 @@ exports[`<ChartTable/> render with objects 1`] = `
                   "url": "https://www.facebook.com/photo.php?fbid=10203589450734977&set=gm.2000501083517270&type=3",
                 },
                 "message": "[WCS Weekly Westletter]
-            
-            Hello, Sweeties :)
-            
-            Sorry for not preparing the recap last week - I was totally Baltic Swung ;)
-            
-            Here's your list of songs added in the last two weeks:
-            
-            1. Rita Ora - Your Song (Official Lyric Video) 13 likes
-            2. Lukas Graham - Drunk In The Morning [Official Music Video ] 6 likes
-            3. Katy Perry - Swish Swish (Audio) ft. Nicki Minaj 6 likes
-            4. Birdy - Deep End 6 likes
-            5. Chris Cornell - Part Of Me (Explicit) ft. Timbaland 5 likes
-            6. Clean Bandit - Rockabye (ft. Sean Paul & Anne-Marie) [Autograf Remix] 5 likes
-            7. DJ Khaled - I'm the One ft. Justin Bieber, Quavo, Chance the Rapper, Lil Wayne 5 likes
-            8. CloZee - Eyes In Eyes (feat. LF) (Free Download) 4 likes
-            9. Jocelyn Alice - Feels Right (Galloway Remix) [Music Video] 4 likes
-            10. Hailee Steinfeld - Most Girls 4 likes
-            11. Ne-Yo - Miss Independent 3 likes
-            12. Socalled - You Are Never Alone 3 likes
-            13. Labrinth - Let It Be 2 likes
-            14. Katy Perry - I´m still breathing 2 likes
-            15. KYLE - iSpy (feat. Lil Yachty) [Lyric Video] 1 like
-            16. Chris Brown - Yeah 3x 1 like
-            17. David Guetta ft Justin Bieber - 2U (The Victoria’s Secret Angels Lip Sync) 1 like
-            18. The Weeknd - Secrets 0 likes
-            19. Tinashe - Flame 0 likes
-            
-            Spotify playlist:
-            https://open.spotify.com/user/jesiennik/playlist/4EOF5fwiuRnwe3BqauA8gQ
-            
-            Today's puzzle consists of two parts, enjoy :)
-            
-            Bisous,
-            Asia",
+
+Hello, Sweeties :)
+
+Sorry for not preparing the recap last week - I was totally Baltic Swung ;)
+
+Here's your list of songs added in the last two weeks:
+
+1. Rita Ora - Your Song (Official Lyric Video) 13 likes
+2. Lukas Graham - Drunk In The Morning [Official Music Video ] 6 likes
+3. Katy Perry - Swish Swish (Audio) ft. Nicki Minaj 6 likes
+4. Birdy - Deep End 6 likes
+5. Chris Cornell - Part Of Me (Explicit) ft. Timbaland 5 likes
+6. Clean Bandit - Rockabye (ft. Sean Paul & Anne-Marie) [Autograf Remix] 5 likes
+7. DJ Khaled - I'm the One ft. Justin Bieber, Quavo, Chance the Rapper, Lil Wayne 5 likes
+8. CloZee - Eyes In Eyes (feat. LF) (Free Download) 4 likes
+9. Jocelyn Alice - Feels Right (Galloway Remix) [Music Video] 4 likes
+10. Hailee Steinfeld - Most Girls 4 likes
+11. Ne-Yo - Miss Independent 3 likes
+12. Socalled - You Are Never Alone 3 likes
+13. Labrinth - Let It Be 2 likes
+14. Katy Perry - I´m still breathing 2 likes
+15. KYLE - iSpy (feat. Lil Yachty) [Lyric Video] 1 like
+16. Chris Brown - Yeah 3x 1 like
+17. David Guetta ft Justin Bieber - 2U (The Victoria’s Secret Angels Lip Sync) 1 like
+18. The Weeknd - Secrets 0 likes
+19. Tinashe - Flame 0 likes
+
+Spotify playlist:
+https://open.spotify.com/user/jesiennik/playlist/4EOF5fwiuRnwe3BqauA8gQ
+
+Today's puzzle consists of two parts, enjoy :)
+
+Bisous,
+Asia",
                 "reactions_num": 4,
                 "selected": false,
                 "type": "photo",
@@ -5679,7 +5679,7 @@ exports[`<ChartTable/> render with objects 1`] = `
                 "Footer": undefined,
                 "Header": <small>
                   10
-            </small>,
+                </small>,
                 "Pivot": undefined,
                 "PivotValue": undefined,
                 "aggregate": undefined,
@@ -5712,7 +5712,7 @@ exports[`<ChartTable/> render with objects 1`] = `
                     "parentColumn": Object {
                       "Header": <small>
                         10
-            </small>,
+                      </small>,
                       "columns": Array [
                         Object {
                           "Cell": [Function],
@@ -5771,13 +5771,13 @@ exports[`<ChartTable/> render with objects 1`] = `
                       aria-hidden="true"
                       className="fa fa-user-circle"
                       style={
-                                Object {
-                                          "color": "green",
-                                        }
+                        Object {
+                          "color": "green",
+                        }
                       }
-            >
+                    >
                       user
-            </i>,
+                    </i>,
                     "Pivot": undefined,
                     "PivotValue": undefined,
                     "accessor": [Function],
@@ -5805,13 +5805,13 @@ exports[`<ChartTable/> render with objects 1`] = `
                             aria-hidden="true"
                             className="fa fa-user-circle"
                             style={
-                                            Object {
-                                                            "color": "green",
-                                                          }
+                              Object {
+                                "color": "green",
+                              }
                             }
-            >
+                          >
                             user
-            </i>,
+                          </i>,
                           "accessor": "from",
                           "id": "user",
                           "maxWidth": 180,
@@ -5824,11 +5824,11 @@ exports[`<ChartTable/> render with objects 1`] = `
                             aria-hidden="true"
                             className="fa fa-info-circle"
                             style={
-                                            Object {
-                                                            "color": "blue",
-                                                          }
+                              Object {
+                                "color": "blue",
+                              }
                             }
-            />,
+                          />,
                           "accessor": [Function],
                           "id": "woc_f",
                           "maxWidth": 50,
@@ -5837,9 +5837,9 @@ exports[`<ChartTable/> render with objects 1`] = `
                           "Cell": [Function],
                           "Header": <i
                             className="fa fa-clock-o"
-            >
+                          >
                             Time
-            </i>,
+                          </i>,
                           "accessor": [Function],
                           "id": "createTime",
                           "maxWidth": 200,
@@ -5852,13 +5852,13 @@ exports[`<ChartTable/> render with objects 1`] = `
                             aria-hidden="true"
                             className="fa fa-external-link"
                             style={
-                                            Object {
-                                                            "color": "red",
-                                                          }
+                              Object {
+                                "color": "red",
+                              }
                             }
-            >
+                          >
                             Link
-            </i>,
+                          </i>,
                           "accessor": [Function],
                           "id": "yt_link",
                           "maxWidth": 400,
@@ -5883,11 +5883,11 @@ exports[`<ChartTable/> render with objects 1`] = `
                       aria-hidden="true"
                       className="fa fa-info-circle"
                       style={
-                                Object {
-                                          "color": "blue",
-                                        }
+                        Object {
+                          "color": "blue",
+                        }
                       }
-            />,
+                    />,
                     "Pivot": undefined,
                     "PivotValue": undefined,
                     "accessor": [Function],
@@ -5915,13 +5915,13 @@ exports[`<ChartTable/> render with objects 1`] = `
                             aria-hidden="true"
                             className="fa fa-user-circle"
                             style={
-                                            Object {
-                                                            "color": "green",
-                                                          }
+                              Object {
+                                "color": "green",
+                              }
                             }
-            >
+                          >
                             user
-            </i>,
+                          </i>,
                           "accessor": "from",
                           "id": "user",
                           "maxWidth": 180,
@@ -5934,11 +5934,11 @@ exports[`<ChartTable/> render with objects 1`] = `
                             aria-hidden="true"
                             className="fa fa-info-circle"
                             style={
-                                            Object {
-                                                            "color": "blue",
-                                                          }
+                              Object {
+                                "color": "blue",
+                              }
                             }
-            />,
+                          />,
                           "accessor": [Function],
                           "id": "woc_f",
                           "maxWidth": 50,
@@ -5947,9 +5947,9 @@ exports[`<ChartTable/> render with objects 1`] = `
                           "Cell": [Function],
                           "Header": <i
                             className="fa fa-clock-o"
-            >
+                          >
                             Time
-            </i>,
+                          </i>,
                           "accessor": [Function],
                           "id": "createTime",
                           "maxWidth": 200,
@@ -5962,13 +5962,13 @@ exports[`<ChartTable/> render with objects 1`] = `
                             aria-hidden="true"
                             className="fa fa-external-link"
                             style={
-                                            Object {
-                                                            "color": "red",
-                                                          }
+                              Object {
+                                "color": "red",
+                              }
                             }
-            >
+                          >
                             Link
-            </i>,
+                          </i>,
                           "accessor": [Function],
                           "id": "yt_link",
                           "maxWidth": 400,
@@ -5991,9 +5991,9 @@ exports[`<ChartTable/> render with objects 1`] = `
                     "Footer": undefined,
                     "Header": <i
                       className="fa fa-clock-o"
-            >
+                    >
                       Time
-            </i>,
+                    </i>,
                     "Pivot": undefined,
                     "PivotValue": undefined,
                     "accessor": [Function],
@@ -6021,13 +6021,13 @@ exports[`<ChartTable/> render with objects 1`] = `
                             aria-hidden="true"
                             className="fa fa-user-circle"
                             style={
-                                            Object {
-                                                            "color": "green",
-                                                          }
+                              Object {
+                                "color": "green",
+                              }
                             }
-            >
+                          >
                             user
-            </i>,
+                          </i>,
                           "accessor": "from",
                           "id": "user",
                           "maxWidth": 180,
@@ -6040,11 +6040,11 @@ exports[`<ChartTable/> render with objects 1`] = `
                             aria-hidden="true"
                             className="fa fa-info-circle"
                             style={
-                                            Object {
-                                                            "color": "blue",
-                                                          }
+                              Object {
+                                "color": "blue",
+                              }
                             }
-            />,
+                          />,
                           "accessor": [Function],
                           "id": "woc_f",
                           "maxWidth": 50,
@@ -6053,9 +6053,9 @@ exports[`<ChartTable/> render with objects 1`] = `
                           "Cell": [Function],
                           "Header": <i
                             className="fa fa-clock-o"
-            >
+                          >
                             Time
-            </i>,
+                          </i>,
                           "accessor": [Function],
                           "id": "createTime",
                           "maxWidth": 200,
@@ -6068,13 +6068,13 @@ exports[`<ChartTable/> render with objects 1`] = `
                             aria-hidden="true"
                             className="fa fa-external-link"
                             style={
-                                            Object {
-                                                            "color": "red",
-                                                          }
+                              Object {
+                                "color": "red",
+                              }
                             }
-            >
+                          >
                             Link
-            </i>,
+                          </i>,
                           "accessor": [Function],
                           "id": "yt_link",
                           "maxWidth": 400,
@@ -6099,13 +6099,13 @@ exports[`<ChartTable/> render with objects 1`] = `
                       aria-hidden="true"
                       className="fa fa-external-link"
                       style={
-                                Object {
-                                          "color": "red",
-                                        }
+                        Object {
+                          "color": "red",
+                        }
                       }
-            >
+                    >
                       Link
-            </i>,
+                    </i>,
                     "Pivot": undefined,
                     "PivotValue": undefined,
                     "accessor": [Function],
@@ -6133,13 +6133,13 @@ exports[`<ChartTable/> render with objects 1`] = `
                             aria-hidden="true"
                             className="fa fa-user-circle"
                             style={
-                                            Object {
-                                                            "color": "green",
-                                                          }
+                              Object {
+                                "color": "green",
+                              }
                             }
-            >
+                          >
                             user
-            </i>,
+                          </i>,
                           "accessor": "from",
                           "id": "user",
                           "maxWidth": 180,
@@ -6152,11 +6152,11 @@ exports[`<ChartTable/> render with objects 1`] = `
                             aria-hidden="true"
                             className="fa fa-info-circle"
                             style={
-                                            Object {
-                                                            "color": "blue",
-                                                          }
+                              Object {
+                                "color": "blue",
+                              }
                             }
-            />,
+                          />,
                           "accessor": [Function],
                           "id": "woc_f",
                           "maxWidth": 50,
@@ -6165,9 +6165,9 @@ exports[`<ChartTable/> render with objects 1`] = `
                           "Cell": [Function],
                           "Header": <i
                             className="fa fa-clock-o"
-            >
+                          >
                             Time
-            </i>,
+                          </i>,
                           "accessor": [Function],
                           "id": "createTime",
                           "maxWidth": 200,
@@ -6180,13 +6180,13 @@ exports[`<ChartTable/> render with objects 1`] = `
                             aria-hidden="true"
                             className="fa fa-external-link"
                             style={
-                                            Object {
-                                                            "color": "red",
-                                                          }
+                              Object {
+                                "color": "red",
+                              }
                             }
-            >
+                          >
                             Link
-            </i>,
+                          </i>,
                           "accessor": [Function],
                           "id": "yt_link",
                           "maxWidth": 400,
@@ -6288,40 +6288,40 @@ exports[`<ChartTable/> render with objects 1`] = `
                     "url": "https://www.facebook.com/photo.php?fbid=10203589450734977&set=gm.2000501083517270&type=3",
                   },
                   "message": "[WCS Weekly Westletter]
-            
-            Hello, Sweeties :)
-            
-            Sorry for not preparing the recap last week - I was totally Baltic Swung ;)
-            
-            Here's your list of songs added in the last two weeks:
-            
-            1. Rita Ora - Your Song (Official Lyric Video) 13 likes
-            2. Lukas Graham - Drunk In The Morning [Official Music Video ] 6 likes
-            3. Katy Perry - Swish Swish (Audio) ft. Nicki Minaj 6 likes
-            4. Birdy - Deep End 6 likes
-            5. Chris Cornell - Part Of Me (Explicit) ft. Timbaland 5 likes
-            6. Clean Bandit - Rockabye (ft. Sean Paul & Anne-Marie) [Autograf Remix] 5 likes
-            7. DJ Khaled - I'm the One ft. Justin Bieber, Quavo, Chance the Rapper, Lil Wayne 5 likes
-            8. CloZee - Eyes In Eyes (feat. LF) (Free Download) 4 likes
-            9. Jocelyn Alice - Feels Right (Galloway Remix) [Music Video] 4 likes
-            10. Hailee Steinfeld - Most Girls 4 likes
-            11. Ne-Yo - Miss Independent 3 likes
-            12. Socalled - You Are Never Alone 3 likes
-            13. Labrinth - Let It Be 2 likes
-            14. Katy Perry - I´m still breathing 2 likes
-            15. KYLE - iSpy (feat. Lil Yachty) [Lyric Video] 1 like
-            16. Chris Brown - Yeah 3x 1 like
-            17. David Guetta ft Justin Bieber - 2U (The Victoria’s Secret Angels Lip Sync) 1 like
-            18. The Weeknd - Secrets 0 likes
-            19. Tinashe - Flame 0 likes
-            
-            Spotify playlist:
-            https://open.spotify.com/user/jesiennik/playlist/4EOF5fwiuRnwe3BqauA8gQ
-            
-            Today's puzzle consists of two parts, enjoy :)
-            
-            Bisous,
-            Asia",
+
+Hello, Sweeties :)
+
+Sorry for not preparing the recap last week - I was totally Baltic Swung ;)
+
+Here's your list of songs added in the last two weeks:
+
+1. Rita Ora - Your Song (Official Lyric Video) 13 likes
+2. Lukas Graham - Drunk In The Morning [Official Music Video ] 6 likes
+3. Katy Perry - Swish Swish (Audio) ft. Nicki Minaj 6 likes
+4. Birdy - Deep End 6 likes
+5. Chris Cornell - Part Of Me (Explicit) ft. Timbaland 5 likes
+6. Clean Bandit - Rockabye (ft. Sean Paul & Anne-Marie) [Autograf Remix] 5 likes
+7. DJ Khaled - I'm the One ft. Justin Bieber, Quavo, Chance the Rapper, Lil Wayne 5 likes
+8. CloZee - Eyes In Eyes (feat. LF) (Free Download) 4 likes
+9. Jocelyn Alice - Feels Right (Galloway Remix) [Music Video] 4 likes
+10. Hailee Steinfeld - Most Girls 4 likes
+11. Ne-Yo - Miss Independent 3 likes
+12. Socalled - You Are Never Alone 3 likes
+13. Labrinth - Let It Be 2 likes
+14. Katy Perry - I´m still breathing 2 likes
+15. KYLE - iSpy (feat. Lil Yachty) [Lyric Video] 1 like
+16. Chris Brown - Yeah 3x 1 like
+17. David Guetta ft Justin Bieber - 2U (The Victoria’s Secret Angels Lip Sync) 1 like
+18. The Weeknd - Secrets 0 likes
+19. Tinashe - Flame 0 likes
+
+Spotify playlist:
+https://open.spotify.com/user/jesiennik/playlist/4EOF5fwiuRnwe3BqauA8gQ
+
+Today's puzzle consists of two parts, enjoy :)
+
+Bisous,
+Asia",
                   "reactions_num": 4,
                   "selected": false,
                   "type": "photo",
@@ -6340,40 +6340,40 @@ exports[`<ChartTable/> render with objects 1`] = `
                 },
                 "woc_f": Object {
                   "message": "[WCS Weekly Westletter]
-            
-            Hello, Sweeties :)
-            
-            Sorry for not preparing the recap last week - I was totally Baltic Swung ;)
-            
-            Here's your list of songs added in the last two weeks:
-            
-            1. Rita Ora - Your Song (Official Lyric Video) 13 likes
-            2. Lukas Graham - Drunk In The Morning [Official Music Video ] 6 likes
-            3. Katy Perry - Swish Swish (Audio) ft. Nicki Minaj 6 likes
-            4. Birdy - Deep End 6 likes
-            5. Chris Cornell - Part Of Me (Explicit) ft. Timbaland 5 likes
-            6. Clean Bandit - Rockabye (ft. Sean Paul & Anne-Marie) [Autograf Remix] 5 likes
-            7. DJ Khaled - I'm the One ft. Justin Bieber, Quavo, Chance the Rapper, Lil Wayne 5 likes
-            8. CloZee - Eyes In Eyes (feat. LF) (Free Download) 4 likes
-            9. Jocelyn Alice - Feels Right (Galloway Remix) [Music Video] 4 likes
-            10. Hailee Steinfeld - Most Girls 4 likes
-            11. Ne-Yo - Miss Independent 3 likes
-            12. Socalled - You Are Never Alone 3 likes
-            13. Labrinth - Let It Be 2 likes
-            14. Katy Perry - I´m still breathing 2 likes
-            15. KYLE - iSpy (feat. Lil Yachty) [Lyric Video] 1 like
-            16. Chris Brown - Yeah 3x 1 like
-            17. David Guetta ft Justin Bieber - 2U (The Victoria’s Secret Angels Lip Sync) 1 like
-            18. The Weeknd - Secrets 0 likes
-            19. Tinashe - Flame 0 likes
-            
-            Spotify playlist:
-            https://open.spotify.com/user/jesiennik/playlist/4EOF5fwiuRnwe3BqauA8gQ
-            
-            Today's puzzle consists of two parts, enjoy :)
-            
-            Bisous,
-            Asia",
+
+Hello, Sweeties :)
+
+Sorry for not preparing the recap last week - I was totally Baltic Swung ;)
+
+Here's your list of songs added in the last two weeks:
+
+1. Rita Ora - Your Song (Official Lyric Video) 13 likes
+2. Lukas Graham - Drunk In The Morning [Official Music Video ] 6 likes
+3. Katy Perry - Swish Swish (Audio) ft. Nicki Minaj 6 likes
+4. Birdy - Deep End 6 likes
+5. Chris Cornell - Part Of Me (Explicit) ft. Timbaland 5 likes
+6. Clean Bandit - Rockabye (ft. Sean Paul & Anne-Marie) [Autograf Remix] 5 likes
+7. DJ Khaled - I'm the One ft. Justin Bieber, Quavo, Chance the Rapper, Lil Wayne 5 likes
+8. CloZee - Eyes In Eyes (feat. LF) (Free Download) 4 likes
+9. Jocelyn Alice - Feels Right (Galloway Remix) [Music Video] 4 likes
+10. Hailee Steinfeld - Most Girls 4 likes
+11. Ne-Yo - Miss Independent 3 likes
+12. Socalled - You Are Never Alone 3 likes
+13. Labrinth - Let It Be 2 likes
+14. Katy Perry - I´m still breathing 2 likes
+15. KYLE - iSpy (feat. Lil Yachty) [Lyric Video] 1 like
+16. Chris Brown - Yeah 3x 1 like
+17. David Guetta ft Justin Bieber - 2U (The Victoria’s Secret Angels Lip Sync) 1 like
+18. The Weeknd - Secrets 0 likes
+19. Tinashe - Flame 0 likes
+
+Spotify playlist:
+https://open.spotify.com/user/jesiennik/playlist/4EOF5fwiuRnwe3BqauA8gQ
+
+Today's puzzle consists of two parts, enjoy :)
+
+Bisous,
+Asia",
                   "reactions_num": 4,
                 },
                 "yt_link": Object {
@@ -6863,40 +6863,40 @@ exports[`<ChartTable/> render with objects 1`] = `
                     "url": "https://www.facebook.com/photo.php?fbid=10203589450734977&set=gm.2000501083517270&type=3",
                   },
                   "message": "[WCS Weekly Westletter]
-            
-            Hello, Sweeties :)
-            
-            Sorry for not preparing the recap last week - I was totally Baltic Swung ;)
-            
-            Here's your list of songs added in the last two weeks:
-            
-            1. Rita Ora - Your Song (Official Lyric Video) 13 likes
-            2. Lukas Graham - Drunk In The Morning [Official Music Video ] 6 likes
-            3. Katy Perry - Swish Swish (Audio) ft. Nicki Minaj 6 likes
-            4. Birdy - Deep End 6 likes
-            5. Chris Cornell - Part Of Me (Explicit) ft. Timbaland 5 likes
-            6. Clean Bandit - Rockabye (ft. Sean Paul & Anne-Marie) [Autograf Remix] 5 likes
-            7. DJ Khaled - I'm the One ft. Justin Bieber, Quavo, Chance the Rapper, Lil Wayne 5 likes
-            8. CloZee - Eyes In Eyes (feat. LF) (Free Download) 4 likes
-            9. Jocelyn Alice - Feels Right (Galloway Remix) [Music Video] 4 likes
-            10. Hailee Steinfeld - Most Girls 4 likes
-            11. Ne-Yo - Miss Independent 3 likes
-            12. Socalled - You Are Never Alone 3 likes
-            13. Labrinth - Let It Be 2 likes
-            14. Katy Perry - I´m still breathing 2 likes
-            15. KYLE - iSpy (feat. Lil Yachty) [Lyric Video] 1 like
-            16. Chris Brown - Yeah 3x 1 like
-            17. David Guetta ft Justin Bieber - 2U (The Victoria’s Secret Angels Lip Sync) 1 like
-            18. The Weeknd - Secrets 0 likes
-            19. Tinashe - Flame 0 likes
-            
-            Spotify playlist:
-            https://open.spotify.com/user/jesiennik/playlist/4EOF5fwiuRnwe3BqauA8gQ
-            
-            Today's puzzle consists of two parts, enjoy :)
-            
-            Bisous,
-            Asia",
+
+Hello, Sweeties :)
+
+Sorry for not preparing the recap last week - I was totally Baltic Swung ;)
+
+Here's your list of songs added in the last two weeks:
+
+1. Rita Ora - Your Song (Official Lyric Video) 13 likes
+2. Lukas Graham - Drunk In The Morning [Official Music Video ] 6 likes
+3. Katy Perry - Swish Swish (Audio) ft. Nicki Minaj 6 likes
+4. Birdy - Deep End 6 likes
+5. Chris Cornell - Part Of Me (Explicit) ft. Timbaland 5 likes
+6. Clean Bandit - Rockabye (ft. Sean Paul & Anne-Marie) [Autograf Remix] 5 likes
+7. DJ Khaled - I'm the One ft. Justin Bieber, Quavo, Chance the Rapper, Lil Wayne 5 likes
+8. CloZee - Eyes In Eyes (feat. LF) (Free Download) 4 likes
+9. Jocelyn Alice - Feels Right (Galloway Remix) [Music Video] 4 likes
+10. Hailee Steinfeld - Most Girls 4 likes
+11. Ne-Yo - Miss Independent 3 likes
+12. Socalled - You Are Never Alone 3 likes
+13. Labrinth - Let It Be 2 likes
+14. Katy Perry - I´m still breathing 2 likes
+15. KYLE - iSpy (feat. Lil Yachty) [Lyric Video] 1 like
+16. Chris Brown - Yeah 3x 1 like
+17. David Guetta ft Justin Bieber - 2U (The Victoria’s Secret Angels Lip Sync) 1 like
+18. The Weeknd - Secrets 0 likes
+19. Tinashe - Flame 0 likes
+
+Spotify playlist:
+https://open.spotify.com/user/jesiennik/playlist/4EOF5fwiuRnwe3BqauA8gQ
+
+Today's puzzle consists of two parts, enjoy :)
+
+Bisous,
+Asia",
                   "reactions_num": 4,
                   "selected": false,
                   "type": "photo",
@@ -6915,40 +6915,40 @@ exports[`<ChartTable/> render with objects 1`] = `
                 },
                 "woc_f": Object {
                   "message": "[WCS Weekly Westletter]
-            
-            Hello, Sweeties :)
-            
-            Sorry for not preparing the recap last week - I was totally Baltic Swung ;)
-            
-            Here's your list of songs added in the last two weeks:
-            
-            1. Rita Ora - Your Song (Official Lyric Video) 13 likes
-            2. Lukas Graham - Drunk In The Morning [Official Music Video ] 6 likes
-            3. Katy Perry - Swish Swish (Audio) ft. Nicki Minaj 6 likes
-            4. Birdy - Deep End 6 likes
-            5. Chris Cornell - Part Of Me (Explicit) ft. Timbaland 5 likes
-            6. Clean Bandit - Rockabye (ft. Sean Paul & Anne-Marie) [Autograf Remix] 5 likes
-            7. DJ Khaled - I'm the One ft. Justin Bieber, Quavo, Chance the Rapper, Lil Wayne 5 likes
-            8. CloZee - Eyes In Eyes (feat. LF) (Free Download) 4 likes
-            9. Jocelyn Alice - Feels Right (Galloway Remix) [Music Video] 4 likes
-            10. Hailee Steinfeld - Most Girls 4 likes
-            11. Ne-Yo - Miss Independent 3 likes
-            12. Socalled - You Are Never Alone 3 likes
-            13. Labrinth - Let It Be 2 likes
-            14. Katy Perry - I´m still breathing 2 likes
-            15. KYLE - iSpy (feat. Lil Yachty) [Lyric Video] 1 like
-            16. Chris Brown - Yeah 3x 1 like
-            17. David Guetta ft Justin Bieber - 2U (The Victoria’s Secret Angels Lip Sync) 1 like
-            18. The Weeknd - Secrets 0 likes
-            19. Tinashe - Flame 0 likes
-            
-            Spotify playlist:
-            https://open.spotify.com/user/jesiennik/playlist/4EOF5fwiuRnwe3BqauA8gQ
-            
-            Today's puzzle consists of two parts, enjoy :)
-            
-            Bisous,
-            Asia",
+
+Hello, Sweeties :)
+
+Sorry for not preparing the recap last week - I was totally Baltic Swung ;)
+
+Here's your list of songs added in the last two weeks:
+
+1. Rita Ora - Your Song (Official Lyric Video) 13 likes
+2. Lukas Graham - Drunk In The Morning [Official Music Video ] 6 likes
+3. Katy Perry - Swish Swish (Audio) ft. Nicki Minaj 6 likes
+4. Birdy - Deep End 6 likes
+5. Chris Cornell - Part Of Me (Explicit) ft. Timbaland 5 likes
+6. Clean Bandit - Rockabye (ft. Sean Paul & Anne-Marie) [Autograf Remix] 5 likes
+7. DJ Khaled - I'm the One ft. Justin Bieber, Quavo, Chance the Rapper, Lil Wayne 5 likes
+8. CloZee - Eyes In Eyes (feat. LF) (Free Download) 4 likes
+9. Jocelyn Alice - Feels Right (Galloway Remix) [Music Video] 4 likes
+10. Hailee Steinfeld - Most Girls 4 likes
+11. Ne-Yo - Miss Independent 3 likes
+12. Socalled - You Are Never Alone 3 likes
+13. Labrinth - Let It Be 2 likes
+14. Katy Perry - I´m still breathing 2 likes
+15. KYLE - iSpy (feat. Lil Yachty) [Lyric Video] 1 like
+16. Chris Brown - Yeah 3x 1 like
+17. David Guetta ft Justin Bieber - 2U (The Victoria’s Secret Angels Lip Sync) 1 like
+18. The Weeknd - Secrets 0 likes
+19. Tinashe - Flame 0 likes
+
+Spotify playlist:
+https://open.spotify.com/user/jesiennik/playlist/4EOF5fwiuRnwe3BqauA8gQ
+
+Today's puzzle consists of two parts, enjoy :)
+
+Bisous,
+Asia",
                   "reactions_num": 4,
                 },
                 "yt_link": Object {
@@ -7592,7 +7592,9 @@ exports[`<ChartTable/> renders without crashing 1`] = `
         "show": false,
       },
       Object {
-        "Header": <small />,
+        "Header": <small>
+          0
+        </small>,
         "columns": Array [
           Object {
             "Cell": [Function],
@@ -7613,13 +7615,13 @@ exports[`<ChartTable/> renders without crashing 1`] = `
               aria-hidden="true"
               className="fa fa-user-circle"
               style={
-                        Object {
-                                  "color": "green",
-                                }
+                Object {
+                  "color": "green",
+                }
               }
-    >
+            >
               user
-    </i>,
+            </i>,
             "accessor": "from",
             "id": "user",
             "maxWidth": 180,
@@ -7632,11 +7634,11 @@ exports[`<ChartTable/> renders without crashing 1`] = `
               aria-hidden="true"
               className="fa fa-info-circle"
               style={
-                        Object {
-                                  "color": "blue",
-                                }
+                Object {
+                  "color": "blue",
+                }
               }
-    />,
+            />,
             "accessor": [Function],
             "id": "woc_f",
             "maxWidth": 50,
@@ -7645,9 +7647,9 @@ exports[`<ChartTable/> renders without crashing 1`] = `
             "Cell": [Function],
             "Header": <i
               className="fa fa-clock-o"
-    >
+            >
               Time
-    </i>,
+            </i>,
             "accessor": [Function],
             "id": "createTime",
             "maxWidth": 200,
@@ -7660,13 +7662,13 @@ exports[`<ChartTable/> renders without crashing 1`] = `
               aria-hidden="true"
               className="fa fa-external-link"
               style={
-                        Object {
-                                  "color": "red",
-                                }
+                Object {
+                  "color": "red",
+                }
               }
-    >
+            >
               Link
-    </i>,
+            </i>,
             "accessor": [Function],
             "id": "yt_link",
             "maxWidth": 400,
