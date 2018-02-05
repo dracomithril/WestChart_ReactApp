@@ -6,7 +6,7 @@ import PropTypes from 'prop-types';
 import {shallow} from 'enzyme';
 import {shallowToJson} from 'enzyme-to-json';
 import configureMockStore from 'redux-mock-store';
-import NewsLetter from "../../src/components/NewsLetter";
+import NewsLetter from "../../src/components/WestLetter";
 const initial_state =require('./../data/initial_state.json');
 const westletters_state =require('./../data/WestLetter.json');
 const mockStore = configureMockStore([]);
