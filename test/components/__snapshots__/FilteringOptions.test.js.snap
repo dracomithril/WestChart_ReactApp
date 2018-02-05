@@ -24,6 +24,7 @@ exports[`<FilteringOptions/> renders without crashing ChartPresenter 1`] = `
           "name": "woc_control",
         }
       }
+      key="woc_control"
       text="wielkie ogarnianie charta"
     />
     <MessageControl
@@ -39,6 +40,7 @@ exports[`<FilteringOptions/> renders without crashing ChartPresenter 1`] = `
           "name": "westletter_control",
         }
       }
+      key="westletter_control"
       text="wcs weekly westletter"
     />
     <FilterOption
@@ -61,6 +63,7 @@ exports[`<FilteringOptions/> renders without crashing ChartPresenter 1`] = `
           "name": "create_control",
         }
       }
+      key="create_control"
       type="countDays"
       valueName="created_time"
     />
@@ -88,6 +91,7 @@ exports[`<FilteringOptions/> renders without crashing ChartPresenter 1`] = `
           "name": "update_control",
         }
       }
+      key="update_control"
       type="countDays"
       valueName="updated_time"
     />
@@ -109,6 +113,7 @@ exports[`<FilteringOptions/> renders without crashing ChartPresenter 1`] = `
           "name": "more_control",
         }
       }
+      key="more_control"
       type="more"
     />
     <FilterOption
@@ -129,6 +134,7 @@ exports[`<FilteringOptions/> renders without crashing ChartPresenter 1`] = `
           "name": "less_control",
         }
       }
+      key="less_control"
       type="less"
     />
   </div>

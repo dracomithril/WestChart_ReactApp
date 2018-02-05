@@ -4,10 +4,13 @@
 import React from "react";
 import PropTypes from "prop-types";
 import PickYourDate from "./../../src/components/PickYourDate";
-import {shallow} from "enzyme";
+import Enzyme,{shallow} from "enzyme";
+import Adapter from 'enzyme-adapter-react-16';
 import {shallowToJson} from "enzyme-to-json";
 import configureMockStore from "redux-mock-store";
+// import Enzyme from "enzyme/build/index";
 jest.mock('./../../src/utils');
+Enzyme.configure({ adapter: new Adapter() });
 const initial_state = require('./../data/initial_state.json');
 const mockStore = configureMockStore([]);
 describe('<PickYourDate/>', () => {

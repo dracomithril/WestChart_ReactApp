@@ -2,6 +2,8 @@
  * Created by Gryzli on 25.06.2017.
  */
 import React from 'react';
+import PropTypes  from 'prop-types';
+
 const action_types = require('./../reducers/action_types');
 export default class ErrorConsole extends React.Component {
     componentWillUnmount() {
@@ -31,6 +33,6 @@ export default class ErrorConsole extends React.Component {
     }
 }
 ErrorConsole.contextTypes = {
-    store: React.PropTypes.object
+    store: PropTypes.object
 };
 ErrorConsole.propTypes = {};

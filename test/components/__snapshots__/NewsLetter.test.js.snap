@@ -1,26 +1,176 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`<NewsLetter/> renders users 1`] = `
+exports[`<WestLetter/> renders users 1`] = `
 <div>
-  <div>
-    <span>
-      1707149242852457_1938133309754048
-    </span>
-    <img
-      src="https://external.xx.fbcdn.net/safe_image.php?d=AQA4vhd4mqW12H4V&w=720&h=720&url=https%3A%2F%2Fi.ytimg.com%2Fvi%2FKL1XR6kT_40%2Fhqdefault.jpg&cfs=1&_nc_hash=AQCzRB4ci2NToCWh"
-    />
-    <span />
+  <div
+    className="beta"
+  >
+    <h1>
+      This site is still in BeTa version
+    </h1>
+    <h2>
+      Soon we will be able to track WestLetters in each week ;)
+    </h2>
   </div>
-  <div>
-    <span>
-      1707149242852457_1941491366084909
-    </span>
-    <img
-      src="https://scontent.xx.fbcdn.net/v/t1.0-9/17022295_10203108927922207_1006771455463995321_n.jpg?oh=03e07f893abcd6b19475b974b05d4463&oe=59370A6C"
-    />
-    <span />
+  <h4>
+    We have 
+    6
+     week of 
+    2018
+  </h4>
+  <div
+    style={
+      Object {
+        "display": "inline-flex",
+      }
+    }
+  >
+    <div
+      key="1707149242852457_1938133309754048"
+      style={
+        Object {
+          "border": "1px black solid",
+          "display": "block",
+          "padding": 2,
+        }
+      }
+    >
+      <input
+        type="checkbox"
+      />
+      <span
+        hidden={true}
+      >
+        1707149242852457_1938133309754048
+      </span>
+      <OverlayTrigger
+        defaultOverlayShown={false}
+        overlay={
+          <Tooltip
+            bsClass="tooltip"
+            id="tt_1707149242852457_1938133309754048"
+            placement="right"
+          />
+        }
+        placement="bottom"
+        trigger={
+          Array [
+            "hover",
+            "focus",
+          ]
+        }
+      >
+        <Image
+          bsClass="img"
+          circle={false}
+          responsive={false}
+          rounded={false}
+          src="https://graph.facebook.com/v2.10/10202921980928649/picture?height=50"
+          thumbnail={false}
+        />
+      </OverlayTrigger>
+      <div>
+        <span>
+          2017-2-24
+        </span>
+        <br />
+        <span>
+          week:
+          8
+        </span>
+        <br />
+        <span>
+          is added
+        </span>
+      </div>
+    </div>
+    <div
+      key="1707149242852457_1941491366084909"
+      style={
+        Object {
+          "border": "1px black solid",
+          "display": "block",
+          "padding": 2,
+        }
+      }
+    >
+      <input
+        type="checkbox"
+      />
+      <span
+        hidden={true}
+      >
+        1707149242852457_1941491366084909
+      </span>
+      <OverlayTrigger
+        defaultOverlayShown={false}
+        overlay={
+          <Tooltip
+            bsClass="tooltip"
+            id="tt_1707149242852457_1941491366084909"
+            placement="right"
+          />
+        }
+        placement="bottom"
+        trigger={
+          Array [
+            "hover",
+            "focus",
+          ]
+        }
+      >
+        <Image
+          bsClass="img"
+          circle={false}
+          responsive={false}
+          rounded={false}
+          src="https://graph.facebook.com/v2.10/10202921980928649/picture?height=50"
+          thumbnail={false}
+        />
+      </OverlayTrigger>
+      <div>
+        <span>
+          2017-3-3
+        </span>
+        <br />
+        <span>
+          week:
+          9
+        </span>
+        <br />
+        <span>
+          is added
+        </span>
+      </div>
+    </div>
   </div>
 </div>
 `;
 
-exports[`<NewsLetter/> renders without crashing ChartPresenter 1`] = `<div />`;
+exports[`<WestLetter/> renders without crashing ChartPresenter 1`] = `
+<div>
+  <div
+    className="beta"
+  >
+    <h1>
+      This site is still in BeTa version
+    </h1>
+    <h2>
+      Soon we will be able to track WestLetters in each week ;)
+    </h2>
+  </div>
+  <h4>
+    We have 
+    6
+     week of 
+    2018
+  </h4>
+  <div
+    style={
+      Object {
+        "display": "inline-flex",
+      }
+    }
+  />
+</div>
+`;
