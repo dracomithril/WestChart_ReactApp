@@ -110,7 +110,7 @@ describe('[reducers]', function () {
             const state = undefined;
             Object.freeze(state);
             let resp = reducers.songs_per_day(state, {type: action_types.TOGGLE_HAS_COOKIE, days: 3});
-            expect(resp).toBe(2);
+            expect(resp).toBe(3);
         });
         //todo  improve to check if it's date string
     });

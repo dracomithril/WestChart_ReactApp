@@ -15,22 +15,15 @@ exports[`<LoginAlert/> renders without crashing ChartPresenter 1`] = `
     appId="1173486879387948"
     autoLoad={true}
     callback={[Function]}
-    cookie={false}
     cssClass="btn btn-social btn-facebook"
-    disableMobileRedirect={false}
     fields="id,email,name,first_name,picture,groups{administrator}"
     icon="fa fa-facebook"
-    isMobile={false}
     language="pl_PL"
-    reAuthenticate={false}
-    redirectUri="http://localhost/"
     scope="public_profile,email,user_managed_groups"
     size="metro"
     tag="button"
     textButton="Login with Facebook"
     typeButton="button"
-    version="v2.9"
-    xfbml={false}
   />
   <Button
     active={false}

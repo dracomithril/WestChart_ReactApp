@@ -12,6 +12,13 @@ exports[`<Header/> render user info 1`] = `
         "years": 1,
       }
     }
+    cookies={
+      Cookies {
+        "HAS_DOCUMENT_COOKIE": true,
+        "cookies": Object {},
+        "hooks": undefined,
+      }
+    }
     dismissOnScroll={true}
     dismissOnScrollThreshold={0}
     message="Yes, we use cookies. If you don't like it change website, we won't miss you! ;)"
@@ -38,6 +45,13 @@ exports[`<Header/> renders without crashing ChartPresenter 1`] = `
       cookieExpiration={
         Object {
           "years": 1,
+        }
+      }
+      cookies={
+        Cookies {
+          "HAS_DOCUMENT_COOKIE": true,
+          "cookies": Object {},
+          "hooks": undefined,
         }
       }
       dismissOnScroll={true}
@@ -77,23 +91,22 @@ exports[`<Header/> renders without crashing ChartPresenter 1`] = `
           >
             Yes, we use cookies. If you don't like it change website, we won't miss you! ;)
           </span>
-          <div
+          <button
             className="button-close"
             onClick={[Function]}
             style={
               Object {
-                "backgroundColor": "white",
+                "backgroundColor": "rgba(255, 255, 255, 0.6)",
+                "border": "none",
                 "borderRadius": "3px",
+                "boxShadow": "none",
                 "color": "#242424",
                 "cursor": "pointer",
-                "fontSize": "14px",
+                "fontSize": "12px",
                 "fontWeight": "500",
-                "height": "24px",
                 "lineHeight": "24px",
                 "marginTop": "-12px",
-                "opacity": "0.5",
-                "paddingLeft": "8px",
-                "paddingRight": "8px",
+                "padding": "0 8px",
                 "position": "absolute",
                 "right": "35px",
                 "top": "50%",
@@ -101,7 +114,7 @@ exports[`<Header/> renders without crashing ChartPresenter 1`] = `
             }
           >
             Got it
-          </div>
+          </button>
         </div>
       </BannerContent>
     </CookieBanner>
@@ -120,4 +133,4 @@ exports[`<Header/> renders without crashing ChartPresenter 1`] = `
 </Header>
 `;
 
-exports[`<Header/> renders without crashing ChartPresenter 2`] = `null`;
+exports[`<Header/> renders without crashing ChartPresenter 2`] = `""`;
