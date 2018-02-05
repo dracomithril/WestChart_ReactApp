@@ -57,6 +57,7 @@ export default class LoginAlert extends React.Component {
                 fields={"id,email,name,first_name,picture,groups{administrator}"}
                 cssClass="btn btn-social btn-facebook"
                 icon={"fa fa-facebook"}
+                version={"v2.9"}
             />}
             {sp_user.id === undefined &&
             <Button className="btn btn-social btn-spotify" onClick={() => {

@@ -22,10 +22,5 @@
     <orderEntry type="library" name="react-dom-DefinitelyTyped" level="application" />
     <orderEntry type="library" name="express-DefinitelyTyped" level="application" />
     <orderEntry type="library" name="mongodb-DefinitelyTyped" level="application" />
-    <orderEntry type="library" name="@types/express" level="application" />
-    <orderEntry type="library" name="@types/jest" level="application" />
-    <orderEntry type="library" name="@types/lodash" level="application" />
-    <orderEntry type="library" name="@types/sinon" level="application" />
-    <orderEntry type="library" name="@types/winston" level="application" />
   </component>
 </module>
