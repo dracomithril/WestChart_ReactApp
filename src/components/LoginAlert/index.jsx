@@ -17,9 +17,11 @@ export default class LoginAlert extends React.Component {
         const {store} = this.context;
         const state = store.getState();
         const {hasAcCookie} = state;
+      const {location, history} = this.props;
         console.log('component LoginAlert did mount');
         if (!hasAcCookie) {
             loginToSpotify().then(validateCredentials).then((res) => {
+                console.log(location, history);
                 store.dispatch({
                     type: action_types.UPDATE_SP_USER,
                     user: res.user,
@@ -37,7 +39,6 @@ export default class LoginAlert extends React.Component {
     render() {
         const {store} = this.context;
         const {user, sp_user} = store.getState();
-        const {location, hostory} = this.props;
         let url;
         if (process.env.NODE_ENV === 'production') {
             url = spotify_login_uri;
@@ -68,7 +69,6 @@ export default class LoginAlert extends React.Component {
                         user: res.user,
                         access_token: res.access_token
                     });
-                    window.redirect_uri()
                 });
             }}>
                 <i className="fa fa-spotify"/>Login to spotify

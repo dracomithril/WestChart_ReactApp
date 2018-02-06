@@ -3,43 +3,44 @@ import ReactDOM from "react-dom";
 import App from "./App";
 import Combiner from "./components/PlaylistCombiner"
 import {Nav, NavItem} from "react-bootstrap";
-import {routerReducer, syncHistoryWithStore} from "react-router-redux";
+import {routerMiddleware, routerReducer, syncHistoryWithStore} from "react-router-redux";
 import createHistory from "history/createBrowserHistory";
 import LoginAlert from "./components/LoginAlert"
 import Header from "./components/Header";
 import ErrorConsole from "./components/ErrorConsole";
-import {combineReducers, createStore} from "redux";
+import {applyMiddleware, combineReducers, createStore} from "redux";
 import {Provider} from "react-redux";
 import "./index.css";
 import reducers from "./reducers/reducers";
 import PropTypes from "prop-types";
+import {Route, Router, Switch} from 'react-router';
 
-const { Route, Router, Redirect, Switch } = require('react-router');
+const middleware = routerMiddleware(createHistory);
 
 const store = createStore(
   combineReducers({
     ...reducers,
     routing: routerReducer
-  })
+  }, applyMiddleware(middleware))
 );
-
+const history = syncHistoryWithStore(createHistory(), store);
 
 class PrivateRoute extends React.Component {
   render() {
     const { component: Component, ...rest } = this.props;
-    const { store } = this.context;
     const { location } = this.props;
+    const { store } = this.context;
     const { user, sp_user } = store.getState();
     const isAuthenticated = !!user.id && !!sp_user.id;
-    return (
-      <Route {...rest} render={props => (
-        isAuthenticated ? (
+    if (isAuthenticated) {
+      return (
+        <Route {...rest} render={props => (
           <Component {...props}/>
-        ) : (
-          <Redirect to={'/login'} from={location.pathname}/>
-        )
-      )}/>
-    )
+        )}/>)
+    } else {
+
+      return null;
+    }
   }
 }
 
@@ -48,13 +49,15 @@ PrivateRoute.contextTypes = {
 };
 
 
-const history = syncHistoryWithStore(createHistory(), store);
-
 function About() {
-  return <h2>Hi That will be introduction</h2>;
+  return <div>
+    <h2>Hi That will be introduction</h2>
+    <h3 style={{ color: "red" }}>Creation in progress</h3>
+    <h4 style={{ color: "gray" }}>Nothing is true everything is permitted</h4>
+  </div>;
 }
 
-const pathnames = ["/", "/chart", "/combiner"];
+const pathnames = ["/", "/chart", "/combiner", "/login"];
 
 class Navigation extends React.Component {
   get ActiveKey() {
@@ -63,23 +66,30 @@ class Navigation extends React.Component {
   }
 
   render() {
+    const { store } = this.context;
+    const { user, sp_user } = store.getState();
+    const isAuthenticated = !!user.id && !!sp_user.id;
     return <div>
-      <Nav bsStyle={"tabs"}>
+      <Nav bsStyle={"tabs"} activeKey={this.ActiveKey}>
         <NavItem eventKey={0} href="/">
           Info
         </NavItem>
+
         <NavItem eventKey={1} href="/chart">
           Chart
         </NavItem>
         <NavItem eventKey={2} href="/combiner">
           Combiner(BETA)
         </NavItem>
+        <NavItem eventKey={3} href="/login" disabled={isAuthenticated} style={{display:!isAuthenticated?'block':'none'}}>
+          Login
+        </NavItem>
       </Nav>
       <Switch>
         <Route exact path="/" component={About}/>
+        <Route path="/login" component={LoginAlert}/>
         <PrivateRoute path="/chart" exact component={App}/>
         <PrivateRoute path={"/combiner"} exact component={Combiner}/>
-        <Route path="/login" component={LoginAlert}/>
       </Switch>
     </div>;
   }

@@ -2,59 +2,53 @@ import React, {Component} from "react";
 import PropTypes from "prop-types";
 import Footer from "./components/Footer";
 import ChartPresenter from "./components/ChartPresenter";
-import PlaylistCombiner from "./components/PlaylistCombiner";
-import {Tab, Tabs} from "react-bootstrap";
 import "./App.css";
 import "react-table/react-table.css";
 import "react-datepicker/dist/react-datepicker.css";
-const {validateCredentials} = require("./spotify_utils");
-const {cookies_name} = require('./utils');
+
+const { validateCredentials } = require("./spotify_utils");
+const { cookies_name } = require('./utils');
 const action_types = require('./reducers/action_types');
 const Cookies = require('cookies-js');
 
 class App extends Component {
-    componentDidMount() {
-        const {store} = this.context;
-        this.unsubscribe = store.subscribe(() => this.forceUpdate());
-    }
+  componentDidMount() {
+    const { store } = this.context;
+    this.unsubscribe = store.subscribe(() => this.forceUpdate());
+  }
 
-    componentWillMount() {
-        console.log('will mount App');
-        const {store} = this.context;
-        const sp_user_ac = Cookies.get(cookies_name.access_token);
-        if (sp_user_ac) {
-            store.dispatch({type: action_types.TOGGLE_HAS_COOKIE, value: true});
-            validateCredentials(sp_user_ac).then(res => {
-                store.dispatch({
-                    type: action_types.UPDATE_SP_USER,
-                    user: res.user,
-                    access_token: res.access_token
-                });
+  componentWillMount() {
+    console.log('will mount App');
+    const { store } = this.context;
+    const sp_user_ac = Cookies.get(cookies_name.access_token);
+    if (sp_user_ac) {
+      store.dispatch({ type: action_types.TOGGLE_HAS_COOKIE, value: true });
+      validateCredentials(sp_user_ac).then(res => {
+        store.dispatch({
+          type: action_types.UPDATE_SP_USER,
+          user: res.user,
+          access_token: res.access_token
+        });
 
-            });
-        }
+      });
     }
+  }
 
-    componentWillUnmount() {
-        this.unsubscribe();
-    }
+  componentWillUnmount() {
+    this.unsubscribe();
+  }
 
-    render() {
-        return (
-            <div className="App">
-                    <Tabs defaultActiveKey={1} id="app_menu" className="App-body">
-                        <Tab eventKey={0} title="Info"><div><h2>Hi That will be introduction</h2>
-                        <h3 style={{color:"red"}}>Creation in progress</h3>
-                        <h4 style={{color: "gray"}}>Nothing is true everything is permitted</h4></div></Tab>
-                        <Tab eventKey={1} title="Chart"><ChartPresenter/></Tab>
-                        <Tab eventKey={3} title="Combiner (BETA)"><PlaylistCombiner/></Tab>
-                    </Tabs>
-                <Footer/>
-            </div>
-        );
-    }
+  render() {
+    return (
+      <div className="App">
+        <ChartPresenter/>
+        <Footer/>
+      </div>
+    );
+  }
 }
+
 App.contextTypes = {
-    store: PropTypes.object
+  store: PropTypes.object
 };
 export default App;
