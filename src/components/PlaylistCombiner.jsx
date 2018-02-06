@@ -58,6 +58,7 @@ export default class PlaylistCombiner extends React.Component {
     }
 
     getUserInformation(user) {
+        if(user === undefined){
         console.log('get ' + user);
         const that = this;
         let store = this.context.store;
@@ -75,7 +76,7 @@ export default class PlaylistCombiner extends React.Component {
             return Promise.resolve(new_user.id);
         }).catch(e => {
             store.dispatch({type: action_types.ADD_ERROR, value: e})
-        });
+        });}
 
     }
 
@@ -124,8 +125,16 @@ export default class PlaylistCombiner extends React.Component {
 
     componentDidMount() {
         console.log('component PlaylistCombiner did mount');
-        const {sp_user} = this.context.store.getState();
-        this.getUserInformation(sp_user.id);
+      const {store} = this.context;
+      const {sp_user, user} = store.getState();
+      if(!sp_user.id&&!user.id){
+        const sp_user_ls = JSON.parse(sessionStorage.getItem('sp_user'));
+        const fb_user = JSON.parse(sessionStorage.getItem('fb_user'));
+        store.dispatch({type: action_types.UPDATE_SP_USER_LS, value:sp_user_ls});
+        store.dispatch({type: action_types.UPDATE_USER_LS, value: fb_user});
+        this.getUserInformation(sp_user_ls.id);
+      }
+      this.getUserInformation(sp_user.id);
     }
 
     render() {

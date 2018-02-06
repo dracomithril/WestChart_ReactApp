@@ -13,7 +13,7 @@ const spotify_login_uri = '/api/spotify/login_r';
 
 export default class LoginAlert extends React.Component {
     /*istanbul ignore next*/
-    componentDidMount() {
+    componentWillMount() {
         const {store} = this.context;
         const state = store.getState();
         const {hasAcCookie} = state;
@@ -37,6 +37,7 @@ export default class LoginAlert extends React.Component {
     render() {
         const {store} = this.context;
         const {user, sp_user} = store.getState();
+        const {location, hostory} = this.props;
         let url;
         if (process.env.NODE_ENV === 'production') {
             url = spotify_login_uri;
@@ -67,6 +68,7 @@ export default class LoginAlert extends React.Component {
                         user: res.user,
                         access_token: res.access_token
                     });
+                    window.redirect_uri()
                 });
             }}>
                 <i className="fa fa-spotify"/>Login to spotify
