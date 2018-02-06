@@ -1,6 +1,8 @@
 .App {
     text-align: center;
     min-width: 760px;
+    margin-left: 1rem;
+    margin-right: 1rem;
 }
 
 .App-body {
@@ -48,18 +50,6 @@
     margin: 0;
     padding: .6em .9em .5em;
 }
-
-.footer {
-    color: #a9a9a9;
-    font-size: smaller;
-    clear: both;
-    position: relative;
-    z-index: 10;
-    height: 3em;
-    margin-top: -3em;
-}
-
-
 
 .likes {
     display: inline-block;

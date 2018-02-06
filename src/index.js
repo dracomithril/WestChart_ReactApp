@@ -3,7 +3,7 @@ import ReactDOM from "react-dom";
 import App from "./App";
 import Combiner from "./components/PlaylistCombiner"
 import {Nav, NavItem} from "react-bootstrap";
-import {routerMiddleware, routerReducer, syncHistoryWithStore} from "react-router-redux";
+import {push, routerMiddleware, routerReducer, syncHistoryWithStore} from "react-router-redux";
 import createHistory from "history/createBrowserHistory";
 import LoginAlert from "./components/LoginAlert"
 import Header from "./components/Header";
@@ -14,8 +14,10 @@ import "./index.css";
 import reducers from "./reducers/reducers";
 import PropTypes from "prop-types";
 import {Route, Router, Switch} from 'react-router';
+import Footer from "./components/Footer";
 
-const middleware = routerMiddleware(createHistory);
+const history = createHistory();
+const middleware = routerMiddleware(history);
 
 const store = createStore(
   combineReducers({
@@ -23,7 +25,7 @@ const store = createStore(
     routing: routerReducer
   }, applyMiddleware(middleware))
 );
-const history = syncHistoryWithStore(createHistory(), store);
+const historySync = syncHistoryWithStore(history, store);
 
 class PrivateRoute extends React.Component {
   render() {
@@ -38,7 +40,7 @@ class PrivateRoute extends React.Component {
           <Component {...props}/>
         )}/>)
     } else {
-
+      store.dispatch(push('/login'));
       return null;
     }
   }
@@ -81,7 +83,8 @@ class Navigation extends React.Component {
         <NavItem eventKey={2} href="/combiner">
           Combiner(BETA)
         </NavItem>
-        <NavItem eventKey={3} href="/login" disabled={isAuthenticated} style={{display:!isAuthenticated?'block':'none'}}>
+        <NavItem eventKey={3} href="/login" disabled={isAuthenticated}
+                 style={{ display: !isAuthenticated ? 'block' : 'none' }}>
           Login
         </NavItem>
       </Nav>
@@ -101,11 +104,12 @@ Navigation.contextTypes = {
 
 ReactDOM.render(
   <Provider store={store}>
-    <Router history={history}>
+    <Router history={historySync}>
       <div>
         <Header/>
         <ErrorConsole/>
         <Navigation/>
+        <Footer/>
       </div>
     </Router>
   </Provider>

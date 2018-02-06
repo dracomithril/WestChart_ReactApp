@@ -1,6 +1,5 @@
 import React, {Component} from "react";
 import PropTypes from "prop-types";
-import Footer from "./components/Footer";
 import ChartPresenter from "./components/ChartPresenter";
 import "./App.css";
 import "react-table/react-table.css";
@@ -42,7 +41,6 @@ class App extends Component {
     return (
       <div className="App">
         <ChartPresenter/>
-        <Footer/>
       </div>
     );
   }
