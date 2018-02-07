@@ -7,11 +7,11 @@ import {Redirect} from "react-router-dom";
 import {Button, Jumbotron} from "react-bootstrap";
 import FacebookLogin from "react-facebook-login";
 import "./LoginAlert.css";
-// const notGroupAdmin = "Sorry you are not admin of this group.";
 import {setATInterval, validateCredentials} from "./../../spotify_utils";
 
 const action_types = require('./../../reducers/action_types');
 const spotify_login_uri = '/api/spotify/login_r';
+const url = process.env.NODE_ENV === 'production' ? spotify_login_uri : `http://localhost:3001${spotify_login_uri}`;
 
 export default class LoginAlert extends React.Component {
 
@@ -25,14 +25,7 @@ export default class LoginAlert extends React.Component {
   render() {
     const { store } = this.context;
     const { user, sp_user } = store.getState();
-    let url;
-    if (process.env.NODE_ENV === 'production') {
-      url = spotify_login_uri;
-    } else {
-      url = `http://localhost:3001${spotify_login_uri}`
-    }
     const { from } = this.props.location.state || { from: { pathname: '/' } };
-
     if (user.id && sp_user.id) {
       return (
         <Redirect to={from}/>

@@ -23,6 +23,8 @@ export default class UserInfo extends React.Component {
   logoutUser = () => {
     const { store } = this.context;
     store.dispatch({ type: action_types.SIGN_OUT_USER });
+    sessionStorage.removeItem('fb_user');
+    sessionStorage.removeItem('sp_user');
   };
 
   /*istanbul ignore next*/

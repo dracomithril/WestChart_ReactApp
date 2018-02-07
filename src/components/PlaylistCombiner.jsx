@@ -67,8 +67,10 @@ export default class PlaylistCombiner extends React.Component {
         console.log('Retrieved playlists ', new_user);
         return Promise.resolve(new_user.id);
       }).catch(e => {
-        //TODO unathorize User
-        store.dispatch({ type: action_types.ADD_ERROR, value: e })
+        store.dispatch({ type: action_types.ADD_ERROR, value: e });
+        store.dispatch({ type: action_types.SIGN_OUT_USER });
+        sessionStorage.removeItem('fb_user');
+        sessionStorage.removeItem('sp_user');
       });
     }
 

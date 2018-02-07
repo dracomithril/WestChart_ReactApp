@@ -5,7 +5,7 @@ import "./App.css";
 import "react-table/react-table.css";
 import "react-datepicker/dist/react-datepicker.css";
 import ErrorConsole from "./components/ErrorConsole";
-import {Redirect, Route} from "react-router";
+import {Redirect, Route} from "react-router-dom";
 import Header from "./components/Header";
 import Footer from "./components/Footer";
 import Combiner from "./components/PlaylistCombiner";
@@ -17,7 +17,7 @@ const { cookies_name } = require('./utils');
 const action_types = require('./reducers/action_types');
 const Cookies = require('cookies-js');
 
-const pathnames = ["/", "/chart", "/combiner"];
+const pathways = ["/", "/chart", "/combiner"];
 
 
 class PrivateRoute extends React.Component {
@@ -26,7 +26,6 @@ class PrivateRoute extends React.Component {
     const { store } = this.context;
     const { user, sp_user } = store.getState();
     const isAuthenticated = !!user.id && !!sp_user.id;
-
     return (
       <Route {...rest} render={props => (
         isAuthenticated ? (
@@ -46,48 +45,32 @@ PrivateRoute.contextTypes = {
 };
 
 
-function About() {
-  return <div>
-    <h2>Hi That will be introduction</h2>
-    <h3 style={{ color: "red" }}>Creation in progress</h3>
-    <h4 style={{ color: "gray" }}>Nothing is true everything is permitted</h4>
-  </div>;
-}
+const About = () => (<div>
+  <h2>Hi That will be introduction</h2>
+  <h3 style={{ color: "red" }}>Creation in progress</h3>
+  <h4 style={{ color: "gray" }}>Nothing is true everything is permitted</h4>
+</div>);
 
-class Navigation extends React.Component {
-  get ActiveKey() {
-    const activeKey = pathnames.indexOf(window.location.pathname);
-    return activeKey !== -1 ? activeKey : 0;
-  }
+const Navigation = () => (<div>
+  <Nav bsStyle={"tabs"} activeKey={(() => {
+    return pathways.indexOf(window.location.pathname);
+  })()}>
+    <NavItem eventKey={0} href="/">
+      Info
+    </NavItem>
 
-  render() {
-    const { store } = this.context;
-    const { user, sp_user } = store.getState();
-    const isAuthenticated = !!user.id && !!sp_user.id;
-    return <div>
-      <Nav bsStyle={"tabs"} activeKey={this.ActiveKey}>
-        <NavItem eventKey={0} href="/">
-          Info
-        </NavItem>
-
-        <NavItem eventKey={1} href="/chart">
-          Chart
-        </NavItem>
-        <NavItem eventKey={2} href="/combiner">
-          Combiner(BETA)
-        </NavItem>
-      </Nav>
-      <Route exact path="/" component={About}/>
-      <Route path="/login" component={LoginAlert}/>
-      <PrivateRoute path="/chart" exact component={ChartPresenter}/>
-      <PrivateRoute path={"/combiner"} exact component={Combiner}/>
-    </div>;
-  }
-}
-
-Navigation.contextTypes = {
-  store: PropTypes.object
-};
+    <NavItem eventKey={1} href="/chart">
+      Chart
+    </NavItem>
+    <NavItem eventKey={2} href="/combiner">
+      Combiner(BETA)
+    </NavItem>
+  </Nav>
+  <Route exact path="/" component={About}/>
+  <Route path="/login" component={LoginAlert}/>
+  <PrivateRoute path="/chart" exact component={ChartPresenter}/>
+  <PrivateRoute path={"/combiner"} exact component={Combiner}/>
+</div>);
 
 class App extends Component {
   componentDidMount() {
