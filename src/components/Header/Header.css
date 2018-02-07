@@ -21,6 +21,7 @@
     /*height: 130px;*/
     color: white;
     float: right;
+    max-width: 210px;
     text-align: left;
     padding: 10px 5px;
     margin-top: 10px;
@@ -33,7 +34,19 @@
     box-shadow: inset 0 1px 1px rgba(0,0,0,.05);
 }
 .logged img {
-    margin-right: 10px;
+    width: 5rem;
+    height: 5rem;
+    margin-right: 1rem;
+}
+.logged div{
+    padding: 2px 1px;
+}
+.logged button{
+    padding: 2px 2px;
+    margin: 2px;
+    border: 1px solid white;
+    width: 97%;
+    border-radius: 5px;
 }
 .btn-spotify {
     color: #fff;
@@ -46,8 +59,8 @@
     border-color: darkgreen;
 }
 .spotify{
+    width: 97%;
     background: forestgreen;
-    padding: 2px 1px;
     height: 30px;
     margin-top: 5px;
     text-align: center;

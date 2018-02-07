@@ -37,7 +37,7 @@ export default class PlaylistCombiner extends React.Component {
   };
 
   componentWillUnmount() {
-    console.log('component PlaylistCombiner unmounted');
+    console.debug('component PlaylistCombiner unmounted');
   }
 
   searchForUser_click = () => {
@@ -50,7 +50,7 @@ export default class PlaylistCombiner extends React.Component {
   };
 
   getUserInformation = (user) => {
-    if (user === undefined) {
+    if (user) {
       console.log('get ' + user);
       const that = this;
       let store = this.context.store;
@@ -67,6 +67,7 @@ export default class PlaylistCombiner extends React.Component {
         console.log('Retrieved playlists ', new_user);
         return Promise.resolve(new_user.id);
       }).catch(e => {
+        //TODO unathorize User
         store.dispatch({ type: action_types.ADD_ERROR, value: e })
       });
     }
@@ -82,19 +83,23 @@ export default class PlaylistCombiner extends React.Component {
     let array = _.flatMap(selected, n => n);
 
     let actions = array.map(el => getTracks(sp_user.access_token, ...el));
-    Promise.all(actions).then(data => {
-      console.log('all done!!!');
-      let flat_tracks = _.flatMap(data, n => n);// [].concat.apply([], data);
-      let uniq = _.uniq(flat_tracks);
-      return (createFrom === cf.existing ? addTrucksToPlaylistNoRepeats(sp_user.id, createFrom_selected, uniq) : createPlaylistAndAddTracks(sp_user, new_playlist, false, uniq)).then(d => {
-        console.log(d);
+    Promise.all(actions)
+      .then(data => {
+        console.debug('all done!!!');
+        const flat_tracks = _.flatMap(data, n => n);// [].concat.apply([], data);
+        const uniq = _.uniq(flat_tracks);
+        return (createFrom === cf.existing ?
+          addTrucksToPlaylistNoRepeats(sp_user.id, createFrom_selected, uniq)
+          : createPlaylistAndAddTracks(sp_user, new_playlist, false, uniq));
+      })
+      .then(d => {
         this.setState({ sp_playlist_info: d });
         this.getUserInformation(sp_user.id);
         this.forceUpdate();
       })
-    }).catch(e => {
-      store.dispatch({ type: action_types.ADD_ERROR, value: e })
-    });
+      .catch(e => {
+        store.dispatch({ type: action_types.ADD_ERROR, value: e })
+      });
 
   };
 
@@ -119,14 +124,7 @@ export default class PlaylistCombiner extends React.Component {
   componentDidMount = () => {
     console.log('component PlaylistCombiner did mount');
     const { store } = this.context;
-    const { sp_user, user } = store.getState();
-    if (!sp_user.id && !user.id) {
-      const sp_user_ls = JSON.parse(sessionStorage.getItem('sp_user'));
-      const fb_user = JSON.parse(sessionStorage.getItem('fb_user'));
-      store.dispatch({ type: action_types.UPDATE_SP_USER_LS, value: sp_user_ls });
-      store.dispatch({ type: action_types.UPDATE_USER_LS, value: fb_user });
-      this.getUserInformation(sp_user_ls.id);
-    }
+    const { sp_user } = store.getState();
     this.getUserInformation(sp_user.id);
   };
 

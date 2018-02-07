@@ -39,6 +39,8 @@ const user = (state, action) => {
         console.error(response.error);
         return state;
       }
+    case action_types.SIGN_OUT_USER:
+      return {};
     case action_types.UPDATE_USER_LS:
       return Object.assign({}, state, action.value);
     default:
@@ -56,6 +58,8 @@ const sp_user = (state, action) => {
       });
       sessionStorage.setItem('sp_user', JSON.stringify(userData));
       return userData;
+    case action_types.SIGN_OUT_USER:
+      return {};
     case action_types.UPDATE_SP_USER_PLAYLIST:
       return {
         ...state,
