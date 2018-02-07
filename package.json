@@ -102,6 +102,7 @@
     "start:dev": "node scripts/start.js",
     "start": "node server",
     "start:srv": "node scripts/start_srv.js",
+    "start:prod": "node scripts/start_prod.js",
     "build": "node scripts/build.js",
     "build:dev": "node scripts/build-dev.js",
     "test": "node scripts/test.js --env=jsdom"
