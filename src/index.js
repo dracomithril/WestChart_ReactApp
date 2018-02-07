@@ -102,17 +102,22 @@ Navigation.contextTypes = {
   store: PropTypes.object
 };
 
-ReactDOM.render(
-  <Provider store={store}>
-    <Router history={historySync}>
-      <div>
-        <Header/>
-        <ErrorConsole/>
-        <Navigation/>
-        <Footer/>
-      </div>
-    </Router>
-  </Provider>
-  ,
-  document.getElementById('root')
-);
+
+const render = () =>{
+  ReactDOM.render(
+    <Provider store={store}>
+      <Router history={historySync}>
+        <div>
+          <Header/>
+          <ErrorConsole/>
+          <Navigation/>
+          <Footer/>
+        </div>
+      </Router>
+    </Provider>
+    ,
+    document.getElementById('root')
+  );
+};
+
+render();
