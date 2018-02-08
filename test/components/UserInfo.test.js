@@ -19,7 +19,7 @@ describe('<UserInfo/>', () => {
 
     const store = mockStore(initial_state);
     const wrapper = shallow(
-      <UserInfo/>, {
+      <UserInfo fb_user={initial_state.user} sp_user={initial_state.sp_user}/>, {
         context: { store },
         childContextTypes: { store: PropTypes.object }
       }

@@ -64,30 +64,30 @@ exports[`<PickYourDate/> renders without crashing 1`] = `
             title=""
           >
             Use date: 
-            <DatePicker
-              allowSameDay={false}
-              dateFormat="DD/MM/YYYY"
-              dateFormatCalendar="MMMM YYYY"
-              disabled={true}
-              disabledKeyboardNavigation={false}
-              dropdownMode="scroll"
-              monthsShown={1}
-              onBlur={[Function]}
-              onChange={[Function]}
-              onClickOutside={[Function]}
-              onFocus={[Function]}
-              onKeyDown={[Function]}
-              onMonthChange={[Function]}
-              onSelect={[Function]}
-              onYearChange={[Function]}
-              preventOpenOnFocus={false}
-              selected={undefined}
-              shouldCloseOnSelect={true}
-              showTimeSelect={false}
-              timeIntervals={30}
-              withPortal={false}
-            />
           </Checkbox>
+          <DatePicker
+            allowSameDay={false}
+            dateFormat="DD/MM/YYYY"
+            dateFormatCalendar="MMMM YYYY"
+            disabled={true}
+            disabledKeyboardNavigation={false}
+            dropdownMode="scroll"
+            monthsShown={1}
+            onBlur={[Function]}
+            onChange={[Function]}
+            onClickOutside={[Function]}
+            onFocus={[Function]}
+            onKeyDown={[Function]}
+            onMonthChange={[Function]}
+            onSelect={[Function]}
+            onYearChange={[Function]}
+            preventOpenOnFocus={false}
+            selected={undefined}
+            shouldCloseOnSelect={true}
+            showTimeSelect={false}
+            timeIntervals={30}
+            withPortal={false}
+          />
         </div>
       </Popover>
     }

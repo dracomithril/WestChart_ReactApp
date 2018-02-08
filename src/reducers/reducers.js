@@ -44,8 +44,7 @@ const user = (state, action) => {
     case action_types.UPDATE_USER_LS:
       return Object.assign({}, state, action.value);
     default:
-      let parse = JSON.parse(sessionStorage.getItem('fb_user'));
-      return state||parse||{}
+      return state || JSON.parse(sessionStorage.getItem('fb_user')) || {}
   }
 };
 
@@ -69,7 +68,7 @@ const sp_user = (state, action) => {
       return Object.assign({}, state, action.value);
     default:
       let parse = JSON.parse(sessionStorage.getItem('sp_user'));
-      return state||parse||{};
+      return state || parse || {};
   }
 };
 
@@ -127,7 +126,7 @@ const search_list = (state = [], action) => {
  * @returns {boolean}
  */
 const enable_until = (state = false, action) => {
-  return action.type === action_types.TOGGLE_ENABLE_UNTIL ? action.checked : state;
+  return action.type === action_types.TOGGLE_ENABLE_UNTIL ? Boolean(action.checked) : state;
 };
 const sp_playlist_name = (state = '', action) => {
   return action.type === action_types.UPDATE_PLAYLIST_NAME ? action.value : state;
@@ -141,8 +140,8 @@ const sp_playlist_name = (state = '', action) => {
 const last_update = (state = '', action) => {
   return action.type === action_types.UPDATE_LAST_UPDATE ? action.date : state;
 };
-const start_date = (state = moment(), action) => {
-  return action.type === action_types.UPDATE_START_TIME ? action.date : state;
+const start_date = (state = moment(), { type, date }) => {
+  return type === action_types.UPDATE_START_TIME ? date : state;
 };
 const since = (state = '', action) => {
   return action.type === action_types.UPDATE_SINCE ? action.date : state;

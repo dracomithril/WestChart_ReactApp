@@ -14,15 +14,10 @@ const store = createStore(
     routing: routerReducer
   }));
 
-
-const render = () => {
-  ReactDOM.render(<Provider store={store}>
-      <Router>
-        <App/>
-      </Router>
-    </Provider>,
-    document.getElementById('root')
-  );
-};
-
-render();
+ReactDOM.render(<Provider store={store}>
+    <Router>
+      <App/>
+    </Router>
+  </Provider>,
+  document.getElementById('root')
+);

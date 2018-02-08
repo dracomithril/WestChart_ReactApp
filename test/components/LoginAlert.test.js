@@ -13,10 +13,18 @@ Enzyme.configure({ adapter: new Adapter() });
 const initial_state = require('./../data/initial_state.json');
 const mockStore = configureMockStore([]);
 describe('<LoginAlert/>', () => {
+  beforeAll(() => {
+    global.sessionStorage = jest.genMockFunction();
+    global.sessionStorage.setItem = jest.genMockFunction();
+    global.sessionStorage.getItem = jest.genMockFunction();
+  });
+  afterAll(() => {
+    delete global.sessionStorage;
+  });
   it('renders without crashing ChartPresenter', () => {
     const store = mockStore(initial_state);
     const wrapper = shallow(
-      <LoginAlert/>, {
+      <LoginAlert location={{state:'some_path'}} />, {
         context: { store },
         childContextTypes: { store: PropTypes.object }
       }

@@ -9,34 +9,43 @@ import UserInfo from "./UserInfo";
 import "bootstrap-social";
 import "./Header.css";
 
+const action_types = require('./../../reducers/action_types');
+
 export default class Header extends React.Component {
-    componentDidMount() {
-        const {store} = this.context;
-        this.unsubscribe = store.subscribe(() => this.forceUpdate());
-    }
+  componentDidMount() {
+    const { store } = this.context;
+    this.unsubscribe = store.subscribe(() => this.forceUpdate());
+  }
 
-    componentWillUnmount() {
-        this.unsubscribe();
-    }
+  componentWillUnmount() {
+    this.unsubscribe();
+  }
 
-    render() {
-        const {store} = this.context;
-        let {user} = store.getState();
-        return (<div className="wcs_header">
-            <CookieBanner
-                message={'Yes, we use cookies. If you don\'t like it change website, we won\'t miss you! ;)'}
-                onAccept={() => {
-                }}
-                cookie='user-has-accepted-cookies'/>
+  onLogoutClick = () => {
+    const { store } = this.context;
+    store.dispatch({ type: action_types.SIGN_OUT_USER });
+    sessionStorage.removeItem('fb_user');
+    sessionStorage.removeItem('sp_user');
+  };
 
-            <PageHeader bsClass="title-header">
-                Music Helper
-            </PageHeader>
-            {user.name && <UserInfo/>}
-        </div>);
-    }
+  render() {
+    const { store } = this.context;
+    let { user, sp_user } = store.getState();
+    return (<div className="wcs_header">
+      <CookieBanner
+        message={'Yes, we use cookies. If you don\'t like it change website, we won\'t miss you! ;)'}
+        onAccept={() => {
+        }}
+        cookie='user-has-accepted-cookies'/>
+
+      <PageHeader bsClass="title-header">
+        Music Helper
+      </PageHeader>
+      {user.name && <UserInfo fb_user={user} sp_user={sp_user} onLogoutClick={this.onLogoutClick}/>}
+    </div>);
+  }
 }
 Header.contextTypes = {
-    store: PropTypes.object
+  store: PropTypes.object
 };
 Header.propTypes = {};

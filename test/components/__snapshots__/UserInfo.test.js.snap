@@ -20,6 +20,24 @@ exports[`<UserInfo/> renders without crashing 1`] = `
       it's nice to see you again.
     </span>
     <br />
+    <div
+      style={
+        Object {
+          "textAlign": "center",
+        }
+      }
+    >
+      <Button
+        active={false}
+        block={false}
+        bsClass="btn"
+        bsStyle="warning"
+        disabled={false}
+        onClick={[Function]}
+      >
+        Sign out
+      </Button>
+    </div>
   </div>
 </Well>
 `;

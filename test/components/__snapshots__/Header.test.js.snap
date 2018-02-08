@@ -30,7 +30,15 @@ exports[`<Header/> render user info 1`] = `
   >
     Music Helper
   </PageHeader>
-  <UserInfo />
+  <UserInfo
+    fb_user={
+      Object {
+        "name": "Simba",
+      }
+    }
+    onLogoutClick={[Function]}
+    sp_user={Object {}}
+  />
 </div>
 `;
 

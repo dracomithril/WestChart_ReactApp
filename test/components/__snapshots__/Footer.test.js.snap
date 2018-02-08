@@ -20,26 +20,14 @@ exports[`<Footer/> renders without crashing 1`] = `
       <i
         aria-hidden="true"
         className="fa fa-github"
-        style={
-          Object {
-            "paddingLeft": 3,
-          }
-        }
       />
       <br />
     </a>
-     
      v0.6.3
     <i
       className="fa fa-copyright"
-      style={
-        Object {
-          "paddingLeft": 3,
-        }
-      }
-    >
-       Copyright 2017
-    </i>
+    />
+     Copyright 2017
   </span>
   <br />
   <span>
@@ -49,13 +37,8 @@ exports[`<Footer/> renders without crashing 1`] = `
     >
       <i
         className="fa fa-envelope"
-        style={
-          Object {
-            "paddingLeft": 3,
-          }
-        }
       />
-      contact me
+       contact me
     </a>
   </span>
   <br />
@@ -64,11 +47,6 @@ exports[`<Footer/> renders without crashing 1`] = `
   >
     <i
       className="fa fa-facebook-square"
-      style={
-        Object {
-          "paddingLeft": 3,
-        }
-      }
     />
      Policy
   </a>
