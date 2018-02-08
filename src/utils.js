@@ -114,18 +114,14 @@ class utils {
     });
 
     const filters_defaults = [...filters_def.control, ...filters_def.text];
-    const filtersToUse = filters_defaults.filter(({ input }) => {
-      return filters[input.name].checked
-    }).map((e) => {
-      const { days } = filters[e.input.name];
-      return { ...e, days, until };
-    });
+    const filtersToUse = filters_defaults.filter(({ input }) => filters[input.name].checked)
+      .map((e) => ({ ...e, days:filters[e.input.name].days, until }));
     const view_chart = chart.filter(elem => filtersToUse.every(filter => filter.check(elem, filter)));
     const songs_per_day2 = groupBy(view_chart, elem => new Date(elem.created_time).toDateString());
     const error_days = Object.keys(songs_per_day2)
       .filter(elem => songs_per_day2[elem].length !== songs_per_day)
       .map(elem => {
-        const {length} = songs_per_day2[elem];
+        const { length } = songs_per_day2[elem];
         return {
           count: length,
           color: length > songs_per_day ? 'red' : 'blue',
