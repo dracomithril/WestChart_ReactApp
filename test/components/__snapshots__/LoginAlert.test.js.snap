@@ -25,19 +25,6 @@ exports[`<LoginAlert/> renders without crashing ChartPresenter 1`] = `
     textButton="Login with Facebook"
     typeButton="button"
   />
-  <Button
-    active={false}
-    block={false}
-    bsClass="btn"
-    bsStyle="default"
-    className="btn btn-social btn-spotify"
-    disabled={false}
-    onClick={[Function]}
-  >
-    <i
-      className="fa fa-spotify"
-    />
-    Login to spotify
-  </Button>
+  <SpotifyLogin />
 </Jumbotron>
 `;

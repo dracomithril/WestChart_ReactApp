@@ -29,5 +29,5 @@ export const action_types = {
   UPDATE_SONGS_PER_DAY: 'UPDATE_SONGS_PER_DAY',
   UPDATE_SHOW_LAST: 'UPDATE_SHOW_LAST',
 };
-export default { action_types }
+export default { action_types };
 module.exports = action_types;

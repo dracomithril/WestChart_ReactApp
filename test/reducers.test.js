@@ -81,7 +81,7 @@ describe('[reducers]', function() {
       const state = undefined;
       Object.freeze(state);
       let resp = reducers.since(state, { type: action_types.TOGGLE_HAS_COOKIE, date: date });
-      expect(resp).toBe('');
+      expect(resp).toBe(0);
     });
     //todo  improve to check if it's date string
   });
@@ -98,7 +98,7 @@ describe('[reducers]', function() {
       const state = undefined;
       Object.freeze(state);
       let resp = reducers.until(state, { type: action_types.TOGGLE_HAS_COOKIE, date: date });
-      expect(resp).toBe('');
+      expect(resp).toBe(0);
     });
     //todo  improve to check if it's date string
   });

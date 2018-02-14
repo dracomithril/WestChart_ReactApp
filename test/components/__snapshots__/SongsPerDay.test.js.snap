@@ -19,31 +19,27 @@ exports[`<SongsPerDay/> renders without crashing 1`] = `
       style={
         Object {
           "float": "left",
-          "paddingRight": 10,
           "paddingTop": 3,
-          "width": "70%",
         }
       }
     >
       songs per day
-    </label>
-    <input
-      className="num_days"
-      id="songs_per_day"
-      max={10}
-      min={1}
-      name="songs_per_day"
-      onChange={[Function]}
-      step={1}
-      style={
-        Object {
-          "float": "left",
-          "width": "30%",
+      <input
+        className="num_days"
+        id="songs_per_day"
+        max={10}
+        min={1}
+        name="songs_per_day"
+        onChange={[Function]}
+        step={1}
+        style={
+          Object {
+            "width": 30,
+          }
         }
-      }
-      type="number"
-      value={2}
-    />
+        type="number"
+      />
+    </label>
   </div>
   <div
     style={
@@ -53,6 +49,14 @@ exports[`<SongsPerDay/> renders without crashing 1`] = `
         "width": "20%",
       }
     }
-  />
+  >
+    <ErrorDaysIndicator
+      error_days={Array []}
+      less={true}
+    />
+    <ErrorDaysIndicator
+      error_days={Array []}
+    />
+  </div>
 </div>
 `;

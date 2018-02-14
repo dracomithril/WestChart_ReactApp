@@ -1,8 +1,8 @@
 /**
  * Created by Gryzli on 05.04.2017.
  */
-const westletter = "WCS Weekly Westletter";
-const woc_string = "Wielkie Ogarnianie Charta";
+const westletter = 'WCS Weekly Westletter';
+const woc_string = 'Wielkie Ogarnianie Charta';
 /**
  *
  * @returns {boolean}
@@ -12,7 +12,7 @@ const woc_string = "Wielkie Ogarnianie Charta";
 const countDays = (elem, { valueName, until, days }) => {
   const date = elem[valueName];
   const cIn1 = new Date(date).getTime();
-  return (cIn1 - subtractDaysFromDate(until, days).getTime()) > 0;
+  return cIn1 - subtractDaysFromDate(until, days).getTime() > 0;
 };
 
 /**
@@ -29,57 +29,61 @@ const subtractDaysFromDate = (until, days) => {
 
 const filters = [
   {
-    control: { name: "date_create_control", id: 'create' },
-    input: { max: 31, name: "create_control" },
-    valueName: "created_time",
+    control: { name: 'date_create_control', id: 'create' },
+    input: { max: 31, name: 'create_control' },
+    valueName: 'created_time',
     description: { start: 'created in last ', end: ' days' },
     type: 'countDays',
-    check: countDays
+    check: countDays,
   },
   {
-    control: { name: "date_update_control", id: 'update' },
-    input: { max: 31, name: "update_control" },
-    valueName: "updated_time",
+    control: { name: 'date_update_control', id: 'update' },
+    input: { max: 31, name: 'update_control' },
+    valueName: 'updated_time',
     description: { start: 'updated in last ', end: ' days' },
     type: 'countDays',
-    check: countDays
-  }, {
-    control: { name: "more_then_control", id: 'more' },
-    input: { name: "more_control" },
-    description: { start: 'more then ' },
-    type: 'more',
-    check: ({ reactions_num }, { days }) => reactions_num > days
+    check: countDays,
   },
   {
-    control: { name: "less_then_control", id: 'less' },
-    input: { name: "less_control" },
+    control: { name: 'more_then_control', id: 'more' },
+    input: { name: 'more_control' },
+    description: { start: 'more then ' },
+    type: 'more',
+    check: ({ reactions_num }, { days }) => reactions_num > days,
+  },
+  {
+    control: { name: 'less_then_control', id: 'less' },
+    input: { name: 'less_control' },
     description: { start: 'less then ' },
     type: 'less',
-    check: ({ reactions_num }, { days }) => reactions_num < days
-  }];
+    check: ({ reactions_num }, { days }) => reactions_num < days,
+  },
+];
 
-const text_check = ({ message }, { text }) => (message !== undefined ? !message.toLowerCase().includes(text) : true);
+const text_check = ({ message }, { text }) =>
+  message !== undefined ? !message.toLowerCase().includes(text) : true;
 const text_filters = [
   {
-    control: { name: "woc_text_control", id: 'woc_cb' },
+    control: { name: 'woc_text_control', id: 'woc_cb' },
     input: {
-      name: "woc_control"
+      name: 'woc_control',
     },
     text: woc_string.toLowerCase(),
-    check: text_check
-  }, {
-    control: { name: "westletter_text_control", id: 'westletter_cb' },
+    check: text_check,
+  },
+  {
+    control: { name: 'westletter_text_control', id: 'westletter_cb' },
     input: {
-      name: "westletter_control"
+      name: 'westletter_control',
     },
     text: westletter.toLowerCase(),
-    check: text_check
-  }
+    check: text_check,
+  },
 ];
-let exp = {
+const exp = {
   control: filters,
   text: text_filters,
-  subtractDaysFromDate
+  subtractDaysFromDate,
 };
 module.exports = exp;
 export default exp;

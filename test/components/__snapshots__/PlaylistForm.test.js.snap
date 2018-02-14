@@ -82,7 +82,9 @@ exports[`<PlaylistForm/> createPlaylistAndAddTracks 1`] = `
        Playlist
     </Button>
   </ButtonGroup>
-  <label>
+  <label
+    htmlFor="play_list_is_private"
+  >
     <input
       checked={false}
       id="play_list_is_private"
@@ -177,7 +179,9 @@ exports[`<PlaylistForm/> renders without crashing 1`] = `
        Playlist
     </Button>
   </ButtonGroup>
-  <label>
+  <label
+    htmlFor="play_list_is_private"
+  >
     <input
       checked={false}
       id="play_list_is_private"
@@ -272,7 +276,9 @@ exports[`<PlaylistForm/> start_click 1`] = `
        Playlist
     </Button>
   </ButtonGroup>
-  <label>
+  <label
+    htmlFor="play_list_is_private"
+  >
     <input
       checked={false}
       id="play_list_is_private"

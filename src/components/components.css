@@ -126,12 +126,12 @@
     padding-left: 10px;
     color: green;
 }
-#less_days{
+.less_days {
     color: blue;
     margin-left: 5px;
     margin-right: 5px;
 }
-#more_days{
+.more_days {
     color: red;
     margin-left: 5px;
 }

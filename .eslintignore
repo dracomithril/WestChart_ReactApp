@@ -1,0 +1,7 @@
+coverage/**
+node_modules
+build
+test
+scripts
+public
+config

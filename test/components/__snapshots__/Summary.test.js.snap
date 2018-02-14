@@ -80,16 +80,16 @@ exports[`<Summary/> renders without crashing 1`] = `
   />
   <br />
   <label
-    target="link2riddle"
+    htmlFor="link2riddle"
   >
     Link for Riddle
+    <input
+      id="link2riddle"
+      onChange={[Function]}
+      placeholder=" link to riddle"
+      type="text"
+      value=""
+    />
   </label>
-  <input
-    id="link2riddle"
-    onChange={[Function]}
-    placeholder=" link to riddle"
-    type="text"
-    value=""
-  />
 </div>
 `;

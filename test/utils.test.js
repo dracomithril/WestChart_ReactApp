@@ -238,7 +238,7 @@ describe('[utils]', () => {
 
 
   });
-  describe('[filterChart]', function() {
+  describe('[filterChartWithStore]', function() {
     it('should be able to filter', function() {
       let utils2 = require('./../src/utils');
       let getStore = {
@@ -253,7 +253,7 @@ describe('[utils]', () => {
         }, until: "2017-06-16T19:54:25.672Z", songs_per_day: 3
       };
       const store = mockStore(getStore);
-      let filtered = utils2.filterChart(store);
+      let filtered = utils2.filterChartWithStore(store);
       expect(filtered.view_chart.length).toBe(9);
     });
     it('should be able to filter when add_control', function() {
@@ -270,7 +270,7 @@ describe('[utils]', () => {
       };
 
       const store = mockStore(getStore);
-      let filtered = utils.filterChart(store);
+      let filtered = utils.filterChartWithStore(store);
       expect(filtered.view_chart.length).toBe(7);
     });
 

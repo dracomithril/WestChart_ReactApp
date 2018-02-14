@@ -17,7 +17,7 @@ exports[`<UserInfo/> renders without crashing 1`] = `
     </span>
     <br />
     <span>
-      it's nice to see you again.
+      it is nice to see you again.
     </span>
     <br />
     <div

@@ -10,7 +10,8 @@ exports[`<Footer/> renders without crashing 1`] = `
       href="https://github.com/dracomithril"
       target="_newtab"
     >
-      dracomithril 
+      dracomithril
+       
     </a>
     repo on
     <a
