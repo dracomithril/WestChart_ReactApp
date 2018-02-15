@@ -39,10 +39,10 @@ exports[`<Summary/> renders without crashing 1`] = `
   </h6>
   <textarea
     className="write_your_mind"
+    defaultValue=""
     id="textarea_add"
     onChange={[Function]}
     placeholder="Here write what you want"
-    value=""
   />
   <div>
     <span
@@ -73,10 +73,10 @@ exports[`<Summary/> renders without crashing 1`] = `
   </h6>
   <textarea
     className="write_your_mind"
+    defaultValue=""
     id="riddler"
     onChange={[Function]}
     placeholder="riddle that you have in mind"
-    value=""
   />
   <br />
   <label

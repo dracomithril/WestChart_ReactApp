@@ -1,9 +1,9 @@
 /**
  * Created by XKTR67 on 2017-06-26.
  */
-import reducers from "./../src/reducers/reducers";
+import reducers from "../reducers/reducers";
 
-const action_types = require('./../src/reducers/action_types');
+const action_types = require('../reducers/action_types');
 describe('[reducers]', function() {
   beforeAll(() => {
     global.sessionStorage = jest.genMockFunction();

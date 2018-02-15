@@ -3,25 +3,25 @@
  */
 import React from 'react';
 import PropTypes from 'prop-types';
-import ChartTable from './../../src/components/ChartTable';
-import Enzyme, {mount, shallow} from 'enzyme';
+import Enzyme, { mount, shallow } from 'enzyme';
 import Adapter from 'enzyme-adapter-react-16';
-import {mountToJson, shallowToJson} from 'enzyme-to-json';
+import { mountToJson, shallowToJson } from 'enzyme-to-json';
 import configureMockStore from 'redux-mock-store';
+import ChartTable from './../../components/ChartTable';
 
 Enzyme.configure({ adapter: new Adapter() });
-const initial_state = require('./../data/initial_state.json');
-const data = require('./../data/response.json').chart;
+const initial_state = require('../data/initial_state.json');
+const data = require('../data/response.json').chart;
 const mockStore = configureMockStore([]);
 
 describe('<ChartTable/>', () => {
   it('renders without crashing', () => {
     const store = mockStore(initial_state);
     const wrapper = shallow(
-      <ChartTable data={[]}/>, {
+      <ChartTable data={[]} />, {
         context: { store },
-        childContextTypes: { store: PropTypes.object }
-      }
+        childContextTypes: { store: PropTypes.object },
+      },
     );
     expect(shallowToJson(wrapper)).toMatchSnapshot();
 
@@ -29,10 +29,10 @@ describe('<ChartTable/>', () => {
   it('render with objects', () => {
     const store = mockStore(initial_state);
     const wrapper = mount(
-      <ChartTable data={data}/>, {
+      <ChartTable data={data} />, {
         context: { store },
-        childContextTypes: { store: PropTypes.object }
-      }
+        childContextTypes: { store: PropTypes.object },
+      },
     );
     expect(mountToJson(wrapper)).toMatchSnapshot();
   });

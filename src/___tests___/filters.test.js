@@ -5,7 +5,7 @@
 describe('[filters]',  () =>{
     let filters;
     beforeAll(() =>{
-        filters = require('../src/filters_def');
+        filters = require('../filters_def');
     });
     afterAll(() =>{
     });

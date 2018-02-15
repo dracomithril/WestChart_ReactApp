@@ -3,19 +3,19 @@
  */
 import React from "react";
 import PropTypes from "prop-types";
-import PickYourDate from "./../../src/components/PickYourDate";
+import PickYourDate from "./../../components/PickYourDate";
 import Enzyme, {shallow} from 'enzyme';
 import Adapter from 'enzyme-adapter-react-16';
 import {shallowToJson} from "enzyme-to-json";
 import configureMockStore from "redux-mock-store";
 
 Enzyme.configure({ adapter: new Adapter() });
-jest.mock('./../../src/utils');
-const initial_state = require('./../data/initial_state.json');
+jest.mock('./../../utils');
+const initial_state = require('../data/initial_state.json');
 const mockStore = configureMockStore([]);
 describe('<PickYourDate/>', () => {
   afterAll(() => {
-    jest.unmock('./../../src/utils');
+    jest.unmock('./../../utils');
   });
   it('renders without crashing', () => {
     const store = mockStore(initial_state);

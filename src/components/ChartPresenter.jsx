@@ -13,14 +13,14 @@ import WestLetter from './WestLetter';
 const { sorting, filterChart } = require('./../utils');
 
 const ChartPresenter = (props, { store }) => {
-  const { list_sort, chart, filters, util, songs_per_day } = store.getState();
+  const { list_sort, chart, filters, until, songs_per_day } = store.getState();
   const defaultValue = {
     view_chart: [],
     error_days: [],
     westLetters: [],
   };
   const { view_chart, error_days, westLetters } =
-    chart.length > 0 ? filterChart(chart, filters, util, songs_per_day) : defaultValue;
+    chart.length > 0 ? filterChart(chart, filters, until, songs_per_day) : defaultValue;
   const selected = view_chart.filter(elem => elem.selected);
   sorting[list_sort](selected);
   return (

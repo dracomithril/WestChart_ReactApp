@@ -21,7 +21,7 @@ const ErrorDaysIndicator = ({ error_days, less }) =>
       trigger={['hover', 'focus']}
       placement="bottom"
       overlay={
-        <Popover id="haveMoreOrLessDays" title="more or less then expected">
+        <Popover id="haveMoreOrLessDays" title={`${less ? 'less' : 'more'} then expected`}>
           {error_days}
         </Popover>
       }

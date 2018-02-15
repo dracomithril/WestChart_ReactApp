@@ -82,7 +82,7 @@ ${this.state.riddleUrl}`;
           id="textarea_add"
           className="write_your_mind"
           placeholder="Here write what you want"
-          value={this.state.introText}
+          defaultValue={this.state.introText}
           onChange={e => {
             this.setState({ introText: e.target.value });
           }}
@@ -110,12 +110,11 @@ ${this.state.riddleUrl}`;
           id="riddler"
           className="write_your_mind"
           placeholder="riddle that you have in mind"
+          defaultValue={this.state.riddleText}
           onChange={({ target }) => {
             this.setState({ riddleText: target.value });
           }}
-        >
-          {this.state.riddleText}
-        </textarea>
+        />
         <br />
         <label htmlFor="link2riddle">
           Link for Riddle

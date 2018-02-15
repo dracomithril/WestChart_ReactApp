@@ -10,7 +10,7 @@ describe('[utils]', () => {
   let utils;
   beforeAll(() => {
     jest.mock('cookies-js');
-    utils = require('../src/utils');
+    utils = require('../utils');
   });
   afterAll(() => {
     jest.unmock('cookies-js');
@@ -240,7 +240,7 @@ describe('[utils]', () => {
   });
   describe('[filterChartWithStore]', function() {
     it('should be able to filter', function() {
-      let utils2 = require('./../src/utils');
+      let utils2 = require('../utils');
       let getStore = {
         chart: chart, filters: {
           add_control: { checked: false },

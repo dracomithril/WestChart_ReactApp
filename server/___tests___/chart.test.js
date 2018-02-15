@@ -3,14 +3,14 @@
  */
 /* eslint-env node, es6 */
 // let sinon = require('sinon');
-let test_body = require('../data/fbResult.json');
-let test_body2 = require('../data/fbResult2.json');
+let test_body = require('./data/fbResult.json');
+let test_body2 = require('./data/fbResult2.json');
 
 describe('[chart]', function () {
     let Chart, clock;
     beforeAll(() => {
         jest.mock('request-promise-native');
-        Chart = require('../../server/chart');
+        Chart = require('../chart');
     });
     afterAll(() => {
         clock.restore();

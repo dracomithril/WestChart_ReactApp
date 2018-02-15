@@ -3,14 +3,14 @@
  */
 import React from "react";
 import PropTypes from "prop-types";
-import Header from "./../../src/components/Header/index";
+import Header from "./../../components/Header/index";
 import Enzyme, {mount, shallow} from "enzyme";
 import Adapter from 'enzyme-adapter-react-16';
 import {mountToJson, shallowToJson} from "enzyme-to-json";
 import configureMockStore from "redux-mock-store";
 
 Enzyme.configure({ adapter: new Adapter() });
-const initial_state = require('./../data/initial_state.json');
+const initial_state = require('../data/initial_state.json');
 const mockStore = configureMockStore([]);
 describe('<Header/>', () => {
   it('renders without crashing ChartPresenter', () => {

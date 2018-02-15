@@ -3,14 +3,14 @@
  */
 import React from "react";
 import PropTypes from "prop-types";
-import FilteringOptions from "./../../src/components/FilteringOptions/index";
+import FilteringOptions from "./../../components/FilteringOptions/index";
 import Enzyme, {shallow} from 'enzyme';
 import Adapter from 'enzyme-adapter-react-16';
 import {shallowToJson} from "enzyme-to-json";
 import configureMockStore from "redux-mock-store";
 
 Enzyme.configure({ adapter: new Adapter() });
-const initial_state = require('./../data/initial_state.json');
+const initial_state = require('../data/initial_state.json');
 const mockStore = configureMockStore([]);
 describe('<FilteringOptions/>', () => {
   it('renders without crashing ChartPresenter', () => {

@@ -3,16 +3,16 @@
  */
 import React from 'react';
 import PropTypes from 'prop-types';
-import PlaylistForm from './../../src/components/PlaylistForm';
+import PlaylistForm from './../../components/PlaylistForm';
 import Enzyme, {shallow} from 'enzyme';
 import Adapter from 'enzyme-adapter-react-16';
 import {shallowToJson} from 'enzyme-to-json';
 import configureMockStore from 'redux-mock-store';
 
-jest.mock('./../../src/spotify_utils');
+jest.mock('./../../spotify_utils');
 Enzyme.configure({ adapter: new Adapter() });
-const initial_state = require('./../data/initial_state.json');
-const data = require('./../data/response.json').chart;
+const initial_state = require('../data/initial_state.json');
+const data = require('../data/response.json').chart;
 const sinon = require('sinon');
 const mockStore = configureMockStore([]);
 
@@ -28,7 +28,7 @@ describe('<PlaylistForm/>', () => {
     expect(shallowToJson(wrapper)).toMatchSnapshot();
   });
   it('start_click', (done) => {
-    const sp_utils = require('./../../src/spotify_utils');
+    const sp_utils = require('./../../spotify_utils');
     sp_utils.searchForMusic.mockReturnValue(Promise.resolve({ id: 'zzz', value: {} }));
     const state = Object.assign({}, initial_state, { sp_playlist_name: "test_list_zzzz" });
     const store = mockStore(state);
@@ -45,7 +45,7 @@ describe('<PlaylistForm/>', () => {
     done();
   });
   it('createPlaylistAndAddTracks', () => {
-    const sp_utils = require('./../../src/spotify_utils');
+    const sp_utils = require('./../../spotify_utils');
     sp_utils.createPlaylistAndAddTracks.mockReturnValue(Promise.resolve({ mock: 'mock' }));
     const state = Object.assign({}, initial_state, { sp_playlist_name: "test_list_zzzz" });
     const store = mockStore(state);

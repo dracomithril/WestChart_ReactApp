@@ -3,27 +3,28 @@
  */
 import React from 'react';
 import PropTypes from 'prop-types';
-import UserInfo from '../../src/components/Header/UserInfo';
+import Summary from './../../components/Summary';
 import Enzyme, {shallow} from 'enzyme';
 import Adapter from 'enzyme-adapter-react-16';
 import {shallowToJson} from 'enzyme-to-json';
 import configureMockStore from 'redux-mock-store';
 
 Enzyme.configure({ adapter: new Adapter() });
-const initial_state = require('./../data/initial_state.json');
+const initial_state = require('../data/initial_state.json');
 
 const mockStore = configureMockStore([]);
 
-describe('<UserInfo/>', () => {
-  it('renders without crashing', () => {
 
+describe('<Summary/>', () => {
+  it('renders without crashing', () => {
     const store = mockStore(initial_state);
     const wrapper = shallow(
-      <UserInfo fb_user={initial_state.user} sp_user={initial_state.sp_user}/>, {
+      <Summary selected={[]}/>, {
         context: { store },
         childContextTypes: { store: PropTypes.object }
       }
     );
     expect(shallowToJson(wrapper)).toMatchSnapshot();
+
   });
 });

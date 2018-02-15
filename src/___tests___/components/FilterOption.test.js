@@ -3,14 +3,14 @@
  */
 import React from "react";
 import PropTypes from "prop-types";
-import FilteringOption from "./../../src/components/FilteringOptions/FilterOption";
+import FilteringOption from "./../../components/FilteringOptions/FilterOption";
 import Enzyme, {shallow} from 'enzyme';
 import Adapter from 'enzyme-adapter-react-16';
 import {shallowToJson} from "enzyme-to-json";
 import configureMockStore from "redux-mock-store";
 
 Enzyme.configure({ adapter: new Adapter() });
-const initial_state = require('./../data/initial_state.json');
+const initial_state = require('../data/initial_state.json');
 const mockStore = configureMockStore([]);
 describe('<FilteringOption/>', () => {
   let elem = {

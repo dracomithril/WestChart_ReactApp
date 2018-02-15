@@ -5,3 +5,4 @@ test
 scripts
 public
 config
+**/___tests___
