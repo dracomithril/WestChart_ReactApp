@@ -29,7 +29,7 @@ describe('<PickYourDate/>', () => {
   });
   xit('is able to click btn', () => {
     const store = mockStore(initial_state);
-    const utils = require('../../src/utils');
+    const utils = require('../../utils');
     const wrapper = shallow(
       <PickYourDate/>, {
         context: { store },
