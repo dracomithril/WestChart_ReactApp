@@ -1,0 +1,138 @@
+{
+  "name": "west_chart_web",
+  "version": "1.0.0",
+  "description": "web client side",
+  "main": "index.js",
+  "scripts": {
+    "start:dev": "node scripts/start.js",
+    "lint": "eslint \"**/*.@(js|jsx)\"",
+    "format": "npm run lint -- --fix",
+    "build": "node scripts/build.js",
+    "build:dev": "node scripts/build-dev.js",
+    "test": "node scripts/test.js --env=jsdom"
+  },
+  "devDependencies": {
+    "autoprefixer": "7.2.5",
+    "babel-core": "6.26.0",
+    "babel-eslint": "7.2.3",
+    "babel-jest": "22.1.0",
+    "babel-loader": "7.1.2",
+    "babel-preset-es2015": "^6.24.1",
+    "babel-preset-react": "^6.24.1",
+    "babel-preset-react-app": "^3.1.1",
+    "case-sensitive-paths-webpack-plugin": "2.1.1",
+    "chalk": "2.3.0",
+    "cross-spawn": "6.0.4",
+    "css-loader": "0.28.9",
+    "dotenv": "5.0.0",
+    "dotenv-expand": "^4.0.1",
+    "enzyme": "^3.3.0",
+    "enzyme-adapter-react-16": "^1.1.1",
+    "enzyme-to-json": "^3.3.1",
+    "eslint": "4.17.0",
+    "eslint-config-airbnb": "^16.1.0",
+    "eslint-config-prettier": "^2.9.0",
+    "eslint-config-react-app": "^2.1.0",
+    "eslint-loader": "1.9.0",
+    "eslint-plugin-flowtype": "2.42.0",
+    "eslint-plugin-import": "^2.8.0",
+    "eslint-plugin-json": "^1.2.0",
+    "eslint-plugin-jsx-a11y": "5.1.1",
+    "eslint-plugin-prettier": "^2.6.0",
+    "eslint-plugin-react": "7.6.1",
+    "extract-text-webpack-plugin": "3.0.2",
+    "file-loader": "1.1.6",
+    "fs-extra": "5.0.0",
+    "gzip-size": "4.1.0",
+    "html-webpack-plugin": "2.30.1",
+    "jest": "22.1.4",
+    "jest-cli": "22.1.4",
+    "json-loader": "0.5.4",
+    "object-assign": "4.1.1",
+    "path-exists": "3.0.0",
+    "postcss-flexbugs-fixes": "^3.3.0",
+    "postcss-loader": "2.1.0",
+    "prettier": "^1.10.2",
+    "raf": "^3.4.0",
+    "react-dev-utils": "^5.0.0",
+    "react-test-renderer": "^16.2.0",
+    "recursive-readdir": "2.1.1",
+    "redux-mock-store": "^1.3.0",
+    "sinon": "^4.2.2",
+    "style-loader": "0.20.1",
+    "sw-precache-webpack-plugin": "^0.11.4",
+    "uglifyjs-webpack-plugin": "^1.1.8",
+    "url-loader": "0.6.2",
+    "webpack": "3.10.0",
+    "webpack-dev-server": "2.11.1",
+    "webpack-manifest-plugin": "1.3.2",
+    "whatwg-fetch": "2.0.3"
+  },
+  "dependencies": {
+    "bootstrap-social": "5.1.1",
+    "clipboard-copy": "1.4.1",
+    "cookies-js": "^1.2.3",
+    "history": "^4.7.2",
+    "lodash": "^4.17.5",
+    "moment": "^2.20.1",
+    "prop-types": "15.5.10",
+    "react": "16.2.0",
+    "react-bootstrap": "0.32.1",
+    "react-cookie-banner": "3.0.0",
+    "react-datepicker": "1.1.0",
+    "react-dom": "16.2.0",
+    "react-facebook-login": "4.0.0",
+    "react-redux": "5.0.6",
+    "react-router": "4.2.0",
+    "react-router-dom": "4.2.2",
+    "react-router-redux": "4.0.8",
+    "react-table": "6.7.6",
+    "redux": "3.7.2",
+    "spotify-web-api-node": "2.5.0"
+  },
+  "proxy": "http://localhost:3001/",
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/dracomithril/WestChart_ReactApp.git"
+  },
+  "author": "",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/dracomithril/WestChart_ReactApp/issues"
+  },
+  "homepage": "https://github.com/dracomithril/WestChart_ReactApp/web/#readme",
+  "jest": {
+    "collectCoverage": false,
+    "collectCoverageFrom": [
+      "src/**/*.{js,jsx}",
+      "server/**/*.{js,jsx}"
+    ],
+    "setupFiles": [
+      "<rootDir>/config/polyfills.js"
+    ],
+    "testPathIgnorePatterns": [
+      "<rootDir>[/\\\\](build|docs|node_modules|scripts|coverage)[/\\\\]"
+    ],
+    "notify": true,
+    "testEnvironment": "node",
+    "testURL": "http://localhost",
+    "transform": {
+      "^.+\\.(js|jsx)$": "<rootDir>/node_modules/babel-jest",
+      "^.+\\.css$": "<rootDir>/config/jest/cssTransform.js",
+      "^(?!.*\\.(js|jsx|css|json)$)": "<rootDir>/config/jest/fileTransform.js"
+    },
+    "transformIgnorePatterns": [
+      "[/\\\\]node_modules[/\\\\].+\\.(js|jsx)$"
+    ],
+    "verbose": true,
+    "moduleNameMapper": {
+      "^react-native$": "react-native-web"
+    }
+  },
+  "babel": {
+    "presets": [
+      "es2015",
+      "react-app"
+    ]
+  }
+}

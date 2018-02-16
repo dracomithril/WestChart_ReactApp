@@ -1,8 +1,8 @@
-coverage/**
+coverage
 node_modules
 build
-test
 scripts
 public
 config
-**/___tests___
+___tests___
+public/fonts
