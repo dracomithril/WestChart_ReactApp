@@ -27,11 +27,11 @@
   },
   "scripts": {
     "start:dev_srv": "concurrently --prefix \"[{name}]\" -c \"green.dim,blue.italic\" --names \"Client,Server\" \"npm run start:dev\" \"npm run start:srv\"",
-    "start:dev": "node web/scripts/start.js",
+    "start:dev": "cd web && yarn start",
     "start": "node server",
     "lint": "eslint \"**/*.@(js|jsx)\"",
     "format": "npm run lint -- --fix",
-    "start:srv": "node server/scripts/start_srv.js",
+    "start:srv": "cd server && yarn start:srv",
     "build": "node web/scripts/build.js",
     "test": "jest --coverage --env=jsdom"
   },
