@@ -10,6 +10,7 @@
   "devDependencies": {
     "babel-core": "6.26.0",
     "babel-eslint": "7.2.3",
+    "concurrently": "^3.5.1",
     "eslint": "4.17.0",
     "eslint-config-airbnb": "^16.1.0",
     "eslint-config-prettier": "^2.9.0",
@@ -37,8 +38,5 @@
       "es2015",
       "react-app"
     ]
-  },
-  "dependencies": {
-    "concurrently": "^3.5.1"
   }
 }
