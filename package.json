@@ -21,9 +21,6 @@
     "eslint-plugin-jsx-a11y": "5.1.1",
     "eslint-plugin-prettier": "^2.6.0",
     "eslint-plugin-react": "7.6.1",
-    "istanbul": "0.4.5",
-    "jest": "22.1.4",
-    "jest-cli": "22.1.4",
     "prettier": "^1.10.2"
   },
   "scripts": {
@@ -33,36 +30,7 @@
     "lint": "eslint \"**/*.@(js|jsx)\"",
     "format": "npm run lint -- --fix",
     "start:srv": "cd server && yarn start:srv",
-    "build": "node web/scripts/build.js",
-    "test": "jest --coverage --env=jsdom"
-  },
-  "jest": {
-    "collectCoverage": false,
-    "collectCoverageFrom": [
-      "web/src/**/*.{js,jsx}",
-      "server/src/**/*.{js,jsx}"
-    ],
-    "setupFiles": [
-      "<rootDir>/web/config/polyfills.js"
-    ],
-    "testPathIgnorePatterns": [
-      "[/\\\\](build|docs|node_modules|scripts|coverage)[/\\\\]"
-    ],
-    "notify": true,
-    "testEnvironment": "node",
-    "testURL": "http://localhost",
-    "transform": {
-      "^.+\\.(js|jsx)$": "<rootDir>/node_modules/babel-jest",
-      "^.+\\.css$": "<rootDir>/web/config/jest/cssTransform.js",
-      "^(?!.*\\.(js|jsx|css|json)$)": "<rootDir>/web/config/jest/fileTransform.js"
-    },
-    "transformIgnorePatterns": [
-      "[/\\\\]node_modules[/\\\\].+\\.(js|jsx)$"
-    ],
-    "verbose": true,
-    "moduleNameMapper": {
-      "^react-native$": "react-native-web"
-    }
+    "build": "node web/scripts/build.js"
   },
   "babel": {
     "presets": [
