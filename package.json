@@ -1,6 +1,6 @@
 {
   "name": "WestChart_ReactApp",
-  "version": "0.13.0",
+  "version": "1.0.0",
   "private": true,
   "engines": {
     "node": "8.9.1",
