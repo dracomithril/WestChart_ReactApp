@@ -22,5 +22,6 @@
     <orderEntry type="library" name="@types/sinon" level="application" />
     <orderEntry type="library" name="@types/spotify-api" level="application" />
     <orderEntry type="library" name="@types/spotify-web-playback-sdk" level="application" />
+    <orderEntry type="library" name="@types/joi" level="application" />
   </component>
 </module>
