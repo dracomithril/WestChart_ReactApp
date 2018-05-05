@@ -38,5 +38,8 @@
       "es2015",
       "react-app"
     ]
+  },
+  "dependencies": {
+    "yarn": "^1.6.0"
   }
 }
