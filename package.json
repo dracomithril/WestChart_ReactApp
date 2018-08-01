@@ -1,5 +1,5 @@
 {
-  "name": "WestChart_ReactApp",
+  "name": "west-chart_react-app",
   "version": "1.0.0",
   "private": true,
   "engines": {
@@ -27,8 +27,6 @@
     "start:dev_srv": "concurrently --prefix \"[{name}]\" -c \"green.dim,blue.italic\" --names \"Client,Server\" \"npm run start:dev\" \"npm run start:srv\"",
     "start:dev": "cd web && yarn start",
     "start": "node server",
-    "lint": "eslint \"**/*.@(js|jsx)\"",
-    "format": "npm run lint -- --fix",
     "start:srv": "cd server && yarn start:srv",
     "build": "node web/scripts/build.js"
   },
