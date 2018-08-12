@@ -23,5 +23,12 @@
     <orderEntry type="library" name="@types/spotify-api" level="application" />
     <orderEntry type="library" name="@types/spotify-web-playback-sdk" level="application" />
     <orderEntry type="library" name="@types/joi" level="application" />
+    <orderEntry type="library" name="express-DefinitelyTyped" level="application" />
+    <orderEntry type="library" name="jest-DefinitelyTyped" level="application" />
+    <orderEntry type="library" name="lodash-DefinitelyTyped" level="application" />
+    <orderEntry type="library" name="node-DefinitelyTyped" level="application" />
+    <orderEntry type="library" name="react-DefinitelyTyped" level="application" />
+    <orderEntry type="library" name="react-dom-DefinitelyTyped" level="application" />
+    <orderEntry type="library" name="sinon-DefinitelyTyped" level="application" />
   </component>
 </module>

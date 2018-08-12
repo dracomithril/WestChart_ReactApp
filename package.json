@@ -24,7 +24,7 @@
     "prettier": "^1.11.1"
   },
   "scripts": {
-    "start:dev_srv": "concurrently --prefix \"[{name}]\" -c \"green.dim,blue.italic\" --names \"Client,Server\" \"npm run start:dev\" \"npm run start:srv\"",
+    "start:dev_srv": "concurrently --prefix \"[{name}]\" -c \"green.dim,blue.italic\" --names \"Client,Server\" \"yarn run start:dev\" \"yarn run start:srv\"",
     "start:dev": "cd web && yarn start",
     "start": "node server",
     "start:srv": "cd server && yarn start:srv",
