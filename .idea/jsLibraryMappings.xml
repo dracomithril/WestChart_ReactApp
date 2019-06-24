@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="JavaScriptLibraryMappings">
-    <file url="PROJECT" libraries="{@types/spotify-api, express-DefinitelyTyped, jest-DefinitelyTyped, lodash-DefinitelyTyped, node-DefinitelyTyped, react-DefinitelyTyped, react-dom-DefinitelyTyped, sinon-DefinitelyTyped}" />
+    <file url="PROJECT" libraries="{@types/jest, @types/joi}" />
     <includedPredefinedLibrary name="Node.js Core" />
   </component>
 </project>

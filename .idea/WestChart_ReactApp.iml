@@ -23,5 +23,7 @@
     <orderEntry type="library" name="react-DefinitelyTyped" level="application" />
     <orderEntry type="library" name="react-dom-DefinitelyTyped" level="application" />
     <orderEntry type="library" name="sinon-DefinitelyTyped" level="application" />
+    <orderEntry type="library" name="@types/jest" level="application" />
+    <orderEntry type="library" name="@types/joi" level="application" />
   </component>
 </module>
